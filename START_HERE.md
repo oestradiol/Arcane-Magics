@@ -1,22 +1,11 @@
-# Start Here v0.2
+# Start here
 
-This is the governed front door for the live `Research` repository.
+For the current theory, begin with [[canon/home/CONSTITUTION]] and [[canon/home/PUBLIC_ONTOLOGY]].
 
-Read these in order:
+For unresolved mathematics, read [[canon/frontier/RESEARCH_FRONTIER]] and [[canon/frontier/PREBOOLEAN_FIRST_DIFFERENTIATION]].
 
-1. `README.md`
-2. `docs/frontdoor/PROJECT_PURPOSE_AND_USE_CASES.md`
-3. `docs/frontdoor/CONTROL_AND_GOVERNANCE_SURFACE.md`
-4. `governance/AUTHORITATIVE_INDEX_v0_2.md`
-5. `structured-unity-framework/START_HERE.md`
-6. `knowledge/README.md`
-7. `tools/README.md`
-8. `using-this-research-with-human-assistants-and-reasoning-agents.md`
+For the architectural genealogy, read [[archaeology/old-venus/README]] and [[provenance/RESEARCH_V1_5_SNAPSHOT]]. The historical repositories are useful because they preserve concrete successes, failures, and discarded assumptions; they are not migration plans.
 
-Simple summary:
+For literature, open [[knowledge/INDEX]] and [[knowledge/references/CANONICAL_SOURCE_MAP]].
 
-- `structured-unity-framework/` is the academic core and carries the canonical long-form current state.
-- `knowledge/` is the broader atlas founded on SUF.
-- `tools/` is the read-only validation and reporting layer.
-- Root governance exists to keep package roles explicit and current routing stable.
-- Use the root for package boundaries and release hygiene, not as a duplicate state layer for SUF.
+For implementation, read [[docs/ARCHITECTURE]] before touching historical code.
