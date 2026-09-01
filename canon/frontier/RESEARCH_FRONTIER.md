@@ -141,11 +141,13 @@ Arcane Magics and CBRD remain prepublication manuscripts. Repository polish does
 
 ### P04 — public-history sanitation
 
-Status: `OPEN GOVERNANCE GATE`
+Status: `CLOSED_SCOPED / REGRESSION-RETAINED`
+
+On 1 September 2026 the audited current public tree was rewritten onto a fresh parentless root. All non-main rebuild/tmp branches were deleted and no tags remain. At this declared scope:
 
 ```text
-clean current tree -/-> clean reachable public history
+intentionally reachable release refs -> sanitized current lineage
 private provenance preservation -/-> public predecessor-history publication
 ```
 
-Audit the public DAG before any sanitized release claim.
+The closure is not a claim that GitHub platform-managed pull-request refs, caches, Actions records, or provider retention have been physically erased. P04 reopens if a maintained public branch/tag reintroduces predecessor history, if a future release mounts private/backstage provenance into the public DAG, or if the checked-out tree and intentionally reachable history diverge again.
