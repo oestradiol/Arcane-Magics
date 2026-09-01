@@ -1,0 +1,67 @@
+name: temporary rebirth transfer
+
+on:
+  push:
+    branches:
+      - 'tmp/rebirth-transfer'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt
+      - name: Reconstruct exact candidate and verify
+        shell: bash
+        run: |
+          set -euo pipefail
+          EXPECT='734444c515a8f22b6c201bdd348a645e9ccc07c5a3077107df8cf8afdcee83fa'
+          choose_payload() {
+            for mode in p1 p2 p1p2 p2p1 b64p1 b64p2 b64p1p2 b64p2p1; do
+              rm -f /tmp/candidate.zip /tmp/raw
+              case "$mode" in
+                p1) cp .github/_tmp/rebirth.part1 /tmp/candidate.zip ;;
+                p2) cp .github/_tmp/rebirth.part2 /tmp/candidate.zip ;;
+                p1p2) cat .github/_tmp/rebirth.part1 .github/_tmp/rebirth.part2 > /tmp/candidate.zip ;;
+                p2p1) cat .github/_tmp/rebirth.part2 .github/_tmp/rebirth.part1 > /tmp/candidate.zip ;;
+                b64p1) base64 -d .github/_tmp/rebirth.part1 > /tmp/candidate.zip 2>/dev/null || continue ;;
+                b64p2) base64 -d .github/_tmp/rebirth.part2 > /tmp/candidate.zip 2>/dev/null || continue ;;
+                b64p1p2) cat .github/_tmp/rebirth.part1 .github/_tmp/rebirth.part2 | base64 -d > /tmp/candidate.zip 2>/dev/null || continue ;;
+                b64p2p1) cat .github/_tmp/rebirth.part2 .github/_tmp/rebirth.part1 | base64 -d > /tmp/candidate.zip 2>/dev/null || continue ;;
+              esac
+              GOT="$(sha256sum /tmp/candidate.zip | awk '{print $1}')"
+              if [ "$GOT" = "$EXPECT" ]; then
+                echo "payload reconstruction: $mode"
+                return 0
+              fi
+            done
+            echo 'No uploaded blob reconstruction matched the audited candidate SHA.' >&2
+            exit 42
+          }
+          choose_payload
+          unzip -t /tmp/candidate.zip >/dev/null
+          rm -rf /tmp/rebirth-new
+          mkdir -p /tmp/rebirth-new
+          unzip -q /tmp/candidate.zip -d /tmp/rebirth-new
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -a /tmp/rebirth-new/. .
+          python -m pip install --upgrade pip pytest >/dev/null
+          python tools/conformance.py
+          python -m pytest -q
+          cargo fmt --all -- --check
+          cargo test --workspace --all-targets
+          git config user.name 'Venus-Minerva Rebirth CI'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -A
+          git commit -m 'rebuild: unified meta-theory and executable substrate'
+          git push --force origin HEAD:refs/heads/rebuild/unified-metatheory-2026-09-01
