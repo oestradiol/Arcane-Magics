@@ -35,5 +35,5 @@ Open this directory as an Obsidian vault or any Markdown graph browser. Wiki-lin
 
 ## Reference bank
 
-- [[references/INDEX|Reference index]]
-- [[references/CANONICAL_SOURCE_MAP|Canonical source map]]
+- [[knowledge/references/INDEX|Reference index]]
+- [[knowledge/references/CANONICAL_SOURCE_MAP|Canonical source map]]
