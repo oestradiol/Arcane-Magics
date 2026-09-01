@@ -125,9 +125,11 @@ Repeated structural motifs across historical strata are compatible with cognitiv
 
 ### H03 — operator-level transmission across historical strata
 
-Status: `NARROWED OPEN`
+Status: `NARROWED OPEN / SOURCE GAP CLOSED`
 
-Broad chronology is recorded. The remaining problem is operator-by-operator: actual exposure, forgotten influence, regression, re-derivation, independent convergence, or formal inheritance. Historical priority is not project origin.
+Broad chronology is recorded. Successor archaeology has recovered a substantial primary RGM corpus, so RGM source availability is no longer the unresolved variable. See [RGM operator archaeology](../../knowledge/evidence/RGM_OPERATOR_ARCHAEOLOGY.md).
+
+The remaining problem is operator-by-operator: actual exposure, forgotten influence, regression, re-derivation, independent convergence, or formal inheritance. Historical priority is not project origin, and chronology alone does not choose among those transmission models.
 
 ## Bridge withholds
 
