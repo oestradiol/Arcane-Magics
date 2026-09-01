@@ -1,0 +1,1 @@
+Validation target for the modular source: `pdflatex -> biber -> pdflatex -> pdflatex`, 67 cited bibliography entries, 25 pages, no undefined citations/references, and no overfull/underfull box warnings in the validated local reconstruction. The modular split preserves rendered text relative to the monolithic successor source.
