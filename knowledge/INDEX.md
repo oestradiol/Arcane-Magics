@@ -37,8 +37,11 @@ A local term is not earned because it is elegant. It is earned only when removin
 - [S0–S11 program](evidence/S0-S11_EVIDENCE_ARCHAEOLOGY.md)
 - [Humanity Evidence Atlas](evidence/HUMANITY_EVIDENCE_ATLAS.md)
 - [Operator Genealogy](evidence/OPERATOR_GENEALOGY.md)
+- [RGM operator archaeology](evidence/RGM_OPERATOR_ARCHAEOLOGY.md)
 - [Novelty Residual Matrix](evidence/NOVELTY_RESIDUAL_MATRIX.md)
 - [Open Bridge Dossier](evidence/OPEN_BRIDGE_DOSSIER.md)
+
+The RGM node is project-internal archaeology, not an external-prior-art dossier. It closes a source-availability gap while leaving exact later transmission claim-specific and open.
 
 ## Provenance and navigation
 
