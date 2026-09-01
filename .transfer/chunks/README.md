@@ -1,0 +1,1 @@
+Temporary exact-candidate transport chunks. Removed from the rebuilt branch after SHA-verified reconstruction.
