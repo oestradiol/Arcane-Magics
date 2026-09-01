@@ -1,0 +1,1 @@
+Temporary binary transport directory. Removed from the rebuilt branch by the transfer workflow.
