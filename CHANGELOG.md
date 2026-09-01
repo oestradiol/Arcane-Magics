@@ -11,6 +11,7 @@
 - Retired the earlier sign-first concept-card layer as the primary teaching interface.
 - Removed the stale predecessor Research backup from the maintained private workspace; provenance is preserved through typed records rather than a redundant working-tree copy.
 - Sanitized maintained public Git history onto a fresh parentless root, removed rebuild/tmp branches, and confirmed that no tags keep the predecessor DAG intentionally reachable.
+- Recovered a substantial primary RGM corpus during the final conversation-level archaeology audit. The public knowledge graph now records RGM as a project-internal claim-governance/bridge precursor while leaving exact later transmission and formal inheritance claim-specific and OPEN.
 
 ## Earlier — public-substrate rebuild
 
