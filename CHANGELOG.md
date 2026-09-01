@@ -10,7 +10,8 @@
 - Expanded public provenance routing without copying the protected private credit authority.
 - Retired the earlier sign-first concept-card layer as the primary teaching interface.
 - Removed the stale predecessor Research backup from the maintained private workspace; provenance is preserved through typed records rather than a redundant working-tree copy.
+- Sanitized maintained public Git history onto a fresh parentless root, removed rebuild/tmp branches, and confirmed that no tags keep the predecessor DAG intentionally reachable.
 
 ## Earlier — public-substrate rebuild
 
-Earlier public-substrate work restored HOME↔FRONTIER, separated it from Arcane↔CBRD, added public Canon/provenance/schema surfaces, made runtime status explicit, and retained public-history sanitation as an OPEN release gate.
+Earlier public-substrate work restored HOME↔FRONTIER, separated it from Arcane↔CBRD, added public Canon/provenance/schema surfaces, and made runtime/publication status explicit. Its initially OPEN public-history gate was closed by the later root-history sanitation above.
