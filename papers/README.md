@@ -1,10 +1,15 @@
-# Papers
+# Publication projections
 
-Venus × Minerva currently develops two intended publication projections:
+The living Venus × Minerva repository is the maintained research organism. Papers are frozen public projections from that organism.
 
-- **Arcane Meta-Theory**
-- **Consequence-Bearing Relational Dynamics (CBRD)**
+## Arcane Magics
 
-They are related views over the same living research program, not evidence for one another by adjacency. Arcane develops the phenomenological and philosophical register; CBRD develops the scientific, formal, and operational register.
+**Arcane Magics** is the **Inhabited THEO–PHEN ↔ Corrigible Ontological Articulation** projection. It is not merely “phenomenology and philosophy,” and it is not a wrapper around CBRD.
 
-No manuscript is marked published here until there is an actual public release with its own version, citation metadata, and frozen source artifact.
+## CBRD
+
+**Consequence-Bearing Relational Dynamics (CBRD)** is the **epistemic–formal–operational** projection. It is not the scientific proof layer for Arcane and does not inherit authority over native THEO/PHEN/model-ontological objects merely because those objects lack a stronger empirical bridge.
+
+## Release state
+
+Both manuscripts are in development and **not yet published as Venus × Minerva releases**. Internal snapshots, repository drafts, and buildable manuscript sources are provenance artifacts, not public publication events. A publication requires an explicit frozen release with version/citation metadata.

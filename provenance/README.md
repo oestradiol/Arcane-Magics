@@ -1,7 +1,31 @@
-# Research history
+# Public provenance
 
-Prior states of this repository remain reconstructible through Git history. They are historical evidence, not parallel current authority.
+Public provenance preserves the distinctions required to reconstruct current claims without publishing private archives or treating every historical commit as part of the current release surface.
 
-The live tree keeps only historical material that still changes interpretation, provenance, or testing. Large predecessor structures are not copied forward merely to make the history visible; the commit graph already preserves them.
+## What belongs here
 
-When an earlier implementation exposed a useful failure mode, the live project retains the failure as a scoped regression or research question rather than reviving the abandoned architecture around it.
+- project-origin vs historical-priority distinctions;
+- public-safe source maps;
+- migration/retype records that materially change current interpretation;
+- content hashes or release identifiers where useful;
+- historical regression identifiers;
+- explicit unknowns and source gaps.
+
+## What does not belong here by default
+
+- raw private archives;
+- identifying personal trajectories;
+- private participant material;
+- full predecessor working trees merely because they existed;
+- stale implementation state that no longer changes current reconstruction.
+
+## Git history is a public surface
+
+```text
+clean current tree -/-> clean reachable public history
+private provenance preservation -/-> public predecessor-history publication
+```
+
+A future clean public release must pass a history-sanitation gate. Until then, the current repository history is historical infrastructure, not a claim that every reachable predecessor state was intentionally selected for public preservation.
+
+See [`PUBLIC_HISTORY_POLICY.md`](PUBLIC_HISTORY_POLICY.md).

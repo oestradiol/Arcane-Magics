@@ -1,39 +1,11 @@
 # Knowledge graph index
 
-Open this directory as an Obsidian vault or any Markdown graph browser. Wiki-links are intentionally plain Markdown-compatible Obsidian links.
+The public graph has three layers:
 
-## Current concept nodes
+1. **concept nodes** in `knowledge/concepts/`;
+2. **typed edges** in [`knowledge/EDGES.md`](../EDGES.md);
+3. **relation vocabulary** in `knowledge/relations/`.
 
-- [[AntiGrammar and RegisterBridge]]
-- [[Compiler]]
-- [[Core Consequential Relation]]
-- [[First Differentiation]]
-- [[Governance Qutrit]]
-- [[HOME and FRONTIER]]
-- [[Historical Regressions]]
-- [[Perspectivalization]]
-- [[Projection Section Reconstruction]]
-- [[Provenance and Jurisdiction]]
-- [[Publication as Projection]]
-- [[Recursive Sufficiency]]
-- [[Regenerative Access]]
-- [[Verification and Construction]]
-- [[Warrant Trichotomy]]
+The edge ledger is the authoritative public statement of which current concept relations are actually being asserted. The relation vocabulary defines how edge names should be read; it is not itself evidence that any particular edge exists.
 
-## Relation vocabulary
-
-- [[knowledge/relations/constrains|constrains]]
-- [[knowledge/relations/emerges-from|emerges-from]]
-- [[knowledge/relations/feeds-back|feeds-back]]
-- [[knowledge/relations/formalizes|formalizes]]
-- [[knowledge/relations/grounds|grounds]]
-- [[knowledge/relations/implements|implements]]
-- [[knowledge/relations/interprets|interprets]]
-- [[knowledge/relations/requires|requires]]
-- [[knowledge/relations/scaffolds|scaffolds]]
-- [[knowledge/relations/supports|supports]]
-
-## Reference bank
-
-- [[knowledge/references/INDEX|Reference index]]
-- [[knowledge/references/CANONICAL_SOURCE_MAP|Canonical source map]]
+Start at [`knowledge/INDEX.md`](../INDEX.md).
