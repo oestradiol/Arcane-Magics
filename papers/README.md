@@ -1,15 +1,23 @@
 # Publication projections
 
-The living Venus × Minerva repository is the maintained research organism. Papers are frozen public projections from that organism.
+The maintained repository is upstream of both manuscripts. The papers are different public projections of one research history, and each must remain reconstructible without borrowing the other's warrant.
 
 ## Arcane Magics
 
-**Arcane Magics** is the **Inhabited THEO–PHEN ↔ Corrigible Ontological Articulation** projection. It is not merely “phenomenology and philosophy,” and it is not a wrapper around CBRD.
+[Arcane Magics](Arcane.md) works from inhabited occurrence toward corrigible ontological articulation. The live source is [`arcane/main.tex`](arcane/main.tex).
+
+The current manuscript restores useful material that earlier compression had removed, including source-preserving register transport, publication as a consequence-bearing test, comparative subtraction, reader source-removal, and explicit retirement conditions. Current Canonical retypes the older static "inhabited ontology" label into the relation:
+
+```text
+Inhabited THEO–PHEN ↔ Corrigible Ontological Articulation
+```
 
 ## CBRD
 
-**Consequence-Bearing Relational Dynamics (CBRD)** is the **epistemic–formal–operational** projection. It is not the scientific proof layer for Arcane and does not inherit authority over native THEO/PHEN/model-ontological objects merely because those objects lack a stronger empirical bridge.
+[Consequence-Bearing Relational Dynamics](CBRD.md) develops the epistemic-formal-operational projection. The live source is [`cbrd/main.tex`](cbrd/main.tex).
+
+The current manuscript restores useful pre-compression material on exposure-sensitive recursion, multi-interface failure localization, provenance, source removal, evidence topology, negative proof chains, and generator/constitution/execution/environment/verifier separation, while incorporating the later Compiler, projection/section, typed-negative, and enacted-fence corrections.
 
 ## Release state
 
-Both manuscripts are in development and **not yet published as Venus × Minerva releases**. Internal snapshots, repository drafts, and buildable manuscript sources are provenance artifacts, not public publication events. A publication requires an explicit frozen release with version/citation metadata.
+Both manuscripts are working sources and **not yet published Venus × Minerva releases**. Earlier V0/V1 snapshots remain provenance, not hidden current authority. A publication requires an explicit frozen release with version, citation metadata, source package, and release audit.

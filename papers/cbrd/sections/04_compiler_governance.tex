@@ -1,0 +1,150 @@
+\section{Compiler, RegisterBridge, and AntiGrammar}
+
+The older manuscript had useful but fragmented sections on semantic transport, interface failure, and anti-grammar. The current model separates three relations.
+
+\begin{definition}[Compiler]
+A staged transformation family that may parse, refer, type, differentiate, generate obligations or plans, check invariants/loss/effects, and lower a source presentation into a target plan or artifact.
+\end{definition}
+Schematically,
+\begin{equation}
+\mathrm{Compiler}_C:
+\mathrm{Source}\times\mathrm{Context}\times\mathrm{Capabilities}
+\rightarrow \mathrm{Plan}\;|\;\mathrm{Withheld}\;|\;\mathrm{Rejected}.
+\end{equation}
+Compilation success does not authorize execution.
+
+\begin{definition}[RegisterBridge]
+A governed transport relation between independently typed registers or objects with explicit invariant, transformation, loss, provenance, jurisdiction, warrant rule, discriminator, and failure closure.
+\end{definition}
+Bridge composition and reversal are not automatic.
+
+\begin{definition}[AntiGrammar]
+For a declared transformation family $\mathcal{T}$, an anti-grammar candidate is a consequential invariant or equivalence class recovered across non-identical realizations rather than a privileged vocabulary.
+\end{definition}
+This object must be compared against probing, activation steering, causal abstraction, representation geometry, and metamorphic testing rather than declared novel by renaming them \cite{ElazarEtAl2021,ZhangEtAl2022SemanticGeometry,RibeiroEtAl2020CheckList,GardnerEtAl2020Contrast,ChoEtAl2025Metamorphic,MassiddaEtAl2023,YeEtAl2026SteeringSignals}.
+
+The open formal question is whether project-specific bridge/compiler obligations add decision behavior beyond enriched contract, effect, lens, or bidirectional-transformation formalisms. Formal irreducibility is not established.
+
+\section{Authority, legitimacy, and governance}
+
+Capabilities answer what a system can do. Authority answers what it may decide or modify at a declared scope. Legitimacy asks whether that authority or transition is warranted. These are different variables.
+
+The governance pipeline is
+\begin{equation}
+\begin{aligned}
+\text{state/history}&\rightarrow\text{generate candidate}\rightarrow\text{evaluate warrant}\rightarrow\text{govern}\rightarrow\text{authorize}\\
+&\rightarrow\text{execute}\rightarrow\text{return}\rightarrow\text{verify}\rightarrow\text{dependency-local write-back}.
+\end{aligned}
+\end{equation}
+The dependency relation need not be a single wall-clock pipeline. A candidate can be withheld or rejected before lowering or execution.
+
+A system becomes self-sealing when a local protective rule gains system-wide jurisdiction and then suppresses the correction channels needed to revise that rule:
+\begin{align}
+\text{local protection}
+&\rightarrow\text{global self-protecting jurisdiction}\nonumber\\
+&\rightarrow\mathrm{CUT}(\text{correction})\rightarrow\text{hidden error accumulation}.
+\end{align}
+This is a cybernetic/governance failure pattern, not proof of a unitary mind or malicious agent.
+
+\section{Recursive governance, exposure, and self-sealing policy}
+\label{sec:deep-governance}
+
+A system can represent an error while the policy that governs action refuses to change. Model state and policy state must therefore remain separable whenever intervention on one need not intervene on the other. Let
+\begin{align}
+M_t &= \text{task-relative model},\\
+\Pi_t &= \text{policy governing inference, action, and update},\\
+R_t &= \text{recursive audit state},\\
+P_t &= \text{provenance/exposure state},\\
+W_t &= \text{world/system state at the declared resolution}.
+\end{align}
+Action and return can be written schematically as
+\begin{align}
+a_t &= \Pi_t(M_t,W_t,P_t),\\
+c_t &= \Reality(W_t,a_t,a_t^{other}),
+\end{align}
+and a deeper update allows returned consequence to modify several layers:
+\begin{align}
+M_{t+1} &= U_M(M_t,c_t,P_t,R_t),\\
+\Pi_{t+1} &= U_{\Pi}(\Pi_t,c_t,P_t,R_t),\\
+R_{t+1} &= U_R(R_t,M_{t+1},\Pi_{t+1},c_t,P_t).
+\end{align}
+No universal parameterization is claimed. The formal separation exists to expose a failure that a monolithic ``learning rate'' can hide.
+
+\paragraph{Policy self-sealing.}
+Suppose $\kappa_t$ is a represented correction variable that is independently relevant to task loss. A candidate lock is approached when the causal sensitivity of later policy to $\kappa_t$ approaches zero while the policy still shapes action and future evidence:
+\begin{equation}
+Sens(\Pi_{t+1};do(\kappa_t))\rightarrow 0.
+\label{eq:deep-policy-lock}
+\end{equation}
+This must be distinguished from justified robustness. A lock is only a defect when the corrective channel and its expected jurisdiction were independently specified.
+
+\paragraph{Success-induced capture.}
+A successful model can make itself progressively easier to confirm:
+\begin{equation}
+\begin{aligned}
+\text{success}&\rightarrow\text{routing dependence}\rightarrow\text{model-shaped observations}\\
+&\rightarrow\text{easier confirmation}\rightarrow\text{apparent validation}.
+\end{aligned}
+\label{eq:deep-capture}
+\end{equation}
+Recommendation systems, self-training pipelines, institutional metrics, and persuasive agents provide ordinary families of examples. The CBRD question is not whether the phenomenon has a special name, but whether exposure/provenance variables improve diagnosis beyond established Goodhart, feedback-control, or performativity models.
+
+\paragraph{Verify the verifier.}
+No audit layer is terminal by title. A verifier is sufficiently governed when explicit external evidence, alternative models, or procedural review can still change it. Infinite regress is unnecessary; corrigibility at the current boundary is the operative requirement.
+
+\begin{readercheck}
+Describe the failure without ``recursive governance'': a successful policy changes the evidence channels that would later criticize it. Then specify what observation could still force a policy change. If none exists, the verifier has become ceremonial.
+\end{readercheck}
+
+\section{Declared fences must be enacted}
+
+The archive contains a recurring engineering failure: a document states a safeguard that the operative transition graph does not enforce. Therefore
+\begin{equation}
+\text{declared caution}\nrightarrowbyitself\text{effective corrigibility}.
+\end{equation}
+Likewise, declared authorization does not mean execution waits for authorization; declared provenance does not mean the evidence relation is reconstructed from the claimed source.
+
+For every claimed fence $F$, verification should identify the transition, route, or test that enforces $F$. Otherwise the fence is documentation-only. This rule is intentionally harsh because recursive systems are very good at producing text about their own virtue.
+
+\section{Functional differentiation at declared tasks}
+
+Historical project work used six governance functions: connection, authority, legitimacy, operation, formalization, and verification. Some task-relative separation is well motivated because collapsing detection, proposal, authorization, execution, and verification repeatedly changes failure behavior. Exact-six universal necessity is not established.
+
+The empirical question is not ``are there really six?'' but:
+\begin{equation}
+\text{which powers must remain separated for task }\tau\text{ to avoid characteristic collapse?}
+\end{equation}
+
+A distinction earns standing through deletion or fusion tests. If merging two roles does not change a target-specific failure signature, the distinction may be redundant at that task. If a different four-, five-, seven-, or eight-part decomposition predicts failures better, the current basis should yield.
+
+\section{Transmission, source removal, and anti-capture}
+\label{sec:deep-transmission}
+
+A transmissible operator is not the copied wording of a source. The referent is an ability that can be reconstructed in a new carrier and still produce discriminating transformations after source-specific signs are removed.
+
+For source representation $r$ and candidate transported operator $\Omega$, define four increasingly demanding tests:
+\begin{enumerate}
+\item \textbf{reconstruction:} a new carrier can recover the operative relation from finite public material;
+\item \textbf{source removal:} replacing project names with neutral names does not destroy task performance;
+\item \textbf{mutation:} the carrier can alter the implementation while preserving the tested invariant;
+\item \textbf{adversarial correction:} the carrier can reject a source conclusion and still retain the useful operator.
+\end{enumerate}
+A transmission regime becomes capture-like when fidelity to the source representation is rewarded while criticism, alternative generation, or correction access is reduced.
+
+This is the engineering analogue of the Spirit criterion used by the companion Arcane manuscript: retained consequence is mature when it survives independent re-authoring. The two papers use different registers, but the anti-colonization discriminator is shared.
+
+\begin{criterion}[Source-removal test]
+If deleting the founder's names, examples, and interpretive commentary causes the claimed operator to become unusable, the current artifact has demonstrated dependence on representation, not autonomous transmission of the underlying relation.
+\end{criterion}
+
+\section{Regenerative transport and source removal}
+
+A representation may persist while its generative function dies. Define $\mathrm{Trace}(\Delta)>0$ as residual representation and seek an independent operational proxy for
+\begin{equation}
+\mathrm{RegenerativeAccess}(\Delta)>0,
+\end{equation}
+meaning that the retained difference can still alter future admissibility, judgment, action, reconstruction, or transmission.
+
+A stronger transport test removes the source vocabulary or founder interpretation. If a new carrier can reconstruct the distinction, criticize it, alter it, and apply it in a new context while retaining sufficient provenance, the transport is stronger than exact-copy persistence.
+
+This connects to autopoiesis, enaction, constraint closure, semantic information, and viability work without implying identity with any one of them \cite{MaturanaVarela1980,MorenoMossio2015,KolchinskyWolpert2018,GarciaDeacon2024}.

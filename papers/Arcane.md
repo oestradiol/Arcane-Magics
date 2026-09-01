@@ -1,6 +1,10 @@
 # Arcane Magics
 
-**Status:** manuscript in development; not yet published.
+**Status:** working manuscript; not yet published.
+
+Start with the ordinary problem: a person is already living in a world before turning that involvement into an explicit ontology. The ontology can then change how the person interprets and acts, which changes what later returns. Arcane Magics studies that recursive crossing without treating lived occurrence, theological orientation, ontological articulation, and scientific mechanism as interchangeable.
+
+Only after the relation is visible do we name the projection:
 
 ```text
 Arcane Magics
@@ -8,8 +12,22 @@ Arcane Magics
   ↔ Corrigible Ontological Articulation
 ```
 
-Arcane Magics studies the recursive relation between inhabited occurrence and explicit ontological articulation. Its native material may include phenomenology, embodiment, alterity, symbolic interpretation, theological whole-orientation, model-ontology, recursive Observer↔World structure, and the consequences of living through an articulated model.
+## What the current manuscript restores
 
-Arcane is corrigible by design. It must preserve the distinction between phenomenal occurrence and external source attribution, between theological orientation and scientific mechanism, between local Semantic Center and Whole, and between interpretation and another participant's authorship.
+Earlier compression removed several useful teaching and verification layers. The live manuscript restores, under current Canonical fences:
 
-CBRD can formalize, compare, constrain, or expose missing bridge premises for Arcane claims. It does not derive Arcane's native interpretation from scientific/formal premises alone. Conversely, Arcane does not grant CBRD empirical warrant by symbolic or experiential resonance.
+- source-preserving transport across registers;
+- publication itself as a consequence-bearing exposure test;
+- the operational-cogito/self-reference boundary without sovereignty;
+- explicit comparative subtraction through the S0–S11 evidence program;
+- typed credit that separates historical priority from project origin;
+- reader reconstruction, terminology deletion, criticism, and source-removal tests;
+- explicit retirement and OPEN/WITHHOLD conditions.
+
+## What changed after the older manuscript line
+
+The current text distinguishes `PerspectiveCenter` from `Perspectivalization`, treats fixed-point stability as projection-relative rather than a root Self, keeps HOME↔FRONTIER separate from Arcane↔CBRD, and uses the current information/informing and authorship/jurisdiction distinctions.
+
+CBRD may formalize, compare, constrain, or expose missing bridge premises for Arcane claims. It does not derive Arcane's native THEO/PHEN/model-ontological objects from scientific premises alone. Arcane likewise grants CBRD no empirical warrant by resonance.
+
+Live source: [`arcane/main.tex`](arcane/main.tex). Comparative entry: [`knowledge/INDEX.md`](../knowledge/INDEX.md).

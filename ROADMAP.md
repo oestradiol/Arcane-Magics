@@ -1,41 +1,42 @@
 # Roadmap
 
-This roadmap tracks implementation, not metaphysical certainty.
+This roadmap tracks implementation and publication work, not metaphysical certainty.
 
-## Phase A — public substrate repair
+## Public substrate
 
 - [x] restore current public Canon reading surfaces;
 - [x] separate HOME↔FRONTIER from Arcane Magics↔CBRD;
-- [x] restore public provenance and schema surfaces;
-- [x] make implementation status explicit;
-- [x] restore a navigable concept/edge graph;
-- [ ] generate and validate monolithic `knowledge/references/references.bib` from partitioned source files;
+- [x] replace the sign-first glossary with a problem-first, comparative knowledge bank;
+- [x] route the S0–S11 evidence archaeology and typed credit relations into that bank;
+- [x] restore live Arcane Magics and CBRD manuscript sources from current Canonical plus surviving pre-compression material;
+- [x] keep implementation status explicit;
+- [ ] automate validation of the partitioned reference bank and optional generated exports;
 - [ ] sanitize reachable public Git history before calling the repository a clean release surface.
 
-## Phase B — event/provenance kernel
+## Event and provenance kernel
 
-- [ ] append-oriented ResearchEvent / ClaimRecord substrate;
+- [ ] append-oriented `ResearchEvent` / `ClaimRecord` substrate;
 - [ ] typed provenance coordinates;
-- [ ] immutable decision / execution / evidence / verification receipts;
+- [ ] immutable decision, execution, evidence, and verification receipts;
 - [ ] durable residual and CUT history.
 
-## Phase C — Compiler and governance
+## Compiler and governance
 
 - [ ] staged Compiler interfaces;
 - [ ] warrant types distinct from governance decisions;
 - [ ] authorization boundary before irreversible effects;
 - [ ] RegisterBridge obligations and loss accounting.
 
-## Phase D — FRONTIER machinery
+## FRONTIER machinery
 
 - [ ] experiment manifests and fixtures;
 - [ ] historical regressions as executable tests;
 - [ ] negative-result objects;
 - [ ] projection / section / reconstruction test harnesses;
-- [ ] Python independent-analysis laboratory;
-- [ ] Lean proof-obligation/countermodel surface where theorem-level work is actually pursued.
+- [ ] independent Python analysis laboratories;
+- [ ] Lean proof obligations or countermodels where theorem-level work is actually pursued.
 
-## Phase E — generated projections
+## Generated projections
 
 - [ ] generated HOME/FRONTIER views from event state;
 - [ ] claim/provenance indexes;
@@ -43,9 +44,9 @@ This roadmap tracks implementation, not metaphysical certainty.
 - [ ] privacy/export gates;
 - [ ] frozen release manifests.
 
-## Phase F — world entry and succession
+## World entry and succession
 
 - [ ] bounded substrate adapters;
-- [ ] reproducible deployments where scientifically/operationally relevant;
+- [ ] reproducible deployments where scientifically or operationally relevant;
 - [ ] external reconstruction and criticism;
-- [ ] founder-removal / maintainer succession tests.
+- [ ] founder-removal and maintainer-succession tests.

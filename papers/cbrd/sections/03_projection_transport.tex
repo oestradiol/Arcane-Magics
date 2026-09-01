@@ -1,0 +1,145 @@
+\section{Projection, fibers, sections, and reconstruction}
+
+Several current research objects can be expressed through a common formal question without being identified. For a declared projection
+\begin{equation}
+p:X\rightarrow Y,
+\end{equation}
+define the fiber
+\begin{equation}
+\mathrm{fiber}_p(y)=\{x\in X:p(x)=y\}.
+\end{equation}
+A section $s:Y\rightarrow X$ satisfies $p\circ s=\mathrm{id}_Y$ on its declared domain.
+
+The constitutional non-entailments are
+\begin{equation}
+\text{projection exists}\nrightarrowbyitself\text{section exists},
+\end{equation}
+\begin{equation}
+\text{section exists}\nrightarrowbyitself\text{unique or cheap section},
+\end{equation}
+and
+\begin{equation}
+\text{same projection}\nrightarrowbyitself\text{same source trajectory}.
+\end{equation}
+
+This frame can describe observer-to-perspective projection, quotient compression, compiler lowering, root reconstruction, and witness projection in complexity theory. The analogy does not transfer theorems between them. Category/interface theory and causal abstraction supply important neighboring formalisms \cite{VagnerSpivakLerman2015,NiuSpivak2021,BaezCourser2020,GeigerEtAl2024,XiaBareinboim2025}.
+
+\subsection{P versus NP as a regression test, not a result}
+
+For a polynomially balanced polynomial-time verifiable witness relation $R(x,w)$, the projection from witness pairs to yes-instances forgets $w$. A polynomial-time witness constructor is a computational section on yes-instances. This motivates a legitimate research question about section obstructions.
+
+It does not justify
+\begin{equation}
+\text{verification}\neq\text{construction}\nrightarrowbyitself P\neq NP,
+\end{equation}
+or its opposite. Any proposed obstruction invariant must do independent complexity-theoretic work rather than rename the desired conclusion. This section is a standing regression test against theorem laundering.
+
+\section{Diachronic dimensionalization and earned geometry}
+\label{sec:deep-geometry}
+
+A recurring project lesson is that a missing distinction often becomes visible only after a model fails across time. Call this \emph{diachronic dimensionalization}: histories of failed prediction or intervention generate candidate coordinates that were not salient in the earlier state description.
+
+Let $h=(s_0,a_0,c_0,\ldots,s_T)$ be a provenance-bearing history and let $\phi_k(h)$ be the current representation. A candidate new dimension $d_{k+1}$ is earned only if adding it changes at least one held-out prediction, intervention, failure localization, or compression criterion after complexity cost:
+\begin{equation}
+Gain(d_{k+1}) = Score(\phi_k\oplus d_{k+1})-Score(\phi_k)-Cost(d_{k+1})>0.
+\label{eq:deep-dim-gain}
+\end{equation}
+Narrative convenience is not enough.
+
+\paragraph{Frames and transport.}
+Where several representations describe the same task-relative object, one may treat each representation as a frame $F$ with admissible reparameterizations forming a subgroupoid $\mathcal G_F$. A transport map $U_{F\rightarrow F'}$ is empirically useful only if task-relevant operations approximately commute:
+\begin{equation}
+\delta_{F,F'}(a,x)
+= d\!\left(U_{F\rightarrow F'}(a\cdot x),\;\tilde a\cdot U_{F\rightarrow F'}(x)\right).
+\label{eq:deep-bridge-defect}
+\end{equation}
+Large bridge defect means that an operation described as ``the same'' in two frames is not actually transported without loss.
+
+For a closed sequence of frame changes $\gamma$, a loop residual
+\begin{equation}
+H_\gamma = U_{n\rightarrow 1}\circ\cdots\circ U_{1\rightarrow 2}
+\label{eq:deep-holonomy}
+\end{equation}
+can expose path dependence when $H_\gamma(x)\neq x$. Calling that residual ``holonomy'' is a formal analogy. Curvature or torsion language earns scientific use only if it yields invariant or discriminating quantities beyond ordinary transition models. No resemblance to gauge theory, general relativity, or quantum gravity imports physical mechanism.
+
+\paragraph{Writable relational interfaces.}
+A semantic coordinate is stronger than a probe when interventions on it can predictably change downstream behavior under held-out conditions. A useful explicit interface therefore combines representation with intervention semantics:
+\begin{equation}
+\mathcal I=(Z,\mathcal U_Z,\Pi_{write},\Pi_{read},\mathcal C),
+\label{eq:deep-interface}
+\end{equation}
+where $Z$ is the relational state, $\mathcal U_Z$ admissible interventions, $\Pi_{write}$ and $\Pi_{read}$ typed write/read maps, and $\mathcal C$ the constraints/jurisdiction under which those operations are valid. This is the deeper control surface sought by anti-grammar research.
+
+\begin{readercheck}
+If the geometric vocabulary disappeared tomorrow, what measurable object would remain? Keep bridge defects, path residuals, or intervention maps only when they outperform a simpler transition-system description. Otherwise delete the geometry and keep the result.
+\end{readercheck}
+
+\section{Perspective as projection and reconstruction problem}
+
+CBRD uses a typed perspective scaffold where needed:
+\begin{align}
+C_{i,t}&:=\mathrm{PerspectiveCenter}_{i,t},\\
+\Pi_{i,t}&:=\mathrm{Perspectivalization}_{i,t},\\
+P_{i,t}&:=\langle C_{i,t},\Pi_{i,t}\rangle.
+\end{align}
+The exact type of $\Pi$ remains open. A diachronic observer can be modeled as a provenance-bearing continuity reconstructed across successive perspective states and returned consequences:
+\begin{equation}
+O_{i,\le t}\xrightarrow{\pi_P}P_{i,t}.
+\end{equation}
+Identical current presentations do not imply identical trajectories.
+
+This matters for system identification. A fixed point under one observable projection can disappear or move under another. Therefore
+\begin{equation}
+\text{stable projected attractor}\nrightarrowbyitself\text{generator or source object}.
+\end{equation}
+
+\section{Negative results are typed objects}
+
+A negative result should be represented separately from the parent theory:
+\begin{equation}
+\mathrm{NegativeResult}=\langle Q,r,F,j,E,R,I,D\rangle,
+\end{equation}
+where $Q$ is the tested claim, $r$ the tested realization, $F$ the frame, $j$ the jurisdiction, $E$ the executable/evidence chain, $R$ the returned result, $I$ the scoped interpretation, and $D$ the dependency closure.
+
+Then
+\begin{equation}
+\mathrm{Fail}(r)\nrightarrowbyitself\mathrm{Fail}(Q)
+\end{equation}
+unless the parent claim explicitly depends on that realization.
+
+Hard closure of an executable negative requires a reconstructible chain:
+\begin{align}
+\text{claim/preregistration}
+&\rightarrow\text{executable bytes}\rightarrow\text{environment}\nonumber\\
+&\rightarrow\text{raw outputs}\rightarrow\text{analysis}\nonumber\\
+&\rightarrow\text{result}\rightarrow\text{scoped interpretation}.
+\end{align}
+A prose statement that an experiment ran is evidence about the audit narrative, not a substitute for the chain itself.
+
+\section{Multi-interface transport failure and localization}
+\label{sec:deep-torsion}
+
+A represented difference can lose causal incidence before downstream action or revision. The deeper object is a transport chain with independently testable interfaces.
+
+Let $D$ be a task-relevant difference, $Z_1,\ldots,Z_n$ internal or institutional states, and $Y$ a downstream variable. For each interface $k\rightarrow k+1$, define a predeclared transport sensitivity
+\begin{equation}
+\tau_k = Sens(Z_{k+1};do(Z_k[D])).
+\label{eq:deep-tau}
+\end{equation}
+where $Z_k[D]$ denotes the component of $Z_k$ carrying the tested distinction under an intervention contract. A first-obstruction estimate is
+\begin{equation}
+k^*=\min\{k:\tau_k<\delta_k\},
+\label{eq:deep-first-obstruction}
+\end{equation}
+provided upstream representation and downstream task relevance have been independently established.
+
+This localization prevents a common diagnostic collapse. ``The model knew but did not act'' can mean at least: the distinction was only decodable by an external probe; the relevant channel was gated; authorization rejected the proposed update; policy ignored an accepted correction; an actuator failed; or verification recorded the failure without writing it back. Those are different interventions.
+
+The concept is also scale-relative. A distinction can be live in one subsystem and dead in a larger organization, or the reverse. Therefore
+\begin{equation}
+Torsion(D;S_1)\not\Rightarrow Torsion(D;S_2)
+\label{eq:deep-scale-torsion}
+\end{equation}
+without an explicit cross-scale mapping.
+
+The word ``torsion'' remains provisional. If causal mediation, routing analysis, control-theoretic observability/controllability, or an established systems concept captures the same localization with no useful residual, the geometric metaphor should be retired rather than defended by literary force.

@@ -1,99 +1,66 @@
 # Venus × Minerva
 
-**Venus × Minerva** is a living public research organism for consequence-bearing relations, perspectivalization, recursive reconstruction, governance, verification, and world-entry under explicit provenance and jurisdiction.
+A model can be useful and still exclude a real possibility. A message can be delivered and still fail to change its receiver. Two histories can end in the same visible state while preserving different future possibilities. A reader can repeat a theory's vocabulary without being able to reconstruct the distinction that vocabulary was supposed to name.
 
-It is not a single theory document, an AI agent, a metaphysical Root, or a pair of papers. The maintained project is a HOME↔FRONTIER research substrate; papers, software, indexes, and summaries are projections from it.
+**Venus × Minerva** studies problems of that kind: how consequential differences cross boundaries, change later possibilities, survive compression, return from independently authoring centers, and remain corrigible when they are represented, formalized, governed, or published.
 
-## Core relation
+The repository is a public research substrate, not a single theory document or a sovereign agent. Its maintained state is split along two independent axes.
 
-```text
-consequential difference
-→ crosses a provisional boundary
-→ is transformed / discriminated / retained
-→ changes later admissibility or transformation
-```
+## Continuity and correction: HOME ↔ FRONTIER
 
-This is the strongest earned mid-level relation currently used across the project. It does not solve first differentiation and does not make every recurrence of this relation the same object.
+- **HOME** collects what is currently reconstructible enough to support continued work: constitutional constraints, accepted scoped results, retained provenance, evidence chains, and release state.
+- **FRONTIER** carries what can still change that state: unresolved bridges, criticism, residuals, countermodels, experiments, failed realizations, and returned consequence.
 
-## Two independent axes
+They are projections over one provenance-bearing history, not separate worlds.
 
-### HOME ↔ FRONTIER
+## Two publication projections: Arcane Magics ↔ CBRD
 
-A temporal/functional continuity-correction axis.
+Only after that research relation is visible do the paper names become useful.
 
-- **HOME**: reconstructible continuity, retained support, current constitutional state, memory, accepted formal results, verified evidence chains, and release state.
-- **FRONTIER**: unresolved claims, residuals, contradiction, criticism, experiments, bridge obligations, countermodels, failed realizations, and returned consequence.
+- **Arcane Magics** is **Inhabited THEO–PHEN ↔ Corrigible Ontological Articulation**. It asks how inhabited occurrence, embodiment, interpretation, theological orientation, alterity, and explicit ontology can interact without one register silently acquiring the warrant of another.
+- **Consequence-Bearing Relational Dynamics (CBRD)** is the **epistemic–formal–operational projection**. It asks how to type the relations, compare them against prior art, preserve provenance, expose missing bridges, derive formal obligations, build tests, and retire failed objects.
 
-HOME and FRONTIER are projections over one provenance-bearing history, not two ontological substances.
+Neither is sovereign over the other. `HOME↔FRONTIER` is also not `Arcane↔CBRD`; both papers contain continuity and correction functions.
 
-### Arcane Magics ↔ CBRD
+## Start with a problem, not a project term
 
-A reciprocal projection/audit axis.
+The knowledge bank is the recommended entry surface:
 
-- **Arcane Magics**: **Inhabited THEO–PHEN ↔ Corrigible Ontological Articulation**. It works from inhabited occurrence, embodiment, interpretation, theological orientation, alterity, and explicit ontology while retaining epistemic and jurisdictional fences.
-- **Consequence-Bearing Relational Dynamics (CBRD)**: the **epistemic–formal–operational projection**. It emphasizes explicit definitions, models, transformations, evidence, discriminators, countermodels, formal obligations, operationalization, and verification.
+- [Information is not the act of informing someone](knowledge/problems/INFORMATION_AND_INFORMING.md)
+- [What exists is not the same question as what a model admits](knowledge/problems/WHAT_EXISTS_AND_WHAT_A_MODEL_EXCLUDES.md)
+- [A world is encountered from somewhere](knowledge/problems/SITUATED_WORLD_AND_PERSPECTIVALIZATION.md)
+- [Another center can return consequence without becoming your model](knowledge/problems/RETURNED_CONSEQUENCE_AND_OTHER.md)
+- [Continuity need not mean unchanged substance](knowledge/problems/CONTINUITY_DIFFERENCE_AND_IDENTITY.md)
+- [A compression that works now may fail after it is used](knowledge/problems/COMPRESSION_UNDER_FUTURE_USE.md)
+- [A projection does not guarantee reconstruction of its source](knowledge/problems/PROJECTION_AND_RECONSTRUCTION.md)
 
-Neither projection is sovereign over the other. Arcane may not borrow scientific warrant merely from adjacency to CBRD; CBRD may not erase independently licensed phenomenological, theological, or model-ontological objects merely because a stronger scientific bridge is absent.
+Then use the [comparative dossiers](knowledge/INDEX.md#comparative-subtraction) to ask what earlier researchers already solved, what their objects are not identical to here, and what remains after novelty is subtracted.
 
-`HOME↔FRONTIER` is not `Arcane↔CBRD`. Both public projections contain HOME and FRONTIER functions.
+## Public Canon and current frontier
 
-## Research organism
+- [Public HOME](canon/home/README.md)
+- [Constitution](canon/home/CONSTITUTION.md)
+- [Public ontology](canon/home/PUBLIC_ONTOLOGY.md)
+- [Projection model](canon/home/PROJECTION_MODEL.md)
+- [Research frontier](canon/frontier/RESEARCH_FRONTIER.md)
+- [Claims and register boundaries](docs/CLAIMS_AND_BOUNDARIES.md)
 
-```text
-HOME_t
-→ candidate / question / claim
-→ Compiler
-→ warrant evaluation
-→ governance
-→ bounded authorization / execution / formal work / publication
-→ claim-relative non-preauthored return
-→ receipts
-→ verification
-→ dependency-local write-back
-→ HOME_{t+1} + revised FRONTIER
-```
+A compact public Canon is allowed to omit private history. It is not allowed to omit distinctions whose absence changes warrant, jurisdiction, reconstruction, or future admissibility.
 
-The **Compiler** is a staged transformation family:
+## Manuscripts
 
-```text
-PARSE → REFER → TYPE → DIFFERENTIATE → OBLIGATE → PLAN → CHECK → LOWER
-```
+The live manuscript sources are under [`papers/`](papers/README.md). They are working projections, not published releases. Their current versions restore useful material lost during earlier compression while retyping obsolete claims through current Canonical constraints.
 
-Downstream crossings remain distinct:
+## Implementation
 
-```text
-GOVERN → AUTHORIZE → EXECUTE → RECEIPT → VERIFY → WRITE_BACK
-```
+The executable research architecture is specified; the runtime is not yet implemented. See [Architecture](docs/ARCHITECTURE.md) and [Roadmap](ROADMAP.md). A build, schema, or compiler stage never counts as evidence that the modeled world-level relation exists.
 
-Compilation success is not authorization. Execution is not verification. A model is not Reality.
+## Provenance and credit
 
-## Start here
+Historical priority, project origin, participant return, later constraint, comparative convergence, formal inheritance, publication freeze, and model/tool contribution are distinct relations. See [public credit routing](knowledge/credit/CREDIT_RELATIONS.md) and [public provenance](provenance/README.md).
 
-1. [`canon/home/README.md`](canon/home/README.md)
-2. [`canon/home/CONSTITUTION.md`](canon/home/CONSTITUTION.md)
-3. [`canon/home/PUBLIC_ONTOLOGY.md`](canon/home/PUBLIC_ONTOLOGY.md)
-4. [`canon/home/PROJECTION_MODEL.md`](canon/home/PROJECTION_MODEL.md)
-5. [`canon/frontier/RESEARCH_FRONTIER.md`](canon/frontier/RESEARCH_FRONTIER.md)
-6. [`knowledge/INDEX.md`](knowledge/INDEX.md)
-7. [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
-8. [`historical-regressions/REGRESSION_LEDGER.md`](historical-regressions/REGRESSION_LEDGER.md)
-
-## Current implementation state
-
-The **research architecture is defined; the executable runtime is not yet implemented**. `software/` is currently a contract and staging surface, not evidence that the event kernel, Compiler, receipt system, or regression harness already exists.
-
-The executable substrate begins after computational differentiation exists. Software may investigate the first-differentiation frontier; a data type or enum does not solve it.
-
-## Publication state
-
-Arcane Magics and CBRD are manuscript projections in development. They are not currently published Venus × Minerva releases. A manuscript becomes a publication only through an explicit frozen release with citation/version metadata. Repository improvement alone does not earn a paper version.
-
-## Privacy and provenance
-
-Public claims must remain reconstructible without private personal-source material. Exact private archives and internal provenance remain outside this repository. Public provenance preserves the distinctions required to reconstruct current claims without treating private history as a public evidence dump.
-
-A clean current tree does not imply a clean public Git history. Public-history sanitation remains a separate release-governance gate.
+Private source archives and the protected canonical provenance ledger remain outside the public repository. A clean checked-out tree also does not imply a sanitized public Git history; [public-history sanitation](provenance/PUBLIC_HISTORY_POLICY.md) remains a separate release gate.
 
 ## Licensing
 
-New original theory, Canon, documentation, and knowledge first released through Venus × Minerva use **CC BY-NC-SA 4.0** by default. New original software uses **PolyForm Noncommercial 1.0.0** by default. Commercial permissions and capability-sensitive release remain separate decisions. See [`LICENSE_POLICY.md`](LICENSE_POLICY.md).
+New original theory, Canon, documentation, and knowledge first released through Venus × Minerva use **CC BY-NC-SA 4.0** by default. New original software uses **PolyForm Noncommercial 1.0.0** by default. Existing grants and third-party rights remain governed by their own terms. See [LICENSE_POLICY.md](LICENSE_POLICY.md).

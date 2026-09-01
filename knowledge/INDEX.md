@@ -1,52 +1,50 @@
-# Venus × Minerva knowledge graph
+# Knowledge bank
 
-This directory is an Obsidian-compatible public research graph, not a glossary dump. Concept nodes are compact entry points; [`EDGES.md`](EDGES.md) records explicit typed relations among them.
+This bank is not a glossary.
 
-## Core relation / ontology
+Its job is to let a reader reconstruct distinctions from problems, compare them with the strongest neighboring work, and depend less on project-specific terminology over time.
 
-- [[concepts/Core Consequential Relation]]
-- [[concepts/Perspective Center and Perspectivalization]]
-- [[concepts/Semantic Center and Fixed Points]]
-- [[concepts/Observer and Diachronic Reconstruction]]
-- [[concepts/Mind and Distributed Organization]]
-- [[concepts/HOME and FRONTIER]]
+## Authoring constitution
 
-## Epistemology / governance / compilation
+- [Referent-first authoring](method/REFERENT_FIRST_AUTHORING.md)
+- [Comparative subtraction](method/COMPARATIVE_SUBTRACTION.md)
+- [Reader autonomy](method/READER_AUTONOMY.md)
 
-- [[concepts/Warrant Trichotomy]]
-- [[concepts/Governance Qutrit]]
-- [[concepts/Provenance and Jurisdiction]]
-- [[concepts/Authorship and Participant Jurisdiction]]
-- [[concepts/Compiler]]
-- [[concepts/AntiGrammar and RegisterBridge]]
-- [[concepts/Executed Fences]]
+A local term is not earned because it is elegant. It is earned only when removing it loses a consequential distinction at a declared task or index.
 
-## Reconstruction / retention
+## Problems before terms
 
-- [[concepts/Projection Section Reconstruction]]
-- [[concepts/Recursive Sufficiency]]
-- [[concepts/Regenerative Access]]
-- [[concepts/Semantic Poisoning and Cryo]]
+- [Information and informing](problems/INFORMATION_AND_INFORMING.md)
+- [What exists and what a model excludes](problems/WHAT_EXISTS_AND_WHAT_A_MODEL_EXCLUDES.md)
+- [Situated world and perspectivalization](problems/SITUATED_WORLD_AND_PERSPECTIVALIZATION.md)
+- [Returned consequence and alterity](problems/RETURNED_CONSEQUENCE_AND_OTHER.md)
+- [Continuity, difference, and identity](problems/CONTINUITY_DIFFERENCE_AND_IDENTITY.md)
+- [Compression under future use](problems/COMPRESSION_UNDER_FUTURE_USE.md)
+- [Projection and reconstruction](problems/PROJECTION_AND_RECONSTRUCTION.md)
 
-## Research and publication
+## Comparative subtraction
 
-- [[concepts/First Differentiation]]
-- [[concepts/Verification and Construction]]
-- [[concepts/Negative Results and Residuals]]
-- [[concepts/Arcane Magics and CBRD]]
-- [[concepts/Publication as Projection]]
-- [[concepts/Historical Regressions]]
+- [Heidegger](comparisons/HEIDEGGER.md)
+- [Quine](comparisons/QUINE.md)
+- [Simondon](comparisons/SIMONDON.md)
+- [Whitehead and Dewey](comparisons/WHITEHEAD_DEWEY.md)
+- [Peirce and Pattee](comparisons/PEIRCE_PATTEE.md)
+- [Alterity, participatory interaction, and criticism](comparisons/LEVINAS_PARTICIPATORY_LONGINO.md)
+- [Perspectival realism](comparisons/PERSPECTIVAL_REALISM.md)
 
-## Graph infrastructure
+## Evidence archaeology
 
-- [[EDGES]] — explicit typed concept relations
-- [[indexes/graph-index]] — navigational index
-- `relations/` — relation vocabulary
+- [S0–S11 program](evidence/S0-S11_EVIDENCE_ARCHAEOLOGY.md)
+- [Humanity Evidence Atlas](evidence/HUMANITY_EVIDENCE_ATLAS.md)
+- [Operator Genealogy](evidence/OPERATOR_GENEALOGY.md)
+- [Novelty Residual Matrix](evidence/NOVELTY_RESIDUAL_MATRIX.md)
+- [Open Bridge Dossier](evidence/OPEN_BRIDGE_DOSSIER.md)
 
-## Reference bank
+## Provenance and navigation
 
-- [[references/INDEX]]
-- [[references/CANONICAL_SOURCE_MAP]]
-- `references/bib/` — function-partitioned BibTeX bank
+- [Credit relations](credit/CREDIT_RELATIONS.md)
+- [Reading paths](indexes/reading-paths.md)
+- [Graph index](indexes/graph-index.md)
+- [Reference bank](references/README.md)
 
-A generated monolithic `references.bib` export is planned but is not currently tracked in GitHub.
+The older sign-first concept cards are retired as primary teaching surfaces. Where a project term remains useful, it should be introduced inside the relevant problem node after the referent and comparison are already visible.

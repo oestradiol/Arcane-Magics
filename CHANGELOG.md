@@ -1,13 +1,16 @@
 # Changelog
 
-## Unreleased — public-organism rebuild
+## Unreleased — Canonical + arXiv reconstruction
 
-- Restored the repository as a HOME↔FRONTIER research organism rather than a collection of summary stubs.
-- Corrected Arcane naming to **Arcane Magics** and retyped its public relation as **Inhabited THEO–PHEN ↔ Corrigible Ontological Articulation**.
-- Retyped CBRD as the epistemic–formal–operational projection; removed “Gödelian” as a global brand adjective. Gödel/Löb-style language is reserved for specific formal self-reference or logical-limit arguments.
-- Made `HOME↔FRONTIER` and `Arcane↔CBRD` explicitly orthogonal axes.
-- Added public Canon routing, projection, provenance, schema, claim-boundary, and reading-path surfaces.
-- Expanded the knowledge graph with missing center/observer/authorship/non-annihilation/semantic-poisoning/fence-enforcement concepts and an explicit relation ledger.
-- Marked software and regression execution honestly as planned rather than implemented.
-- Replaced public-Git-history-as-provenance with controlled provenance plus an explicit history-sanitation gate.
-- Corrected the reference-bank documentation so it no longer advertises an untracked monolithic BibTeX file.
+- Rebuilt the knowledge bank around problems, referents, comparative subtraction, and reader reconstruction instead of sign-first glossary cards.
+- Routed the S0–S11 evidence archaeology, Humanity Evidence Atlas, Operator Genealogy, novelty residuals, OPEN bridges, and typed credit relations into the live tree.
+- Restored live Arcane Magics and CBRD LaTeX sources from current Canonical plus useful material lost during earlier manuscript compression.
+- Added explicit information-versus-informing, source-removal, reader-autonomy, and terminology-deletion tests.
+- Corrected stale reference-bank claims about a nonexistent monolithic BibTeX export.
+- Expanded public provenance routing without copying the protected private credit authority.
+- Retired the earlier sign-first concept-card layer as the primary teaching interface.
+- Removed the stale predecessor Research backup from the maintained private workspace; provenance is preserved through typed records rather than a redundant working-tree copy.
+
+## Earlier — public-substrate rebuild
+
+Earlier public-substrate work restored HOME↔FRONTIER, separated it from Arcane↔CBRD, added public Canon/provenance/schema surfaces, made runtime status explicit, and retained public-history sanitation as an OPEN release gate.

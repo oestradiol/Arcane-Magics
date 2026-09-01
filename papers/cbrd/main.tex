@@ -1,0 +1,68 @@
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
+% Consequence-Bearing Relational Dynamics successor working manuscript. Frozen Version-0 sources remain provenance.
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage{enumitem}
+\usepackage[backend=biber,style=numeric-comp,sorting=none,natbib=true,sortcites=true,giveninits=true,maxcitenames=3,maxbibnames=8,minbibnames=3,doi=true,url=true,eprint=true,isbn=false]{biblatex}
+\addbibresource{references.bib}
+\AtEveryBibitem{\iffieldundef{doi}{}{\clearfield{url}\clearfield{urldate}\clearfield{eprint}\clearfield{eprinttype}}}
+\renewcommand*{\bibfont}{\footnotesize}
+\setlength{\bibitemsep}{0.25\baselineskip}
+\setlength{\emergencystretch}{2em}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=blue!55!black,urlcolor=blue!65!black]{hyperref}
+\usepackage{xspace}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{criterion}{Criterion}
+\newtheorem{remark}{Remark}
+\newcommand{\CBRD}{\textsc{CBRD}\xspace}
+\newcommand{\AM}{\textit{Arcane Magics}\xspace}
+\newcommand{\withhold}{\textsc{withhold}\xspace}
+\newcommand{\nrightarrowbyitself}{\mathrel{\not\!\Rightarrow}}
+\newcommand{\Reality}{\mathcal{E}}
+\newenvironment{readercheck}{\begin{quote}\small\noindent\textbf{Reconstruction check.}\;}{\end{quote}}
+\newenvironment{statusnote}{\begin{quote}\small\noindent\textbf{Status.}\;}{\end{quote}}
+
+\hypersetup{
+  pdftitle={Consequence-Bearing Relational Dynamics},
+  pdfsubject={Typed claims, provenance, recursive sufficiency, projection and reconstruction, governance, Compiler and RegisterBridge relations, and falsifiable research programs},
+  pdfkeywords={CBRD, provenance, recursive sufficiency, causal abstraction, projection, section, governance, compiler, register bridge, anti-grammar, verification}
+}
+
+\title{\textbf{Consequence-Bearing Relational Dynamics}\\
+\large An Epistemic--Formal--Operational Projection\\
+\normalsize Provenance, Recursive Sufficiency, Projection, Governance, and Returned Consequence}
+\author{Independent Researcher}
+\date{Successor prepublication working manuscript --- 1 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Consequence-Bearing Relational Dynamics (CBRD) studies systems in which representations, decisions, and transformations participate in the processes that later evaluate them. Its central object is deliberately weaker than a universal ontology: consequential difference crosses a provisional boundary, is transformed or retained, and thereby changes later admissible transformation. The framework makes several separations operational. Model-relative impossibility is not Reality-relative impossibility without a bridge. Provenance is part of operative state when source or exposure can change future consequence. A compression is recursively sufficient only relative to the future transformations induced through its use. Returned consequence is evidentially useful only to the extent that the focal model did not fully pre-author the variation relevant to the claim. Claim status is downstream of a typed object, frame, register, index, jurisdiction, realization, dependencies, and evidence chain. Negative results update only their explicit dependency closure. A staged Compiler may parse, type, obligate, check, and lower without acquiring authority to execute; a RegisterBridge transports between typed registers under explicit invariant, loss, warrant, and failure rules. Projection does not imply a unique, cheap, or even existing section. These distinctions are connected to existing work in cybernetics, causal abstraction, provenance, belief revision, semantic information, active inference, enaction, category/interface theory, representation analysis, and metamorphic testing. CBRD does not claim historical uniqueness, a proof of first differentiation, a solution to P versus NP, or completed external validation. It specifies falsifiers, reduction conditions, and a prospective empirical program intended to make the framework smaller when established methods suffice.
+\end{abstract}
+
+\noindent\textbf{Keywords:} consequence-bearing relation; provenance; recursive sufficiency; causal abstraction; projection; reconstruction; governance; compiler; register bridge; verification.
+
+\medskip
+\noindent\small\textit{License: CC BY-NC-SA 4.0 for this successor manuscript and original material, subject to the repository's file-scoped licensing policy. Earlier distributed artifacts retain any rights already granted under their applicable terms.}\normalsize
+
+\tableofcontents
+\newpage
+
+\input{sections/01_scope_prior_art.tex}
+\input{sections/02_information_recursion.tex}
+\input{sections/03_projection_transport.tex}
+\input{sections/04_compiler_governance.tex}
+\input{sections/05_development_evidence.tex}
+\input{sections/06_appendices.tex}
+\end{document}
