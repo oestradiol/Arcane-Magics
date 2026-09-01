@@ -59,7 +59,7 @@ The executable research architecture is specified; the runtime is not yet implem
 
 Historical priority, project origin, participant return, later constraint, comparative convergence, formal inheritance, publication freeze, and model/tool contribution are distinct relations. See [public credit routing](knowledge/credit/CREDIT_RELATIONS.md) and [public provenance](provenance/README.md).
 
-Private source archives and the protected canonical provenance ledger remain outside the public repository. A clean checked-out tree also does not imply a sanitized public Git history; [public-history sanitation](provenance/PUBLIC_HISTORY_POLICY.md) remains a separate release gate.
+Private source archives and the protected canonical provenance ledger remain outside the public repository. On 1 September 2026 the maintained public Git graph was sanitized onto a fresh parentless root carrying the audited current tree; non-main rebuild branches were removed and no tags remain. This closes the public-history gate for intentionally reachable release refs at that state. Platform-managed pull-request refs, caches, and artifact retention are not claimed to be erased by that operation. See [public-history policy](provenance/PUBLIC_HISTORY_POLICY.md).
 
 ## Licensing
 
