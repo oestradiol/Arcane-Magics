@@ -35,6 +35,14 @@ S0-S11_EVIDENCE_ARCHAEOLOGY
   --grounds--> NOVELTY_RESIDUAL_MATRIX
   --grounds--> OPEN_BRIDGE_DOSSIER
 
+RGM_OPERATOR_ARCHAEOLOGY
+  --feeds--> OPERATOR_GENEALOGY
+  --historical-precursor-of--> cross-register bridge discipline
+  --historical-precursor-of--> anti-self-sealing correction
+  --historical-precursor-of--> term-removal / weakest-use discipline
+  --does-not-establish--> FORMAL_INHERITANCE
+  --does-not-replace--> current post-David project-origin spine
+
 COMPARATIVE_SUBTRACTION
   --requires--> CREDIT_RELATIONS
   --constrains--> every novelty claim
