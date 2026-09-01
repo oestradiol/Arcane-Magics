@@ -22,16 +22,16 @@ Open this directory as an Obsidian vault or any Markdown graph browser. Wiki-lin
 
 ## Relation vocabulary
 
-- [[relations/constrains|constrains]]
-- [[relations/emerges-from|emerges-from]]
-- [[relations/feeds-back|feeds-back]]
-- [[relations/formalizes|formalizes]]
-- [[relations/grounds|grounds]]
-- [[relations/implements|implements]]
-- [[relations/interprets|interprets]]
-- [[relations/requires|requires]]
-- [[relations/scaffolds|scaffolds]]
-- [[relations/supports|supports]]
+- [[knowledge/relations/constrains|constrains]]
+- [[knowledge/relations/emerges-from|emerges-from]]
+- [[knowledge/relations/feeds-back|feeds-back]]
+- [[knowledge/relations/formalizes|formalizes]]
+- [[knowledge/relations/grounds|grounds]]
+- [[knowledge/relations/implements|implements]]
+- [[knowledge/relations/interprets|interprets]]
+- [[knowledge/relations/requires|requires]]
+- [[knowledge/relations/scaffolds|scaffolds]]
+- [[knowledge/relations/supports|supports]]
 
 ## Reference bank
 
