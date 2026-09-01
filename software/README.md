@@ -1,7 +1,7 @@
 # Software
 
-This directory is intentionally a skeleton.
+The implementation is rebuilt from the current public contracts rather than copied from historical architecture.
 
-The successor implementation will be rebuilt from current Canonical contracts rather than copied from Old Venus. Historical code is retained as archaeology only when needed to anchor a concrete regression or lineage.
+New code belongs here only when its role, authority, effects, and verification surface are explicit. Compiler lowering does not authorize execution; execution does not verify its own result.
 
-New implementation code placed here is licensed under PolyForm Noncommercial 1.0.0 unless a file says otherwise.
+New software is licensed under PolyForm Noncommercial 1.0.0 unless a file says otherwise.

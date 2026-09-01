@@ -1,43 +1,41 @@
 # Licensing policy
 
-This file controls newly released Venus × Minerva material unless a file carries a more specific notice. It is a licensing map, not a substitute for the license texts it references.
+This file maps the default licenses for material first released through Venus × Minerva. A file-specific notice overrides the defaults below for that file.
 
-## New theory, Canon, documentation, and knowledge
+## Theory, Canon, documentation, and knowledge
 
-Original Venus × Minerva literary and knowledge works first released in this project are offered under **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**.
+Original literary and knowledge works first released through Venus × Minerva are offered under **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**.
 
 Canonical license: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-The license permits sharing and adaptation for noncommercial purposes subject to its attribution and ShareAlike conditions. Commercial use requires separate written permission from the relevant copyright holder.
+Commercial use requires separate written permission from the relevant copyright holder.
 
-## New software
+## Software
 
-Original Venus × Minerva software first released in this project is offered under **PolyForm Noncommercial License 1.0.0**, unless a file says otherwise.
+Original software first released through Venus × Minerva is offered under **PolyForm Noncommercial License 1.0.0**, unless a file says otherwise.
 
 Canonical license: https://polyformproject.org/licenses/noncommercial/1.0.0/
 
-Commercial software use requires a separate written license from the relevant copyright holder. Because the commercial restriction is intentional, new software under this policy is source-available/noncommercial rather than OSI Open Source.
+Commercial software use requires a separate written license from the relevant copyright holder. The commercial restriction is intentional, so software under this default is source-available/noncommercial rather than OSI Open Source.
 
-## Historical material
+## Earlier and unpublished material
 
-Earlier grants are not silently replaced by this policy. The frozen Research predecessor tree retains its historical file- and package-level notices, including prior CC BY 4.0 material. Old Venus source retains its historical license. Version 0 manuscript copies already distributed under CC BY 4.0 keep that grant subject to its terms.
+An internal draft license file does not, by itself, make an unpublished predecessor a separately licensed public release. Unpublished internal source incorporated into Venus × Minerva may therefore be released under the current applicable Venus × Minerva license when the copyright holder has the necessary rights.
 
-Moving a historical artifact into provenance changes its current role, not its historical copyright license.
+Material that was actually distributed to others under an earlier license remains subject to whatever rights were granted in that distribution. This policy does not attempt to revoke an existing grant.
 
 ## Third-party material
 
-A project license covers only rights the licensor controls. Bibliographic facts, quotations, external datasets, standards, figures, trademarks, and third-party material retain their own legal status. See `THIRD_PARTY_NOTICES.md`.
+The project can license only rights it controls. Bibliographic metadata, quotations, external datasets, standards, figures, trademarks, and other third-party material retain their own legal status. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 ## Commercial permissions
 
-The copyright holder may offer original work under separate commercial terms. A commercial license does not change the public noncommercial license for everyone else.
-
-No warranty, indemnification, exclusivity, service level, or endorsement is implied unless a signed agreement says so.
+The copyright holder may offer original work under separate commercial terms. No warranty, indemnification, exclusivity, service level, or endorsement is implied unless a signed agreement says so.
 
 ## Contributions
 
-External contributions that would become part of a commercially licensable core are not accepted merely under a DCO. They require an explicit contributor relicensing grant or another reviewed rights arrangement. Until that mechanism is formally adopted, issues, criticism, test cases, and proposed patches may be discussed without assuming a merged contribution can later be relicensed commercially.
+External contributions intended for a commercially licensable core require an explicit relicensing grant or another rights arrangement adequate for that purpose. Discussion, criticism, test cases, and proposed patches do not by themselves imply such a grant.
 
-## Release governance
+## Capability release
 
-The project distinguishes public reconstructibility from unrestricted commercial exploitation, and representability from executable capability. Copyright cannot guarantee benevolent use. High-leverage operational modules therefore also pass a release-governance review; see `RESPONSIBLE_RELEASE.md`.
+Copyright is not a safety mechanism. Publication of high-leverage operational capability is separately governed by the release policy in [`RESPONSIBLE_RELEASE.md`](RESPONSIBLE_RELEASE.md).

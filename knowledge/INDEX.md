@@ -18,14 +18,11 @@ Open this directory as an Obsidian vault, or browse the Markdown normally. No `.
 - [[concepts/Regenerative Access]]
 - [[concepts/Verification and Construction]]
 - [[concepts/Publication as Projection]]
-- [[concepts/Old Venus Archaeology]]
+- [[concepts/Historical Regressions]]
 
 ## Reference bank
 
 - [[references/INDEX]]
 - [[references/CANONICAL_SOURCE_MAP]]
-- `references/bib/` — the merged and deduplicated Arcane/CBRD bibliography plus explicit post-V0 Canonical additions, partitioned by comparison function.
-
-## Predecessor atlas
-
-The earlier Obsidian-first Knowledge package is preserved inside the frozen `Research` predecessor tree under `provenance/research-v1.5/tree/knowledge/`. The live graph keeps only the current concept nodes, relation vocabulary, and reference bank.
+- `references/bib/` — function-partitioned BibTeX bank merged from the current manuscript bibliographies and Canonical reference work.
+- `references/references.bib` — monolithic export of the same 71-entry bank for tooling that prefers one file.

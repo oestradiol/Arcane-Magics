@@ -48,4 +48,4 @@ These constrain the P-vs-NP section-obstruction program. They do not support a c
 
 `CrutchfieldYoung1989`, `KolchinskyWolpert2018`, `Hofstadter2007StrangeLoop`, `KrakauerEtAl2026`, `YeEtAl2026SteeringSignals`.
 
-For the current Canonical reason a source is named, see [[CANONICAL_SOURCE_MAP]]. Exact metadata is available in the function-partitioned `bib/` files. Historical RGM-era records remain in the frozen Research predecessor tree and do not inherit current claim status.
+For the current Canonical reason a source is named, see [[CANONICAL_SOURCE_MAP]]. Exact metadata is available in the function-partitioned `bib/` files and in the monolithic `references.bib` export.

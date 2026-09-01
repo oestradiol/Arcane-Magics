@@ -1,23 +1,19 @@
 # Venus × Minerva
 
-**Venus × Minerva** is the public research organism that succeeds the historical Venus codebase and the Version 0 Arcane/CBRD publication repository.
+**Venus × Minerva** is a living research project about consequential relations, transformation, provenance, perspective, verification, and the limits of reconstruction from partial representations.
 
-Its purpose is to keep a living research program reconstructible without confusing a model, publication, compiler, or maintainer with Reality.
+The project is organized around a simple constraint: a model, compiler, publication, or maintainer may represent and transform research state without becoming its authority over Reality.
 
-The live repository has four main surfaces:
+## Where to read
 
-- `canon/` holds the public constitutional and research state.
-- `knowledge/` is an Obsidian-compatible concept graph and reference bank.
-- `papers/v0/` records the frozen Version 0 publication lineage; exact historical source bundles remain in the private provenance workspace where publication source contains identity aliases unnecessary for the current public theory.
-- `archaeology/` keeps only Old Venus residues that still teach something or serve as regressions.
+- [`canon/home/CONSTITUTION.md`](canon/home/CONSTITUTION.md) states the project-wide non-identities and governance constraints.
+- [`canon/home/PUBLIC_ONTOLOGY.md`](canon/home/PUBLIC_ONTOLOGY.md) gives the current public object and relation model.
+- [`canon/frontier/RESEARCH_FRONTIER.md`](canon/frontier/RESEARCH_FRONTIER.md) lists the unresolved formal questions.
+- [`knowledge/INDEX.md`](knowledge/INDEX.md) opens the Obsidian-compatible concept graph and reference bank.
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) describes the implementation target.
+- [`historical-regressions/REGRESSION_LEDGER.md`](historical-regressions/REGRESSION_LEDGER.md) records failure classes retained as tests rather than inherited architecture.
 
-The immediate predecessor repository is preserved intact under `provenance/research-v1.5/tree/`. It is browseable history, not a second current root.
-
-## Current research boundary
-
-The executable project begins after computational differentiation exists. It does not instantiate `vacuous_relation` as a software object and does not claim that an enum, qutrit, or successful build proves first ontic differentiation.
-
-The current operational spine is:
+## Research spine
 
 ```text
 consequential difference
@@ -32,12 +28,21 @@ consequential difference
 → dependency-local write-back
 ```
 
-`HOME` and `FRONTIER` are projections over the same provenance-bearing history. Papers are also projections. None is the authority root.
+`HOME` and `FRONTIER` are projections over one provenance-bearing research history. They are views, not separate stores or ontological regions.
 
-## Version state
+The executable project begins after computational differentiation exists. It does not claim that a software object, enum, qutrit, successful build, or internal coherence result derives first ontic differentiation.
 
-Version 0 paper sources are frozen historical artifacts and are not silently rewritten. The living repository can change while paper/theory **V1 remains unearned**. V1 requires target-appropriate returned consequence, not a prettier manuscript or a larger codebase.
+## Planned publications
+
+Two manuscript projects are being developed alongside the living repository:
+
+- **Arcane Meta-Theory** — the phenomenological and philosophical projection.
+- **Consequence-Bearing Relational Dynamics (CBRD)** — the scientific, formal, and operational projection.
+
+Neither title is treated as published merely because it appears in this repository. See [`papers/README.md`](papers/README.md).
 
 ## Licensing
 
-New Venus × Minerva material is noncommercial by default. Historical imports retain the licenses under which they were already released. See [`LICENSE_POLICY.md`](LICENSE_POLICY.md) before reuse.
+New Venus × Minerva theory, documentation, and knowledge material is released for noncommercial reuse under CC BY-NC-SA 4.0 unless a file says otherwise. New software is released under PolyForm Noncommercial 1.0.0 unless a file says otherwise. Commercial permissions are separate.
+
+See [`LICENSE_POLICY.md`](LICENSE_POLICY.md).

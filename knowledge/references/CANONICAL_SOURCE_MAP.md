@@ -24,6 +24,6 @@ This map turns the current Canonical's named comparison surfaces into an organiz
 | Baker–Gill–Solovay | `BakerGillSolovay1975Relativizations` | relativization barrier for P-vs-NP methods |
 | Razborov–Rudich | `RazborovRudich1997NaturalProofs` | natural-proofs barrier constraint |
 
-The merged BibTeX also retains the Version 0 prior-art corpus, including causal abstraction, state abstraction, provenance, process, cybernetics, enaction, and related comparison families.
+The merged BibTeX also retains the manuscript prior-art corpus, including causal abstraction, state abstraction, provenance, process, cybernetics, enaction, and related comparison families.
 
-Bibliographic metadata added after V0 is intentionally modest: where no DOI is known or required, the bank records ordinary book metadata rather than fabricating one.
+Bibliographic metadata is intentionally modest: where no DOI is known or required, the bank records ordinary book metadata rather than fabricating one.

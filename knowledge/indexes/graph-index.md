@@ -10,7 +10,7 @@ Open this directory as an Obsidian vault or any Markdown graph browser. Wiki-lin
 - [[First Differentiation]]
 - [[Governance Qutrit]]
 - [[HOME and FRONTIER]]
-- [[Old Venus Archaeology]]
+- [[Historical Regressions]]
 - [[Perspectivalization]]
 - [[Projection Section Reconstruction]]
 - [[Provenance and Jurisdiction]]
