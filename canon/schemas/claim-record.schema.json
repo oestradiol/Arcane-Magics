@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/oestradiol/Venus-Minerva/canon/schemas/claim-record.schema.json",
+  "title": "ClaimRecord",
+  "type": "object",
+  "required": ["claim_id", "proposition", "register", "frame", "warrant"],
+  "properties": {
+    "claim_id": {"type": "string", "minLength": 1},
+    "proposition": {"type": "string", "minLength": 1},
+    "register": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "frame": {"type": "string", "minLength": 1},
+    "index": {"type": ["string", "null"]},
+    "jurisdiction": {"type": ["string", "null"]},
+    "source_refs": {"type": "array", "items": {"type": "string"}},
+    "history_refs": {"type": "array", "items": {"type": "string"}},
+    "warrant": {"enum": ["LICENSE", "LICENSE_NEGATION", "UNDETERMINED"]},
+    "governance": {"enum": ["ADMIT", "WITHHOLD", "REJECT_CUT"]},
+    "residual_refs": {"type": "array", "items": {"type": "string"}},
+    "verification_refs": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

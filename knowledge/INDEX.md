@@ -1,28 +1,51 @@
 # Venus × Minerva knowledge graph
 
-Open this directory as an Obsidian vault, or browse the Markdown normally. No `.obsidian/workspace` state is required.
+This directory is an Obsidian-compatible public research graph, not a glossary dump. Concept nodes are compact entry points; [`EDGES.md`](EDGES.md) records explicit typed relations among them.
 
-## Current concepts
+## Core relation / ontology
 
 - [[concepts/Core Consequential Relation]]
+- [[concepts/Perspective Center and Perspectivalization]]
+- [[concepts/Semantic Center and Fixed Points]]
+- [[concepts/Observer and Diachronic Reconstruction]]
+- [[concepts/Mind and Distributed Organization]]
 - [[concepts/HOME and FRONTIER]]
-- [[concepts/Compiler]]
+
+## Epistemology / governance / compilation
+
 - [[concepts/Warrant Trichotomy]]
 - [[concepts/Governance Qutrit]]
-- [[concepts/First Differentiation]]
-- [[concepts/Perspectivalization]]
+- [[concepts/Provenance and Jurisdiction]]
+- [[concepts/Authorship and Participant Jurisdiction]]
+- [[concepts/Compiler]]
+- [[concepts/AntiGrammar and RegisterBridge]]
+- [[concepts/Executed Fences]]
+
+## Reconstruction / retention
+
 - [[concepts/Projection Section Reconstruction]]
 - [[concepts/Recursive Sufficiency]]
-- [[concepts/AntiGrammar and RegisterBridge]]
-- [[concepts/Provenance and Jurisdiction]]
 - [[concepts/Regenerative Access]]
+- [[concepts/Semantic Poisoning and Cryo]]
+
+## Research and publication
+
+- [[concepts/First Differentiation]]
 - [[concepts/Verification and Construction]]
+- [[concepts/Negative Results and Residuals]]
+- [[concepts/Arcane Magics and CBRD]]
 - [[concepts/Publication as Projection]]
 - [[concepts/Historical Regressions]]
+
+## Graph infrastructure
+
+- [[EDGES]] — explicit typed concept relations
+- [[indexes/graph-index]] — navigational index
+- `relations/` — relation vocabulary
 
 ## Reference bank
 
 - [[references/INDEX]]
 - [[references/CANONICAL_SOURCE_MAP]]
-- `references/bib/` — function-partitioned BibTeX bank merged from the current manuscript bibliographies and Canonical reference work.
-- `references/references.bib` — monolithic export of the same 71-entry bank for tooling that prefers one file.
+- `references/bib/` — function-partitioned BibTeX bank
+- `references/references.bib` — monolithic export of the same public bank
