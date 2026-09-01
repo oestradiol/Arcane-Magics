@@ -8,6 +8,6 @@
 - Made `HOME↔FRONTIER` and `Arcane↔CBRD` explicitly orthogonal axes.
 - Added public Canon routing, projection, provenance, schema, claim-boundary, and reading-path surfaces.
 - Expanded the knowledge graph with missing center/observer/authorship/non-annihilation/semantic-poisoning/fence-enforcement concepts and an explicit relation ledger.
-- Restored the missing monolithic BibTeX export contract.
 - Marked software and regression execution honestly as planned rather than implemented.
 - Replaced public-Git-history-as-provenance with controlled provenance plus an explicit history-sanitation gate.
+- Corrected the reference-bank documentation so it no longer advertises an untracked monolithic BibTeX file.

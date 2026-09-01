@@ -9,6 +9,7 @@ This roadmap tracks implementation, not metaphysical certainty.
 - [x] restore public provenance and schema surfaces;
 - [x] make implementation status explicit;
 - [x] restore a navigable concept/edge graph;
+- [ ] generate and validate monolithic `knowledge/references/references.bib` from partitioned source files;
 - [ ] sanitize reachable public Git history before calling the repository a clean release surface.
 
 ## Phase B — event/provenance kernel
@@ -21,7 +22,7 @@ This roadmap tracks implementation, not metaphysical certainty.
 ## Phase C — Compiler and governance
 
 - [ ] staged Compiler interfaces;
-- [ ] warrant types distinct from governance types;
+- [ ] warrant types distinct from governance decisions;
 - [ ] authorization boundary before irreversible effects;
 - [ ] RegisterBridge obligations and loss accounting.
 

@@ -48,4 +48,5 @@ This directory is an Obsidian-compatible public research graph, not a glossary d
 - [[references/INDEX]]
 - [[references/CANONICAL_SOURCE_MAP]]
 - `references/bib/` — function-partitioned BibTeX bank
-- `references/references.bib` — monolithic export of the same public bank
+
+A generated monolithic `references.bib` export is planned but is not currently tracked in GitHub.
