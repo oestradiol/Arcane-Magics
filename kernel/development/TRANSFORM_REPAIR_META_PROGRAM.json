@@ -1,0 +1,26 @@
+{
+  "schema": "Venus.TransformRepairMetaProgram.v0.1",
+  "program_id": "TRANSFORM_REPAIR_GRAMMAR_PARENT",
+  "authority": "LEARNER_STATE_OWNED_BOUNDED_REPAIR_GRAMMAR",
+  "parent_carrier": "TRANSFORM_INTERNALIZATION_PASS",
+  "enabled_patch_ops": [
+    "ADD_TRANSITION"
+  ],
+  "available_patch_ops": [
+    "ADD_TRANSITION",
+    "REMOVE_TRANSITION",
+    "REPLACE_TRANSITION"
+  ],
+  "candidate_field_sources": [
+    "returned_prior_state",
+    "returned_action",
+    "known_program_states",
+    "returned_payload_fields"
+  ],
+  "selection_rule": "MINIMAL_PATCH_SATISFYING_ALL_RETURNED_BEHAVIORAL_TRACES",
+  "ambiguity_rule": "WITHHOLD",
+  "hidden_evaluation_access": false,
+  "promotion_authority": false,
+  "mutable_by_successor": true,
+  "claim_fence": "Available operations are a bounded host-known primitive universe. Learner selection among them may support bounded machinery-improvement claims, not open-ended operator invention."
+}
