@@ -95,7 +95,7 @@ def _hypotheses(study: Mapping[str, Any], method: str) -> tuple[str, ...]:
     if method == "REPRODUCTION":
         return (
             "the target's smallest executable claim reproduces under the current admitted repository state",
-            "the executable claim fails or differs, localizing a returned implementation residual",
+            "the executable claim fails or differs, localizing a local execution residual",
         )
     if method == "COMPARATOR_AUDIT":
         return (
@@ -128,7 +128,7 @@ def make_research_proposal(cycle: Mapping[str, Any]) -> ResearchProposal:
     else:
         disposition = "RUN_BOUNDED_LOCAL_CHECKS"
         discriminator = (
-            "run the fixed prefrozen local checks and compare their returned result against "
+            "run the fixed prefrozen local checks and compare their observed result against "
             "the study method's live rival hypotheses"
         )
 
