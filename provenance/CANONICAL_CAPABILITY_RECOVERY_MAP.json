@@ -1,0 +1,294 @@
+{
+  "schema": "Venus.CanonicalCapabilityRecoveryMap.v0.1",
+  "date": "2026-09-24",
+  "rule": "Do not reimplement an earned capability until its Canonical realization is shown non-transplantable into the current Git carrier. Historical harness results remain donors unless current state/custody proves standing realization.",
+  "current_git_head": "b11690d134a25475490365a14d5945c78d383a54",
+  "occurrences": [
+    {
+      "id": "R139_RESEARCH_AGENCY",
+      "canonical_realization": "historical bounded developmental experiment lineage",
+      "earned": [
+        "raw mismatch -> research object",
+        "rival hypotheses",
+        "self-authored discriminator/query",
+        "experiment design",
+        "representation expansion",
+        "problem-language invention",
+        "research-method revision",
+        "future-family expansion",
+        "research-program selection",
+        "meta-operation synthesis"
+      ],
+      "persistence": "not one standing current Git organ; donor/historical proof",
+      "host_dependencies": [
+        "lower-level primitives",
+        "resources",
+        "governance",
+        "World/evaluator semantics",
+        "search substrates"
+      ],
+      "current_git_descendants": [
+        "EDU16-RC1 research-question formation / obligation routing",
+        "autonomous_worker source-grounded study",
+        "autonomous_proposal rival/discriminator templates"
+      ],
+      "disposition": "DONOR_MECHANISMS_NOT_DIRECT_STATE_RESTORE",
+      "recovery": "reuse individual mechanisms only where current causal separator requires them; do not claim R139 state identity"
+    },
+    {
+      "id": "R140_DEVELOPMENTAL_ENGINEERING",
+      "canonical_realization": "post-R139 scratch lineage with bounded process-revision cases",
+      "earned": [
+        "search depth revision",
+        "replay-window revision",
+        "method capacity revision",
+        "method factorization expansion",
+        "method-topology reopening",
+        "research-stage invention",
+        "meta-construction strategy change",
+        "meta-procedure generation",
+        "term/name-free corrigible organization O*"
+      ],
+      "persistence": "historical developmental engineering sequence; not current standing Git state",
+      "host_dependencies": [
+        "lower-level process primitives",
+        "resources",
+        "governance",
+        "World/evaluator semantics",
+        "important search substrates"
+      ],
+      "current_git_descendants": [
+        "Internalizer/O* guards",
+        "internalized opaque O* policy",
+        "TransformProgram repair family",
+        "autonomous method learning / meta-learning branches"
+      ],
+      "disposition": "DONOR_MECHANISMS_PARTLY_REDERIVED",
+      "recovery": "prefer current independently rederived O*/TransformProgram machinery; recover only missing process-revision functions with fresh causal tests"
+    },
+    {
+      "id": "R206_BOUNDED_RSI",
+      "canonical_realization": "two-generation improvement of recursive provenance/candidate discovery",
+      "earned": [
+        "recursive provenance discovery",
+        "generation-1 improver retention",
+        "fresh nested generation-2 improved candidate discovery"
+      ],
+      "persistence": "explicitly retained in current Git custody receipt as active_improver revision R206; open_ended_rsi=false",
+      "host_dependencies": [
+        "candidate source universe",
+        "external evaluation",
+        "governance"
+      ],
+      "current_git_descendants": [
+        "R226_CURRENT_STATE_RECEIPT active_improver",
+        "generic residual search state",
+        "TransformProgram repair search"
+      ],
+      "disposition": "LIVE_BUT_NOT_ROUTED_IN_GIT_AUTONOMOUS_STUDY",
+      "recovery": "quick restore: bind recursive dependency/provenance traversal into current autonomous study path under current R206 custody; do not claim historical algorithm identity"
+    },
+    {
+      "id": "U1_UNIFIED_CENTER",
+      "canonical_realization": "restart-persistent u1:center, 991 records",
+      "earned": [
+        "WorldMirror-like relational/abstraction state",
+        "RSM routing",
+        "Strong-N2",
+        "research/query state",
+        "retained R206 improver",
+        "state-owned TransformProgram",
+        "history/provenance",
+        "three consequential TransformProgram self-revisions",
+        "founder-ablatable isolated boot"
+      ],
+      "persistence": "exact Canonical U1 standing state is not present as a named current Git checkpoint; functional descendants are distributed across current Git runtime/development artifacts",
+      "host_dependencies": [
+        "neutral interpreter substrate",
+        "external World return",
+        "governed admission"
+      ],
+      "current_git_descendants": [
+        "IG10 WorldMirror/current runtime",
+        "TransformProgram runtime",
+        "SSR repair artifacts",
+        "Internalizer/O*",
+        "EDU16-RC1",
+        "autonomous worker"
+      ],
+      "disposition": "STATE_RECOMPILATION_REQUIRED",
+      "recovery": "compile functional state into current carrier rather than copying journal identity; require restart, source-removal, ablation, fresh return"
+    },
+    {
+      "id": "U1_SELF_DIRECTED_REEVALUATION",
+      "canonical_realization": "U1 scheduler regenerated queue from state/residuals/resources/provenance with no host-named READY task",
+      "earned": [
+        "READY/WITHHOLD/BLOCKED/STOP routing",
+        "highest-leverage lawful candidate selection",
+        "selected OPEN-DOMAIN-PROBLEM-FORMATION"
+      ],
+      "persistence": "current Git autonomous worker selects from pre-existing GitHub issues/PRs rather than forming candidate problems from raw residual field",
+      "host_dependencies": [
+        "resource/jurisdiction boundaries",
+        "World surface"
+      ],
+      "current_git_descendants": [
+        "autonomous_worker choose_target",
+        "EDU16 open-domain problem selection"
+      ],
+      "disposition": "PARTIAL_REGRESSION",
+      "recovery": "next nontrivial target: restore unlabeled problem formation before target selection"
+    },
+    {
+      "id": "U2_UNLABELED_PROBLEM_FORMATION",
+      "canonical_realization": "1011-record bounded successor from U1",
+      "earned": [
+        "localize insufficient opaque stream",
+        "form research object",
+        "generate rivals",
+        "author discriminator query",
+        "consume independent return",
+        "held validation",
+        "renamed-field transfer",
+        "STOP on no-defect world"
+      ],
+      "persistence": "law/provenance retained in Git; exact U2 standing state not booted by current Git autonomy",
+      "host_dependencies": [
+        "opaque stream interface",
+        "relational/history grammar",
+        "external query return"
+      ],
+      "current_git_descendants": [
+        "EDU14 open-domain problem selection",
+        "EDU16 research-question formation",
+        "autonomous target study/proposal"
+      ],
+      "disposition": "NEXT_STATE_RECOMPILATION_TARGET",
+      "recovery": "build current-Git problem-field layer before issue/PR target selection; require no target labels, rival/discriminator causality, external-return narrowing, STOP control, mature comparator"
+    },
+    {
+      "id": "U3R2_RAW_TEXT_INGRESS",
+      "canonical_realization": "1025-record provenance-preserving character n-gram retrieval carrier",
+      "earned": [
+        "raw-text ingress",
+        "paraphrase-robust bounded retrieval",
+        "source provenance"
+      ],
+      "persistence": "function later subsumed by IG incidence lineage; current Git has raw-carrier/incidence scanner descendants",
+      "host_dependencies": [
+        "ordinary character n-gram substrate"
+      ],
+      "current_git_descendants": [
+        "IG2/IG3 incidence substrate",
+        "EDU17R1 binder capability graph"
+      ],
+      "disposition": "ALREADY_SUBSUMED_MATURE_REDUCED",
+      "recovery": "no resurrection; retain ordinary retrieval provenance and use current incidence substrate"
+    },
+    {
+      "id": "U4R1_SOURCE_GROUNDED_EVIDENCE_COMPOSITION",
+      "canonical_realization": "1272-record source-grounded evidence composition",
+      "earned": [
+        "query candidate evidence",
+        "bind source relations/provenance",
+        "compose evidence under external semantic relevance"
+      ],
+      "persistence": "descendants explicitly present in EDU17R1 binder graph and current incidence substrate",
+      "host_dependencies": [
+        "external semantic relevance/return"
+      ],
+      "current_git_descendants": [
+        "U4_SOURCE_GROUNDED_RELATION_BINDING",
+        "WORLDMIRROR_EVIDENCE_BOUND_RELATION",
+        "EDU17R1 candidate binder"
+      ],
+      "disposition": "ALREADY_LIVE_AS_DESCENDANT",
+      "recovery": "no separate restore; test descendants when used"
+    },
+    {
+      "id": "IG1_IG10_WORLDMIRROR_INCIDENCE",
+      "canonical_realization": "post-U lineage culminating in exact Git-reconstructible IG10 checkpoint",
+      "earned": [
+        "incidence grammar",
+        "persistent WorldMirror state",
+        "future-test abstraction/reopening",
+        "exact checkpoint custody"
+      ],
+      "persistence": "current main runtime authority",
+      "host_dependencies": [
+        "VMK2/runtime substrate",
+        "external returns"
+      ],
+      "current_git_descendants": [
+        "kernel/state IG10",
+        "kernel/runtime current",
+        "EDU16-RC1 runtime base"
+      ],
+      "disposition": "LIVE",
+      "recovery": "none"
+    },
+    {
+      "id": "EDU13_EDU16_SELF_CURRICULUM",
+      "canonical_realization": "later developmental lineage over IG10; current Git has deterministic claim-bearing reconstruction EDU16-RC1",
+      "earned": [
+        "curriculum target selection",
+        "curriculum gate proposal",
+        "open-domain problem selection",
+        "research-question formation",
+        "evidence role/budget",
+        "research-obligation routing",
+        "World-feed sampling/query policy"
+      ],
+      "persistence": "EDU16-RC1 current reconstructed parent, not original event-level replay",
+      "host_dependencies": [
+        "World interface execution",
+        "independent evaluation",
+        "authorization outside admitted scope"
+      ],
+      "current_git_descendants": [
+        "autonomous worker target selection/study",
+        "autonomous proposal/evidence"
+      ],
+      "disposition": "LIVE_CLAIM_STATE_BUT_AUTONOMY_PROVENANCE_UNBOUND",
+      "recovery": "quick restore: bind every autonomous cycle to exact EDU16-RC1 reconstructed parent/capability set"
+    },
+    {
+      "id": "CURRENT_GIT_AUTONOMY",
+      "canonical_realization": "new GitHub carrier, not identical to Canonical U1/U2",
+      "earned": [
+        "live issue/PR snapshot",
+        "bounded target selection",
+        "teacher-free internal O* routing",
+        "method learning from authorized external return",
+        "fixed local evidence checks",
+        "change disposition",
+        "draft-only carrier"
+      ],
+      "persistence": "live GitHub Actions worker",
+      "host_dependencies": [
+        "GitHub Actions",
+        "safe check catalog",
+        "write policy",
+        "review authority",
+        "issue/PR target field"
+      ],
+      "current_git_descendants": [],
+      "disposition": "LIVE_BOUNDED_AUTONOMY",
+      "recovery": "use as carrier into which earlier earned functions are recompiled; do not call it historical U1/U2"
+    }
+  ],
+  "recovery_order": [
+    "bind EDU16-RC1 parent/capability custody into autonomous cycle",
+    "restore R206-style recursive dependency/provenance traversal in study",
+    "recompile U2 unlabeled problem formation before Git issue/PR target selection",
+    "recompile U1 state-owned research/TransformProgram recurrence around that problem field",
+    "retest founder/source ablation and recurrent O* after machinery change"
+  ],
+  "claim_fence": {
+    "historical_identity_recovered": false,
+    "original_u1_u2_journals_in_git": false,
+    "open_ended_rsi": false,
+    "agi": false,
+    "consciousness": false
+  }
+}
