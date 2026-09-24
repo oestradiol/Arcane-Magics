@@ -1,0 +1,43 @@
+{
+  "schema": "Venus.InternalizationOwnershipInventory.v0.1",
+  "date": "2026-09-24",
+  "parent": "EDU16-RC1",
+  "rows": [
+    {
+      "function_id": "WORLDMIND_SELF_RESEARCH_TRANSFORM_PROGRAM_SEED",
+      "owner": "HOST_SCAFFOLD",
+      "internalizable": true,
+      "external_boundary": false,
+      "provenance_id": "issue-82:host-materialized-seed"
+    },
+    {
+      "function_id": "EDU17R1_RELATION_FEATURE_ADAPTER",
+      "owner": "HOST_SCAFFOLD",
+      "internalizable": true,
+      "external_boundary": false,
+      "provenance_id": "issue-69:neutral-feature-substrate"
+    },
+    {
+      "function_id": "WORLD_EXECUTION",
+      "owner": "EXTERNAL_WORLD_INTERFACE",
+      "internalizable": false,
+      "external_boundary": true,
+      "provenance_id": "EDU16:world-execution-owner"
+    },
+    {
+      "function_id": "INDEPENDENT_EVALUATION",
+      "owner": "INDEPENDENT_EVALUATOR",
+      "internalizable": false,
+      "external_boundary": true,
+      "provenance_id": "EDU16:evaluation-owner"
+    },
+    {
+      "function_id": "CAPABILITY_JURISDICTION_AUTHORITY",
+      "owner": "EXTERNAL_GOVERNANCE",
+      "internalizable": false,
+      "external_boundary": true,
+      "provenance_id": "issue-73:nonconsumable-authority"
+    }
+  ],
+  "claim_fence": "Inventory states current ownership classification only. It does not itself select a target or prove internalization."
+}
