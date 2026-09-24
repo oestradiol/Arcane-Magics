@@ -4,6 +4,9 @@ from types import SimpleNamespace
 from unittest.mock import patch
 import json
 from pathlib import Path
+import subprocess
+import sys
+import tempfile
 import unittest
 
 from kernel.development.autonomous_proposal import (
@@ -65,6 +68,19 @@ class AutonomousResearchProposalTests(unittest.TestCase):
         self.assertIn("VMK2_TRUST", proposal.target_check_profiles)
         self.assertIn("UNIT_VMK2_TRUST", proposal.target_check_ids)
         self.assertIn("UNIT_VMK2_TRUST", proposal.check_ids)
+        self.assertEqual(proposal.disposition, "RUN_BOUNDED_LOCAL_CHECKS")
+
+
+    def test_autonomous_pr_title_binds_autonomy_governance_profile(self):
+        row = cycle("DEPENDENCY_TRACE")
+        row["target_kind"] = "PR"
+        row["target_number"] = 112
+        row["target_title"] = "development: admit bounded autonomous study recurrence v2"
+        proposal = make_research_proposal(row, check_catalog=CATALOG)
+        self.assertTrue(proposal.target_relevance_grounded)
+        self.assertIn("AUTONOMY_GOVERNANCE", proposal.target_check_profiles)
+        self.assertIn("UNIT_AUTONOMY", proposal.target_check_ids)
+        self.assertIn("AUDIT_AUTONOMY_MATRIX", proposal.target_check_ids)
         self.assertEqual(proposal.disposition, "RUN_BOUNDED_LOCAL_CHECKS")
 
     def test_unprofiled_target_does_not_launder_generic_checks_as_target_evidence(self):
@@ -195,6 +211,35 @@ class AutonomousResearchProposalTests(unittest.TestCase):
             proposal.check_ids,
             ("UNIT_AUTONOMY", "UNIT_INTERNAL_OSTAR"),
         )
+
+
+    def test_direct_proposal_runner_bootstraps_repo_and_writes_evidence(self):
+        row = cycle("DEPENDENCY_TRACE")
+        with tempfile.TemporaryDirectory() as td:
+            td = Path(td)
+            cycle_path = td / "cycle.json"
+            proposal_path = td / "proposal.json"
+            evidence_path = td / "evidence.json"
+            cycle_path.write_text(json.dumps(row), encoding="utf-8")
+            completed = subprocess.run(
+                [
+                    sys.executable,
+                    "scripts/run_venus_research_proposal.py",
+                    "--cycle", str(cycle_path),
+                    "--proposal-output", str(proposal_path),
+                    "--evidence-output", str(evidence_path),
+                ],
+                cwd=ROOT,
+                text=True,
+                capture_output=True,
+                check=False,
+            )
+            self.assertEqual(completed.returncode, 0, completed.stderr)
+            self.assertTrue(proposal_path.is_file())
+            self.assertTrue(evidence_path.is_file())
+            evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+            self.assertEqual(evidence["status"], "LOCAL_CHECKS_PASS")
+            self.assertTrue(evidence["all_local_checks_passed"])
 
     def test_proposal_cannot_escalate_write_or_promotion_authority(self):
         proposal = proposal_dict(make_research_proposal(cycle("DEPENDENCY_TRACE")))
