@@ -118,5 +118,24 @@ class AgencyAccountingTests(unittest.TestCase):
             )
 
 
+    def test_meta_learning_strategy_is_venus_state_but_strategy_family_is_host_scaffold(self):
+        r = make_agency_receipt(
+            cycle=fixtures()[0],
+            proposal=fixtures()[1],
+            evidence=fixtures()[2],
+            change=fixtures()[3],
+            patch_plan=fixtures()[4],
+        )
+        roles = {x.component: x.role for x in r.components}
+        self.assertEqual(
+            roles["learning_strategy_selection"],
+            AgencyRole.VENUS_LEARNED_STATE,
+        )
+        self.assertEqual(
+            roles["learning_strategy_family"],
+            AgencyRole.HOST_SCAFFOLD,
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
