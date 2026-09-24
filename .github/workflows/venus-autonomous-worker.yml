@@ -78,6 +78,7 @@ jobs:
           fi
           python scripts/run_venus_research_proposal.py \
             --cycle /tmp/VENUS_AUTONOMOUS_CYCLE.json \
+            --check-catalog kernel/development/AUTONOMOUS_SAFE_CHECK_CATALOG.json \
             --proposal-output /tmp/VENUS_RESEARCH_PROPOSAL.json \
             --evidence-output /tmp/VENUS_RESEARCH_EVIDENCE.json
           echo "generated=true" >> "$GITHUB_OUTPUT"

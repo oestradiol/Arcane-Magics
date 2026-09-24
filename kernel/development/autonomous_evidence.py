@@ -29,6 +29,11 @@ SAFE_COMMANDS: Mapping[str, tuple[str, ...]] = {
         sys.executable, "-m", "unittest",
         "tests.test_world_input_security_public_dev",
     ),
+    "UNIT_VMK2_TRUST": (
+        sys.executable, "-m", "unittest",
+        "tests.test_authenticated_authority",
+        "tests.test_vmk2_invariants",
+    ),
     "FULL_UNIT_SUITE": (
         sys.executable, "-m", "unittest", "discover", "-s", "tests", "-p", "test_*.py",
     ),
@@ -89,8 +94,11 @@ def run_proposal_checks(proposal: Mapping[str, Any], *, cwd: str | Path = ".") -
 
     all_passed = all(x.passed for x in results)
     external_required = bool(proposal.get("external_return_required"))
+    disposition = str(proposal.get("disposition") or "")
     if external_required:
         status = "WITHHOLD_EXTERNAL_RETURN"
+    elif disposition == "WITHHOLD_NO_TARGET_RELEVANT_LOCAL_CHECK":
+        status = "WITHHOLD_NO_TARGET_RELEVANT_LOCAL_CHECK"
     else:
         status = "LOCAL_CHECKS_PASS" if all_passed else "LOCAL_CHECKS_FAIL"
 

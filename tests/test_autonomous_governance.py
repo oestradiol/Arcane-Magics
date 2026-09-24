@@ -408,6 +408,11 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertLess(proposal_at, push_at)
         self.assertIn("run_venus_research_proposal.py", text)
 
+
+    def test_research_proposal_uses_state_owned_target_check_catalog(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("--check-catalog kernel/development/AUTONOMOUS_SAFE_CHECK_CATALOG.json", text)
+
     def test_autonomous_branch_commits_proposal_and_returned_local_evidence(self):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("autonomy/proposals/", text)

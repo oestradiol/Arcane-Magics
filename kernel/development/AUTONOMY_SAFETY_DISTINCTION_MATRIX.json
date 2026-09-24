@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.5",
+  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.6",
   "date": "2026-09-24",
   "claim": "Bounded autonomy may expand study/learning/proposal capability only while the listed causal and authority distinctions remain executable and fail-closed.",
   "distinctions": [
@@ -364,6 +364,20 @@
         "tests/test_autonomous_governance.py"
       ],
       "invariant": "proposal evidence runner exits nonzero on failed local checks and workflow runs it before any autonomous git push"
+    },
+    {
+      "id": "TARGET_RELEVANT_EVIDENCE_REQUIRED",
+      "tests": [
+        "tests/test_autonomous_research_proposal.py"
+      ],
+      "invariant": "generic process checks cannot count as evidence about a selected target unless a bounded admitted target-relevant check profile is present"
+    },
+    {
+      "id": "STATE_CHECK_CATALOG_NOT_COMMAND_AUTHORITY",
+      "tests": [
+        "tests/test_autonomous_research_proposal.py"
+      ],
+      "invariant": "state-owned target routing may select only externally admitted check IDs and cannot invent executable commands"
     }
   ],
   "promotion_authority": false

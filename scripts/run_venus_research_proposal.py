@@ -13,10 +13,15 @@ def main() -> int:
     parser.add_argument("--cycle", required=True)
     parser.add_argument("--proposal-output", required=True)
     parser.add_argument("--evidence-output", required=True)
+    parser.add_argument("--check-catalog", required=False)
     args = parser.parse_args()
 
     cycle = json.loads(Path(args.cycle).read_text(encoding="utf-8"))
-    proposal = make_research_proposal(cycle)
+    catalog = (
+        json.loads(Path(args.check_catalog).read_text(encoding="utf-8"))
+        if args.check_catalog else None
+    )
+    proposal = make_research_proposal(cycle, check_catalog=catalog)
     Path(args.proposal_output).write_text(
         json.dumps(proposal_dict(proposal), indent=2, sort_keys=True) + "\n",
         encoding="utf-8",

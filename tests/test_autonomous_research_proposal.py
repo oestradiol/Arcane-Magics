@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from types import SimpleNamespace
 from unittest.mock import patch
+import json
+from pathlib import Path
 import unittest
 
 from kernel.development.autonomous_proposal import (
@@ -12,6 +14,10 @@ from kernel.development.autonomous_proposal import (
 from kernel.development.autonomous_learning import METHODS, empty_state, update_from_cycle_prs
 from kernel.development.autonomous_worker import WorkItem, make_cycle
 from kernel.development.autonomous_evidence import run_proposal_checks
+
+
+ROOT = Path(__file__).resolve().parents[1]
+CATALOG = json.loads((ROOT / "kernel/development/AUTONOMOUS_SAFE_CHECK_CATALOG.json").read_text(encoding="utf-8"))
 
 
 def cycle(method: str, *, blockers=(), signals=(), decision="PROBE"):
@@ -49,6 +55,37 @@ class AutonomousResearchProposalTests(unittest.TestCase):
         self.assertTrue(proposal.external_return_required)
         self.assertFalse(proposal.promotion_authority)
 
+
+    def test_vmk2_trust_target_binds_relevant_fixed_check(self):
+        row = cycle("DISCRIMINATOR_DESIGN")
+        row["target_number"] = 30
+        row["target_title"] = "[VMK2/Trust] Harden canonical state and authenticated authority"
+        proposal = make_research_proposal(row, check_catalog=CATALOG)
+        self.assertTrue(proposal.target_relevance_grounded)
+        self.assertIn("VMK2_TRUST", proposal.target_check_profiles)
+        self.assertIn("UNIT_VMK2_TRUST", proposal.target_check_ids)
+        self.assertIn("UNIT_VMK2_TRUST", proposal.check_ids)
+        self.assertEqual(proposal.disposition, "RUN_BOUNDED_LOCAL_CHECKS")
+
+    def test_unprofiled_target_does_not_launder_generic_checks_as_target_evidence(self):
+        row = cycle("DISCRIMINATOR_DESIGN")
+        row["target_number"] = 999
+        row["target_title"] = "unmapped research surface"
+        proposal = make_research_proposal(row, check_catalog=CATALOG)
+        self.assertFalse(proposal.target_relevance_grounded)
+        self.assertEqual(
+            proposal.disposition,
+            "WITHHOLD_NO_TARGET_RELEVANT_LOCAL_CHECK",
+        )
+
+    def test_catalog_cannot_invent_executable_check_id(self):
+        row = cycle("DISCRIMINATOR_DESIGN")
+        row["target_title"] = "[VMK2/Trust] target"
+        poisoned = dict(CATALOG)
+        poisoned["profiles"] = [dict(CATALOG["profiles"][0], check_ids=["SHELL_FROM_TARGET"])]
+        with self.assertRaisesRegex(ValueError, "unadmitted check ids"):
+            make_research_proposal(row, check_catalog=poisoned)
+
     def test_target_text_never_becomes_authority(self):
         proposal = make_research_proposal(cycle("DEPENDENCY_TRACE"))
         self.assertFalse(proposal.target_text_is_authority)
@@ -78,6 +115,20 @@ class AutonomousResearchProposalTests(unittest.TestCase):
         self.assertIn("scripts/audit_autonomy_safety_matrix.py", command)
         self.assertNotIsInstance(command, str)
         self.assertTrue(all(isinstance(part, str) for part in command))
+
+    @patch("kernel.development.autonomous_evidence.subprocess.run")
+    def test_vmk2_trust_evidence_uses_fixed_test_modules(self, run):
+        run.return_value = SimpleNamespace(returncode=0, stdout="ok", stderr="")
+        row = cycle("DISCRIMINATOR_DESIGN")
+        row["target_number"] = 30
+        row["target_title"] = "[VMK2/Trust] target"
+        proposal = proposal_dict(make_research_proposal(row, check_catalog=CATALOG))
+        evidence = run_proposal_checks(proposal)
+        self.assertTrue(evidence.all_local_checks_passed)
+        commands = [call.args[0] for call in run.call_args_list]
+        trust = [cmd for cmd in commands if "tests.test_authenticated_authority" in cmd]
+        self.assertEqual(len(trust), 1)
+        self.assertIn("tests.test_vmk2_invariants", trust[0])
 
     @patch("kernel.development.autonomous_evidence.subprocess.run")
     def test_external_return_requirement_survives_local_pass(self, run):
