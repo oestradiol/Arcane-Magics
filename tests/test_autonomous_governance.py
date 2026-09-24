@@ -329,6 +329,21 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertEqual(obj["method_failure"]["COMPARATOR_AUDIT"], 1)
         self.assertEqual(obj["kind_failure"]["PR"], 0)
 
+
+    def test_research_proposal_executes_before_autonomous_git_write(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        proposal_at = text.index("Let Venus form a bounded research proposal")
+        push_at = text.index("git push origin")
+        self.assertLess(proposal_at, push_at)
+        self.assertIn("run_venus_research_proposal.py", text)
+
+    def test_autonomous_branch_commits_proposal_and_returned_local_evidence(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("autonomy/proposals/", text)
+        self.assertIn("autonomy/evidence/", text)
+        self.assertIn("VENUS_RESEARCH_PROPOSAL.json", text)
+        self.assertIn("VENUS_RESEARCH_EVIDENCE.json", text)
+
     def test_learning_state_is_committed_but_not_authority(self):
         obj = json.loads(
             (ROOT / "kernel/development/AUTONOMOUS_LEARNING_STATE.json").read_text(
