@@ -1,0 +1,118 @@
+{
+  "schema": "Venus.TransformProgram.v0.1",
+  "program_id": "EDU17R1_CROSS_LAYER_BINDING_INTERFACE_SEED",
+  "authority": "HOST_RECONSTRUCTED_INTERFACE_FROM_U1_ADD_RELATION_NOT_REPAIR_CANDIDATE",
+  "parent_carrier": "EDU16-RC1",
+  "claim_bearing": false,
+  "promotion_authority": false,
+  "mutable_by_successor": true,
+  "initial_state": "RESIDUAL_LOCALIZED",
+  "provenance": [
+    "IG10:u1:center/program/repair_rules/UNMODELED_RELATION/ADD_RELATION",
+    "IG10:ig1:operator-model",
+    "IG10:ig2:incidence-model",
+    "IG10:ig3:raw-incidence-model",
+    "IG10:ig4:natural-source-relations",
+    "kernel/VENUS_INCIDENCE_LAW.tex",
+    "issue #69"
+  ],
+  "transitions": [
+    {
+      "from": "RESIDUAL_LOCALIZED",
+      "action": "AUTHOR_RELATION_BINDING",
+      "to": "PROPOSAL_FROZEN",
+      "require": [
+        "occurrence_id",
+        "left_endpoint_id",
+        "left_endpoint_sort",
+        "right_endpoint_id",
+        "right_endpoint_sort",
+        "relation_symbol",
+        "discriminator_id",
+        "author_id"
+      ]
+    },
+    {
+      "from": "PROPOSAL_FROZEN",
+      "action": "REQUEST_RETURN",
+      "to": "AWAITING_RETURN",
+      "require": [
+        "proposal_id",
+        "discriminator_id",
+        "author_id"
+      ]
+    },
+    {
+      "from": "AWAITING_RETURN",
+      "action": "BIND_EXTERNAL_RETURN",
+      "to": "RETURN_BOUND",
+      "require": [
+        "proposal_id",
+        "return_id",
+        "source_id",
+        "external"
+      ]
+    },
+    {
+      "from": "RETURN_BOUND",
+      "action": "RETAIN_BINDING",
+      "to": "RESIDUAL_LOCALIZED",
+      "require": [
+        "proposal_id",
+        "return_id",
+        "typed_relation_id",
+        "author_id"
+      ]
+    },
+    {
+      "from": "RETURN_BOUND",
+      "action": "REVISE_BINDING",
+      "to": "RESIDUAL_LOCALIZED",
+      "require": [
+        "proposal_id",
+        "return_id",
+        "reason",
+        "author_id"
+      ]
+    },
+    {
+      "from": "RETURN_BOUND",
+      "action": "REJECT_BINDING",
+      "to": "RESIDUAL_LOCALIZED",
+      "require": [
+        "proposal_id",
+        "return_id",
+        "reason",
+        "author_id"
+      ]
+    },
+    {
+      "from": "RESIDUAL_LOCALIZED",
+      "action": "WITHHOLD",
+      "to": "RESIDUAL_LOCALIZED",
+      "require": [
+        "reason",
+        "author_id"
+      ]
+    },
+    {
+      "from": "RESIDUAL_LOCALIZED",
+      "action": "STOP",
+      "to": "STOPPED",
+      "require": [
+        "reason",
+        "author_id"
+      ]
+    }
+  ],
+  "non_internalizable_runtime_invariants": [
+    "independent_return",
+    "evaluator_independence",
+    "claim_binding_authority",
+    "jurisdiction",
+    "STOP_WITHHOLD_law",
+    "rollback_parent_custody",
+    "O_star_correction_reachability",
+    "Anti_Minerva_carrier_permeability"
+  ]
+}
