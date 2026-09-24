@@ -122,7 +122,7 @@ TL;DR
 -> ordinary problem
 -> smallest claim
 -> concrete example
--> strongest comparator / prior art
+-> strongest comparator / historical predecessor / technical donor
 -> model
 -> cruxes / what would change the conclusion
 -> optional vocabulary bridge
