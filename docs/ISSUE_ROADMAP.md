@@ -25,7 +25,7 @@ Prestige is not a scheduling dependency.
 - **#6 closed:** the bounded OFE core, separating-family result, and later-separator repair are machine-checked in Lean. Physical/QG adequacy remains separate.
 - **#33 closed:** theorem-structure lint is explicitly separated from formal proof verification.
 - **#30 advanced:** deterministic unordered canonicalization, finite-number policy, digest fixtures, and state-purity regressions have landed. External authentication/trust-root/revocation work remains.
-- **#31 advanced:** public development cases, frozen naive lexical failure floor, sealed hidden-evaluation protocol, scorer, and A/B/C/D condition contract exist. The remaining burden is the independent hidden matched run.
+- **#31 advanced:** public development cases, naive failure floor, sealed protocol/analysis plan, exact prefrozen A/B/C/D executors, condition-freeze manifest, scorer, and hidden-readiness audit now exist. Status is `HARNESS_READY_EXTERNAL_HIDDEN_RETURN_REQUIRED`; the remaining burden is an independently authored/sealed hidden split and matched run.
 - **#15 advanced:** public causal-memory dev set, scorer, ablation protocol, and weak floor controls exist. Hidden matched memory ablation remains.
 - **#41–#43 advanced:** public reliability-pressure surfaces now exist for false-promotion/self-evolution, ACT/GATHER/WITHHOLD/STOP, and adversarial World-input/security. Hidden/dynamic matched evaluation remains.
 - **#35/#36 advanced:** historical distinction routing, live issue coverage, START_HERE, TESTS, REPRODUCE, and navigation contracts exist. Remaining archaeology/UX work no longer blocks discriminating experiments unless a specific experiment depends on it.
