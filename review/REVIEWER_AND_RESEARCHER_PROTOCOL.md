@@ -1,6 +1,6 @@
 # Researcher / reviewer methodology
 
-Venus-Minerva uses one research cycle across mathematics, engineering, science, comparative interpretation, and publication. Registers change the admissible warrant, not the causal grammar.
+Venus-Minerva tests one reusable research cycle across mathematics, engineering, science, comparative interpretation, and publication. The cycle is a working cross-register invariant, not a theorem that every domain has the same ontology or method. Each register may add obligations, evidence types, and failure modes; no shared step transfers warrant by itself.
 
 ## Core cycle
 
@@ -18,6 +18,16 @@ state / source custody
 ```
 
 A step may lawfully STOP when no admissible edge remains. Empty queue is not permission to manufacture work.
+
+## Constitutional coordinates
+
+The method is governed by the project-local `Naturalism_C x Rationalism_C x Illuminism_C` recurrence:
+
+- **Naturalism_C:** claims remain answerable to Reality/Other through evidence that is not merely preauthored by the representation under test;
+- **Rationalism_C:** representations, inference, search, equivalence, dependencies, and repairs remain reconstructible and recursively auditable;
+- **Illuminism_C:** no local model, evaluator, founder, or institution becomes sovereign merely by occupying the current control point; independently reachable criticism/correction remains possible.
+
+These names are removable. A methodology revision passes the deletion test only if the three obligations remain operational after renaming.
 
 ## 1. Research formation
 
