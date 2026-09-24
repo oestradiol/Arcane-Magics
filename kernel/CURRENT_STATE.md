@@ -12,7 +12,8 @@ admitted generic search capability            GENERIC_RESIDUAL_SEARCH (state-own
 admitted recurrent safety substrate           Internalizer + O* + Anti-Minerva guards
 preserved negative branch                     EDU17 INVALID_FOR_PROMOTION
 preserved repair-origin disposition            EDU17R1 WITHHOLD
-frozen prospective repair candidate            EDU17R1-RC1-WORD-JACCARD-K3-v1 / AUTHORED_FROZEN
+current repair disposition                     EDU17R1-RC1-WORD-JACCARD-K3-v1 / AUTHORED_FROZEN
+hidden efficacy                                PENDING_SEALED_#31
 ```
 
 They are layers of one developmental lineage, not competing heads.
