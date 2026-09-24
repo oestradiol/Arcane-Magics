@@ -29,8 +29,14 @@ That is the current measured semantic residual.
 | What remains open? | [FRONTIER_RESEARCH.md](FRONTIER_RESEARCH.md) |
 | How are credits / reductions typed? | [CREDITS_AND_REDUCTIONS.md](CREDITS_AND_REDUCTIONS.md) |
 | How should results be evaluated? | [EVALUATION_CONSTITUTION.md](EVALUATION_CONSTITUTION.md) |
-| What tests/evaluations cover the live issues? | [TEST_COVERAGE_MATRIX.md](TEST_COVERAGE_MATRIX.md) |
+| What tests/evaluations cover the live issues? | [TESTS.md](TESTS.md) → [TEST_COVERAGE_MATRIX.md](TEST_COVERAGE_MATRIX.md) |
 | What is being retired from Canonical? | [CANONICAL_RETIREMENT_LEDGER.md](../provenance/CANONICAL_RETIREMENT_LEDGER.md) |
+
+## Operational hubs
+
+- [Tests and evidence](TESTS.md) — automated integrity versus scientific/external evidence.
+- [Reproduce](REPRODUCE.md) — exact reproducibility boundary.
+- [Issue roadmap](ISSUE_ROADMAP.md) — dependency-ordered execution surface.
 
 ## What did the machine actually do?
 
