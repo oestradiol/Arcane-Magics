@@ -1,0 +1,14 @@
+{
+  "schema": "Venus.SSR2Cycle3TargetSelectionResult.v0.1",
+  "date": "2026-09-24",
+  "operation": "EDU13/EDU14_RECONSTRUCTED_SELF_CURRICULUM_RESIDUAL_SELECTION",
+  "feed": "kernel/development/SSR2_CYCLE3_REPAIR_PRESSURE_FEED.json",
+  "returned_feed": "kernel/development/SSR2_CYCLE3_REPAIR_PRESSURE_FEED_RETURN.json",
+  "selected_pressure_id": "opaque-repair-d",
+  "selected_residual": "CURRENT_REPAIR_MACHINERY_CANNOT_COMPOSE_TWO_INDEPENDENT_RETURN_IDENTIFIED_REPAIRS",
+  "reason": "unique strongest actionable unresolved returned residual",
+  "host_priority_supplied": false,
+  "selection_owner": "VENUS_RECONSTRUCTED_SELF_CURRICULUM_OPERATION",
+  "execution_owner": "EXTERNAL_TOOLING",
+  "promotion_authority": false
+}
