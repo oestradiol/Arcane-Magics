@@ -22,6 +22,8 @@ It can reproduce/check:
 - VenusMemory storage/custody behavior;
 - public-surface/link constraints;
 - preserved developmental dispositions for EDU16/17/17R1;
+- state-owned generic residual-search internalization and its donor-removal/equivalence audit;
+- Internalizer O*/Anti-Minerva correction-boundary invariants;
 - historical causal distinctions encoded as regressions;
 - required issue-to-test ownership.
 
@@ -34,7 +36,7 @@ It does **not** reproduce:
 - physical/QG validity;
 - independent replication.
 
-See issue #4 for the exact EDU16 replay-custody gap.
+Issue #4 is closed at the **claim-bearing reconstruction** scope: `EDU16-RC1` deterministically reconstructs the admitted EDU16 state. The original 1703-event runner/journal remains unrecovered and therefore remains a historical event-replay boundary, not a current prospective-development blocker.
 
 ## 3. Run focused checks
 
@@ -42,6 +44,8 @@ See issue #4 for the exact EDU16 replay-custody gap.
 python -m unittest tests.test_vmk2_invariants
 python -m unittest tests.test_historical_regressions
 python -m unittest tests.test_edu17r1_benchmark
+python -m unittest tests.test_internalizer
+python scripts/audit_generic_search_internalization.py
 python scripts/audit_causal_distinctions.py
 python scripts/audit_navigation_contract.py
 python scripts/audit_sota_freshness.py
