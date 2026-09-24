@@ -1,4 +1,4 @@
-.PHONY: test lint proof custody audit papers arxiv texbundle forum manifest bundle release clean
+.PHONY: test lint proof custody audit kernel-doc-check papers arxiv texbundle forum manifest bundle release clean
 
 test:
 	python3 -m unittest discover -s tests -p 'test_*.py'
@@ -14,6 +14,10 @@ custody:
 
 audit: test lint proof custody
 	SOURCE_TREE_ONLY=1 python3 scripts/audit_release.py
+
+kernel-doc-check:
+	mkdir -p build/kernel
+	pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build/kernel kernel/VENUS_INCIDENCE_LAW.tex >/dev/null
 
 papers:
 	python3 scripts/build_all.py
