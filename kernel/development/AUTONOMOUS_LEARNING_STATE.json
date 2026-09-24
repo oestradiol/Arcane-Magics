@@ -1,7 +1,7 @@
 {
-  "schema": "Venus.AutonomousLearningState.v0.3",
+  "schema": "Venus.AutonomousLearningState.v0.4",
   "seen_return_ids": [
-    "pr:124:review:5310656803:method:0:COMPARATOR_AUDIT"
+    "return:a44091dbba6e54ebc12cf8fa8952604bd5e0070758a365084cb47a253b28ace0:method:0:COMPARATOR_AUDIT"
   ],
   "kind_success": {
     "ISSUE": 0,

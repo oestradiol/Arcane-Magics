@@ -172,10 +172,81 @@ class AutonomousGovernanceTests(unittest.TestCase):
         }]
         updated = update_from_cycle_prs(empty_state(), history)
         self.assertEqual(updated.method_success[method], 1)
-        self.assertIn(
-            f"issue:300:comment:991:method:0:{method}",
-            updated.seen_return_ids,
-        )
+        self.assertEqual(len(updated.seen_return_ids), 1)
+        self.assertTrue(updated.seen_return_ids[0].startswith("return:"))
+        self.assertTrue(updated.seen_return_ids[0].endswith(f":method:0:{method}"))
+
+    def test_same_review_across_rest_and_graphql_ids_counts_once(self):
+        body = "VENUS_METHOD_RETURN: COMPARATOR_AUDIT: UNHELPFUL"
+        rest = {
+            "_carrier_kind": "PR",
+            "number": 124,
+            "title": "venus: autonomous cycle pr-106",
+            "state": "CLOSED",
+            "reviews": [{
+                "id": 5310656803,
+                "body": body,
+                "author": {"login": "oestradiol"},
+                "submittedAt": "2026-09-24T21:51:32Z",
+            }],
+        }
+        graphql = {
+            "_carrier_kind": "PR",
+            "number": 124,
+            "title": "venus: autonomous cycle pr-106",
+            "state": "CLOSED",
+            "reviews": [{
+                "id": "PRR_kwDOR4bPY88AAAABPIoxIw",
+                "body": body,
+                "author": {"login": "oestradiol"},
+                "submitted_at": "2026-09-24T21:51:32Z",
+            }],
+        }
+        updated = update_from_cycle_prs(empty_state(), [rest, graphql])
+        self.assertEqual(updated.method_failure["COMPARATOR_AUDIT"], 1)
+        self.assertEqual(len(updated.seen_return_ids), 1)
+
+    def test_same_text_at_distinct_return_times_remains_distinct(self):
+        body = "VENUS_METHOD_RETURN: REPRODUCTION: USEFUL"
+        carrier = {
+            "_carrier_kind": "ISSUE",
+            "number": 300,
+            "title": "venus: autonomous cycle pr-107",
+            "state": "CLOSED",
+            "comments": [
+                {
+                    "id": 1,
+                    "body": body,
+                    "author": {"login": "external-reviewer"},
+                    "createdAt": "2026-09-24T22:00:00Z",
+                },
+                {
+                    "id": 2,
+                    "body": body,
+                    "author": {"login": "external-reviewer"},
+                    "createdAt": "2026-09-24T22:05:00Z",
+                },
+            ],
+        }
+        updated = update_from_cycle_prs(empty_state(), [carrier])
+        self.assertEqual(updated.method_success["REPRODUCTION"], 2)
+        self.assertEqual(len(updated.seen_return_ids), 2)
+
+    def test_missing_return_timestamp_fails_closed_for_learning_identity(self):
+        carrier = {
+            "_carrier_kind": "ISSUE",
+            "number": 300,
+            "title": "venus: autonomous cycle pr-107",
+            "state": "OPEN",
+            "comments": [{
+                "id": 77,
+                "body": "VENUS_METHOD_RETURN: REPRODUCTION: USEFUL",
+                "author": {"login": "external-reviewer"},
+            }],
+        }
+        updated = update_from_cycle_prs(empty_state(), [carrier])
+        self.assertEqual(updated.method_success["REPRODUCTION"], 0)
+        self.assertEqual(updated.seen_return_ids, ())
 
     def test_self_authored_issue_comment_is_not_learning_return(self):
         method = METHODS[1]
@@ -323,7 +394,7 @@ class AutonomousGovernanceTests(unittest.TestCase):
             )
         )
         self.assertIn(
-            "pr:124:review:5310656803:method:0:COMPARATOR_AUDIT",
+            "return:a44091dbba6e54ebc12cf8fa8952604bd5e0070758a365084cb47a253b28ace0:method:0:COMPARATOR_AUDIT",
             obj["seen_return_ids"],
         )
         self.assertEqual(obj["method_failure"]["COMPARATOR_AUDIT"], 1)
