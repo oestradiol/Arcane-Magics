@@ -25,6 +25,20 @@ A storage system earns no learning credit merely because the earlier episode can
 - conflicting updates;
 - abstention when no lawful current rule exists.
 
+## Public development floors
+
+`baselines.py` freezes three intentionally weak controls on the public 12-case development set:
+
+| Baseline | Accuracy |
+|---|---:|
+| first listed action | 0 / 12 |
+| always UNKNOWN | 0 / 12 |
+| latest literal action mention | 4 / 12 = 0.333 |
+
+The frozen result is `PUBLIC_DEV_BASELINE_RESULT.json`.
+
+These controls establish only that the authored development set is not solved by a default action, blanket abstention, or a literal recent-context action match. They are public and therefore tunable. They do **not** establish a VenusMemory learning effect.
+
 ## Required matched conditions
 
 At minimum:
