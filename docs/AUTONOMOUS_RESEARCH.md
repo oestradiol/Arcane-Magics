@@ -124,7 +124,26 @@ The running organism must own unresolved-obligation reconstruction, bounded targ
 
 Typed adapters may expose GitHub, proof assistants, code/test execution, numerical experiments, literature/web retrieval, benchmark harnesses, and independent review. Every adapter emits provenance-bearing returned evidence.
 
-### 5. Episode custody
+### 5. Persistent developmental memory
+
+Venus requires persistent memory because learning is not merely producing a better answer once; returned consequence must alter later admissible transformation.
+
+The live storage contract is `prototype/venus_memory.py`:
+
+- immutable content-addressed semantic objects;
+- deduplication by canonical SHA-256 identity;
+- explicit parent/dependency/provenance edges;
+- mutable dispositions separate from immutable object identity;
+- `CONSUMED` preserves the old object and points to its replacement;
+- large payloads are compressed into deduplicated object storage;
+- deterministic canonical export/checkpoint;
+- hot/cold candidates are selected by use and disposition rather than deleting history.
+
+Small authority metadata belongs in Git. Heavy checkpoints/object blobs belong in release/object storage, addressed by hash.
+
+Memory is not learning unless later behavior depends on the retained state.
+
+### 6. Episode custody
 
 A bounded episode stores only what later reconstruction needs:
 
@@ -139,11 +158,11 @@ EPISODE / successor receipt
 
 The prefreeze becomes immutable before World execution.
 
-### 6. Successor admission
+### 7. Successor admission
 
 Developmental promotion requires exact parent state, returned evidence, causal consequence, relevant regression/ablation, exact successor hash/head, verifier, and claim-local audit. Only explicit admission advances authority.
 
-### 7. Recursion
+### 8. Recursion
 
 A genuine trace is:
 
