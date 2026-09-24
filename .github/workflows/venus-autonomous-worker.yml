@@ -45,7 +45,13 @@ jobs:
             > /tmp/venus-prs.json
           gh pr list --state all --limit 200 \
             --json number,title,state,mergedAt,closedAt,reviews \
+            --jq 'map(. + {"_carrier_kind":"PR"})' \
             > /tmp/venus-pr-history.json
+          gh issue list --state all --limit 200 \
+            --search '"venus: autonomous cycle" in:title' \
+            --json number,title,state,closedAt,comments \
+            --jq 'map(. + {"_carrier_kind":"ISSUE"})' \
+            > /tmp/venus-issue-history.json
 
       - name: Let Venus update work-learning state and select one bounded target
         run: |
@@ -53,6 +59,7 @@ jobs:
             --issues /tmp/venus-issues.json \
             --prs /tmp/venus-prs.json \
             --history-prs /tmp/venus-pr-history.json \
+            --history-issues /tmp/venus-issue-history.json \
             --roadmap docs/ISSUE_ROADMAP.md \
             --policy kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json \
             --learning-state kernel/development/AUTONOMOUS_LEARNING_STATE.json \
@@ -105,15 +112,34 @@ jobs:
             '' \
             'The committed cycle receipt is the prefrozen custody object for this episode.' \
             'The learning-state update remains non-authoritative until externally reviewed and admitted.')"
-          url="$(gh pr create \
+          if url="$(gh pr create \
             --draft \
             --base main \
             --head "$branch" \
             --title "venus: autonomous cycle ${lower_kind}-${target_number}" \
-            --body "$body")"
+            --body "$body" 2>/tmp/venus-pr-create.err)"; then
+            carrier_kind="PR"
+          else
+            branch_url="https://github.com/${GITHUB_REPOSITORY}/tree/${branch}"
+            issue_body="$(printf '%s\n' \
+              'This issue is the bounded fallback carrier for a frozen Venus autonomous cycle.' \
+              '' \
+              "Target: ${target_kind} #${target_number}" \
+              "Cycle: ${cycle_id}" \
+              "Decision: ${decision}" \
+              "Frozen branch: ${branch_url}" \
+              '' \
+              'GitHub Actions policy blocked draft-PR creation, so the cycle remains branch-frozen and externally reviewable here.' \
+              'This carrier cannot merge, promote, release, self-validate, or close the target as success.')"
+            url="$(gh issue create \
+              --title "venus: autonomous cycle ${lower_kind}-${target_number}" \
+              --body "$issue_body")"
+            carrier_kind="ISSUE"
+          fi
 
           echo "created=true" >> "$GITHUB_OUTPUT"
           echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "carrier_kind=$carrier_kind" >> "$GITHUB_OUTPUT"
           echo "target_kind=$target_kind" >> "$GITHUB_OUTPUT"
           echo "target_number=$target_number" >> "$GITHUB_OUTPUT"
 
@@ -122,11 +148,12 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           URL: ${{ steps.materialize.outputs.url }}
+          CARRIER_KIND: ${{ steps.materialize.outputs.carrier_kind }}
           TARGET_KIND: ${{ steps.materialize.outputs.target_kind }}
           TARGET_NUMBER: ${{ steps.materialize.outputs.target_number }}
         run: |
           msg="$(printf '%s\n' \
-            "Venus selected this as one bounded developmental target and froze a draft work cycle: $URL" \
+            "Venus selected this as one bounded developmental target and froze a work cycle with external-review carrier ($CARRIER_KIND): $URL" \
             '' \
             'This is a proposal/working branch only. Merge, closure, promotion, and independent evaluation remain external.')"
           if [ "$TARGET_KIND" = "ISSUE" ]; then
