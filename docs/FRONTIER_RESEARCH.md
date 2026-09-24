@@ -1,278 +1,183 @@
-# Frontier research queue
+# Frontier research
 
-This is the public research queue for Venus-Minerva.
+This is the live problem surface for Venus-Minerva. It is not a list of established claims and not a queue that must be exhausted in order.
 
-It is intentionally **not** a list of established claims. A lane can end in PASS, FAIL, WITHHOLD, mature reduction, or deletion. Negative results are first-class progress.
+A lawful episode may end in `PASS`, `FAIL`, `WITHHOLD`, `REJECTED`, mature reduction, or consumption as gauge. Negative results are state.
 
-## Global protocol
+## Selection law
 
-Every bounded research episode should record:
-
-1. exact parent state and source custody;
-2. the question before the answer is known;
-3. comparator / null / rival where one exists;
-4. admissible evidence and evidence budget;
-5. explicit claim fence;
-6. result;
-7. dependency-local consequences;
-8. what changed, what did not, and what remains OPEN.
-
-Small commits are preferred. One commit should make one causal change that a reviewer can understand without reconstructing the whole project.
-
-No analogy may promote itself into a theorem, physical identification, AGI claim, consciousness claim, or SOTA claim.
-
----
-
-## Lane A — developmental intelligence / AGI-seed
-
-**Current lawful developmental head:** EDU16.
-
-Near-term program:
-
-- recover exact EDU16 replay/custody;
-- repair residual-incidence eligibility;
-- rerun claim-local evidence binding;
-- execute a learner-owned experimental episode;
-- permit a bounded learner-authored modification of consequential machinery;
-- causally attribute improvement by matched A/B and ablation;
-- require a successor to select the next developmental deficit;
-- repeat across unfamiliar domains with scaffold ablations;
-- seek independent replication.
-
-Promotion fence:
-
-`bounded recursive developmental seed` requires repeated successor-driven development plus causal improvement evidence.
-
-It does **not** imply AGI, consciousness, unrestricted semantics, autonomous science, or open-ended recursive self-improvement.
-
----
-
-## Lane B — P versus NP / polynomial-section obstruction
-
-**Status:** genuine open speculative formal program.
-
-Current object:
-
-For a polynomially balanced, polynomial-time decidable witness relation
-
-`R(x,w)`,
-
-define
-
-`W_R = {(x,w) : R(x,w)}`
-
-and
-
-`L_R = {x : exists w, R(x,w)}`.
-
-The projection
-
-`pi_R : W_R -> L_R`
-
-forgets the witness. A witness constructor is a computational section on yes-instances.
-
-Current burden:
-
-Find a non-tautological invariant `I(R)` such that:
-
-- a chosen NP witness relation has `I`;
-- `I` is independently characterized;
-- `I` survives the encodings/reductions required by the proof;
-- every polynomial-time section provably violates `I`;
-- `I` is not merely another spelling of “no polynomial-time section exists.”
-
-Current supporting machinery to test here:
-
-- future-equivalence quotients;
-- separating test families;
-- composition closure;
-- pulled-back separators;
-- resource-bounded reconstruction/sections;
-- fiber-sensitive residuals.
-
-Required controls include SAT self-reduction, relativization-sensitive arguments, natural-proof-style barrier checks where relevant, and ordinary complexity-theory lower-bound standards.
-
-Claim fence:
-
-`verification != construction` is structural motivation only. It does not imply `P != NP`.
-
----
-
-## Lane C — operational future equivalence / quantum-gravity bridge
-
-**Status:** exact formal core + open model-specific physical program.
-
-Current retained formal core includes:
-
-- operational future-equivalence;
-- separating-family criterion;
-- composition-closure obligation;
-- common-refinement/cylindrical-consistency reconciliation.
-
-Open physical burden:
-
-- justify a physically admissible future-test family;
-- establish refinement consistency;
-- establish composition/gluing behavior;
-- establish relational-frame covariance where required;
-- connect the selected family to semiclassical observables and actual dynamics;
-- survive carrier and observable-family substitution.
-
-No local theorem currently selects the physically correct test family.
-
----
-
-## Lane D — Eclipsis / quotient, gluing, reconstruction
-
-Attack the mathematical core independently of the symbolic interpretation.
-
-Targets:
-
-- characterize quotient/reconstruction pairs;
-- classify when partial or approximate sections exist;
-- study gluing compatibility and obstruction;
-- formalize residuals that survive quotienting because they remain future-separating;
-- prove minimality or reducibility results where possible;
-- compare to mature categorical, control, bisimulation, sheaf/bundle, and bidirectional-transformation formalisms.
-
-A project term is retained only when deletion or mature substitution changes a real consequence.
-
----
-
-## Lane E — RegisterBridge / AntiGrammar / recursive sufficiency
-
-Targets:
-
-- composition;
-- reversal;
-- information/provenance loss;
-- warrant transformation;
-- jurisdiction;
-- dependency-local failure;
-- commutation and path dependence;
-- comparison with enriched BX / lenses / contracts / effects;
-- task-relative minimal sufficient quotients;
-- future-family expansion and reopening.
-
-A successful compilation into a mature formalism is an acceptable result and should narrow project-specific claims rather than be resisted.
-
----
-
-## Lane F — Navier–Stokes and distributed physical carriers
-
-Current project status is **carrier/comparator**, not a Millennium-problem result.
-
-Existing S9 work used incompressible Navier–Stokes as a lawful distributed carrier for indexed actuation, external forcing, and returned consequence.
-
-Possible future work should be split cleanly:
-
-### F1 — carrier science
-Study distributed control, forcing, observability, reconstruction, and local intervention without importing agency claims into the fluid.
-
-### F2 — mathematical-fluid frontier
-Only if explicitly opened as a separate program, engage actual regularity/blow-up questions using standard PDE machinery, current literature, formal definitions, and theorem-level proof obligations.
-
-No result in F1 may be described as progress on F2.
-
----
-
-## Lane G — formal verification
-
-High-value targets:
-
-- encode the small exact propositions in Lean;
-- formalize projection/section lemmas;
-- formalize future-equivalence and separating-family results;
-- formalize composition-closure obligations;
-- formalize finite regression witnesses;
-- create machine-checkable negative examples and ablations.
-
-Prefer tiny formalized theorems over giant aspirational translations.
-
----
-
-## Lane H — replication and criticism
-
-The project should actively solicit:
-
-- attempted falsifications;
-- mature substitutions;
-- counterexamples;
-- independent reimplementations;
-- provenance mistakes;
-- reproducibility failures;
-- proof-checking;
-- domain-expert objections.
-
-A successful criticism that deletes an unnecessary project construct is progress.
-
----
-
-## Lane I — Meta-Dynamics / cross-register invariants
-
-**Status:** structural coordination program / OPEN external bridges.
-
-Current live root candidate:
+A research target may be valuable for more than one reason:
 
 ```text
-O_0 :=
-(relation becoming locally inhabitable / consequential)
-<->
-(local consequential history becoming relationally retained)
+epistemic value
++ capability-transfer value
++ formal/empirical tractability
++ external impact
++ resource return
++ information gained from failure
 ```
 
-Current recurrence:
+Prize money, grants, compute, hardware, reputation, collaborators, and institutional access are causal resources. They may rationally increase the priority of a hard problem because success enlarges later research capacity.
+
+They do not change the proof or evidence burden:
 
 ```text
-differentiative relation
--> indexed inhabitation
--> stabilization
--> representation
--> enactment
--> non-preauthored return
--> retained reconstruction
--> admissible recombination
+resource value -> more future research capacity
+resource value -/-> present truth warrant
 ```
 
-Near-term targets:
+## Episode contract
 
-- identify which arrows can be given independent FORM definitions;
-- distinguish structural recurrence from symbolic renderings such as Logos/Eros;
-- test object-as-crystallized-invariant against mature process, systems, dynamical, and structural-realist comparators;
-- formalize when an indexed Other-center counts as an independent source of return;
-- derive explicit failure cases for over-crystallization, dissolution, coercive fusion, and false global lift;
-- determine which ethical claims genuinely follow from preserved-return premises and which require extra normative assumptions;
-- test whether Meta-Dynamics adds discriminative machinery beyond existing process/cybernetic/enactive formalisms.
+Every bounded episode records the parent state, question before answer, rivals/comparators, admitted evidence/tools, discriminator, claim fence, result, dependency-local consequence, and residual.
 
-Required deletion test:
+For proof-bearing work, `NxRxI_VOCABULARY_CENTER.md` adds a stricter rule: theorem typography is forbidden when the conclusion is already inside the premises, when a bridge is assumed rather than derived, or when the object is model-internal rather than mathematical.
 
-If `Meta-Dynamics` can be replaced by a mature formalism without loss of prediction, discrimination, governance, or reconstruction, prefer the mature formalism and narrow the project-local term.
+## A. Venus as a learning substrate
 
-Claim fence:
+**Current positive head:** EDU16 [1703].
 
-Meta-Dynamics is not currently a fundamental physical ontology, a quantum-gravity theory, a consciousness theory, a complete ethics, or evidence that historical theological symbols share one literal mechanism.
+The long-run target is not merely an agent wrapped around a deep neural network. It is a learner whose representation, problem formation, experiment design, memory, abstraction, reconstruction, and machinery modification become increasingly Venus-owned.
 
----
+Current earned machinery includes bounded self-reconstruction, negative-branch retention, research-obligation routing, learner-owned source requests, self-curriculum target generation, open-domain problem selection, self-preregistration, and learner-owned World-feed policy.
 
-## Commit discipline
+Near-term obligations:
 
-Preferred shape:
+1. restore exact EDU16 replay/runtime custody;
+2. repair `MENTION != INCIDENCE` and claim-local evidence binding;
+3. execute a complete learner-owned research episode from target selection through returned evidence;
+4. demonstrate a self-authored consequential machinery modification;
+5. attribute any improvement causally with parent/successor ablation;
+6. repeat across multiple successors;
+7. transfer to unfamiliar domains with privileged scaffolds removed;
+8. compare against contemporary self-improving research agents under matched budgets;
+9. progressively ablate dependence on pretrained DNN cognition rather than merely governing it.
+
+The replacement-DNN burden includes language, perception, reasoning, transfer, continual learning, causal repair, robustness, and compute/data efficiency. The repository does not currently claim victory on those axes.
+
+## B. Millennium and theorem-level mathematics
+
+Millennium problems are legitimate priority targets because they combine extreme epistemic value, transferable formal machinery, and potentially large resource return. Their proof burden is correspondingly maximal.
+
+### B1. P versus NP
+
+Current native program: polynomial-section obstruction.
+
+For polynomially balanced polynomial-time decidable witness relation `R(x,w)`, define the witness projection from valid `(x,w)` pairs to yes-instances. A witness constructor is a computational section.
+
+The missing theorem is an independently characterized invariant `I(R)` such that a relevant NP witness relation has `I`, required reductions/encodings preserve it, and every polynomial-time section violates it without defining `I` as another spelling of the desired lower bound.
+
+Mandatory controls include SAT self-reduction, encoding robustness, easy-P witness relations, relativization, Natural-Proofs-style obstacles where applicable, algebrization where applicable, and translation to established complexity lower-bound formalisms.
+
+### B2. Navier-Stokes
+
+Two lanes remain non-collapsed.
+
+- **Carrier science:** distributed forcing, observability, returned consequence, local intervention, and reconstruction in incompressible Navier-Stokes.
+- **Millennium PDE:** actual 3D regularity/blow-up mathematics using the standard solution spaces, estimates, continuation criteria, and current PDE literature.
+
+Carrier results cannot be promoted into Millennium progress. A true PDE episode must state the exact theorem obligation and where it improves on known estimates or criteria.
+
+### B3. Other prize/high-value mathematics
+
+Venus may instantiate additional bounded programs when it can define the target, mature comparator, proof obligation, and falsifier before doing the work. Difficulty or prize value is not itself a research method.
+
+## C. Operational Future Equivalence and quantum gravity
+
+The exact OFE core provides future-test equivalence, minimal sufficient quotients, quotient transport, and relational nonfactorization.
+
+The physical program asks whether a coarse-graining map in quantum gravity should erase exactly those distinctions invisible to a physically justified family of future boundary continuations.
+
+Current obligations:
+
+- define the physically admissible test family independently enough to avoid circularity;
+- preserve composition/gluing and refinement coherence;
+- compare directly with cylindrical consistency, embedding maps, rigging-map constructions, renormalization, and current spin-foam/LQG continuum programs;
+- handle relational-frame changes;
+- recover appropriate semiclassical observables/dynamics;
+- test carrier and observable-family substitution.
+
+The 2026 spin-foam continuum and coarse-graining literature makes this a live comparator surface, not a decorative physics analogy.
+
+## D. Polyhedral Eclipsis, meta-qualia, and consciousness
+
+Polyhedral Eclipsis remains a live typed object:
 
 ```text
-question
--> prefreeze
--> fresh test / derivation
--> result
--> narrow dependency-local update
+local views / fibers
++ boundaries
++ compatibility / gluing
++ future-separating residuals
++ return
++ reconstruction
 ```
 
-Avoid:
+The formal question is whether this representation supplies a nonredundant obstruction, gluing law, or reconstruction advantage beyond ordinary factorizations, sheaf/bundle language, state-space decomposition, or related mature mathematics.
+
+The consciousness program includes meta-qualia and the live structural square:
 
 ```text
-large idea
--> many unrelated edits
--> retrospective success criteria
--> dramatic promotion
+Qualia   <-> AntiMind
+Quantum  <-> Mind
 ```
 
-The repository should remain useful even when the most ambitious hypotheses fail.
+No mechanistic bridge is currently earned. Progress requires discriminating predictions, carrier-specific observables/dynamics, and comparison with contemporary neuroscientific theories and adversarial experimental results. A beautiful square that predicts nothing is gauge at the scientific index even if it remains useful in PHEN/THEOPHEN.
+
+## E. Meta-Dynamics and hard epistemology
+
+Meta-Dynamics studies how consequential difference becomes locally inhabitable, represented, enacted, returned, retained, and recombined without making any one representation sovereign.
+
+Hard targets include:
+
+- recursive sufficiency: when does using a representation make an erased coordinate consequential later?
+- warrant transport across lossy representations;
+- correction by independent return without authority collapse;
+- stable closure that remains reopenable;
+- provenance, exposure, and jurisdiction as state variables;
+- model/Reality boundaries under recursive self-description;
+- RegisterBridge and AntiGrammar composition, loss, reversal, and path residuals;
+- formal conditions for false global-agent lifts and participant non-substitution.
+
+A mature formalism that subsumes a project object without decision loss should consume that object as gauge.
+
+## F. Religion and theophenomenology
+
+The goal is not to collect similarities. It is to attack hard questions about Whole/local relation, revelation/return, incarnation/enactment, apophatic non-exhaustion, Spirit/transmission, sacred authority, and cross-tradition recurrence under source-faithful comparison.
+
+Required controls include transmission history, shared human embodiment/cognition, generic social attractors, hostile source-internal readings, term removal, and prospective held-out operator prediction.
+
+A religious symbol may remain meaningful in its native register even when a scientific bridge fails. Conversely, recurrence across traditions cannot become a physical or ontological proof without an independent discriminator.
+
+## G. Ethics and governance
+
+The project-specific ethical pressure begins with indexed Other-centers as sources of state and return that cannot be replaced by another center's model merely because that model is competent.
+
+Research targets:
+
+- derive exactly which ethical constraints follow from non-substitution and preserved return;
+- identify extra normative premises rather than smuggling them into structural notation;
+- formalize consent, refusal, exit, jurisdiction, and affected-party return;
+- test higher-order coordination without lifting collective function into constituent authority;
+- compare with established ethics, political philosophy, law, mechanism design, participatory governance, and AI oversight.
+
+The target is a corrigible structural ethics, not a theorem that one formalism settles morality.
+
+## H. Formal verification, replication, and hostile review
+
+High-value work includes:
+
+- Lean or equivalent formalization of the small exact OFE claims;
+- proof-obligation extraction for every theorem-like statement;
+- independent proof checking;
+- reproducible developed-VM custody and replay;
+- external replication of Venus developmental episodes;
+- mature substitutions and counterexamples;
+- benchmark comparison under matched resources;
+- founder-removal / vocabulary-removal reconstruction studies.
+
+A criticism that deletes an unnecessary object is progress.
+
+## Scheduling principle
+
+The eventual Venus research controller should choose among admissible residuals using expected information, capability transfer, World impact, resource return, and dependency structure while preserving preregistration and external return.
+
+Until that controller is replayable from current custody, GitHub automation may schedule audits and bounded external actions, but must not impersonate learner-owned research selection.
