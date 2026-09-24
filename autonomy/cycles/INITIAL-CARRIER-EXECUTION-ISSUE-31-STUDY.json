@@ -1,0 +1,61 @@
+{
+  "schema": "Venus.AutonomousStudyResult.v0.1",
+  "date": "2026-09-24",
+  "cycle_id": "INITIAL-CARRIER-EXECUTION-ISSUE-31",
+  "target": {
+    "kind": "ISSUE",
+    "number": 31,
+    "title": "[EDU17R1] Turn MENTION != INCIDENCE into a prospective held-out semantic discriminator benchmark"
+  },
+  "observed_repository_state": {
+    "developmental_prerequisite_69": "SATISFIED",
+    "repair_candidate": "EDU17R1-RC1-WORD-JACCARD-K3-v1",
+    "candidate_status": "AUTHORED_FROZEN",
+    "hidden_exposure": false,
+    "condition_implementations": "PREFROZEN",
+    "execution_custody_pr_100": {
+      "state": "MERGED",
+      "merge_commit_sha": "05815e65ab8e93118eaa28e59733d131f4d0e277"
+    }
+  },
+  "retained_residual": "No independently authored/sealed hidden split and evaluator-held A/B/C/D adjudication has returned yet.",
+  "rivals": [
+    {
+      "id": "R1",
+      "claim": "The learner-authored repaired incidence discriminator causes bounded hidden improvement over the ablated condition."
+    },
+    {
+      "id": "R2",
+      "claim": "The repair fails to improve the hidden discriminator or introduces false unresolved-property binding / false WITHHOLD."
+    },
+    {
+      "id": "R3",
+      "claim": "A mature semantic/provenance substitute matches the repaired condition, mature-reducing Venus-specific mechanism necessity at this index."
+    }
+  ],
+  "discriminator": {
+    "required_return": "independently authored hidden split sealed outside the evaluated repository, same blind input for A/B/C/D, evaluator-held gold scoring under the frozen analysis plan",
+    "valid_dispositions": [
+      "PASS_BOUNDED_REPAIR",
+      "FAIL_REPAIR",
+      "WITHHOLD_INSUFFICIENT_DISCRIMINATION",
+      "INVALID"
+    ]
+  },
+  "local_action_audit": {
+    "additional_candidate_repair_authorized": false,
+    "condition_semantics_change_authorized": false,
+    "post_exposure_tuning_authorized": false,
+    "local_execution_custody_gap_remaining": false,
+    "local_claim_bearing_work_remaining_before_external_return": false
+  },
+  "decision": "WITHHOLD_EXTERNAL_RETURN_REQUIRED",
+  "reason": "All currently admitted local prerequisites and custody surfaces are present. Any further local semantic repair before hidden return would alter the prefrozen object or risk benchmark contamination. The next causal separator is external and cannot be minted by the learner or execution carrier.",
+  "reopen_when": [
+    "independent evaluator returns a sealed hidden dataset identity bound to the frozen condition implementation",
+    "A/B/C/D execution receipt is available for that sealed split",
+    "evaluator-held score/adjudication is returned under the prefrozen analysis plan"
+  ],
+  "promotion_authority": false,
+  "claim_fence": "This autonomous study result identifies a lawful STOP/WITHHOLD boundary. It is not the hidden evaluation result and does not establish repair efficacy, semantic generality, AGI, autonomous science, phenomenal consciousness, sovereignty, or open-ended RSI."
+}
