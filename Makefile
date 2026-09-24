@@ -1,4 +1,4 @@
-.PHONY: test lint proof proof-containers custody edu16-custody causal-coverage navigation sota-freshness experiment-template construct-dispositions audit kernel-doc-check papers arxiv texbundle forum manifest bundle release clean
+.PHONY: test lint proof proof-containers formal-check custody edu16-custody causal-coverage navigation sota-freshness experiment-template construct-dispositions audit kernel-doc-check papers arxiv texbundle forum manifest bundle release clean
 
 test:
 	python3 -m unittest discover -s tests -p 'test_*.py'
@@ -10,7 +10,10 @@ proof-containers:
 	python3 scripts/audit_proof_containers.py
 
 proof: proof-containers
-	@echo "NOTE: proof means proof-container/theorem-structure audit only; see issue #33 for formal verification."
+	@echo "NOTE: proof means proof-container/theorem-structure audit only; use formal-check for machine verification."
+
+formal-check:
+	cd formal/lean && lake build
 
 custody:
 	python3 scripts/audit_custody.py
