@@ -1,0 +1,20 @@
+{
+  "schema": "Venus.AdaptivePromotionPublicPressureResult.v0.1",
+  "status": "PUBLIC_SYNTHETIC_NONPROMOTIONAL",
+  "seed": 41,
+  "trials": 1000,
+  "proposals_per_lineage": 100,
+  "sigma": 1,
+  "familywise_alpha": 0.05,
+  "naive": {
+    "false_commit_rate_per_proposal": 0.49915,
+    "lineage_with_any_false_commit_rate": 1,
+    "false_commits": 49915
+  },
+  "bonferroni_one_sided": {
+    "false_commit_rate_per_proposal": 0.00054,
+    "lineage_with_any_false_commit_rate": 0.053,
+    "false_commits": 54
+  },
+  "promotion_authority": false
+}
