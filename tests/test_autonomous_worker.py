@@ -22,13 +22,24 @@ POLICY = json.loads(
 
 
 class AutonomousWorkerTests(unittest.TestCase):
-    def test_roadmap_priority_drives_one_bounded_target(self):
+    def test_roadmap_is_bounded_prior_not_sovereign_curriculum(self):
         items = (
-            WorkItem("ISSUE", 72, "Safe Strong RSI"),
-            WorkItem("ISSUE", 31, "hidden semantic return"),
-            WorkItem("ISSUE", 999, "later thing"),
+            WorkItem("ISSUE", 31, "roadmap issue"),
+            WorkItem("PR", 999, "learned useful pr"),
         )
-        chosen = choose_target(items, roadmap_text="1. #31\n2. #72")
+        chosen = choose_target(
+            items,
+            roadmap_text="#31",
+            kind_utility={"ISSUE": -1.0, "PR": 1.0},
+        )
+        self.assertEqual(chosen.kind, "PR")
+
+    def test_roadmap_can_break_neutral_tie_as_bootstrap_prior(self):
+        items = (
+            WorkItem("ISSUE", 72, "later"),
+            WorkItem("ISSUE", 31, "first"),
+        )
+        chosen = choose_target(items, roadmap_text="#31\n#72")
         self.assertEqual(chosen.number, 31)
 
     def test_conflicted_pr_reopens_before_new_issue(self):
@@ -90,8 +101,6 @@ class AutonomousWorkerTests(unittest.TestCase):
             roadmap_text="",
             internal_policy=POLICY,
         )
-        # Conflict makes contradiction/correction reachability false in the
-        # adapter projection, so the learned policy forces REOPEN.
         self.assertEqual(cycle.decision, "REOPEN")
 
 
