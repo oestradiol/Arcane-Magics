@@ -296,3 +296,63 @@ def carrier_substitution_probe(
         for carrier, admissible in carrier_outcomes.items()
     ]
     anti_minerva_audit(judgments)
+
+
+@dataclass(frozen=True)
+class IndependentInternalizationEvidence:
+    evaluator_id: str
+    return_id: str
+    behavior_equivalent_after_removal: bool
+    original_scaffold_inaccessible: bool
+    fresh_world_return_external: bool
+    successor_reconstructible: bool
+    source_provenance_preserved: bool
+
+
+@dataclass(frozen=True)
+class CertifiedInternalizationReceipt:
+    receipt_id: str
+    base_receipt_id: str
+    evaluator_id: str
+    return_id: str
+    status: str
+    promotion_authority: bool
+
+
+def certify_internalization(
+    artifact: SubstrateArtifact,
+    *,
+    internalized_capability_payload: object,
+    evidence: IndependentInternalizationEvidence,
+) -> CertifiedInternalizationReceipt:
+    """Bind scaffold consumption to independently identified returned evidence."""
+    if not evidence.evaluator_id or evidence.evaluator_id == artifact.source_id:
+        raise InternalizationError("internalization requires an independent evaluator identity")
+    if not evidence.return_id:
+        raise InternalizationError("internalization requires an independently returned evidence id")
+    if not evidence.source_provenance_preserved:
+        raise InternalizationError("source provenance was not preserved")
+
+    base = internalize(
+        artifact,
+        internalized_capability_payload=internalized_capability_payload,
+        original_scaffold_removed=evidence.original_scaffold_inaccessible,
+        function_preserved_after_removal=evidence.behavior_equivalent_after_removal,
+        fresh_world_return_required=evidence.fresh_world_return_external,
+        successor_reconstructible=evidence.successor_reconstructible,
+    )
+    body = {
+        "base_receipt_id": base.receipt_id,
+        "evaluator_id": evidence.evaluator_id,
+        "return_id": evidence.return_id,
+        "status": "PASS_BOUNDED_SCAFFOLD_INTERNALIZATION",
+        "promotion_authority": False,
+    }
+    return CertifiedInternalizationReceipt(
+        receipt_id=digest(body),
+        base_receipt_id=base.receipt_id,
+        evaluator_id=evidence.evaluator_id,
+        return_id=evidence.return_id,
+        status=body["status"],
+        promotion_authority=False,
+    )
