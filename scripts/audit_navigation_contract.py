@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+from collections import deque
 from pathlib import Path
 import re
 import sys
@@ -32,6 +33,47 @@ def link_paths(path: Path) -> set[str]:
     text = path.read_text(encoding='utf-8', errors='replace')
     return {m.group(1).split('#', 1)[0] for m in LINK.finditer(text)}
 
+
+TWO_HOP_TARGETS = {
+    'docs/REPRODUCE.md': 'reproduction hub',
+    'docs/ISSUE_ROADMAP.md': 'issue roadmap',
+    'docs/TEST_COVERAGE_MATRIX.md': 'test coverage matrix',
+    'provenance/DEVELOPMENTAL_LINEAGE.md': 'developmental lineage',
+    'docs/CREDITS_AND_REDUCTIONS.md': 'credits/reductions',
+}
+
+def normalized_local_targets(path: Path) -> set[Path]:
+    out: set[Path] = set()
+    for raw in link_paths(path):
+        if not raw or raw.startswith(('http://', 'https://', 'mailto:')):
+            continue
+        target = (path.parent / raw).resolve()
+        try:
+            target.relative_to(ROOT.resolve())
+        except ValueError:
+            continue
+        if target.is_file() and target.suffix.lower() == '.md':
+            out.add(target)
+    return out
+
+def markdown_distance(start: Path, target: Path, max_hops: int = 2) -> int | None:
+    start = start.resolve()
+    target = target.resolve()
+    queue = deque([(start, 0)])
+    seen = {start}
+    while queue:
+        node, depth = queue.popleft()
+        if node == target:
+            return depth
+        if depth >= max_hops or not node.exists():
+            continue
+        for nxt in normalized_local_targets(node):
+            if nxt not in seen:
+                seen.add(nxt)
+                queue.append((nxt, depth + 1))
+    return None
+
+
 def main() -> int:
     errors: list[str] = []
     if not README.exists():
@@ -49,6 +91,13 @@ def main() -> int:
         for target, purpose in REQUIRED_START_HERE.items():
             if target not in start_links:
                 errors.append(f'START_HERE missing {purpose} route: {target}')
+
+    # Test the actual <=2-hop reader law, not only a hand-picked set of direct links.
+    for rel, purpose in TWO_HOP_TARGETS.items():
+        target = ROOT / rel
+        distance = markdown_distance(README, target, max_hops=2)
+        if distance is None:
+            errors.append(f'{purpose} is not reachable from README within 2 Markdown hops: {rel}')
 
     # The README must keep the shortest reproduction commands discoverable.
     readme_text = README.read_text(encoding='utf-8', errors='replace')
