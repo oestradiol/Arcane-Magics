@@ -52,6 +52,12 @@ jobs:
       - name: Navigation contract audit
         run: python scripts/audit_navigation_contract.py
 
+      - name: SOTA freshness audit
+        run: python scripts/audit_sota_freshness.py
+
+      - name: Matched experiment contract audit
+        run: python scripts/validate_experiment_manifest.py evaluation/MATCHED_EXPERIMENT_TEMPLATE.json
+
       - name: Live open-issue coverage audit
         env:
           GH_TOKEN: ${{ github.token }}
