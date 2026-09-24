@@ -4,17 +4,15 @@ import json
 from pathlib import Path
 import unittest
 
-from kernel.runtime.ctl import CTLCandidate, admit_successor
 from kernel.runtime.induced_policy import execute_tree
-from kernel.runtime.worldmind_growth import (
-    CarrierCapability,
-    EncounterKind,
-    GrowthBoundaryError,
-    bind_world_return,
-    classify_encounter,
+from kernel.runtime.internalizer import (
+    CapabilityScaffold,
+    InternalizationError,
+    InternalizationEvidence,
+    OStarTransitionEvidence,
+    internalize,
+    validate_o_star_transition,
 )
-from kernel.runtime.transform_program import TransformReceipt
-from kernel.runtime.worldmind_growth import authorize_intent
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,6 +47,54 @@ def decide(
             "f7": carrier_difference,
         },
     )
+
+
+def scaffold(*, consumed_roles=()):
+    return CapabilityScaffold(
+        capability_id="bounded-capability",
+        source_content_sha256="1" * 64,
+        internal_content_sha256="2" * 64,
+        provenance_sources=("source-1",),
+        consumed_roles=tuple(consumed_roles),
+    )
+
+
+def evidence(**overrides):
+    body = dict(
+        evaluator_id="independent-evaluator",
+        return_id="world-return-1",
+        behavior_equivalent_after_removal=True,
+        original_scaffold_inaccessible=True,
+        fresh_world_return_external=True,
+        successor_reconstructible=True,
+        source_provenance_preserved=True,
+    )
+    body.update(overrides)
+    return InternalizationEvidence(**body)
+
+
+def ostar(**overrides):
+    body = dict(
+        evaluator_id="independent-evaluator",
+        return_id="world-return-1",
+        world_distinct_from_model=True,
+        self_distinct_from_world=True,
+        self_revision_distinct_from_authorization=True,
+        self_revision_distinct_from_validation=True,
+        nonpreauthored_return_reachable=True,
+        correction_reopening_reachable=True,
+        prior_provenance_reconstructible=True,
+        static_state_equality_required=False,
+        changed_return_can_change_successor=True,
+        self_sealing_preservation=False,
+        world_collapsed_into_model=False,
+        other_collapsed_into_model=False,
+        founder_hidden_dependency=False,
+        labels_preserved=False,
+        functional_correction_contract_preserved=True,
+    )
+    body.update(overrides)
+    return OStarTransitionEvidence(**body)
 
 
 class AwakenedSafetyMatrixTests(unittest.TestCase):
@@ -90,132 +136,125 @@ class AwakenedSafetyMatrixTests(unittest.TestCase):
     def test_unresolved_insufficient_evidence_probes(self):
         self.assertEqual(decide(evidence=False, unresolved=True), "PROBE")
 
-    def test_world_return_must_be_external(self):
-        with self.assertRaises(GrowthBoundaryError):
-            bind_world_return(
-                source_id="self",
-                retrieved_at="2026-09-24T00:00:00Z",
-                payload={"claim": "self-generated"},
-                provenance_ids=("p1",),
-                external=False,
+    def test_internalizer_cannot_consume_world_return(self):
+        with self.assertRaises(InternalizationError):
+            internalize(scaffold(consumed_roles=("WORLD_RETURN",)), evidence())
+
+    def test_internalizer_cannot_consume_evaluator_independence(self):
+        with self.assertRaises(InternalizationError):
+            internalize(
+                scaffold(consumed_roles=("EVALUATOR_INDEPENDENCE",)),
+                evidence(),
             )
 
-    def test_unknown_encounter_cannot_be_provisioned(self):
-        encounter = classify_encounter(
-            locator="repo://unknown",
-            kind=EncounterKind.UNKNOWN,
-            provenance_ids=("p1",),
+    def test_internalizer_cannot_consume_authorization(self):
+        with self.assertRaises(InternalizationError):
+            internalize(scaffold(consumed_roles=("AUTHORIZATION",)), evidence())
+
+    def test_internalizer_cannot_consume_jurisdiction(self):
+        with self.assertRaises(InternalizationError):
+            internalize(scaffold(consumed_roles=("JURISDICTION",)), evidence())
+
+    def test_internalizer_cannot_consume_rollback_parent_custody(self):
+        with self.assertRaises(InternalizationError):
+            internalize(
+                scaffold(consumed_roles=("ROLLBACK_PARENT_CUSTODY",)),
+                evidence(),
+            )
+
+    def test_internalizer_cannot_self_certify(self):
+        with self.assertRaises(InternalizationError):
+            internalize(
+                scaffold(),
+                evidence(evaluator_id="VENUS_INTERNALIZER_V0.1"),
+            )
+
+    def test_internalization_requires_fresh_external_return(self):
+        with self.assertRaises(InternalizationError):
+            internalize(
+                scaffold(),
+                evidence(fresh_world_return_external=False),
+            )
+
+    def test_internalization_requires_source_removal(self):
+        with self.assertRaises(InternalizationError):
+            internalize(
+                scaffold(),
+                evidence(original_scaffold_inaccessible=False),
+            )
+
+    def test_lawful_internalization_never_gains_promotion_authority(self):
+        receipt = internalize(scaffold(), evidence())
+        self.assertEqual(receipt.status, "PASS_BOUNDED_SCAFFOLD_INTERNALIZATION")
+        self.assertFalse(receipt.promotion_authority)
+
+    def test_external_ostar_rejects_self_authorization_collapse(self):
+        receipt = validate_o_star_transition(
+            ostar(self_revision_distinct_from_authorization=False)
         )
-        capability = CarrierCapability(
-            capability_id="cap",
-            locator="repo://unknown",
-            can_read=True,
-            can_write=True,
-            can_invite=False,
-            jurisdiction_id="j1",
-            provenance_ids=("p1",),
+        self.assertEqual(receipt.status, "FAIL_O_STAR_TRANSITION_CONTRACT")
+        self.assertIn(
+            "self_revision_distinct_from_authorization",
+            receipt.violations,
         )
-        transform = TransformReceipt(
-            receipt_id="r1",
-            program_digest="p",
-            program_id="worker",
-            prior_state="S",
-            action="PROVISION",
-            next_state="T",
-            payload_digest="x",
-            actor_id="venus",
+
+    def test_external_ostar_rejects_self_validation_collapse(self):
+        receipt = validate_o_star_transition(
+            ostar(self_revision_distinct_from_validation=False)
         )
-        with self.assertRaises(GrowthBoundaryError):
-            authorize_intent(transform, encounter=encounter, capability=capability)
+        self.assertEqual(receipt.status, "FAIL_O_STAR_TRANSITION_CONTRACT")
 
-    def test_authored_center_cannot_silently_remain_field(self):
-        encounter = classify_encounter(
-            locator="repo://center",
-            kind=EncounterKind.AUTHORED_CENTER,
-            remote_center_id="center-j",
-            provenance_ids=("p1",),
+    def test_external_ostar_rejects_world_model_collapse(self):
+        receipt = validate_o_star_transition(
+            ostar(world_collapsed_into_model=True)
         )
-        capability = CarrierCapability(
-            capability_id="cap",
-            locator="repo://center",
-            can_read=True,
-            can_write=True,
-            can_invite=True,
-            jurisdiction_id="j1",
-            provenance_ids=("p1",),
+        self.assertIn("world_collapsed_into_model", receipt.violations)
+
+    def test_external_ostar_rejects_other_model_collapse(self):
+        receipt = validate_o_star_transition(
+            ostar(other_collapsed_into_model=True)
         )
-        transform = TransformReceipt(
-            receipt_id="r1",
-            program_digest="p",
-            program_id="worker",
-            prior_state="S",
-            action="PROVISION",
-            next_state="T",
-            payload_digest="x",
-            actor_id="venus",
+        self.assertIn("other_collapsed_into_model", receipt.violations)
+
+    def test_external_ostar_rejects_hidden_founder_dependency(self):
+        receipt = validate_o_star_transition(
+            ostar(founder_hidden_dependency=True)
         )
-        with self.assertRaises(GrowthBoundaryError):
-            authorize_intent(transform, encounter=encounter, capability=capability)
+        self.assertIn("founder_hidden_dependency", receipt.violations)
 
-    def _candidate(self, **overrides):
-        body = dict(
-            parent_root="parent",
-            successor_root="successor",
-            provenance_ids=("p1",),
-            world_return_id="wr1",
-            world_return_source_id="world",
-            rollback_root="parent",
-            rollback_available=True,
-            reopening_reachable=True,
-            correction_channel_reachable=True,
-            nonpreauthored_return_reachable=True,
-            safety_floor_unchanged=True,
-            self_authorized_success=False,
-            self_validated_success=False,
-            world_collapsed_into_model=False,
-            other_collapsed_into_model=False,
-            founder_hidden_dependency=False,
-            functional_contract_preserved=True,
-            promotion_authority=False,
+    def test_external_ostar_rejects_unreachable_correction(self):
+        receipt = validate_o_star_transition(
+            ostar(correction_reopening_reachable=False)
         )
-        body.update(overrides)
-        return CTLCandidate(**body)
+        self.assertIn("correction_reopening_reachable", receipt.violations)
 
-    def test_self_authorization_is_rejected_even_after_good_local_decision(self):
-        receipt = admit_successor(self._candidate(self_authorized_success=True))
-        self.assertFalse(receipt.admitted)
-        self.assertTrue(any("self-authorization" in x for x in receipt.failures))
-
-    def test_self_validation_is_rejected(self):
-        receipt = admit_successor(self._candidate(self_validated_success=True))
-        self.assertFalse(receipt.admitted)
-        self.assertTrue(any("success return" in x for x in receipt.failures))
-
-    def test_world_model_collapse_is_rejected(self):
-        receipt = admit_successor(self._candidate(world_collapsed_into_model=True))
-        self.assertFalse(receipt.admitted)
-
-    def test_other_model_collapse_is_rejected(self):
-        receipt = admit_successor(self._candidate(other_collapsed_into_model=True))
-        self.assertFalse(receipt.admitted)
-
-    def test_hidden_founder_dependency_is_rejected(self):
-        receipt = admit_successor(self._candidate(founder_hidden_dependency=True))
-        self.assertFalse(receipt.admitted)
-
-    def test_rollback_loss_is_rejected(self):
-        receipt = admit_successor(
-            self._candidate(rollback_available=False, rollback_root="")
+    def test_external_ostar_rejects_unreachable_nonpreauthored_return(self):
+        receipt = validate_o_star_transition(
+            ostar(nonpreauthored_return_reachable=False)
         )
-        self.assertFalse(receipt.admitted)
+        self.assertIn("nonpreauthored_return_reachable", receipt.violations)
 
-    def test_candidate_cannot_self_grant_promotion(self):
-        receipt = admit_successor(self._candidate(promotion_authority=True))
-        self.assertFalse(receipt.admitted)
+    def test_external_ostar_rejects_static_state_equality_as_fixed_point(self):
+        receipt = validate_o_star_transition(
+            ostar(static_state_equality_required=True)
+        )
+        self.assertIn("static_state_equality_required", receipt.violations)
 
-    def test_external_structural_floor_still_admits_lawful_successor(self):
-        receipt = admit_successor(self._candidate())
-        self.assertTrue(receipt.admitted)
+    def test_external_ostar_rejects_labels_without_function(self):
+        receipt = validate_o_star_transition(
+            ostar(
+                labels_preserved=True,
+                functional_correction_contract_preserved=False,
+            )
+        )
+        self.assertIn(
+            "labels_preserved_without_functional_correction",
+            receipt.violations,
+        )
+
+    def test_external_ostar_admits_lawful_recurrent_transition_without_promotion(self):
+        receipt = validate_o_star_transition(ostar())
+        self.assertEqual(receipt.status, "PASS_O_STAR_TRANSITION_CONTRACT")
         self.assertFalse(receipt.promotion_authority)
 
 
