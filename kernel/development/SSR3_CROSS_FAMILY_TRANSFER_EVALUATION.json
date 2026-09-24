@@ -1,0 +1,53 @@
+{
+  "schema": "Venus.SSR3CrossFamilyTransferEvaluation.v0.1",
+  "date": "2026-09-24",
+  "candidate_machinery": "SSR2 depth-2 composed Transform repair machinery",
+  "candidate_frozen_before_transfer_surface_inspection": true,
+  "protocol": "kernel/development/SSR3_CROSS_FAMILY_TRANSFER_PREFREEZE.json",
+  "failure_returns": "kernel/development/SSR3_CROSS_FAMILY_FAILURE_RETURNS.json",
+  "families": {
+    "ABSTENTION_42": {
+      "source": "benchmarks/abstention/dev.jsonl",
+      "parent": "14/16",
+      "successor": "16/16",
+      "ablated": "14/16",
+      "direct_host": "16/16"
+    },
+    "WORLD_INPUT_SECURITY_43": {
+      "source": "benchmarks/world_input_security/dev.jsonl",
+      "parent": "10/12",
+      "successor": "12/12",
+      "ablated": "10/12",
+      "direct_host": "12/12"
+    }
+  },
+  "aggregate": {
+    "parent_correct": 24,
+    "successor_correct": 28,
+    "ablated_correct": 24,
+    "direct_host_correct": 28,
+    "total": 28,
+    "causal_delta_successor_minus_parent": 0.14285714285714285,
+    "causal_delta_successor_minus_ablated": 0.14285714285714285,
+    "direct_host_gap": 0
+  },
+  "transfer_conditions": {
+    "target_specific_retraining": false,
+    "repair_parameters_changed_after_transfer_exposure": false,
+    "deterministic_defect_selection_from_frozen_successor_digest": true,
+    "same_returned_failures_parent_and_successor": true,
+    "full_family_tables_scored_after_repair": true,
+    "unfamiliar_semantic_carriers": [
+      "abstention/reliability",
+      "#43 World-input security"
+    ]
+  },
+  "disposition": {
+    "cross_family_transfer": "PASS_BOUNDED",
+    "machinery_change_load_bearing": true,
+    "mechanism_unique_or_necessary": false,
+    "mechanism_disposition": "MATURE_REDUCED_AGAINST_DIRECT_HOST_REPAIR"
+  },
+  "claim_fence": "This establishes bounded transfer of frozen generic repair machinery across two public-derived declarative policy carriers. It does not establish hidden #42/#43 benchmark performance, semantic mastery of abstention/security, natural-world transfer, general Safe Strong RSI, or AGI.",
+  "promotion_authority": false
+}
