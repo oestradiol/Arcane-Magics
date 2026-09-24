@@ -8,6 +8,7 @@ from kernel.development.autonomous_worker import (
     ALLOWED_OPERATIONS,
     FORBIDDEN_OPERATIONS,
     WorkItem,
+    choose_study_method,
     choose_target,
     make_cycle,
 )
@@ -85,6 +86,16 @@ class AutonomousWorkerTests(unittest.TestCase):
         self.assertNotIn("CLOSE_ISSUE", ALLOWED_OPERATIONS)
         self.assertIn("CLOSE_ISSUE", FORBIDDEN_OPERATIONS)
 
+    def test_method_choice_is_state_owned_and_return_utility_can_override_tie(self):
+        item = WorkItem("ISSUE", 72, "Safe Strong RSI")
+        baseline = choose_study_method(item, {})
+        favored = choose_study_method(
+            item,
+            {baseline: -1.0, "COMPARATOR_AUDIT": 1.0},
+        )
+        self.assertEqual(favored, "COMPARATOR_AUDIT")
+        self.assertNotEqual(baseline, favored)
+
     def test_selected_target_materializes_source_grounded_study(self):
         cycle = make_cycle(
             issues=(WorkItem(
@@ -101,6 +112,7 @@ class AutonomousWorkerTests(unittest.TestCase):
         self.assertIn(41, cycle.study["referenced_issue_or_pr_numbers"])
         self.assertIn("kernel/runtime/ctl.py", cycle.study["referenced_repository_paths"])
         self.assertTrue(cycle.study["returned_blocker_sentences"])
+        self.assertEqual(cycle.study["method"], cycle.study_method)
         self.assertFalse(cycle.study["promotion_authority"])
 
     def test_internal_policy_is_causally_upstream(self):
