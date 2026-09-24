@@ -30,6 +30,18 @@ def main() -> int:
     if candidate_status=="NOT_AUTHORED":
         if controller.get("available") is not False:
             errors.append("NOT_AUTHORED state must not claim admitted controller operation")
+    elif candidate_status=="OPERATION_READY":
+        operation=controller.get("operation")
+        if controller.get("available") is not True or not operation:
+            errors.append("OPERATION_READY requires admitted developmental controller operation")
+        if controller.get("hidden_evaluation_access") is not False:
+            errors.append("proposal operation may not access hidden evaluation")
+        if controller.get("promotion_authority") is not False:
+            errors.append("proposal operation may not grant promotion authority")
+        candidate=ROOT/"kernel/development/EDU17R1_REPAIR_CANDIDATE.json"
+        receipt=ROOT/"kernel/development/EDU17R1_REPAIR_OWNERSHIP_RECEIPT.json"
+        if candidate.exists() or receipt.exists():
+            errors.append("OPERATION_READY must not imply a frozen candidate")
     elif candidate_status=="AUTHORED_FROZEN":
         candidate=ROOT/"kernel/development/EDU17R1_REPAIR_CANDIDATE.json"
         receipt=ROOT/"kernel/development/EDU17R1_REPAIR_OWNERSHIP_RECEIPT.json"
