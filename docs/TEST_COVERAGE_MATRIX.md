@@ -5,14 +5,14 @@
 
 | Issue | Layer | Existing artifact / evidence | Missing discriminator | Promotion / closure condition |
 |---|---|---|---|---|
-| #4 EDU16 replay custody | T0/T3 | EDU16 receipts + current-state boundary | exact replayable 1703-event carrier/journal/verifier or exhaustive negative custody disposition | exact bytes verified, or custody absence preserved as typed historical fact |
+| #4 EDU16 replay custody | T0/T3 | receipts + `EDU16_CUSTODY_STATUS.json` + CI boundary audit | authentic 1703-event runner/journal still not located | exact bytes verified, or non-replay boundary remains typed |
 | #5 P vs NP | T6/T7 | existing obstruction program in research/provenance | non-tautological invariant violated by every polynomial-time section | formal counterexample/proof result under frozen target |
 | #6 OFE/QG formal core | T7 | OFE manuscript + IG9/IG10 evidence | machine-checked separating/composition core | proof checked independently; physical application still separately fenced |
 | #7 Navier–Stokes | T8/T6 | frontier/SOTA reconstruction issue | current 2026 proof/formal/institutional state + any residual open problem | dated source reconciliation and, for new math, independent proof burden |
 | #8 RegisterBridge | T7/T5 | frontier construct | mature-substitution/deletion test | residual survives comparator or construct is reduced/consumed |
 | #9 Meta-Dynamics | T5/T7 | docs/META_DYNAMICS.md | invariant/deletion discriminator | measurable/formal consequence not reproduced by simpler substitute |
 | #10 Evaluation constitution | T5/T6 | docs/EVALUATION_CONSTITUTION.md + registry | matched-budget executed matrix | actual results, including null/negative, written to registry |
-| #11 SOTA watch | T8 | docs/SOTA_WATCH.md | freshness automation / dirty-state queue | source changes create explicit reconciliation work |
+| #11 SOTA watch | T8 | SOTA watch + machine-readable freshness state + CI decay audit | automatic source-change/hash reconciliation | source changes create explicit reconciliation work |
 | #12 Self-improvement | T5/T6 | developmental lineage | matched DGM/AlphaEvolve/etc comparison | budget-matched external result |
 | #13 Autonomous science | T6 | EDU research machinery | end-to-end external science benchmark | independently scored research loop under frozen protocol |
 | #14 Long-horizon agency | T6 | current kernel/dev state | general-agent/long-horizon battery | externally scored battery with cost/failure retention |
@@ -31,13 +31,13 @@
 | #27 Theophenomenology | T6/T9 | Arcane / comparison provenance | held-out cross-tradition prediction + hostile reading + term removal | prediction/reconstruction survives controls |
 | #28 Public interface | T9 | README/PUBLIC_VALUE/milestones | blind outsider reconstruction | readers recover claims/boundaries/credit accurately |
 | #29 Canonical retirement | T0/T2/T3 | retirement ledger | full typed inventory + no untracked live premise | every unique consequence disposed and custody hash-bound |
-| #30 VMK2 trust | T3 | current invariant tests | malicious backend, authentication, revocation, non-finite/cross-language fixtures | threat model covered with negative tests |
-| #31 MENTION != INCIDENCE | T4 | EDU17R1 preserved WITHHOLD | hidden prospective semantic benchmark | repaired condition beats baselines without invalid promotion |
-| #32 construct disposition | T0/T5 | credit/reduction law | repo-wide live/derived/consumed/substituted classification | every public construct gets typed disposition |
-| #33 proof hygiene | T7 | proof-container audit | semantic distinction between lint and proof verification | machine-checked subset + explicit audit naming |
+| #30 VMK2 trust | T3 | invariant tests + mutable-state/root-drift adversarial tests + trust-boundary doc | cryptographic authentication, revocation distribution, non-finite/cross-language fixtures | threat model covered with negative tests |
+| #31 MENTION != INCIDENCE | T4 | preserved WITHHOLD + public typed dev benchmark + naive lexical baseline | sealed hidden split + prospective matched run | repaired condition beats baselines without invalid promotion |
+| #32 construct disposition | T0/T5 | credit/reduction law + typed construct disposition state + validator | mature-substitution evidence for each live residual | every public construct gets typed disposition |
+| #33 proof hygiene | T7 | theorem-structure/proof-container audit is explicitly named as lint, not proof | machine-checked subset remains issue #6 | machine-checked subset + explicit audit naming |
 | #34 governance package | T6/T9 | AGENTS/review governance | independent package + external integration | one real external consumer/use case |
-| #35 causal test archaeology | T0–T9 | HISTORICAL_DISTINCTION_TEST_MATRIX.json | exhaustive historical inventory and executable regressions | every causal distinction and every open issue typed to test/evaluation |
-| #36 navigation | T9 | README/reader docs | automated hop/link/orphan checks + blind-reader tasks | <=2-hop authority paths where practical, tested |
+| #35 causal test archaeology | T0–T9 | historical matrix + semantic regression suite + live issue coverage audit | deeper historical extraction remains open | every causal distinction and every open issue typed to test/evaluation |
+| #36 navigation | T9 | START_HERE/TESTS/REPRODUCE/ROADMAP + automated navigation contract | blind-reader tasks remain open | <=2-hop authority paths where practical, tested |
 | #37 roadmap | meta | dependency-ordered issue plan | completion of dependent work | closes only when roadmap is replaced by executed outcomes / successor roadmap |
 
 ## Current executable coverage
@@ -53,13 +53,13 @@ Existing automated coverage currently concentrates on:
 
 The largest uncovered classes are:
 
-1. historical T2 regressions;
-2. semantic T4 prospective tests;
+1. deeper historical T2 behavioral regressions beyond surface-preservation checks;
+2. hidden semantic T4 promotion tests beyond the public EDU17R1 dev set;
 3. matched causal T5 ablations;
 4. external T6 capability/science benchmarks;
 5. semantic/formal T7 proof verification beyond container lint;
-6. T8 freshness automation;
-7. T9 blind-reader/navigation tests.
+6. automatic T8 source-change reconciliation beyond freshness deadlines;
+7. T9 blind-reader reconstruction tests.
 
 ## Rule
 
