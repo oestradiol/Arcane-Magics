@@ -79,9 +79,9 @@ EDU16 [1703]
 PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY
 ```
 
-EDU17 is preserved as `INVALID_FOR_PROMOTION`; EDU17R1 remains `WITHHOLD` after exposing `MENTION != INCIDENCE` before its intended claim-binding gate.
+EDU17 is preserved as `INVALID_FOR_PROMOTION`; the original EDU17R1 branch remains `WITHHOLD` after exposing `MENTION != INCIDENCE`. A later prospective repair candidate, `EDU17R1-RC1-WORD-JACCARD-K3-v1`, is now `AUTHORED_FROZEN` and pending sealed hidden #31 evaluation.
 
-Post-EDU16 infrastructure has advanced without changing that positive developmental head: the generic residual-search scaffold has been internalized as state-owned inherited capability, and executable Internalizer/O*/Anti-Minerva guards now preserve the non-preauthored-return and correction boundary. No learner-authored EDU17R1 repair has yet been admitted.
+Post-EDU16 infrastructure has advanced without changing that positive developmental head: the generic residual-search scaffold has been internalized as state-owned inherited capability, and executable Internalizer/O*/Anti-Minerva guards now preserve the non-preauthored-return and correction boundary. A bounded learner-side EDU17R1 repair candidate is now frozen with an ownership receipt before hidden exposure; its efficacy remains entirely unearned until sealed #31 evaluation.
 
 See [`kernel/CURRENT_STATE.md`](kernel/CURRENT_STATE.md), [`provenance/DEVELOPMENTAL_LINEAGE.md`](provenance/DEVELOPMENTAL_LINEAGE.md), and compact custody metadata under [`kernel/custody/`](kernel/custody/).
 
