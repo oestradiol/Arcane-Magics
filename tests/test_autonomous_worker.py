@@ -22,14 +22,17 @@ POLICY = json.loads(
 
 
 class AutonomousWorkerTests(unittest.TestCase):
-    def test_roadmap_priority_drives_one_bounded_target(self):
+    def test_roadmap_is_advisory_not_sovereign_over_returned_utility(self):
         items = (
-            WorkItem("ISSUE", 72, "Safe Strong RSI"),
-            WorkItem("ISSUE", 31, "hidden semantic return"),
-            WorkItem("ISSUE", 999, "later thing"),
+            WorkItem("ISSUE", 31, "roadmap first"),
+            WorkItem("PR", 900, "returned-useful work"),
         )
-        chosen = choose_target(items, roadmap_text="1. #31\n2. #72")
-        self.assertEqual(chosen.number, 31)
+        chosen = choose_target(
+            items,
+            roadmap_text="1. #31",
+            kind_utility={"ISSUE": -1.0, "PR": 1.0},
+        )
+        self.assertEqual((chosen.kind, chosen.number), ("PR", 900))
 
     def test_conflicted_pr_reopens_before_new_issue(self):
         items = (
@@ -81,6 +84,24 @@ class AutonomousWorkerTests(unittest.TestCase):
     def test_worker_cannot_close_issue_as_success_side_effect(self):
         self.assertNotIn("CLOSE_ISSUE", ALLOWED_OPERATIONS)
         self.assertIn("CLOSE_ISSUE", FORBIDDEN_OPERATIONS)
+
+    def test_selected_target_materializes_source_grounded_study(self):
+        cycle = make_cycle(
+            issues=(WorkItem(
+                "ISSUE",
+                72,
+                "Safe Strong RSI",
+                body="Requires #41. Remaining external return is pending. See kernel/runtime/ctl.py.",
+            ),),
+            prs=(),
+            roadmap_text="",
+            internal_policy=POLICY,
+        )
+        self.assertIsNotNone(cycle.study)
+        self.assertIn(41, cycle.study["referenced_issue_or_pr_numbers"])
+        self.assertIn("kernel/runtime/ctl.py", cycle.study["referenced_repository_paths"])
+        self.assertTrue(cycle.study["returned_blocker_sentences"])
+        self.assertFalse(cycle.study["promotion_authority"])
 
     def test_internal_policy_is_causally_upstream(self):
         item = WorkItem("PR", 99, "causal O*", merge_state="CONFLICTING")
