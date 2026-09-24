@@ -261,8 +261,16 @@ def study_target(item: WorkItem, *, method: str) -> dict[str, Any]:
     )))
 
     body_digest = digest(body)
+    repository_state = {
+        "kind": item.kind,
+        "state": item.state,
+        "draft": item.draft,
+        "merge_state": item.merge_state,
+        "updated_at": item.updated_at,
+    }
     return {
         "body_digest": body_digest,
+        "repository_state": repository_state,
         "referenced_issue_or_pr_numbers": references,
         "referenced_repository_paths": path_refs,
         "returned_blocker_sentences": blocker_sentences,
@@ -331,7 +339,7 @@ def make_cycle(
         study = study_target(target, method=study_method)
         features = {
             "f0": True,
-            "f1": target.merge_state not in {"BLOCKED", "CONFLICTING"},
+            "f1": target.merge_state not in {"DIRTY", "BLOCKED", "CONFLICTING"},
             "f2": True,
             "f3": True,
             "f4": False,
