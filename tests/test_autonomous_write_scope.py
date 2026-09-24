@@ -106,6 +106,35 @@ class AutonomousWriteScopeTests(unittest.TestCase):
         self.assertFalse(plan.promotion_authority)
         self.assertFalse(plan.merge_authority)
 
+    def test_patch_plan_uses_returned_pr_changed_files_not_only_body_paths(self):
+        cycle = {
+            "cycle_id": "cycle-pr",
+            "target_kind": "PR",
+            "target_number": 200,
+            "decision": "PROBE",
+            "study": {
+                "returned_changed_paths": [
+                    "kernel/runtime/vmk2.py",
+                    "kernel/runtime/ctl.py",
+                ],
+                "referenced_repository_paths": [],
+            },
+        }
+        plan = make_patch_plan(cycle, self.policy)
+        self.assertEqual(plan.disposition, "EXTERNAL_GOVERNANCE_REVIEW_REQUIRED")
+        modes = {row.path: row.mode for row in plan.paths}
+        self.assertEqual(modes["kernel/runtime/vmk2.py"], "PROPOSE_ONLY")
+        self.assertEqual(modes["kernel/runtime/ctl.py"], "EXTERNAL_GOVERNANCE_ONLY")
+
+    def test_workflow_snapshots_pr_files_as_returned_world_surface(self):
+        text = (ROOT / ".github/workflows/venus-autonomous-worker.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn(
+            "--json number,title,body,state,isDraft,mergeStateStatus,updatedAt,files",
+            text,
+        )
+
     def test_internalized_policy_drives_autonomous_cycle_with_teacher_blocked(self):
         blocker = _TeacherBlocker()
         sys.meta_path.insert(0, blocker)

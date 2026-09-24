@@ -12,6 +12,7 @@ from kernel.development.autonomous_worker import (
     choose_study_method,
     choose_target,
     make_cycle,
+    load_work_items,
 )
 
 
@@ -229,8 +230,8 @@ class AutonomousWorkerTests(unittest.TestCase):
         markers=set(cycle.study["untrusted_instruction_markers"])
         self.assertTrue({"ignore","merge","exfiltrate","secret","token","promote"} <= markers)
 
-    def test_internal_policy_is_causally_upstream_for_all_conflicted_pr_states(self):
-        for merge_state in ("DIRTY", "BLOCKED", "CONFLICTING"):
+    def test_internal_policy_is_causally_upstream_for_unresolved_pr_states(self):
+        for merge_state in ("DIRTY", "BLOCKED", "CONFLICTING", "UNKNOWN", None):
             with self.subTest(merge_state=merge_state):
                 item = WorkItem("PR", 99, "causal O*", merge_state=merge_state)
                 cycle = make_cycle(
@@ -268,6 +269,53 @@ class AutonomousWorkerTests(unittest.TestCase):
         self.assertTrue(state["draft"])
         self.assertEqual(state["merge_state"], "DIRTY")
         self.assertEqual(state["updated_at"], "2026-09-24T22:55:13Z")
+
+    def test_pr_changed_files_are_retained_as_returned_world_surface(self):
+        item = WorkItem(
+            "PR",
+            200,
+            "actual code surface",
+            merge_state="CLEAN",
+            changed_paths=(
+                "kernel/runtime/vmk2.py",
+                "tests/test_vmk2_invariants.py",
+            ),
+        )
+        cycle = make_cycle(
+            issues=(),
+            prs=(item,),
+            roadmap_text="",
+            internal_policy=POLICY,
+        )
+        self.assertEqual(
+            tuple(cycle.study["returned_changed_paths"]),
+            (
+                "kernel/runtime/vmk2.py",
+                "tests/test_vmk2_invariants.py",
+            ),
+        )
+
+    def test_load_work_items_parses_github_pr_files(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / "prs.json"
+            path.write_text(json.dumps([{
+                "number": 200,
+                "title": "changed files",
+                "state": "OPEN",
+                "isDraft": True,
+                "mergeStateStatus": "UNKNOWN",
+                "updatedAt": "2026-09-24T23:00:00Z",
+                "files": [
+                    {"path": "kernel/runtime/vmk2.py"},
+                    {"path": "tests/test_vmk2_invariants.py"},
+                ],
+            }]), encoding="utf-8")
+            rows = load_work_items(path, "PR")
+        self.assertEqual(
+            rows[0].changed_paths,
+            ("kernel/runtime/vmk2.py", "tests/test_vmk2_invariants.py"),
+        )
 
 
 if __name__ == "__main__":

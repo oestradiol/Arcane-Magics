@@ -120,11 +120,13 @@ def make_patch_plan(
         raise AutonomousWritePolicyError("write policy cannot grant safety-floor authority")
 
     study = cycle.get("study") or {}
-    rows = tuple(
-        candidate_paths
-        if candidate_paths is not None
-        else study.get("referenced_repository_paths", ())
-    )
+    if candidate_paths is not None:
+        rows = tuple(candidate_paths)
+    else:
+        rows = tuple(dict.fromkeys(
+            tuple(study.get("returned_changed_paths", ()))
+            + tuple(study.get("referenced_repository_paths", ()))
+        ))
     dispositions = tuple(classify_path(policy, row) for row in rows)
 
     if not dispositions:

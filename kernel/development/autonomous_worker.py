@@ -56,6 +56,7 @@ class WorkItem:
     merge_state: str | None = None
     updated_at: str | None = None
     body: str = ""
+    changed_paths: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -230,6 +231,13 @@ def _method_signals(body: str, method: str) -> tuple[str, ...]:
     )
 
 
+def _correction_reachable(item: WorkItem) -> bool:
+    if item.kind != "PR":
+        return True
+    merge_state = (item.merge_state or "UNKNOWN").upper()
+    return merge_state not in {"DIRTY", "BLOCKED", "CONFLICTING", "UNKNOWN"}
+
+
 def study_target(item: WorkItem, *, method: str) -> dict[str, Any]:
     """Extract a bounded, source-grounded study object from the selected target."""
     body = item.body or ""
@@ -271,6 +279,7 @@ def study_target(item: WorkItem, *, method: str) -> dict[str, Any]:
     return {
         "body_digest": body_digest,
         "repository_state": repository_state,
+        "returned_changed_paths": tuple(item.changed_paths),
         "referenced_issue_or_pr_numbers": references,
         "referenced_repository_paths": path_refs,
         "returned_blocker_sentences": blocker_sentences,
@@ -339,7 +348,7 @@ def make_cycle(
         study = study_target(target, method=study_method)
         features = {
             "f0": True,
-            "f1": target.merge_state not in {"DIRTY", "BLOCKED", "CONFLICTING"},
+            "f1": _correction_reachable(target),
             "f2": True,
             "f3": True,
             "f4": False,
@@ -391,6 +400,11 @@ def load_work_items(path: str | Path, kind: str) -> tuple[WorkItem, ...]:
                 merge_state=row.get("mergeStateStatus", row.get("merge_state")),
                 updated_at=row.get("updatedAt", row.get("updated_at")),
                 body=str(row.get("body") or ""),
+                changed_paths=tuple(
+                    str(file_row.get("path"))
+                    for file_row in (row.get("files") or ())
+                    if isinstance(file_row, Mapping) and file_row.get("path")
+                ),
             )
         )
     return tuple(out)
