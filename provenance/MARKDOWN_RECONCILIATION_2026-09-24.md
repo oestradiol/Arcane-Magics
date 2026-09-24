@@ -4,7 +4,7 @@
 **Base authority:** `main` at `e025c31988e18cbe478b8711c40d59507302571b`
 **Commit history reviewed:** 286 commits, from `55dc1b2261624cbb01ac5573be55606fcc345597` (2026-09-01 public-root rebuild) through the base authority above.
 **Markdown inventory reviewed:** 82 files.
-**Disposition count:** 16 live files reconciled; 25 live files reviewed with no material change; 41 historical/frozen files reviewed and preserved.
+**Disposition count:** 17 live files reconciled; 24 live files reviewed with no material change; 41 historical/frozen files reviewed and preserved.
 
 ## Method
 
@@ -105,6 +105,7 @@ The original EDU17R1 WITHHOLD remains historical provenance; it is not erased by
 
 - `README.md`
 - `REPOSITORY_AUTHORITY_BOUNDARY.md`
+- `benchmarks/edu17r1_mention_incidence/README.md`
 - `docs/AUTONOMOUS_RESEARCH.md`
 - `docs/EARNED_MILESTONES.md`
 - `docs/FRONTIER_RESEARCH.md`
@@ -127,7 +128,6 @@ The original EDU17R1 WITHHOLD remains historical provenance; it is not erased by
 - `PUBLICATION_CONSTITUTION.md`
 - `benchmarks/abstention/README.md`
 - `benchmarks/adaptive_promotion/README.md`
-- `benchmarks/edu17r1_mention_incidence/README.md`
 - `benchmarks/memory_causal/README.md`
 - `benchmarks/world_input_security/README.md`
 - `docs/CREDITS_AND_REDUCTIONS.md`
