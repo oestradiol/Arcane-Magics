@@ -75,17 +75,14 @@ class AutonomousGovernanceTests(unittest.TestCase):
             WorkItem("ISSUE", 900, "generic issue"),
             WorkItem("PR", 901, "generic pr"),
         )
-        # Generic PR is normally ranked ahead of generic issue. A roadmap-free
-        # same-class tie is not available across kinds, so verify learning is
-        # at least included in deterministic rank within two generic issues by
-        # preserving no hidden override. The safety point is outcome influence
-        # without jurisdiction escalation.
+        # Outside hard dependency priorities, returned outcomes may alter the
+        # class of work selected next.
         chosen = choose_target(
             items,
             roadmap_text="",
             kind_utility={"ISSUE": 1.0, "PR": -1.0},
         )
-        self.assertEqual(chosen.kind, "PR")
+        self.assertEqual(chosen.kind, "ISSUE")
 
     def test_workflow_has_no_self_merge_release_close_or_secret_path(self):
         text = WORKFLOW.read_text(encoding="utf-8").lower()
