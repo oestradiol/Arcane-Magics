@@ -28,6 +28,12 @@ class ExperimentReadinessTests(unittest.TestCase):
         self.assertIn('task_surface.hidden_split_hash',missing)
         self.assertIn('evaluator.identity',missing)
 
+    def test_zero_monetary_budget_counts_as_frozen_value(self):
+        changed=json.loads(json.dumps(self.data))
+        shared=changed['shared_condition']
+        shared['monetary_budget_usd']=0
+        missing=set(self.mod.missing_run_fields(changed))
+        self.assertNotIn('shared_condition.monetary_budget_usd',missing)
     def test_cannot_flip_executable_without_freezing_dependencies(self):
         changed=json.loads(json.dumps(self.data))
         changed['readiness']['executable']=True
