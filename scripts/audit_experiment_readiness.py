@@ -21,7 +21,14 @@ REQUIRED_RUN_FIELDS = [
 ]
 
 def missing_run_fields(data: dict) -> list[str]:
-    return [name for name,getter in REQUIRED_RUN_FIELDS if not getter(data)]
+    missing = [name for name,getter in REQUIRED_RUN_FIELDS if not getter(data)]
+    for row in data.get('conditions', []):
+        cid = row.get('id', '?')
+        impl = row.get('implementation') or {}
+        for key in ('adapter_id', 'artifact', 'sha256', 'version'):
+            if not impl.get(key):
+                missing.append(f'conditions.{cid}.implementation.{key}')
+    return missing
 
 def validate_readiness(data: dict) -> list[str]:
     errors=[]
