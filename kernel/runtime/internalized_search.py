@@ -127,3 +127,12 @@ def search(
         None if best is None else best[1],
         len(rows),
     )
+
+
+def semantic_signatures(program: Mapping[str, object], width: int) -> frozenset[tuple[int, ...]]:
+    """Complete executable semantics of the declared bounded program family."""
+    ops = tuple(str(x) for x in program.get("meta_ops", ()))
+    if not ops or any(x not in {"AND", "OR", "XOR"} for x in ops):
+        raise StateSearchError("unsupported or empty state-owned meta-op set")
+    domain, pool = _pool(width, ops)
+    return frozenset(tuple(_eval(expr, row) for row in domain) for expr in pool)
