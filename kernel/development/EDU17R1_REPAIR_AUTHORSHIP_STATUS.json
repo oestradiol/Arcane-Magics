@@ -11,22 +11,28 @@
   },
   "residual": "MENTION != INCIDENCE",
   "ownership_contract": "kernel/development/edu17r1_repair_contract.py",
-  "candidate_status": "NOT_AUTHORED",
+  "candidate_status": "NOT_AUTHORED_WITHHOLD_REPRESENTATION_INSUFFICIENT",
   "admitted_developmental_controller_operation": {
-    "available": false,
-    "operation": null,
-    "reason": "EDU16-RC1 plus IG10 contains a provenance-bound neutral relation/incidence substrate, but no admitted executable operation currently composes raw/source carrier relation occurrences into typed empirical relation instances. The older P9 search grammar cannot add that semantic crossing, and the R140 P10-shaped descendants remain historical/scratch developmental evidence rather than a current executable controller."
+    "available": true,
+    "operation": "kernel/development/recursive_proposal.py::search",
+    "admission": "kernel/development/GENERIC_RESIDUAL_SEARCH_ADMISSION.json",
+    "scope": "INHERITED_GENERIC_TARGET_BLIND_BOUNDED_PROGRAM_SEARCH",
+    "historical_owner_claim": false,
+    "promotion_authority": false,
+    "reason": "Recovered R194 target-label-free grammar expansion is admitted as a generic inherited developmental operation; it contains no EDU17R1-specific repair semantics."
   },
   "hidden_evaluation_exposed": false,
   "external_model_may_supply_substantive_repair": false,
   "next_lawful_transition": [
-    "retain the localized cross-layer incidence-binding residual without encoding the EDU17R1 answer",
-    "recover an already-earned executable generic binder/composer from authentic ancestry, or expose this localized residual to an admitted Venus proposal/search controller",
-    "freeze any learner-authored candidate and ownership receipt before hidden issue #31 exposure",
+    "retain the admitted generic search operation",
+    "recover or develop a target-blind compositional semantic representation operation without hidden issue #31 exposure",
+    "rerun public development search under that representation",
+    "if ambiguous, retain learner-selected discriminator and obtain external World return",
+    "freeze a repair candidate only when learner-side machinery actually identifies one",
     "only then run hidden issue #31 efficacy evaluation"
   ],
   "promotion_authority": false,
-  "claim_fence": "Infrastructure and custody readiness do not establish learner-owned authorship. No EDU17R1 repair candidate is admitted by this status.",
+  "claim_fence": "Generic search admission plus the public-development negative do not establish learner-owned repair authorship or efficacy. No EDU17R1 repair candidate is admitted by this status.",
   "ancestral_incidence_donor": {
     "artifact": "Venus_Incidence_Law.tex",
     "sha256": "99154d953f498be374b8af0fbc174ba658d0d52b1ccc684b2bbc09871ac52f3e",
@@ -46,5 +52,12 @@
       "evidence-bound WorldMirror relation instances"
     ],
     "missing_operation": "raw/source carrier relation occurrence -> typed object/source-level relation instance + provenance + independent return"
+  },
+  "public_dev_representation_pressure": {
+    "artifact": "kernel/development/EDU17R1_PUBLIC_DEV_SEARCH_RESULT.json",
+    "disposition": "WITHHOLD_REPRESENTATION_INSUFFICIENT",
+    "hidden_evaluation_exposed": false,
+    "public_dev_only": true,
+    "promotion_authority": false
   }
 }
