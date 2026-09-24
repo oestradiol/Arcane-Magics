@@ -11,6 +11,7 @@ This is a reader-facing projection of the live execution plan. GitHub issues rem
 | #29 | Canonical typed extraction |
 | #4 | EDU16 exact replay custody |
 | #30 | VMK2 trust/custody hardening |
+| #43 | adversarial World input, prompt injection, and memory contamination |
 | #33 | proof-container vs proof-verification hygiene |
 
 ## Next: turn preserved failures into prospective evidence
@@ -20,6 +21,8 @@ This is a reader-facing projection of the live execution plan. GitHub issues rem
 | #31 | MENTION != INCIDENCE held-out benchmark |
 | #10 | first matched Venus-vs-baseline causal ablation |
 | #17 | hidden/double-blind evaluation integrity |
+| #41 | adaptive self-evolution acceptance / false-commit control |
+| #42 | STOP/WITHHOLD act-vs-abstain calibration |
 | #15 | memory as causal learning rather than storage |
 
 ## Then: reduction and formal spine
@@ -46,7 +49,7 @@ These remain live because the project is intentionally ambitious. Their warrant 
 
 ## Continuous infrastructure
 
-- #11 external SOTA freshness and reconciliation
+- #11 external SOTA freshness and reconciliation, including fast-moving self-evolution / abstention / agent-security comparators
 - #28 public interface
 - #34 evidence-bound governance package/product
 - #37 dependency-ordered roadmap
