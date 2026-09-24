@@ -56,9 +56,12 @@ Do not commit the hidden labels into the public harness before the run.
 The public repository contains only the evaluation law and verifier:
 
 ```text
-protocol.json     frozen A/B/C/D condition contract + claim fence
-seal_hidden.py    validates hidden rows and emits only a content-binding manifest
-score.py          scores returned predictions against evaluator-held labels
+protocol.json          frozen A/B/C/D condition contract + claim fence
+analysis_plan.json     prefrozen B-vs-C statistical decision rule
+seal_hidden.py         validates hidden rows and emits only a content-binding manifest
+prepare_blind.py       strips labels/rationales before condition execution
+score.py               scores one returned condition against evaluator-held labels
+compare_conditions.py  adjudicates A/B/C/D under the prefrozen analysis plan
 ```
 
 A reviewer/evaluator can freeze a private split with:
@@ -72,6 +75,18 @@ python benchmarks/edu17r1_mention_incidence/seal_hidden.py \
   --output /private/edu17r1-hidden-manifest.json
 ```
 
+The evaluator next derives a label-free execution package without changing the sealed hidden bytes:
+
+```bash
+python benchmarks/edu17r1_mention_incidence/prepare_blind.py \
+  /private/edu17r1-hidden.jsonl \
+  /private/edu17r1-hidden-manifest.json \
+  --blind-output /shared/edu17r1-blind.jsonl \
+  --blind-manifest-output /shared/edu17r1-blind-manifest.json
+```
+
+All four conditions receive the same blinded input. Only the evaluator retains the gold labels.
+
 After all conditions have produced predictions, score each condition with the same evaluator-held bytes:
 
 ```bash
@@ -80,6 +95,21 @@ python benchmarks/edu17r1_mention_incidence/score.py \
   /returned/condition-B.jsonl \
   --manifest /private/edu17r1-hidden-manifest.json
 ```
+
+After A/B/C/D are complete, the evaluator applies the already-frozen decision rule:
+
+```bash
+python benchmarks/edu17r1_mention_incidence/compare_conditions.py \
+  /private/edu17r1-hidden.jsonl \
+  /private/edu17r1-hidden-manifest.json \
+  --A /returned/condition-A.jsonl \
+  --B /returned/condition-B.jsonl \
+  --C /returned/condition-C.jsonl \
+  --D /returned/condition-D.jsonl \
+  --output /private/edu17r1-adjudication.json
+```
+
+The primary causal test is a one-sided exact paired McNemar/binomial test of B versus C accuracy at alpha 0.05, with WITHHOLD counted as incorrect for the primary endpoint. B must also avoid worsening false unresolved-property binding or false WITHHOLD relative to C. Failure to separate B from C is WITHHOLD, not retrospective threshold repair. Mature-substitute reduction remains separately contingent on matched execution cost and conditions.
 
 Prediction rows use:
 

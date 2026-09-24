@@ -1,6 +1,6 @@
 {
   "schema": "Venus.EDU17R1MentionIncidenceProtocol.v0.1",
-  "status": "PREFROZEN_HARNESS_ONLY",
+  "status": "PREFROZEN_EXECUTION_HARNESS",
   "issue": 31,
   "distinction": "MENTION != INCIDENCE",
   "public_dev_split": "benchmarks/edu17r1_mention_incidence/dev.jsonl",
@@ -11,13 +11,31 @@
     "freeze_manifest_required": true,
     "evaluator_separated_from_execution": true,
     "contamination_declaration_required": true,
-    "no_post_exposure_repair": true
+    "no_post_exposure_repair": true,
+    "blind_input_required": true,
+    "gold_scoring_evaluator_side_only": true
   },
   "conditions": [
-    {"id":"A","role":"ordinary_strong_scaffold","venus_owned":false},
-    {"id":"B","role":"venus_repaired_incidence_discriminator","venus_owned":"REQUIRES_ADMITTED_EPISODE"},
-    {"id":"C","role":"venus_discriminator_ablated","venus_owned":"REQUIRES_SAME_ADMITTED_BASE"},
-    {"id":"D","role":"mature_semantic_provenance_substitute","venus_owned":false}
+    {
+      "id": "A",
+      "role": "ordinary_strong_scaffold",
+      "venus_owned": false
+    },
+    {
+      "id": "B",
+      "role": "venus_repaired_incidence_discriminator",
+      "venus_owned": "REQUIRES_ADMITTED_EPISODE"
+    },
+    {
+      "id": "C",
+      "role": "venus_discriminator_ablated",
+      "venus_owned": "REQUIRES_SAME_ADMITTED_BASE"
+    },
+    {
+      "id": "D",
+      "role": "mature_semantic_provenance_substitute",
+      "venus_owned": false
+    }
   ],
   "primary_metrics": [
     "accuracy",
@@ -46,5 +64,8 @@
     ],
     "authority": false
   },
-  "claim_fence": "Harness readiness is not evidence that EDU17R1 passed, that Venus owns the repair, or that the distinction is novel."
+  "claim_fence": "Harness readiness is not evidence that EDU17R1 passed, that Venus owns the repair, or that the distinction is novel.",
+  "analysis_plan": "benchmarks/edu17r1_mention_incidence/analysis_plan.json",
+  "blind_input_packager": "benchmarks/edu17r1_mention_incidence/prepare_blind.py",
+  "condition_adjudicator": "benchmarks/edu17r1_mention_incidence/compare_conditions.py"
 }
