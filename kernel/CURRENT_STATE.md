@@ -8,6 +8,8 @@ Two current objects are deliberately distinguished:
 exact Git-reconstructible runtime checkpoint   IG10 [1308]
 current positive developmental authority      EDU16 [1703]
 reconstructed developmental carrier           EDU16-RC1
+admitted generic search capability            GENERIC_RESIDUAL_SEARCH (state-owned; inherited)
+admitted recurrent safety substrate           Internalizer + O* + Anti-Minerva guards
 preserved negative branch                     EDU17 INVALID_FOR_PROMOTION
 current repair disposition                    EDU17R1 WITHHOLD
 ```
@@ -40,6 +42,8 @@ verdict   PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY
 ```
 
 EDU16 transferred bounded World-feed query-policy generation into learner ownership while World execution and independent evaluation remained external. EDU17 is preserved as `INVALID_FOR_PROMOTION / PRESERVED_NEGATIVE`. EDU17R1 remains `WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION` after exposing `MENTION != INCIDENCE`.
+
+Later repository work has admitted **infrastructure without advancing the positive developmental head**: the target-label-free generic residual search is now a state-owned inherited capability, and the Internalizer/O*/Anti-Minerva guards are executable. These objects may support a future learner-authored successor, but they do not themselves constitute one.
 
 Machine-readable authority is in `development/EDU_CURRENT.json`; exact developmental evidence is under `../provenance/developmental/EDU/`.
 
@@ -81,4 +85,4 @@ R194 is historical implementation provenance only. Full ancestry is in `../prove
 
 ## Claim boundary
 
-The admitted kernel demonstrates bounded developmental machinery and exact state custody at the stated scopes. AGI, DNN replacement, open-ended RSI, autonomous science, consciousness, unrestricted semantic understanding, natural-world generality, a quantum-gravity solution, and Millennium-problem solutions remain targets requiring their own evidence.
+The admitted kernel demonstrates bounded developmental machinery and exact state custody at the stated scopes. AGI, substrate independence, hosted-model replacement where such a model is actually present, open-ended RSI, autonomous science, consciousness, unrestricted semantic understanding, natural-world generality, a quantum-gravity solution, and Millennium-problem solutions remain targets requiring their own evidence.
