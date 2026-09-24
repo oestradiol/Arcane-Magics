@@ -24,12 +24,12 @@
     {
       "id": "B",
       "role": "venus_repaired_incidence_discriminator",
-      "venus_owned": "REQUIRES_ADMITTED_EPISODE"
+      "venus_owned": "AUTHORED_FROZEN_EDU17R1_RC1_WORD_JACCARD_K3_V1"
     },
     {
       "id": "C",
       "role": "venus_discriminator_ablated",
-      "venus_owned": "REQUIRES_SAME_ADMITTED_BASE"
+      "venus_owned": "SAME_EDU16_RC1_PARENT_DISCRIMINATOR_ABLATED"
     },
     {
       "id": "D",
@@ -64,9 +64,10 @@
     ],
     "authority": false
   },
-  "claim_fence": "Harness readiness is not evidence that EDU17R1 passed, that Venus owns the repair, or that the distinction is novel.",
+  "claim_fence": "Harness and exact condition implementations are prefrozen. Bounded B ownership is established by #69/#93; repair efficacy, developmental promotion, and semantic novelty remain unearned until independent hidden return.",
   "analysis_plan": "benchmarks/edu17r1_mention_incidence/analysis_plan.json",
   "blind_input_packager": "benchmarks/edu17r1_mention_incidence/prepare_blind.py",
   "condition_adjudicator": "benchmarks/edu17r1_mention_incidence/compare_conditions.py",
-  "sealed_evaluation_core": "evaluation/sealed_eval.py"
+  "sealed_evaluation_core": "evaluation/sealed_eval.py",
+  "condition_implementation_freeze": "benchmarks/edu17r1_mention_incidence/CONDITION_IMPLEMENTATIONS.json"
 }
