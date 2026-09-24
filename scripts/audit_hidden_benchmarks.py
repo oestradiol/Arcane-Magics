@@ -27,8 +27,11 @@ def main() -> int:
             errors.append(f"{name}: missing protocol")
             continue
         data = json.loads(path.read_text(encoding="utf-8"))
-        if data.get("promotion_authority") is not False:
-            errors.append(f"{name}: public protocol may not grant promotion authority")
+        authority = data.get("promotion_authority")
+        if authority is None and isinstance(data.get("promotion_rule"), dict):
+            authority = data["promotion_rule"].get("authority")
+        if authority is not False:
+            errors.append(f"{name}: public protocol must explicitly deny promotion authority")
         if not hidden_required(data):
             errors.append(f"{name}: claim-bearing hidden evaluation requirement is missing")
         if data.get("sealed_evaluation_core") != "evaluation/sealed_eval.py":
