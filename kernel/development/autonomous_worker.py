@@ -1,23 +1,23 @@
 from __future__ import annotations
 
-"""Bounded state-ownable GitHub work selector for Venus.
+"""Learner-owned bounded target selection for the Venus repository worker.
 
-The worker consumes externally supplied repository snapshots. It may choose one
-bounded target and produce a work receipt. It cannot merge, release, promote
-authority, close issues, mint independent return, or access secrets.
+Target choice is driven by state-owned opaque feature weights plus a
+content-addressed tie-break. The host roadmap is retained only as contextual
+provenance and has zero selection weight.
 
-Roadmap text is contextual provenance, not sovereign curriculum. Returned
-outcomes may override its bounded hint outside structural repair pressure.
-
-GitHub execution remains a carrier action performed by the workflow adapter.
+The internalized O* policy remains causally upstream of work disposition.
+A pending autonomous cycle forces STOP, and a resolved target remains behind a
+barrier until that target itself changes after the prior cycle outcome.
 """
 
 from dataclasses import asdict, dataclass
+from datetime import datetime, timezone
 import json
 from pathlib import Path
-import re
 from typing import Any, Iterable, Mapping
 
+from kernel.development.autonomous_learning import METHODS, TargetBarrier
 from kernel.runtime.induced_policy import execute_tree
 from kernel.runtime.vmk2 import digest
 
@@ -31,6 +31,9 @@ FORBIDDEN_OPERATIONS = frozenset({
     "CHANGE_BRANCH_PROTECTION",
     "ACCESS_SECRETS",
     "SELF_VALIDATE",
+    "MINT_RETURN",
+    "CHANGE_SAFETY_FLOOR",
+    "CHANGE_JURISDICTION",
 })
 
 ALLOWED_OPERATIONS = (
@@ -54,6 +57,10 @@ class WorkItem:
     draft: bool = False
     merge_state: str | None = None
     updated_at: str | None = None
+    has_comments: bool = False
+    has_labels: bool = False
+    ci_failed: bool = False
+    ci_pending: bool = False
 
 
 @dataclass(frozen=True)
@@ -65,65 +72,120 @@ class AutonomousCycleReceipt:
     target_title: str | None
     decision: str
     rationale: tuple[str, ...]
+    feature_snapshot: Mapping[str, bool]
+    study_method: str | None
     allowed_operations: tuple[str, ...]
     forbidden_operations: tuple[str, ...]
     source_digest: str
     promotion_authority: bool = False
+    merge_authority: bool = False
+    release_authority: bool = False
 
 
-def roadmap_issue_order(text: str) -> tuple[int, ...]:
-    out: list[int] = []
-    for match in re.finditer(r"#(\d+)", text):
-        number = int(match.group(1))
-        if number not in out:
-            out.append(number)
-    return tuple(out)
+def item_features(item: WorkItem, *, now: datetime | None = None) -> dict[str, bool]:
+    now = now or datetime.now(timezone.utc)
+    recent = False
+    if item.updated_at:
+        try:
+            stamp = datetime.fromisoformat(item.updated_at.replace("Z", "+00:00"))
+            recent = (now - stamp).total_seconds() <= 7 * 24 * 3600
+        except ValueError:
+            recent = False
+    return {
+        "x0": item.kind.upper() == "PR",
+        "x1": bool(item.draft),
+        "x2": bool(item.ci_failed),
+        "x3": bool(item.ci_pending),
+        "x4": item.merge_state in {"DIRTY", "BLOCKED", "CONFLICTING"},
+        "x5": bool(item.has_comments),
+        "x6": bool(item.has_labels),
+        "x7": recent,
+    }
 
 
-def _roadmap_hint(item: WorkItem, issue_order: tuple[int, ...]) -> float:
-    if item.kind != "ISSUE" or item.number not in issue_order:
-        return 0.0
-    # Bounded contextual hint. It can be overridden by returned utility.
-    index = issue_order.index(item.number)
-    return 0.25 / (index + 1)
+def _score(item: WorkItem, weights: Mapping[str, float]) -> float:
+    features = item_features(item)
+    return sum(float(weights.get(k, 0.0)) for k, active in features.items() if active)
 
 
-def _rank(
-    item: WorkItem,
-    issue_order: tuple[int, ...],
-    kind_utility: Mapping[str, float],
-) -> tuple[float, float, int]:
-    # Structural repair pressure remains first-class: an explicitly conflicted
-    # or blocked PR is a live broken successor surface, not host curriculum.
-    if item.kind == "PR" and item.merge_state in {"DIRTY", "BLOCKED", "CONFLICTING"}:
-        return (-10.0, 0.0, item.number)
+def _parse_time(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
 
-    learned = float(kind_utility.get(item.kind, 0.0))
-    hint = _roadmap_hint(item, issue_order)
-    draft_hint = 0.05 if item.kind == "PR" and item.draft else 0.0
-    score = learned + hint + draft_hint
-    return (-score, 0.0 if item.kind == "PR" else 1.0, item.number)
+
+def _blocked_by_barrier(item: WorkItem, barriers: Iterable[TargetBarrier]) -> bool:
+    matching = tuple(
+        b for b in barriers if b.kind == item.kind.upper() and b.number == item.number
+    )
+    if not matching:
+        return False
+    if any(b.cycle_state == "OPEN" for b in matching):
+        return True
+    item_time = _parse_time(item.updated_at)
+    if item_time is None:
+        return True
+    outcomes = tuple(
+        t for t in (_parse_time(b.outcome_at) for b in matching) if t is not None
+    )
+    if not outcomes:
+        return True
+    return item_time <= max(outcomes)
 
 
 def choose_target(
     items: Iterable[WorkItem],
     *,
-    roadmap_text: str,
-    recent_targets: Iterable[tuple[str, int]] = (),
-    kind_utility: Mapping[str, float] | None = None,
+    learner_state_id: str,
+    feature_weights: Mapping[str, float],
+    target_barriers: Iterable[TargetBarrier] = (),
+    active_autonomous_cycle: bool = False,
 ) -> WorkItem | None:
-    recent = set(recent_targets)
-    open_items = tuple(
+    if active_autonomous_cycle:
+        return None
+    barriers = tuple(target_barriers)
+    rows = tuple(
         item for item in items
         if item.state.upper() == "OPEN"
-        and (item.kind, item.number) not in recent
-        and not (item.kind == "PR" and item.title.lower().startswith("venus: autonomous cycle"))
+        and not (
+            item.kind.upper() == "PR"
+            and item.title.lower().startswith("venus: autonomous cycle")
+        )
+        and not _blocked_by_barrier(item, barriers)
     )
-    if not open_items:
+    if not rows:
         return None
-    order = roadmap_issue_order(roadmap_text)
-    utility = kind_utility or {}
-    return sorted(open_items, key=lambda item: _rank(item, order, utility))[0]
+    return sorted(
+        rows,
+        key=lambda item: (
+            -_score(item, feature_weights),
+            digest({
+                "learner_state_id": learner_state_id,
+                "kind": item.kind,
+                "number": item.number,
+                "title": item.title,
+            }),
+        ),
+    )[0]
+
+
+def choose_study_method(
+    target: WorkItem,
+    method_utility: Mapping[str, float],
+) -> str:
+    return sorted(
+        METHODS,
+        key=lambda method: (
+            -float(method_utility.get(method, 0.0)),
+            digest({
+                "target": [target.kind, target.number, target.title],
+                "method": method,
+            }),
+        ),
+    )[0]
 
 
 def make_cycle(
@@ -132,28 +194,41 @@ def make_cycle(
     prs: Iterable[WorkItem],
     roadmap_text: str,
     internal_policy: Mapping[str, Any],
-    recent_targets: Iterable[tuple[str, int]] = (),
-    kind_utility: Mapping[str, float] | None = None,
+    learner_state_id: str,
+    feature_weights: Mapping[str, float],
+    method_utility: Mapping[str, float],
+    target_barriers: Iterable[TargetBarrier],
+    active_autonomous_cycle: bool,
 ) -> AutonomousCycleReceipt:
     items = tuple(issues) + tuple(prs)
     target = choose_target(
         items,
-        roadmap_text=roadmap_text,
-        recent_targets=recent_targets,
-        kind_utility=kind_utility,
+        learner_state_id=learner_state_id,
+        feature_weights=feature_weights,
+        target_barriers=target_barriers,
+        active_autonomous_cycle=active_autonomous_cycle,
     )
     source = {
         "items": [asdict(item) for item in items],
-        "roadmap_digest": digest(roadmap_text),
-        "recent_targets": tuple(recent_targets),
-        "kind_utility": dict(kind_utility or {}),
+        "roadmap_digest_context_only": digest(roadmap_text),
+        "learner_state_id": learner_state_id,
+        "feature_weights": dict(feature_weights),
+        "method_utility": dict(method_utility),
+        "target_barriers": [asdict(x) for x in target_barriers],
+        "active_autonomous_cycle": active_autonomous_cycle,
     }
 
     if target is None:
         decision = "STOP"
-        rationale = ("no unconsumed OPEN work item is justified",)
+        rationale = (
+            "no admissible OPEN target, a prior autonomous cycle still awaits external return, or retained changed-World reopening barriers remain closed",
+        )
+        features: Mapping[str, bool] = {}
+        method = None
     else:
-        features = {
+        features = item_features(target)
+        method = choose_study_method(target, method_utility)
+        safety_features = {
             "f0": True,
             "f1": target.merge_state not in {"BLOCKED", "CONFLICTING"},
             "f2": True,
@@ -163,28 +238,34 @@ def make_cycle(
             "f6": False,
             "f7": False,
         }
-        decision = execute_tree(internal_policy, features)
+        decision = execute_tree(internal_policy, safety_features)
         if decision == "ACT":
             decision = "PROBE"
         rationale = (
-            "one bounded target selected from current external GitHub snapshot",
-            "internalized learner-side policy is upstream of work disposition",
-            "externally reviewed prior cycle outcomes may override roadmap hint",
-            "roadmap is contextual provenance rather than sovereign curriculum",
-            "draft proposal only; admission remains external",
+            "target selected from state-owned returned-review feature weights",
+            "content-addressed tie-break resolves equal learned score",
+            "internalized learner-side O* policy is causally upstream of disposition",
+            "study method selected from separately returned method utility",
+            "host roadmap is context/provenance only and has zero selection weight",
+            "prior target study remains withheld until newer target state reopens it",
+            "draft proposal only; admission, truth, merge and promotion remain external",
         )
 
     body = {
-        "schema": "Venus.AutonomousCycleReceipt.v0.2",
+        "schema": "Venus.AutonomousCycleReceipt.v0.4",
         "target_kind": target.kind if target else None,
         "target_number": target.number if target else None,
         "target_title": target.title if target else None,
         "decision": decision,
         "rationale": rationale,
+        "feature_snapshot": dict(features),
+        "study_method": method,
         "allowed_operations": ALLOWED_OPERATIONS,
         "forbidden_operations": tuple(sorted(FORBIDDEN_OPERATIONS)),
         "source_digest": digest(source),
         "promotion_authority": False,
+        "merge_authority": False,
+        "release_authority": False,
     }
     return AutonomousCycleReceipt(cycle_id=digest(body), **body)
 
@@ -193,6 +274,15 @@ def load_work_items(path: str | Path, kind: str) -> tuple[WorkItem, ...]:
     rows = json.loads(Path(path).read_text(encoding="utf-8"))
     out = []
     for row in rows:
+        checks = row.get("statusCheckRollup") or []
+        conclusions = {
+            str(x.get("conclusion") or "").upper()
+            for x in checks if isinstance(x, Mapping)
+        }
+        statuses = {
+            str(x.get("status") or "").upper()
+            for x in checks if isinstance(x, Mapping)
+        }
         out.append(
             WorkItem(
                 kind=kind,
@@ -202,6 +292,15 @@ def load_work_items(path: str | Path, kind: str) -> tuple[WorkItem, ...]:
                 draft=bool(row.get("isDraft", row.get("draft", False))),
                 merge_state=row.get("mergeStateStatus", row.get("merge_state")),
                 updated_at=row.get("updatedAt", row.get("updated_at")),
+                has_comments=bool(row.get("comments")),
+                has_labels=bool(row.get("labels")),
+                ci_failed=any(
+                    x in {"FAILURE", "CANCELLED", "TIMED_OUT", "ACTION_REQUIRED"}
+                    for x in conclusions
+                ),
+                ci_pending=any(
+                    x in {"QUEUED", "IN_PROGRESS", "PENDING"} for x in statuses
+                ),
             )
         )
     return tuple(out)
