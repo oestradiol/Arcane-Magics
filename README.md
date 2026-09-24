@@ -37,7 +37,7 @@ The project is ambitious on purpose. Its claim grammar is equally strict: **form
 
 The point is not that one vocabulary solves all these domains. The point is to test whether the same transformation law survives substitution of carrier, register, evidence source, and problem class without laundering one domain's warrant into another.
 
-For the plain-language version, start with **[What Venus-Minerva Actually Is](docs/PUBLIC_VALUE.md)**. For exact earned/uneared boundaries, use **[Earned Milestones](docs/EARNED_MILESTONES.md)**. External comparison lives in **[SOTA Watch](docs/SOTA_WATCH.md)**, while **[Credits, genealogy, reductions, and residual contribution](docs/CREDITS_AND_REDUCTIONS.md)** prevents mature comparison from being mistaken for retroactive project genealogy.
+For the plain-language version, start with **[What Venus-Minerva Actually Is](docs/PUBLIC_VALUE.md)**. For exact earned/unearned boundaries, use **[Earned Milestones](docs/EARNED_MILESTONES.md)**. External comparison lives in **[SOTA Watch](docs/SOTA_WATCH.md)**, while **[Credits, genealogy, reductions, and residual contribution](docs/CREDITS_AND_REDUCTIONS.md)** prevents mature comparison from being mistaken for retroactive project genealogy.
 
 ## Venus state
 
