@@ -28,6 +28,7 @@ SAFE_CHECK_IDS = (
 )
 
 AUTONOMY_WRITABLE_PREFIXES = (
+    "autonomy/problems/",
     "autonomy/cycles/",
     "autonomy/proposals/",
     "autonomy/evidence/",
