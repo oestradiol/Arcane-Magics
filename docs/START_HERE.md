@@ -119,6 +119,8 @@ Current automated tests are intentionally narrower than the research program:
 - exact current kernel reconstruction: `tests/test_current_kernel.py`;
 - VMK2 causal / return / jurisdiction / reopening invariants: `tests/test_vmk2_invariants.py`;
 - persistent memory / provenance / consumption: `tests/test_venus_memory.py`;
+- state-owned generic-search scaffold removal/equivalence: `scripts/audit_generic_search_internalization.py`;
+- Internalizer O*/Anti-Minerva correction guards: `tests/test_internalizer.py`;
 - forum export regressions: `tests/test_export_forum.py`.
 
 The historical and issue-level coverage plan is [TEST_COVERAGE_MATRIX.md](TEST_COVERAGE_MATRIX.md), backed by the machine-readable [historical distinction matrix](../provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json).
