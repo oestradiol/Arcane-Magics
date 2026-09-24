@@ -36,7 +36,7 @@ class AgencyAccountingTests(unittest.TestCase):
         self.assertFalse(r.runtime_llm_invocation)
         self.assertEqual(
             r.strong_rsi_credit,
-            "BOUNDED_AUTONOMOUS_AGENT_WITHOUT_LIVE_FULL_STRONG_RSI",
+            "BOUNDED_AUTONOMOUS_AGENT_WITH_BOUNDED_META_LEARNING_WITHOUT_LIVE_FULL_STRONG_RSI",
         )
 
     def test_target_and_method_are_venus_side_but_safe_command_universe_is_not(self):
