@@ -11,22 +11,28 @@
   },
   "residual": "MENTION != INCIDENCE",
   "ownership_contract": "kernel/development/edu17r1_repair_contract.py",
-  "candidate_status": "NOT_AUTHORED",
+  "candidate_status": "OPERATION_READY",
   "admitted_developmental_controller_operation": {
-    "available": false,
-    "operation": null,
-    "reason": "EDU16-RC1 plus IG10 contains a provenance-bound neutral relation/incidence substrate, but no admitted executable operation currently composes raw/source carrier relation occurrences into typed empirical relation instances. The older P9 search grammar cannot add that semantic crossing, and the R140 P10-shaped descendants remain historical/scratch developmental evidence rather than a current executable controller."
+    "available": true,
+    "operation": "GENERIC_RESIDUAL_PROGRAM_SEARCH_V0.1",
+    "artifact": "kernel/development/generic_residual_search.py",
+    "internalization_audit": "scripts/audit_generic_search_internalization.py",
+    "scope": "issue-agnostic bounded candidate-program search plus ambiguity-driven next-discriminator selection",
+    "issue_specific_semantics_embedded": false,
+    "hidden_evaluation_access": false,
+    "reason": "The generic search is a self-contained internalized functional image of the pre-existing R194 target-label-free grammar expansion. Its R193 audit requires semantic equivalence, original-scaffold removal, successor replay, provenance retention, and external World/evaluator roles to remain outside the capability."
   },
   "hidden_evaluation_exposed": false,
   "external_model_may_supply_substantive_repair": false,
   "next_lawful_transition": [
-    "retain the localized cross-layer incidence-binding residual without encoding the EDU17R1 answer",
-    "recover an already-earned executable generic binder/composer from authentic ancestry, or expose this localized residual to an admitted Venus proposal/search controller",
-    "freeze any learner-authored candidate and ownership receipt before hidden issue #31 exposure",
+    "form a lawful learner-side feature/relation representation of the preserved MENTION != INCIDENCE residual without hidden issue #31 exposure",
+    "run GENERIC_RESIDUAL_PROGRAM_SEARCH_V0.1 on provenance-bound returned observations",
+    "if multiple candidates survive, author the returned next discriminator and obtain a non-preauthored World return rather than accepting an external repair answer",
+    "freeze a substantive repair candidate and ownership receipt only when the learner-side search identifies one",
     "only then run hidden issue #31 efficacy evaluation"
   ],
   "promotion_authority": false,
-  "claim_fence": "Infrastructure and custody readiness do not establish learner-owned authorship. No EDU17R1 repair candidate is admitted by this status.",
+  "claim_fence": "OPERATION_READY establishes only an internalized generic search capability. No EDU17R1 repair candidate has been authored, no hidden #31 data is exposed, and no developmental promotion is granted.",
   "ancestral_incidence_donor": {
     "artifact": "Venus_Incidence_Law.tex",
     "sha256": "99154d953f498be374b8af0fbc174ba658d0d52b1ccc684b2bbc09871ac52f3e",
