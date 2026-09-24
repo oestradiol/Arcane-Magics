@@ -52,6 +52,14 @@ AUTHORED_FROZEN
 
 The current condition-B executor is therefore eligible for sealed evaluation, not for retrospective public tuning after exposure.
 
+## Frozen EDU17R1 repair candidate
+
+`development/EDU17R1_REPAIR_CANDIDATE_FROZEN.json` records `EDU17R1-RC1-WORD-JACCARD-K3-v1` as `AUTHORED_FROZEN` against the reconstructed EDU16-RC1 parent. `development/EDU17R1_REPAIR_OWNERSHIP_RECEIPT.json` binds candidate identity, controller identity, residual, and hidden-unexposed state.
+
+The candidate composes the already selected structural binder with a state-owned mature calibrated-retrieval method family. Public development may tune/select within that family; sealed #31 is the first claim-bearing efficacy return. No post-exposure repair is authorized.
+
+`AUTHORED_FROZEN` means candidate ownership/freeze is admitted. It does not mean hidden PASS, promotion, unrestricted semantics, or Safe Strong RSI.
+
 ## Scaffold internalization and recurrent correction
 
 `runtime/internalizer.py` makes the R193 distinction executable:
