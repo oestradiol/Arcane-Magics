@@ -1,0 +1,31 @@
+name: Bounded research episode
+description: Propose one frozen, reviewable research episode
+title: "[Research] "
+labels: []
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Frozen question
+      description: State the question before the result is known.
+    validations:
+      required: true
+  - type: textarea
+    id: parent
+    attributes:
+      label: Parent / authority
+      description: Exact commit, receipt, state, or source custody.
+    validations:
+      required: true
+  - type: textarea
+    id: comparator
+    attributes:
+      label: Comparator / null / rival
+      description: What would falsify, reduce, or mature-substitute the proposal?
+  - type: textarea
+    id: fence
+    attributes:
+      label: Claim fence
+      description: What this episode cannot establish even if it passes.
+    validations:
+      required: true
