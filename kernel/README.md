@@ -40,6 +40,18 @@ Git source and admitted kernel state are Venus-Minerva authority. Canonical rema
 
 This is architectural internalization, not fresh learner authorship. The capability can search opaque returned coordinates, WITHHOLD under ambiguity, and select a next separating coordinate; it does not decide what those coordinates mean and does not author the substantive EDU17R1 semantic binding.
 
+## Frozen prospective EDU17R1 repair
+
+`development/EDU17R1_REPAIR_CANDIDATE_FROZEN.json` and `development/EDU17R1_REPAIR_OWNERSHIP_RECEIPT.json` bind the current learner-side repair candidate to EDU16-RC1 before hidden #31 exposure. The selected ingress method is a generic calibrated-retrieval member chosen on public development under a frozen state-owned method-selection law.
+
+```text
+AUTHORED_FROZEN
+!= hidden efficacy PASS
+!= developmental promotion
+```
+
+The current condition-B executor is therefore eligible for sealed evaluation, not for retrospective public tuning after exposure.
+
 ## Scaffold internalization and recurrent correction
 
 `runtime/internalizer.py` makes the R193 distinction executable:
