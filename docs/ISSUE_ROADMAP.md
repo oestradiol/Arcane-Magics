@@ -30,6 +30,7 @@ Prestige is not a scheduling dependency.
 - **#41–#43 advanced:** public reliability-pressure surfaces now exist for false-promotion/self-evolution, ACT/GATHER/WITHHOLD/STOP, and adversarial World-input/security. Hidden/dynamic matched evaluation remains.
 - **#35/#36 advanced:** historical distinction routing, live issue coverage, START_HERE, TESTS, REPRODUCE, and navigation contracts exist. Remaining archaeology/UX work no longer blocks discriminating experiments unless a specific experiment depends on it.
 - **#73 minimal substrate landed:** #89 internalized the generic residual search as state-owned inherited capability; #91 completed the current O*/Anti-Minerva guard surface. Full recurrent #73 remains open only across an actual learner-owned successor transition.
+- **#69 closed at bounded repair-authorship freeze:** `EDU17R1-RC1-WORD-JACCARD-K3-v1` is `AUTHORED_FROZEN` with hidden #31 unexposed. Repair efficacy is still unearned.
 
 ## Critical path: execute, do not add more doctrine
 
@@ -37,9 +38,8 @@ Prestige is not a scheduling dependency.
 
 | Priority | Issue | Work |
 |---:|---|---|
-| 1 | #69 | complete the learner-ownership edge: admit only target-blind binding infrastructure, then require Venus to choose/freeze the substantive endpoint/relation/discriminator repair before hidden #31 exposure; ambiguity must reopen inquiry rather than import an answer |
-| 2 | #31 | run the sealed hidden `MENTION != INCIDENCE` A/B/C/D evaluation on that frozen learner-authored repair |
-| 3 | #17 | generalize only the minimum sealed/double-blind machinery required to make the run reusable |
+| 1 | #31 | run the sealed hidden `MENTION != INCIDENCE` A/B/C/D evaluation on the already frozen learner-authored condition B; no post-exposure repair |
+| 2 | #17 | generalize only the minimum sealed/double-blind machinery required to make the run reusable |
 
 Exit:
 
@@ -187,8 +187,7 @@ They compete for priority when they obtain a short path to a real discriminator 
 ## Current shortest high-leverage chain
 
 ```text
-#69 target-blind binding interface + learner-authored repair
--> #31 hidden semantic return
+#31 hidden semantic return on frozen EDU17R1-RC1 condition B
 -> #10 first matched causal ablation
 -> #42 / #15 native capability tests
 -> #41 + #73 -> #72 + #43/#30 repeated-recursion protection
@@ -205,6 +204,8 @@ The unit of scheduling is now:
 ## Branch-only results are not main authority
 
 Draft PR #84 contains substantial TransformProgram/internalization/Safe-Strong-RSI experiments and issue #82 is currently closed at that branch-scoped target. Because PR #84 is not merged, those results are **not current `main` authority** and are not used above as discharged mainline dependencies. They may be reconciled, reduced, or admitted later after ordinary review/CI and current-state update.
+
+By contrast, the EDU17R1 authorship freeze from merged PR #93 is current `main` authority at its declared candidate scope. It advances the next experiment to #31 but does not advance the positive developmental head or establish efficacy.
 
 This is an application of the repository completion law:
 
