@@ -128,4 +128,101 @@ theorem pullbackClosed_preserves
     _ = F i y := hxy i
     _ = G j (U y) := (hi y).symm
 
+/--
+A declared test family factors through a common refinement/carrier when every
+test outcome depends only on the refinement image.
+-/
+def FactorsThrough
+    {S : Type uS} {I : Type uI} {O : Type uO} {R : Type uR}
+    (F : I → S → O) (refine : S → R) : Prop :=
+  ∃ H : I → R → O, ∀ i x, F i x = H i (refine x)
+
+/--
+Equality at a common refinement implies future-equivalence whenever all
+admitted tests factor through that common refinement. This is the abstract
+cylindrical/common-refinement obligation; no physical refinement family is
+asserted here.
+-/
+theorem commonRefinementEq_implies_futureEq
+    {S : Type uS} {I : Type uI} {O : Type uO} {R : Type uR}
+    (F : I → S → O) (refine : S → R)
+    (factors : FactorsThrough F refine)
+    {x y : S}
+    (hr : refine x = refine y) :
+    FutureEq F x y := by
+  obtain ⟨H, hH⟩ := factors
+  intro i
+  calc
+    F i x = H i (refine x) := hH i x
+    _ = H i (refine y) := congrArg (H i) hr
+    _ = F i y := (hH i y).symm
+
+/-- A test family separates the declared domain when future-equivalence forces equality. -/
+def Separates
+    {S : Type uS} {I : Type uI} {O : Type uO}
+    (F : I → S → O) : Prop :=
+  ∀ {x y}, FutureEq F x y → x = y
+
+/--
+For a separating admitted family, future-equivalence is exactly equality on the
+declared domain.
+-/
+theorem futureEq_iff_eq_of_separates
+    {S : Type uS} {I : Type uI} {O : Type uO}
+    (F : I → S → O)
+    (separates : Separates F)
+    {x y : S} :
+    FutureEq F x y ↔ x = y := by
+  constructor
+  · intro h
+    exact separates h
+  · intro h
+    subst y
+    exact futureEq_refl F x
+
+/--
+Extend an earlier family by one later separator pulled back along U. This is a
+repair operation on the declared test family, not a claim that the separator is
+physically admissible in any particular model.
+-/
+def ExtendWithPulledBackSeparator
+    {S : Type uS} {T : Type uT}
+    {I : Type uI} {J : Type uJ}
+    {O : Type uO}
+    (F : I → S → O) (G : J → T → O) (U : S → T) (j : J) :
+    Sum I PUnit → S → O
+  | Sum.inl i => F i
+  | Sum.inr _ => fun x => G j (U x)
+
+/--
+If a later test separates U x and U y, adjoining its pullback to the earlier
+family necessarily reopens x and y.
+-/
+theorem pulledBackSeparator_reopens
+    {S : Type uS} {T : Type uT}
+    {I : Type uI} {J : Type uJ}
+    {O : Type uO}
+    (F : I → S → O) (G : J → T → O) (U : S → T)
+    (j : J) {x y : S}
+    (hsep : G j (U x) ≠ G j (U y)) :
+    ¬ FutureEq (ExtendWithPulledBackSeparator F G U j) x y := by
+  intro h
+  exact hsep (h (Sum.inr PUnit.unit))
+
+/--
+An explicit later separator is also a witness that the un-repaired earlier
+equivalence cannot satisfy the composition/transport preservation condition.
+-/
+theorem laterSeparator_blocks_preservation
+    {S : Type uS} {T : Type uT}
+    {I : Type uI} {J : Type uJ}
+    {O : Type uO}
+    (F : I → S → O) (G : J → T → O) (U : S → T)
+    (j : J) {x y : S}
+    (hxy : FutureEq F x y)
+    (hsep : G j (U x) ≠ G j (U y)) :
+    ¬ (∀ {a b}, FutureEq F a b → FutureEq G (U a) (U b)) := by
+  intro preserves
+  exact hsep ((preserves hxy) j)
+
 end VenusFormal.OFE
