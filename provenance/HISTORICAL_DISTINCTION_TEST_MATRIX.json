@@ -402,9 +402,9 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2",
-      "test_id_path": "tests/test_historical_regressions.py::test_failure_locality_and_corruption_classes_remain_live",
-      "status": "COVERED_PROSE_ONLY",
-      "credit_genealogy_note": "Canonical methodology residue",
+      "test_id_path": "tests/test_historical_regressions.py::test_negative_branch_failure_does_not_globalize_to_parent_lineage",
+      "status": "COVERED_PARTIAL",
+      "credit_genealogy_note": "Historical non-parent failures now have an executable lineage-locality regression.",
       "reopening_condition": "typed dependency fixture"
     },
     {
