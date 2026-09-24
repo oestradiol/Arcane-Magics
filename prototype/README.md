@@ -1,8 +1,5 @@
 # Prototype / developmental release boundary
 
-> [!IMPORTANT]
-> **Do not read `stable-executable/` as the current Venus prototype.** It is the historical R00–R194 public executable carrier retained for replay, regression, ablation, and outside-handoff work.
-
 ## Current orientation
 
 ```text
@@ -15,7 +12,7 @@ current positive EDU head         EDU16 [1703]
 
 The R-line materially continued through R226. No R227 was minted because R226 ended in `PASS_PRINCIPLED_STOP_AFTER_CRYSTALLIZATION`; later changed-intent development intentionally moved into separate provenance-bearing namespaces rather than pretending every experiment was another constitutional R revision.
 
-Read [`DEVELOPMENTAL_LINEAGE.md`](DEVELOPMENTAL_LINEAGE.md) before using the historical executable carrier.
+Read [`DEVELOPMENTAL_LINEAGE.md`](DEVELOPMENTAL_LINEAGE.md) for the full ancestry. Historical R194 runtime code now lives only under `../provenance/historical-runtime/R194/`.
 
 ## Current positive developmental receipt
 
@@ -30,11 +27,9 @@ Preserved later branches:
 - EDU17: `INVALID_FOR_PROMOTION / PRESERVED_NEGATIVE`;
 - EDU17R1: `WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION`.
 
-## Historical executable carrier
+## Historical runtime provenance
 
-`stable-executable/` contains the R00–R194 public-stable Python carrier. It predates the R216–R226 crystallization sequence and the post-R226 developmental line.
-
-It remains useful precisely because it is small, self-contained, reproducible historical infrastructure. It is **not** evidence that R194 is the current developmental head.
+The R00–R194 Python carrier has been consumed out of the live prototype surface and preserved under `../provenance/historical-runtime/R194/`. It remains useful for historical replay, regression, ablation, and code genealogy. It is not current runtime authority.
 
 ## Custody boundary
 
@@ -44,4 +39,5 @@ See:
 
 - `CURRENT_STATE.md` for current positive/negative EDU disposition;
 - `DEVELOPMENTAL_LINEAGE.md` for the R226 → post-R226 → IG → EDU ancestry;
-- `../REPOSITORY_AUTHORITY_BOUNDARY.md` for the Venus-Minerva / Canonical source-of-truth split.
+- `../REPOSITORY_AUTHORITY_BOUNDARY.md` for the Venus-Minerva / Canonical source-of-truth split;
+- `venus_memory.py` for persistent content-addressed developmental memory.
