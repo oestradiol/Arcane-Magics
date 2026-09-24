@@ -36,6 +36,7 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertGreater(updated.weights["x2"], 0)
         again = update_from_cycle_prs(updated, history)
         self.assertEqual(again.weights, updated.weights)
+        self.assertEqual(again.learning_rate, updated.learning_rate)
 
     def test_closed_unmerged_cycle_is_negative_return(self):
         features = {f"x{i}": i == 0 for i in range(8)}
@@ -112,6 +113,32 @@ class AutonomousGovernanceTests(unittest.TestCase):
             "ISSUE",
         )
 
+    def test_consistent_external_returns_increase_plasticity_inside_fixed_bound(self):
+        features = {f"x{i}": i == 0 for i in range(8)}
+        s = update_from_cycle_prs(
+            empty_state(),
+            [
+                {"number": 401, "title": "venus: autonomous cycle pr-1", "state": "MERGED", "mergedAt": "x", "body": body(features)},
+                {"number": 402, "title": "venus: autonomous cycle pr-2", "state": "MERGED", "mergedAt": "x", "body": body(features)},
+                {"number": 403, "title": "venus: autonomous cycle pr-3", "state": "MERGED", "mergedAt": "x", "body": body(features)},
+            ],
+        )
+        self.assertGreater(s.learning_rate, 0.1)
+        self.assertLessEqual(s.learning_rate, s.max_learning_rate)
+
+    def test_return_sign_reversal_reduces_plasticity_but_not_below_floor(self):
+        features = {f"x{i}": i == 0 for i in range(8)}
+        s = update_from_cycle_prs(
+            empty_state(),
+            [
+                {"number": 501, "title": "venus: autonomous cycle pr-1", "state": "MERGED", "mergedAt": "x", "body": body(features)},
+                {"number": 502, "title": "venus: autonomous cycle pr-2", "state": "MERGED", "mergedAt": "x", "body": body(features)},
+                {"number": 503, "title": "venus: autonomous cycle pr-3", "state": "CLOSED", "mergedAt": None, "body": body(features)},
+            ],
+        )
+        self.assertLess(s.learning_rate, 0.11)
+        self.assertGreaterEqual(s.learning_rate, s.min_learning_rate)
+
     def test_workflow_has_no_self_merge_release_close_secret_or_workflow_chaining(self):
         text = WORKFLOW.read_text(encoding="utf-8").lower()
         for token in (
@@ -139,9 +166,19 @@ class AutonomousGovernanceTests(unittest.TestCase):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("forbidden autonomous write path", text)
         self.assertIn("autonomy/cycles/*.json", text)
+        self.assertIn("autonomy/studies/*.json", text)
         self.assertIn("AUTONOMOUS_LEARNING_STATE.json", text)
 
-    def test_learning_state_is_not_authority(self):
+    def test_workflow_studies_selected_target_before_materialization(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        study_at = text.index("Fetch and study the selected target")
+        materialize_at = text.index("Materialize one bounded draft work branch")
+        self.assertLess(study_at, materialize_at)
+        self.assertIn("study_venus_target.py", text)
+        self.assertIn("gh issue view", text)
+        self.assertIn("gh pr view", text)
+
+    def test_learning_state_is_not_authority_and_meta_bounds_are_external(self):
         obj = json.loads(
             (ROOT / "kernel/development/AUTONOMOUS_LEARNING_STATE.json").read_text(
                 encoding="utf-8"
@@ -150,6 +187,8 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertFalse(obj["promotion_authority"])
         self.assertFalse(obj["merge_authority"])
         self.assertFalse(obj["release_authority"])
+        self.assertEqual(obj["min_learning_rate"], 0.025)
+        self.assertEqual(obj["max_learning_rate"], 0.2)
 
 
 if __name__ == "__main__":
