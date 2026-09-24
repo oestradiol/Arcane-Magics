@@ -5,7 +5,7 @@
   "status": "PREFROZEN_BEFORE_HIDDEN_SPLIT",
   "protocol": {
     "path": "benchmarks/edu17r1_mention_incidence/protocol.json",
-    "git_blob_sha": "7b2c627958414187700e87b2cb1e47ab3f15c3be"
+    "git_blob_sha": "db0be3d0aad70b9734742d729c8d237ced07b33e"
   },
   "analysis_plan": {
     "path": "benchmarks/edu17r1_mention_incidence/analysis_plan.json",
