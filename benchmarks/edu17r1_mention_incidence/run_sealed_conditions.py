@@ -117,6 +117,12 @@ def verify_blind_manifest(blind: Path, manifest_path: Path) -> dict[str, Any]:
         raise SealedExecutionError("unexpected blind manifest schema")
     if manifest.get("labels_exposed") is not False:
         raise SealedExecutionError("blind manifest reports labels exposed")
+    current_freeze_sha256 = sha256_bytes(FREEZE)
+    if manifest.get("condition_freeze_sha256") != current_freeze_sha256:
+        raise SealedExecutionError(
+            "blind manifest condition-freeze mismatch: "
+            f"sealed={manifest.get('condition_freeze_sha256')} current={current_freeze_sha256}"
+        )
     actual = sha256_bytes(blind)
     if actual != manifest.get("blind_input_sha256"):
         raise SealedExecutionError(
