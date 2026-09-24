@@ -44,7 +44,7 @@ jobs:
             --json number,title,state,isDraft,mergeStateStatus,updatedAt \
             > /tmp/venus-prs.json
           gh pr list --state all --limit 200 \
-            --json number,title,state,mergedAt,closedAt \
+            --json number,title,state,mergedAt,closedAt,labels \
             > /tmp/venus-pr-history.json
 
       - name: Let Venus update work-learning state and select one bounded target
