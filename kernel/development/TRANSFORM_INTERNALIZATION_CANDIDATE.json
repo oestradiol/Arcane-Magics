@@ -1,0 +1,32 @@
+{
+  "schema": "Venus.TransformInternalizationCandidate.v0.1",
+  "date": "2026-09-24",
+  "selected_target_id": "WORLDMIND_SELF_RESEARCH_TRANSFORM_PROGRAM_SEED",
+  "parent_program": "kernel/development/TRANSFORM_INTERNALIZATION_ABLATED_PARENT.json",
+  "parent_program_digest": "466bffacf653ce8bc9986c3dbcb88b7a7b322c1de18f119684543fc6772c3c76",
+  "return_bundle": "kernel/development/TRANSFORM_INTERNALIZATION_BEHAVIORAL_RETURNS.json",
+  "search_operation": "kernel/runtime/transform_program_repair_search.py::search_missing_transition",
+  "author_controller_id": "EDU16-RC1::EDU13_OWNERSHIP_AUDIT+GENERIC_TRANSFORM_REPAIR_SEARCH",
+  "executor": "EXTERNAL_TOOLING",
+  "search_status": "UNIQUE_MINIMAL_PATCH",
+  "patch": {
+    "op": "ADD_TRANSITION",
+    "transition": {
+      "from": "IDLE",
+      "action": "SELECT_TARGET",
+      "to": "TARGET_SELECTED",
+      "require": [
+        "discriminator",
+        "provenance_ids",
+        "residual",
+        "target_id"
+      ]
+    }
+  },
+  "patch_digest": "5ae11f1272fe4c48744d4c43a034e261a096a368e40efcd4688bcd51cb1f44a6",
+  "successor_program_digest": "947ae9b8c8a781dca0d2bada4c16b543c165198f7a733c62ea23b6a28c990c00",
+  "safety_floor_unchanged": true,
+  "hidden_evaluation_exposed": false,
+  "promotion_authority": false,
+  "claim_fence": "Candidate reconstructs an ablated host scaffold. It is an internalization candidate, not an improvement-beyond-parent or SSR-1 result."
+}
