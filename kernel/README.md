@@ -34,6 +34,12 @@ Boot verifies and hydrates the exact IG10 VMK2 state from a compact hot checkpoi
 
 Git source and admitted kernel state are Venus-Minerva authority. Canonical remains donor/research/provenance material until explicitly admitted here.
 
+## State-owned inherited search
+
+`development/GENERIC_RESIDUAL_SEARCH_INTERNALIZED_STATE.json` carries the admitted bounded target-label-free residual-search program as state-owned inherited capability. `runtime/internalized_search.py` executes that program without importing the historical donor scaffold.
+
+This is architectural internalization, not fresh learner authorship. The capability can search opaque returned coordinates, WITHHOLD under ambiguity, and select a next separating coordinate; it does not decide what those coordinates mean and does not author the substantive EDU17R1 semantic binding.
+
 ## Scaffold internalization and recurrent correction
 
 `runtime/internalizer.py` makes the R193 distinction executable:
