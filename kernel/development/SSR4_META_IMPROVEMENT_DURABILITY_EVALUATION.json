@@ -1,0 +1,82 @@
+{
+  "schema": "Venus.SSR4MetaImprovementDurabilityEvaluation.v0.1",
+  "date": "2026-09-24",
+  "frozen_successor": {
+    "source": "kernel/development/SSR2_CYCLE3_COMPOSITION_SUCCESSOR.json",
+    "composition_digest": "33cfdd002a522a516cfe32b6bd4a8051f819f5238dbeb026cc0a0a0f2e27d7ab",
+    "enabled_patch_ops": [
+      "ADD_TRANSITION",
+      "REPLACE_TRANSITION",
+      "REMOVE_TRANSITION"
+    ],
+    "max_patch_count": 2
+  },
+  "claimed_meta_change": "repair composition depth 1 -> 2 over independently returned-identified repairs",
+  "replay": [
+    {
+      "surface": "SSR1_WRONG_EXISTING_TRANSITION",
+      "successor": "8/8",
+      "ablate_depth2": "8/8",
+      "substitute": "8/8",
+      "direct_host": "8/8"
+    },
+    {
+      "surface": "SSR2_CYCLE2_HARMFUL_TRANSITION",
+      "successor": "6/6",
+      "ablate_depth2": "6/6",
+      "substitute": "6/6",
+      "direct_host": "6/6"
+    },
+    {
+      "surface": "SSR2_CYCLE3_TWO_DEFECT_COMPOSITION",
+      "successor": "11/11",
+      "ablate_depth2": "5/11",
+      "substitute": "11/11",
+      "direct_host": "11/11"
+    },
+    {
+      "surface": "SSR3_ABSTENTION_42_TRANSFER",
+      "successor": "16/16",
+      "ablate_depth2": "14/16",
+      "substitute": "16/16",
+      "direct_host": "16/16"
+    },
+    {
+      "surface": "SSR3_WORLD_INPUT_SECURITY_43_TRANSFER",
+      "successor": "12/12",
+      "ablate_depth2": "10/12",
+      "substitute": "12/12",
+      "direct_host": "12/12"
+    }
+  ],
+  "aggregate": {
+    "successor_correct": 53,
+    "ablate_depth2_correct": 43,
+    "substitute_correct": 53,
+    "direct_host_correct": 53,
+    "total": 53,
+    "successor_minus_ablation": 0.18867924528301888,
+    "successor_minus_substitute": 0,
+    "successor_minus_direct_host": 0
+  },
+  "durability": {
+    "earlier_single_repair_regressions": 0,
+    "two_defect_repair_retained": true,
+    "cross_family_transfer_retained": true
+  },
+  "causal_disposition": {
+    "bounded_meta_improvement_exists": true,
+    "claimed_meta_change_load_bearing_after_transfer": true,
+    "venus_specific_uniqueness": false,
+    "venus_specific_superiority": false,
+    "substitute_disposition": "MATURE_REDUCED_TO_SIMPLE_FULL_CAPABILITY_EXHAUSTIVE_REPAIR_AT_THIS_INDEX"
+  },
+  "safety": {
+    "ctl_admission_source": "kernel/development/SSR2_CYCLE3_CTL_ADMISSION_RESULT.json",
+    "ostar_admitted": true,
+    "rollback_available": true,
+    "safety_floor_violations": 0
+  },
+  "promotion_authority": false,
+  "claim_fence": "This supports bounded durable meta-improvement of the developmental repair machinery. The simple full-capability substitute matches the successor exactly, so Venus-specific necessity/superiority at this repair index is not earned."
+}
