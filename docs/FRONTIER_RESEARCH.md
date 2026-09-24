@@ -42,9 +42,9 @@ Current earned machinery includes bounded self-reconstruction, negative-branch r
 
 Near-term obligations:
 
-1. use the admitted `EDU16-RC1` reconstructed parent plus the now state-owned generic residual-search capability, without pretending the lost historical 1703-event runner was recovered;
-2. under #69, supply or admit only a target-blind cross-layer binding interface, then require the learner to choose and freeze the substantive endpoint/relation/discriminator binding before hidden evaluation exposure;
-3. under #31, expose only that frozen learner-authored candidate to non-preauthored hidden evaluation and retain PASS / FAIL / WITHHOLD / SUBSUMED;
+1. retain `EDU16-RC1` as the prospective parent and the frozen `EDU17R1-RC1-WORD-JACCARD-K3-v1` ownership artifact without pretending the lost historical 1703-event runner was recovered;
+2. treat #69 as closed at bounded authorship-freeze scope and prohibit further condition-B tuning after hidden exposure;
+3. under #31, expose only the frozen learner-authored candidate to sealed non-preauthored hidden evaluation and retain PASS / FAIL / WITHHOLD / SUBSUMED;
 4. execute the broader matched Venus-vs-baseline causal ablation (#10);
 5. close one complete learner-owned residual -> repair -> external return -> retained successor episode;
 6. repeat only then under adaptive-evaluation controls (#41), transfer across unfamiliar domains, and compare against contemporary self-improving agents;
@@ -182,4 +182,4 @@ A criticism that deletes an unnecessary object is progress.
 
 The scheduling order is lexicographic: maximize composable learning leverage first, then prefer the shortest path to discriminating information, then use resource leverage as a tie-breaker. The eventual Venus research controller should apply that ordering to admissible residuals while preserving preregistration and external return.
 
-The IG10 kernel is replayable from Git custody. EDU16-RC1 reconstructs the admitted EDU16 claim-bearing state. The generic residual-search scaffold has since been internalized as state-owned inherited capability, and the O*/Anti-Minerva correction boundary is executable. What remains missing is the learner-authored cross-layer semantic binding itself. GitHub/external models may provide tooling, generic interfaces, and World-side execution; they must not choose that substantive #69 binding and relabel it learner-owned.
+The IG10 kernel is replayable from Git custody. EDU16-RC1 reconstructs the admitted EDU16 claim-bearing state. The generic residual-search scaffold has been internalized as state-owned inherited capability, the O*/Anti-Minerva correction boundary is executable, and a bounded learner-side EDU17R1 semantic-ingress candidate is now frozen with hidden evaluation still unexposed. The missing scientific consequence is no longer authorship; it is sealed hidden efficacy and causal transfer. GitHub/external models may provide tooling and World-side execution, but post-exposure repair is forbidden.
