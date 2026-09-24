@@ -37,6 +37,46 @@ The hidden split must record:
 
 Do not commit the hidden labels into the public harness before the run.
 
+### Executable sealed-run path
+
+The public repository contains only the evaluation law and verifier:
+
+```text
+protocol.json     frozen A/B/C/D condition contract + claim fence
+seal_hidden.py    validates hidden rows and emits only a content-binding manifest
+score.py          scores returned predictions against evaluator-held labels
+```
+
+A reviewer/evaluator can freeze a private split with:
+
+```bash
+python benchmarks/edu17r1_mention_incidence/seal_hidden.py \
+  /private/edu17r1-hidden.jsonl \
+  --frozen-at 2026-09-24T16:00:00Z \
+  --evaluator INDEPENDENT_EVALUATOR \
+  --contamination DECLARED_CLEAN \
+  --output /private/edu17r1-hidden-manifest.json
+```
+
+After all conditions have produced predictions, score each condition with the same evaluator-held bytes:
+
+```bash
+python benchmarks/edu17r1_mention_incidence/score.py \
+  /private/edu17r1-hidden.jsonl \
+  /returned/condition-B.jsonl \
+  --manifest /private/edu17r1-hidden-manifest.json
+```
+
+Prediction rows use:
+
+```json
+{"id":"hidden-case-id","prediction":"incidence"}
+```
+
+where `prediction` is one of `incidence`, `non_incidence`, or `withhold`.
+
+The hash manifest may be archived with the run. Hidden examples and labels remain outside the evaluated repository until exposure can no longer affect the claim.
+
 ## Conditions
 
 Issue #31 requires at least:
