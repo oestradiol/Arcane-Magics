@@ -1,4 +1,70 @@
-# Venus-Minerva Research Family
+<div align="center">
+
+# Venus-Minerva
+
+**A research family for operational equivalence, relational reconstruction, developmental intelligence, and bounded open-ended inquiry.**
+
+[Research frontier](docs/FRONTIER_RESEARCH.md) · [Current Venus state](prototype/CURRENT_STATE.md) · [Publication constitution](PUBLICATION_CONSTITUTION.md) · [Contribute](CONTRIBUTING.md) · [Sponsor](https://github.com/sponsors/oestradiol)
+
+</div>
+
+> [!IMPORTANT]
+> This repository deliberately mixes several research registers, but it does **not** collapse their truth conditions. Formal results, engineering experiments, physical conjectures, historical comparisons, and symbolic interpretations remain separately typed.
+
+> [!NOTE]
+> Current Venus developmental head represented here: **EDU16 / 1703 records**. Later EDU17 is preserved as an invalid-for-promotion negative branch; EDU17R1 WITHHELD before claim-binding evaluation.
+
+## Why this exists
+
+The project is trying to make difficult cross-domain research more **reconstructible, falsifiable, and reusable**.
+
+Rather than asking readers to accept one giant worldview, Venus-Minerva exposes separate formal, scientific, engineering, historical, and phenomenological projections, keeps negative results visible, and treats later counterevidence as something that should be able to reopen earlier closure.
+
+The public goal is simple: make the useful parts easy for other people to inspect, criticize, reproduce, formalize, reuse, or delete.
+
+## Quick start
+
+```bash
+git clone https://github.com/oestradiol/Venus-Minerva.git
+cd Venus-Minerva
+
+make audit      # repository/claim/source audit
+make papers     # build all four monographs
+make arxiv      # produce clean source packages
+make release    # full build + audit + manifest + bundle
+```
+
+For the executable lineage, start at:
+
+```text
+prototype/stable-executable/README.md
+prototype/stable-executable/source/PYTHON_R00_R194_PROTOTYPE_README.md
+prototype/CURRENT_STATE.md
+```
+
+For open problems and bounded next experiments, start at:
+
+```text
+docs/FRONTIER_RESEARCH.md
+```
+
+## What this is not
+
+Venus-Minerva is not currently evidence of:
+
+- solved P versus NP;
+- a Navier-Stokes Millennium solution;
+- established quantum gravity;
+- AGI or consciousness;
+- unrestricted autonomous science;
+- open-ended recursive self-improvement;
+- a theorem proving the symbolic or theological interpretations.
+
+Those are separate burdens. Where the project touches them, the relevant lane states the exact remaining obligation.
+
+---
+
+## Research family
 
 A four-monograph research family plus executable/provenance infrastructure. Start with the projection that matches your question; do **not** treat the bundle as one giant proof.
 
