@@ -141,7 +141,7 @@ Exit: repeated durable improvement or an explicit negative/reduction result.
 | #13 | autonomous science |
 | #20 | causal science |
 | #19 | world modeling / embodiment |
-| #18 | DNN dependence |
+| #18 | external-substrate attribution / scaffold removal (DNN only if actually present) |
 | #21 | external mathematical research |
 
 ## Continuous support, not critical-path blockers
