@@ -1,1 +1,1 @@
-"""Live Venus-Minerva kernel package."""\n
+"""Live Venus-Minerva kernel package."""
