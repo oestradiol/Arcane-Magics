@@ -85,7 +85,8 @@ Exit: determine whether STOP/WITHHOLD and structured persistent memory cause use
 | Priority | Issue | Work |
 |---:|---|---|
 | 1 | #41 | move from public null-pressure simulation to statistically valid repeated-successor acceptance on identical candidate streams |
-| 2 | #43 + #30 | move from public attack/disposition surfaces to dynamic hostile World-return, forged-authority, and poisoned-memory evaluation |
+| 2 | #72 | stage Safe Strong RSI only after one causally interpretable Venus-owned repair; preserve an externally governed safety floor |
+| 3 | #43 + #30 | move from public attack/disposition surfaces to dynamic hostile World-return, forged-authority, and poisoned-memory evaluation |
 
 A single preregistered successor may precede the full repeated-self-evolution statistics of #41. A repeated adaptive lineage may not.
 
@@ -119,7 +120,7 @@ External coding/research machinery remains distinct from Venus developmental own
 | Priority | Issue | Work |
 |---:|---|---|
 | 1 | #12 | compare repeated Venus development with DGM/AlphaEvolve/POWERPLAY/POET/Voyager/current successors |
-| 2 | #41 | measure false/harmful commits, held-out ID/OOD gain, regression, and cumulative promotion error |
+| 2 | #41 + #72 | measure repeated self-development under adaptive statistics and the fixed Strong-N2/CTL safety floor |
 | 3 | #14 | long-horizon/general agency once repeated development itself is measurable |
 
 Exit: repeated durable improvement or an explicit negative/reduction result.
@@ -187,7 +188,7 @@ They compete for priority when they obtain a short path to a real discriminator 
 -> #31 hidden semantic return
 -> #10 first matched causal ablation
 -> #42 / #15 native capability tests
--> #41 + #43/#30 repeated-recursion protection
+-> #41 + #72 + #43/#30 repeated-recursion protection
 -> next learner-selected residual
 -> #12 repeated self-development comparison
 ```
