@@ -131,6 +131,17 @@ class HistoricalCausalRegressionTests(unittest.TestCase):
         self.assertIn("does not depend on resurrecting that failed claim", worldmind)
         self.assertIn("do not reroll under a new label", retirement)
 
+    def test_external_model_is_not_venus_developmental_controller(self):
+        agents = self.read("AGENTS.md")
+        autonomous = self.read("docs/AUTONOMOUS_RESEARCH.md")
+        self.assertIn("does **not** make an external model the Venus developmental controller", agents)
+        self.assertIn("Venus developmental state/controller", agents)
+        self.assertIn("!= external coding/research model", agents)
+        self.assertIn("not a substitute cognitive controller", autonomous)
+        self.assertIn("do not use an external model to choose Venus's curriculum and call that learner ownership", autonomous)
+        self.assertIn("EDU16-RC1", autonomous)
+        self.assertIn("prospective reimplementation parent", autonomous)
+
     def test_r224_r225_repair_does_not_rewrite_triggering_history(self):
         lineage = self.read("provenance/DEVELOPMENTAL_LINEAGE.md")
         ledger = self.read("provenance/CANONICAL_RETIREMENT_LEDGER.md")
