@@ -5,6 +5,8 @@ from pathlib import Path
 import unittest
 
 from kernel.development.autonomous_learning import (
+    USEFUL_MARKER,
+    UNHELPFUL_MARKER,
     empty_state,
     target_markers,
     update_from_cycle_prs,
@@ -19,23 +21,31 @@ ROOT = Path(__file__).resolve().parents[1]
 WORKFLOW = ROOT / ".github/workflows/venus-autonomous-worker.yml"
 
 
+def external_review(body: str, *, login: str = "external-reviewer", review_id: int = 1):
+    return {
+        "id": review_id,
+        "body": body,
+        "author": {"login": login},
+        "submittedAt": "2026-09-24T00:00:00Z",
+    }
+
+
 class AutonomousGovernanceTests(unittest.TestCase):
-    def test_closed_merged_cycle_updates_learning_once(self):
-        state = empty_state()
-        history = [
-            {
+    def test_merge_without_explicit_review_return_does_not_update_learning(self):
+        updated = update_from_cycle_prs(
+            empty_state(),
+            [{
                 "number": 201,
                 "title": "venus: autonomous cycle issue-31",
                 "state": "MERGED",
                 "mergedAt": "2026-09-24T00:00:00Z",
-            }
-        ]
-        updated = update_from_cycle_prs(state, history)
-        self.assertEqual(updated.kind_success["ISSUE"], 1)
-        again = update_from_cycle_prs(updated, history)
-        self.assertEqual(again.kind_success["ISSUE"], 1)
+                "reviews": [],
+            }],
+        )
+        self.assertEqual(updated.kind_success["ISSUE"], 0)
+        self.assertEqual(updated.kind_failure["ISSUE"], 0)
 
-    def test_closed_unmerged_cycle_is_negative_return_not_success(self):
+    def test_close_without_explicit_review_return_does_not_count_as_failure(self):
         updated = update_from_cycle_prs(
             empty_state(),
             [{
@@ -43,19 +53,63 @@ class AutonomousGovernanceTests(unittest.TestCase):
                 "title": "venus: autonomous cycle pr-99",
                 "state": "CLOSED",
                 "mergedAt": None,
+                "reviews": [],
+            }],
+        )
+        self.assertEqual(updated.kind_failure["PR"], 0)
+
+    def test_explicit_external_useful_review_updates_once(self):
+        history = [{
+            "number": 203,
+            "title": "venus: autonomous cycle issue-72",
+            "state": "OPEN",
+            "mergedAt": None,
+            "reviews": [external_review(USEFUL_MARKER, review_id=77)],
+        }]
+        updated = update_from_cycle_prs(empty_state(), history)
+        self.assertEqual(updated.kind_success["ISSUE"], 1)
+        again = update_from_cycle_prs(updated, history)
+        self.assertEqual(again.kind_success["ISSUE"], 1)
+
+    def test_explicit_external_unhelpful_review_updates_failure(self):
+        updated = update_from_cycle_prs(
+            empty_state(),
+            [{
+                "number": 204,
+                "title": "venus: autonomous cycle pr-99",
+                "state": "OPEN",
+                "mergedAt": None,
+                "reviews": [external_review(UNHELPFUL_MARKER, review_id=78)],
             }],
         )
         self.assertEqual(updated.kind_failure["PR"], 1)
         self.assertEqual(updated.kind_success["PR"], 0)
 
-    def test_open_autonomous_cycle_does_not_update_learning(self):
+    def test_self_authored_review_marker_is_not_a_return(self):
         updated = update_from_cycle_prs(
             empty_state(),
             [{
-                "number": 203,
-                "title": "venus: autonomous cycle issue-72",
+                "number": 205,
+                "title": "venus: autonomous cycle issue-31",
                 "state": "OPEN",
                 "mergedAt": None,
+                "reviews": [
+                    external_review(USEFUL_MARKER, login="github-actions[bot]", review_id=79)
+                ],
+            }],
+        )
+        self.assertEqual(updated.kind_success["ISSUE"], 0)
+
+    def test_ambiguous_review_marker_is_ignored(self):
+        body = USEFUL_MARKER + "\n" + UNHELPFUL_MARKER
+        updated = update_from_cycle_prs(
+            empty_state(),
+            [{
+                "number": 206,
+                "title": "venus: autonomous cycle issue-31",
+                "state": "OPEN",
+                "mergedAt": None,
+                "reviews": [external_review(body, review_id=80)],
             }],
         )
         self.assertEqual(updated.kind_success["ISSUE"], 0)
@@ -75,8 +129,6 @@ class AutonomousGovernanceTests(unittest.TestCase):
             WorkItem("ISSUE", 900, "generic issue"),
             WorkItem("PR", 901, "generic pr"),
         )
-        # Outside hard dependency priorities, returned outcomes may alter the
-        # class of work selected next.
         chosen = choose_target(
             items,
             roadmap_text="",
