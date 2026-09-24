@@ -108,6 +108,62 @@ A person can be immediately present in an experience while remaining uncertain a
 
 Return to the example from Section 1. What belongs to immediate participation? What belongs to the explicit model? Which part can the other person or the world still correct?
 
+# Meta-Dynamics: the structural object beneath the comparative program
+
+The successor manuscript uses *Meta-Dynamics* for the general structural object and *Arcane Magics* for the historical, comparative, and cross-register research program that studies candidate realizations of that object. They are not synonyms.
+
+The present structural recurrence is
+
+$
+\boxed{
+\text{differentiative relation}
+\to
+\text{indexed inhabitation}
+\to
+\text{stabilization}
+\to
+\text{representation}
+\to
+\text{enactment}
+\to
+\text{non-preauthored return}
+\to
+\text{retained reconstruction}
+\to
+\text{admissible recombination}
+}.
+$
+
+Objects are not denied by this framing. A current candidate reading treats some objects as relatively stable invariants recursively crystallized from relational dynamics at a declared scale and test family. That is weaker than a claim that every physical object is non-fundamental or reducible to a single project mechanism.
+
+The symbolic roles introduced later are subordinate to this neutral structure. In particular,
+
+$
+\begin{aligned}
+\text{Logos} &\sim \text{preservation and articulation of consequential distinction},\\
+\text{Eros} &\sim \text{movement toward consequential relation across preserved difference},\\
+\text{Symbol} &:= \text{preserved difference made relationally transportable}.
+\end{aligned}
+$
+
+These are comparative/symbolic renderings, not transfers of scientific or theological warrant. Their intended conjunction is functional: representation can preserve a distinction while making that distinction available for further relation.
+
+The corresponding ethical candidate is likewise structural rather than commandment-first:
+
+$
+\text{Other-center}
+\to
+\text{broker of inaccessible state}
+\to
+\text{channel of return}
+\to
+\text{possible perturbation of present invariants}.
+$
+
+Hence one design criterion is to preserve the possibility of non-preauthored return from indexed Other-centers. A local model of another center does not automatically acquire authority to substitute for that center. This is not yet a complete normative theory.
+
+The full cross-register statement, claim fence, and hierarchy are maintained in `docs/META_DYNAMICS.md`. The manuscript retains its narrower task: recover transformation-relevant operators from historical and symbolic sources, translate them without erasing provenance, and test whether they survive present formal, scientific, phenomenological, or ethical comparison.
+
 # The first differentiative meta-relation and the Inhabited Dao
 
 The current Canonical root no longer treats a featureless “vacuous relation” as a live primitive. That name remains developmental archaeology. The live candidate is instead the first differentiative meta-relation $$\boxed{\begin{aligned}
