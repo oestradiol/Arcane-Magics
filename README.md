@@ -4,7 +4,7 @@
 
 **A research program in developmental intelligence, operational equivalence, relational reconstruction, and open-ended cross-register inquiry.**
 
-[Reader path](docs/INHABITABLE_READER_PATH.md) · [Research frontier](docs/FRONTIER_RESEARCH.md) · [Venus state](kernel/CURRENT_STATE.md) · [Meta-Dynamics](docs/META_DYNAMICS.md) · [Vocabulary / grammar](NxRxI_VOCABULARY_CENTER.md) · [Contribute](CONTRIBUTING.md) · [Sponsor](https://github.com/sponsors/oestradiol)
+[What Venus actually is](docs/PUBLIC_VALUE.md) · [Earned milestones](docs/EARNED_MILESTONES.md) · [Evaluation](docs/EVALUATION_CONSTITUTION.md) · [SOTA watch](docs/SOTA_WATCH.md) · [Credits / reductions](docs/CREDITS_AND_REDUCTIONS.md) · [Research frontier](docs/FRONTIER_RESEARCH.md) · [Venus state](kernel/CURRENT_STATE.md) · [Contribute](CONTRIBUTING.md) · [Sponsor](https://github.com/sponsors/oestradiol)
 
 </div>
 
@@ -14,11 +14,13 @@
   <a href="https://github.com/sponsors/oestradiol"><img alt="Sponsor" src="https://img.shields.io/badge/sponsor-GitHub%20Sponsors-EA4AAA?logo=githubsponsors"></a>
 </p>
 
-Venus-Minerva asks whether a learning system can preserve only the distinctions that remain consequential under future interaction, then reconstruct itself when the World returns a difference its current representation cannot absorb as gauge.
+**Venus-Minerva is an experimental developmental-intelligence architecture in which representations, research obligations, evidence dependencies, failures, and parts of the learning procedure itself become persistent, reconstructible machine state.** The engineering bet is that a learner can increasingly choose and modify how it learns without being allowed to manufacture the external evidence that certifies those modifications.
 
-That question appears here in four coupled forms: exact quotient mathematics, quantum/physical coarse-graining, developmental artificial intelligence, and a wider Meta-Dynamics program for epistemology, consciousness, ethics, religion, and cross-register reconstruction.
+The current lineage has already demonstrated bounded learner-owned research requests, research-obligation routing, evidence budgeting, open-domain problem selection, self-curriculum target generation, preregistration, and learner-owned World-feed query policy. It has also preserved and promoted **negative epistemic results**: EDU17 was rejected after a claim-local provenance failure, and EDU17R1 withheld when its fresh test exposed `MENTION != INCIDENCE` before the intended repair could lawfully be evaluated.
 
-The project is ambitious on purpose. Its claim grammar is equally strict: **formal result, engineering result, physical bridge, symbolic interpretation, and target capability do not inherit one another's warrant.**
+Venus also asks whether a learning system can preserve only the distinctions that remain consequential under future interaction, then reconstruct itself when the World returns a difference its current representation cannot absorb as gauge. That question appears in exact quotient mathematics, quantum/physical coarse-graining, developmental artificial intelligence, and a wider Meta-Dynamics program for epistemology, consciousness, ethics, religion, and cross-register reconstruction.
+
+The project is ambitious on purpose. Its claim grammar is equally strict: **formal result, engineering result, physical bridge, symbolic interpretation, and target capability do not inherit one another's warrant.** Claim fences are not an instruction to hide earned value: the strongest true positive contribution should be stated first, followed by its scope and nearest unearned promotion.
 
 ## What is already here
 
@@ -34,6 +36,8 @@ The project is ambitious on purpose. Its claim grammar is equally strict: **form
 | **Hard-problem program** | P vs NP, Navier-Stokes, quantum gravity, consciousness, epistemology, religion, and other high-value open problems are treated as stress environments for the same developmental machinery. | **OPEN RESEARCH FRONTIER**. |
 
 The point is not that one vocabulary solves all these domains. The point is to test whether the same transformation law survives substitution of carrier, register, evidence source, and problem class without laundering one domain's warrant into another.
+
+For the plain-language version, start with **[What Venus-Minerva Actually Is](docs/PUBLIC_VALUE.md)**. For exact earned/uneared boundaries, use **[Earned Milestones](docs/EARNED_MILESTONES.md)**. External comparison lives in **[SOTA Watch](docs/SOTA_WATCH.md)**, while **[Credits, genealogy, reductions, and residual contribution](docs/CREDITS_AND_REDUCTIONS.md)** prevents mature comparison from being mistaken for retroactive project genealogy.
 
 ## Venus state
 
@@ -137,11 +141,14 @@ Start with the ordinary problem, then introduce project vocabulary only when it 
 
 Recommended path:
 
-1. [`docs/INHABITABLE_READER_PATH.md`](docs/INHABITABLE_READER_PATH.md)
-2. the row above matching your research interest
-3. the corresponding monograph or kernel state
-4. [`NxRxI_VOCABULARY_CENTER.md`](NxRxI_VOCABULARY_CENTER.md) when cross-register translation is needed
-5. [`PUBLICATION_CONSTITUTION.md`](PUBLICATION_CONSTITUTION.md) for claim governance
+1. [`docs/PUBLIC_VALUE.md`](docs/PUBLIC_VALUE.md) — ordinary-language architecture and value
+2. [`docs/EARNED_MILESTONES.md`](docs/EARNED_MILESTONES.md) — what is actually earned
+3. the row above matching your research interest
+4. the corresponding monograph or kernel state
+5. [`docs/CREDITS_AND_REDUCTIONS.md`](docs/CREDITS_AND_REDUCTIONS.md) — genealogy, predecessors, reductions, residuals
+6. [`docs/EVALUATION_CONSTITUTION.md`](docs/EVALUATION_CONSTITUTION.md) — how stronger claims are earned
+7. [`docs/INHABITABLE_READER_PATH.md`](docs/INHABITABLE_READER_PATH.md) and [`NxRxI_VOCABULARY_CENTER.md`](NxRxI_VOCABULARY_CENTER.md) when the private dialect becomes useful
+8. [`PUBLICATION_CONSTITUTION.md`](PUBLICATION_CONSTITUTION.md) for claim governance
 
 Historical material that is no longer live stays in provenance. In particular, the former S10-S11 comparative surface has been consumed into `provenance/withheld/S10_S11/` because those artifacts are frozen evidence, not current ontology.
 
