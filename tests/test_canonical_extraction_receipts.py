@@ -40,6 +40,15 @@ class CanonicalExtractionReceiptTests(unittest.TestCase):
         self.assertIn("closure of the absolute-origin/source proposition", text)
         self.assertIn("genuinely new separator or an expanded future family", text)
 
+    def test_r213_label_admission_does_not_become_sovereignty(self):
+        text = (
+            ROOT / "provenance/canonical-extracts/R209_R224_CAUSAL_EXTRACT_2026-09-24.md"
+        ).read_text(encoding="utf-8")
+        self.assertIn("labels are non-sovereign", text)
+        self.assertIn("name/label admission", text)
+        self.assertIn("semantic or operational sovereignty", text)
+        self.assertIn("name-free or renamed reconstruction test", text)
+
     def test_r224_repair_remains_distinct_from_historical_rewrite(self):
         text = (
             ROOT / "provenance/canonical-extracts/R209_R224_CAUSAL_EXTRACT_2026-09-24.md"
