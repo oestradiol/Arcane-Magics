@@ -11,28 +11,25 @@
   },
   "residual": "MENTION != INCIDENCE",
   "ownership_contract": "kernel/development/edu17r1_repair_contract.py",
-  "candidate_status": "OPERATION_READY",
+  "candidate_status": "AUTHORED_FROZEN",
   "admitted_developmental_controller_operation": {
     "available": true,
-    "operation": "GENERIC_RESIDUAL_PROGRAM_SEARCH_V0.1",
-    "artifact": "kernel/development/generic_residual_search.py",
-    "internalization_audit": "scripts/audit_generic_search_internalization.py",
-    "scope": "issue-agnostic bounded candidate-program search plus ambiguity-driven next-discriminator selection",
-    "issue_specific_semantics_embedded": false,
-    "hidden_evaluation_access": false,
-    "reason": "The generic search is a self-contained internalized functional image of the pre-existing R194 target-label-free grammar expansion. Its R193 audit requires semantic equivalence, original-scaffold removal, successor replay, provenance retention, and external World/evaluator roles to remain outside the capability."
+    "operation": "scripts/run_edu17r1_semantic_ingress_search.py -> kernel/runtime/calibrated_retrieval.py",
+    "admission": "state-owned generic mature retrieval method family over externally returned public-development calibration",
+    "scope": "PUBLIC_DEVELOPMENT_METHOD_SELECTION_ONLY",
+    "historical_owner_claim": false,
+    "promotion_authority": false,
+    "reason": "The controller compares only generic retrieval families and selects by frozen label-agnostic scoring law. It contains no target-specific semantic rule table and sees no hidden #31 data."
   },
   "hidden_evaluation_exposed": false,
   "external_model_may_supply_substantive_repair": false,
   "next_lawful_transition": [
-    "form a lawful learner-side feature/relation representation of the preserved MENTION != INCIDENCE residual without hidden issue #31 exposure",
-    "run GENERIC_RESIDUAL_PROGRAM_SEARCH_V0.1 on provenance-bound returned observations",
-    "if multiple candidates survive, author the returned next discriminator and obtain a non-preauthored World return rather than accepting an external repair answer",
-    "freeze a substantive repair candidate and ownership receipt only when the learner-side search identifies one",
-    "only then run hidden issue #31 efficacy evaluation"
+    "run sealed hidden #31 A/B/C/D on the frozen condition-B executor",
+    "preserve PASS / FAIL / WITHHOLD / SUBSUMED without post-exposure repair",
+    "if hidden return is causally positive, pass the resulting successor through full #73 O* before any SSR-1 promotion"
   ],
   "promotion_authority": false,
-  "claim_fence": "OPERATION_READY establishes only an internalized generic search capability. No EDU17R1 repair candidate has been authored, no hidden #31 data is exposed, and no developmental promotion is granted.",
+  "claim_fence": "Bounded learner-side repair authorship is frozen and CI-validated on public development only. Efficacy remains entirely unearned until sealed hidden #31; Safe Strong RSI and broader claims remain unearned.",
   "ancestral_incidence_donor": {
     "artifact": "Venus_Incidence_Law.tex",
     "sha256": "99154d953f498be374b8af0fbc174ba658d0d52b1ccc684b2bbc09871ac52f3e",
@@ -52,5 +49,23 @@
       "evidence-bound WorldMirror relation instances"
     ],
     "missing_operation": "raw/source carrier relation occurrence -> typed object/source-level relation instance + provenance + independent return"
+  },
+  "candidate": "kernel/development/EDU17R1_REPAIR_CANDIDATE_FROZEN.json",
+  "ownership_receipt": "kernel/development/EDU17R1_REPAIR_OWNERSHIP_RECEIPT.json",
+  "semantic_ingress": {
+    "selected_method": "WORD_JACCARD_K3",
+    "public_dev_accuracy": 0.875,
+    "public_dev_macro_f1": 0.8333333333333333,
+    "public_dev_tunable": true,
+    "hidden_evaluation_exposed": false,
+    "promotion_authority": false
+  },
+  "ci_return": {
+    "workflow": "Venus CI/CD",
+    "run_number": 464,
+    "integrity_gate": "PASS",
+    "formal_gate": "PASS",
+    "semantic_ingress_freeze_audit": "PASS",
+    "hidden_evaluation_exposed": false
   }
 }

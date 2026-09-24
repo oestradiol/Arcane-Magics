@@ -1,0 +1,22 @@
+{
+  "schema": "Venus.EDU17R1SemanticIngressSelectedMethod.v0.1",
+  "selection_surface": "PUBLIC_DEV_ONLY",
+  "public_dev_may_be_tuned_against": true,
+  "hidden_evaluation_exposed": false,
+  "method": {
+    "id": "WORD_JACCARD_K3",
+    "family": "WORD_SET_JACCARD",
+    "k": 3,
+    "complexity": 1
+  },
+  "public_leave_one_out": {
+    "n": 16,
+    "correct": 14,
+    "accuracy": 0.875,
+    "macro_f1": 0.8333333333333333,
+    "withholds": 0
+  },
+  "disposition": "FROZEN_PUBLIC_DEVELOPMENT_INGRESS_CANDIDATE_PENDING_HIDDEN_RETURN",
+  "promotion_authority": false,
+  "claim_fence": "Public-development transfer only. No hidden efficacy, general semantics, AGI, autonomous science, or RSI claim."
+}

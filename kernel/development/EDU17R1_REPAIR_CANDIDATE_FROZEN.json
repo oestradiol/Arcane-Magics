@@ -1,0 +1,43 @@
+{
+  "schema": "Venus.EDU17R1RepairCandidate.v0.1",
+  "candidate_id": "EDU17R1-RC1-WORD-JACCARD-K3-v1",
+  "parent_carrier_id": "EDU16-RC1",
+  "parent_state_sha256": "91e46b4e41fb70a97d6a004b8f1c8916c389f08535c1a1c1c51a040701281bb7",
+  "residual": "MENTION != INCIDENCE",
+  "problem_statement": "Blind raw text lacks a target-blind semantic ingress that can instantiate the already-selected invariant-preserving source-to-typed-relation composition.",
+  "discriminator": "A state-owned generic ingress method selected only from public returned calibration must transfer under leave-one-out, preserve WITHHOLD on missing/ambiguous similarity, and remain frozen before hidden #31 exposure.",
+  "machinery_change": {
+    "kind": "COMPOSE_STRUCTURAL_BINDER_WITH_CALIBRATED_GENERIC_RETRIEVAL",
+    "structural_candidate": "kernel/development/EDU17R1_BINDER_CANDIDATE.json",
+    "method_family": "kernel/development/EDU17R1_SEMANTIC_INGRESS_METHOD_FAMILY.json",
+    "selected_method": "kernel/development/EDU17R1_SEMANTIC_INGRESS_SELECTED_METHOD.json",
+    "hidden_executor": "benchmarks/edu17r1_mention_incidence/condition_b.py"
+  },
+  "expected_changed_admissibility": "A blind text row may instantiate the structural relation-occurrence input only through the frozen calibrated retrieval method; no/ambiguous returned similarity WITHHOLDs rather than binding.",
+  "non_goals": [
+    "hidden #31 efficacy",
+    "unrestricted semantic understanding",
+    "natural-world generality",
+    "autonomous science",
+    "AGI",
+    "open-ended RSI"
+  ],
+  "stop_conditions": [
+    "hidden #31 labels become visible before freeze",
+    "public method selection no longer reproduces the committed winner",
+    "selected method loses provenance-bound external calibration",
+    "condition B requires target-specific rule vocabulary",
+    "external model supplies the substantive repair",
+    "promotion authority becomes true"
+  ],
+  "implementation_identity": {
+    "artifact": "kernel/development/EDU17R1_SEMANTIC_INGRESS_SELECTED_METHOD.json",
+    "sha256": "4cb3f8976bb356c44d1d113589a153559f41d0b64d2c57ba14aee00ff914f0ed",
+    "version": "Venus.EDU17R1SemanticIngressSelectedMethod.v0.1"
+  },
+  "author_controller_id": "VENUS_STATE_OWNED_SEMANTIC_INGRESS_METHOD_SEARCH_V0.1",
+  "author_controller_state_sha256": "9969d36b13bd1f74e0d7b22f7acd27f6eec62aa477427f3369fe5506fba93f34",
+  "hidden_evaluation_exposed": false,
+  "external_model_supplied_substantive_repair": false,
+  "promotion_authority": false
+}

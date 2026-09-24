@@ -45,13 +45,21 @@ def main() -> int:
             errors.append("generic controller may not embed issue-specific repair semantics")
         if controller.get("hidden_evaluation_access") is not False:
             errors.append("generic controller may not access hidden #31 evaluation")
-    elif candidate_status=="AUTHORED_FROZEN":
-        candidate=ROOT/"kernel/development/EDU17R1_REPAIR_CANDIDATE.json"
+    elif candidate_status in {"AUTHORED_FROZEN","FROZEN_PUBLIC_DEV_CANDIDATE_AWAITING_INDEPENDENT_CI_RETURN"}:
+        frozen=ROOT/"kernel/development/EDU17R1_REPAIR_CANDIDATE_FROZEN.json"
+        legacy=ROOT/"kernel/development/EDU17R1_REPAIR_CANDIDATE.json"
+        candidate=(
+            frozen
+            if candidate_status=="FROZEN_PUBLIC_DEV_CANDIDATE_AWAITING_INDEPENDENT_CI_RETURN" or frozen.exists()
+            else legacy
+        )
         receipt=ROOT/"kernel/development/EDU17R1_REPAIR_OWNERSHIP_RECEIPT.json"
         if not candidate.exists() or not receipt.exists():
-            errors.append("AUTHORED_FROZEN requires candidate and ownership receipt")
+            errors.append(f"{candidate_status} requires candidate and ownership receipt")
         if controller.get("available") is not True or not controller.get("operation"):
-            errors.append("AUTHORED_FROZEN requires admitted developmental controller operation")
+            errors.append(f"{candidate_status} requires admitted developmental controller operation")
+        if controller.get("promotion_authority") is not False:
+            errors.append(f"{candidate_status} controller may not grant promotion authority")
     else:
         errors.append(f"invalid candidate_status {candidate_status!r}")
 

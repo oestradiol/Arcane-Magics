@@ -85,6 +85,9 @@ jobs:
       - name: EDU17R1 repair authorship audit
         run: python scripts/audit_edu17r1_repair_authorship.py
 
+      - name: EDU17R1 semantic-ingress freeze audit
+        run: python scripts/audit_edu17r1_semantic_ingress.py
+
       - name: Construct disposition audit
         run: python scripts/audit_construct_dispositions.py
 
