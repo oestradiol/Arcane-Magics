@@ -7,7 +7,7 @@ from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 
-EVIDENCE_DIRS = {"provenance", "current-developmental-receipts"}
+EVIDENCE_DIRS = {"provenance"}
 GENERATED_FORUM = ("preprints", "lesswrong", "generated")
 
 # Full LaTeX remains legal in monograph .tex sources. These checks apply to
@@ -51,9 +51,10 @@ def is_public_surface(path: Path) -> bool:
     if p[:2] == ("preprints", "lesswrong"):
         return True
     if r.as_posix() in {
-        "prototype/README.md",
-        "prototype/CURRENT_STATE.md",
-        "prototype/DEVELOPMENTAL_LINEAGE.md",
+        "kernel/README.md",
+        "kernel/CURRENT_STATE.md",
+        "kernel/WORLDMIND.md",
+        "provenance/DEVELOPMENTAL_LINEAGE.md",
     }:
         return True
     return False
@@ -165,12 +166,12 @@ def inspect_state_consistency() -> list[str]:
         "preprints/lesswrong/00_SEQUENCE_MAP.md": [
             ("EDU16", "forum sequence map must name EDU16"),
         ],
-        "prototype/CURRENT_STATE.md": [
+        "kernel/CURRENT_STATE.md": [
             ("R226", "current state must expose R226 boundary"),
             ("IG10", "current state must expose IG10 ancestry"),
             ("EDU16", "current state must expose EDU16 head"),
         ],
-        "prototype/DEVELOPMENTAL_LINEAGE.md": [
+        "provenance/DEVELOPMENTAL_LINEAGE.md": [
             ("R226", "lineage must expose R226"),
             ("IG10", "lineage must expose IG10"),
             ("EDU16", "lineage must expose EDU16"),
@@ -186,6 +187,10 @@ def inspect_state_consistency() -> list[str]:
         for token, message in required:
             if token not in text:
                 errors.append(f"{path}: {message}")
+
+    vocab = (ROOT / "NxRxI_VOCABULARY_CENTER.md").read_text(encoding="utf-8", errors="replace")
+    if "N x R x I = Name/Notation x Register x Index" in vocab:
+        errors.append("NxRxI_VOCABULARY_CENTER.md: false NxRxI backronym")
 
     for p in ROOT.rglob("*.md"):
         if not is_public_surface(p):

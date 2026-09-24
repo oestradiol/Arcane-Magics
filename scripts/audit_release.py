@@ -18,9 +18,11 @@ required = [
     "licenses/PolyForm-Noncommercial-1.0.0.txt",
     "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
     "REPOSITORY_AUTHORITY_BOUNDARY.md",
-    "prototype/CURRENT_STATE.md",
-    "prototype/DEVELOPMENTAL_LINEAGE.md",
-    "prototype/venus_memory.py",
+    "kernel/CURRENT_STATE.md",
+    "kernel/README.md",
+    "kernel/runtime/current.py",
+    "kernel/runtime/memory.py",
+    "provenance/DEVELOPMENTAL_LINEAGE.md",
     "docs/META_DYNAMICS.md",
     "docs/FRONTIER_RESEARCH.md",
 ]
@@ -40,24 +42,25 @@ for name in ["01_OFE", "02_ECLIPSIS", "03_ARCANE_MAGICS", "04_VENUS"]:
     if not SOURCE_TREE_ONLY and not pdf.exists():
         errors.append("missing built PDF " + str(pdf))
 
-receipt = ROOT / "prototype/current-developmental-receipts/EDU16_WORLD_FEED_SAMPLING_POLICY_RESULT.md"
+receipt = ROOT / "provenance/developmental/EDU/EDU16_WORLD_FEED_SAMPLING_POLICY_RESULT.md"
 if not receipt.exists() or "1703" not in receipt.read_text() or "PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY" not in receipt.read_text():
     errors.append("EDU16 current positive receipt mismatch")
 
-negative = ROOT / "prototype/current-developmental-receipts/EDU17_CLAIM_LOCAL_PROVENANCE_AUDIT.md"
+negative = ROOT / "provenance/developmental/EDU/EDU17_CLAIM_LOCAL_PROVENANCE_AUDIT.md"
 if not negative.exists() or "INVALID_FOR_PROMOTION / PRESERVED_NEGATIVE" not in negative.read_text():
     errors.append("EDU17 preserved-negative audit mismatch")
 
-withhold = ROOT / "prototype/current-developmental-receipts/EDU17R1_FEED_ELIGIBILITY_RESULT.md"
+withhold = ROOT / "provenance/developmental/EDU/EDU17R1_FEED_ELIGIBILITY_RESULT.md"
 if not withhold.exists() or "WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION" not in withhold.read_text() or "MENTION != INCIDENCE" not in withhold.read_text():
     errors.append("EDU17R1 repair receipt mismatch")
 
-proto = (ROOT / "prototype/README.md").read_text(encoding="utf-8", errors="replace")
+current = (ROOT / "kernel/CURRENT_STATE.md").read_text(encoding="utf-8", errors="replace")
+lineage = (ROOT / "provenance/DEVELOPMENTAL_LINEAGE.md").read_text(encoding="utf-8", errors="replace")
 for token in ("R194", "R226", "IG10", "EDU16"):
-    if token not in proto:
-        errors.append(f"prototype README missing {token}")
-if "provenance/historical-runtime/R194" not in proto:
-    errors.append("prototype README does not locate historical R194 runtime in provenance")
+    if token not in current + lineage:
+        errors.append(f"current state/lineage missing {token}")
+if "provenance/historical-runtime/R194" not in lineage:
+    errors.append("lineage does not locate historical R194 runtime in provenance")
 
 meta = (ROOT / "docs/META_DYNAMICS.md").read_text(encoding="utf-8", errors="replace")
 for token in ("vacuous_relation", "Polyhedral", "meta-qualia", "Qualia", "Quantum"):
@@ -68,6 +71,8 @@ vocab = (ROOT / "NxRxI_VOCABULARY_CENTER.md").read_text(encoding="utf-8", errors
 for token in ("Naturalism_C", "Rationalism_C", "Illuminism_C", "Repository grammar constitution", "Proof-container law", "Causally lossless prose"):
     if token not in vocab:
         errors.append(f"Vocabulary/grammar center missing {token}")
+if "N x R x I = Name/Notation x Register x Index" in vocab:
+    errors.append("forbidden false NxRxI backronym")
 
 license_map = (ROOT / "licenses/README.md").read_text(encoding="utf-8", errors="replace")
 if "PolyForm Noncommercial" not in license_map or "not OSI Open Source" not in license_map:
