@@ -39,12 +39,15 @@ class EDU17R1IncidenceSubstrateAuditTests(unittest.TestCase):
         ):
             self.assertTrue(self.out[key], key)
 
-    def test_cross_layer_binder_remains_unadmitted(self):
-        self.assertFalse(self.out["admitted_cross_layer_binder"])
+    def test_cross_layer_binder_is_admitted_but_candidate_is_not_authored(self):
+        self.assertTrue(self.out["admitted_cross_layer_binder"])
+        self.assertFalse(self.out["learner_authored_cross_layer_binding_candidate"])
         self.assertEqual(
             self.out["status"],
-            "WITHHOLD_NEUTRAL_SUBSTRATE_PRESENT_CROSS_LAYER_BINDER_UNADMITTED",
+            "WITHHOLD_BINDER_ADMITTED_AWAITING_LEARNER_AUTHORED_CANDIDATE",
         )
+        self.assertIsNone(self.out["missing_operation"])
+        self.assertIn("endpoint/relation/discriminator", self.out["missing_learner_action"])
         self.assertIn("typed relation endpoints/binding", self.out["lowest_local_residual"])
         self.assertFalse(self.out["candidate_repair_emitted"])
         self.assertFalse(self.out["hidden_evaluation_exposed"])
