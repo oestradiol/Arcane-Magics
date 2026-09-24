@@ -99,6 +99,20 @@ class VMK2InvariantTests(unittest.TestCase):
         self.assertEqual(self.vm.state["target"].root, before)
         self.assertNotIn("n1", self.vm.consumed_nonces)
 
+    def test_authority_ids_cannot_be_rebound(self):
+        with self.assertRaises(VMK2Error):
+            self.vm.register_jurisdiction(
+                JurisdictionReceipt(
+                    "J", "other", "actor", frozenset({"target"}),
+                    frozenset({PolicyMode.PORTAL}),
+                    0, 100, ReceiptStatus.PASS,
+                )
+            )
+        with self.assertRaises(VMK2Error):
+            self.vm.register_policy(
+                TransitionPolicy("P", "actor", "target", PolicyMode.WORD, "J")
+            )
+
     def test_jurisdiction_denial_fails_closed(self):
         self.vm.register_policy(
             TransitionPolicy("BAD", "intruder", "target", PolicyMode.PORTAL, "J")
