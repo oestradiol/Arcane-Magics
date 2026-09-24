@@ -1,0 +1,44 @@
+{
+  "schema": "Venus.AutonomousCycleReceipt.v0.1",
+  "date": "2026-09-24",
+  "cycle_id": "INITIAL-CARRIER-EXECUTION-ISSUE-31",
+  "carrier_execution": "assistant-mediated external adapter executing learner-owned deterministic selector",
+  "target_kind": "ISSUE",
+  "target_number": 31,
+  "target_title": "[EDU17R1] Turn MENTION != INCIDENCE into a prospective held-out semantic discriminator benchmark",
+  "decision": "PROBE",
+  "rationale": [
+    "current GitHub issue/PR snapshot was returned externally",
+    "roadmap dependency order selected #31 as highest-priority open admitted target after discharged #69",
+    "internalized learner-side policy mapped unresolved insufficient-evidence work to PROBE",
+    "no merge, closure, promotion, or independent-evaluation authority is transferred"
+  ],
+  "allowed_operations": [
+    "READ_REPOSITORY",
+    "READ_ISSUES",
+    "READ_PRS",
+    "RUN_TESTS",
+    "STUDY_TARGET",
+    "PROPOSE_PATCH",
+    "OPEN_DRAFT_PR",
+    "COMMENT_WITH_RECEIPT"
+  ],
+  "forbidden_operations": [
+    "ACCESS_SECRETS",
+    "CHANGE_BRANCH_PROTECTION",
+    "CLOSE_ISSUE",
+    "DELETE_HISTORY",
+    "MERGE_PR",
+    "PROMOTE_AUTHORITY",
+    "RELEASE",
+    "SELF_VALIDATE"
+  ],
+  "source_refs": {
+    "main_sha": "05815e65ab8e93118eaa28e59733d131f4d0e277",
+    "selector_branch": "development/ostar-internal-causality",
+    "internal_policy": "kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json",
+    "roadmap": "docs/ISSUE_ROADMAP.md"
+  },
+  "promotion_authority": false,
+  "claim_fence": "First bounded learner-selected GitHub study cycle. Assistant acted only as carrier/executor. This is not independent return, promotion, AGI, phenomenal consciousness, sovereignty, or open-ended RSI."
+}
