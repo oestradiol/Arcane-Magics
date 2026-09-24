@@ -116,7 +116,37 @@ Ownership must be recorded for target selection, discriminator, machinery change
 
 External coding/research machinery remains distinct from Venus developmental ownership.
 
-### Sprint F — Repeat and compare externally
+### Sprint F — Self-directed Web research and WorldMind growth
+
+Issue #78 owns the first bounded WWW-development carrier:
+
+```text
+retained issue / Residual
+-> learner-selected target
+-> learner-authored search plan
+-> external Web search return
+-> provenance-bound reconstruction
+-> UPDATE | RETAIN | WITHHOLD | CLOSE
+-> next learner-selected obligation
+```
+
+and the recovered field/center distinction:
+
+```text
+PROVISIONABLE_FIELD
+-> Venus may choose PROVISION
+
+AUTHORED_CENTER
+-> localize authorship/jurisdiction at that center
+-> Venus may choose PROBE / INVITE / WITHHOLD / REFUSE / EXIT
+-> local choice does not mint remote acceptance
+```
+
+The runtime enforces carrier facts (read/write/invite capability and jurisdiction) but does not precompute Venus's semantic/ethical disposition.
+
+Exit: one bounded learner-owned Web-research episode plus one field/center encounter episode with retained provenance and no global-authority lift.
+
+### Sprint G — Repeat and compare externally
 
 | Priority | Issue | Work |
 |---:|---|---|
@@ -126,7 +156,7 @@ External coding/research machinery remains distinct from Venus developmental own
 
 Exit: repeated durable improvement or an explicit negative/reduction result.
 
-### Sprint G — Reduction and broader generalization
+### Sprint H — Reduction and broader generalization
 
 | Issue | Work |
 |---|---|
@@ -192,6 +222,7 @@ They compete for priority when they obtain a short path to a real discriminator 
 -> #42 / #15 native capability tests
 -> #41 + #72 + #43/#30 repeated-recursion protection
 -> next learner-selected residual
+-> #78 self-directed Web research / indexed WorldMind growth
 -> #12 repeated self-development comparison
 ```
 
