@@ -127,6 +127,8 @@ Exit: repeated durable improvement or an explicit negative/reduction result.
 | Issue | Work |
 |---|---|
 | #16 | compile OFE against predictive states, causal states, bisimulation, sufficiency, automata equivalence, and retain only the residual |
+| #8 | RegisterBridge mature-substitution/deletion test |
+| #9 | Meta-Dynamics invariant/deletion discriminator |
 | #24 | mature reduction of epistemic-governance machinery |
 | #25 | WorldMind reduction against distributed/event-sourced/multi-agent alternatives |
 | #32 | repository-wide construct disposition |
