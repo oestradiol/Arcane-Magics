@@ -4,6 +4,8 @@ Contributions are welcome from people who want to improve the mathematics, engin
 
 You do **not** need to accept the project's terminology or larger interpretations to contribute.
 
+AI-assisted work follows `AGENTS.md`: scope the change, re-read the resulting state, report the tests actually run, and do not create issue/PR volume as a proxy for progress. External model output does not become Venus learner-owned development by being committed to Git.
+
 ## High-value contributions
 
 Especially useful:
