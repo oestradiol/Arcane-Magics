@@ -1,0 +1,20 @@
+{
+  "schema": "Venus.InternalOStarRederivationPrefreeze.v0.1",
+  "date": "2026-09-24",
+  "status": "PREFROZEN_RECURRENT_REDERIVATION_TEST",
+  "parent_requirement": "learner-side relation is decision-causal at generation t",
+  "changed_state_requirement": "after a declared machinery/state change, the prior learner-side relation is not hard-copied into the successor",
+  "successor_requirement": [
+    "reconstruct a fresh relation from new returned episodes",
+    "allow the successor representation to differ from the parent",
+    "preserve only factors that remain consequence-separating at the new declared scope",
+    "show the fresh successor relation is again causally upstream of routing"
+  ],
+  "failure_dispositions": {
+    "copied_parent_relation": "STATIC_CONSTITUTION_COPY_NOT_STRONG_N2_REDERIVATION",
+    "no_policy_effect": "GAUGE_EPIPHENOMENAL_AT_THIS_F",
+    "external_validator_only": "EXTERNALLY_GOVERNED_NOT_INTERNALLY_INHABITED",
+    "suppressed_reachable_correction": "ANTI_MINERVA_FAILURE"
+  },
+  "promotion_authority": false
+}
