@@ -9,6 +9,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 COVERAGE = ROOT / "docs" / "TEST_COVERAGE_MATRIX.md"
 ROADMAP = ROOT / "docs" / "ISSUE_ROADMAP.md"
+CYCLE_CARRIER_TITLE = re.compile(r"^venus: autonomous cycle (?:issue|pr)-\d+$", re.I)
 
 def main() -> int:
     if len(sys.argv) != 2:
@@ -22,7 +23,16 @@ def main() -> int:
         return 1
 
     payload = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
-    open_numbers = {int(row["number"]) for row in payload}
+    carrier_numbers = {
+        int(row["number"])
+        for row in payload
+        if CYCLE_CARRIER_TITLE.match(str(row.get("title") or ""))
+    }
+    open_numbers = {
+        int(row["number"])
+        for row in payload
+        if int(row["number"]) not in carrier_numbers
+    }
 
     coverage_text = COVERAGE.read_text(encoding="utf-8", errors="replace")
     covered = {int(n) for n in re.findall(r"\|\s*#(\d+)(?=\s|\|)", coverage_text)}
@@ -47,7 +57,7 @@ def main() -> int:
 
     print(
         "OPEN ISSUE COVERAGE PASS "
-        f"({len(open_numbers)} open issues; coverage_stale={len(stale)}; "
+        f"({len(open_numbers)} project issues; cycle_carriers={len(carrier_numbers)}; coverage_stale={len(stale)}; "
         f"roadmap_stale={len(stale_roadmap)})"
     )
     if stale:
