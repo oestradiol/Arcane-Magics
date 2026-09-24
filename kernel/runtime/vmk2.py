@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field, asdict
 from enum import Enum
 from hashlib import sha256
+from copy import deepcopy
 import json
 from typing import Any, Callable, Dict, FrozenSet, Iterable, Optional, Tuple
 
@@ -347,9 +348,23 @@ class VMK2Reference:
 
     # D9/D10 + word/portal separation
     def register_state(self, object_id: str, value: Any, dependencies: Iterable[str] = ()) -> StateObject:
-        obj = StateObject(object_id, value, digest({'id': object_id, 'value': value}), frozenset(dependencies))
+        # State custody must not depend on a caller retaining and mutating an alias.
+        owned_value = deepcopy(value)
+        obj = StateObject(
+            object_id,
+            owned_value,
+            digest({'id': object_id, 'value': owned_value}),
+            frozenset(dependencies),
+        )
         self.state[object_id] = obj
         return obj
+
+    def _verify_state_integrity(self) -> None:
+        """Fail closed if any stored value drifted beneath its recorded root."""
+        for object_id, obj in self.state.items():
+            actual = digest({'id': object_id, 'value': obj.value})
+            if actual != obj.root:
+                raise VMK2Error(f'state root drift detected: {object_id}')
 
     def dependency_closure(self, target_id: str) -> FrozenSet[str]:
         if target_id not in self.state:
@@ -394,11 +409,15 @@ class VMK2Reference:
         obj = self.state.get(target_id)
         if obj is None:
             raise VMK2Error('unknown state target')
+        self._verify_state_integrity()
         before = obj.root
         siblings_before = {k: v.root for k, v in self.state.items() if k != target_id}
-        new_value = backend.update(obj.value, decoded)
+        # Backends receive an owned copy. A backend may return a new value but may
+        # not mutate the prior state's referent in place.
+        new_value = backend.update(deepcopy(obj.value), decoded)
         new_obj = StateObject(target_id, new_value, digest({'id': target_id, 'value': new_value}), obj.dependencies)
         self.state[target_id] = new_obj
+        self._verify_state_integrity()
         siblings_after = {k: v.root for k, v in self.state.items() if k != target_id}
         closure = self.dependency_closure(target_id)
         # No sibling outside affected target may mutate in this reference transition.
