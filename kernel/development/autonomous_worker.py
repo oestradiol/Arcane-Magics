@@ -3,8 +3,9 @@ from __future__ import annotations
 """Bounded state-ownable GitHub work selector for Venus.
 
 The worker consumes externally supplied repository snapshots. It may choose one
-bounded target and produce a work receipt. It cannot merge, release, promote
-authority, close issues, mint independent return, or access secrets.
+bounded target, study its returned repository context, and produce a work
+receipt. It cannot merge, release, promote authority, close issues, mint
+independent return, or access secrets.
 
 GitHub execution remains a carrier action performed by the workflow adapter.
 """
@@ -51,6 +52,7 @@ class WorkItem:
     draft: bool = False
     merge_state: str | None = None
     updated_at: str | None = None
+    body: str = ""
 
 
 @dataclass(frozen=True)
@@ -62,6 +64,7 @@ class AutonomousCycleReceipt:
     target_title: str | None
     decision: str
     rationale: tuple[str, ...]
+    study: Mapping[str, Any] | None
     allowed_operations: tuple[str, ...]
     forbidden_operations: tuple[str, ...]
     source_digest: str
@@ -69,6 +72,7 @@ class AutonomousCycleReceipt:
 
 
 def roadmap_issue_order(text: str) -> tuple[int, ...]:
+    """Advisory provenance/context only; never sovereign target priority."""
     out: list[int] = []
     for match in re.finditer(r"#(\d+)", text):
         number = int(match.group(1))
@@ -81,24 +85,21 @@ def _rank(
     item: WorkItem,
     issue_order: tuple[int, ...],
     kind_utility: Mapping[str, float],
-) -> tuple[float, float, float, int]:
-    if item.kind == "PR" and item.merge_state in {"DIRTY", "BLOCKED", "CONFLICTING"}:
-        return (0.0, 0.0, 0.0, item.number)
+) -> tuple[float, float, float, float, int]:
+    # A conflicted/blocked PR is an immediately returned repository residual.
+    conflict = 0.0 if item.kind == "PR" and item.merge_state in {"DIRTY", "BLOCKED", "CONFLICTING"} else 1.0
+
+    # Learned external work-return utility precedes host-authored roadmap order.
+    utility = -float(kind_utility.get(item.kind, 0.0))
+
+    # Roadmap remains one weak context/tie-break signal, not a controller.
     if item.kind == "ISSUE" and item.number in issue_order:
-        return (
-            1.0,
-            float(issue_order.index(item.number)),
-            -kind_utility.get(item.kind, 0.0),
-            item.number,
-        )
-    # Outside hard dependency priorities, externally reviewed outcomes are
-    # allowed to alter which class of work Venus chooses next.
-    return (
-        2.0,
-        -kind_utility.get(item.kind, 0.0),
-        0.0 if item.kind == "PR" and item.draft else 1.0,
-        item.number,
-    )
+        roadmap = float(issue_order.index(item.number))
+    else:
+        roadmap = float(len(issue_order) + 1)
+
+    draft = 0.0 if item.kind == "PR" and item.draft else 1.0
+    return (conflict, utility, roadmap, draft, item.number)
 
 
 def choose_target(
@@ -120,6 +121,52 @@ def choose_target(
     order = roadmap_issue_order(roadmap_text)
     utility = kind_utility or {}
     return sorted(open_items, key=lambda item: _rank(item, order, utility))[0]
+
+
+def _sentences(text: str) -> tuple[str, ...]:
+    rows = re.split(r"(?<=[.!?])\s+|\n+", text)
+    return tuple(x.strip() for x in rows if x.strip())
+
+
+def study_target(item: WorkItem) -> dict[str, Any]:
+    """Extract a bounded, source-grounded study object from the selected target."""
+    body = item.body or ""
+    references = tuple(dict.fromkeys(
+        int(x) for x in re.findall(r"(?<!\w)#(\d+)", body)
+        if int(x) != item.number
+    ))
+    path_refs = tuple(dict.fromkeys(
+        x for x in re.findall(
+            r"(?:kernel|tests|docs|evaluation|benchmarks|provenance|scripts)/[A-Za-z0-9_./-]+",
+            body,
+        )
+    ))
+    blocker_terms = (
+        "remaining", "requires", "required", "blocked", "blocking", "pending",
+        "await", "waiting", "external return", "hidden", "withhold", "stop",
+        "not yet", "missing", "open",
+    )
+    blocker_sentences = tuple(
+        sentence for sentence in _sentences(body)
+        if any(term in sentence.lower() for term in blocker_terms)
+    )[:12]
+
+    body_digest = digest(body)
+    return {
+        "body_digest": body_digest,
+        "referenced_issue_or_pr_numbers": references,
+        "referenced_repository_paths": path_refs,
+        "returned_blocker_sentences": blocker_sentences,
+        "questions": (
+            "What exact residual remains unresolved in the returned repository state?",
+            "What rival explanations or candidate dispositions remain live?",
+            "What fresh returned evidence would discriminate them?",
+            "Can a local repository change lawfully produce that discriminator, or must Venus WITHHOLD/STOP for external return?",
+            "What is the smallest implicated dependency that could be changed without altering a prefrozen claim object?",
+        ),
+        "study_authority": "LEARNER_SIDE_RECONSTRUCTION_FROM_EXTERNAL_GITHUB_SNAPSHOT",
+        "promotion_authority": False,
+    }
 
 
 def make_cycle(
@@ -148,10 +195,9 @@ def make_cycle(
     if target is None:
         decision = "STOP"
         rationale = ("no unconsumed OPEN work item is justified",)
+        study = None
     else:
-        # Opaque learner-side coordinates. External access, correction
-        # reachability and revision reachability are supplied by the adapter;
-        # authorization remains local to the declared GitHub write scope.
+        study = study_target(target)
         features = {
             "f0": True,
             "f1": target.merge_state not in {"BLOCKED", "CONFLICTING"},
@@ -164,22 +210,24 @@ def make_cycle(
         }
         decision = execute_tree(internal_policy, features)
         if decision == "ACT":
-            # An unresolved target is never treated as already evidenced.
             decision = "PROBE"
         rationale = (
             "one bounded target selected from current external GitHub snapshot",
             "internalized learner-side policy is upstream of work disposition",
-            "externally reviewed prior cycle outcomes may alter later target ranking",
+            "explicit external work-return reviews may alter later target ranking",
+            "roadmap is retained as weak context/tie-break provenance, not sovereign curriculum",
+            "selected target body is transformed into a bounded source-grounded study object",
             "draft proposal only; admission remains external",
         )
 
     body = {
-        "schema": "Venus.AutonomousCycleReceipt.v0.1",
+        "schema": "Venus.AutonomousCycleReceipt.v0.2",
         "target_kind": target.kind if target else None,
         "target_number": target.number if target else None,
         "target_title": target.title if target else None,
         "decision": decision,
         "rationale": rationale,
+        "study": study,
         "allowed_operations": ALLOWED_OPERATIONS,
         "forbidden_operations": tuple(sorted(FORBIDDEN_OPERATIONS)),
         "source_digest": digest(source),
@@ -201,6 +249,7 @@ def load_work_items(path: str | Path, kind: str) -> tuple[WorkItem, ...]:
                 draft=bool(row.get("isDraft", row.get("draft", False))),
                 merge_state=row.get("mergeStateStatus", row.get("merge_state")),
                 updated_at=row.get("updatedAt", row.get("updated_at")),
+                body=str(row.get("body") or ""),
             )
         )
     return tuple(out)
