@@ -6,7 +6,7 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-SKIP_DIRS = {'.git', 'arxiv_packages', 'tex_bundles'}
+SKIP_DIRS = {'.git', 'arxiv_packages', 'tex_bundles', 'archaeology', 'current-developmental-receipts'}
 MATH_COMMAND = re.compile(r'\\(boxed|mathcal|operatorname|begin|end|leftrightarrow|rightarrow|nrightarrow|Gamma|Delta|delta|rho|Sigma|Phi|neq|sim|quad|land)\\b')
 LINK = re.compile(r'\\[[^\\]]+\\]\\(([^)]+)\\)')
 
@@ -65,8 +65,28 @@ def inspect(md: Path) -> list[str]:
 
     return errors
 
+def public_surface(path: Path) -> bool:
+    rel = path.relative_to(ROOT)
+    parts = rel.parts
+    if len(parts) == 1:
+        return True
+    if parts[0] in {'docs', 'review', 'licenses'}:
+        return True
+    if parts[0] == 'monographs' and path.name == 'README.md':
+        return True
+    if parts[0] == 'preprints' and parts[1] == 'lesswrong':
+        return True
+    if rel.as_posix() in {
+        'prototype/README.md',
+        'prototype/CURRENT_STATE.md',
+        'prototype/stable-executable/README.md',
+    }:
+        return True
+    return False
+
+
 def main() -> int:
-    files = [p for p in ROOT.rglob('*.md') if not skipped(p)]
+    files = [p for p in ROOT.rglob('*.md') if not skipped(p) and public_surface(p)]
     errors: list[str] = []
     for md in files:
         errors.extend(inspect(md))
