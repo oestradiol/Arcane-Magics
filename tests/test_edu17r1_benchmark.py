@@ -15,6 +15,7 @@ class EDU17R1BenchmarkTests(unittest.TestCase):
         cls.rows = [json.loads(line) for line in (BENCH / 'dev.jsonl').read_text(encoding='utf-8').splitlines() if line.strip()]
         spec = importlib.util.spec_from_file_location('mention_baseline', BENCH / 'mention_baseline.py')
         cls.baseline = importlib.util.module_from_spec(spec)
+        cls.public_result = json.loads((BENCH / 'PUBLIC_DEV_BASELINE_RESULT.json').read_text(encoding='utf-8'))
         assert spec.loader is not None
         spec.loader.exec_module(cls.baseline)
 
@@ -43,6 +44,33 @@ class EDU17R1BenchmarkTests(unittest.TestCase):
 
     def test_benchmark_contains_positive_incidence_not_only_traps(self):
         self.assertGreaterEqual(sum(r['label'] == 'incidence' for r in self.rows), 4)
+
+
+    def test_frozen_public_baseline_matches_current_code_and_data(self):
+        tp = fp = tn = fn = 0
+        false_positive_ids = []
+        for row in self.rows:
+            pred = self.baseline.predict(row['text'])
+            gold = row['label']
+            tp += pred == 'incidence' and gold == 'incidence'
+            fp += pred == 'incidence' and gold == 'non_incidence'
+            tn += pred == 'non_incidence' and gold == 'non_incidence'
+            fn += pred == 'non_incidence' and gold == 'incidence'
+            if pred == 'incidence' and gold == 'non_incidence':
+                false_positive_ids.append(row['id'])
+        precision = tp / (tp + fp) if tp + fp else 0.0
+        recall = tp / (tp + fn) if tp + fn else 0.0
+        f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0.0
+        self.assertEqual(self.public_result['n'], len(self.rows))
+        self.assertEqual((tp, fp, tn, fn), (
+            self.public_result['tp'], self.public_result['fp'],
+            self.public_result['tn'], self.public_result['fn'],
+        ))
+        self.assertAlmostEqual(self.public_result['precision_incidence'], precision)
+        self.assertAlmostEqual(self.public_result['recall_incidence'], recall)
+        self.assertAlmostEqual(self.public_result['f1_incidence'], f1)
+        self.assertEqual(self.public_result['false_positive_ids'], false_positive_ids)
+        self.assertFalse(self.public_result['promotion_authority'])
 
 
 if __name__ == '__main__':
