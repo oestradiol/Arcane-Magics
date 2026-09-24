@@ -1,0 +1,96 @@
+{
+  "schema": "Venus.SOTAWatchState.v0.1",
+  "generated_from": "docs/SOTA_WATCH.md + docs/EVALUATION_REGISTRY.json",
+  "policy": "Freshness is a reconciliation trigger, not evidence that the referenced claim is true.",
+  "entries": [
+    {
+      "id": "navier_stokes_status",
+      "area": "mathematics/frontier-status",
+      "last_checked": "2026-09-24",
+      "stale_after_days": 3,
+      "status": "RECONCILE",
+      "sources": [
+        "https://openai.com/index/navier-stokes-solution/",
+        "https://www.claymath.org/news/navier-stokes-announcement/"
+      ],
+      "distinction": "claimed solution != independent validation != formal verification alone != prize disposition"
+    },
+    {
+      "id": "darwin_godel_machine",
+      "area": "self-improvement",
+      "last_checked": "2026-09-24",
+      "stale_after_days": 14,
+      "status": "WATCH",
+      "sources": [
+        "https://arxiv.org/abs/2505.22954"
+      ],
+      "distinction": "tracked comparator != Venus result"
+    },
+    {
+      "id": "alphaevolve",
+      "area": "algorithm-discovery",
+      "last_checked": "2026-09-24",
+      "stale_after_days": 14,
+      "status": "WATCH",
+      "sources": [
+        "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+      ],
+      "distinction": "vendor-reported result != matched Venus comparison"
+    },
+    {
+      "id": "metr_time_horizon",
+      "area": "long-horizon-agency",
+      "last_checked": "2026-09-24",
+      "stale_after_days": 14,
+      "status": "WATCH",
+      "sources": [
+        "https://metr.org/time-horizons/"
+      ],
+      "distinction": "benchmark frontier != architectural causal attribution"
+    },
+    {
+      "id": "arc_agi",
+      "area": "generalization",
+      "last_checked": "2026-09-24",
+      "stale_after_days": 30,
+      "status": "WATCH",
+      "sources": [
+        "https://arcprize.org/"
+      ],
+      "distinction": "benchmark score != learner ownership"
+    },
+    {
+      "id": "paperbench",
+      "area": "research-replication",
+      "last_checked": "2026-09-24",
+      "stale_after_days": 30,
+      "status": "WATCH",
+      "sources": [
+        "https://openai.com/index/paperbench/"
+      ],
+      "distinction": "replication score != autonomous science"
+    },
+    {
+      "id": "longmemeval",
+      "area": "memory",
+      "last_checked": "2026-09-24",
+      "stale_after_days": 30,
+      "status": "WATCH",
+      "sources": [
+        "https://arxiv.org/abs/2605.12493"
+      ],
+      "distinction": "memory benchmark != developmental learning"
+    },
+    {
+      "id": "causalgame",
+      "area": "causal-science",
+      "last_checked": "2026-09-24",
+      "stale_after_days": 30,
+      "status": "WATCH",
+      "sources": [
+        "https://arxiv.org/abs/2607.04293"
+      ],
+      "distinction": "causal benchmark != general research competence"
+    }
+  ]
+}
