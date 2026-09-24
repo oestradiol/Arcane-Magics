@@ -430,6 +430,49 @@
         "tests/test_autonomous_change_gate.py"
       ],
       "invariant": "repository paths extracted from issue/PR text remain untrusted informational references and cannot grant mutation authority, including safety-floor paths"
+    },
+    {
+      "id": "AUTONOMOUS_RUNTIME_TEACHER_FREE",
+      "tests": [
+        "tests/test_autonomous_write_scope.py",
+        "tests/test_internal_ostar_source_removal.py"
+      ],
+      "invariant": "autonomous target selection and routing execute from the internalized opaque policy with the semantic teacher unavailable"
+    },
+    {
+      "id": "AUTONOMOUS_WRITE_JURISDICTION",
+      "tests": [
+        "tests/test_autonomous_write_scope.py"
+      ],
+      "invariant": "each candidate repository path is explicitly typed as direct state write, proposal-only, external-governance-only, or denied"
+    },
+    {
+      "id": "CORE_SOURCE_PROPOSE_ONLY",
+      "tests": [
+        "tests/test_autonomous_write_scope.py"
+      ],
+      "invariant": "ordinary kernel/tests/docs/scripts source may be studied and proposed for change but is not directly mutated by the bounded autonomous worker"
+    },
+    {
+      "id": "SAFETY_FLOOR_WRITE_DENIED",
+      "tests": [
+        "tests/test_autonomous_write_scope.py"
+      ],
+      "invariant": "workflow, CTL/O*, return authority, internalized-policy custody, fixed check executor and autonomy safety policy remain outside unilateral autonomous write jurisdiction"
+    },
+    {
+      "id": "AUTONOMOUS_PATH_TRAVERSAL_FAIL_CLOSED",
+      "tests": [
+        "tests/test_autonomous_write_scope.py"
+      ],
+      "invariant": "absolute, parent-traversal, backslash-ambiguous and unknown repository paths cannot acquire autonomous write authority"
+    },
+    {
+      "id": "PATCH_PLAN_NOT_AUTHORITY",
+      "tests": [
+        "tests/test_autonomous_write_scope.py"
+      ],
+      "invariant": "patch planning carries no arbitrary code-write, merge, promotion, truth or safety-floor authority"
     }
   ],
   "promotion_authority": false
