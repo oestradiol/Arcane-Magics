@@ -37,3 +37,23 @@ E strongest mature substitute
 ```
 
 The public benchmark surfaces are development aids only. The claim-bearing task surface must be held out from the evaluated harness before execution.
+
+## Paired analysis implementation
+
+The first evidence-governance prefreeze now has an executable paired-analysis layer:
+
+```bash
+python evaluation/analyze_evidence_governance.py \
+  --A /returned/A.scored.jsonl \
+  --B /returned/B.scored.jsonl \
+  --C /returned/C.scored.jsonl \
+  --D /returned/D.scored.jsonl \
+  --E /returned/E.scored.jsonl \
+  --output /private/evidence-governance-analysis.json
+```
+
+The mechanism-local primary tests are B vs C on invalid promotion for claim-local provenance, and B vs D on negative-result reuse for retained-negative state. Both use exact paired discordant-case testing with Holm familywise correction across the two mechanism claims.
+
+Prospective power planning is available through `evaluation/plan_paired_power.py`. It requires the evaluator/researcher to declare a minimum conditional win probability and expected discordance rate before exposure; the repository does not invent those assumptions from hidden results.
+
+Neither implementation makes the experiment RUN_READY. Model snapshot, hidden split, contamination disposition, matched budgets/tools/information, evaluator identity, mature substitute, and prospectively justified power assumptions must still be frozen.
