@@ -133,6 +133,10 @@ class AutonomousWorkerTests(unittest.TestCase):
         self.assertIn("MERGE_PR", FORBIDDEN_OPERATIONS)
         self.assertIn("PROMOTE_AUTHORITY", FORBIDDEN_OPERATIONS)
 
+    def test_repository_carrier_has_no_field_provision_operator(self):
+        self.assertNotIn("PROVISION", ALLOWED_OPERATIONS)
+        self.assertNotIn("INVITE", ALLOWED_OPERATIONS)
+
     def test_worker_cannot_close_issue_as_success_side_effect(self):
         self.assertNotIn("CLOSE_ISSUE", ALLOWED_OPERATIONS)
         self.assertIn("CLOSE_ISSUE", FORBIDDEN_OPERATIONS)
