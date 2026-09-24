@@ -8,6 +8,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 COVERAGE = ROOT / "docs" / "TEST_COVERAGE_MATRIX.md"
+ROADMAP = ROOT / "docs" / "ISSUE_ROADMAP.md"
 
 def main() -> int:
     if len(sys.argv) != 2:
@@ -16,26 +17,44 @@ def main() -> int:
     if not COVERAGE.exists():
         print("OPEN ISSUE COVERAGE FAIL: missing docs/TEST_COVERAGE_MATRIX.md")
         return 1
+    if not ROADMAP.exists():
+        print("OPEN ISSUE COVERAGE FAIL: missing docs/ISSUE_ROADMAP.md")
+        return 1
 
     payload = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
     open_numbers = {int(row["number"]) for row in payload}
-    text = COVERAGE.read_text(encoding="utf-8", errors="replace")
-    covered = {int(n) for n in re.findall(r"\|\s*#(\d+)(?=\s|\|)", text)}
 
-    missing = sorted(open_numbers - covered)
+    coverage_text = COVERAGE.read_text(encoding="utf-8", errors="replace")
+    covered = {int(n) for n in re.findall(r"\|\s*#(\d+)(?=\s|\|)", coverage_text)}
+
+    roadmap_text = ROADMAP.read_text(encoding="utf-8", errors="replace")
+    roadmap_numbers = {int(n) for n in re.findall(r"#(\d+)", roadmap_text)}
+
+    missing_coverage = sorted(open_numbers - covered)
+    missing_roadmap = sorted(open_numbers - roadmap_numbers)
     stale = sorted(covered - open_numbers)
+    stale_roadmap = sorted(roadmap_numbers - open_numbers)
 
-    if missing:
+    if missing_coverage or missing_roadmap:
         print("OPEN ISSUE COVERAGE FAIL")
-        print("unmapped open issues:", ", ".join(f"#{n}" for n in missing))
+        if missing_coverage:
+            print("unmapped open issues in TEST_COVERAGE_MATRIX:",
+                  ", ".join(f"#{n}" for n in missing_coverage))
+        if missing_roadmap:
+            print("unmapped open issues in ISSUE_ROADMAP:",
+                  ", ".join(f"#{n}" for n in missing_roadmap))
         return 1
 
     print(
         "OPEN ISSUE COVERAGE PASS "
-        f"({len(open_numbers)} open issues; {len(stale)} mapped rows now closed/stale)"
+        f"({len(open_numbers)} open issues; coverage_stale={len(stale)}; "
+        f"roadmap_stale={len(stale_roadmap)})"
     )
     if stale:
-        print("stale mapped rows (non-blocking):", ", ".join(f"#{n}" for n in stale))
+        print("stale coverage rows (non-blocking):", ", ".join(f"#{n}" for n in stale))
+    if stale_roadmap:
+        print("closed issues still mentioned for history (non-blocking):",
+              ", ".join(f"#{n}" for n in stale_roadmap))
     return 0
 
 if __name__ == "__main__":
