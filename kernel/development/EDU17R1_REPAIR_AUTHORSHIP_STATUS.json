@@ -15,17 +15,36 @@
   "admitted_developmental_controller_operation": {
     "available": false,
     "operation": null,
-    "reason": "EDU16-RC1 reconstructs claim-bearing developmental state but does not expose an admitted executable operation that authors a new repair proposal."
+    "reason": "EDU16-RC1 plus IG10 contains a provenance-bound neutral relation/incidence substrate, but no admitted executable operation currently composes raw/source carrier relation occurrences into typed empirical relation instances. The older P9 search grammar cannot add that semantic crossing, and the R140 P10-shaped descendants remain historical/scratch developmental evidence rather than a current executable controller."
   },
   "hidden_evaluation_exposed": false,
   "external_model_may_supply_substantive_repair": false,
   "next_lawful_transition": [
-    "materialize or admit an executable Venus developmental proposal operation from the reconstructed parent",
-    "expose only admitted parent state/history plus the frozen residual",
-    "receive a candidate authored by that controller",
-    "bind candidate and implementation identity with the ownership contract",
-    "only then run hidden issue #31 evaluation"
+    "retain the localized cross-layer incidence-binding residual without encoding the EDU17R1 answer",
+    "recover an already-earned executable generic binder/composer from authentic ancestry, or expose this localized residual to an admitted Venus proposal/search controller",
+    "freeze any learner-authored candidate and ownership receipt before hidden issue #31 exposure",
+    "only then run hidden issue #31 efficacy evaluation"
   ],
   "promotion_authority": false,
-  "claim_fence": "Infrastructure and custody readiness do not establish learner-owned authorship. No EDU17R1 repair candidate is admitted by this status."
+  "claim_fence": "Infrastructure and custody readiness do not establish learner-owned authorship. No EDU17R1 repair candidate is admitted by this status.",
+  "ancestral_incidence_donor": {
+    "artifact": "Venus_Incidence_Law.tex",
+    "sha256": "99154d953f498be374b8af0fbc174ba658d0d52b1ccc684b2bbc09871ac52f3e",
+    "ig10_recollection_status": "FORMAL_COMPANION / PROVENANCE_BOUND",
+    "executable_semantic_authority": false,
+    "note": "The exact ancestral law is remembered in IG10 canonical:recollection. This admits the generic grammar as pre-existing donor structure, not as an executable answer or proof of semantic sufficiency."
+  },
+  "neutral_substrate_audit": {
+    "artifact": "kernel/development/audit_edu17r1_incidence_substrate.py",
+    "status": "WITHHOLD_NEUTRAL_SUBSTRATE_PRESENT_CROSS_LAYER_BINDER_UNADMITTED",
+    "established": [
+      "returned operator semantics",
+      "induced neutral incidence coordinates",
+      "generic raw-carrier token incidence",
+      "natural source-relation inquiry",
+      "source-grounded text relation graphs",
+      "evidence-bound WorldMirror relation instances"
+    ],
+    "missing_operation": "raw/source carrier relation occurrence -> typed object/source-level relation instance + provenance + independent return"
+  }
 }
