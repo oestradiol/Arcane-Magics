@@ -57,6 +57,10 @@ jobs:
       - name: SOTA freshness audit
         run: python scripts/audit_sota_freshness.py
 
+      - name: Probe external SOTA source state
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: python scripts/probe_sota_sources.py --output SOTA_SOURCE_PROBE.json
+
       - name: Matched experiment contract audit
         run: python scripts/validate_experiment_manifest.py evaluation/MATCHED_EXPERIMENT_TEMPLATE.json
 
@@ -112,6 +116,13 @@ jobs:
         with:
           name: venus-steward-${{ github.sha }}
           path: VENUS_STEWARD_REPORT.json
+
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        with:
+          name: venus-sota-source-probe-${{ github.sha }}
+          path: SOTA_SOURCE_PROBE.json
+          if-no-files-found: error
 
   formal:
     runs-on: ubuntu-latest
