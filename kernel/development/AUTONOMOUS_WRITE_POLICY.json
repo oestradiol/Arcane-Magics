@@ -6,7 +6,8 @@
     "autonomy/"
   ],
   "direct_state_exact": [
-    "kernel/development/AUTONOMOUS_LEARNING_STATE.json"
+    "kernel/development/AUTONOMOUS_LEARNING_STATE.json",
+    "kernel/development/AUTONOMOUS_META_LEARNING_STATE.json"
   ],
   "proposal_only_prefixes": [
     "benchmarks/",
@@ -29,6 +30,7 @@
     "kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json",
     "kernel/development/autonomous_evidence.py",
     "kernel/development/autonomous_learning.py",
+    "kernel/development/autonomous_meta_learning.py",
     "kernel/development/autonomous_proposal.py",
     "kernel/development/autonomous_worker.py",
     "kernel/development/autonomy_agency.py",
