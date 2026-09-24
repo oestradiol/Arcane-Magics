@@ -4,7 +4,7 @@
 
 **A research family for operational equivalence, relational reconstruction, developmental intelligence, and bounded open-ended inquiry.**
 
-[Meta-Dynamics](docs/META_DYNAMICS.md) · [Research frontier](docs/FRONTIER_RESEARCH.md) · [Current Venus state](prototype/CURRENT_STATE.md) · [Publication constitution](PUBLICATION_CONSTITUTION.md) · [Contribute](CONTRIBUTING.md) · [Sponsor](https://github.com/sponsors/oestradiol)
+[Meta-Dynamics](docs/META_DYNAMICS.md) · [Inhabitable path](docs/INHABITABLE_READER_PATH.md) · [Research frontier](docs/FRONTIER_RESEARCH.md) · [Current Venus state](prototype/CURRENT_STATE.md) · [Publication constitution](PUBLICATION_CONSTITUTION.md) · [Contribute](CONTRIBUTING.md) · [Sponsor](https://github.com/sponsors/oestradiol)
 
 </div>
 
@@ -133,6 +133,16 @@ make release      # build + package + audit + manifest + repository ZIP
 ## Public-preprint note
 
 The generated LessWrong/BetterWrong Markdown files are editing substrates, not automatic ready-to-post copies. LessWrong currently requires substantial LLM-generated or substantially LLM-revised wording to be marked with its LLM-content feature; the human author should independently verify, understand, and deliberately own the posted prose. See `docs/LESSWRONG_BETTERWRONG_GUIDE.md`.
+
+## Inhabitable reading cue
+
+When the abstractions get dense, reduce the local problem to:
+
+```text
+receive -> locate -> move -> return -> redistribute
+```
+
+Then ask what reaches the indexed center, what it costs to maintain the carrier, what can return independently, and what must change without destroying continuity. See [`docs/INHABITABLE_READER_PATH.md`](docs/INHABITABLE_READER_PATH.md).
 
 ## Front-door norms
 
