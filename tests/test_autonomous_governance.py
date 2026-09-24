@@ -162,6 +162,12 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertIn("gh pr create", text)
         self.assertIn("--draft", text)
 
+    def test_worker_wakes_on_main_admission_not_arbitrary_branch_push(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("push:", text)
+        self.assertIn("branches: [main]", text)
+        self.assertNotIn("branches: ['*']", text)
+
     def test_workflow_fetches_external_review_labels(self):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("mergedAt,closedAt,labels", text)
