@@ -8,7 +8,7 @@ for needed in [
     'README.md','PUBLICATION_CONSTITUTION.md','NxRxI_VOCABULARY_CENTER.md','LICENSE',
     'licenses/CC-BY-NC-SA-4.0.txt','licenses/PolyForm-Noncommercial-1.0.0.txt',
     'review/DEVILS_AUDIT_CHECKLIST.md','review/PROSE_AND_DIDACTICS_AUDIT.md',
-    'review/REVIEWER_AND_RESEARCHER_PROTOCOL.md','REPOSITORY_AUTHORITY_BOUNDARY.md','prototype/CURRENT_STATE.md']:
+    'review/REVIEWER_AND_RESEARCHER_PROTOCOL.md','REPOSITORY_AUTHORITY_BOUNDARY.md','prototype/CURRENT_STATE.md','docs/META_DYNAMICS.md']:
     if not (ROOT/needed).exists(): errors.append('missing '+needed)
 for name in ['01_OFE','02_ECLIPSIS','03_ARCANE_MAGICS','04_VENUS']:
     tex=ROOT/'monographs'/name/'main.tex'
@@ -32,6 +32,16 @@ if not wr.exists() or 'WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION' not in wr.read_
 # exact stable-vs-current separation
 pr=(ROOT/'prototype/README.md').read_text(errors='replace') if (ROOT/'prototype/README.md').exists() else ''
 if 'R00' not in pr or 'R194' not in pr or 'EDU16' not in pr or 'EDU17R1' not in pr: errors.append('prototype README does not distinguish stable executable and current developmental authority')
+
+# Meta-Dynamics live-root audit
+md = (ROOT/'docs/META_DYNAMICS.md').read_text(errors='replace') if (ROOT/'docs/META_DYNAMICS.md').exists() else ''
+arc = (ROOT/'monographs/03_ARCANE_MAGICS/main.tex').read_text(errors='replace') if (ROOT/'monographs/03_ARCANE_MAGICS/main.tex').exists() else ''
+vocab = (ROOT/'NxRxI_VOCABULARY_CENTER.md').read_text(errors='replace') if (ROOT/'NxRxI_VOCABULARY_CENTER.md').exists() else ''
+if 'mathcal O_0' not in md and '\\mathcal O_0' not in md: errors.append('Meta-Dynamics: live O_0 root missing')
+if 'vacuous_relation' not in md or 'provenance-only' not in md: errors.append('Meta-Dynamics: archaeology boundary missing')
+if 'first differentiative meta-relation' not in arc or 'vacuous relation' not in arc or 'developmental archaeology' not in arc: errors.append('Arcane: live-root / archaeology distinction missing')
+if '| `Meta-Dynamics` |' not in vocab or '| `O_0` |' not in vocab: errors.append('Vocabulary: Meta-Dynamics/O_0 entries missing')
+
 # License semantic check
 lic=(ROOT/'licenses/README.md').read_text(errors='replace')
 if 'PolyForm Noncommercial' not in lic: errors.append('software license map missing')
