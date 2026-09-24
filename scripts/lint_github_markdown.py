@@ -54,9 +54,6 @@ def is_public_surface(path: Path) -> bool:
         "prototype/README.md",
         "prototype/CURRENT_STATE.md",
         "prototype/DEVELOPMENTAL_LINEAGE.md",
-        "prototype/stable-executable/README.md",
-        "prototype/stable-executable/source/PUBLIC_RELEASE_BOUNDARY.md",
-        "prototype/stable-executable/source/PYTHON_R00_R194_PROTOTYPE_README.md",
     }:
         return True
     return False
