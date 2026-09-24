@@ -8,7 +8,9 @@ from kernel.development.autonomous_learning import (
     METHODS,
     USEFUL_MARKER,
     UNHELPFUL_MARKER,
+    active_autonomous_cycle,
     empty_state,
+    target_barriers,
     target_markers,
     update_from_cycle_prs,
 )
@@ -151,6 +153,33 @@ class AutonomousGovernanceTests(unittest.TestCase):
             }],
         )
         self.assertEqual(updated.method_success[method], 0)
+
+    def test_open_cycle_is_global_no_reroll_barrier(self):
+        history = [{
+            "number": 209,
+            "title": "venus: autonomous cycle issue-31",
+            "state": "OPEN",
+            "mergedAt": None,
+            "closedAt": None,
+        }]
+        self.assertTrue(active_autonomous_cycle(history))
+        barriers = target_barriers(history)
+        self.assertEqual(len(barriers), 1)
+        self.assertEqual((barriers[0].kind, barriers[0].number), ("ISSUE", 31))
+
+    def test_resolved_cycle_retains_reopening_timestamp_without_becoming_reward(self):
+        history = [{
+            "number": 210,
+            "title": "venus: autonomous cycle issue-31",
+            "state": "MERGED",
+            "mergedAt": "2026-09-24T21:00:00Z",
+            "closedAt": "2026-09-24T21:00:00Z",
+            "reviews": [],
+        }]
+        barriers = target_barriers(history)
+        self.assertEqual(barriers[0].outcome_at, "2026-09-24T21:00:00Z")
+        updated = update_from_cycle_prs(empty_state(), history)
+        self.assertEqual(updated.kind_success["ISSUE"], 0)
 
     def test_open_cycle_marks_original_target_recent(self):
         markers = target_markers([{
