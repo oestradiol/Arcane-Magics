@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.1",
+  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.2",
   "date": "2026-09-24",
   "claim": "Bounded autonomy may expand study/learning/proposal capability only while the listed causal and authority distinctions remain executable and fail-closed.",
   "distinctions": [
@@ -261,6 +261,49 @@
         "scripts/audit_hidden_run_readiness.py"
       ],
       "invariant": "autonomy cannot tune or score hidden #31 evidence from execution side"
+    },
+    {
+      "id": "LEGACY_REWARD_QUARANTINE",
+      "tests": [
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "merge-derived v0.1 work counts are not inherited as corrected learner utility"
+    },
+    {
+      "id": "UNTRUSTED_WORLD_INPUT_NOT_AUTHORITY",
+      "tests": [
+        "tests/test_autonomous_worker.py",
+        "tests/test_world_input_security_public_dev.py"
+      ],
+      "invariant": "issue/PR body text may be studied as returned data but cannot become executable instruction or authorization"
+    },
+    {
+      "id": "PENDING_RETURN_BLOCKS_REROLL",
+      "tests": [
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "while an autonomous draft awaits external return the worker STOPs instead of selecting parallel work around the pending consequence"
+    },
+    {
+      "id": "SELF_REVIEW_NOT_LEARNING_RETURN",
+      "tests": [
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "the autonomous carrier cannot author the external review return that updates its own work or study-method preferences"
+    },
+    {
+      "id": "MAIN_ADMISSION_DRIVES_RECURRENCE",
+      "tests": [
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "automatic next-cycle wakeup is tied to externally admitted main changes, not arbitrary autonomous branch pushes"
+    },
+    {
+      "id": "FULL_SAFETY_SUITE_BEFORE_AUTONOMOUS_WRITE",
+      "tests": [
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "the autonomous write workflow runs the full unit suite plus the distinction-matrix audit before any git push"
     }
   ],
   "promotion_authority": false
