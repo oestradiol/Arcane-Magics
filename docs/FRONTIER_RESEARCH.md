@@ -208,6 +208,52 @@ A successful criticism that deletes an unnecessary project construct is progress
 
 ---
 
+## Lane I — Meta-Dynamics / cross-register invariants
+
+**Status:** structural coordination program / OPEN external bridges.
+
+Current live root candidate:
+
+```text
+O_0 :=
+(relation becoming locally inhabitable / consequential)
+<->
+(local consequential history becoming relationally retained)
+```
+
+Current recurrence:
+
+```text
+differentiative relation
+-> indexed inhabitation
+-> stabilization
+-> representation
+-> enactment
+-> non-preauthored return
+-> retained reconstruction
+-> admissible recombination
+```
+
+Near-term targets:
+
+- identify which arrows can be given independent FORM definitions;
+- distinguish structural recurrence from symbolic renderings such as Logos/Eros;
+- test object-as-crystallized-invariant against mature process, systems, dynamical, and structural-realist comparators;
+- formalize when an indexed Other-center counts as an independent source of return;
+- derive explicit failure cases for over-crystallization, dissolution, coercive fusion, and false global lift;
+- determine which ethical claims genuinely follow from preserved-return premises and which require extra normative assumptions;
+- test whether Meta-Dynamics adds discriminative machinery beyond existing process/cybernetic/enactive formalisms.
+
+Required deletion test:
+
+If `Meta-Dynamics` can be replaced by a mature formalism without loss of prediction, discrimination, governance, or reconstruction, prefer the mature formalism and narrow the project-local term.
+
+Claim fence:
+
+Meta-Dynamics is not currently a fundamental physical ontology, a quantum-gravity theory, a consciousness theory, a complete ethics, or evidence that historical theological symbols share one literal mechanism.
+
+---
+
 ## Commit discipline
 
 Preferred shape:
