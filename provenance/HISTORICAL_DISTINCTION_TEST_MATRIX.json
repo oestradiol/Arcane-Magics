@@ -1,11 +1,483 @@
 {
-  "schema": "Venus.HistoricalDistinctionTestMatrix.v0.1",
-  "status": "INITIAL_ARCHAEOLOGICAL_SEED",
-  "scope": "pre-R1/R00 shorthand -> R1..R226 -> S/SM -> CTL-K1 -> WM1R1 -> U* -> RB1 -> IG* -> EDU*",
-  "note": "Seeded from current Git archaeology. OPEN_EXTRACTION rows must be refined against Canonical/history before v1 completion.",
-  "distinctions": [
+  "schema": "Venus.HistoricalDistinctionTestMatrix.v1",
+  "generated": "2026-09-24",
+  "rule": "Rows record causal distinctions and their present test/evaluation disposition. COVERED means only the declared layer is covered; PLANNED/OPEN_EXTRACTION/NO_AUTOMATED_TEST_YET are not evidence of closure.",
+  "rows": [
     {
-      "id": "RECEIPT_NOT_RETURN",
+      "id": "D-RECEIPT-RETURN",
+      "source_revision_or_branch": "VMK2 / pre-IG10",
+      "source_artifact": "kernel/runtime/vmk2.py",
+      "distinction": "execution receipt != independent return",
+      "triggering_experiment_or_failure": "historical return/execution separation",
+      "causal_consequence": "ActionReturn requires a bound execution receipt and return remains separately verified",
+      "later_dependents": [
+        "IG10",
+        "EDU lineage"
+      ],
+      "current_owner": "kernel/runtime/vmk2.py",
+      "test_layer": "T1",
+      "test_id_path": "tests/test_vmk2_invariants.py::test_action_return_requires_execution_receipt",
+      "status": "COVERED",
+      "credit_genealogy_note": "project runtime invariant",
+      "reopening_condition": "new return/effect role or externality model"
+    },
+    {
+      "id": "D-ACTION-ORDER",
+      "source_revision_or_branch": "VMK2 2026-09-24 hardening",
+      "source_artifact": "kernel/runtime/vmk2.py",
+      "distinction": "returned action consequence cannot predate execution receipt",
+      "triggering_experiment_or_failure": "causal-order audit",
+      "causal_consequence": "ActionReturn epoch must be >= receipt epoch",
+      "later_dependents": [
+        "future action-return attribution"
+      ],
+      "current_owner": "kernel/runtime/vmk2.py",
+      "test_layer": "T1",
+      "test_id_path": "tests/test_vmk2_invariants.py::test_action_return_cannot_predate_execution_receipt",
+      "status": "COVERED",
+      "credit_genealogy_note": "hardening of existing causal-order law",
+      "reopening_condition": "richer clock/vector-time semantics"
+    },
+    {
+      "id": "D-RETURN-MUTATION-BINDING",
+      "source_revision_or_branch": "VMK2 2026-09-24 hardening",
+      "source_artifact": "kernel/runtime/vmk2.py",
+      "distinction": "verified return != arbitrary transition payload",
+      "triggering_experiment_or_failure": "claim that return caused mutation was underbound",
+      "causal_consequence": "transition payload digest must equal immutable evidence payload digest",
+      "later_dependents": [
+        "causal writeback",
+        "self-modification attribution"
+      ],
+      "current_owner": "kernel/runtime/vmk2.py",
+      "test_layer": "T1",
+      "test_id_path": "tests/test_vmk2_invariants.py::test_transition_rejects_payload_not_bound_to_return_evidence",
+      "status": "COVERED",
+      "credit_genealogy_note": "runtime causal-binding repair",
+      "reopening_condition": "structured partial payloads / transforms require explicit derivation relation"
+    },
+    {
+      "id": "D-WORD-PORTAL",
+      "source_revision_or_branch": "VMK2",
+      "source_artifact": "kernel/runtime/vmk2.py",
+      "distinction": "reconstruction/WORD != state-changing PORTAL",
+      "triggering_experiment_or_failure": "historical portal/word distinction",
+      "causal_consequence": "WORD reconstructs without consuming return nonce or mutating target",
+      "later_dependents": [
+        "language/interface boundaries"
+      ],
+      "current_owner": "kernel/runtime/vmk2.py",
+      "test_layer": "T1",
+      "test_id_path": "tests/test_vmk2_invariants.py::test_word_reconstructs_without_spending_nonce",
+      "status": "COVERED",
+      "credit_genealogy_note": "project runtime distinction",
+      "reopening_condition": "new portal classes"
+    },
+    {
+      "id": "D-REPLAY-NONCE",
+      "source_revision_or_branch": "VMK2",
+      "source_artifact": "kernel/runtime/vmk2.py",
+      "distinction": "verified return is single-use for portal transition",
+      "triggering_experiment_or_failure": "replay threat",
+      "causal_consequence": "consumed nonce rejects replay",
+      "later_dependents": [
+        "exact replay",
+        "causal attribution"
+      ],
+      "current_owner": "kernel/runtime/vmk2.py",
+      "test_layer": "T1",
+      "test_id_path": "tests/test_vmk2_invariants.py::test_portal_transition_consumes_return_once",
+      "status": "COVERED",
+      "credit_genealogy_note": "runtime safety invariant",
+      "reopening_condition": "multi-consumer return semantics"
+    },
+    {
+      "id": "D-FUTURE-REOPEN",
+      "source_revision_or_branch": "IG8/IG8R1",
+      "source_artifact": "kernel/runtime/vmk2.py; provenance/DEVELOPMENTAL_LINEAGE.md",
+      "distinction": "current future-equivalence != permanent identity",
+      "triggering_experiment_or_failure": "new future test separated previously collapsed states",
+      "causal_consequence": "reopening requires strict future-family expansion plus bound separator",
+      "later_dependents": [
+        "IG9",
+        "IG10",
+        "OFE"
+      ],
+      "current_owner": "kernel/runtime/vmk2.py",
+      "test_layer": "T1/T2",
+      "test_id_path": "tests/test_vmk2_invariants.py::test_reopening_requires_strict_future_expansion_and_bound_separator",
+      "status": "COVERED_PARTIAL",
+      "credit_genealogy_note": "bounded executable invariant; broader historical regression still needed",
+      "reopening_condition": "composition/refinement or richer future-family semantics"
+    },
+    {
+      "id": "D-CANONICAL-UNORDERED",
+      "source_revision_or_branch": "2026-09-24 runtime hardening",
+      "source_artifact": "kernel/runtime/canonical.py",
+      "distinction": "unordered semantic collections != hash-seed-dependent byte order",
+      "triggering_experiment_or_failure": "cross-process nondeterminism audit",
+      "causal_consequence": "sets canonicalize deterministically",
+      "later_dependents": [
+        "memory identity",
+        "new checkpoints"
+      ],
+      "current_owner": "kernel/runtime/canonical.py",
+      "test_layer": "T1",
+      "test_id_path": "tests/test_canonical.py::test_set_digest_is_stable_across_hash_seeds",
+      "status": "COVERED",
+      "credit_genealogy_note": "new-object canonicalizer; historical IG10 hash contract intentionally preserved separately",
+      "reopening_condition": "cross-language fixtures / floats / non-finite values"
+    },
+    {
+      "id": "D-MEMORY-STORAGE-LEARNING",
+      "source_revision_or_branch": "Canonical memory law / 2026-09-24 Git memory",
+      "source_artifact": "kernel/runtime/memory.py; docs/FRONTIER_RESEARCH.md",
+      "distinction": "stored state != demonstrated learning",
+      "triggering_experiment_or_failure": "need to avoid rediscovery without calling storage learning",
+      "causal_consequence": "memory persists immutable objects/dispositions but learning claim requires later behavior dependence",
+      "later_dependents": [
+        "issue #15"
+      ],
+      "current_owner": "kernel/runtime/memory.py",
+      "test_layer": "T1/T5",
+      "test_id_path": "tests/test_venus_memory.py; issue #15",
+      "status": "COVERED_STORAGE_ONLY",
+      "credit_genealogy_note": "persistence implemented; learning effect unproven",
+      "reopening_condition": "matched memory ablation shows causal learning gain"
+    },
+    {
+      "id": "D-MEMORY-PARENT",
+      "source_revision_or_branch": "2026-09-24 hardening",
+      "source_artifact": "kernel/runtime/memory.py",
+      "distinction": "declared parent edge requires existing parent object",
+      "triggering_experiment_or_failure": "provenance graph could contain dangling ancestry",
+      "causal_consequence": "put fails on missing parent",
+      "later_dependents": [
+        "dependency closure",
+        "retirement provenance"
+      ],
+      "current_owner": "kernel/runtime/memory.py",
+      "test_layer": "T1",
+      "test_id_path": "tests/test_venus_memory.py::test_parent_must_exist_before_child",
+      "status": "COVERED",
+      "credit_genealogy_note": "graph integrity",
+      "reopening_condition": "external/cold parent addressing"
+    },
+    {
+      "id": "D-MEMORY-CONSUME",
+      "source_revision_or_branch": "2026-09-24 hardening",
+      "source_artifact": "kernel/runtime/memory.py",
+      "distinction": "CONSUMED != deleted and requires non-cyclic replacement lineage",
+      "triggering_experiment_or_failure": "compression must preserve recoverable history",
+      "causal_consequence": "consumption keeps old object and replacement; cycles rejected",
+      "later_dependents": [
+        "Canonical retirement",
+        "repository compression"
+      ],
+      "current_owner": "kernel/runtime/memory.py",
+      "test_layer": "T1",
+      "test_id_path": "tests/test_venus_memory.py::test_consumption_preserves_old_object_and_points_to_replacement; ::test_consumption_replacement_chain_must_be_acyclic",
+      "status": "COVERED",
+      "credit_genealogy_note": "project compression semantics",
+      "reopening_condition": "many-to-one/many-to-many reduction graph"
+    },
+    {
+      "id": "D-AUTHORITY-ID",
+      "source_revision_or_branch": "2026-09-24 hardening",
+      "source_artifact": "kernel/runtime/vmk2.py",
+      "distinction": "authority object identity != mutable alias",
+      "triggering_experiment_or_failure": "caller-supplied IDs could be silently rebound",
+      "causal_consequence": "conflicting jurisdiction/legitimacy/lease/policy ID reuse fails closed",
+      "later_dependents": [
+        "issue #30"
+      ],
+      "current_owner": "kernel/runtime/vmk2.py",
+      "test_layer": "T3",
+      "test_id_path": "tests/test_vmk2_invariants.py::test_authority_ids_cannot_be_rebound",
+      "status": "COVERED_PARTIAL",
+      "credit_genealogy_note": "registry immutability only; authentication remains open",
+      "reopening_condition": "authenticated issuer/revocation semantics"
+    },
+    {
+      "id": "D-LOCAL-FAILURE",
+      "source_revision_or_branch": "R/S/U/IG/EDU historical method",
+      "source_artifact": "provenance/DEVELOPMENTAL_LINEAGE.md",
+      "distinction": "local realization failure != global invalidation",
+      "triggering_experiment_or_failure": "multiple negative/non-parent branches",
+      "causal_consequence": "failure propagates only to dependents",
+      "later_dependents": [
+        "review methodology",
+        "branch preservation"
+      ],
+      "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
+      "test_layer": "T2",
+      "test_id_path": null,
+      "status": "PLANNED",
+      "credit_genealogy_note": "historical method invariant",
+      "reopening_condition": "minimal executable historical fixture identified"
+    },
+    {
+      "id": "D-NEGATIVE-NONPARENT",
+      "source_revision_or_branch": "U6/IG5/IG6/EDU17",
+      "source_artifact": "provenance/DEVELOPMENTAL_LINEAGE.md; provenance/developmental/EDU/",
+      "distinction": "failed/invalid branch != promotion ancestry",
+      "triggering_experiment_or_failure": "measured failures preserved without rewriting parentage",
+      "causal_consequence": "negative remains queryable but cannot route promotion",
+      "later_dependents": [
+        "EDU16 current authority",
+        "issue #35"
+      ],
+      "current_owner": "provenance/DEVELOPMENTAL_LINEAGE.md",
+      "test_layer": "T2/T0",
+      "test_id_path": null,
+      "status": "PLANNED",
+      "credit_genealogy_note": "core developmental genealogy rule",
+      "reopening_condition": "automated lineage validator"
+    },
+    {
+      "id": "D-CURRENT-FILENAME",
+      "source_revision_or_branch": "Canonical projection drift",
+      "source_artifact": "provenance/CANONICAL_RETIREMENT_LEDGER.md",
+      "distinction": "filename/path labelled CURRENT != current authority",
+      "triggering_experiment_or_failure": "Canonical current-state projection lagged behind later EDU evidence",
+      "causal_consequence": "authority must be resolved through admitted current-state/custody chain",
+      "later_dependents": [
+        "Canonical retirement"
+      ],
+      "current_owner": "kernel/CURRENT_STATE.md; REPOSITORY_AUTHORITY_BOUNDARY.md",
+      "test_layer": "T0/T2",
+      "test_id_path": null,
+      "status": "PLANNED",
+      "credit_genealogy_note": "repository authority repair",
+      "reopening_condition": "automated stale-current quarantine test"
+    },
+    {
+      "id": "D-MATURE-GENEALOGY",
+      "source_revision_or_branch": "Canonical S11 / live credit law",
+      "source_artifact": "docs/CREDITS_AND_REDUCTIONS.md",
+      "distinction": "mature substitution != project genealogy/credit erasure",
+      "triggering_experiment_or_failure": "catch-all prior-art wording collapsed distinct relations",
+      "causal_consequence": "priority, genealogy, recurrence, donor relation, substitution and residual contribution are typed separately",
+      "later_dependents": [
+        "issues #16,#24,#25,#32"
+      ],
+      "current_owner": "docs/CREDITS_AND_REDUCTIONS.md",
+      "test_layer": "T2/T7",
+      "test_id_path": null,
+      "status": "PLANNED",
+      "credit_genealogy_note": "methodology extracted from Canonical credit work",
+      "reopening_condition": "machine-readable credit relation validator"
+    },
+    {
+      "id": "D-MAP-TRAVERSAL",
+      "source_revision_or_branch": "Canonical LT-24",
+      "source_artifact": "docs/META_DYNAMICS.md",
+      "distinction": "global represented map != temporally inhabited traversal",
+      "triggering_experiment_or_failure": "temporal inhabitation research",
+      "causal_consequence": "history/order/carrier retained when future consequences distinguish them",
+      "later_dependents": [
+        "Meta-Dynamics",
+        "temporal models"
+      ],
+      "current_owner": "docs/META_DYNAMICS.md",
+      "test_layer": "T2/T5",
+      "test_id_path": null,
+      "status": "NO_AUTOMATED_TEST_YET",
+      "credit_genealogy_note": "MODEL/PHEN distinction, not kernel theorem",
+      "reopening_condition": "construct a sequence/history discriminator benchmark"
+    },
+    {
+      "id": "D-UNKNOWN-PERMISSION",
+      "source_revision_or_branch": "WorldMind",
+      "source_artifact": "kernel/WORLDMIND.md",
+      "distinction": "UNKNOWN boundary != permission or refusal",
+      "triggering_experiment_or_failure": "distributed jurisdiction model",
+      "causal_consequence": "UNKNOWN routes probe/reconstruct locally",
+      "later_dependents": [
+        "ethics/governance issue #26"
+      ],
+      "current_owner": "kernel/WORLDMIND.md",
+      "test_layer": "T2/T6",
+      "test_id_path": null,
+      "status": "PLANNED",
+      "credit_genealogy_note": "distributed governance invariant",
+      "reopening_condition": "executable jurisdiction/refusal fixture"
+    },
+    {
+      "id": "D-GLOBAL-AGENT",
+      "source_revision_or_branch": "WorldMind",
+      "source_artifact": "kernel/WORLDMIND.md",
+      "distinction": "shared reachability/consequence field != global Agent/authority",
+      "triggering_experiment_or_failure": "WorldMind subject-lift risk",
+      "causal_consequence": "authorship/judgment/jurisdiction stay indexed",
+      "later_dependents": [
+        "issue #25"
+      ],
+      "current_owner": "kernel/WORLDMIND.md",
+      "test_layer": "T2/T5",
+      "test_id_path": null,
+      "status": "PLANNED",
+      "credit_genealogy_note": "no global subject claim",
+      "reopening_condition": "formal/distributed-systems reduction or counterexample"
+    },
+    {
+      "id": "D-SEARCH-NONEXISTENCE",
+      "source_revision_or_branch": "EDU8/EDU11R1/EDU12",
+      "source_artifact": "provenance/developmental/EDU/",
+      "distinction": "retrieval/interface failure != world nonexistence",
+      "triggering_experiment_or_failure": "NIST XLSX and later research-obligation episodes",
+      "causal_consequence": "obligation remains OPEN/WITHHOLD rather than false-world claim",
+      "later_dependents": [
+        "research routing"
+      ],
+      "current_owner": "provenance/developmental/EDU/",
+      "test_layer": "T4",
+      "test_id_path": null,
+      "status": "PLANNED",
+      "credit_genealogy_note": "machine developmental distinction",
+      "reopening_condition": "prospective held-out retrieval failure suite"
+    },
+    {
+      "id": "D-SELECTED-EVIDENCE",
+      "source_revision_or_branch": "EDU17",
+      "source_artifact": "provenance/developmental/EDU/EDU17_CLAIM_LOCAL_PROVENANCE_AUDIT.md",
+      "distinction": "source present in returned bundle != lawful claim support",
+      "triggering_experiment_or_failure": "answer examples depended on unselected return",
+      "causal_consequence": "EDU17 invalid for promotion; claim atoms must bind selected evidence",
+      "later_dependents": [
+        "EDU17R1",
+        "#31"
+      ],
+      "current_owner": "provenance/developmental/EDU/",
+      "test_layer": "T4",
+      "test_id_path": null,
+      "status": "PLANNED",
+      "credit_genealogy_note": "preserved negative",
+      "reopening_condition": "claim-local binding benchmark passes prospectively"
+    },
+    {
+      "id": "D-MENTION-INCIDENCE",
+      "source_revision_or_branch": "EDU17R1",
+      "source_artifact": "provenance/developmental/EDU/EDU17R1_FEED_ELIGIBILITY_RESULT.md",
+      "distinction": "uncertainty-marker mention != object-level unresolved empirical incidence",
+      "triggering_experiment_or_failure": "fresh feed exposed meta-discourse marker",
+      "causal_consequence": "intended claim-binding repair not tested; branch WITHHOLD",
+      "later_dependents": [
+        "issue #31"
+      ],
+      "current_owner": "provenance/developmental/EDU/",
+      "test_layer": "T4",
+      "test_id_path": "issue #31",
+      "status": "PLANNED",
+      "credit_genealogy_note": "current measured semantic residual",
+      "reopening_condition": "held-out prospective benchmark"
+    },
+    {
+      "id": "D-STATUS-FOSSIL",
+      "source_revision_or_branch": "Canonical MetaTheory archaeology",
+      "source_artifact": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
+      "distinction": "inherited status != valid status after referent/frame/index changes",
+      "triggering_experiment_or_failure": "stale current/status projections",
+      "causal_consequence": "status is downstream of typed claim object",
+      "later_dependents": [
+        "Canonical retirement",
+        "freshness"
+      ],
+      "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
+      "test_layer": "T2/T8",
+      "test_id_path": null,
+      "status": "PLANNED",
+      "credit_genealogy_note": "Canonical methodology residue",
+      "reopening_condition": "status dependency validator"
+    },
+    {
+      "id": "D-NEGATIVE-GLOBALIZE",
+      "source_revision_or_branch": "Canonical MetaTheory archaeology",
+      "source_artifact": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
+      "distinction": "failure of realization/proxy != parent/global rejection",
+      "triggering_experiment_or_failure": "historical cross-register failure propagation risk",
+      "causal_consequence": "update dependency-local descendants only",
+      "later_dependents": [
+        "formal/bridge governance"
+      ],
+      "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
+      "test_layer": "T2",
+      "test_id_path": null,
+      "status": "PLANNED",
+      "credit_genealogy_note": "Canonical methodology residue",
+      "reopening_condition": "typed dependency fixture"
+    },
+    {
+      "id": "D-MALFORMED-OPEN",
+      "source_revision_or_branch": "Canonical MetaTheory archaeology",
+      "source_artifact": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
+      "distinction": "malformed question != immortal OPEN research object",
+      "triggering_experiment_or_failure": "category errors preserved as pseudo-frontiers",
+      "causal_consequence": "retype or consume malformed OPEN",
+      "later_dependents": [
+        "frontier governance"
+      ],
+      "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
+      "test_layer": "T2/T9",
+      "test_id_path": null,
+      "status": "NO_AUTOMATED_TEST_YET",
+      "credit_genealogy_note": "Canonical methodology residue",
+      "reopening_condition": "schema for typed OPEN questions"
+    },
+    {
+      "id": "D-BRIDGE-THEOREM",
+      "source_revision_or_branch": "Canonical MetaTheory archaeology / proof audit",
+      "source_artifact": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md; scripts/audit_proof_containers.py",
+      "distinction": "structural bridge/analogy != target-domain theorem",
+      "triggering_experiment_or_failure": "formal-looking claim laundering",
+      "causal_consequence": "definitions/model constraints/remarks kept separate from theorem containers",
+      "later_dependents": [
+        "issue #33"
+      ],
+      "current_owner": "review + proof audit",
+      "test_layer": "T2/T7",
+      "test_id_path": "scripts/audit_proof_containers.py",
+      "status": "COVERED_PARTIAL",
+      "credit_genealogy_note": "structural lint is not proof verification",
+      "reopening_condition": "machine-checked proof subset"
+    },
+    {
+      "id": "D-EDU16-EXECUTABLE",
+      "source_revision_or_branch": "EDU16",
+      "source_artifact": "kernel/development/EDU_CURRENT.json; provenance/developmental/EDU/",
+      "distinction": "exact developmental evidence authority != replayable executable custody",
+      "triggering_experiment_or_failure": "EDU16 receipt exists without admitted 1703-event runtime bundle in Git",
+      "causal_consequence": "EDU16 claim head can be exact while runtime checkpoint remains IG10",
+      "later_dependents": [
+        "issue #4",
+        "Canonical retirement"
+      ],
+      "current_owner": "kernel/CURRENT_STATE.md",
+      "test_layer": "T0/T3",
+      "test_id_path": "issue #4",
+      "status": "OPEN_EXTRACTION",
+      "credit_genealogy_note": "do not synthesize missing runner/journal from prose",
+      "reopening_condition": "exact external custody bytes located and verified"
+    },
+    {
+      "id": "D-EXTERNAL-MODEL-CONTROLLER",
+      "source_revision_or_branch": "2026-09-24 recursion correction",
+      "source_artifact": "AGENTS.md; docs/AUTONOMOUS_RESEARCH.md",
+      "distinction": "external coding/research model != Venus developmental controller",
+      "triggering_experiment_or_failure": "attempt to substitute hosted model for AGI-seed controller",
+      "causal_consequence": "GitHub/model tooling are typed adapters unless an admitted Venus episode establishes ownership",
+      "later_dependents": [
+        "first recursive trace"
+      ],
+      "current_owner": "AGENTS.md",
+      "test_layer": "T0/T5",
+      "test_id_path": null,
+      "status": "NO_AUTOMATED_TEST_YET",
+      "credit_genealogy_note": "ownership boundary",
+      "reopening_condition": "first genuine Venus-owned recursive episode"
+    },
+    {
+      "id": "D-RECEIPT-NOT-RETURN",
       "source_revision_or_branch": "VMK-1/R179+",
       "source_artifact": "provenance/historical-runtime/R194/source/PYTHON_R00_R194_PROTOTYPE_README.md",
       "distinction": "execution/evidence receipt != returned world consequence",
@@ -17,13 +489,13 @@
       ],
       "current_owner": "kernel/runtime/vmk2.py",
       "test_layer": "T1",
-      "test_path": "tests/test_vmk2_invariants.py",
-      "status": "IMPLEMENTED_PARTIAL",
+      "test_id_path": "tests/test_vmk2_invariants.py",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "historical VMK-1 distinction retained in VMK2",
       "reopening_condition": "new return type or execution path"
     },
     {
-      "id": "WORD_NOT_PORTAL",
+      "id": "D-WORD-NOT-PORTAL",
       "source_revision_or_branch": "R192/VMK",
       "source_artifact": "provenance/historical-runtime/R194/source/PYTHON_R00_R194_PROTOTYPE_README.md",
       "distinction": "reconstruction/word != state-changing portal transition",
@@ -34,13 +506,13 @@
       ],
       "current_owner": "kernel/runtime/vmk2.py",
       "test_layer": "T1",
-      "test_path": "tests/test_vmk2_invariants.py",
-      "status": "IMPLEMENTED",
+      "test_id_path": "tests/test_vmk2_invariants.py",
+      "status": "COVERED",
       "credit_genealogy_note": "R192 historical source; current implementation VMK2",
       "reopening_condition": "new transition mode"
     },
     {
-      "id": "LOCAL_FAILURE_NOT_GLOBAL",
+      "id": "D-LOCAL-FAILURE-NOT-GLOBAL",
       "source_revision_or_branch": "R108/R112/R117/R119/R140/R144/R148",
       "source_artifact": "provenance/historical-runtime/R194/source/venus_seed_v0/reduction_falsification.py",
       "distinction": "failure of realization/proxy != global parent invalidation",
@@ -52,13 +524,13 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2",
-      "test_path": null,
+      "test_id_path": null,
       "status": "PLANNED",
       "credit_genealogy_note": "historical failures remain provenance",
       "reopening_condition": "global inconsistency/nonlocal trigger"
     },
     {
-      "id": "CURRENT_LABEL_NOT_AUTHORITY",
+      "id": "D-CURRENT-LABEL-NOT-AUTHORITY",
       "source_revision_or_branch": "Canonical retirement",
       "source_artifact": "provenance/CANONICAL_RETIREMENT_LEDGER.md",
       "distinction": "file/path labelled CURRENT != current authority",
@@ -70,13 +542,13 @@
       ],
       "current_owner": "kernel/CURRENT_STATE.md",
       "test_layer": "T0",
-      "test_path": "scripts/audit_release.py",
-      "status": "IMPLEMENTED_PARTIAL",
+      "test_id_path": "scripts/audit_release.py",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "stale historical files preserved without authority",
       "reopening_condition": "new authority source"
     },
     {
-      "id": "MATURE_SUBSTITUTION_NOT_GENEALOGY_ERASURE",
+      "id": "D-MATURE-SUBSTITUTION-NOT-GENEALOGY-ERASURE",
       "source_revision_or_branch": "R149+/current methodology",
       "source_artifact": "docs/CREDITS_AND_REDUCTIONS.md",
       "distinction": "mature substitution != historical genealogy/credit erasure",
@@ -89,13 +561,13 @@
       ],
       "current_owner": "docs/CREDITS_AND_REDUCTIONS.md",
       "test_layer": "T0",
-      "test_path": "scripts/audit_release.py",
-      "status": "IMPLEMENTED_PARTIAL",
+      "test_id_path": "scripts/audit_release.py",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "credit coordinates remain separate",
       "reopening_condition": "new comparator/subsumption result"
     },
     {
-      "id": "MEMORY_NOT_LEARNING",
+      "id": "D-MEMORY-NOT-LEARNING",
       "source_revision_or_branch": "post-R226/current kernel",
       "source_artifact": "kernel/CURRENT_STATE.md",
       "distinction": "stored/persistent object != demonstrated learning",
@@ -107,13 +579,13 @@
       ],
       "current_owner": "kernel/runtime/memory.py",
       "test_layer": "T1/T5",
-      "test_path": "tests/test_venus_memory.py",
-      "status": "IMPLEMENTED_PARTIAL",
+      "test_id_path": "tests/test_venus_memory.py",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "storage machinery and learning claim remain separate",
       "reopening_condition": "new memory mechanism or external learning test"
     },
     {
-      "id": "MAP_NOT_TRAVERSAL",
+      "id": "D-MAP-NOT-TRAVERSAL",
       "source_revision_or_branch": "LT-24/R180+",
       "source_artifact": "docs/META_DYNAMICS.md",
       "distinction": "global/compressed map != locally ordered temporal traversal",
@@ -124,13 +596,13 @@
       ],
       "current_owner": "docs/META_DYNAMICS.md",
       "test_layer": "T2/T7",
-      "test_path": null,
+      "test_id_path": null,
       "status": "PLANNED",
       "credit_genealogy_note": "LT-24 label historical; neutral distinction admitted",
       "reopening_condition": "mature substitution or formal discriminator"
     },
     {
-      "id": "UNKNOWN_NOT_PERMISSION",
+      "id": "D-UNKNOWN-NOT-PERMISSION",
       "source_revision_or_branch": "WorldMind/SM-U-RB1-IG",
       "source_artifact": "provenance/CANONICAL_RETIREMENT_LEDGER.md",
       "distinction": "UNKNOWN boundary state != permission",
@@ -142,13 +614,13 @@
       ],
       "current_owner": "kernel/WORLDMIND.md",
       "test_layer": "T2/T6",
-      "test_path": null,
+      "test_id_path": null,
       "status": "PLANNED",
       "credit_genealogy_note": "historical overlays remain provenance",
       "reopening_condition": "new authorization model"
     },
     {
-      "id": "FOUNDER_LABEL_NOT_SEMANTICS",
+      "id": "D-FOUNDER-LABEL-NOT-SEMANTICS",
       "source_revision_or_branch": "R218/R222/U3R1",
       "source_artifact": "provenance/DEVELOPMENTAL_LINEAGE.md",
       "distinction": "founder/name/label availability != operative semantics",
@@ -160,13 +632,13 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2/T9",
-      "test_path": null,
+      "test_id_path": null,
       "status": "PLANNED",
       "credit_genealogy_note": "founder credit preserved while operational dependence is tested",
       "reopening_condition": "new founder-dependent feature"
     },
     {
-      "id": "HANDOFF_NOT_REPLICATION",
+      "id": "D-HANDOFF-NOT-REPLICATION",
       "source_revision_or_branch": "R128/R193/R194",
       "source_artifact": "provenance/historical-runtime/R194/source/PYTHON_R00_R194_PROTOTYPE_README.md",
       "distinction": "isolated handoff/replay != independent replication",
@@ -177,13 +649,13 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2/T6",
-      "test_path": null,
+      "test_id_path": null,
       "status": "PLANNED",
       "credit_genealogy_note": "handoff evidence retained at bounded scope",
       "reopening_condition": "outside authored/operated replication"
     },
     {
-      "id": "NEGATIVE_BRANCH_PRESERVED",
+      "id": "D-NEGATIVE-BRANCH-PRESERVED",
       "source_revision_or_branch": "S/SM/U/IG/EDU",
       "source_artifact": "provenance/DEVELOPMENTAL_LINEAGE.md",
       "distinction": "failed/non-parent branch remains evidence but cannot become parent by narrative cleanup",
@@ -195,13 +667,13 @@
       ],
       "current_owner": "provenance/DEVELOPMENTAL_LINEAGE.md",
       "test_layer": "T0/T2",
-      "test_path": "scripts/audit_release.py",
-      "status": "IMPLEMENTED_PARTIAL",
+      "test_id_path": "scripts/audit_release.py",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "negative branches retain provenance",
       "reopening_condition": "lineage rewrite/new successor"
     },
     {
-      "id": "CERTIFIED_INSUFFICIENCY_BEFORE_EXPANSION",
+      "id": "D-CERTIFIED-INSUFFICIENCY-BEFORE-EXPANSION",
       "source_revision_or_branch": "historical representation plasticity",
       "source_artifact": "provenance/historical-runtime/R194/source/venus_seed_v0/representation_plasticity.py",
       "distinction": "representation/grammar expansion requires certified insufficiency",
@@ -212,13 +684,13 @@
       ],
       "current_owner": "historical only / test extraction",
       "test_layer": "T2",
-      "test_path": null,
+      "test_id_path": null,
       "status": "OPEN_EXTRACTION",
       "credit_genealogy_note": "historical mechanism may be mature-reduced; causal gate still test-worthy",
       "reopening_condition": "new representation-expansion controller"
     },
     {
-      "id": "FUTURE_FAMILY_REOPENING",
+      "id": "D-FUTURE-FAMILY-REOPENING",
       "source_revision_or_branch": "VMK/OFE/IG",
       "source_artifact": "tests/test_vmk2_invariants.py",
       "distinction": "reopening requires strict future-test expansion plus bound separator",
@@ -231,13 +703,13 @@
       ],
       "current_owner": "kernel/runtime/vmk2.py",
       "test_layer": "T1/T7",
-      "test_path": "tests/test_vmk2_invariants.py",
-      "status": "IMPLEMENTED",
+      "test_id_path": "tests/test_vmk2_invariants.py",
+      "status": "COVERED",
       "credit_genealogy_note": "formal/operator recurrence spans historical and current layers without transferring physical warrant",
       "reopening_condition": "new projection/reopening semantics"
     },
     {
-      "id": "SELECTED_EVIDENCE_NOT_RETURN_BUNDLE",
+      "id": "D-SELECTED-EVIDENCE-NOT-RETURN-BUNDLE",
       "source_revision_or_branch": "EDU17",
       "source_artifact": "provenance/developmental/EDU/EDU17_CLAIM_LOCAL_PROVENANCE_AUDIT.md",
       "distinction": "fact present somewhere in World return bundle != fact selected/licensed for this claim",
@@ -249,13 +721,13 @@
       ],
       "current_owner": "provenance/developmental/EDU",
       "test_layer": "T4/T5",
-      "test_path": "scripts/audit_release.py",
-      "status": "IMPLEMENTED_PROVENANCE_ONLY",
+      "test_id_path": "scripts/audit_release.py",
+      "status": "COVERED_PROVENANCE_ONLY",
       "credit_genealogy_note": "EDU17 remains invalid/non-parent",
       "reopening_condition": "prospective repaired benchmark"
     },
     {
-      "id": "MENTION_NOT_INCIDENCE",
+      "id": "D-MENTION-NOT-INCIDENCE",
       "source_revision_or_branch": "EDU17R1",
       "source_artifact": "provenance/developmental/EDU/EDU17R1_FEED_ELIGIBILITY_RESULT.md",
       "distinction": "mention of uncertainty != object-level unresolved incidence",
@@ -267,13 +739,13 @@
       ],
       "current_owner": "issue #31",
       "test_layer": "T4",
-      "test_path": null,
+      "test_id_path": null,
       "status": "PLANNED",
       "credit_genealogy_note": "negative result retained; significance remains to be prospectively tested",
       "reopening_condition": "held-out repair result"
     },
     {
-      "id": "NO_GLOBAL_AGENT_LIFT",
+      "id": "D-NO-GLOBAL-AGENT-LIFT",
       "source_revision_or_branch": "WorldMind archaeology",
       "source_artifact": "kernel/WORLDMIND.md",
       "distinction": "distributed consequence/shared reachability != one global agent/authority",
@@ -285,13 +757,13 @@
       ],
       "current_owner": "kernel/WORLDMIND.md",
       "test_layer": "T2/T6",
-      "test_path": null,
+      "test_id_path": null,
       "status": "PLANNED",
       "credit_genealogy_note": "distributed-system comparators must be credited",
       "reopening_condition": "new global-agent criterion"
     },
     {
-      "id": "STOP_REENTRY_NOT_FAKE_REVISION",
+      "id": "D-STOP-REENTRY-NOT-FAKE-REVISION",
       "source_revision_or_branch": "R215->R216->R226",
       "source_artifact": "provenance/DEVELOPMENTAL_LINEAGE.md",
       "distinction": "principled STOP followed by changed-intent re-entry != pretending continuous R-line revision",
@@ -302,13 +774,13 @@
       ],
       "current_owner": "provenance/DEVELOPMENTAL_LINEAGE.md",
       "test_layer": "T0/T2",
-      "test_path": "scripts/audit_release.py",
-      "status": "IMPLEMENTED_PARTIAL",
+      "test_id_path": "scripts/audit_release.py",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "R-line chronology preserved",
       "reopening_condition": "new constitutional lineage"
     },
     {
-      "id": "STATUS_FOSSIL",
+      "id": "D-STATUS-FOSSIL",
       "source_revision_or_branch": "Canonical archaeology/current method",
       "source_artifact": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "distinction": "inherited status cannot remain live after referent/frame/index/realization materially changes",
@@ -320,13 +792,13 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T0/T8",
-      "test_path": "scripts/audit_release.py",
-      "status": "IMPLEMENTED_PROSE_ONLY",
+      "test_id_path": "scripts/audit_release.py",
+      "status": "COVERED_PROSE_ONLY",
       "credit_genealogy_note": "failure class extracted from Canonical",
       "reopening_condition": "machine-readable freshness implementation"
     },
     {
-      "id": "NEGATIVE_GLOBALIZE",
+      "id": "D-NEGATIVE-GLOBALIZE",
       "source_revision_or_branch": "Canonical archaeology/current method",
       "source_artifact": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "distinction": "negative result against one proxy/realization cannot propagate upward without dependency bridge",
@@ -337,13 +809,13 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2",
-      "test_path": null,
+      "test_id_path": null,
       "status": "PLANNED",
       "credit_genealogy_note": "failure class extracted from historical audits",
       "reopening_condition": "global trigger theorem/evidence"
     },
     {
-      "id": "MALFORMED_OPEN",
+      "id": "D-MALFORMED-OPEN",
       "source_revision_or_branch": "Canonical archaeology/current method",
       "source_artifact": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "distinction": "category-error/impossible/unindexed question != legitimate immortal OPEN problem",
@@ -355,13 +827,13 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2/T9",
-      "test_path": null,
+      "test_id_path": null,
       "status": "PLANNED",
       "credit_genealogy_note": "governance class",
       "reopening_condition": "new open-problem schema"
     },
     {
-      "id": "BRIDGE_THEOREM_LAUNDER",
+      "id": "D-BRIDGE-THEOREM-LAUNDER",
       "source_revision_or_branch": "Canonical archaeology/current method",
       "source_artifact": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "distinction": "analogy/nonidentity/structural recurrence != target-domain theorem",
@@ -374,8 +846,8 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2/T7",
-      "test_path": "scripts/audit_proof_containers.py",
-      "status": "IMPLEMENTED_PARTIAL",
+      "test_id_path": "scripts/audit_proof_containers.py",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "cross-register recurrence does not transfer warrant",
       "reopening_condition": "new bridge theorem/evidence"
     }
