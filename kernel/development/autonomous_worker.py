@@ -158,7 +158,8 @@ def study_target(item: WorkItem, *, method: str) -> dict[str, Any]:
         if int(x) != item.number
     ))
     path_refs = tuple(dict.fromkeys(
-        x for x in re.findall(
+        x.rstrip(".,;:!?)]}")
+        for x in re.findall(
             r"(?:kernel|tests|docs|evaluation|benchmarks|provenance|scripts)/[A-Za-z0-9_./-]+",
             body,
         )
