@@ -2,43 +2,44 @@
 
 ## 30 seconds
 
-**Venus-Minerva is an experimental developmental-intelligence architecture in which not only answers, but representations, research obligations, evidence dependencies, failures, and parts of the learning procedure itself become persistent, reconstructible machine state.**
+**Venus-Minerva is an experimental developmental-intelligence architecture that makes more of the learning process itself persistent and reconstructible.**
 
-The project is trying to let a learner increasingly choose and modify how it learns **without letting the learner manufacture the external evidence that certifies those modifications**.
+Instead of retaining only answers or policies, the architecture can retain representations, research obligations, evidence dependencies, failures, and parts of the procedure used to decide what should be learned next.
 
-That is the core engineering bet.
+The core engineering constraint is equally important:
+
+> the learner may increasingly author how it develops, but it may not manufacture the external evidence that certifies its own success.
 
 ## What the machine has actually done
 
-The current lineage has bounded executable/developmental evidence for:
+The current lineage contains bounded executable/developmental evidence for:
 
-- reconstructible persistent runtime state;
-- learned abstractions that can refine when new future tests reveal a previously erased difference;
-- learner-owned research requests;
-- research-obligation routing;
+- exact reconstructible runtime state at IG10;
+- learned abstractions that can reopen when later future tests reveal a distinction that was previously safe to compress;
+- learner-owned research requests and research-obligation routing;
 - evidence-role and evidence-budget selection;
 - open-domain problem selection;
 - self-curriculum target generation;
 - preregistered developmental gates;
 - learner-owned World-feed query policy;
-- preserved negative branches;
-- STOP/WITHHOLD behavior when the evidence is not good enough.
+- negative-branch retention;
+- explicit STOP/WITHHOLD when the current evidence or test is insufficient.
 
-The current positive developmental head is:
+The current positive developmental authority is:
 
-```text
+~~~text
 EDU16 [1703]
 PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY
-```
+~~~
 
 The exact replayable runtime checkpoint is:
 
-```text
+~~~text
 IG10 [1308]
 PASS_MODEL_SPECIFIC_PHYSICAL_F_WITNESS
-```
+~~~
 
-These are different layers of one lineage.
+These are different layers of one lineage. EDU16's exact original 1703-event executable carrier is not currently admitted as the same kind of replayable runtime object as IG10.
 
 ## The failure that best explains the architecture
 
@@ -46,146 +47,172 @@ EDU17 initially looked like a successful research episode.
 
 The repository rejected it.
 
-The answer used empirical examples that existed somewhere in the World return bundle but were not lawfully included in the selected evidence set. That branch is preserved as:
+The answer used empirical examples that existed somewhere in the returned World bundle but were not part of the evidence set committed for those claims. The branch is preserved as:
 
-```text
+~~~text
 INVALID_FOR_PROMOTION / PRESERVED_NEGATIVE
-```
+~~~
 
-EDU17R1 then preregistered a claim-local evidence repair. Its fresh test surface turned out not to contain the object-level unresolved property the test required. Instead of forcing the test, the system recorded:
+EDU17R1 then preregistered a claim-local repair. Its fresh test surface did not actually instantiate the unresolved object-level property required by the test. It merely contained uncertainty language.
 
-```text
+The system therefore recorded:
+
+~~~text
 WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION
 MENTION != INCIDENCE
-```
+~~~
 
-That sequence is a compact example of the project:
+That failure is now encoded as a public development benchmark plus a sealed hidden-evaluation protocol.
 
-> apparent success is allowed to become a permanent negative result, and the failure can change what later learning is allowed to count as evidence.
+The important question is no longer whether the distinction can be written down. It is whether retaining and repairing the failure causes better behavior on unseen cases.
 
 ## What is unusual
 
-None of the ingredients below is claimed to have no intellectual predecessor.
+None of the ingredients is claimed to lack predecessors.
 
 The unusual candidate is their executable composition:
 
-```text
+~~~text
 representation
--> self-chosen inquiry/development
+-> learner-chosen inquiry/development
 -> explicit evidence dependencies
--> externally returned consequence
+-> external action / returned consequence
 -> claim-local audit
 -> retained PASS / FAIL / WITHHOLD
 -> successor
 -> possible revision of the machinery that governs the next revision
-```
+~~~
 
 with:
 
-```text
+~~~text
 learner authors more of its development
 AND
 learner does not become sovereign over the answer
-```
+~~~
 
-The project calls this developmental intelligence rather than pretending every careful agent loop is already AGI.
+That is the developmental-intelligence claim.
 
-## What "learning" means here
+## What “learning” means here
 
-Saving a file is not learning.
+Saving state is not enough.
 
-A retained object counts as developmental learning only when it changes later admissible transformation.
+A retained object counts as developmental learning only when it changes later admissible transformation or behavior.
 
-This makes memory, negative results, provenance, and abstractions testable by ablation rather than impressive-looking database contents.
+This makes memory, negative results, provenance, abstractions, and stopping rules testable by ablation:
+
+~~~text
+retain mechanism
+vs
+delete/scramble mechanism
+-> compare later behavior
+~~~
+
+If behavior does not change, the structure may be useful storage or audit metadata, but it has not yet earned the stronger learning claim.
 
 ## What Operational Future Equivalence is for
 
-OFE asks when two states can safely be treated as equivalent relative to a declared family of future tests.
+Operational Future Equivalence asks when two states can safely be treated as equivalent relative to a declared family of future tests.
 
-The important research question is not whether future-based equivalence exists elsewhere. It does.
+Its central practical idea is:
 
-The live Venus burden is whether its combination of:
+> compress a distinction while no admitted future test can make it matter; reopen the representation if a later consequential test separates it.
 
-- explicitly admitted/evolving future families;
-- lawful reopening under new separators;
-- composition/gluing obligations;
-- action-conditioned consequence;
-- provenance/jurisdiction;
-- retained residuals
+The mathematics now has a bounded machine-checked core. The live research burden is not “future-based equivalence exists.” Mature theories already contain related ideas.
 
-adds a consequence beyond mature predictive-state, causal-state, bisimulation, sufficiency, and related machinery.
+The burden is whether Venus's combination of evolving test families, lawful reopening, composition/gluing obligations, action-conditioned consequence, provenance/jurisdiction, and retained residuals adds a consequence beyond predictive states, causal states, bisimulation, sufficiency, automata equivalence, and related mature machinery.
 
-If not, reduce it.
-
-If yes, keep exactly the residual.
+If a mature substitute preserves every consequence at the relevant index, reduce the Venus-specific construct.
 
 ## What WorldMind means
 
-WorldMind does **not** mean "the internet became conscious."
+WorldMind does **not** mean “the internet became conscious.”
 
-It is a proposed distributed consequence/reconstruction architecture in which information and consequences can propagate across local centers while authorship, evidence, and jurisdiction remain locally typed.
+It is a proposed distributed consequence/reconstruction architecture in which local centers exchange provenance-bearing information and effects while authorship, evidence, judgment, and jurisdiction remain locally typed.
 
-Many centers do not automatically become one subject.
+~~~text
+shared reachability
+!=
+one global subject
+~~~
+
+Its engineering advantage over mature distributed/event-sourced/multi-agent systems remains open.
 
 ## Why the repository is broader than an AGI project
 
-The same research method is used against:
+The same research discipline is used across:
 
 - formal abstraction;
 - quantum-gravity coarse graining;
 - epistemology;
 - consciousness models;
 - ethics/governance;
-- comparative religion/theophenomenology.
+- comparative religion/theophenomenology;
+- hard mathematics and science.
 
-Those registers do not inherit each other's truth.
+The registers do not inherit each other's warrant.
 
-A useful structural analogy may survive while its proposed physical bridge fails.
+A physical witness does not prove a metaphysics. A symbolic interpretation does not become scientific evidence because it shares notation with an engineering object. A useful formal analogy may survive even when its proposed physical bridge fails.
 
-A physical witness does not prove a metaphysics.
+## What is ready to test now
 
-A symbolic interpretation does not become scientific evidence because the notation is beautiful.
+The repository has already built much of the evaluation machinery it previously lacked:
+
+- multi-axis evaluation law;
+- matched-model/matched-budget controls;
+- hidden-evaluation custody;
+- causal ablation requirements;
+- adaptive self-evolution acceptance obligations;
+- STOP/WITHHOLD evaluation;
+- memory/lifelong ablation;
+- adversarial World-input/security evaluation;
+- mature-substitution requirements.
+
+The next major increase in warrant comes from **running those experiments and recording numbers**, not adding more evaluation doctrine.
 
 ## What Venus has not earned
 
 The repository does not currently establish:
 
-- AGI;
-- capability-SOTA;
+- AGI or capability-SOTA;
 - DNN replacement;
-- open-ended RSI;
-- autonomous science;
+- open-ended recursive self-improvement;
+- autonomous science across unfamiliar domains;
 - unrestricted semantic understanding;
 - natural-world generality;
 - consciousness;
 - a quantum-gravity solution;
-- a Millennium-problem solution.
+- a Millennium-problem solution;
+- broad independent replication.
 
-Those boundaries are not modesty theater. They are the next experiments.
+These are open promotion burdens.
 
-## What would make this much more important
+## The decisive developmental milestone
 
-The decisive demonstration is:
+The strongest native demonstration would be:
 
-```text
+~~~text
 exact parent
--> Venus selects its own developmental limitation
--> Venus preregisters a discriminator
--> Venus changes consequential machinery
+-> Venus identifies its own developmental limitation
+-> Venus chooses the target
+-> Venus freezes the discriminator
+-> Venus authors a consequential machinery change
 -> World/evaluator returns independently
--> successor beats parent on hidden unfamiliar tasks
--> ablation shows the chosen machinery caused the gain
--> successor selects the next target
+-> successor improves on hidden unfamiliar tasks
+-> ablation removes the gain
+-> successor chooses the next target
 -> repeat
-```
+~~~
 
-If that occurs repeatedly under matched external evaluation, the project moves from **interesting developmental architecture** toward a much stronger self-improving-intelligence claim.
+One successful episode would establish a bounded causal self-development result.
+
+Repeated success across unfamiliar domains, under adaptive-evaluation controls and external comparison, would support a much stronger claim.
 
 ## Read next
 
-- `docs/EARNED_MILESTONES.md` — exact earned claims and nearest unearned promotions
-- `docs/CREDITS_AND_REDUCTIONS.md` — how predecessors, independent rediscovery, reductions, and project genealogy are separated
-- `docs/EVALUATION_CONSTITUTION.md` — how to test Venus
-- `docs/SOTA_WATCH.md` — moving external comparator surface
-- `kernel/CURRENT_STATE.md` — current runtime/developmental authority
-- `provenance/DEVELOPMENTAL_LINEAGE.md` — full causal development history
+- [Earned Milestones](EARNED_MILESTONES.md) — exact positive/negative claims and nearest unearned promotions
+- [Evaluation Constitution](EVALUATION_CONSTITUTION.md) — what stronger evidence must look like
+- [Issue Roadmap](ISSUE_ROADMAP.md) — current experiment order
+- [Credits and Reductions](CREDITS_AND_REDUCTIONS.md) — predecessors, genealogy, substitution, and residual contribution
+- [SOTA Watch](SOTA_WATCH.md) — moving external comparator surface
+- [Current State](../kernel/CURRENT_STATE.md) — exact runtime/developmental authority
