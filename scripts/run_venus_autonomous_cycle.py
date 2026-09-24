@@ -4,6 +4,11 @@ import argparse
 from dataclasses import asdict
 import json
 from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from kernel.development.autonomous_worker import load_work_items, make_cycle
 from kernel.development.autonomous_learning import (
@@ -61,7 +66,7 @@ def main() -> int:
         active_cycle=active_cycle,
         kind_utility=utility,
         method_utility=method_utility,
-        active_cycle_pending=bool(recent),
+        active_cycle_pending=active_cycle,
     )
     Path(args.output).write_text(
         json.dumps(asdict(cycle), indent=2, sort_keys=True) + "\n",
