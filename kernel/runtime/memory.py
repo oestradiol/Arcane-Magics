@@ -150,6 +150,8 @@ class VenusMemory:
         parents = tuple(parents)
         provenance = tuple(provenance)
         labels = tuple(sorted(set(labels)))
+        for parent in parents:
+            self._semantic(parent)
         semantic = {
             "kind": kind,
             "payload": payload,
@@ -241,6 +243,18 @@ class VenusMemory:
         self._semantic(digest)
         if replacement is not None:
             self._semantic(replacement)
+            cursor = replacement
+            seen: set[str] = set()
+            while cursor is not None:
+                if cursor == digest:
+                    raise ValueError("replacement cycle")
+                if cursor in seen:
+                    raise ValueError("existing replacement cycle")
+                seen.add(cursor)
+                row = self.db.execute(
+                    "SELECT replacement FROM disposition WHERE digest=?", (cursor,)
+                ).fetchone()
+                cursor = row["replacement"] if row is not None else None
         if status == "CONSUMED" and replacement is None:
             raise ValueError("CONSUMED requires replacement")
         with self.db:
