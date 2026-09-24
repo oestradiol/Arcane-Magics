@@ -10,11 +10,23 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "scripts" / "run_venus_autonomous_cycle.py"
+RESEARCH_SCRIPT = ROOT / "scripts" / "run_venus_research_proposal.py"
 POLICY = ROOT / "kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json"
 LEARNING = ROOT / "kernel/development/AUTONOMOUS_LEARNING_STATE.json"
 
 
 class AutonomousEntrypointTests(unittest.TestCase):
+    def test_research_proposal_direct_entrypoint_can_import_kernel(self):
+        proc = subprocess.run(
+            [sys.executable, str(RESEARCH_SCRIPT), "--help"],
+            cwd=ROOT,
+            text=True,
+            capture_output=True,
+            timeout=20,
+        )
+        self.assertEqual(proc.returncode, 0, proc.stderr)
+        self.assertIn("--execution-output", proc.stdout)
+
     def test_direct_script_invocation_can_import_kernel(self):
         proc = subprocess.run(
             [sys.executable, str(SCRIPT), "--help"],
