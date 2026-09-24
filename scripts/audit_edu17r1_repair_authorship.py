@@ -46,10 +46,12 @@ def main() -> int:
         if controller.get("hidden_evaluation_access") is not False:
             errors.append("generic controller may not access hidden #31 evaluation")
     elif candidate_status in {"AUTHORED_FROZEN","FROZEN_PUBLIC_DEV_CANDIDATE_AWAITING_INDEPENDENT_CI_RETURN"}:
+        frozen=ROOT/"kernel/development/EDU17R1_REPAIR_CANDIDATE_FROZEN.json"
+        legacy=ROOT/"kernel/development/EDU17R1_REPAIR_CANDIDATE.json"
         candidate=(
-            ROOT/"kernel/development/EDU17R1_REPAIR_CANDIDATE_FROZEN.json"
-            if candidate_status=="FROZEN_PUBLIC_DEV_CANDIDATE_AWAITING_INDEPENDENT_CI_RETURN"
-            else ROOT/"kernel/development/EDU17R1_REPAIR_CANDIDATE.json"
+            frozen
+            if candidate_status=="FROZEN_PUBLIC_DEV_CANDIDATE_AWAITING_INDEPENDENT_CI_RETURN" or frozen.exists()
+            else legacy
         )
         receipt=ROOT/"kernel/development/EDU17R1_REPAIR_OWNERSHIP_RECEIPT.json"
         if not candidate.exists() or not receipt.exists():
