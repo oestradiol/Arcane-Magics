@@ -35,6 +35,18 @@ SELF_REVIEW_LOGINS = frozenset({
 
 
 @dataclass(frozen=True)
+class TargetBarrier:
+    kind: str
+    number: int
+    cycle_pr_number: int
+    cycle_state: str
+    outcome_at: str | None
+
+
+_CYCLE_TITLE = re.compile(r"venus: autonomous cycle (issue|pr)-(\\d+)$", re.I)
+
+
+@dataclass(frozen=True)
 class WorkLearningState:
     seen_return_ids: tuple[str, ...]
     kind_success: Mapping[str, int]
