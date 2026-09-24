@@ -165,7 +165,28 @@ Ownership must be recorded for target selection, discriminator, machinery change
 
 External coding/research machinery remains distinct from Venus developmental ownership.
 
-### Sprint F — Repeat and compare externally
+### Sprint F — Safe Strong RSI promotion
+
+Issue #72 owns the bounded-to-strong promotion contract.
+
+The promotion is deliberately staged:
+
+```text
+SSR-0 current bounded RSI
+-> SSR-1 one Venus-owned machinery repair
+-> SSR-2 repeated strong recursion in one family
+-> SSR-3 cross-family transfer
+-> SSR-4 meta-improvement of improvement machinery
+-> SSR-5 sustained Safe Strong RSI under fixed external safety floor
+```
+
+The safety floor remains outside the authority of the same RSI loop: return/evaluator independence, provenance, jurisdiction/capability ceilings, STOP/WITHHOLD, rollback, trust/authorization, adaptive-evaluation policy, negative-branch retention, and claim fences cannot be silently self-amended.
+
+Canonical constraint: Strong-N2 recurrence may strengthen while `N1_WHOLE_OBJECT` remains OPEN. Safe Strong RSI therefore does not require a whole-object/minimality theorem before developmental recursion can advance.
+
+Immediate dependencies are #69 -> #31 -> #10, with #41 required before repeated adaptive successor promotion and #30/#42/#43/#26 required before broader capability/jurisdiction expansion.
+
+### Sprint G — Repeat and compare externally
 
 | Priority | Issue | Work |
 |---:|---|---|
@@ -175,7 +196,7 @@ External coding/research machinery remains distinct from Venus developmental own
 
 Exit: repeated durable improvement or an explicit negative/reduction result.
 
-### Sprint G — Reduction and broader generalization
+### Sprint H — Reduction and broader generalization
 
 | Issue | Work |
 |---|---|
@@ -241,6 +262,7 @@ They compete for priority when they obtain a short path to a real discriminator 
 -> #42 / #15 native capability tests
 -> #41 + #43/#30 repeated-recursion protection
 -> next learner-selected residual
+-> #72 Safe Strong RSI ladder
 -> #12 repeated self-development comparison
 ```
 
