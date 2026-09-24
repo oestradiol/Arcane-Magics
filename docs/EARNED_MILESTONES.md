@@ -119,9 +119,9 @@ These relations have mature intellectual neighbors. Their **project genealogy an
 
 ### EARNED — Operational Future Equivalence exact core
 
-The repository contains an exact formal core for future-test equivalence, quotienting/minimal sufficient representation at declared test families, transport under evolving tests, and relational nonfactorization.
+The repository contains a bounded Lean-machine-checked core for future-test equivalence, quotienting/minimal sufficient representation at declared test families, transport under evolving tests, common-refinement sufficiency, separating-family equality, and reopening by an explicit pulled-back separator.
 
-The mathematics is described by the repository itself as mostly elementary. Research value is claimed in composition, application, and the open residuals, not in pretending elementary equivalence relations were invented here.
+The mathematics is described by the repository itself as mostly elementary. Machine-checked correctness does not establish novelty or physical adequacy. Research value is claimed in composition, application, and any residual that survives mature substitution.
 
 Nearest live reduction question: determine exactly what remains after substitution by predictive states, causal states, bisimulation, Blackwell/sufficiency, automata-equivalence, and related mature formalisms.
 
@@ -160,7 +160,13 @@ It is **not** defined as a currently deployed global subject.
 
 Nearest unearned stronger claim: demonstrated engineering advantage over mature distributed/event-sourced/multi-agent alternatives at scale.
 
-## H. Not established
+## H. Evaluation infrastructure earned, external advantage still open
+
+The repository now has a multi-axis evaluation constitution, matched-ablation contracts, a sealed hidden-evaluation path for EDU17R1, a public causal-memory development benchmark, and explicit adaptive-self-evolution / abstention / adversarial-World evaluation lanes.
+
+These are **evaluation infrastructure**, not evidence that Venus wins those evaluations. The first matched hidden results remain outstanding.
+
+## I. Not established
 
 As of this ledger:
 
@@ -179,7 +185,7 @@ As of this ledger:
 
 These are not "disproofs." They are promotion boundaries.
 
-## I. Strongest truthful public claim
+## J. Strongest truthful public claim
 
 A concise statement the repository has earned is:
 
