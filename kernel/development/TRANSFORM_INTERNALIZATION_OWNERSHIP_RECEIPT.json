@@ -1,0 +1,18 @@
+{
+  "schema": "Venus.TransformInternalizationOwnershipReceipt.v0.1",
+  "date": "2026-09-24",
+  "selected_by": "EDU16-RC1::EDU13_OWNERSHIP_AUDIT",
+  "selected_target_id": "WORLDMIND_SELF_RESEARCH_TRANSFORM_PROGRAM_SEED",
+  "candidate_authored_by": "EDU16-RC1::GENERIC_TRANSFORM_REPAIR_SEARCH",
+  "execution_owner": "EXTERNAL_TOOLING",
+  "parent_program_digest": "466bffacf653ce8bc9986c3dbcb88b7a7b322c1de18f119684543fc6772c3c76",
+  "patch_digest": "5ae11f1272fe4c48744d4c43a034e261a096a368e40efcd4688bcd51cb1f44a6",
+  "successor_program_digest": "947ae9b8c8a781dca0d2bada4c16b543c165198f7a733c62ea23b6a28c990c00",
+  "returned_evidence": "kernel/development/TRANSFORM_INTERNALIZATION_BEHAVIORAL_RETURNS.json",
+  "hidden_evaluation_exposed": false,
+  "external_model_supplied_substantive_patch": false,
+  "promotion_authority": false,
+  "receipt_sha256": "999a425b08ae9c42c79cfa060990669c1c536b9c32fdc75b674ac836a102248f",
+  "disposition": "PREFROZEN_INTERNALIZATION_CANDIDATE_AWAITING_REMOVAL_TEST",
+  "claim_fence": "Ownership/reconstruction receipt only. Host scaffold is not yet CONSUMED and SSR-1 is not earned."
+}
