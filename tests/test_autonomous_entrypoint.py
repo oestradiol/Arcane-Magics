@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "scripts" / "run_venus_autonomous_cycle.py"
 POLICY = ROOT / "kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json"
 LEARNING = ROOT / "kernel/development/AUTONOMOUS_LEARNING_STATE.json"
+META_LEARNING = ROOT / "kernel/development/AUTONOMOUS_META_LEARNING_STATE.json"
 
 
 class AutonomousEntrypointTests(unittest.TestCase):
@@ -25,6 +26,7 @@ class AutonomousEntrypointTests(unittest.TestCase):
         )
         self.assertEqual(proc.returncode, 0, proc.stderr)
         self.assertIn("--learning-state", proc.stdout)
+        self.assertIn("--meta-learning-state", proc.stdout)
         self.assertIn("--output", proc.stdout)
 
     def test_full_direct_cli_stops_behind_open_issue_carrier(self):
@@ -36,6 +38,7 @@ class AutonomousEntrypointTests(unittest.TestCase):
             history_issues = root / "history-issues.json"
             roadmap = root / "roadmap.md"
             learning_out = root / "learning.json"
+            meta_learning_out = root / "meta-learning.json"
             cycle_out = root / "cycle.json"
 
             issues.write_text(json.dumps([{
@@ -67,7 +70,9 @@ class AutonomousEntrypointTests(unittest.TestCase):
                     "--roadmap", str(roadmap),
                     "--policy", str(POLICY),
                     "--learning-state", str(LEARNING),
+                    "--meta-learning-state", str(META_LEARNING),
                     "--learning-output", str(learning_out),
+                    "--meta-learning-output", str(meta_learning_out),
                     "--output", str(cycle_out),
                 ],
                 cwd=ROOT,
@@ -130,6 +135,7 @@ class AutonomousEntrypointTests(unittest.TestCase):
             self.assertEqual(cycle["decision"], "STOP")
             self.assertIsNone(cycle["target_number"])
             self.assertTrue(learning_out.is_file())
+            self.assertTrue(meta_learning_out.is_file())
 
 
 if __name__ == "__main__":
