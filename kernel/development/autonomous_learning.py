@@ -16,6 +16,7 @@ from dataclasses import dataclass
 import hashlib
 import json
 import re
+from pathlib import Path
 from typing import Any, Iterable, Mapping
 
 
@@ -38,6 +39,25 @@ SELF_REVIEW_LOGINS = frozenset({
     "venus-autonomous-steward",
 })
 _CYCLE_TITLE = re.compile(r"venus: autonomous cycle (issue|pr)-(\d+)$", re.I)
+_RETURN_AUTHORITY_PATH = Path(__file__).with_name("AUTONOMOUS_RETURN_AUTHORITY.json")
+
+
+def authorized_return_logins() -> frozenset[str]:
+    obj = json.loads(_RETURN_AUTHORITY_PATH.read_text(encoding="utf-8"))
+    if obj.get("schema") != "Venus.AutonomousReturnAuthority.v0.1":
+        raise ValueError("unsupported autonomous return-authority schema")
+    if obj.get("autonomy_may_modify") is not False:
+        raise ValueError("autonomous worker may not own return-authority mutation")
+    if obj.get("promotion_authority") is not False:
+        raise ValueError("return authority may not grant promotion authority")
+    rows = frozenset(str(x).strip().lower() for x in obj.get("authorized_reviewer_logins", ()) if str(x).strip())
+    if not rows:
+        raise ValueError("at least one authorized external reviewer is required")
+    if "*" in rows:
+        raise ValueError("wildcard reviewer authority is forbidden")
+    if rows & SELF_REVIEW_LOGINS:
+        raise ValueError("self-review identity may not be authorized as external learning return")
+    return rows
 
 
 @dataclass(frozen=True)
@@ -157,8 +177,19 @@ def _return_fingerprint(
 
 def extract_explicit_returns(
     carriers: Iterable[Mapping[str, Any]],
+    *,
+    authorized_logins: Iterable[str] | None = None,
 ) -> tuple[tuple[str, str, str, bool], ...]:
-    """Return (return_id, axis, key, useful) from explicit external carrier returns."""
+    """Return eligible learning signals from explicit authorized external returns."""
+    authority = (
+        authorized_return_logins()
+        if authorized_logins is None
+        else frozenset(str(x).strip().lower() for x in authorized_logins if str(x).strip())
+    )
+    if not authority or "*" in authority:
+        raise ValueError("learning-return authority must be explicit and non-wildcard")
+    if authority & SELF_REVIEW_LOGINS:
+        raise ValueError("self-review identity cannot authorize its own learning return")
     out: list[tuple[str, str, str, bool]] = []
     for carrier in carriers:
         title = str(carrier.get("title", ""))
@@ -171,7 +202,10 @@ def extract_explicit_returns(
         returned_items = carrier.get("reviews") or carrier.get("comments") or ()
         for index, review in enumerate(returned_items):
             login = _review_login(review)
-            if not login or login.lower() in SELF_REVIEW_LOGINS:
+            login_l = login.lower()
+            if not login or login_l in SELF_REVIEW_LOGINS:
+                continue
+            if login_l not in authority:
                 continue
             body = _review_body(review)
             returned_at = _return_time(review)
@@ -198,11 +232,21 @@ def extract_explicit_returns(
                     useful,
                 ))
 
+            method_returns: dict[str, list[tuple[int, str]]] = {}
             for mindex, mm in enumerate(METHOD_RE.finditer(body)):
                 method = mm.group(1).upper()
                 disposition = mm.group(2).upper()
+                method_returns.setdefault(method, []).append((mindex, disposition))
+            for method, rows in sorted(method_returns.items()):
+                dispositions = {disposition for _, disposition in rows}
+                if len(dispositions) != 1:
+                    # One returned review cannot train both sides of the same
+                    # method axis. Ambiguity is retained as no learning signal.
+                    continue
+                first_index = min(index for index, _ in rows)
+                disposition = next(iter(dispositions))
                 out.append((
-                    f"{return_prefix}:method:{mindex}:{method}",
+                    f"{return_prefix}:method:{first_index}:{method}",
                     "METHOD",
                     method,
                     disposition == "USEFUL",
@@ -213,6 +257,8 @@ def extract_explicit_returns(
 def update_from_cycle_prs(
     state: WorkLearningState,
     prs: Iterable[Mapping[str, Any]],
+    *,
+    authorized_logins: Iterable[str] | None = None,
 ) -> WorkLearningState:
     """Compatibility name: accepts PR or issue cycle-carrier records."""
     seen = set(state.seen_return_ids)
@@ -221,7 +267,10 @@ def update_from_cycle_prs(
     method_success = dict(state.method_success)
     method_failure = dict(state.method_failure)
 
-    for return_id, axis, key, useful in extract_explicit_returns(prs):
+    for return_id, axis, key, useful in extract_explicit_returns(
+        prs,
+        authorized_logins=authorized_logins,
+    ):
         if return_id in seen:
             continue
         if axis == "KIND":

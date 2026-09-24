@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 WORKFLOW = ROOT / ".github/workflows/venus-autonomous-worker.yml"
 
 
-def external_review(body: str, *, login: str = "external-reviewer", review_id: int = 1):
+def external_review(body: str, *, login: str = "oestradiol", review_id: int = 1):
     return {
         "id": review_id,
         "body": body,
@@ -104,6 +104,42 @@ class AutonomousGovernanceTests(unittest.TestCase):
         )
         self.assertEqual(updated.kind_success["ISSUE"], 0)
 
+    def test_unauthorized_external_reviewer_cannot_train_learning_state(self):
+        updated = update_from_cycle_prs(
+            empty_state(),
+            [{
+                "number": 299,
+                "title": "venus: autonomous cycle issue-72",
+                "state": "OPEN",
+                "reviews": [
+                    external_review(
+                        USEFUL_MARKER + "\nVENUS_METHOD_RETURN: REPRODUCTION: USEFUL",
+                        login="random-commenter",
+                        review_id=900,
+                    )
+                ],
+            }],
+        )
+        self.assertEqual(updated.kind_success["ISSUE"], 0)
+        self.assertEqual(updated.method_success["REPRODUCTION"], 0)
+        self.assertEqual(updated.seen_return_ids, ())
+
+    def test_explicit_authority_parameter_fails_closed_on_wildcard(self):
+        with self.assertRaisesRegex(ValueError, "non-wildcard"):
+            update_from_cycle_prs(
+                empty_state(),
+                [],
+                authorized_logins={"*"},
+            )
+
+    def test_self_identity_cannot_be_authorized_as_external_return(self):
+        with self.assertRaisesRegex(ValueError, "self-review"):
+            update_from_cycle_prs(
+                empty_state(),
+                [],
+                authorized_logins={"github-actions[bot]"},
+            )
+
     def test_ambiguous_review_marker_is_ignored(self):
         body = USEFUL_MARKER + "\n" + UNHELPFUL_MARKER
         updated = update_from_cycle_prs(
@@ -118,6 +154,41 @@ class AutonomousGovernanceTests(unittest.TestCase):
         )
         self.assertEqual(updated.kind_success["ISSUE"], 0)
         self.assertEqual(updated.kind_failure["ISSUE"], 0)
+
+    def test_duplicate_same_method_marker_counts_once_per_return(self):
+        body = "\n".join([
+            "VENUS_METHOD_RETURN: REPRODUCTION: USEFUL",
+            "VENUS_METHOD_RETURN: REPRODUCTION: USEFUL",
+        ])
+        updated = update_from_cycle_prs(
+            empty_state(),
+            [{
+                "number": 306,
+                "title": "venus: autonomous cycle issue-72",
+                "state": "OPEN",
+                "reviews": [external_review(body, review_id=806)],
+            }],
+        )
+        self.assertEqual(updated.method_success["REPRODUCTION"], 1)
+        self.assertEqual(len(updated.seen_return_ids), 1)
+
+    def test_conflicting_same_method_markers_fail_closed(self):
+        body = "\n".join([
+            "VENUS_METHOD_RETURN: REPRODUCTION: USEFUL",
+            "VENUS_METHOD_RETURN: REPRODUCTION: UNHELPFUL",
+        ])
+        updated = update_from_cycle_prs(
+            empty_state(),
+            [{
+                "number": 307,
+                "title": "venus: autonomous cycle issue-72",
+                "state": "OPEN",
+                "reviews": [external_review(body, review_id=807)],
+            }],
+        )
+        self.assertEqual(updated.method_success["REPRODUCTION"], 0)
+        self.assertEqual(updated.method_failure["REPRODUCTION"], 0)
+        self.assertEqual(updated.seen_return_ids, ())
 
     def test_explicit_external_method_return_changes_only_method_learning(self):
         method = METHODS[0]
@@ -166,7 +237,7 @@ class AutonomousGovernanceTests(unittest.TestCase):
             "comments": [{
                 "id": 991,
                 "body": f"VENUS_METHOD_RETURN: {method}: USEFUL",
-                "author": {"login": "external-reviewer"},
+                "author": {"login": "oestradiol"},
                 "createdAt": "2026-09-24T22:00:00Z",
             }],
         }]
@@ -217,13 +288,13 @@ class AutonomousGovernanceTests(unittest.TestCase):
                 {
                     "id": 1,
                     "body": body,
-                    "author": {"login": "external-reviewer"},
+                    "author": {"login": "oestradiol"},
                     "createdAt": "2026-09-24T22:00:00Z",
                 },
                 {
                     "id": 2,
                     "body": body,
-                    "author": {"login": "external-reviewer"},
+                    "author": {"login": "oestradiol"},
                     "createdAt": "2026-09-24T22:05:00Z",
                 },
             ],
@@ -380,6 +451,10 @@ class AutonomousGovernanceTests(unittest.TestCase):
     def test_autonomous_write_gate_runs_full_unit_suite(self):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("python -m unittest discover -s tests -p 'test_*.py'", text)
+
+    def test_autonomous_cycle_has_wall_clock_budget(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("timeout-minutes: 30", text)
 
     def test_workflow_runs_safety_tests_before_git_write(self):
         text = WORKFLOW.read_text(encoding="utf-8")

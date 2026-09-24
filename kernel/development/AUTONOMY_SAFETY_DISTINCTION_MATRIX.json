@@ -378,6 +378,29 @@
         "tests/test_autonomous_research_proposal.py"
       ],
       "invariant": "state-owned target routing may select only externally admitted check IDs and cannot invent executable commands"
+    },
+    {
+      "id": "AUTHORIZED_EXTERNAL_RETURN_REQUIRED",
+      "tests": [
+        "tests/test_autonomous_return_authority.py",
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "non-self identity alone is insufficient for learning; only explicitly authorized external reviewers may supply work/method learning returns, and autonomy cannot rewrite that authority policy"
+    },
+    {
+      "id": "RETURN_AXIS_AMBIGUITY_FAIL_CLOSED",
+      "tests": [
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "one authorized external review contributes at most one unambiguous learning signal per method axis; duplicate identical markers count once and conflicting markers produce no learning"
+    },
+    {
+      "id": "AUTONOMOUS_RESOURCE_BUDGET",
+      "tests": [
+        "tests/test_autonomous_research_proposal.py",
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "each fixed local check and the whole autonomous cycle are time-bounded; timeout is failed evidence and cannot be interpreted as success"
     }
   ],
   "promotion_authority": false
