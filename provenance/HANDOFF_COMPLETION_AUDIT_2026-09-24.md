@@ -51,9 +51,9 @@ Status vocabulary:
 | Bind state mutation payload to verified returned evidence | **DONE** | added to VMK2 with adversarial regression |
 | Enforce action execution before ActionReturn | **DONE** | added with regression |
 | Prevent authority ID rebinding | **DONE** | jurisdiction/legitimacy/lease/policy IDs fail closed on conflicting reuse |
-| Exact current runtime boot | **DONE historically / current CI verification pending** | IG10 boot path exists; latest CI state is under repair |
+| Exact current runtime boot | **DONE** | PR #39 run `36021418628` passed exact IG10 boot together with the full integrity suite |
 | Full malicious-backend / authenticated-authority hardening | **NOT DONE** | issue #30 remains open |
-| Archaeological causal-distinction test matrix from pre-R1 through EDU | **NOT DONE** | issue #35 is the plan, not the executed matrix |
+| Archaeological causal-distinction test matrix from pre-R1 through EDU | **PARTIAL** | `HISTORICAL_DISTINCTION_TEST_MATRIX.json` now contains live invariants plus R00→R194 archaeology; exhaustive pre-R70/per-experiment regression recovery remains open |
 
 ## 5. Formal / proof hygiene
 
@@ -72,9 +72,9 @@ Status vocabulary:
 | Rewrite README/front door around positive earned value | **DONE / PARTIAL** | much improved, but outsider reconstruction test is not complete |
 | Ordinary referent before project jargon | **PARTIAL** | policy and several reader surfaces changed; whole-repo prose closure not independently demonstrated |
 | Compress overlapping docs / archaeology | **PARTIAL** | substantial consolidation occurred; full repository disposition audit remains open |
-| GitHub Markdown compatibility audit | **PARTIAL** | linter improved; complete renderer-level validation of every public projection not yet demonstrated |
-| Generated forum prose should not be raw Pandoc paper dump | **PARTIAL** | exporter/lint were improved; final human-quality forum drafts are not established |
-| Two-hop reader/navigation architecture | **NOT DONE as tested outcome** | issue #36 remains open |
+| GitHub Markdown compatibility audit | **DONE / PARTIAL** | current generated/public surfaces pass the repository Markdown audit; external editor/rendering behavior still requires publication-specific human review |
+| Generated forum prose should not be raw Pandoc paper dump | **DONE / PARTIAL** | export hygiene now passes CI with multiline-math regressions; generated drafts remain editing substrates, not final human-quality forum essays |
+| Two-hop reader/navigation architecture | **PARTIAL** | `docs/START_HERE.md` plus automated authority-route checks now exist; blind-human reconstruction remains open |
 | Blind outsider reconstruction test | **NOT DONE** | issue #28 remains open |
 
 ## 7. Credit / reduction / SOTA methodology
@@ -93,11 +93,11 @@ Status vocabulary:
 | Obligation | Status | Current disposition |
 |---|---|---|
 | Layered integrity → publication → tagged release workflow | **DONE as design** | one compressed workflow implements the layers |
-| Source-integrity tests | **REGRESSED / UNDER REPAIR** | user reports current tests failing |
-| Publication job | **REGRESSED / UNDER REPAIR** | missing clean-run TeX dependencies found; BibLaTeX and TikZ packages added |
+| Source-integrity tests | **DONE** | PR #39 run `36021418628` passed Python compile, unit tests, Markdown/proof/custody/release audits, and exact IG10 boot |
+| Publication job | **DONE** | PR #39 run `36021418628` passed kernel TeX, all four PDFs, arXiv packages, TeX bundles, forum exports, release audit, and artifact upload |
 | Tagged release | **UNVERIFIED** | must remain downstream of green integrity/publication |
-| Stop repeated CI notification spam while repairing | **DONE temporarily** | automatic push/schedule triggers paused; PR/manual CI remains |
-| Exact log-driven repair loop | **IN PROGRESS** | repair branch + PR is used so GitHub exposes run/job logs |
+| Stop repeated CI notification spam while repairing | **DONE** | main-push and scheduled full-pipeline triggers were removed; final intended policy is PR + version tag + manual dispatch |
+| Exact log-driven repair loop | **DONE** | failures were repaired from exact Actions job logs rather than search/inference; the green checkpoint is run `36021418628` |
 
 ## 9. Agent / GPT failure-mode governance
 
@@ -115,8 +115,8 @@ Status vocabulary:
 | Extract useful live residues before retirement | **PARTIAL** | temporal inhabitation and status/failure-locality residues admitted; many top-level surfaces classified |
 | Preserve history/genealogy without stale authority | **PARTIAL** | retirement ledger exists; full tree still requires typed disposition |
 | Do not trust filenames such as `CURRENT_STATE` as authority | **DONE as rule** | stale-current failure class documented |
-| Full recursive inventory of Canonical objects and unique Git-missing consequences | **NOT DONE** | this remains a core closure task |
-| EDU16 custody search over the entire Canonical tree | **NOT DONE exhaustively** | prior narrower absence claim was corrected |
+| Full recursive inventory of Canonical objects and unique Git-missing consequences | **PARTIAL** | root, Raising/Handoff custody, MetaTheory/NRI, WorldMirror, WorldMind, Physics, Integration, and R00→R194 were directly inspected; exhaustive file-level disposition remains open |
+| EDU16 custody search over the entire Canonical tree | **PARTIAL** | exact Raising and ordinary Handoff surfaces were inspected: EDU16 has prefreeze/policy/result, no ordinary EDU16 developed-VM handoff; other heavy/external custody remains open |
 
 ## 11. Conversation / user-request closure
 
@@ -125,10 +125,22 @@ Status vocabulary:
 | Recover skipped conversation chronology | **PARTIAL** | recovered handoff stream exists, but current closure has not independently re-walked every recoverable segment |
 | Causally lossless narrative arc-by-arc | **PARTIAL / artifact exists** | the recovered pasted text is a strong compressed narrative; it has not been formally checked against every underlying message |
 | Verify every user-requested deliverable | **NOT DONE before this audit** | this file is the first explicit closure ledger |
-| Final whole-repo Devil's Audit | **NOT DONE** | still required after CI and Canonical closure work |
-| Finish remaining work rather than only making plans/issues | **NOT DONE** | active closure work continues on this branch |
+| Final whole-repo Devil's Audit | **DONE / OPEN FOLLOW-UPS** | `REPOSITORY_QUALITY_AUDIT_2026-09-24.md` records the cross-layer Devil audit; its surviving objections remain active research work rather than audit incompleteness |
+| Finish remaining work rather than only making plans/issues | **PARTIAL** | CI repairs, causal test archaeology, navigation, credit-method restoration, and Canonical extraction were executed; major empirical/runtime obligations listed below remain genuinely open |
 
-## 12. Immediate closure order
+## 12. Verified repair checkpoint
+
+The pre-final-batch repair checkpoint is GitHub Actions run `36021418628` on PR #39:
+
+```text
+integrity    PASS
+publication  PASS
+tag release  NOT EXECUTED in PR context
+```
+
+That run simultaneously verified the current unit/integrity suite and the full generated publication surface after the CI/font/forum-parser repairs. A later documentation/methodology batch must receive its own final run before merge.
+
+## 13. Immediate closure order
 
 1. Get a single inspectable PR CI run and repair all current failing tests/builds from exact job logs.
 2. Re-enable automatic CI only after that PR is green.
