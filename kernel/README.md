@@ -50,3 +50,19 @@ The same module exposes an O* transition-contract validator for the Strong-N2 no
 
 These are governance semantics. A passing receipt does not itself prove a capability improvement, authorize promotion, or establish Safe Strong RSI.
 
+
+
+## Scaffold consumption
+
+The first live Internalizer target is the generic residual-search scaffold.
+
+```text
+historical/reconstructed search scaffold
+-> state-owned GENERIC_RESIDUAL_SEARCH_INTERNALIZED_STATE
+-> generic minimal executor
+-> scaffold source not required at post-consumption runtime
+```
+
+`development/GENERIC_RESIDUAL_SEARCH_INTERNALIZED_STATE.json` owns the bounded search grammar and withholding/discriminator policy. `runtime/internalized_search.py` is deliberately project-blind execution substrate and has no import of the historical donor or `recursive_proposal.py`.
+
+This is architectural scaffold consumption only. It does not claim that Venus freshly learned the inherited search operation. World return, evidence, evaluator independence, authority, jurisdiction, STOP/WITHHOLD safety, and parent custody remain non-consumable.
