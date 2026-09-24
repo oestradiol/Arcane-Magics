@@ -37,6 +37,31 @@ false positives      = 8
 
 This reproduces the original failure family on the public development set: uncertainty-language is a poor proxy for object-level incidence. It is deliberately **non-promotional** and may be tuned against.
 
+## Frozen condition B
+
+Condition B is now implemented and frozen before hidden exposure:
+
+```text
+candidate   EDU17R1-RC1-WORD-JACCARD-K3-v1
+status      AUTHORED_FROZEN
+method      WORD_JACCARD_K3
+public dev  14/16 accuracy; macro-F1 0.8333
+hidden      unexposed
+promotion   false
+```
+
+`condition_b.py` uses the frozen state-owned calibrated-retrieval method over the public development calibration set and accepts only label-free blind rows. Public development may have been tuned against; therefore these scores establish neither hidden efficacy nor transfer.
+
+Run condition B only on the evaluator-produced blind package:
+
+```bash
+python benchmarks/edu17r1_mention_incidence/condition_b.py \
+  /shared/edu17r1-blind.jsonl \
+  --output /returned/condition-B.jsonl
+```
+
+After hidden exposure, condition B is frozen. Any repair or retuning creates a new candidate and cannot reuse the same preregistered claim.
+
 ## Hidden evaluation
 
 A promotion run requires a separately frozen hidden split whose examples and labels are unavailable to the evaluated system/harness before execution.
