@@ -57,10 +57,22 @@ First occurrence should normally expose:
 
 Do not require readers to memorize a project name before they can see the object it denotes. Each major section should provide at least one of: a concrete example, a reconstruction prompt, a falsifier/crux, a comparator, or a register boundary.
 
-## 7. Researcher / reviewer separation
+## 7. Inhabitable-reader law
+
+When abstraction outruns ordinary reconstruction, public-facing material should periodically expose at least one human-scale path:
+
+`receive -> locate -> move -> return -> redistribute`
+
+or ask explicitly about world-incidence, carrier exchange, self-incidence, maintenance cost, preserved difference, or a concrete reopening route.
+
+This is a didactic requirement, not warrant. A humane example cannot substitute for proof or evidence, and a formal result cannot excuse a reader interface that hides who receives consequence, who bears cost, who may refuse, or what can still return independently.
+
+See `docs/INHABITABLE_READER_PATH.md`.
+
+## 8. Researcher / reviewer separation
 
 Research artifacts distinguish proposal, source acquisition, evaluation, and adjudication. A researcher may generate a model or query; an independent or prefrozen evaluator owns hidden scoring where the claim requires non-preauthored return. Reviewer repairs may fix verifier defects only if they do not alter the proposal, threshold, target, or returned evidence.
 
-## 8. Forum and arXiv projections
+## 9. Forum and arXiv projections
 
 The arXiv version optimizes self-contained scholarly communication and source portability. The LessWrong/BetterWrong preprint projection optimizes inferential distance: TL;DR, epistemic status, ordinary-language problem, neutral model, strongest comparator, cruxes, what-would-change-my-mind, then optional project vocabulary. These are different presentations of the same typed claim, not different truth standards.
