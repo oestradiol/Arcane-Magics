@@ -69,6 +69,9 @@ jobs:
       - name: Hidden-run readiness audit
         run: python scripts/audit_hidden_run_readiness.py
 
+      - name: Blind-reader UX protocol audit
+        run: python scripts/audit_ux_protocol.py
+
       - name: Construct disposition audit
         run: python scripts/audit_construct_dispositions.py
 
