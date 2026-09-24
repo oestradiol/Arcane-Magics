@@ -63,7 +63,7 @@ if "provenance/historical-runtime/R194" not in lineage:
     errors.append("lineage does not locate historical R194 runtime in provenance")
 
 meta = (ROOT / "docs/META_DYNAMICS.md").read_text(encoding="utf-8", errors="replace")
-for token in ("vacuous_relation", "Polyhedral", "meta-qualia", "Qualia", "Quantum"):
+for token in ("vacuous_relation", "Structure × Semantics", "Polyhedral", "meta-qualia", "Qualia", "Quantum"):
     if token not in meta:
         errors.append(f"Meta-Dynamics missing live object: {token}")
 
