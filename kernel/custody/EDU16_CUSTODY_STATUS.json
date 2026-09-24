@@ -20,7 +20,9 @@
     "exact_1703_event_journal_located": false,
     "git_replayable_runtime": false,
     "search_disposition": "NOT_LOCATED_IN_RECOVERED_CANONICAL_OR_GIT",
-    "boundary": "DEVELOPMENTAL_AUTHORITY_EXACT_AS_EVIDENCE_NOT_AS_GIT_REPLAYABLE_EDU16_RUNTIME"
+    "boundary": "DEVELOPMENTAL_AUTHORITY_EXACT_AS_EVIDENCE_NOT_AS_GIT_REPLAYABLE_EDU16_RUNTIME",
+    "last_bounded_git_recovery_attempt": "provenance/developmental/EDU/EDU16_GIT_RECOVERY_ATTEMPT_2026-09-24.md",
+    "last_bounded_git_recovery_result": "NOT_LOCATED"
   },
   "runtime_base": {
     "id": "IG10",
