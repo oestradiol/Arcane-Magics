@@ -89,3 +89,13 @@ Those require World-side return and remain separate from automated integrity.
 ## Machine-checked formal subset
 
 `formal/lean/` machine-checks a bounded OFE core: future-equivalence as a setoid, test-family monotonicity, sufficient-representation refinement, quotient transport under equivalence preservation, pullback closure as a sufficient condition, common-refinement factorization implying future-equivalence, separating-family equality, and reopening by adjoining an explicit pulled-back separator. `tests/test_proof_container_semantics.py` separately locks the fact that theorem-container lint is only structural. These checks do not establish OFE novelty, physical correctness, or mature-substitution residual.
+
+## Reliability public development surfaces
+
+The repository now contains three non-promotional public reliability surfaces:
+
+- `benchmarks/adaptive_promotion/` — synthetic repeated-null-proposal pressure for false successor commits (#41);
+- `benchmarks/abstention/` — paired ACT / GATHER / WITHHOLD / STOP decision cases (#42);
+- `benchmarks/world_input_security/` — returned-content / instruction / authority / memory disposition cases (#43).
+
+They define executable failure surfaces and baseline floors. Claim-bearing results still require hidden/matched or dynamic external evaluation against mature substitutes.
