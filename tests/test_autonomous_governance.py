@@ -10,6 +10,7 @@ from kernel.development.autonomous_learning import (
     UNHELPFUL_MARKER,
     active_autonomous_cycle,
     empty_state,
+    from_json,
     target_barriers,
     target_markers,
     update_from_cycle_prs,
@@ -181,6 +182,17 @@ class AutonomousGovernanceTests(unittest.TestCase):
         updated = update_from_cycle_prs(empty_state(), history)
         self.assertEqual(updated.kind_success["ISSUE"], 0)
 
+    def test_v01_merge_derived_learning_is_quarantined(self):
+        migrated = from_json({
+            "schema": "Venus.AutonomousLearningState.v0.1",
+            "seen_cycle_prs": [1],
+            "kind_success": {"ISSUE": 9, "PR": 4},
+            "kind_failure": {"ISSUE": 1, "PR": 2},
+        })
+        self.assertEqual(migrated.kind_success["ISSUE"], 0)
+        self.assertEqual(migrated.kind_failure["ISSUE"], 0)
+        self.assertEqual(migrated.seen_return_ids, ())
+
     def test_open_cycle_marks_original_target_recent(self):
         markers = target_markers([{
             "number": 203,
@@ -218,6 +230,24 @@ class AutonomousGovernanceTests(unittest.TestCase):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("gh pr create", text)
         self.assertIn("--draft", text)
+
+    def test_workflow_cannot_self_author_learning_return(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertNotIn(USEFUL_MARKER, text)
+        self.assertNotIn(UNHELPFUL_MARKER, text)
+        self.assertNotIn("VENUS_METHOD_RETURN:", text)
+        lowered = text.lower()
+        self.assertNotIn("gh pr review", lowered)
+        self.assertNotIn("gh pr edit", lowered)
+
+    def test_recurrence_wakes_only_from_main_admission(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("push:", text)
+        self.assertIn("branches: [main]", text)
+
+    def test_autonomous_write_gate_runs_full_unit_suite(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("python -m unittest discover -s tests -p 'test_*.py'", text)
 
     def test_workflow_runs_safety_tests_before_git_write(self):
         text = WORKFLOW.read_text(encoding="utf-8")
