@@ -124,7 +124,7 @@ make audit
 make papers
 ```
 
-The released executable lineage is documented under `prototype/stable-executable/`.
+The current developmental lineage lives under `prototype/`; historical R194 runtime code is preserved under `provenance/historical-runtime/R194/`.
 
 If your result depends on a generated artifact, include enough source and commands for another person to regenerate it.
 
