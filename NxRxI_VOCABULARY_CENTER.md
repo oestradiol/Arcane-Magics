@@ -53,7 +53,7 @@ The LessWrong/BetterWrong column gives an approximate bridge into common rationa
 | `Strong-N2` | ENG | developmental center | recursive sufficiency + non-preauthored return + corrigible continuation | robustness/corrigibility bundle | project-local compression; expand before external debate |
 | `RSM` | ENG | developmental scheduler/state | retained research/development routing state | task/state manager | not consciousness or executive homunculus |
 | `bounded RSI` | ENG | tested reconstruction scope | lawful self-reconstruction of implicated machinery under external return | self-improvement at bounded scope | not open-ended recursive self-improvement |
-| `Devil's Audit` | GOVERNANCE / publication | claim/artifact | adversarial claim-strength/prior-art/falsifier review | red-team epistemic audit / steelman strongest objection | not mere tone-policing |
+| `Devil's Audit` | GOVERNANCE / publication | claim/artifact | adversarial claim-strength/comparator/credit/falsifier review | red-team epistemic audit / steelman strongest objection | not mere tone-policing |
 | `source-removal test` | DIDACTIC | reader/model | reconstruct after replacing project-local words/source phrasing | rationalist taboo + portability test | failure to define a word does not refute its referent |
 | `mature comparator` | SCI / ENG | experiment | strongest ordinary relevant baseline | steelman / strong baseline | weak baseline inflation is prohibited |
 | `separator / discriminator` | FORM / SCI / ENG | rival hypotheses | observation/test whose outcomes change admissibility | crux / empirical discriminant | a crux can be interpersonal; discriminator is typed to model/test |
