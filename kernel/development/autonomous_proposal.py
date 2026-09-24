@@ -26,6 +26,7 @@ AUTONOMY_WRITABLE_PREFIXES = (
     "autonomy/cycles/",
     "autonomy/proposals/",
     "autonomy/evidence/",
+    "autonomy/executions/",
     "kernel/development/AUTONOMOUS_LEARNING_STATE.json",
 )
 
