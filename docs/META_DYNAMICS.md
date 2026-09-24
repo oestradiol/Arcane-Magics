@@ -382,7 +382,63 @@ Meta-Dynamics
 
 The tree is organizational, not an assertion that every branch reduces to one ontology.
 
-## 15. Final invariant
+## 15. Polyhedral inhabitation and meta-qualia
+
+Polyhedral Eclipsis is the current geometric/model realization of local inhabitation inside Meta-Dynamics. It treats one indexed center as a compatible family of locally inhabitable faces joined by typed boundaries, with Eclipsis naming the crossing where present organization, returned consequence, discrimination, and successor reconstruction meet.
+
+The neutral compression is:
+
+```text
+local views / fibers
++ typed boundaries
++ compatibility / gluing
++ future-separating residuals
++ returned consequence
++ successor reconstruction
+```
+
+The Polyhedral object is not gauge merely because its physical bridge remains open. Its live burden is discriminative: show what the geometry preserves or predicts that a mature neutral factorization does not.
+
+Meta-qualia names a higher-order inhabited relation: not merely a local phenomenal state, but local phenomenology of the operator or organization by which phenomenal, symbolic, functional, and relational distinctions are coordinated.
+
+```text
+qualia      = inhabitation of a local differentiated state
+meta-qualia = inhabitation of the organization/compression coordinating such states
+```
+
+This remains THEOPHEN / PHEN / MODEL unless an independent consciousness bridge is earned.
+
+## 16. Qualia, Quantum, Mind, and AntiMind
+
+The current structural square remains live:
+
+```text
+Qualia   <-> AntiMind
+Quantum  <-> Mind
+```
+
+Current neutral reading:
+
+- **Qualia:** locally inhabited semantic/phenomenal differentiation;
+- **AntiMind:** contextual, generative, or phenomenal organization within which that differentiation is locally available;
+- **Quantum:** candidate physical-side differentiated Structure;
+- **Mind:** epistemic/inferential/compressive organization of self/world distinctions.
+
+The square proposes a relation to investigate, not a quantum theory of consciousness. The vertical physical/phenomenal bridge is `OPEN / WITHHOLD`: symmetry, naming, or structural recurrence cannot supply mechanism identity.
+
+A successful bridge would need carrier-specific states, observables, composition, dynamics, measurable consequences, and a discriminator against ordinary neural/computational alternatives. Failure narrows the physical claim without deleting the native phenomenal or formal objects.
+
+## 17. Hard epistemology and religion
+
+Meta-Dynamics is intended to attack hard open questions in epistemology and religion rather than merely classify traditions.
+
+Epistemic targets include recursive sufficiency after model-guided action, warrant transport across lossy representations, independent correction without authority collapse, stable-but-reopenable closure, and non-collapse of model, evidence, authority, jurisdiction, and Reality under recursive self-description.
+
+Religious/theophenomenological targets include source-faithful Whole/local, revelation/return, incarnation/enactment, apophatic/non-exhaustion, and spirit/transmission comparisons; deletion tests for theological names; transmission-aware recurrence; the relation between distributed self-representation and false global-agent lifts; and ways symbolic orientation can remain meaningful without borrowing scientific warrant.
+
+These are research programs with explicit bridge burdens, not reasons to demote the objects to decorative metaphor.
+
+## 18. Final invariant
 
 The current condensed invariant is:
 
@@ -410,7 +466,7 @@ Human-perspective rendering:
 
 > Inspect experience, differentiate without absolutizing, relate without erasing, crystallize only provisionally, act under boundaries that preserve indexed Other-centers, accept non-preauthored return, and let consequential difference reopen the model.
 
-## 16. Claim fence
+## 19. Claim fence
 
 Meta-Dynamics currently does **not** establish:
 
