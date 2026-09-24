@@ -9,6 +9,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 BENCH = ROOT / "benchmarks" / "edu17r1_mention_incidence"
+FREEZE = BENCH / "CONDITION_IMPLEMENTATIONS.json"
 
 
 def load_module(name: str, path: Path):
@@ -35,6 +36,7 @@ class EDU17R1BlindAdjudicationTests(unittest.TestCase):
     def make_manifest(self, hidden: Path, out: Path):
         payload = {
             "dataset_sha256": hashlib.sha256(hidden.read_bytes()).hexdigest(),
+            "condition_freeze_sha256": hashlib.sha256(FREEZE.read_bytes()).hexdigest(),
             "labels_public_before_run": False,
         }
         out.write_text(json.dumps(payload), encoding="utf-8")
