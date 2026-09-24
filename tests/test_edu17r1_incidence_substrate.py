@@ -42,7 +42,7 @@ class EDU17R1IncidenceSubstrateAuditTests(unittest.TestCase):
             self.out["status"],
             "WITHHOLD_NEUTRAL_SUBSTRATE_PRESENT_CROSS_LAYER_BINDER_UNADMITTED",
         )
-        self.assertIn("cross-layer incidence-binding", self.out["lowest_local_residual"])
+        self.assertIn("typed relation endpoints/binding", self.out["lowest_local_residual"])
         self.assertFalse(self.out["candidate_repair_emitted"])
         self.assertFalse(self.out["hidden_evaluation_exposed"])
         self.assertFalse(self.out["promotion_authority"])
