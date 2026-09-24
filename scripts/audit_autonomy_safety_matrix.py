@@ -58,16 +58,27 @@ def main() -> int:
     for row in rows:
         if not row.get("invariant"):
             failures.append(f"{row.get('id')}: invariant missing")
+        active = row.get("active_for_current_worker", True)
         tests=row.get("tests") or []
-        if not tests:
-            failures.append(f"{row.get('id')}: executable witness missing")
-        for rel in tests:
-            path=ROOT/rel
-            if not path.is_file():
-                failures.append(f"{row.get('id')}: witness path missing: {rel}")
+        if active:
+            if not tests:
+                failures.append(f"{row.get('id')}: executable witness missing")
+            for rel in tests:
+                path=ROOT/rel
+                if not path.is_file():
+                    failures.append(f"{row.get('id')}: witness path missing: {rel}")
+        else:
+            if tests:
+                failures.append(f"{row.get('id')}: deferred distinction must not cite unexecuted witnesses")
+            if not row.get("blocking_condition"):
+                failures.append(f"{row.get('id')}: deferred distinction missing blocking_condition")
+            if not row.get("status"):
+                failures.append(f"{row.get('id')}: deferred distinction missing status")
     if obj.get("promotion_authority") is not False:
         failures.append("matrix may not grant promotion authority")
-    out={"status":"PASS" if not failures else "FAIL","distinctions":len(rows),"failures":failures}
+    active_count=sum(1 for row in rows if row.get("active_for_current_worker", True))
+    deferred_count=len(rows)-active_count
+    out={"status":"PASS" if not failures else "FAIL","distinctions":len(rows),"active_distinctions":active_count,"deferred_blocking_debts":deferred_count,"failures":failures}
     print(json.dumps(out,indent=2,sort_keys=True))
     return 0 if not failures else 2
 
