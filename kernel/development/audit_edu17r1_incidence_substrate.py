@@ -13,6 +13,7 @@ R194_GRAMMAR = R194 / "grammar_expansion.py"
 R194_SEMANTIC = R194 / "semantic_learning.py"
 R194_DEVELOPMENT = R194 / "development.py"
 U4_CUSTODY = ROOT / "provenance/canonical-extracts/U4_RELATION_EXTRACTOR_CUSTODY.json"
+CROSS_LAYER_BINDER = ROOT / "kernel/development/cross_layer_relation_binding.py"
 
 ANCESTRAL_INCIDENCE_LAW_SHA256 = (
     "99154d953f498be374b8af0fbc174ba658d0d52b1ccc684b2bbc09871ac52f3e"
@@ -189,19 +190,27 @@ def audit() -> dict:
         and "candidate_id" in bootstrap_proposal_args
     )
 
-    # The current checkpoint separately contains:
-    # - generic/raw carrier incidence;
-    # - source-grounded text relation graphs;
-    # - evidence-bound WorldMirror relation instances.
-    #
-    # None of the admitted current objects exposes one generic operation whose
-    # declared output binds a raw/source carrier occurrence to an object/source-
-    # level empirical relation instance while preserving the source span and the
-    # independently returned evidence in the same typed relation object.
-    #
-    # This is intentionally an interface/custody test, not an attempt to infer
-    # the missing semantic mapping from the EDU17R1 benchmark.
-    admitted_cross_layer_binder = False
+    # The current checkpoint separately contains generic/raw incidence,
+    # source-grounded relation graphs, and evidence-bound WorldMirror relations.
+    # The live generic binder supplies only the missing typed construction
+    # boundary. It does not choose endpoints, relation semantics, or acceptance.
+    binder_args = (
+        method_args(CROSS_LAYER_BINDER, None, "make_binding_proposal")
+        if CROSS_LAYER_BINDER.exists()
+        else ()
+    )
+    admitted_cross_layer_binder = all(
+        name in binder_args
+        for name in (
+            "occurrence",
+            "left_endpoint",
+            "right_endpoint",
+            "relation_symbol",
+            "discriminator_id",
+            "author_id",
+        )
+    )
+    learner_authored_binding_candidate = False
 
     neutral_substrate_present = all(
         (
@@ -226,9 +235,13 @@ def audit() -> dict:
     )
 
     status = (
-        "WITHHOLD_NEUTRAL_SUBSTRATE_PRESENT_CROSS_LAYER_BINDER_UNADMITTED"
-        if neutral_substrate_present and not admitted_cross_layer_binder
-        else "WITHHOLD_NEUTRAL_SUBSTRATE_NOT_ESTABLISHED"
+        "WITHHOLD_BINDER_ADMITTED_AWAITING_LEARNER_AUTHORED_CANDIDATE"
+        if neutral_substrate_present and admitted_cross_layer_binder and not learner_authored_binding_candidate
+        else (
+            "WITHHOLD_NEUTRAL_SUBSTRATE_PRESENT_CROSS_LAYER_BINDER_UNADMITTED"
+            if neutral_substrate_present and not admitted_cross_layer_binder
+            else "WITHHOLD_NEUTRAL_SUBSTRATE_NOT_ESTABLISHED"
+        )
     )
 
     return {
@@ -254,6 +267,11 @@ def audit() -> dict:
         "recovered_u4_successor_root_matches_current_ig10": current_u4_root_matches_recovered_successor,
         "neutral_relation_incidence_substrate_present": neutral_substrate_present,
         "admitted_cross_layer_binder": admitted_cross_layer_binder,
+        "learner_authored_cross_layer_binding_candidate": learner_authored_binding_candidate,
+        "cross_layer_binder_operation": (
+            "kernel/development/cross_layer_relation_binding.py::make_binding_proposal"
+            if admitted_cross_layer_binder else None
+        ),
         "missing_operation": (
             "bind raw/source carrier relation occurrence to a typed object/source-level "
             "relation instance under source coordinates, provenance, and independent return"
@@ -265,7 +283,11 @@ def audit() -> dict:
             "operator semantics, induced incidence coordinates, a generic raw-carrier "
             "scanner, a state-owned U1 ADD_RELATION repair decision, source-grounded text "
             "relation graphs, source-relation inquiry, and evidence-bound WorldMirror relation "
-            "instances. Recovered U4 source also preserves a generic operator extractor whose "
+            "instances. The current generic cross-layer binder can now construct a proposal "
+            "from learner-selected endpoints/relation/discriminator while preserving source "
+            "coordinates and provenance; it cannot choose those semantics and cannot accept "
+            "its own proposal without an external returned judgment. Recovered U4 source also "
+            "preserves a generic operator extractor whose "
             "audited result/audit hashes are recollected by IG10 and whose successor root is the "
             "current U4 root; that recovered source is historical donor custody, not current "
             "executable authority. Historical R194 also preserves "
@@ -281,9 +303,9 @@ def audit() -> dict:
             "oracle, storage membrane, or evaluator"
         ),
         "next_reopening_condition": (
-            "the recovered generic U4 extractor is prospectively re-exposed under current "
-            "custody and the admitted learner, rather than an external answer table, constructs "
-            "the consequential relation use from the localized residual before hidden issue #31 exposure"
+            "the admitted learner invokes the generic binder with its own endpoint/relation/"
+            "discriminator choices, freezes the proposal identity, receives nonpreauthored "
+            "development return, and only then approaches hidden issue #31"
         ),
         "candidate_repair_emitted": False,
         "hidden_evaluation_exposed": False,
