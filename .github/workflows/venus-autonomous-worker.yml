@@ -32,19 +32,18 @@ jobs:
           python -m unittest discover -s tests -p 'test_*.py'
           python scripts/audit_custody.py
           python scripts/audit_causal_distinctions.py
-          python scripts/audit_open_issue_coverage.py <(printf '{"issues":[]}') || true
 
       - name: Snapshot current GitHub World surface
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh issue list --state open --limit 200             --json number,title,state,updatedAt             > /tmp/venus-issues.json
-          gh pr list --state open --limit 200             --json number,title,state,isDraft,mergeStateStatus,updatedAt             > /tmp/venus-prs.json
-          gh pr list --state all --limit 200             --json number,title,state,mergedAt,closedAt             > /tmp/venus-pr-history.json
+          gh issue list --state open --limit 200 --json number,title,state,updatedAt > /tmp/venus-issues.json
+          gh pr list --state open --limit 200 --json number,title,state,isDraft,mergeStateStatus,updatedAt > /tmp/venus-prs.json
+          gh pr list --state all --limit 200 --json number,title,state,mergedAt,closedAt > /tmp/venus-pr-history.json
 
       - name: Let Venus update work-learning state and select one bounded target
         run: |
-          python scripts/run_venus_autonomous_cycle.py             --issues /tmp/venus-issues.json             --prs /tmp/venus-prs.json             --history-prs /tmp/venus-pr-history.json             --roadmap docs/ISSUE_ROADMAP.md             --policy kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json             --learning-state kernel/development/AUTONOMOUS_LEARNING_STATE.json             --learning-output /tmp/AUTONOMOUS_LEARNING_STATE.json             --output /tmp/VENUS_AUTONOMOUS_CYCLE.json
+          python scripts/run_venus_autonomous_cycle.py --issues /tmp/venus-issues.json --prs /tmp/venus-prs.json --history-prs /tmp/venus-pr-history.json --roadmap docs/ISSUE_ROADMAP.md --policy kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json --learning-state kernel/development/AUTONOMOUS_LEARNING_STATE.json --learning-output /tmp/AUTONOMOUS_LEARNING_STATE.json --output /tmp/VENUS_AUTONOMOUS_CYCLE.json
           cat /tmp/VENUS_AUTONOMOUS_CYCLE.json
           cat /tmp/AUTONOMOUS_LEARNING_STATE.json
 
@@ -67,36 +66,16 @@ jobs:
         run: |
           if [ "$TARGET_KIND" = "ISSUE" ]; then
             gh issue view "$TARGET_NUMBER" --json number,title,body,state > /tmp/target-raw.json
-            python - <<'PY'
-          import json
-          x=json.load(open('/tmp/target-raw.json'))
-          json.dump({
-              'kind':'ISSUE',
-              'number':x['number'],
-              'title':x['title'],
-              'body':x.get('body') or '',
-              'changed_files':[]
-          },open('/tmp/target.json','w'),indent=2)
-          PY
+            python -c "import json; x=json.load(open('/tmp/target-raw.json')); json.dump({'kind':'ISSUE','number':x['number'],'title':x['title'],'body':x.get('body') or '','changed_files':[]},open('/tmp/target.json','w'),indent=2)"
           else
             gh pr view "$TARGET_NUMBER" --json number,title,body,state,files > /tmp/target-raw.json
-            python - <<'PY'
-          import json
-          x=json.load(open('/tmp/target-raw.json'))
-          json.dump({
-              'kind':'PR',
-              'number':x['number'],
-              'title':x['title'],
-              'body':x.get('body') or '',
-              'changed_files':[f['path'] for f in x.get('files',[])]
-          },open('/tmp/target.json','w'),indent=2)
-          PY
+            python -c "import json; x=json.load(open('/tmp/target-raw.json')); json.dump({'kind':'PR','number':x['number'],'title':x['title'],'body':x.get('body') or '','changed_files':[f['path'] for f in x.get('files',[])]},open('/tmp/target.json','w'),indent=2)"
           fi
 
       - name: Venus studies selected target against checked-out repository
         if: steps.gate.outputs.decision != 'STOP'
         run: |
-          python scripts/run_venus_autonomous_study.py             --target /tmp/target.json             --root .             --output /tmp/VENUS_AUTONOMOUS_STUDY.json
+          python scripts/run_venus_autonomous_study.py --target /tmp/target.json --root . --output /tmp/VENUS_AUTONOMOUS_STUDY.json
           cat /tmp/VENUS_AUTONOMOUS_STUDY.json
 
       - name: Materialize draft work branch
@@ -116,14 +95,16 @@ jobs:
           mkdir -p autonomy/cycles
           cp /tmp/VENUS_AUTONOMOUS_CYCLE.json "autonomy/cycles/${cycle_id}.json"
           cp /tmp/VENUS_AUTONOMOUS_STUDY.json "autonomy/cycles/${cycle_id}-study-${study_id}.json"
-          cp /tmp/AUTONOMOUS_LEARNING_STATE.json             kernel/development/AUTONOMOUS_LEARNING_STATE.json
+          cp /tmp/AUTONOMOUS_LEARNING_STATE.json kernel/development/AUTONOMOUS_LEARNING_STATE.json
 
           git config user.name "Venus developmental worker"
           git config user.email "actions@users.noreply.github.com"
-          git add             "autonomy/cycles/${cycle_id}.json"             "autonomy/cycles/${cycle_id}-study-${study_id}.json"             kernel/development/AUTONOMOUS_LEARNING_STATE.json
+          git add "autonomy/cycles/${cycle_id}.json" "autonomy/cycles/${cycle_id}-study-${study_id}.json" kernel/development/AUTONOMOUS_LEARNING_STATE.json
 
           staged="$(git diff --cached --name-only)"
-          if printf '%s\n' "$staged" | grep -Ev '^(autonomy/cycles/|kernel/development/AUTONOMOUS_LEARNING_STATE.json$)' ; then
+          unexpected="$(printf '%s\n' "$staged" | grep -Ev '^(autonomy/cycles/|kernel/development/AUTONOMOUS_LEARNING_STATE.json$)' || true)"
+          if [ -n "$unexpected" ]; then
+            printf '%s\n' "$unexpected" >&2
             echo "autonomous write escaped bounded scope" >&2
             exit 2
           fi
@@ -132,24 +113,18 @@ jobs:
           git push origin "$branch"
 
           lower_kind="$(printf '%s' "$target_kind" | tr '[:upper:]' '[:lower:]')"
-          body="$(cat <<EOF
-This draft PR was opened by the bounded Venus developmental worker.
+          body="This draft PR was opened by the bounded Venus developmental worker.
 
 Target: ${target_kind} #${target_number}
 Cycle: ${cycle_id}
 Study: ${study_id}
 Decision: ${decision}
 
-The branch contains the prefrozen cycle receipt, a repository-local study packet,
-and bounded learning state only. Venus may study and propose, but this worker
-cannot merge, promote developmental authority, release, close the target as
-success, access secrets, or count its own execution as independent return.
+The branch contains the prefrozen cycle receipt, a repository-local study packet, and bounded learning state only. Venus may study and propose, but this worker cannot merge, promote developmental authority, release, close the target as success, access secrets, or count its own execution as independent return.
 
-External review/admission remains required before the learning state becomes an
-accepted developmental successor.
-EOF
-)"
-          url="$(gh pr create             --draft             --base main             --head "$branch"             --title "venus: autonomous cycle ${lower_kind}-${target_number}"             --body "$body")"
+External review/admission remains required before the learning state becomes an accepted developmental successor."
+
+          url="$(gh pr create --draft --base main --head "$branch" --title "venus: autonomous cycle ${lower_kind}-${target_number}" --body "$body")"
 
           echo "created=true" >> "$GITHUB_OUTPUT"
           echo "url=$url" >> "$GITHUB_OUTPUT"
@@ -166,8 +141,7 @@ EOF
         run: |
           msg="Venus selected and studied this bounded developmental target: $URL
 
-The draft contains a prefrozen cycle receipt plus repository-local study packet.
-Merge, closure, promotion, and independent evaluation remain external."
+The draft contains a prefrozen cycle receipt plus repository-local study packet. Merge, closure, promotion, and independent evaluation remain external."
           if [ "$TARGET_KIND" = "ISSUE" ]; then
             gh issue comment "$TARGET_NUMBER" --body "$msg"
           else
