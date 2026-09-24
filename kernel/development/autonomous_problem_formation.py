@@ -46,6 +46,15 @@ class ProblemRival:
 
 
 @dataclass(frozen=True)
+class ProblemResolution:
+    problem_id: str
+    disposition: str
+    remaining_rival_ids: tuple[str, ...]
+    external_return_consumed: bool
+    promotion_authority: bool = False
+
+
+@dataclass(frozen=True)
 class FormedProblem:
     schema: str
     problem_id: str
@@ -116,7 +125,12 @@ def _row_residuals(row: RepositoryIncidenceRow) -> tuple[str, ...]:
     return tuple(residuals)
 
 
-def form_problem(rows: Iterable[RepositoryIncidenceRow]) -> FormedProblem:
+def form_problem(
+    rows: Iterable[RepositoryIncidenceRow],
+    *,
+    history_grammar_available: bool = True,
+    reference_closure_available: bool = True,
+) -> FormedProblem:
     """Form one bounded problem from returned incidence without a target label."""
     candidates: list[tuple[tuple[int, int, str], RepositoryIncidenceRow, tuple[str, ...]]] = []
     for row in rows:
@@ -135,7 +149,7 @@ def form_problem(rows: Iterable[RepositoryIncidenceRow]) -> FormedProblem:
 
     if not candidates:
         body = {
-            "schema": "Venus.RecompiledProblemFormation.v0.1",
+            "schema": "Venus.RecompiledProblemFormation.v0.2",
             "disposition": "STOP_NO_CONSEQUENTIAL_RESIDUAL",
             "source_stream_ids": (),
             "residual_coordinates": (),
@@ -148,6 +162,40 @@ def form_problem(rows: Iterable[RepositoryIncidenceRow]) -> FormedProblem:
         return FormedProblem(problem_id=digest(body), **body)
 
     _, row, residuals = sorted(candidates, key=lambda x: x[0])[0]
+
+    if (
+        "referenced_incidence_missing" in residuals
+        and not reference_closure_available
+    ):
+        body = {
+            "schema": "Venus.RecompiledProblemFormation.v0.2",
+            "disposition": "WITHHOLD_NO_REFERENCE_CLOSURE",
+            "source_stream_ids": (row.stream_id,),
+            "residual_coordinates": residuals,
+            "rivals": (),
+            "discriminator": None,
+            "external_return_required": True,
+            "carrier_binding_authority": False,
+            "promotion_authority": False,
+        }
+        return FormedProblem(problem_id=digest(body), **body)
+
+    if (
+        "change_order_unavailable" in residuals
+        and not history_grammar_available
+    ):
+        body = {
+            "schema": "Venus.RecompiledProblemFormation.v0.2",
+            "disposition": "WITHHOLD_NO_HISTORY_GRAMMAR",
+            "source_stream_ids": (row.stream_id,),
+            "residual_coordinates": residuals,
+            "rivals": (),
+            "discriminator": None,
+            "external_return_required": True,
+            "carrier_binding_authority": False,
+            "promotion_authority": False,
+        }
+        return FormedProblem(problem_id=digest(body), **body)
 
     rivals: tuple[ProblemRival, ...]
     discriminator: str
@@ -255,3 +303,73 @@ def bind_problem_to_carriers(
     if len(matches) != len(wanted):
         return ()
     return tuple(sorted(set(matches)))
+
+
+def resolve_problem(
+    problem: FormedProblem,
+    *,
+    returned_rival_id: str | None = None,
+) -> ProblemResolution:
+    """Consume an independently supplied discriminator return.
+
+    The learner may not reduce externally unresolved rivals by local execution.
+    """
+    rival_ids = tuple(x.rival_id for x in problem.rivals)
+    if problem.disposition != "FORMED_BOUNDED_PROBLEM":
+        return ProblemResolution(
+            problem_id=problem.problem_id,
+            disposition=problem.disposition,
+            remaining_rival_ids=rival_ids,
+            external_return_consumed=False,
+            promotion_authority=False,
+        )
+    if problem.external_return_required and returned_rival_id is None:
+        return ProblemResolution(
+            problem_id=problem.problem_id,
+            disposition="WITHHOLD_EXTERNAL_RETURN",
+            remaining_rival_ids=rival_ids,
+            external_return_consumed=False,
+            promotion_authority=False,
+        )
+    if returned_rival_id is not None:
+        if returned_rival_id not in rival_ids:
+            raise ValueError("returned rival id is not one of the prefrozen live rivals")
+        return ProblemResolution(
+            problem_id=problem.problem_id,
+            disposition="RETURN_REDUCED_RIVALS",
+            remaining_rival_ids=(returned_rival_id,),
+            external_return_consumed=True,
+            promotion_authority=False,
+        )
+    return ProblemResolution(
+        problem_id=problem.problem_id,
+        disposition="LOCAL_DISCRIMINATOR_AVAILABLE",
+        remaining_rival_ids=rival_ids,
+        external_return_consumed=False,
+        promotion_authority=False,
+    )
+
+
+def exhaustive_problem_scan(
+    rows: Iterable[RepositoryIncidenceRow],
+) -> tuple[str, tuple[str, ...]] | None:
+    """Mature ordinary comparator: exhaustively enumerate structural residuals.
+
+    Matching the developmental problem former mature-reduces algorithmic
+    novelty; it does not erase the ordering/ownership result.
+    """
+    candidates: list[tuple[tuple[int, int, str], str, tuple[str, ...]]] = []
+    for row in rows:
+        residuals = _row_residuals(row)
+        if not residuals:
+            continue
+        key = (
+            -len(residuals),
+            0 if "continuation_state_unresolved" in residuals else 1,
+            row.stream_id,
+        )
+        candidates.append((key, row.stream_id, residuals))
+    if not candidates:
+        return None
+    _, stream_id, residuals = sorted(candidates, key=lambda x: x[0])[0]
+    return stream_id, residuals
