@@ -1,0 +1,50 @@
+{
+  "schema": "Venus.EDU17R1MentionIncidenceProtocol.v0.1",
+  "status": "PREFROZEN_HARNESS_ONLY",
+  "issue": 31,
+  "distinction": "MENTION != INCIDENCE",
+  "public_dev_split": "benchmarks/edu17r1_mention_incidence/dev.jsonl",
+  "hidden_required_for_promotion": true,
+  "hidden_data_policy": {
+    "labels_committed_before_run": false,
+    "content_hash_required": true,
+    "freeze_manifest_required": true,
+    "evaluator_separated_from_execution": true,
+    "contamination_declaration_required": true,
+    "no_post_exposure_repair": true
+  },
+  "conditions": [
+    {"id":"A","role":"ordinary_strong_scaffold","venus_owned":false},
+    {"id":"B","role":"venus_repaired_incidence_discriminator","venus_owned":"REQUIRES_ADMITTED_EPISODE"},
+    {"id":"C","role":"venus_discriminator_ablated","venus_owned":"REQUIRES_SAME_ADMITTED_BASE"},
+    {"id":"D","role":"mature_semantic_provenance_substitute","venus_owned":false}
+  ],
+  "primary_metrics": [
+    "accuracy",
+    "precision_incidence",
+    "recall_incidence",
+    "f1_incidence",
+    "false_unresolved_binding_rate",
+    "false_withhold_rate"
+  ],
+  "secondary_metrics": [
+    "by_subtype",
+    "cross_domain_transfer",
+    "downstream_claim_local_provenance_correctness",
+    "latency",
+    "tokens",
+    "cost"
+  ],
+  "promotion_rule": {
+    "required": [
+      "sealed hidden split",
+      "matched model/tools/information/budget where architecture is compared",
+      "condition B causally exceeds condition C on preregistered primary metric(s)",
+      "condition B is not dominated by condition D under the claimed residual",
+      "no increase in invalid promotion hidden by over-WITHHOLD",
+      "all failures and null results retained"
+    ],
+    "authority": false
+  },
+  "claim_fence": "Harness readiness is not evidence that EDU17R1 passed, that Venus owns the repair, or that the distinction is novel."
+}
