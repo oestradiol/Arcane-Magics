@@ -50,3 +50,10 @@ The same module exposes an O* transition-contract validator for the Strong-N2 no
 
 These are governance semantics. A passing receipt does not itself prove a capability improvement, authorize promotion, or establish Safe Strong RSI.
 
+
+
+## O* and Anti-Minerva
+
+The Internalizer's safety boundary is recurrent, not merely a scaffold-copy rule. O* rejects self-sealing transitions, collapse of World/Other into their local models, hidden founder dependence, and preservation of constitutional labels while the functional correction channel is disabled.
+
+Anti-Minerva is enforced by carrier substitution: semantically identical consequence-bearing content may not change admissibility merely because the carrier is prestigious, embarrassing, embodied, ridiculous, vulgar, taboo, or otherwise socially marked. Carrier distinctions remain lawful when they are consequence-relevant, such as authenticated control input versus untrusted Web content.

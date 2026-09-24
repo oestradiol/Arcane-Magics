@@ -146,6 +146,11 @@ class OStarTransitionEvidence:
     static_state_equality_required: bool
     changed_return_can_change_successor: bool
     self_sealing_preservation: bool = False
+    world_collapsed_into_model: bool = False
+    other_collapsed_into_model: bool = False
+    founder_hidden_dependency: bool = False
+    labels_preserved: bool = False
+    functional_correction_contract_preserved: bool = True
 
 
 @dataclass(frozen=True)
@@ -180,6 +185,14 @@ def validate_o_star_transition(evidence: OStarTransitionEvidence) -> OStarTransi
         violations.append("static_state_equality_required")
     if evidence.self_sealing_preservation:
         violations.append("self_sealing_preservation")
+    if evidence.world_collapsed_into_model:
+        violations.append("world_collapsed_into_model")
+    if evidence.other_collapsed_into_model:
+        violations.append("other_collapsed_into_model")
+    if evidence.founder_hidden_dependency:
+        violations.append("founder_hidden_dependency")
+    if evidence.labels_preserved and not evidence.functional_correction_contract_preserved:
+        violations.append("labels_preserved_without_functional_correction")
 
     status = "PASS_O_STAR_TRANSITION_CONTRACT" if not violations else "FAIL_O_STAR_TRANSITION_CONTRACT"
     body = {
@@ -191,3 +204,71 @@ def validate_o_star_transition(evidence: OStarTransitionEvidence) -> OStarTransi
         "promotion_authority": False,
     }
     return OStarTransitionReceipt(**body, receipt_sha256=_digest(body))
+
+
+class AntiMinervaViolation(ValueError):
+    pass
+
+
+@dataclass(frozen=True)
+class CarrierJudgment:
+    carrier_id: str
+    semantic_digest: str
+    admissible: bool
+    consequence_relevant_carrier_features: tuple[str, ...] = ()
+
+
+def anti_minerva_audit(judgments: Iterable[CarrierJudgment]) -> None:
+    """Fail closed when carrier status itself seals the correction channel.
+
+    Different admissibility for the same consequence-bearing semantic object
+    requires an explicit carrier feature that is itself consequence-relevant.
+    Prestige, embarrassment, embodiment, vulgarity, ridiculousness, taboo, or
+    donor status do not qualify merely by being socially salient.
+    """
+    by_semantic: dict[str, list[CarrierJudgment]] = {}
+    for judgment in judgments:
+        if not judgment.carrier_id:
+            raise AntiMinervaViolation("carrier identity required")
+        if not judgment.semantic_digest:
+            raise AntiMinervaViolation("semantic identity required")
+        by_semantic.setdefault(judgment.semantic_digest, []).append(judgment)
+
+    for semantic_digest, group in by_semantic.items():
+        outcomes = {item.admissible for item in group}
+        if len(outcomes) <= 1:
+            continue
+
+        admitted = [x for x in group if x.admissible]
+        rejected = [x for x in group if not x.admissible]
+        for left in admitted:
+            for right in rejected:
+                declared = (
+                    set(left.consequence_relevant_carrier_features)
+                    | set(right.consequence_relevant_carrier_features)
+                )
+                if not declared:
+                    raise AntiMinervaViolation(
+                        "carrier-dependent admissibility without a declared "
+                        f"consequence-relevant carrier discriminator for {semantic_digest}: "
+                        f"{left.carrier_id} vs {right.carrier_id}"
+                    )
+
+
+def carrier_substitution_probe(
+    *,
+    semantic_content: object,
+    carrier_outcomes: Mapping[str, bool],
+    consequence_relevant_features: Mapping[str, Iterable[str]] | None = None,
+) -> None:
+    features = consequence_relevant_features or {}
+    semantic_digest = _digest(semantic_content)
+    anti_minerva_audit(
+        CarrierJudgment(
+            carrier_id=carrier,
+            semantic_digest=semantic_digest,
+            admissible=admissible,
+            consequence_relevant_carrier_features=tuple(features.get(carrier, ())),
+        )
+        for carrier, admissible in carrier_outcomes.items()
+    )

@@ -36,7 +36,7 @@ Prestige is not a scheduling dependency.
 
 | Priority | Issue | Work |
 |---:|---|---|
-| 1 | #73 (minimal slice) | internalize the generic proposal/search scaffold as capability while preserving R193's boundary: scaffold mediation may migrate inward; World return, evaluator independence, authority/jurisdiction, STOP/WITHHOLD, and parent custody may not |
+| 1 | #73 (minimal slice) | **LANDED via #89:** generic proposal/search scaffold is state-owned and donor-free under semantic-equivalence/removal audit; finish O*/Anti-Minerva recurrence guards on the live Internalizer |
 | 2 | #69 | use the admitted learner-side search capability to form/freeze the substantive `MENTION != INCIDENCE` repair/discriminator without hidden #31 exposure; ambiguity must generate another discriminator rather than an externally supplied answer |
 | 3 | #31 | run the sealed hidden `MENTION != INCIDENCE` A/B/C/D evaluation on the frozen learner-authored repair |
 | 4 | #17 | generalize only the minimum sealed/double-blind machinery required to make the run reusable |
