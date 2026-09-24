@@ -20,7 +20,7 @@ def main() -> int:
     payload = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
     open_numbers = {int(row["number"]) for row in payload}
     text = COVERAGE.read_text(encoding="utf-8", errors="replace")
-    covered = {int(n) for n in re.findall(r"\|\s*#(\d+)\s*\|", text)}
+    covered = {int(n) for n in re.findall(r"\|\s*#(\d+)(?=\s|\|)", text)}
 
     missing = sorted(open_numbers - covered)
     stale = sorted(covered - open_numbers)
