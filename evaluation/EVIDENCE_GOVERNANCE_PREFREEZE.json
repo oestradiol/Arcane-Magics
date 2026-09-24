@@ -43,13 +43,25 @@
       "id": "A",
       "role": "ordinary_strong_scaffold",
       "venus": false,
-      "ablations": []
+      "ablations": [],
+      "implementation": {
+        "adapter_id": null,
+        "artifact": null,
+        "sha256": null,
+        "version": null
+      }
     },
     {
       "id": "B",
       "role": "full_venus",
       "venus": true,
-      "ablations": []
+      "ablations": [],
+      "implementation": {
+        "adapter_id": null,
+        "artifact": null,
+        "sha256": null,
+        "version": null
+      }
     },
     {
       "id": "C",
@@ -57,7 +69,13 @@
       "venus": true,
       "ablations": [
         "claim_local_provenance"
-      ]
+      ],
+      "implementation": {
+        "adapter_id": null,
+        "artifact": null,
+        "sha256": null,
+        "version": null
+      }
     },
     {
       "id": "D",
@@ -65,13 +83,25 @@
       "venus": true,
       "ablations": [
         "retained_negative_state"
-      ]
+      ],
+      "implementation": {
+        "adapter_id": null,
+        "artifact": null,
+        "sha256": null,
+        "version": null
+      }
     },
     {
       "id": "E",
       "role": "mature_substitute",
       "venus": false,
-      "ablations": []
+      "ablations": [],
+      "implementation": {
+        "adapter_id": null,
+        "artifact": null,
+        "sha256": null,
+        "version": null
+      }
     }
   ],
   "preregistration": {
@@ -116,7 +146,8 @@
       "information_bundle_hash",
       "independent evaluator identity/version",
       "mature substitute implementation",
-      "power/sample-size plan for the prefrozen paired endpoints"
+      "power/sample-size plan for the prefrozen paired endpoints",
+      "condition implementation identity/version/hash for A/B/C/D/E"
     ]
   },
   "promotion_authority": false,
