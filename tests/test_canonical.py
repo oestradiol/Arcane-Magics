@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import subprocess
 import sys
 import unittest
@@ -21,7 +22,8 @@ class CanonicalTests(unittest.TestCase):
         )
         values = []
         for seed in ("1", "2", "3", "999"):
-            env = {"PYTHONHASHSEED": seed}
+            env = os.environ.copy()
+            env["PYTHONHASHSEED"] = seed
             out = subprocess.check_output(
                 [sys.executable, "-c", code], text=True, env=env
             ).strip()
