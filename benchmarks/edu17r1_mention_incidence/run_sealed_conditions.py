@@ -89,6 +89,10 @@ def verify_freeze() -> dict[str, Any]:
         "ownership_receipt": verify_frozen_artifact(freeze["ownership_receipt"]),
         "conditions": {},
     }
+    if "execution_custody_wrapper" in freeze:
+        verified["execution_custody_wrapper"] = verify_frozen_artifact(
+            freeze["execution_custody_wrapper"]
+        )
     for cid in ("A", "B", "C", "D"):
         row = freeze["conditions"][cid]
         path = ROOT / row["artifact"]
