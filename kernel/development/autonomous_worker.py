@@ -129,9 +129,10 @@ def make_cycle(
     internal_policy: Mapping[str, Any],
     recent_targets: Iterable[tuple[str, int]] = (),
     kind_utility: Mapping[str, float] | None = None,
+    active_cycle_pending: bool = False,
 ) -> AutonomousCycleReceipt:
     items = tuple(issues) + tuple(prs)
-    target = choose_target(
+    target = None if active_cycle_pending else choose_target(
         items,
         roadmap_text=roadmap_text,
         recent_targets=recent_targets,
@@ -141,10 +142,17 @@ def make_cycle(
         "items": [asdict(item) for item in items],
         "roadmap_digest": digest(roadmap_text),
         "recent_targets": tuple(recent_targets),
+        "active_cycle_pending": active_cycle_pending,
         "kind_utility": dict(kind_utility or {}),
     }
 
-    if target is None:
+    if active_cycle_pending:
+        decision = "STOP"
+        rationale = (
+            "an autonomous draft remains open awaiting external review/return",
+            "first-phase autonomy forbids routing around a pending returned consequence",
+        )
+    elif target is None:
         decision = "STOP"
         rationale = ("no unconsumed OPEN work item is justified",)
     else:
