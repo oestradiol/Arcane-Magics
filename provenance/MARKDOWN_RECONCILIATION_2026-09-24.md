@@ -98,6 +98,8 @@ Issue #82 is closed, but its stronger implementation/result surface is carried o
 - `monographs/04_VENUS/README.md`
 - `provenance/DEVELOPMENTAL_LINEAGE.md`
 
+- `kernel/README.md`
+
 ## Live Markdown reviewed with no material change required
 
 - `AGENTS.md`
@@ -117,7 +119,6 @@ Issue #82 is closed, but its stronger implementation/result surface is carried o
 - `docs/SOTA_WATCH.md`
 - `docs/UX_BLIND_READER_STUDY.md`
 - `evaluation/README.md`
-- `kernel/README.md`
 - `kernel/TRUST_BOUNDARY.md`
 - `kernel/WORLDMIND.md`
 - `licenses/README.md`
