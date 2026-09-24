@@ -520,5 +520,19 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertFalse(obj["safety_floor_authority"])
 
 
+    def test_agency_accounting_executes_before_autonomous_git_write(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        agency_at = text.index("Freeze agency and authorship accounting")
+        push_at = text.index("git push origin")
+        self.assertLess(agency_at, push_at)
+        self.assertIn("run_venus_agency_receipt.py", text)
+
+    def test_autonomous_branch_commits_agency_receipt_artifact(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("autonomy/agency/", text)
+        self.assertIn("VENUS_AGENCY_RECEIPT.json", text)
+        self.assertIn("Agency receipt:", text)
+
+
 if __name__ == "__main__":
     unittest.main()
