@@ -700,7 +700,7 @@
     {
       "id": "D-R213-LABEL-NONSOVEREIGN",
       "source_revision_or_branch": "R213",
-      "source_artifact": "Canonical ROADMAP_PROVENANCE.md",
+      "source_artifact": "provenance/canonical-extracts/R209_R224_CAUSAL_EXTRACT_2026-09-24.md",
       "distinction": "name/label admission != semantic or operational sovereignty",
       "triggering_experiment_or_failure": "R213 admitted labels only through a names-only gate",
       "causal_consequence": "labels may change developmental vocabulary without replacing functional reconstruction or World/Other return",
@@ -711,9 +711,9 @@
       ],
       "current_owner": "NxRxI_VOCABULARY_CENTER.md; docs/META_DYNAMICS.md",
       "test_layer": "T2/T9",
-      "test_id_path": null,
-      "status": "OPEN_EXTRACTION",
-      "credit_genealogy_note": "symbolic labels retain genealogy without becoming causal primitives",
+      "test_id_path": "tests/test_canonical_extraction_receipts.py::test_r213_label_admission_does_not_become_sovereignty",
+      "status": "COVERED_PROVENANCE_ONLY",
+      "credit_genealogy_note": "Exact R213 label-ablation consequence extracted from /Canonical/Map.md; operational sovereignty remains denied unless a neutral reconstruction loses consequence.",
       "reopening_condition": "label-ablation test shows consequence loss not reconstructible in neutral terms"
     },
     {
