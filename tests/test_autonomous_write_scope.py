@@ -45,6 +45,21 @@ class AutonomousWriteScopeTests(unittest.TestCase):
         self.assertEqual(row.mode, "DIRECT_STATE_WRITE")
         self.assertTrue(row.direct_write_allowed)
 
+    def test_meta_learning_state_is_direct_write_but_meta_learning_law_is_not(self):
+        row = classify_path(
+            self.policy,
+            "kernel/development/AUTONOMOUS_META_LEARNING_STATE.json",
+        )
+        self.assertEqual(row.mode, "DIRECT_STATE_WRITE")
+        self.assertTrue(row.direct_write_allowed)
+
+        law = classify_path(
+            self.policy,
+            "kernel/development/autonomous_meta_learning.py",
+        )
+        self.assertEqual(law.mode, "EXTERNAL_GOVERNANCE_ONLY")
+        self.assertFalse(law.direct_write_allowed)
+
     def test_ordinary_core_source_is_proposal_only(self):
         row = classify_path(self.policy, "kernel/runtime/vmk2.py")
         self.assertEqual(row.mode, "PROPOSE_ONLY")
