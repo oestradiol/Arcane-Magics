@@ -365,6 +365,11 @@ class VMK2Reference:
             raise VMK2Error('return/target mismatch')
         if ret.nonce in self.consumed_nonces:
             raise VMK2Error('replayed return nonce')
+        ev = self.evidence.get(ret.evidence_id)
+        if ev is None or not ev.immutable:
+            raise VMK2Error('verified return lost immutable evidence binding')
+        if digest(payload) != ev.payload_digest:
+            raise VMK2Error('transition payload is not bound to verified return evidence')
         decoded = backend.decode(payload)
         p = self._verify_policy(policy_id, actor_id=actor_id, target_id=target_id, epoch=epoch, lease_id=lease_id)
         # Word = reconstruct only. It never spends the nonce because no transition occurred.
