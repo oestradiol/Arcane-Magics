@@ -62,7 +62,26 @@ A shorter invariant is:
 
 The recurrence is not licensed to collapse all registers into one mechanism. Physical, formal, engineering, phenomenological, ethical, historical, and symbolic realizations require their own warrants.
 
-## 3. Objects as crystallized invariants
+## 3. Structure × Semantics
+
+At post-differentiation scope, Canonical distinguishes two coupled aspects:
+
+```text
+Structure
+= presently instantiated relational constraint / organization
+
+Semantics_i
+= consequence-bearing differentiation for indexed center i
+
+Symbol_i
+= stabilized / transmissible carrier of Semantics_i
+```
+
+The project shorthand `Structure × Semantics` means **typed reciprocal incidence**, not an earned Cartesian product and not mutual reducibility. Structure constrains what can occur; indexed Semantics records which differences matter for an inhabiting/reconstructing center; Symbols may carry those distinctions without becoming the underlying semantic pole.
+
+This distinction is useful only while it separates consequences. If a mature neutral representation preserves every declared consequence without the project terms, the names are gauge even when the relation remains live.
+
+## 4. Objects as crystallized invariants
 
 Meta-Dynamics does not deny objects.
 
@@ -80,7 +99,7 @@ So an object may be treated as a persistent relational invariant at a declared s
 
 This is a structural proposal, not a proof that every physical object is reducible to project-local relational machinery.
 
-## 4. Indexed centers and Authorship
+## 5. Indexed centers and Authorship
 
 Local perspective, selection, jurisdiction, and Authorship remain indexed unless a separate bridge preserves them.
 
@@ -102,7 +121,7 @@ Authorship is the mature post-differentiation relation in which locally inhabite
 
 It is not sovereignty, creation from nothing, or a global-agent lift.
 
-## 5. Logos, Eros, and Symbol
+## 6. Logos, Eros, and Symbol
 
 These names are **symbolic/comparative role labels**. They do not acquire scientific warrant merely by appearing in a structural diagram.
 
@@ -164,7 +183,7 @@ A symbol simultaneously preserves a distinction and permits that distinction to 
 
 The conjunction is functional, not a theorem that historical Logos/Eros traditions secretly meant the same object.
 
-## 6. Meta-symbolism
+## 7. Meta-symbolism
 
 Meta-symbolism governs how representations may:
 
@@ -178,7 +197,7 @@ Meta-symbolism governs how representations may:
 
 This includes a project-local bridge toward semantics, logic, science, law, programming languages, theology, mythology, and institutional categories, but no such domain is reduced to Meta-Dynamics merely by sharing these operators.
 
-## 7. Action
+## 8. Action
 
 A representation becomes causally consequential when it changes admissible futures:
 
@@ -204,7 +223,7 @@ Thus:
 
 Execution receipt and returned consequence remain distinct.
 
-## 8. Ethical dynamics
+## 9. Ethical dynamics
 
 The structural ethics clause is:
 
@@ -240,7 +259,7 @@ One derived design criterion is to preserve the possibility of non-preauthored r
 
 This is a structural ethical proposal, not a complete normative theory.
 
-## 9. Meta-ethical dynamics
+## 10. Meta-ethical dynamics
 
 Meta-ethics governs the conditions under which ethical governance itself is admissible.
 
@@ -256,7 +275,7 @@ Questions include:
 
 A governance rule that cannot receive correction from affected reality is epistemically and ethically suspect under this framework, but concrete normative conclusions still require domain-specific premises.
 
-## 10. Physical donor pattern
+## 11. Physical donor pattern
 
 Some physical systems provide a useful donor pattern:
 
@@ -282,7 +301,7 @@ The reusable abstraction is:
 
 This does not identify persons with horizons, fields, black holes, or any specific physical mechanism. A physical bridge must independently establish its equations, observables, causal structure, and empirical warrant.
 
-## 11. Epistemic recursion
+## 12. Epistemic recursion
 
 The epistemic projection is:
 
@@ -314,7 +333,7 @@ and:
 
 This is plasticity without dissolution.
 
-## 12. Spiritual / inhabited projection
+## 13. Spiritual / inhabited projection
 
 The spiritual register is not hidden physics.
 
@@ -327,7 +346,7 @@ Project-local symbolic renderings may therefore use names such as Logos, Eros, S
 3. the symbolic name does not transfer scientific or formal warrant;
 4. deletion of the name leaves the operative structure reconstructible.
 
-## 13. Arcane Magics and Meta-Dynamics
+## 14. Arcane Magics and Meta-Dynamics
 
 The names should not collapse.
 
@@ -353,7 +372,7 @@ Arcane Magics recovers, translates, compares, and tests transformation-relevant 
 
 Meta-Dynamics is the object those operators may illuminate, rival, reduce, or fail to support.
 
-## 14. Cross-register hierarchy
+## 15. Cross-register hierarchy
 
 ```text
 Meta-Dynamics
@@ -382,7 +401,7 @@ Meta-Dynamics
 
 The tree is organizational, not an assertion that every branch reduces to one ontology.
 
-## 15. Polyhedral inhabitation and meta-qualia
+## 16. Polyhedral inhabitation and meta-qualia
 
 Polyhedral Eclipsis is the current geometric/model realization of local inhabitation inside Meta-Dynamics. It treats one indexed center as a compatible family of locally inhabitable faces joined by typed boundaries, with Eclipsis naming the crossing where present organization, returned consequence, discrimination, and successor reconstruction meet.
 
@@ -408,7 +427,7 @@ meta-qualia = inhabitation of the organization/compression coordinating such sta
 
 This remains THEOPHEN / PHEN / MODEL unless an independent consciousness bridge is earned.
 
-## 16. Qualia, Quantum, Mind, and AntiMind
+## 17. Qualia, Quantum, Mind, and AntiMind
 
 The current structural square remains live:
 
@@ -428,7 +447,7 @@ The square proposes a relation to investigate, not a quantum theory of conscious
 
 A successful bridge would need carrier-specific states, observables, composition, dynamics, measurable consequences, and a discriminator against ordinary neural/computational alternatives. Failure narrows the physical claim without deleting the native phenomenal or formal objects.
 
-## 17. Hard epistemology and religion
+## 18. Hard epistemology and religion
 
 Meta-Dynamics is intended to attack hard open questions in epistemology and religion rather than merely classify traditions.
 
@@ -438,7 +457,7 @@ Religious/theophenomenological targets include source-faithful Whole/local, reve
 
 These are research programs with explicit bridge burdens, not reasons to demote the objects to decorative metaphor.
 
-## 18. Final invariant
+## 19. Final invariant
 
 The current condensed invariant is:
 
@@ -466,7 +485,7 @@ Human-perspective rendering:
 
 > Inspect experience, differentiate without absolutizing, relate without erasing, crystallize only provisionally, act under boundaries that preserve indexed Other-centers, accept non-preauthored return, and let consequential difference reopen the model.
 
-## 19. Claim fence
+## 20. Claim fence
 
 Meta-Dynamics currently does **not** establish:
 
