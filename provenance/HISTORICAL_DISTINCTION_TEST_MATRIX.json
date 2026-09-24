@@ -385,9 +385,9 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2/T8",
-      "test_id_path": "tests/test_historical_regressions.py::test_failure_locality_and_corruption_classes_remain_live",
-      "status": "COVERED_PROSE_ONLY",
-      "credit_genealogy_note": "Canonical methodology residue",
+      "test_id_path": "tests/test_historical_regressions.py::test_current_status_repair_does_not_rewrite_historical_audit",
+      "status": "COVERED_PARTIAL",
+      "credit_genealogy_note": "historical status fossil now has an executable repository example and non-rewriting repair",
       "reopening_condition": "status dependency validator"
     },
     {
@@ -749,9 +749,9 @@
       ],
       "current_owner": "provenance/CANONICAL_RETIREMENT_LEDGER.md",
       "test_layer": "T0/T2",
-      "test_id_path": null,
-      "status": "OPEN_EXTRACTION",
-      "credit_genealogy_note": "repair credit and historical failure state remain separately reconstructible",
+      "test_id_path": "tests/test_historical_regressions.py::test_current_status_repair_does_not_rewrite_historical_audit",
+      "status": "COVERED_PARTIAL",
+      "credit_genealogy_note": "current status reconciliation is append-only relative to historical audit checkpoint",
       "reopening_condition": "projection-maintenance regression fixture"
     }
   ]
