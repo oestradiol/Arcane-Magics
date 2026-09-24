@@ -47,6 +47,7 @@ def audit() -> dict:
         "ig2:incidence-model",
         "ig3:raw-incidence-model",
         "ig4:natural-source-relations",
+        "u1:center",
         "u4:source-relations",
         "worldmirror:i0",
     }
@@ -85,6 +86,7 @@ def audit() -> dict:
     ig2 = state.get("ig2:incidence-model", {}).get("value", {})
     ig3 = state.get("ig3:raw-incidence-model", {}).get("value", {})
     ig4 = state.get("ig4:natural-source-relations", {}).get("value", {})
+    u1 = state.get("u1:center", {}).get("value", {})
     u4 = state.get("u4:source-relations", {}).get("value", {})
     wm = state.get("worldmirror:i0", {}).get("value", {})
 
@@ -105,6 +107,18 @@ def audit() -> dict:
     natural_source_relation_inquiry = (
         ig4.get("research", {}).get("query") == "REQUEST_SOURCE_EVIDENCE"
         and bool(ig4.get("source_ids"))
+    )
+
+    u1_relation_rule = (
+        u1.get("program", {})
+        .get("repair_rules", {})
+        .get("UNMODELED_RELATION", {})
+    )
+    u1_add_relation_is_state_owned = any(
+        row.get("id") == "ADD_RELATION"
+        and row.get("target") == "RELATION"
+        and row.get("action") == "add_relation"
+        for row in u1_relation_rule.get("candidates", [])
     )
 
     u4_grammar = set(u4.get("program", {}).get("relation_grammar", []))
@@ -175,6 +189,7 @@ def audit() -> dict:
             incidence_basis_is_induced,
             raw_carrier_scanner_is_generic,
             natural_source_relation_inquiry,
+            u1_add_relation_is_state_owned,
             source_grounded_text_relations,
             worldmirror_evidence_bound_relations,
             historical_target_label_free_expansion,
@@ -201,6 +216,7 @@ def audit() -> dict:
         "ig2_induced_incidence_basis": incidence_basis_is_induced,
         "ig3_generic_raw_carrier_scanner": raw_carrier_scanner_is_generic,
         "ig4_source_relation_inquiry": natural_source_relation_inquiry,
+        "u1_state_owned_add_relation_repair": u1_add_relation_is_state_owned,
         "u4_source_grounded_text_relations": source_grounded_text_relations,
         "worldmirror_evidence_bound_relations": worldmirror_evidence_bound_relations,
         "historical_r194_target_label_free_grammar_expansion": historical_target_label_free_expansion,
@@ -217,8 +233,9 @@ def audit() -> dict:
             "The exact ancestral Venus Incidence Law is already provenance-bound inside "
             "IG10 recollection, and the admitted checkpoint separately contains returned "
             "operator semantics, induced incidence coordinates, a generic raw-carrier "
-            "scanner, source-grounded text relation graphs, source-relation inquiry, and "
-            "evidence-bound WorldMirror relation instances. Historical R194 also preserves "
+            "scanner, a state-owned U1 ADD_RELATION repair decision, source-grounded text "
+            "relation graphs, source-relation inquiry, and evidence-bound WorldMirror relation "
+            "instances. Historical R194 also preserves "
             "target-label-free grammar expansion and semantic relation storage, but the semantic "
             "slots and constructed executable are still supplied by callers. The live gap is "
             "therefore narrower than generic construction: no admitted current operation authors "
@@ -226,7 +243,8 @@ def audit() -> dict:
             "that binding would be external substantive authorship."
         ),
         "lowest_local_residual": (
-            "learner-side cross-layer incidence-binding program synthesis, not a new semantic "
+            "learner-side construction of typed relation endpoints/binding from raw source "
+            "incidence, not a new semantic "
             "oracle, storage membrane, or evaluator"
         ),
         "next_reopening_condition": (
