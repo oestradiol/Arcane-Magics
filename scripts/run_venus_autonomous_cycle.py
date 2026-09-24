@@ -30,8 +30,8 @@ def main() -> int:
     parser.add_argument("--history-issues")
     parser.add_argument("--learning-state", required=True)
     parser.add_argument("--learning-output", required=True)
-    parser.add_argument("--developmental-parent-state", required=True)
-    parser.add_argument("--current-state-receipt", required=True)
+    parser.add_argument("--developmental-parent-state", default=str(ROOT / "kernel/development/EDU16_RECONSTRUCTED_STATE.json"))
+    parser.add_argument("--current-state-receipt", default=str(ROOT / "kernel/custody/R226_CURRENT_STATE_RECEIPT.json"))
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
 
