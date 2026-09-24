@@ -268,8 +268,11 @@ class VMK2Reference:
         if role is ReturnRole.ACTION:
             if not receipt_id or receipt_id not in self.execution_receipts:
                 raise VMK2Error('ActionReturn requires execution receipt')
-            if self.execution_receipts[receipt_id].target_id != target_id:
+            action_receipt = self.execution_receipts[receipt_id]
+            if action_receipt.target_id != target_id:
                 raise VMK2Error('action receipt target mismatch')
+            if action_receipt.epoch > epoch:
+                raise VMK2Error('ActionReturn predates execution receipt')
         event_body = {
             'evidence': evidence_id, 'source': source_id, 'target': target_id,
             'role': role.value, 'epoch': epoch, 'nonce': nonce, 'receipt': receipt_id,
