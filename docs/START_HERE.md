@@ -121,7 +121,7 @@ A row marked `PLANNED` is not a passing test.
 
 The highest-leverage sequence is:
 
-1. finish exact CI stabilization;
+1. preserve the now-green integrity/publication path while completing the remaining research work;
 2. complete Canonical retirement/custody inventory;
 3. turn historical causal distinctions into regressions;
 4. run the prospective `MENTION != INCIDENCE` benchmark;
