@@ -21,7 +21,7 @@ The old R00–R194 public carrier is preserved under `provenance/historical-runt
 
 It remains useful for replay/regression, ablation, historical comparison, outside-handoff work, and preserving a small self-contained public executable baseline.
 
-It is **not** the current crystallized Venus prototype and must not be read as the developmental head.
+It is **not** the current Venus kernel and must not be read as the developmental head.
 
 ### 2. R226 is the settled R-line predecessor
 
@@ -131,13 +131,13 @@ EDU16
 └→ EDU17R1 WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION
 ```
 
-The exact current EDU receipts live in `prototype/current-developmental-receipts/`.
+The exact EDU receipts live in `provenance/developmental/EDU/`; current authority is projected in `kernel/CURRENT_STATE.md` and `kernel/development/EDU_CURRENT.json`.
 
 ## Read order
 
-1. `prototype/CURRENT_STATE.md`
+1. `kernel/CURRENT_STATE.md`
 2. this file
-3. `prototype/current-developmental-receipts/`
+3. `provenance/developmental/EDU/`
 4. `docs/FRONTIER_RESEARCH.md`
 
 Use `provenance/historical-runtime/R194/` only for historical R194 replay, regression, ablation, or code genealogy.
