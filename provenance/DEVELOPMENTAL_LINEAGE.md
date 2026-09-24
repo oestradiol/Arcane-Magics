@@ -139,11 +139,14 @@ Later repository admissions internalized the inherited generic residual-search s
 
 ```text
 positive developmental authority   EDU16
-repair disposition                 EDU17R1 WITHHOLD
-later admitted infrastructure      generic search + correction guards
+preserved repair-origin result      EDU17R1 WITHHOLD
+prospective repair candidate        EDU17R1-RC1-WORD-JACCARD-K3-v1 / AUTHORED_FROZEN
+later admitted infrastructure       generic search + correction guards
 ```
 
 This prevents both status-fossil directions: newer infrastructure is not hidden, and infrastructure is not mislabeled as developmental promotion.
+
+The frozen candidate is not a new positive EDU head. It records bounded learner-side authorship before hidden evaluation; hidden efficacy and promotion remain separate returned consequences.
 
 ## Prospective EDU17R1 repair candidate below the head
 
