@@ -29,6 +29,7 @@ FORMED = {
     "disposition": "FORMED_BOUNDED_PROBLEM",
     "residual_coordinates": ["continuation_state_unresolved"],
     "discriminator": "REPRODUCE_OR_REFRESH_CONTINUATION_STATE",
+    "source_stream_ids": ["stream:a"],
 }
 
 
@@ -201,6 +202,20 @@ class U1RecurrenceRecompilationTests(unittest.TestCase):
                     ),
                 ),
             )
+
+
+    def test_problem_content_is_bound_into_recurrence_pressure(self):
+        first, _ = self.run_case()
+        second_problem = {
+            **FORMED,
+            "problem_id": "u2-problem-other",
+            "residual_coordinates": ["referenced_incidence_missing"],
+            "discriminator": "RESOLVE_REFERENCED_INCIDENCE",
+            "source_stream_ids": ["stream:b"],
+        }
+        second, _ = self.run_case(problem=second_problem)
+        self.assertNotEqual(first.problem_pressure_digest, second.problem_pressure_digest)
+        self.assertNotEqual(first.recurrence_id, second.recurrence_id)
 
 
 if __name__ == "__main__":
