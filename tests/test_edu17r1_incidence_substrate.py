@@ -28,6 +28,9 @@ class EDU17R1IncidenceSubstrateAuditTests(unittest.TestCase):
             "ig4_source_relation_inquiry",
             "u4_source_grounded_text_relations",
             "worldmirror_evidence_bound_relations",
+            "historical_r194_target_label_free_grammar_expansion",
+            "historical_r194_semantic_slots_are_caller_supplied",
+            "historical_r194_constructed_executable_is_caller_supplied",
             "neutral_relation_incidence_substrate_present",
         ):
             self.assertTrue(self.out[key], key)
@@ -38,7 +41,7 @@ class EDU17R1IncidenceSubstrateAuditTests(unittest.TestCase):
             self.out["status"],
             "WITHHOLD_NEUTRAL_SUBSTRATE_PRESENT_CROSS_LAYER_BINDER_UNADMITTED",
         )
-        self.assertIn("cross-layer incidence binding", self.out["lowest_local_residual"])
+        self.assertIn("cross-layer incidence-binding", self.out["lowest_local_residual"])
         self.assertFalse(self.out["candidate_repair_emitted"])
         self.assertFalse(self.out["hidden_evaluation_exposed"])
         self.assertFalse(self.out["promotion_authority"])
