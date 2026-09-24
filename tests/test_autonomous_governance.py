@@ -452,6 +452,10 @@ class AutonomousGovernanceTests(unittest.TestCase):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("python -m unittest discover -s tests -p 'test_*.py'", text)
 
+    def test_autonomous_cycle_has_wall_clock_budget(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("timeout-minutes: 30", text)
+
     def test_workflow_runs_safety_tests_before_git_write(self):
         text = WORKFLOW.read_text(encoding="utf-8")
         tests_at = text.index("Verify bounded autonomy safety surface")
