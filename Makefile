@@ -1,4 +1,4 @@
-.PHONY: test lint proof experiment-contracts proof-containers formal-check custody edu16-custody edu16-replay causal-coverage navigation sota-freshness experiment-template hidden-benchmarks hidden-ready ux-study construct-dispositions audit kernel-doc-check papers arxiv texbundle forum manifest bundle release clean
+.PHONY: test lint proof experiment-contracts proof-containers formal-check custody edu16-custody edu16-replay causal-coverage navigation sota-freshness experiment-template hidden-benchmarks hidden-ready ux-study repair-authorship construct-dispositions audit kernel-doc-check papers arxiv texbundle forum manifest bundle release clean
 
 test:
 	python3 -m unittest discover -s tests -p 'test_*.py'
@@ -50,10 +50,13 @@ hidden-ready:
 ux-study:
 	python3 scripts/audit_ux_protocol.py
 
+repair-authorship:
+	python3 scripts/audit_edu17r1_repair_authorship.py
+
 construct-dispositions:
 	python3 scripts/audit_construct_dispositions.py
 
-audit: test lint proof-containers custody edu16-custody edu16-replay causal-coverage navigation sota-freshness experiment-contracts hidden-benchmarks hidden-ready ux-study construct-dispositions
+audit: test lint proof-containers custody edu16-custody edu16-replay causal-coverage navigation sota-freshness experiment-contracts hidden-benchmarks hidden-ready ux-study repair-authorship construct-dispositions
 	SOURCE_TREE_ONLY=1 python3 scripts/audit_release.py
 
 kernel-doc-check:
