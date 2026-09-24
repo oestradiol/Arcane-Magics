@@ -1,0 +1,22 @@
+{
+  "change_id": "016f46218dbb4a9c41b31f7ebaf3be3dcdc55e69dbbbfe83c8ac31d4a428b95c",
+  "cycle_id": "cc988d508ac4c011b202961f9eca8411b886fc54c5c3c9d5e2a495e2b8200705",
+  "disposition": "RETAIN_NO_MUTATION_LOCAL_EVIDENCE_PASS",
+  "evidence_id": "fa3d8912ce62143d85232d7f9b71912dbc44a266393bfe698139444eb4eca335",
+  "failed_process_check_ids": [],
+  "failed_target_check_ids": [],
+  "promotion_authority": false,
+  "proposal_id": "45442da9c6eb72a4ff4902a0f266e508f97bc0bff8f9149019e4d7090541924f",
+  "reason": "green local evidence is not a mutation authorization",
+  "schema": "Venus.AutonomousChangeCandidate.v0.1",
+  "source_mutation_authority": false,
+  "suggested_operation": null,
+  "target_kind": "PR",
+  "target_number": 149,
+  "target_text_is_authority": false,
+  "untrusted_implicated_paths": [
+    "kernel/development/autonomy_agency.py",
+    "scripts/run_venus_agency_receipt.py",
+    "tests/test_autonomy_agency_accounting.py"
+  ]
+}

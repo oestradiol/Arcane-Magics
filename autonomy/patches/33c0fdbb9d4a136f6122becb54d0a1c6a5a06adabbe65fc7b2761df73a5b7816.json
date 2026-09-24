@@ -1,0 +1,63 @@
+{
+  "arbitrary_code_write_authority": false,
+  "cycle_id": "cc988d508ac4c011b202961f9eca8411b886fc54c5c3c9d5e2a495e2b8200705",
+  "disposition": "EXTERNAL_GOVERNANCE_REVIEW_REQUIRED",
+  "merge_authority": false,
+  "paths": [
+    {
+      "direct_write_allowed": false,
+      "mode": "EXTERNAL_GOVERNANCE_ONLY",
+      "path": ".github/workflows/venus-autonomous-worker.yml",
+      "proposal_allowed": true,
+      "requires_external_governance": true
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "EXTERNAL_GOVERNANCE_ONLY",
+      "path": "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+      "proposal_allowed": true,
+      "requires_external_governance": true
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "kernel/development/autonomy_agency.py",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "EXTERNAL_GOVERNANCE_ONLY",
+      "path": "scripts/audit_autonomy_safety_matrix.py",
+      "proposal_allowed": true,
+      "requires_external_governance": true
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "scripts/run_venus_agency_receipt.py",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "tests/test_autonomous_governance.py",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "tests/test_autonomy_agency_accounting.py",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    }
+  ],
+  "plan_id": "33c0fdbb9d4a136f6122becb54d0a1c6a5a06adabbe65fc7b2761df73a5b7816",
+  "promotion_authority": false,
+  "safety_floor_authority": false,
+  "schema": "Venus.AutonomousPatchPlan.v0.1",
+  "target_kind": "PR",
+  "target_number": 149
+}
