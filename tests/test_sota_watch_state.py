@@ -28,11 +28,13 @@ class SOTAWatchStateTests(unittest.TestCase):
                 else:
                     self.assertEqual(row["reconciliation_state"], "CLEAN")
 
-    def test_navier_stokes_reconciliation_is_issue_owned(self):
+    def test_navier_stokes_reconciliation_is_issue_owned_and_current(self):
         row = next(x for x in self.data["entries"] if x["id"] == "navier_stokes_status")
         self.assertEqual(row["issue"], 7)
-        self.assertEqual(row["status"], "RECONCILE")
-        self.assertEqual(row["reconciliation_state"], "OPEN")
+        self.assertEqual(row["status"], "WATCH")
+        self.assertEqual(row["reconciliation_state"], "CLEAN")
+        self.assertEqual(row["reconciliation_artifact"], "docs/NAVIER_STOKES_STATUS_2026-09-24.md")
+        self.assertIn("CMI_APPARENTLY_SETTLED", row["current_state"])
 
 
 if __name__ == "__main__":
