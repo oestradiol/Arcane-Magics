@@ -1,0 +1,33 @@
+{
+  "schema": "Venus.RepairPressureFeedReturn.v0.1",
+  "date": "2026-09-24",
+  "returned_by": "EXTERNAL_BOUNDED_BEHAVIOR_EVALUATOR",
+  "results": [
+    {
+      "pressure_id": "opaque-repair-a",
+      "status": "UNIQUE_REPAIR_AVAILABLE",
+      "residual_strength": 0,
+      "provenance_id": "return:a"
+    },
+    {
+      "pressure_id": "opaque-repair-b",
+      "status": "UNIQUE_REPAIR_AVAILABLE",
+      "residual_strength": 0,
+      "provenance_id": "return:b"
+    },
+    {
+      "pressure_id": "opaque-repair-c",
+      "status": "UNIQUE_REPAIR_AVAILABLE",
+      "residual_strength": 0,
+      "provenance_id": "return:c"
+    },
+    {
+      "pressure_id": "opaque-repair-d",
+      "status": "WITHHOLD_COMPOSITION_DEPTH_INSUFFICIENT",
+      "residual_strength": 1,
+      "provenance_id": "return:d"
+    }
+  ],
+  "hidden_evaluation": false,
+  "promotion_authority": false
+}
