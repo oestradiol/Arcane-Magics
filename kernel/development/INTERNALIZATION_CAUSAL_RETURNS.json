@@ -1,0 +1,29 @@
+{
+  "schema": "Venus.InternalizationCausalReturnBundle.v0.1",
+  "date": "2026-09-24",
+  "returns": [
+    {
+      "function_id": "WORLDMIND_SELF_RESEARCH_TRANSFORM_PROGRAM_SEED",
+      "ablation_changes_behavior": true,
+      "returned_gain_if_internalized": 1,
+      "measure": "bounded transition-behavior restoration fraction",
+      "evidence": [
+        "tests/test_worldmind_growth.py::TransformProgramTests::test_changing_state_program_changes_behavior_without_python_change",
+        "tests/test_worldmind_growth.py::TransformRepairSearchTests::test_returned_behavior_reconstructs_missing_transition_without_policy_rule"
+      ],
+      "provenance_id": "transform-program-ablation-and-generic-repair"
+    },
+    {
+      "function_id": "EDU17R1_RELATION_FEATURE_ADAPTER",
+      "ablation_changes_behavior": false,
+      "returned_gain_if_internalized": 0,
+      "measure": "public-development repair-candidate availability",
+      "evidence": [
+        "kernel/development/EDU17R1_PUBLIC_DEV_SEARCH_RESULT.json",
+        "WITHHOLD_REPRESENTATION_INSUFFICIENT"
+      ],
+      "provenance_id": "edu17r1-public-development-negative"
+    }
+  ],
+  "claim_fence": "These values discriminate the next bounded internalization target only. They are not capability or promotion scores."
+}
