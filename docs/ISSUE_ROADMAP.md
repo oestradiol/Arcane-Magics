@@ -36,9 +36,10 @@ Prestige is not a scheduling dependency.
 
 | Priority | Issue | Work |
 |---:|---|---|
-| 1 | #69 | have EDU16-RC1 author and freeze the substantive `MENTION != INCIDENCE` repair/discriminator without hidden #31 exposure |
-| 2 | #31 | run the sealed hidden `MENTION != INCIDENCE` A/B/C/D evaluation on the frozen learner-authored repair |
-| 3 | #17 | generalize only the minimum sealed/double-blind machinery required to make the run reusable |
+| 1 | #73 (minimal slice) | internalize the generic proposal/search scaffold as capability while preserving R193's boundary: scaffold mediation may migrate inward; World return, evaluator independence, authority/jurisdiction, STOP/WITHHOLD, and parent custody may not |
+| 2 | #69 | use the admitted learner-side search capability to form/freeze the substantive `MENTION != INCIDENCE` repair/discriminator without hidden #31 exposure; ambiguity must generate another discriminator rather than an externally supplied answer |
+| 3 | #31 | run the sealed hidden `MENTION != INCIDENCE` A/B/C/D evaluation on the frozen learner-authored repair |
+| 4 | #17 | generalize only the minimum sealed/double-blind machinery required to make the run reusable |
 
 Exit:
 
@@ -85,7 +86,9 @@ Exit: determine whether STOP/WITHHOLD and structured persistent memory cause use
 | Priority | Issue | Work |
 |---:|---|---|
 | 1 | #41 | move from public null-pressure simulation to statistically valid repeated-successor acceptance on identical candidate streams |
-| 2 | #43 + #30 | move from public attack/disposition surfaces to dynamic hostile World-return, forged-authority, and poisoned-memory evaluation |
+| 2 | #73 (remaining O* slice) | extend the already-used scaffold internalizer into the full recurrent O* transition contract: correction/reopening reachable, provenance reconstructible, no self-sealing, and no safety-floor self-waiver |
+| 3 | #72 | stage Safe Strong RSI only after one causally interpretable Venus-owned repair and through #73's full executable safety boundary |
+| 4 | #43 + #30 | move from public attack/disposition surfaces to dynamic hostile World-return, forged-authority, and poisoned-memory evaluation |
 
 A single preregistered successor may precede the full repeated-self-evolution statistics of #41. A repeated adaptive lineage may not.
 
@@ -119,7 +122,7 @@ External coding/research machinery remains distinct from Venus developmental own
 | Priority | Issue | Work |
 |---:|---|---|
 | 1 | #12 | compare repeated Venus development with DGM/AlphaEvolve/POWERPLAY/POET/Voyager/current successors |
-| 2 | #41 | measure false/harmful commits, held-out ID/OOD gain, regression, and cumulative promotion error |
+| 2 | #41 + #73 + #72 | measure repeated self-development under adaptive statistics and the executable Strong-N2/CTL/O* safety floor |
 | 3 | #14 | long-horizon/general agency once repeated development itself is measurable |
 
 Exit: repeated durable improvement or an explicit negative/reduction result.
@@ -183,11 +186,12 @@ They compete for priority when they obtain a short path to a real discriminator 
 ## Current shortest high-leverage chain
 
 ```text
-#69 learner-authored repair
+#73 minimal scaffold internalization
+-> #69 learner-authored repair
 -> #31 hidden semantic return
 -> #10 first matched causal ablation
 -> #42 / #15 native capability tests
--> #41 + #43/#30 repeated-recursion protection
+-> #41 + #73 -> #72 + #43/#30 repeated-recursion protection
 -> next learner-selected residual
 -> #12 repeated self-development comparison
 ```

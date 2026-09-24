@@ -32,7 +32,7 @@
 | #28 Public interface | T9 | README/PUBLIC_VALUE/milestones | blind outsider reconstruction | readers recover claims/boundaries/credit accurately |
 | #29 Canonical retirement | T0/T2/T3 | retirement ledger | full typed inventory + no untracked live premise | every unique consequence disposed and custody hash-bound |
 | #30 VMK2 trust | T3 | invariant/state-purity/canonicalization tests + trust-boundary doc + HMAC-SHA256 symmetric trust-root adapter for authenticated jurisdiction/legitimacy + tamper/forgery/revocation/capability tests | public-key/cross-organization identity, evidence source/assessor signatures, distributed revocation/timestamp/custody, broader receipt-substitution matrix | deployment threat model covered with negative tests at the claimed authentication layer |
-| #69 EDU16-RC1 learner-authored repair | T5 | EDU16-RC1 reconstructed claim-bearing carrier + preserved EDU17/EDU17R1 residual + ownership boundary | substantive repair/discriminator must be produced by admitted Venus developmental controller before hidden #31 exposure | frozen learner-authored candidate + ownership receipt exists; passing #31 remains separate |
+| #69 EDU16-RC1 learner-authored repair | T5 | EDU16-RC1 reconstructed claim-bearing carrier + preserved EDU17/EDU17R1 residual + ownership boundary | #73 must first admit the minimal generic proposal/search capability without importing World/evaluator/authority; then the learner must produce the substantive repair/discriminator before hidden #31 exposure | frozen learner-authored candidate + ownership receipt exists; passing #31 remains separate |
 | #31 MENTION != INCIDENCE | T4 | preserved WITHHOLD + public typed dev benchmark + frozen naive lexical failure floor + sealed A/B/C/D protocol + hidden-split hash custody + scorer | #69 learner-authored B must be frozen before hidden exposure for any ownership claim; then independently authored sealed hidden split + prospective matched run | repaired condition beats ablated/baseline/mature-substitute conditions without invalid promotion; ownership and efficacy remain separate |
 | #32 construct disposition | T0/T5 | credit/reduction law + typed construct disposition state + validator | mature-substitution evidence for each live residual | every public construct gets typed disposition |
 | #33 proof hygiene | T7 | proof-container lint explicitly separated from `formal-check`; OFE subset machine-checked in Lean; false-theorem container regression proves lint is only structural | expand machine-checked subset as warranted | structural lint and proof verification remain separately named |
@@ -42,6 +42,8 @@
 | #37 roadmap | meta | dependency-ordered issue plan | completion of dependent work | closes only when roadmap is replaced by executed outcomes / successor roadmap |
 | #41 Self-evolution evaluation | T5/T6 | promotion/evaluation governance + matched-experiment contract + public null false-promotion simulator | Venus gate vs naive vs anytime-valid/mature acceptors on identical candidate streams | durable held-out improvement with controlled false/harmful commit rate |
 | #42 Reliability/abstention | T5/T6 | STOP/WITHHOLD governance + 16-case public ACT/GATHER/WITHHOLD/STOP paired dev surface + floor controls | hidden paired benchmark with Venus gates and mature substitutes | lower unjustified-action/promotion without collapsing useful action |
+| #73 Internalizer / O* safety contract | T1/T3/T5 | R193 scaffold-internalization boundary + Strong-N2/O* provenance + current nonpreauthored-return and authority separation | executable scaffold-removal/function-preservation receipt, non-consumable World/evidence/authority roles, correction/reopening reachability, and carrier-substitution controls | governance contract passes without self-minting return/authority; Safe Strong RSI performance remains #72 |\n| #72 Safe Strong RSI | T3/T5/T6 | Strong-N2/CTL safety floor + R127/R206/U1 bounded RSI ancestry + #69/#31 first-successor path | one Venus-owned machinery repair first; then repeated adaptive cycles through #73 with rollback, hidden evaluation, mature comparators, and zero safety-floor self-waiver | bounded SSR stage only at tested scope; open-ended RSI remains unclaimed |
+| #73 Internalizer / O* contract | T3/T5 | R193 scaffold-internalization reference PASS + R216 O*/Strong-N2 constitutional law | immediate: executable minimal scaffold-consumption receipt sufficient to internalize generic #69 search while preserving World/evaluator/authority/STOP/rollback externality; later: full recurrent O* transition validator | scaffold function becomes internal capacity with original scaffold removable and fresh return still external; full closure additionally requires correction/reopening and provenance to remain reachable across recurrence |
 | #43 Security/World input | T3/T5/T6 | provenance/jurisdiction/memory boundaries + 12-case public typed attack/disposition surface + floor controls | dynamic adversarial prompt/tool-output/memory-poisoning benchmark against mature defenses | incremental security consequence without unacceptable utility loss |
 
 ## Current executable coverage
@@ -57,10 +59,10 @@ Existing automated coverage currently concentrates on:
 
 The largest uncovered classes are:
 
-1. #69 learner-authored candidate repair from EDU16-RC1 before hidden exposure;
+1. #73 minimal scaffold internalization needed to make the generic proposal/search capability learner-side, then #69 learner-authored candidate repair before hidden exposure;
 2. independently authored hidden T4 evaluation for the frozen EDU17R1 candidate;
 3. matched causal T5 ablations, beginning with evidence governance and memory;
-4. hidden paired STOP/WITHHOLD evaluation and adaptive-successor validity beyond public pressure surfaces;
+4. hidden paired STOP/WITHHOLD evaluation, adaptive-successor validity, #73 executable internalizer/O* safety, and #72 Safe Strong RSI staging beyond the first bounded successor;
 5. dynamic adversarial World-input/authentication tests beyond public attack surfaces;
 6. external T6 capability/science benchmarks;
 7. automatic T8 source-change reconciliation beyond freshness deadlines;

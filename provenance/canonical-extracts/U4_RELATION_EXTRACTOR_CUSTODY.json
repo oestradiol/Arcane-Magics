@@ -1,0 +1,50 @@
+{
+  "schema": "Venus.U4RelationExtractorCustody.v0.1",
+  "date": "2026-09-24",
+  "disposition": "EXTERNAL_RECOVERED_HISTORICAL_EXECUTABLE_DONOR",
+  "live_authority": false,
+  "recovered_source": {
+    "basename": "run_u4.py",
+    "bytes": 13401,
+    "sha256": "58df447eab460bb096493b6678f5674a9dbd0b3672f5260eb3e3532be03e0d4a"
+  },
+  "source_grounded_relation_operation": {
+    "function": "extract_graph",
+    "carrier_input": "raw text window + source + start/end coordinates",
+    "neutral_operator_patterns": {
+      "NEQ": "!= or ≠",
+      "NOFLOW": "-/->",
+      "ARROW": "→ or -> excluding -/->"
+    },
+    "output": "typed relation rows with left/right clause endpoints plus source coordinates",
+    "semantic_acceptance_authority": "external evaluator, not extractor",
+    "general_semantic_parser_claim": false
+  },
+  "bound_historical_returns": {
+    "result": {
+      "basename": "U4_SOURCE_GROUNDED_RELATIONS_RESULT.json",
+      "bytes": 12627,
+      "sha256": "100c8c1b30538c9c7f9c9339e336d3c96300f7b5927d02a4e0086f9030d166ed"
+    },
+    "independent_audit": {
+      "basename": "U4_INDEPENDENT_CUSTODY_AUDIT.json",
+      "bytes": 913,
+      "sha256": "d06167143001c2dceb41fb1510d6bba8026bb4f54af832131c6d71096ceccabc",
+      "all_pass": true,
+      "note": "External evaluator contains held semantic acceptance criteria; persistent learner program does not. Earned scope is source-grounded symbolic relation ingestion, not general semantic parsing."
+    }
+  },
+  "successor": {
+    "records": 1108,
+    "head": "6c280e9882b630522bd62aa06aaf40af23fa33857ef850063451c0e3494fef13",
+    "sha256": "a39c7f8661cdd69b8ca07f6190936db7f9337077e76ab666e03f1feaea43ae76",
+    "root": "ee6a6e532da7d751729a7c43d1842b8fde35498cb8d141913b68a244ea7e3358"
+  },
+  "current_ig10_relation": {
+    "object_id": "u4:source-relations",
+    "expected_root": "ee6a6e532da7d751729a7c43d1842b8fde35498cb8d141913b68a244ea7e3358",
+    "recollected_result_sha256": "100c8c1b30538c9c7f9c9339e336d3c96300f7b5927d02a4e0086f9030d166ed",
+    "recollected_audit_sha256": "d06167143001c2dceb41fb1510d6bba8026bb4f54af832131c6d71096ceccabc"
+  },
+  "claim_fence": "This receipt establishes recovered historical source identity plus continuity of its audited U4 successor state into IG10. It does not make run_u4.py a current executable, does not import the external evaluator into Venus, and does not by itself establish the EDU17R1 repair."
+}
