@@ -1,4 +1,4 @@
-.PHONY: test lint proof proof-containers custody causal-coverage navigation audit kernel-doc-check papers arxiv texbundle forum manifest bundle release clean
+.PHONY: test lint proof proof-containers custody causal-coverage navigation sota-freshness experiment-template audit kernel-doc-check papers arxiv texbundle forum manifest bundle release clean
 
 test:
 	python3 -m unittest discover -s tests -p 'test_*.py'
@@ -21,7 +21,13 @@ causal-coverage:
 navigation:
 	python3 scripts/audit_navigation_contract.py
 
-audit: test lint proof-containers custody causal-coverage navigation
+sota-freshness:
+	python3 scripts/audit_sota_freshness.py
+
+experiment-template:
+	python3 scripts/validate_experiment_manifest.py evaluation/MATCHED_EXPERIMENT_TEMPLATE.json
+
+audit: test lint proof-containers custody causal-coverage navigation sota-freshness experiment-template
 	SOURCE_TREE_ONLY=1 python3 scripts/audit_release.py
 
 kernel-doc-check:
