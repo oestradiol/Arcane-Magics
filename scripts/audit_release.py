@@ -11,6 +11,7 @@ errors: list[str] = []
 
 required = [
     "README.md",
+    "AGENTS.md",
     "PUBLICATION_CONSTITUTION.md",
     "NxRxI_VOCABULARY_CENTER.md",
     "LICENSE",
@@ -23,6 +24,7 @@ required = [
     "kernel/runtime/current.py",
     "kernel/runtime/memory.py",
     "provenance/DEVELOPMENTAL_LINEAGE.md",
+    "provenance/CANONICAL_RETIREMENT_LEDGER.md",
     "docs/META_DYNAMICS.md",
     "docs/FRONTIER_RESEARCH.md",
     "docs/PUBLIC_VALUE.md",
@@ -140,6 +142,28 @@ for token in (
 ):
     if token not in sota:
         errors.append(f"SOTA watch missing {token}")
+
+agents = (ROOT / "AGENTS.md").read_text(encoding="utf-8", errors="replace")
+for token in (
+    "INTENDED",
+    "WRITTEN",
+    "VERIFIED",
+    "ADMITTED",
+    "external coding/research model",
+    "tool call",
+):
+    if token not in agents:
+        errors.append(f"agent work contract missing {token}")
+
+retirement = (ROOT / "provenance/CANONICAL_RETIREMENT_LEDGER.md").read_text(encoding="utf-8", errors="replace")
+for token in (
+    "bulk synchronization is forbidden",
+    "EXTERNAL_HEAVY_CUSTODY",
+    "EDU16 executable custody",
+    "stale current",
+):
+    if token not in retirement:
+        errors.append(f"Canonical retirement ledger missing {token}")
 
 readme = (ROOT / "README.md").read_text(encoding="utf-8", errors="replace")
 for token in (
