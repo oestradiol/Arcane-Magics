@@ -6,7 +6,13 @@ from itertools import product
 from pathlib import Path
 import unittest
 
-from kernel.runtime.induced_policy import execute_tree, tree_features
+from kernel.runtime.induced_policy import (
+    LabeledExample,
+    execute_tree,
+    induce_exact_tree,
+    tree_features,
+)
+from kernel.development.internal_ostar_teacher import exhaustive_training_surface
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -47,6 +53,27 @@ class InternalOStarSourceRemovalTests(unittest.TestCase):
             "f4": True, "f5": False, "f6": False, "f7": False,
         }
         self.assertEqual(execute_tree(self.program, features), "REOPEN")
+
+    def test_internalized_tree_is_reinducible_from_teacher_returns(self):
+        rows = exhaustive_training_surface()
+        induced = induce_exact_tree(
+            LabeledExample(
+                example_id=row["example_id"],
+                features=row["features"],
+                decision=row["decision"],
+            )
+            for row in rows
+        )
+        self.assertEqual(induced["tree"], self.program["tree"])
+
+    def test_exhaustive_source_removal_behavior_matches_prefrozen_teacher(self):
+        expected = {
+            tuple(row["features"][f"f{i}"] for i in range(8)): row["decision"]
+            for row in exhaustive_training_surface()
+        }
+        for bits, decision in expected.items():
+            features = dict(zip((f"f{i}" for i in range(8)), bits))
+            self.assertEqual(execute_tree(self.program, features), decision)
 
     def test_each_coordinate_has_a_matched_causal_intervention(self):
         all_rows = [
