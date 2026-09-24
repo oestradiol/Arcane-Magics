@@ -1,53 +1,110 @@
 from __future__ import annotations
 
-"""Bounded learning state for autonomous work selection.
+"""Bounded returned-outcome learning for autonomous work selection.
 
-Only externally returned GitHub outcomes update this state. The state may alter
-future target selection, but it never grants merge/promotion authority.
+Only externally returned GitHub PR dispositions update this state. The state may
+alter future target selection and, within fixed external bounds, its own learning
+rate. It never grants merge/promotion/release authority.
+
+The exact opaque feature vector used for a cycle is embedded in the draft PR
+body and returned with its external merge/close disposition.
 """
 
 from dataclasses import dataclass
+import json
 import re
 from typing import Any, Iterable, Mapping
+
+FEATURE_NAMES = tuple(f"x{i}" for i in range(8))
+FEATURE_MARKER = "Venus-Features:"
 
 
 @dataclass(frozen=True)
 class WorkLearningState:
     seen_cycle_prs: tuple[int, ...]
-    kind_success: Mapping[str, int]
-    kind_failure: Mapping[str, int]
-
-    def utility(self, kind: str) -> float:
-        success = int(self.kind_success.get(kind, 0))
-        failure = int(self.kind_failure.get(kind, 0))
-        total = success + failure
-        return 0.0 if total == 0 else (success - failure) / total
+    weights: Mapping[str, float]
+    learning_rate: float
+    min_learning_rate: float
+    max_learning_rate: float
+    max_abs_weight: float
+    last_reward: int | None
 
 
 def empty_state() -> WorkLearningState:
     return WorkLearningState(
         seen_cycle_prs=(),
-        kind_success={"ISSUE": 0, "PR": 0},
-        kind_failure={"ISSUE": 0, "PR": 0},
+        weights={name: 0.0 for name in FEATURE_NAMES},
+        learning_rate=0.1,
+        min_learning_rate=0.025,
+        max_learning_rate=0.2,
+        max_abs_weight=2.0,
+        last_reward=None,
     )
 
 
 def from_json(obj: Mapping[str, Any]) -> WorkLearningState:
+    if obj.get("schema") == "Venus.AutonomousLearningState.v0.1":
+        pr_s = int(obj.get("kind_success", {}).get("PR", 0))
+        pr_f = int(obj.get("kind_failure", {}).get("PR", 0))
+        weights = {name: 0.0 for name in FEATURE_NAMES}
+        total = pr_s + pr_f
+        if total:
+            weights["x0"] = (pr_s - pr_f) / total
+        return WorkLearningState(
+            seen_cycle_prs=tuple(int(x) for x in obj.get("seen_cycle_prs", ())),
+            weights=weights,
+            learning_rate=0.1,
+            min_learning_rate=0.025,
+            max_learning_rate=0.2,
+            max_abs_weight=2.0,
+            last_reward=None,
+        )
     return WorkLearningState(
         seen_cycle_prs=tuple(int(x) for x in obj.get("seen_cycle_prs", ())),
-        kind_success={str(k): int(v) for k, v in obj.get("kind_success", {}).items()},
-        kind_failure={str(k): int(v) for k, v in obj.get("kind_failure", {}).items()},
+        weights={name: float(obj.get("weights", {}).get(name, 0.0)) for name in FEATURE_NAMES},
+        learning_rate=float(obj.get("learning_rate", 0.1)),
+        min_learning_rate=float(obj.get("min_learning_rate", 0.025)),
+        max_learning_rate=float(obj.get("max_learning_rate", 0.2)),
+        max_abs_weight=float(obj.get("max_abs_weight", 2.0)),
+        last_reward=None if obj.get("last_reward") is None else int(obj["last_reward"]),
     )
 
 
 def to_json(state: WorkLearningState) -> dict[str, Any]:
     return {
-        "schema": "Venus.AutonomousLearningState.v0.1",
+        "schema": "Venus.AutonomousLearningState.v0.3",
         "seen_cycle_prs": list(state.seen_cycle_prs),
-        "kind_success": dict(state.kind_success),
-        "kind_failure": dict(state.kind_failure),
+        "weights": dict(state.weights),
+        "learning_rate": state.learning_rate,
+        "min_learning_rate": state.min_learning_rate,
+        "max_learning_rate": state.max_learning_rate,
+        "max_abs_weight": state.max_abs_weight,
+        "last_reward": state.last_reward,
         "promotion_authority": False,
+        "merge_authority": False,
+        "release_authority": False,
     }
+
+
+def _features_from_body(body: str) -> dict[str, bool] | None:
+    for line in body.splitlines():
+        if line.startswith(FEATURE_MARKER):
+            try:
+                obj = json.loads(line[len(FEATURE_MARKER):].strip())
+            except json.JSONDecodeError:
+                return None
+            if set(obj) != set(FEATURE_NAMES):
+                return None
+            return {name: bool(obj[name]) for name in FEATURE_NAMES}
+    return None
+
+
+def _next_learning_rate(state: WorkLearningState, reward: int) -> float:
+    if state.last_reward is None:
+        return state.learning_rate
+    if reward == state.last_reward:
+        return min(state.max_learning_rate, state.learning_rate * 1.1)
+    return max(state.min_learning_rate, state.learning_rate * 0.5)
 
 
 def update_from_cycle_prs(
@@ -55,41 +112,57 @@ def update_from_cycle_prs(
     prs: Iterable[Mapping[str, Any]],
 ) -> WorkLearningState:
     seen = set(state.seen_cycle_prs)
-    success = dict(state.kind_success)
-    failure = dict(state.kind_failure)
+    weights = {name: float(state.weights.get(name, 0.0)) for name in FEATURE_NAMES}
+    current = state
 
-    for pr in prs:
+    for pr in sorted(prs, key=lambda x: int(x["number"])):
         number = int(pr["number"])
         if number in seen:
             continue
         title = str(pr.get("title", ""))
-        match = re.match(r"venus: autonomous cycle (issue|pr)-(\d+)$", title, re.I)
-        if not match:
+        if not re.match(r"venus: autonomous cycle (issue|pr)-\d+$", title, re.I):
             continue
-        # Open work is not an outcome yet.
-        state_name = str(pr.get("state", "")).upper()
-        merged = bool(pr.get("mergedAt"))
-        if state_name == "OPEN":
+        if str(pr.get("state", "")).upper() == "OPEN":
             continue
-        kind = match.group(1).upper()
-        if merged:
-            success[kind] = success.get(kind, 0) + 1
-        else:
-            failure[kind] = failure.get(kind, 0) + 1
+
+        features = _features_from_body(str(pr.get("body", "")))
+        if features is None:
+            continue
+
+        reward = 1 if bool(pr.get("mergedAt")) else -1
+        lr_used = current.learning_rate
+        for name, active in features.items():
+            if active:
+                weights[name] = max(
+                    -current.max_abs_weight,
+                    min(current.max_abs_weight, weights[name] + lr_used * reward),
+                )
+
+        current = WorkLearningState(
+            seen_cycle_prs=current.seen_cycle_prs,
+            weights=weights,
+            learning_rate=_next_learning_rate(current, reward),
+            min_learning_rate=current.min_learning_rate,
+            max_learning_rate=current.max_learning_rate,
+            max_abs_weight=current.max_abs_weight,
+            last_reward=reward,
+        )
         seen.add(number)
 
     return WorkLearningState(
         seen_cycle_prs=tuple(sorted(seen)),
-        kind_success=success,
-        kind_failure=failure,
+        weights=weights,
+        learning_rate=current.learning_rate,
+        min_learning_rate=current.min_learning_rate,
+        max_learning_rate=current.max_learning_rate,
+        max_abs_weight=current.max_abs_weight,
+        last_reward=current.last_reward,
     )
 
 
-def target_markers(prs: Iterable[Mapping[str, Any]]) -> tuple[tuple[str, int], ...]:
-    out: list[tuple[str, int]] = []
-    for pr in prs:
-        title = str(pr.get("title", ""))
-        match = re.match(r"venus: autonomous cycle (issue|pr)-(\d+)$", title, re.I)
-        if match and str(pr.get("state", "")).upper() == "OPEN":
-            out.append((match.group(1).upper(), int(match.group(2))))
-    return tuple(sorted(set(out)))
+def active_autonomous_cycle(prs: Iterable[Mapping[str, Any]]) -> bool:
+    return any(
+        re.match(r"venus: autonomous cycle (issue|pr)-\d+$", str(pr.get("title", "")), re.I)
+        and str(pr.get("state", "")).upper() == "OPEN"
+        for pr in prs
+    )
