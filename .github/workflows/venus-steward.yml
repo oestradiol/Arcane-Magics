@@ -40,7 +40,7 @@ jobs:
       - name: Reader-surface audit
         run: python scripts/lint_github_markdown.py
 
-      - name: Proof-container audit
+      - name: Theorem-structure / proof-container audit
         run: python scripts/audit_proof_containers.py
 
       - name: Custody/state audit
@@ -48,6 +48,9 @@ jobs:
 
       - name: Historical causal-distinction / issue coverage audit
         run: python scripts/audit_causal_distinctions.py
+
+      - name: Navigation contract audit
+        run: python scripts/audit_navigation_contract.py
 
       - name: Live open-issue coverage audit
         env:
