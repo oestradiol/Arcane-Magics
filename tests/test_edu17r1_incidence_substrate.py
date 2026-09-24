@@ -32,6 +32,9 @@ class EDU17R1IncidenceSubstrateAuditTests(unittest.TestCase):
             "historical_r194_target_label_free_grammar_expansion",
             "historical_r194_semantic_slots_are_caller_supplied",
             "historical_r194_constructed_executable_is_caller_supplied",
+            "recovered_u4_generic_relation_extractor",
+            "recovered_u4_result_and_audit_recollected_in_ig10",
+            "recovered_u4_successor_root_matches_current_ig10",
             "neutral_relation_incidence_substrate_present",
         ):
             self.assertTrue(self.out[key], key)
