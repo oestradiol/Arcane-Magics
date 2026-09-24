@@ -1,0 +1,14 @@
+{
+  "schema": "Venus.EDURecoveredEvidence.v1",
+  "source_root": "/Canonical/Future/Execution/Raising",
+  "recovered_at": "2026-09-24",
+  "scope": "EDU13 through EDU17R1 exact source artifacts recovered from Library/Canonical",
+  "caveat": "Recovery of evidence does not imply recovery of an original executable EDU runner/journal.",
+  "files": [
+    "EDU15R1_SELF_PREREGISTRATION_VERIFIER_REPAIR.md",
+    "EDU15R1_SELF_PREREGISTRATION_VERIFIER_REPAIR_RESULT.md",
+    "EDU16_LEARNER_GENERATED_WORLD_FEED_POLICY.json",
+    "EDU16_WORLD_FEED_SAMPLING_POLICY_PREFREEZE.md",
+    "EDU16_WORLD_FEED_SAMPLING_POLICY_RESULT.md"
+  ]
+}
