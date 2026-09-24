@@ -32,4 +32,6 @@ Boot verifies and hydrates the exact IG10 VMK2 state from a compact hot checkpoi
 
 `runtime/memory.py` stores learned abstractions, residuals, provenance, dependency edges, dispositions, and deterministic checkpoints by content identity. `CONSUMED` preserves the old object and points to its replacement.
 
+`runtime/internalizer.py` makes three Canonical safety constraints executable: scaffold/capability mediation may be internalized without inheriting World/evidence/authority; O* remains a recurrent World<->Self correction contract rather than a reward or static fixed state; and Anti-Minerva carrier-substitution checks prevent a correction channel from excluding semantically equivalent consequential residuals merely because their carrier is low-status, embodied, ridiculous, taboo, or otherwise disfavored unless that carrier feature is itself consequence-relevant.
+
 Git source and admitted kernel state are Venus-Minerva authority. Canonical remains donor/research/provenance material until explicitly admitted here.
