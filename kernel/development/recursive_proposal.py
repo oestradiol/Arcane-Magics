@@ -1,22 +1,25 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from pathlib import Path
 import hashlib
+import importlib.util
 import json
-from typing import Any
-
-from kernel.development.edu17r1_repair_contract import (
-    canonical_sha256,
-    load_parent,
-    validate_candidate,
-)
+import sys
+from typing import Iterable
 
 ROOT = Path(__file__).resolve().parents[2]
-RESIDUAL = ROOT / "kernel/development/EDU17R1_TYPED_RESIDUAL.json"
-
-CONTROLLER_ID = "EDU16-RC1::RECURSIVE_PROPOSAL_V0.1"
-VERSION = "EDU16_RC1_RECURSIVE_PROPOSAL_v0.1"
+DONOR = (
+    ROOT
+    / "provenance"
+    / "historical-runtime"
+    / "R194"
+    / "source"
+    / "venus_seed_v0"
+    / "grammar_expansion.py"
+)
+EXPECTED_DONOR_GIT_BLOB_SHA = "cd2c041c2a67b686da218fa91684a2d979d8fe3b"
+VERSION = "RECONSTRUCTED_GENERIC_RESIDUAL_SEARCH_v0.2"
 
 
 class RecursiveProposalError(ValueError):
@@ -24,149 +27,217 @@ class RecursiveProposalError(ValueError):
 
 
 @dataclass(frozen=True)
-class RepairFamily:
-    id: str
-    mismatch: str
-    machinery_kind: str
+class ResidualObservation:
+    """One returned constraint on a generic binary decision program.
+
+    Feature coordinates are opaque to this search operator. Their meaning belongs
+    to the caller's already-admitted representation and provenance. This module
+    never receives issue labels, semantic target names, or hidden benchmark data.
+    """
+
+    features: tuple[int, ...]
+    desired_action: int
+    provenance_id: str
 
 
-FAMILIES = (
-    RepairFamily("RELATION_BINDING", "surface_without_target_relation", "typed_relation_admission_gate"),
-    RepairFamily("PROVENANCE_BINDING", "source_unbound", "claim_local_provenance_gate"),
-    RepairFamily("TEMPORAL_BINDING", "temporal_unbound", "event_order_gate"),
-    RepairFamily("AUTHORITY_BINDING", "authority_unbound", "authority_jurisdiction_gate"),
-    RepairFamily("DEPENDENCY_BINDING", "dependency_unbound", "dependency_closure_gate"),
-)
+@dataclass(frozen=True)
+class SearchOutcome:
+    schema: str
+    version: str
+    status: str
+    donor_git_blob_sha: str
+    observation_count: int
+    feature_count: int
+    exact_semantic_candidates: tuple[str, ...]
+    minimal_complexity: tuple[int, int] | None
+    next_discriminator: tuple[int, ...] | None
+    hidden_evaluation_exposed: bool
+    promotion_authority: bool
 
 
-def source_sha256(path: Path = Path(__file__)) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+def git_blob_sha(path: Path) -> str:
+    data = path.read_bytes()
+    return hashlib.sha1(f"blob {len(data)}\0".encode("ascii") + data).hexdigest()
 
 
-def load_typed_residual(path: Path = RESIDUAL) -> dict[str, Any]:
-    residual = json.loads(path.read_text(encoding="utf-8"))
-    if residual.get("schema") != "Venus.TypedDevelopmentalResidual.v0.1":
-        raise RecursiveProposalError("unexpected typed residual schema")
-    if residual.get("hidden_evaluation_exposed") is not False:
-        raise RecursiveProposalError("hidden evaluation must remain unexposed")
-    return residual
+def load_donor():
+    actual = git_blob_sha(DONOR)
+    if actual != EXPECTED_DONOR_GIT_BLOB_SHA:
+        raise RecursiveProposalError(
+            f"ancestral generic-constructor custody mismatch: expected "
+            f"{EXPECTED_DONOR_GIT_BLOB_SHA}, got {actual}"
+        )
+    name = "_venus_r194_grammar_expansion"
+    spec = importlib.util.spec_from_file_location(name, DONOR)
+    if spec is None or spec.loader is None:
+        raise RecursiveProposalError("cannot load ancestral generic constructor")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
+    spec.loader.exec_module(module)
+    return module
 
 
-def derive_mismatches(residual: dict[str, Any]) -> tuple[str, ...]:
-    o = residual["observations"]
-    out: list[str] = []
-    if o.get("surface_signal_present") and not o.get("required_target_relation_present"):
-        out.append("surface_without_target_relation")
-    if not o.get("source_binding_present"):
-        out.append("source_unbound")
-    if not o.get("temporal_binding_present"):
-        out.append("temporal_unbound")
-    if not o.get("authority_binding_present"):
-        out.append("authority_unbound")
-    if not o.get("dependency_binding_present"):
-        out.append("dependency_unbound")
-    return tuple(out)
+def _normalize_observations(
+    observations: Iterable[ResidualObservation],
+) -> tuple[ResidualObservation, ...]:
+    rows = tuple(observations)
+    if not rows:
+        raise RecursiveProposalError("STOP_NO_RETURNED_RESIDUAL_OBSERVATIONS")
+    width = len(rows[0].features)
+    if width < 2:
+        raise RecursiveProposalError("generic search requires at least two feature coordinates")
+    for row in rows:
+        if len(row.features) != width:
+            raise RecursiveProposalError("feature-width mismatch")
+        if any(bit not in (0, 1) for bit in row.features):
+            raise RecursiveProposalError("features must be binary")
+        if row.desired_action not in (0, 1):
+            raise RecursiveProposalError("desired_action must be binary")
+        if not row.provenance_id:
+            raise RecursiveProposalError("returned observation requires provenance")
+    return rows
 
 
-def select_family(residual: dict[str, Any]) -> RepairFamily:
-    mismatches = derive_mismatches(residual)
-    if not mismatches:
-        raise RecursiveProposalError("STOP_NO_LIVE_REPAIR_MISMATCH")
-    matching = tuple(f for f in FAMILIES if f.mismatch in mismatches)
-    if len(mismatches) != 1 or len(matching) != 1:
-        raise RecursiveProposalError("WITHHOLD_MULTI_AXIS_REPAIR_AMBIGUITY")
-    return matching[0]
-
-
-def _relation_candidate(parent: dict[str, Any], parent_sha: str, residual: dict[str, Any]) -> dict[str, Any]:
-    machinery_change = {
-        "kind": "typed_relation_admission_gate",
-        "rule": "surface observation is insufficient; admit the target classification only from an explicit typed target relation",
-        "required_evidence": ["required_target_relation_present"],
-        "insufficient_evidence": ["surface_signal_present"],
-        "on_missing_relation": "WITHHOLD",
-        "preserve_axes": ["source_binding", "temporal_binding", "authority_binding", "dependency_binding"],
-        "label_gauge": "renaming the surface marker must not change classification when typed relations are unchanged",
-    }
-    discriminator = (
-        "Hold the surface signal fixed while varying only the typed target relation: "
-        "classification must follow the relation. Then rename the surface signal while "
-        "preserving the typed relation: classification must remain invariant."
+def _candidate_pool(width: int):
+    donor = load_donor()
+    domain = donor.bit_domain(width)
+    atoms = tuple(donor.BoolExpr.atom(i) for i in range(width))
+    grammar = donor.ObjectGrammar(atoms, stage=0)
+    expanded = donor.generic_expand_once(
+        grammar,
+        atoms,
+        meta_ops=("AND", "OR", "XOR"),
+        domain_rows=domain,
     )
-    seed = {
-        "parent": parent_sha,
-        "residual": residual["id"],
-        "family": "RELATION_BINDING",
-        "machinery_change": machinery_change,
-        "discriminator": discriminator,
-    }
-    return {
-        "schema": "Venus.EDU17R1RepairCandidate.v0.1",
-        "candidate_id": "RC-" + canonical_sha256(seed)[:20],
-        "parent_carrier_id": parent["carrier_id"],
-        "parent_state_sha256": parent_sha,
-        "residual": "MENTION != INCIDENCE",
-        "problem_statement": (
-            "A surface signal was admitted as evidence for a target relation even though "
-            "the returned trace showed the target relation itself was absent."
+    # Compare executable semantics on the complete declared finite domain, not
+    # syntax strings. This consumes aliases as gauge before search.
+    candidates = donor.dedupe_semantics(expanded.raw_successor, domain)
+    return donor, domain, candidates
+
+
+def _exact_candidates(donor, candidates, rows: tuple[ResidualObservation, ...]):
+    obs = tuple((row.features, row.desired_action) for row in rows)
+    exact = tuple(expr for expr in candidates if donor.errors(expr, obs) == 0)
+    return tuple(sorted(exact, key=lambda e: (e.nodes, e.depth, e.canonical())))
+
+
+def _choose_discriminator(donor, domain, candidates, observed_rows):
+    observed = {row.features for row in observed_rows}
+    best = None
+    for row in domain:
+        if row in observed:
+            continue
+        outputs = tuple(expr.eval(row) for expr in candidates)
+        zeros = outputs.count(0)
+        ones = outputs.count(1)
+        if zeros == 0 or ones == 0:
+            continue
+        # Prefer the most balanced split, then deterministic lexical row order.
+        score = (max(zeros, ones), -min(zeros, ones), tuple(row))
+        if best is None or score < best[0]:
+            best = (score, tuple(int(x) for x in row))
+    return None if best is None else best[1]
+
+
+def search(
+    observations: Iterable[ResidualObservation],
+    *,
+    hidden_evaluation_exposed: bool = False,
+) -> SearchOutcome:
+    """Search a bounded ancestral grammar without issue-specific repair knowledge.
+
+    This operator can propose a program only if returned observations uniquely
+    determine one executable semantic candidate in the declared bounded grammar.
+    Otherwise it WITHHOLDS and, where possible, returns the next feature vector
+    on which surviving candidates disagree.
+
+    It does not decide what feature coordinates *mean*. Constructing a lawful
+    feature representation remains a separately owned developmental operation.
+    """
+    if hidden_evaluation_exposed:
+        raise RecursiveProposalError("hidden evaluation may not enter proposal search")
+
+    rows = _normalize_observations(observations)
+    width = len(rows[0].features)
+    donor, domain, pool = _candidate_pool(width)
+    exact = _exact_candidates(donor, pool, rows)
+
+    if not exact:
+        return SearchOutcome(
+            schema="Venus.GenericResidualSearchOutcome.v0.2",
+            version=VERSION,
+            status="WITHHOLD_NO_EXPRESSIBLE_CANDIDATE",
+            donor_git_blob_sha=EXPECTED_DONOR_GIT_BLOB_SHA,
+            observation_count=len(rows),
+            feature_count=width,
+            exact_semantic_candidates=(),
+            minimal_complexity=None,
+            next_discriminator=None,
+            hidden_evaluation_exposed=False,
+            promotion_authority=False,
+        )
+
+    canon = tuple(expr.canonical() for expr in exact)
+    minimum = min((expr.nodes, expr.depth) for expr in exact)
+
+    if len(exact) == 1:
+        return SearchOutcome(
+            schema="Venus.GenericResidualSearchOutcome.v0.2",
+            version=VERSION,
+            status="UNIQUE_BOUNDED_PROGRAM_CANDIDATE",
+            donor_git_blob_sha=EXPECTED_DONOR_GIT_BLOB_SHA,
+            observation_count=len(rows),
+            feature_count=width,
+            exact_semantic_candidates=canon,
+            minimal_complexity=minimum,
+            next_discriminator=None,
+            hidden_evaluation_exposed=False,
+            promotion_authority=False,
+        )
+
+    discriminator = _choose_discriminator(donor, domain, exact, rows)
+    return SearchOutcome(
+        schema="Venus.GenericResidualSearchOutcome.v0.2",
+        version=VERSION,
+        status=(
+            "WITHHOLD_AMBIGUOUS_CANDIDATES_NEXT_DISCRIMINATOR"
+            if discriminator is not None
+            else "WITHHOLD_OBSERVATIONALLY_EQUIVALENT_CANDIDATES"
         ),
-        "discriminator": discriminator,
-        "machinery_change": machinery_change,
-        "expected_changed_admissibility": (
-            "surface-only cases WITHHOLD; relation-grounded cases remain admissible; "
-            "surface renaming alone cannot change the decision"
-        ),
-        "non_goals": [
-            "hidden benchmark optimization",
-            "general semantic understanding",
-            "developmental promotion",
-            "AGI or consciousness inference",
-        ],
-        "stop_conditions": [
-            "WITHHOLD if more than one independent repair axis is implicated",
-            "STOP if no live mismatch remains",
-            "do not expose hidden issue #31 labels before candidate freeze",
-        ],
-        "implementation_identity": {
-            "artifact": "kernel/development/recursive_proposal.py",
-            "sha256": source_sha256(),
-            "version": VERSION,
-        },
-        "author_controller_id": CONTROLLER_ID,
-        "author_controller_state_sha256": parent_sha,
-        "hidden_evaluation_exposed": False,
-        "external_model_supplied_substantive_repair": False,
-        "promotion_authority": False,
-    }
+        donor_git_blob_sha=EXPECTED_DONOR_GIT_BLOB_SHA,
+        observation_count=len(rows),
+        feature_count=width,
+        exact_semantic_candidates=canon,
+        minimal_complexity=minimum,
+        next_discriminator=discriminator,
+        hidden_evaluation_exposed=False,
+        promotion_authority=False,
+    )
 
 
-def generate_candidate(*, residual_path: Path = RESIDUAL) -> dict[str, Any]:
-    parent, parent_sha = load_parent()
-    owned = set(parent.get("owned", ()))
-    required_owned = {
-        "curriculum target selection",
-        "curriculum gate proposal",
-        "open-domain problem selection",
-        "research-question formation",
-    }
-    if not required_owned.issubset(owned):
-        raise RecursiveProposalError("parent lacks admitted proposal-formation ownership")
-
-    residual = load_typed_residual(residual_path)
-    family = select_family(residual)
-    if family.id != "RELATION_BINDING":
-        raise RecursiveProposalError(f"WITHHOLD_UNIMPLEMENTED_REPAIR_FAMILY:{family.id}")
-
-    candidate = _relation_candidate(parent, parent_sha, residual)
-    errors = validate_candidate(candidate)
-    if errors:
-        raise RecursiveProposalError("; ".join(errors))
-    return candidate
+def outcome_dict(outcome: SearchOutcome) -> dict:
+    return asdict(outcome)
 
 
 def main() -> int:
-    candidate = generate_candidate()
-    print(json.dumps(candidate, indent=2, sort_keys=True))
+    # No issue-specific residual is embedded here. The command-line entry point
+    # exists only as a custody/readiness witness; prospective observations must
+    # be supplied by an admitted caller.
+    print(
+        json.dumps(
+            {
+                "schema": "Venus.GenericResidualSearchReadiness.v0.2",
+                "version": VERSION,
+                "donor_git_blob_sha": git_blob_sha(DONOR),
+                "expected_donor_git_blob_sha": EXPECTED_DONOR_GIT_BLOB_SHA,
+                "issue_specific_residual_embedded": False,
+                "candidate_emitted": False,
+                "promotion_authority": False,
+            },
+            indent=2,
+            sort_keys=True,
+        )
+    )
     return 0
 
 
