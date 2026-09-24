@@ -42,7 +42,7 @@ For a new bounded result, include:
 1. **Parent** — exact commit / receipt / state.
 2. **Question** — frozen before the result.
 3. **Scope** — what register and target are actually being tested.
-4. **Comparator** — null, baseline, rival, or mature substitute.
+4. **Comparator** — null, baseline, rival, or mature substitute; separately type whether it is a historical predecessor, technical donor, comparative recurrence, or substitution target.
 5. **Evidence budget** — what evidence is admitted.
 6. **Result** — PASS / FAIL / WITHHOLD / mature reduction / other typed outcome.
 7. **Dependency-local update** — exactly what changes.
@@ -78,7 +78,8 @@ Useful criticism identifies one or more of:
 - inadequate lower-bound argument;
 - provenance break;
 - unreproducible result;
-- mature prior art that substitutes the project construct;
+- mature comparator that substitutes the project construct at the declared task/index;
+- historical predecessor or technical donor whose credit/genealogy relation is misstated;
 - stronger ordinary explanation.
 
 The project explicitly prefers a correct negative result to a dramatic incorrect positive result.
@@ -95,7 +96,7 @@ Examples:
 - symbolic usefulness does not establish mechanism.
 - analogy to P versus NP does not establish a complexity lower bound.
 
-See `PUBLICATION_CONSTITUTION.md` and `docs/FRONTIER_RESEARCH.md`.
+See `PUBLICATION_CONSTITUTION.md`, `docs/CREDITS_AND_REDUCTIONS.md`, `docs/EARNED_MILESTONES.md`, and `docs/FRONTIER_RESEARCH.md`.
 
 ## Humane interface check
 
