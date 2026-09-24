@@ -130,5 +130,15 @@
     "paired_test": "exact two-sided sign/binomial test on discordant paired cases",
     "multiplicity": "Holm step-down across two mechanism claims",
     "familywise_alpha": 0.05
+  },
+  "power_planning": {
+    "implementation": "evaluation/plan_paired_power.py",
+    "assumptions_status": "UNFROZEN",
+    "required_before_run": [
+      "conditional full-Venus win probability among discordant pairs",
+      "expected paired discordance rate",
+      "target power",
+      "familywise alpha"
+    ]
   }
 }
