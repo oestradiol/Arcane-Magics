@@ -90,10 +90,11 @@ def _candidate_semantics(
     return tuple(outcomes)
 
 
-def search_missing_transition(
+def search_transition_repair(
     parent: Mapping[str, Any],
     traces: Iterable[BehavioralTrace],
     *,
+    allowed_patch_ops: Iterable[str] = ("ADD_TRANSITION",),
     max_required_fields: int = 8,
 ) -> TransformRepairSearchOutcome:
     rows = tuple(traces)
@@ -113,17 +114,42 @@ def search_missing_transition(
         sorted({str(k) for x in rows for k in x.payload.keys()})
     )
     states = _states(parent, rows)
+    ops = tuple(sorted(set(str(x) for x in allowed_patch_ops)))
+    supported = {"ADD_TRANSITION", "REMOVE_TRANSITION", "REPLACE_TRANSITION"}
+    unknown = set(ops) - supported
+    if unknown:
+        raise TransformRepairSearchError(f"unsupported patch ops: {sorted(unknown)}")
 
-    exact: list[tuple[tuple[int, str, tuple[str, ...]], ProgramPatch, str]] = []
-    for next_state in states:
-        for required in _powerset(all_payload_fields, max_size=max_required_fields):
-            transition = {
-                "from": prior_state,
-                "action": action,
-                "to": next_state,
-                "require": list(required),
-            }
-            patch = ProgramPatch(op="ADD_TRANSITION", transition=transition)
+    exact: list[tuple[tuple[int, str, str, tuple[str, ...]], ProgramPatch, str]] = []
+    for op in ops:
+        if op == "REMOVE_TRANSITION":
+            patches = (
+                ProgramPatch(
+                    op=op,
+                    match_from=prior_state,
+                    match_action=action,
+                ),
+            )
+        else:
+            patches = tuple(
+                ProgramPatch(
+                    op=op,
+                    match_from=(prior_state if op == "REPLACE_TRANSITION" else None),
+                    match_action=(action if op == "REPLACE_TRANSITION" else None),
+                    transition={
+                        "from": prior_state,
+                        "action": action,
+                        "to": next_state,
+                        "require": list(required),
+                    },
+                )
+                for next_state in states
+                for required in _powerset(
+                    all_payload_fields, max_size=max_required_fields
+                )
+            )
+
+        for patch in patches:
             try:
                 semantics = _candidate_semantics(parent, patch, rows)
             except Exception:
@@ -132,7 +158,10 @@ def search_missing_transition(
                 successor, _ = apply_successor_patch(
                     parent, (patch,), author_id="venus-generic-repair-search"
                 )
-                key = (len(required), next_state, required)
+                transition = dict(patch.transition or {})
+                required = tuple(transition.get("require", ()))
+                next_state = str(transition.get("to", ""))
+                key = (len(required), op, next_state, required)
                 exact.append((key, patch, program_digest(successor)))
 
     exact.sort(key=lambda x: x[0])
@@ -154,6 +183,8 @@ def search_missing_transition(
         patch = minimal[0][1]
         selected_patch = {
             "op": patch.op,
+            "match_from": patch.match_from,
+            "match_action": patch.match_action,
             "transition": dict(patch.transition or {}),
         }
         selected_digest = minimal[0][2]
@@ -174,3 +205,18 @@ def search_missing_transition(
 
 def outcome_dict(outcome: TransformRepairSearchOutcome) -> dict[str, Any]:
     return asdict(outcome)
+
+
+def search_missing_transition(
+    parent: Mapping[str, Any],
+    traces: Iterable[BehavioralTrace],
+    *,
+    max_required_fields: int = 8,
+) -> TransformRepairSearchOutcome:
+    """Backward-compatible bounded ADD-only search."""
+    return search_transition_repair(
+        parent,
+        traces,
+        allowed_patch_ops=("ADD_TRANSITION",),
+        max_required_fields=max_required_fields,
+    )
