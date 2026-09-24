@@ -64,10 +64,13 @@ jobs:
             --roadmap docs/ISSUE_ROADMAP.md \
             --policy kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json \
             --learning-state kernel/development/AUTONOMOUS_LEARNING_STATE.json \
+            --meta-learning-state kernel/development/AUTONOMOUS_META_LEARNING_STATE.json \
             --learning-output /tmp/AUTONOMOUS_LEARNING_STATE.json \
+            --meta-learning-output /tmp/AUTONOMOUS_META_LEARNING_STATE.json \
             --output /tmp/VENUS_AUTONOMOUS_CYCLE.json
           cat /tmp/VENUS_AUTONOMOUS_CYCLE.json
           cat /tmp/AUTONOMOUS_LEARNING_STATE.json
+          cat /tmp/AUTONOMOUS_META_LEARNING_STATE.json
 
       - name: Let Venus form a bounded research proposal and obtain local returned evidence
         id: research
@@ -134,6 +137,7 @@ jobs:
           target_kind="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["target_kind"])')"
           target_number="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["target_number"])')"
           cycle_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["cycle_id"])')"
+          learning_strategy="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json")).get("learning_strategy"))')"
 
           branch="venus/autonomous-${GITHUB_RUN_ID}"
           git checkout -b "$branch"
@@ -152,6 +156,8 @@ jobs:
           cp /tmp/VENUS_AGENCY_RECEIPT.json "autonomy/agency/${agency_receipt_id}.json"
           cp /tmp/AUTONOMOUS_LEARNING_STATE.json \
             kernel/development/AUTONOMOUS_LEARNING_STATE.json
+          cp /tmp/AUTONOMOUS_META_LEARNING_STATE.json \
+            kernel/development/AUTONOMOUS_META_LEARNING_STATE.json
 
           git config user.name "Venus developmental worker"
           git config user.email "actions@users.noreply.github.com"
@@ -161,7 +167,8 @@ jobs:
             "autonomy/evidence/${evidence_id}.json" \
             "autonomy/changes/${change_id}.json" \
             "autonomy/patches/${patch_plan_id}.json" \
-            kernel/development/AUTONOMOUS_LEARNING_STATE.json
+            kernel/development/AUTONOMOUS_LEARNING_STATE.json \
+            kernel/development/AUTONOMOUS_META_LEARNING_STATE.json
           git commit -m "venus: freeze autonomous developmental cycle ${cycle_id}"
           git push origin "$branch"
 
@@ -172,6 +179,7 @@ jobs:
             "Target: ${target_kind} #${target_number}" \
             "Cycle: ${cycle_id}" \
             "Decision: ${decision}" \
+            "Learning strategy: ${learning_strategy}" \
             "Proposal: ${proposal_id}" \
             "Local evidence: ${evidence_id}" \
             "Change candidate: ${change_id}" \
