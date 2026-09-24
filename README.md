@@ -39,13 +39,15 @@ make arxiv      # produce clean source packages
 make release    # full build + audit + manifest + bundle
 ```
 
-For the executable lineage, start at:
+For the developmental lineage, start at:
 
 ```text
-prototype/stable-executable/README.md
-prototype/stable-executable/source/PYTHON_R00_R194_PROTOTYPE_README.md
 prototype/CURRENT_STATE.md
+prototype/DEVELOPMENTAL_LINEAGE.md
+prototype/current-developmental-receipts/
 ```
+
+The directory `prototype/stable-executable/` is deliberately historical: it contains the old R00–R194 public carrier for replay/regression/ablation, **not** the current Venus prototype.
 
 For open problems and bounded next experiments, start at:
 
@@ -114,7 +116,7 @@ The subsequent EDU17 branch is preserved but invalid for promotion after a claim
 
 `REPOSITORY_AUTHORITY_BOUNDARY.md` defines the new source-of-truth split: Venus-Minerva owns implementation/release-bearing developmental state; Canonical remains the external research-mapping, planning, and non-release provenance layer.
 
-The repo also contains the latest self-contained stable executable Python package currently materialized for release (R00-R194) plus exact later developmental receipts. A receipt is not silently promoted into an executable checkpoint.
+The repo also retains the old self-contained R00–R194 public executable carrier as historical replay/ablation infrastructure. The R-line continued through **R226**, which is the settled crystallized R-line predecessor; post-R226 development then moved through `S/SM → CTL-K1 → WM1R1 → U* → RB1 → IG* → EDU*`. No R227 was minted because the namespace change was intentional. See `prototype/DEVELOPMENTAL_LINEAGE.md`.
 
 ## Build
 
