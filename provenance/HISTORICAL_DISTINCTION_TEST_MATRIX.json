@@ -211,8 +211,8 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_historical_regressions.py::test_failure_locality_and_corruption_classes_remain_live",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "historical method invariant",
       "reopening_condition": "minimal executable historical fixture identified"
     },
@@ -229,8 +229,8 @@
       ],
       "current_owner": "provenance/DEVELOPMENTAL_LINEAGE.md",
       "test_layer": "T2/T0",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_historical_regressions.py::test_negative_and_nonparent_branches_remain_visible",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "core developmental genealogy rule",
       "reopening_condition": "automated lineage validator"
     },
@@ -246,8 +246,8 @@
       ],
       "current_owner": "kernel/CURRENT_STATE.md; REPOSITORY_AUTHORITY_BOUNDARY.md",
       "test_layer": "T0/T2",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_historical_regressions.py::test_stale_current_filename_cannot_route_live_authority",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "repository authority repair",
       "reopening_condition": "automated stale-current quarantine test"
     },
@@ -263,8 +263,8 @@
       ],
       "current_owner": "docs/CREDITS_AND_REDUCTIONS.md",
       "test_layer": "T2/T7",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_historical_regressions.py::test_credit_reduction_does_not_erase_genealogy",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "methodology extracted from Canonical credit work",
       "reopening_condition": "machine-readable credit relation validator"
     },
@@ -298,8 +298,8 @@
       ],
       "current_owner": "kernel/WORLDMIND.md",
       "test_layer": "T2/T6",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_historical_regressions.py::test_unknown_is_not_permission",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "distributed governance invariant",
       "reopening_condition": "executable jurisdiction/refusal fixture"
     },
@@ -315,8 +315,8 @@
       ],
       "current_owner": "kernel/WORLDMIND.md",
       "test_layer": "T2/T5",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_historical_regressions.py::test_shared_reachability_does_not_mint_global_agent",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "no global subject claim",
       "reopening_condition": "formal/distributed-systems reduction or counterexample"
     },
@@ -332,8 +332,8 @@
       ],
       "current_owner": "provenance/developmental/EDU/",
       "test_layer": "T4",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_memory_causal_benchmark.py::test_required_causal_memory_classes_exist",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "machine developmental distinction",
       "reopening_condition": "prospective held-out retrieval failure suite"
     },
@@ -350,8 +350,8 @@
       ],
       "current_owner": "provenance/developmental/EDU/",
       "test_layer": "T4",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_memory_causal_benchmark.py::test_required_causal_memory_classes_exist",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "preserved negative",
       "reopening_condition": "claim-local binding benchmark passes prospectively"
     },
@@ -367,8 +367,8 @@
       ],
       "current_owner": "provenance/developmental/EDU/",
       "test_layer": "T4",
-      "test_id_path": "issue #31",
-      "status": "PLANNED",
+      "test_id_path": "tests/test_edu17r1_benchmark.py::test_naive_mention_baseline_exhibits_the_original_failure_mode",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "current measured semantic residual",
       "reopening_condition": "held-out prospective benchmark"
     },
@@ -385,9 +385,9 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2/T8",
-      "test_id_path": null,
-      "status": "PLANNED",
-      "credit_genealogy_note": "Canonical methodology residue",
+      "test_id_path": "tests/test_historical_regressions.py::test_current_status_repair_does_not_rewrite_historical_audit",
+      "status": "COVERED_PARTIAL",
+      "credit_genealogy_note": "historical status fossil now has an executable repository example and non-rewriting repair",
       "reopening_condition": "status dependency validator"
     },
     {
@@ -402,8 +402,8 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_historical_regressions.py::test_failure_locality_and_corruption_classes_remain_live",
+      "status": "COVERED_PROSE_ONLY",
       "credit_genealogy_note": "Canonical methodology residue",
       "reopening_condition": "typed dependency fixture"
     },
@@ -454,9 +454,9 @@
       ],
       "current_owner": "kernel/CURRENT_STATE.md",
       "test_layer": "T0/T3",
-      "test_id_path": "issue #4",
+      "test_id_path": "provenance/developmental/EDU/EDU16_GIT_RECOVERY_ATTEMPT_2026-09-24.md",
       "status": "OPEN_EXTRACTION",
-      "credit_genealogy_note": "do not synthesize missing runner/journal from prose",
+      "credit_genealogy_note": "bounded Git recovery attempt NOT_LOCATED; do not synthesize missing runner/journal from prose",
       "reopening_condition": "exact external custody bytes located and verified"
     },
     {
@@ -529,9 +529,9 @@
       "current_owner": "provenance/historical-runtime/R194",
       "test_layer": "T2/T3",
       "test_id_path": null,
-      "status": "HISTORICAL_REGRESSION_ORACLE_NEEDS_MINIMAL_REEXECUTION_ROUTE",
-      "credit_genealogy_note": "historical experimental carrier",
-      "reopening_condition": "materialize minimal regression fixture against current kernel"
+      "status": "OPEN_EXTRACTION_FROM_CANONICAL_CUSTODY",
+      "credit_genealogy_note": "Historical R154 regression oracle is referenced by Git, but its exact state payloads remain in Canonical custody and are not yet extracted into the live Git provenance carrier.",
+      "reopening_condition": "Extract authentic R154 state/manifest payloads from Canonical, hash-bind them into Git provenance, then add the minimal re-execution route without rewriting historical authority."
     },
     {
       "id": "D-R179-VMK1",
@@ -749,9 +749,9 @@
       ],
       "current_owner": "provenance/CANONICAL_RETIREMENT_LEDGER.md",
       "test_layer": "T0/T2",
-      "test_id_path": null,
-      "status": "OPEN_EXTRACTION",
-      "credit_genealogy_note": "repair credit and historical failure state remain separately reconstructible",
+      "test_id_path": "tests/test_historical_regressions.py::test_current_status_repair_does_not_rewrite_historical_audit",
+      "status": "COVERED_PARTIAL",
+      "credit_genealogy_note": "current status reconciliation is append-only relative to historical audit checkpoint",
       "reopening_condition": "projection-maintenance regression fixture"
     }
   ]
