@@ -125,15 +125,17 @@ A row marked `PLANNED` is not a passing test.
 
 ## What should happen next?
 
-The highest-leverage sequence is:
+The highest-leverage sequence is now experiment-first:
 
-1. preserve the now-green integrity/publication path while completing the remaining research work;
-2. complete Canonical retirement/custody inventory;
-3. turn historical causal distinctions into regressions;
-4. run the prospective `MENTION != INCIDENCE` benchmark;
-5. run the first matched Venus-vs-ablation causal experiment;
-6. execute a complete Venus-owned target → prefreeze → World return → reconstruction → successor → next-target cycle;
-7. only then lean harder on broad capability/SOTA claims.
+1. run the sealed hidden `MENTION != INCIDENCE` A/B/C/D evaluation;
+2. run the first matched Venus-vs-baseline/ablation causal experiment;
+3. test STOP/WITHHOLD and VenusMemory under hidden matched conditions;
+4. close only the custody/statistical/security prerequisites needed to interpret one recursive successor;
+5. execute a complete Venus-owned target → prefreeze → machinery change → World return → causal successor → next-target cycle;
+6. repeat under adaptive-evaluation controls and compare against mature self-improvement systems;
+7. let failed experiments, not conceptual completeness, decide which archaeology/hardening work is pulled forward.
+
+Canonical/history/UX work remains live but no longer blocks experiments unless a specific missing distinction is required by the experiment.
 
 The dependency-ordered GitHub roadmap is issue **#37**.
 
