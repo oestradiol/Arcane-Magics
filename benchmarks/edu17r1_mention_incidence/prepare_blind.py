@@ -63,6 +63,9 @@ def prepare(hidden: Path, sealed_manifest: Path, blind_output: Path, blind_manif
     if manifest.get("labels_public_before_run") is not False:
         raise ValueError("sealed manifest does not preserve hidden-label boundary")
 
+    if not manifest.get("condition_freeze_sha256"):
+        raise ValueError("sealed manifest missing condition-freeze binding")
+
     rows = load_jsonl(hidden)
     blinded = blind_rows(rows)
     write_jsonl(blind_output, blinded)
@@ -71,6 +74,7 @@ def prepare(hidden: Path, sealed_manifest: Path, blind_output: Path, blind_manif
         "schema": "Venus.EDU17R1BlindInputManifest.v0.1",
         "benchmark": "edu17r1_mention_incidence",
         "source_hidden_sha256": actual,
+        "condition_freeze_sha256": manifest.get("condition_freeze_sha256"),
         "blind_input_sha256": sha256_bytes(blind_output),
         "n": len(blinded),
         "excluded_fields": sorted(SENSITIVE_FIELDS),

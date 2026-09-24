@@ -133,6 +133,17 @@ python benchmarks/edu17r1_mention_incidence/prepare_blind.py \
 
 All four conditions receive the same blinded input. Only the evaluator retains the gold labels.
 
+The execution side must bind the run to the exact prefrozen condition bytes before producing predictions:
+
+```bash
+python benchmarks/edu17r1_mention_incidence/run_sealed_conditions.py \
+  /shared/edu17r1-blind.jsonl \
+  /shared/edu17r1-blind-manifest.json \
+  --output-dir /returned/edu17r1-run
+```
+
+This wrapper verifies the frozen protocol, analysis plan, candidate, ownership receipt, and A/B/C/D Git blob identities; rejects sensitive fields in blind input; runs all four conditions; and emits an execution receipt containing only hashes, IDs, and prediction-output identities. It does not read gold labels, score conditions, or grant promotion authority.
+
 After all conditions have produced predictions, score each condition with the same evaluator-held bytes:
 
 ```bash

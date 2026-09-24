@@ -69,5 +69,8 @@
   "blind_input_packager": "benchmarks/edu17r1_mention_incidence/prepare_blind.py",
   "condition_adjudicator": "benchmarks/edu17r1_mention_incidence/compare_conditions.py",
   "sealed_evaluation_core": "evaluation/sealed_eval.py",
-  "condition_implementation_freeze": "benchmarks/edu17r1_mention_incidence/CONDITION_IMPLEMENTATIONS.json"
+  "condition_implementation_freeze": "benchmarks/edu17r1_mention_incidence/CONDITION_IMPLEMENTATIONS.json",
+  "execution_custody_wrapper": "benchmarks/edu17r1_mention_incidence/run_sealed_conditions.py",
+  "execution_custody_required": true,
+  "execution_receipt_schema": "Venus.EDU17R1SealedExecutionReceipt.v0.1"
 }
