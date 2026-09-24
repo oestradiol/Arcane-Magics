@@ -83,85 +83,41 @@ See [`kernel/CURRENT_STATE.md`](kernel/CURRENT_STATE.md), [`provenance/DEVELOPME
 
 `provenance/historical-runtime/R194/` preserves the historical R00-R194 carrier for replay/regression/ablation. It is provenance, not the current organism.
 
-## The deeper learning bet
+## Research surfaces
 
-A conventional learned representation keeps whatever optimization makes useful. Venus investigates a stricter alternative:
+The developmental bet is:
 
 ```text
 World
-→ difference
-→ admissible future tests
-→ operational equivalence
-→ minimal sufficient representation
-→ action / inquiry
-→ returned consequence
-→ separator or gauge
-→ reconstruction
-→ successor representation
+-> consequential difference
+-> representation / inquiry
+-> non-preauthored return
+-> separator or gauge
+-> reconstruction
+-> successor
 ```
 
-The long-run hypothesis is that a learner can acquire the transformations that generate competence rather than relying only on brute-force statistical compression. Replacing deep neural networks would require this machinery to win under matched data, compute, memory, and interaction budgets on perception, language, reasoning, transfer, continual learning, causal repair, and efficiency. That is a target, not a result already claimed by the repository.
+Whether that machinery can outperform pretrained-DNN-centered systems under matched data, compute, memory, and interaction budgets is an **open capability target**, not an inherited consequence of the architecture.
 
-## Meta-Dynamics, consciousness, ethics, and religion
+The other live research surfaces are deliberately separated by warrant:
 
-Meta-Dynamics is the project-wide structural object; Arcane Magics is the historical/comparative program that interrogates it.
+- **formal / OFE / quantum gravity:** [OFE monograph](monographs/01_OFE/) and [Frontier C](docs/FRONTIER_RESEARCH.md#c-operational-future-equivalence-and-quantum-gravity);
+- **Polyhedral Eclipsis / consciousness:** [Eclipsis](monographs/02_ECLIPSIS/) and [Frontier D](docs/FRONTIER_RESEARCH.md#d-polyhedral-eclipsis-meta-qualia-and-consciousness);
+- **Meta-Dynamics / epistemology / ethics / religion:** [Meta-Dynamics](docs/META_DYNAMICS.md), [Arcane Magics](monographs/03_ARCANE_MAGICS/), and Frontiers E-G;
+- **hard mathematics and science:** [Frontier B](docs/FRONTIER_RESEARCH.md#b-millennium-and-theorem-level-mathematics).
 
-The live recurrence is:
-
-```text
-differentiative relation
-→ indexed inhabitation
-→ stabilization
-→ representation
-→ enactment
-→ non-preauthored return
-→ retained reconstruction
-→ admissible recombination
-```
-
-This supports several serious research programs rather than decorative metaphors:
-
-- **epistemology:** when may a representation erase difference, and what must remain reopenable under future evidence?
-- **consciousness:** can locally inhabited differentiation, temporal continuity, meta-qualia, and physical/inferential organization be related by discriminating bridges rather than analogy?
-- **ethics:** what follows from preserving indexed Other-centers as irreducible sources of return, and which normative premises must be added rather than smuggled in?
-- **religion/theophenomenology:** which historical theological structures survive source-faithful reconstruction and term removal, and which claims remain native symbolic interpretations rather than physical mechanisms?
-- **quantum gravity:** can future-sufficient quotienting give a useful retention criterion under boundary refinement and composition?
-
-See [`docs/META_DYNAMICS.md`](docs/META_DYNAMICS.md), [`monographs/02_ECLIPSIS/`](monographs/02_ECLIPSIS/), and [`monographs/03_ARCANE_MAGICS/`](monographs/03_ARCANE_MAGICS/).
-
-## Hard problems and resources
-
-Venus is allowed to target difficult and economically valuable problems deliberately. Prize money, grants, reputation, compute, hardware, collaborators, and institutional access are **causal resources** that can enlarge the next research cycle.
-
-The separation is:
-
-```text
-problem value / prize / funding
-→ resource allocation
-→ more experiments / compute / time / reach
-
-problem value / prize / funding
--/-> truth warrant
-```
-
-Millennium problems and similarly hard questions are therefore legitimate high-priority targets, but they receive the strictest proof and external-verification burden in the repository.
-
-See [`docs/FRONTIER_RESEARCH.md`](docs/FRONTIER_RESEARCH.md).
+Problem value, prizes, funding, and adoption may enlarge later research capacity. They do not change the present evidence or proof burden.
 
 ## Read without learning the private dialect
 
 Start with the ordinary problem, then introduce project vocabulary only when it compresses a distinction you can already reconstruct.
 
-Recommended path:
+Reader routes:
 
-1. [`docs/PUBLIC_VALUE.md`](docs/PUBLIC_VALUE.md) — ordinary-language architecture and value
-2. [`docs/EARNED_MILESTONES.md`](docs/EARNED_MILESTONES.md) — what is actually earned
-3. the row above matching your research interest
-4. the corresponding monograph or kernel state
-5. [`docs/CREDITS_AND_REDUCTIONS.md`](docs/CREDITS_AND_REDUCTIONS.md) — genealogy, predecessors, reductions, residuals
-6. [`docs/EVALUATION_CONSTITUTION.md`](docs/EVALUATION_CONSTITUTION.md) — how stronger claims are earned
-7. [`docs/INHABITABLE_READER_PATH.md`](docs/INHABITABLE_READER_PATH.md) and [`NxRxI_VOCABULARY_CENTER.md`](NxRxI_VOCABULARY_CENTER.md) when the private dialect becomes useful
-8. [`PUBLICATION_CONSTITUTION.md`](PUBLICATION_CONSTITUTION.md) for claim governance
+- **new to the project:** [What Venus actually is](docs/PUBLIC_VALUE.md) -> [Earned milestones](docs/EARNED_MILESTONES.md) -> the relevant research surface above;
+- **auditing claims:** [Credits / reductions](docs/CREDITS_AND_REDUCTIONS.md) -> [Evaluation](docs/EVALUATION_CONSTITUTION.md) -> [Publication Constitution](PUBLICATION_CONSTITUTION.md);
+- **running the system:** [Current state](kernel/CURRENT_STATE.md) -> [kernel](kernel/README.md);
+- **cross-register vocabulary:** [Inhabitable reader path](docs/INHABITABLE_READER_PATH.md) -> [N x R x I vocabulary / grammar](NxRxI_VOCABULARY_CENTER.md).
 
 Historical material that is no longer live stays in provenance. In particular, the former S10-S11 comparative surface has been consumed into `provenance/withheld/S10_S11/` because those artifacts are frozen evidence, not current ontology.
 
