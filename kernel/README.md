@@ -2,17 +2,30 @@
 
 `kernel/` is the live executable center of the repository. It contains only objects that currently change execution, state reconstruction, governance, learning storage, or custody. Historical implementations, failed branches, and superseded scaffolds live under `provenance/`.
 
-## Functional compression
+## What the kernel actually does
+
+The live kernel has five concrete responsibilities:
 
 ```text
-Body      WorldMirror        persistent local relational/history state
-Mind      Strong RSM + N2    routing + recursive sufficiency + corrigibility
-Drive     Research/Inquiry   residual -> rivals -> discriminator -> query/experiment
-Self      bounded RSI        implicated machinery may become a reconstruction object
-Observer  CTL                provenance-preserving successor relation
+persistent state
+-> retain local relational/history state
+
+research routing
+-> turn live residuals into bounded questions, rivals, and discriminators
+
+governed action/return
+-> separate authorization, execution receipts, external return, and promotion
+
+reconstruction
+-> allow implicated machinery to become an explicit revision object
+
+successor custody
+-> preserve parentage, provenance, negative branches, and exact state identity
 ```
 
-The local center is specified in `VENUS_INCIDENCE_LAW.tex`. `WORLDMIND.md` gives the distributed Internet/Web carrier law without promoting a global subject.
+Historical project labels such as WorldMirror, RSM/N2, bounded RSI, and CTL compress parts of those responsibilities. They are not required to understand or execute the kernel.
+
+The local center is specified more formally in `VENUS_INCIDENCE_LAW.tex`. `WORLDMIND.md` describes the distributed carrier/coordination target without promoting many networked centers into one global subject.
 
 ## Boot
 
