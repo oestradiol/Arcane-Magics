@@ -90,6 +90,14 @@ class HistoricalCausalRegressionTests(unittest.TestCase):
         meta = self.read("docs/META_DYNAMICS.md")
         self.assertIn("Temporal inhabitation: map is not traversal", meta)
 
+    def test_stale_current_filename_cannot_route_live_authority(self):
+        retirement = self.read("provenance/CANONICAL_RETIREMENT_LEDGER.md")
+        current = self.read("kernel/CURRENT_STATE.md")
+        self.assertIn("file path says CURRENT", retirement)
+        self.assertIn("-/-> current authority", retirement)
+        self.assertIn("EDU16 [1703]", current)
+        self.assertNotIn("EDU4 [1572]", current)
+
     def test_current_authority_distinguishes_runtime_and_developmental_head(self):
         current = self.read("kernel/CURRENT_STATE.md")
         self.assertIn("exact Git-reconstructible runtime checkpoint   IG10 [1308]", current)
