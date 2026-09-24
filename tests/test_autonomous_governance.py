@@ -249,6 +249,11 @@ class AutonomousGovernanceTests(unittest.TestCase):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("python -m unittest discover -s tests -p 'test_*.py'", text)
 
+    def test_workflow_has_no_unindented_shell_heredoc(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertNotIn('body="$(cat <<EOF', text)
+        self.assertIn("--body-file /tmp/venus-autonomous-pr-body.md", text)
+
     def test_workflow_runs_safety_tests_before_git_write(self):
         text = WORKFLOW.read_text(encoding="utf-8")
         tests_at = text.index("Verify bounded autonomy safety surface")
