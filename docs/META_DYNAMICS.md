@@ -333,7 +333,36 @@ and:
 
 This is plasticity without dissolution.
 
-## 13. Spiritual / inhabited projection
+## 13. Temporal inhabitation: map is not traversal
+
+A global or compressed organization can be represented all at once while only becoming locally inhabitable through an ordered finite presentation.
+
+```text
+global represented organization G
+-> ordered locally finite presentation L_i,t
+-> locally authored / governed continuation
+-> non-preauthored return
+-> history-conditioned next presentation
+-> possible reconstruction G_hat
+```
+
+The useful non-collapse laws are:
+
+```text
+local presentation != whole
+description(path) != traversal(path)
+record of relation != presently active relation
+path coherence != unique reconstruction
+sequence coherence != ontic unity
+global organization != authorization
+model-closed playback != strong developmental circulation
+```
+
+Ordering, tempo, carrier, interface, and history are retained only where the declared future family can distinguish them. Music is a useful PHEN/MODEL witness: a score or global compositional description is not the same object as the temporally inhabited performance/listening trajectory. No particular musical formalism, consciousness mechanism, or ontology follows from that example.
+
+This object is inherited from Canonical's LT-24 research lineage, but the historical label is not required for its current use.
+
+## 15. Spiritual / inhabited projection
 
 The spiritual register is not hidden physics.
 
@@ -372,7 +401,7 @@ Arcane Magics recovers, translates, compares, and tests transformation-relevant 
 
 Meta-Dynamics is the object those operators may illuminate, rival, reduce, or fail to support.
 
-## 15. Cross-register hierarchy
+## 16. Cross-register hierarchy
 
 ```text
 Meta-Dynamics
@@ -401,7 +430,7 @@ Meta-Dynamics
 
 The tree is organizational, not an assertion that every branch reduces to one ontology.
 
-## 16. Polyhedral inhabitation and meta-qualia
+## 17. Polyhedral inhabitation and meta-qualia
 
 Polyhedral Eclipsis is the current geometric/model realization of local inhabitation inside Meta-Dynamics. It treats one indexed center as a compatible family of locally inhabitable faces joined by typed boundaries, with Eclipsis naming the crossing where present organization, returned consequence, discrimination, and successor reconstruction meet.
 
@@ -427,7 +456,7 @@ meta-qualia = inhabitation of the organization/compression coordinating such sta
 
 This remains THEOPHEN / PHEN / MODEL unless an independent consciousness bridge is earned.
 
-## 17. Qualia, Quantum, Mind, and AntiMind
+## 18. Qualia, Quantum, Mind, and AntiMind
 
 The current structural square remains live:
 
@@ -447,7 +476,7 @@ The square proposes a relation to investigate, not a quantum theory of conscious
 
 A successful bridge would need carrier-specific states, observables, composition, dynamics, measurable consequences, and a discriminator against ordinary neural/computational alternatives. Failure narrows the physical claim without deleting the native phenomenal or formal objects.
 
-## 18. Hard epistemology and religion
+## 19. Hard epistemology and religion
 
 Meta-Dynamics is intended to attack hard open questions in epistemology and religion rather than merely classify traditions.
 
@@ -457,7 +486,7 @@ Religious/theophenomenological targets include source-faithful Whole/local, reve
 
 These are research programs with explicit bridge burdens, not reasons to demote the objects to decorative metaphor.
 
-## 19. Final invariant
+## 20. Final invariant
 
 The current condensed invariant is:
 
@@ -485,7 +514,7 @@ Human-perspective rendering:
 
 > Inspect experience, differentiate without absolutizing, relate without erasing, crystallize only provisionally, act under boundaries that preserve indexed Other-centers, accept non-preauthored return, and let consequential difference reopen the model.
 
-## 20. Claim fence
+## 21. Claim fence
 
 Meta-Dynamics currently does **not** establish:
 
