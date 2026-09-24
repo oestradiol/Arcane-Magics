@@ -21,6 +21,15 @@ for name in ['01_OFE','02_ECLIPSIS','03_ARCANE_MAGICS','04_VENUS']:
         for cls,title in BOX.items():
             body=re.sub(rf'<div class="{re.escape(cls)}">\s*', (f'**{title}.**\n\n' if title else ''), body)
         body=body.replace('</div>','')
+        # GitHub/Forum-safe math normalization. Keep full LaTeX in the monograph;
+        # generated Markdown must stay inside the renderer's supported subset.
+        body=re.sub(r'\\operatorname\{([^{}]+)\}', r'\\mathrm{\1}', body)
+        body=re.sub(r'\\label\{[^{}]+\}', '', body)
+        body=re.sub(
+            r'<a href="#[^"]+" data-reference-type="eqref" data-reference="[^"]+">([^<]*)</a>',
+            r'\1',
+            body,
+        )
         # Keep the forum copy conservative: no project CSS dependency, no raw centering wrappers.
         body=re.sub(r'\n{3,}','\n\n',body).strip()+'\n'
         pre='**Epistemic status:** Discussion draft. Claim strength and register follow the manuscript; project vocabulary may be tabooed and replaced by the ordinary referent without changing the claim. Check equations, citations, and footnotes against the PDF before posting.\n\n'
