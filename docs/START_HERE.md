@@ -16,7 +16,7 @@ object-level unresolved empirical incidence
 
 That is the current measured semantic residual.
 
-Since that WITHHOLD, the repository has admitted two pieces of **infrastructure**, not a new developmental promotion: a state-owned inherited generic residual-search capability and executable Internalizer/O*/Anti-Minerva guards. The positive developmental authority therefore remains EDU16 while the machinery available for the next lawful repair is stronger.
+Since that WITHHOLD, the repository has admitted a state-owned inherited generic residual-search capability and executable Internalizer/O*/Anti-Minerva guards. It has also frozen a bounded learner-side repair candidate, `EDU17R1-RC1-WORD-JACCARD-K3-v1`, with hidden #31 still unexposed. The positive developmental authority remains EDU16 because authorship freeze is not efficacy or promotion.
 
 ## What is current?
 
@@ -131,11 +131,11 @@ A row marked `PLANNED` is not a passing test.
 
 The highest-leverage sequence is now experiment-first:
 
-1. complete #69 by obtaining a **learner-authored, prefrozen EDU17R1 repair/discriminator** without hidden #31 exposure;
-2. only then run the sealed hidden `MENTION != INCIDENCE` A/B/C/D evaluation;
-3. run the first matched Venus-vs-baseline/ablation causal experiment;
-4. test STOP/WITHHOLD and VenusMemory under hidden matched conditions;
-5. exercise O*/Anti-Minerva/rollback across one real Venus-owned successor transition;
+1. run the sealed hidden #31 `MENTION != INCIDENCE` A/B/C/D evaluation on the already frozen learner-authored condition B;
+2. preserve PASS / FAIL / WITHHOLD / SUBSUMED without post-exposure repair;
+3. if causally positive, pass the resulting successor through full #73 O*/Anti-Minerva/rollback checks before any SSR-1 promotion;
+4. run the first matched Venus-vs-baseline/ablation causal experiment;
+5. test STOP/WITHHOLD and VenusMemory under hidden matched conditions;
 6. repeat under adaptive-evaluation controls and compare against mature self-improvement systems;
 7. let failed experiments, not conceptual completeness, decide which archaeology/hardening work is pulled forward.
 
