@@ -22,7 +22,7 @@ class HistoricalCausalRegressionTests(unittest.TestCase):
         self.assertIn("R216 high-level-intent reentry", lineage)
         self.assertIn("No R227 was minted", lineage)
         self.assertIn("R226", lineage)
-        self.assertIn("S / SM", lineage)
+        self.assertIn("S/SM", lineage)
 
     def test_negative_and_nonparent_branches_remain_visible(self):
         lineage = self.read("provenance/DEVELOPMENTAL_LINEAGE.md")
