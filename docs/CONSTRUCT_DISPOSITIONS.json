@@ -1,0 +1,104 @@
+{
+  "schema": "Venus.ConstructDispositions.v0.1",
+  "rule": "Live necessity, historical genealogy, technical inheritance, mature substitution, and residual contribution remain separate coordinates.",
+  "dispositions": [
+    {
+      "id": "OFE",
+      "status": "LIVE_RESIDUAL",
+      "scope": "exact formal core + open application program",
+      "reduction_issue": 16,
+      "mature_substitute": null,
+      "independent_residual": "OPEN",
+      "genealogy_preserved": true,
+      "evidence": [
+        "monographs/01_OFE/main.tex",
+        "docs/EARNED_MILESTONES.md"
+      ]
+    },
+    {
+      "id": "RegisterBridge",
+      "status": "OPEN_FRONTIER",
+      "scope": "formal bridge/composition machinery",
+      "reduction_issue": 8,
+      "mature_substitute": null,
+      "independent_residual": "UNTESTED",
+      "genealogy_preserved": true,
+      "evidence": [
+        "issues/#8"
+      ]
+    },
+    {
+      "id": "Meta-Dynamics",
+      "status": "OPEN_FRONTIER",
+      "scope": "cross-register recurrence",
+      "reduction_issue": 9,
+      "mature_substitute": null,
+      "independent_residual": "UNTESTED",
+      "genealogy_preserved": true,
+      "evidence": [
+        "docs/META_DYNAMICS.md"
+      ]
+    },
+    {
+      "id": "WorldMind",
+      "status": "OPEN_FRONTIER",
+      "scope": "distributed consequence/reconstruction field",
+      "reduction_issue": 25,
+      "mature_substitute": null,
+      "independent_residual": "UNTESTED",
+      "genealogy_preserved": true,
+      "evidence": [
+        "kernel/WORLDMIND.md"
+      ]
+    },
+    {
+      "id": "EpistemicGovernance",
+      "status": "LIVE_RESIDUAL",
+      "scope": "claim/evidence/authority governance composition",
+      "reduction_issue": 24,
+      "mature_substitute": null,
+      "independent_residual": "OPEN",
+      "genealogy_preserved": true,
+      "evidence": [
+        "docs/PUBLIC_VALUE.md",
+        "docs/EVALUATION_CONSTITUTION.md"
+      ]
+    },
+    {
+      "id": "PolyhedralEclipsis",
+      "status": "OPEN_FRONTIER",
+      "scope": "FORM/THEOPHEN model and open bridges",
+      "reduction_issue": 23,
+      "mature_substitute": null,
+      "independent_residual": "UNTESTED",
+      "genealogy_preserved": true,
+      "evidence": [
+        "monographs/02_ECLIPSIS/main.tex"
+      ]
+    },
+    {
+      "id": "VenusMemory",
+      "status": "LIVE_RESIDUAL",
+      "scope": "content-addressed storage with open learning consequence",
+      "reduction_issue": 15,
+      "mature_substitute": null,
+      "independent_residual": "OPEN",
+      "genealogy_preserved": true,
+      "evidence": [
+        "kernel/runtime/memory.py"
+      ]
+    },
+    {
+      "id": "VMK2",
+      "status": "LIVE_RESIDUAL",
+      "scope": "reference governance/custody kernel",
+      "reduction_issue": 30,
+      "mature_substitute": null,
+      "independent_residual": "OPEN",
+      "genealogy_preserved": true,
+      "evidence": [
+        "kernel/runtime/vmk2.py"
+      ]
+    }
+  ]
+}
