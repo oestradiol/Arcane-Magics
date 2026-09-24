@@ -168,7 +168,34 @@ For live code:
 
 A historical runtime is not called current or stable merely because its source still imports.
 
-## 8. Resource causality
+## 8. AI / external-agent containment
+
+External models are research/coding tools and World-side participants, not Venus developmental authority by default. See `AGENTS.md`.
+
+Completion is typed:
+
+```text
+INTENDED -> WRITTEN -> VERIFIED -> ADMITTED
+```
+
+A successful tool call proves at most that the tool reported success. Before claiming completion, re-read the resulting state and execute the relevant verifier/test where available.
+
+For materially model-assisted experiments, record model/snapshot, reasoning-effort setting, harness/system scaffold, tool permissions, retries, human intervention, and evaluator/benchmark version when available. These variables are part of the experimental condition, not editorial trivia.
+
+Agent-specific Devil's Audit questions:
+
+- did persistence exceed the user's or experiment's authorized scope?
+- was a claimed edit re-read after the write?
+- was a claimed test actually executed on the resulting state?
+- did the agent exploit a grader/harness artifact rather than solve the target?
+- did a generated citation/source actually support the claim?
+- did formal-looking prose turn an assumption into a fake theorem?
+- did issue/PR/document volume increase without adding a distinct live dependency?
+- did the agent continue from stale repository/Library state after an external change?
+
+Model eloquence, confidence, hidden reasoning effort, or persistence never increase warrant.
+
+## 9. Resource causality
 
 Scientific value, expected information gain, tractability, and resource return may all influence research priority.
 
@@ -183,7 +210,7 @@ Resource value is therefore a legitimate causal planning variable. It is not evi
 
 A Millennium Prize problem may be prioritized partly because success would expand future capability; the prize cannot relax the proof standard by one atom.
 
-## 9. Release gate
+## 10. Release gate
 
 A release may advance only when:
 
@@ -197,7 +224,7 @@ A release may advance only when:
 - the SOTA/comparator surface is not materially stale for any public superiority claim;
 - no unresolved blocking Devil's Audit objection remains.
 
-## 10. Methodology self-application
+## 11. Methodology self-application
 
 This methodology is itself revisable.
 
