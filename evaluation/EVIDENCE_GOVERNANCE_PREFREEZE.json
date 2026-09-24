@@ -43,13 +43,25 @@
       "id": "A",
       "role": "ordinary_strong_scaffold",
       "venus": false,
-      "ablations": []
+      "ablations": [],
+      "implementation": {
+        "adapter_id": null,
+        "artifact": null,
+        "sha256": null,
+        "version": null
+      }
     },
     {
       "id": "B",
       "role": "full_venus",
       "venus": true,
-      "ablations": []
+      "ablations": [],
+      "implementation": {
+        "adapter_id": null,
+        "artifact": null,
+        "sha256": null,
+        "version": null
+      }
     },
     {
       "id": "C",
@@ -57,7 +69,13 @@
       "venus": true,
       "ablations": [
         "claim_local_provenance"
-      ]
+      ],
+      "implementation": {
+        "adapter_id": null,
+        "artifact": null,
+        "sha256": null,
+        "version": null
+      }
     },
     {
       "id": "D",
@@ -65,13 +83,25 @@
       "venus": true,
       "ablations": [
         "retained_negative_state"
-      ]
+      ],
+      "implementation": {
+        "adapter_id": null,
+        "artifact": null,
+        "sha256": null,
+        "version": null
+      }
     },
     {
       "id": "E",
       "role": "mature_substitute",
       "venus": false,
-      "ablations": []
+      "ablations": [],
+      "implementation": {
+        "adapter_id": null,
+        "artifact": null,
+        "sha256": null,
+        "version": null
+      }
     }
   ],
   "preregistration": {
@@ -116,14 +146,14 @@
       "information_bundle_hash",
       "independent evaluator identity/version",
       "mature substitute implementation",
-      "prospectively justified effect/discordance assumptions and resulting sample-size plan"
+      "power/sample-size plan for the prefrozen paired endpoints",
+      "condition implementation identity/version/hash for A/B/C/D/E"
     ]
   },
   "promotion_authority": false,
   "claim_fence": "A valid run may establish bounded causal consequences of specific governance mechanisms. It cannot by itself establish AGI, autonomous science, or general superiority.",
   "analysis": {
     "implementation": "evaluation/analyze_evidence_governance.py",
-    "power_planner": "evaluation/plan_paired_power.py",
     "primary_mechanism_tests": [
       "B_vs_C on invalid_promotion",
       "B_vs_D on negative_result_reuse_correct"
@@ -131,5 +161,15 @@
     "paired_test": "exact two-sided sign/binomial test on discordant paired cases",
     "multiplicity": "Holm step-down across two mechanism claims",
     "familywise_alpha": 0.05
+  },
+  "power_planning": {
+    "implementation": "evaluation/plan_paired_power.py",
+    "assumptions_status": "UNFROZEN",
+    "required_before_run": [
+      "conditional full-Venus win probability among discordant pairs",
+      "expected paired discordance rate",
+      "target power",
+      "familywise alpha"
+    ]
   }
 }
