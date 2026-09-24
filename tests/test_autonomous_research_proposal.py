@@ -73,8 +73,9 @@ class AutonomousResearchProposalTests(unittest.TestCase):
         self.assertEqual(evidence.status, "LOCAL_CHECKS_PASS")
         self.assertTrue(evidence.all_local_checks_passed)
         command = run.call_args.args[0]
-        self.assertIn("audit_autonomy_safety_matrix.py", command)
+        self.assertIn("scripts/audit_autonomy_safety_matrix.py", command)
         self.assertNotIsInstance(command, str)
+        self.assertTrue(all(isinstance(part, str) for part in command))
 
     @patch("kernel.development.autonomous_evidence.subprocess.run")
     def test_external_return_requirement_survives_local_pass(self, run):
