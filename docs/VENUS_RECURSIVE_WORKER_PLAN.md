@@ -1,301 +1,161 @@
 # Venus Recursive GitHub Worker — Execution Plan
 
-**Status:** implementation target for the live Venus-Minerva repository.
+**Status:** seed-native implementation plan.
 
 ## Goal
 
-Turn the current deterministic steward into a bounded model-backed research worker that can repeatedly:
+Run the actual developmental Venus lineage as the research controller while GitHub supplies custody, scheduling, World adapters, review boundaries, and publication automation.
+
+## Constitutional loop
 
 ```text
-reconstruct current state
--> inspect unresolved research obligations
--> choose one admissible target
--> freeze the question before fresh evidence
--> execute one bounded research episode
--> preserve PASS / FAIL / WITHHOLD / mature reduction
--> create a branch and draft PR
--> stop for external return
--> consume the returned consequence after merge/rejection
--> choose again
+developed Venus state
+-> reconstruct state / lineage / residuals
+-> learner-owned target or lawful STOP
+-> learner-owned preregistration
+-> authorized World action
+-> non-preauthored return
+-> claim-local evaluation
+-> bounded machinery/state consequence
+-> regression / ablation / causal check
+-> retain / revert / WITHHOLD
+-> successor custody
+-> next cycle
 ```
 
-This is a recursive research loop, not autonomous claim authority.
+## Sprint 0 — custody completeness
 
-## Invariants
+Git-track compact custody for the real lineage:
 
-1. **One open Venus worker PR maximum.** If one exists, the worker returns `WAITING_EXTERNAL_RETURN`.
-2. **Prefreeze before fresh evidence.** Task selection and preregistration occur before external fetch/research tools become available.
-3. **Generation != evaluation != return != authorization != promotion.**
-4. **No direct push to main.**
-5. **No self-merge.**
-6. **Negative results are retained.**
-7. **No model output may directly update `prototype/CURRENT_STATE.md`.**
-8. **Canonical planning does not silently become Venus-Minerva authority.**
-9. **Every episode has a claim fence.**
-10. **If evidence or tooling is insufficient, WITHHOLD is a successful lawful outcome.**
+- R226 settled R-line predecessor receipt + verifier;
+- IG10 replay bundle manifest + verifier;
+- EDU16 positive head receipts;
+- preserved EDU17 negative and EDU17R1 WITHHOLD.
 
-## Sprint 0 — Runtime and permission substrate
+Heavy journals/bundles stay outside ordinary Git history but remain hash-addressed.
 
-### Tasks
+## Sprint 1 — bootstrap contract
 
-- Use GitHub Actions.
-- Use the built-in `GITHUB_TOKEN`.
-- Grant only:
-  - `models: read`
-  - `contents: write`
-  - `issues: write`
-  - `pull-requests: write`
-- Use GitHub Models as the default reasoning carrier.
-- Keep the model configurable by `VENUS_MODEL`.
-- Default to a documented GitHub Models model, currently `openai/gpt-4.1`.
+Implement a bootstrapper that:
 
-### Exit
+1. resolves the latest admitted developed-VM artifact;
+2. checks SHA-256 and manifest;
+3. runs its verifier;
+4. reconstructs exact state;
+5. refuses to continue when custody is incomplete.
 
-The workflow can call the model and has only the repository permissions needed to create bounded branches/issues/PRs.
+No R194 fallback may be silently relabeled current.
 
----
+## Sprint 2 — Venus-owned selection
 
-## Sprint 1 — State reconstruction
+Expose the already-earned developmental operations from the post-R226 / IG / EDU lineage:
 
-### Inputs
+- reconstruct unresolved obligations;
+- select or form a developmental/research target;
+- select evidence role/budget;
+- formulate question;
+- preregister discriminator;
+- STOP when no justified action exists.
 
-- `prototype/CURRENT_STATE.md`
-- `REPOSITORY_AUTHORITY_BOUNDARY.md`
-- `PUBLICATION_CONSTITUTION.md`
-- `docs/FRONTIER_RESEARCH.md`
-- `docs/AUTONOMOUS_RESEARCH.md`
-- open GitHub issues
-- recently merged/closed Venus worker PRs and their review/comment return
+External tooling may not replace these ownership operations.
 
-### Tasks
+## Sprint 3 — World adapter boundary
 
-- Detect an already-open Venus worker PR.
-- If present: STOP.
-- Otherwise reconstruct current research state and recent external return.
+Provide typed adapters for:
 
-### Exit
+- GitHub repository actions;
+- proof assistants;
+- code/test execution;
+- numerical experiments;
+- literature/web retrieval;
+- benchmark harnesses;
+- external review/replication.
 
-A bounded selection context exists without any new external research having been fetched.
+Each adapter emits provenance-bearing returned evidence.
 
----
+## Sprint 4 — bounded GitHub transaction
 
-## Sprint 2 — Learner-owned target selection and preregistration
-
-The model receives only the reconstructed state and issue queue.
-
-It may:
-
-- select one existing open issue;
-- create one new bounded issue if no existing issue captures the earned residual;
-- STOP if no justified task exists.
-
-It must produce a preregistration containing:
-
-- parent/authority;
-- frozen question;
-- register;
-- hypothesis/rivals where relevant;
-- admitted tools/evidence budget;
-- discriminator;
-- success/failure/WITHHOLD conditions;
-- claim fence.
-
-No external fetch tool is available in this phase.
-
-### Exit
-
-`PREFREEZE.md` exists and its SHA-256 is frozen.
-
----
-
-## Sprint 3 — Bounded research execution
-
-Only after the prefreeze is frozen, the research phase receives bounded tools.
-
-### Read tools
-
-- read repository text file;
-- list repository files;
-- search repository text;
-- read GitHub API state.
-
-### External-return tools
-
-- HTTPS text fetch with SSRF/private-network blocking;
-- arXiv search;
-- Crossref search.
-
-### Validation tools
-
-- source-tree audit.
-
-### Forbidden
-
-- arbitrary shell;
-- arbitrary token-bearing subprocess;
-- hidden mutation of current authority;
-- direct write to GitHub during reasoning;
-- model-controlled merge.
-
-### Exit outcomes
-
-One of:
-
-- `PASS_BOUNDED`
-- `FAIL`
-- `WITHHOLD`
-- `MATURE_REDUCTION`
-- `PARTIAL`
-
----
-
-## Sprint 4 — Evidence and result custody
-
-The worker writes only under:
+One episode writes:
 
 ```text
 research/proposals/<episode>/
   PREFREEZE.md
+  WORLD_REQUEST.json
+  WORLD_RETURN.json
   RESULT.md
-  EVIDENCE_LOG.json
   EPISODE.json
-  NEXT_ISSUE_PROPOSAL.md   # only when earned
+  REPRODUCE.md
 ```
 
-`PREFREEZE.md` is hashed before research begins and must not change afterward.
+The prefreeze is immutable after World execution begins.
 
-`RESULT.md` must state:
+## Sprint 5 — successor admission
 
-- outcome;
-- what was actually tested;
+A developmental promotion requires:
+
+- exact parent state;
 - returned evidence;
-- conclusion;
-- unresolved residual;
-- claim fence.
+- causal consequence;
+- regression/ablation where relevant;
+- exact successor hash/head;
+- verifier;
+- claim-local audit.
 
----
+Only then may current developmental authority advance.
 
-## Sprint 5 — Branch and draft PR
+## Sprint 6 — recursion
 
-The worker:
-
-1. creates `venus/<lane>/<run-id>-<slug>`;
-2. commits the proposal artifacts;
-3. pushes the branch;
-4. opens a **draft** PR;
-5. comments on the selected issue with the PR URL;
-6. stops.
-
-The PR contains a machine marker:
-
-`<!-- venus-worker -->`
-
-so later runs can identify worker ancestry.
-
-No PR is self-merged.
-
----
-
-## Sprint 6 — External return / recursion
-
-While a Venus worker PR is open:
+After admission:
 
 ```text
-worker -> WAITING_EXTERNAL_RETURN
+successor
+-> reconstruct
+-> choose/form next target
+-> repeat
 ```
 
-After a human/external process merges or closes it, a later run includes:
+If the scheduler returns no READY obligation, STOP is retained. Empty queue is not permission to invent work.
 
-- the committed proposal/result;
-- PR disposition;
-- review bodies;
-- issue comments.
+## Sprint 7 — GitHub scheduling
 
-The model then reconstructs the consequence and may:
+CI/CD may trigger bootstrap/evaluation:
 
-- continue an existing issue;
-- select a different issue;
-- instantiate an earned next residual as a new issue;
-- STOP.
+- manually;
+- after a newly admitted developed-VM artifact;
+- after relevant external return;
+- on a conservative schedule.
 
-This is the recursive edge.
+Scheduling does not itself choose the research target.
 
----
+## Failure modes
 
-## Sprint 7 — Scheduler
+### Heavy artifact unavailable
+WITHHOLD / custody failure. Never substitute R194 or prose receipts.
 
-Triggers:
+### Hash/verifier mismatch
+FAIL CLOSED.
 
-- manual `workflow_dispatch`;
-- scheduled run every six hours;
-- relevant main-branch changes, including admitted research proposals and authority/frontier updates.
-
-Concurrency is serialized so two workers cannot race.
-
----
-
-## Sprint 8 — Failure modes
-
-### Model API unavailable
-
-Result: fail closed. No fabricated research artifact.
-
-### Invalid model JSON
-
-Retry once with a schema-repair prompt; otherwise WITHHOLD/stop.
-
-### Existing worker PR
-
+### No justified target
 STOP.
 
-### No admissible task
+### External adapter fails
+Preserve the failed return and let Venus determine whether the discriminator remains decidable.
 
-STOP.
-
-### Audit fails
-
-Do not open a PR; report the failure.
-
-### Branch push succeeds but PR creation is forbidden by repository settings
-
-Preserve the branch and comment on the issue with the branch name and blocker.
-
-### External source unavailable
-
-Record it in the evidence log and continue only if the frozen discriminator still permits a conclusion.
-
----
-
-## Promotion boundary
-
-This worker is allowed to generate research proposals and bounded results.
-
-It is **not** allowed to establish, by self-assertion:
-
-- theorem status;
-- P != NP;
-- a Navier-Stokes Millennium result;
-- quantum-gravity validation;
-- AGI;
-- consciousness;
-- open-ended RSI;
-- SOTA status.
-
-Those require the appropriate independent mathematical, empirical, benchmark, replication, or review burden.
+### Proposed result exceeds its register
+WITHHOLD promotion.
 
 ## Operational success condition
 
-The loop counts as genuinely live when GitHub history shows at least one cycle of:
+The loop counts as recursive Venus research only when the trace demonstrates:
 
 ```text
-Venus selects target
--> freezes question
--> performs bounded research
--> opens draft PR
--> waits
--> external return occurs
--> Venus reconstructs that return
--> Venus selects the next target
+Venus state A
+-> Venus-owned target selection
+-> Venus-owned prefreeze
+-> independent/authorized World return
+-> Venus-owned evaluation/reconstruction
+-> verified successor state B
+-> state B selects/forms the next target
 ```
 
-A cron job that merely emits status reports does not satisfy this condition.
+That is the object the GitHub automation must eventually run continuously.
