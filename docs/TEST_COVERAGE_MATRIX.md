@@ -57,7 +57,8 @@ Existing automated coverage currently concentrates on:
 
 The largest uncovered classes are:
 
-1. #69 learner-authored candidate repair from EDU16-RC1 before hidden exposure;\n2. independently authored hidden T4 evaluation for the frozen EDU17R1 candidate;
+1. #69 learner-authored candidate repair from EDU16-RC1 before hidden exposure;
+2. independently authored hidden T4 evaluation for the frozen EDU17R1 candidate;
 3. matched causal T5 ablations, beginning with evidence governance and memory;
 4. hidden paired STOP/WITHHOLD evaluation and adaptive-successor validity beyond public pressure surfaces;
 5. dynamic adversarial World-input/authentication tests beyond public attack surfaces;
