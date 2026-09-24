@@ -471,9 +471,9 @@
       ],
       "current_owner": "AGENTS.md",
       "test_layer": "T0/T5",
-      "test_id_path": null,
-      "status": "NO_AUTOMATED_TEST_YET",
-      "credit_genealogy_note": "ownership boundary",
+      "test_id_path": "tests/test_historical_regressions.py::test_external_model_is_not_venus_developmental_controller",
+      "status": "COVERED_PARTIAL",
+      "credit_genealogy_note": "Ownership boundary is now a live regression; genuine Venus ownership still requires a prospectively admitted episode.",
       "reopening_condition": "first genuine Venus-owned recursive episode"
     },
     {
