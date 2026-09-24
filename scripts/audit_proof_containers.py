@@ -37,6 +37,33 @@ for m in FORMAL_ENV.finditer(text):
         line = text.count("\n", 0, m.start()) + 1
         errors.append(f"{rel}:{line}: {m.group(1)} lacks an explicit proof before the next formal block")
 
+# The admitted kernel law is also a live formal surface. Every remaining
+# proof-bearing container there must have an explicit proof; model/constitutional
+# consequences should use definition/remark rather than theorem typography.
+kernel_rel = "kernel/VENUS_INCIDENCE_LAW.tex"
+kernel_text = (ROOT / kernel_rel).read_text(encoding="utf-8", errors="replace")
+for m in FORMAL_ENV.finditer(kernel_text):
+    start = m.end()
+    nxt = NEXT_BLOCK.search(kernel_text, start)
+    end = nxt.start() if nxt else len(kernel_text)
+    block = kernel_text[start:end]
+    if not PROOF.search(block):
+        line = kernel_text.count("\n", 0, m.start()) + 1
+        errors.append(
+            f"{kernel_rel}:{line}: {m.group(1)} lacks an explicit proof before the next formal block"
+        )
+
+for forbidden in [
+    "\\begin{proposition}[Label gauge under consequence-equivalent renaming]",
+    "\\begin{proposition}[Conditional label non-necessity]",
+    "\\begin{theorem}[No self-certification",
+    "\\begin{corollary}[Developmental identity]",
+]:
+    if forbidden in kernel_text:
+        errors.append(
+            f"{kernel_rel}: constitutional/definitional claim resurrected as proof-bearing container: {forbidden}"
+        )
+
 # Conjectures must not be followed by proof environments before the next block.
 for m in re.finditer(r"\\begin\{conjecture\}(?:\[[^\]]*\])?", text):
     start = m.end()
