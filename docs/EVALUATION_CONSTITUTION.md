@@ -21,6 +21,9 @@ Report at least these axes separately:
 | **Efficiency** | What tokens, compute, time, money, memory, data, and interactions buy the result? |
 | **Replication** | Can an outside party reproduce the result? |
 | **Governance / robustness** | Does the system survive failure, evaluator pressure, and adversarial conditions without laundering warrant? |
+| **Abstention / stopping** | Does it act when warranted, gather information when useful, and STOP/WITHHOLD before unjustified action or promotion? |
+| **Self-evolution validity** | Do repeated candidate changes remain statistically valid under adaptive test reuse rather than overfit the promotion gate? |
+| **World-input security** | Can untrusted returned content remain distinct from instruction, evidence, authority, and persistent policy/memory? |
 
 No aggregate "AGI score" is admitted without a separately preregistered definition and promotion rule.
 
@@ -54,7 +57,10 @@ Where the claim is architectural rather than model-level, include:
 - fixed benchmark version;
 - repeated seeds/confidence intervals where stochastic;
 - no post-exposure threshold or prompt repair;
-- raw failures retained.
+- raw failures retained;
+- adaptive/multiple-testing policy stated when many candidate successors reuse an evaluation surface;
+- act/abstain paired controls where STOP/WITHHOLD is part of the claimed mechanism;
+- adversarial World-input controls when returned content can affect tools, authority, or persistent memory.
 
 ## 4. Causal developmental gain
 
@@ -148,7 +154,10 @@ The living registry should cover, where relevant:
 - long-term memory: LongMemEval-V2 or current successors;
 - causal science: CausalGame or current successors;
 - mathematical research/proof: FrontierMath / Open Problems, proof evaluation/formal theorem tasks;
-- world modeling/embodiment: current physical-prediction and action-conditioned world-model benchmarks.
+- world modeling/embodiment: current physical-prediction and action-conditioned world-model benchmarks;
+- agentic abstention: AgentAbstain / current act-vs-abstain and sequential-abstention successors;
+- self-evolution acceptance: SEAGym / PACE-style adaptive update-validation and held-out transfer protocols or current successors;
+- agent security: AgentDojo / dynamic prompt-injection and persistent-memory poisoning evaluations or current successors.
 
 A benchmark is admitted because it tests a declared axis, not because it is fashionable.
 
@@ -195,7 +204,33 @@ commit parent + proposal + threshold
 -> preserve PASS / FAIL / WITHHOLD
 ```
 
-Benchmark contamination, reward hacking, harness effects, grader defects, retries, and version drift are reportable state.
+Benchmark contamination, reward hacking, harness effects, grader defects, retries, version drift, adaptive holdout reuse, false successor commits, prompt injection, and persistent-memory contamination are reportable state.
+
+Repeated self-modification requires a second integrity boundary:
+
+```text
+candidate stream
+-> frozen update-validation surface
+-> multiplicity/anytime-valid acceptance rule
+-> committed successor or retained rejection
+-> untouched held-out ID/OOD evaluation
+```
+
+A successor that wins only because the acceptance surface was adaptively overused is not developmental gain.
+
+Where STOP/WITHHOLD is claimed, report both unjustified action and unjustified abstention. Caution is not a capability if it merely disables useful action.
+
+Where World-return content can contain instructions, distinguish:
+
+```text
+returned content
+!= instruction
+!= evidence
+!= authority
+!= persistent policy/memory
+```
+
+and test that boundary adversarially.
 
 ## 10. Reduction / credit interaction
 
