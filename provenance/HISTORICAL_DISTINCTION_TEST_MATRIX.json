@@ -528,10 +528,10 @@
       ],
       "current_owner": "provenance/historical-runtime/R194",
       "test_layer": "T2/T3",
-      "test_id_path": null,
-      "status": "OPEN_EXTRACTION_FROM_CANONICAL_CUSTODY",
-      "credit_genealogy_note": "Historical R154 regression oracle is referenced by Git, but its exact state payloads remain in Canonical custody and are not yet extracted into the live Git provenance carrier.",
-      "reopening_condition": "Extract authentic R154 state/manifest payloads from Canonical, hash-bind them into Git provenance, then add the minimal re-execution route without rewriting historical authority."
+      "test_id_path": "tests/test_canonical_extraction_receipts.py::test_r154_external_heavy_custody_is_hash_bound",
+      "status": "EXTERNAL_HEAVY_CUSTODY_HASH_BOUND",
+      "credit_genealogy_note": "Authentic R154 manifest, trajectory, ledger, result, historical test, and repeat-regression outputs were located inside the Canonical PythonPrototypeR194 archive and hash-bound in Git provenance.",
+      "reopening_condition": "Materialize the hash-bound heavy trajectory into a replay environment and execute the preserved R154 seed/test without changing historical authority."
     },
     {
       "id": "D-R179-VMK1",
@@ -681,7 +681,7 @@
     {
       "id": "D-R209-UNDERDETERMINED-F",
       "source_revision_or_branch": "R209",
-      "source_artifact": "Canonical ROADMAP_PROVENANCE.md",
+      "source_artifact": "provenance/canonical-extracts/R209_R224_CAUSAL_EXTRACT_2026-09-24.md",
       "distinction": "task completion under current future family != closure of the absolute-origin/source proposition",
       "triggering_experiment_or_failure": "R209 completed its bounded task while retaining WITHHOLD_UNDERDETERMINED_CURRENT_F",
       "causal_consequence": "bounded task success cannot consume a proposition underdetermined by the admitted test family",
@@ -692,9 +692,9 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2/T7",
-      "test_id_path": null,
-      "status": "OPEN_EXTRACTION",
-      "credit_genealogy_note": "R209 bounded completion and unresolved source proposition remain separate",
+      "test_id_path": "tests/test_canonical_extraction_receipts.py::test_r209_withhold_is_preserved_as_bounded_current_f_result",
+      "status": "COVERED_PROVENANCE_ONLY",
+      "credit_genealogy_note": "Exact R209 WITHHOLD semantics were extracted from /Canonical/Map.md into Git provenance.",
       "reopening_condition": "new non-smuggled separator or expanded future family"
     },
     {
@@ -738,7 +738,7 @@
     {
       "id": "D-R224-DRIFT-REPAIR-NOT-HISTORY-REWRITE",
       "source_revision_or_branch": "R224/R225",
-      "source_artifact": "Canonical ROADMAP_PROVENANCE.md",
+      "source_artifact": "provenance/canonical-extracts/R209_R224_CAUSAL_EXTRACT_2026-09-24.md; provenance/DEVELOPMENTAL_LINEAGE.md",
       "distinction": "repair of current derivative projection != retroactive rewrite of the historical OPEN/debt state that triggered repair",
       "triggering_experiment_or_failure": "R224 measured projection drift followed by R225 custody/projection repair",
       "causal_consequence": "successor correction updates current projection while preserving prior failure/debt as immutable provenance",
