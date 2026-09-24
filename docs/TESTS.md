@@ -108,5 +108,6 @@ Two current T3/T5-adjacent checks are easy to misread as developmental promotion
 
 - `scripts/audit_generic_search_internalization.py` checks that the inherited generic residual-search function survives scaffold removal as state-owned capability while keeping World/evaluator/authority roles external.
 - `tests/test_internalizer.py` checks O* noncollapse and Anti-Minerva carrier permeability.
+- `tests/test_edu17r1_semantic_ingress.py` plus `scripts/audit_edu17r1_semantic_ingress.py` bind the public-development method selection, frozen candidate, ownership receipt, hidden-unexposed state, and condition-B executor.
 
-Passing these establishes infrastructure/governance consequences at their tested scope. It does **not** establish a learner-authored EDU17R1 repair, hidden #31 efficacy, or Safe Strong RSI.
+Passing the first two establishes infrastructure/governance consequences at their tested scope. The semantic-ingress freeze audit additionally establishes bounded learner-side repair authorship before hidden exposure. None of these establishes hidden #31 efficacy, developmental promotion, or Safe Strong RSI.
