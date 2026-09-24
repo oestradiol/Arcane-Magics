@@ -318,5 +318,34 @@ class AutonomousWorkerTests(unittest.TestCase):
         )
 
 
+    def test_learning_strategy_changes_method_choice_on_matched_target(self):
+        item = WorkItem(
+            "ISSUE",
+            72,
+            "meta-learning target",
+            body=(
+                "return receipt evaluator prefreeze withhold stop reopen "
+                "return receipt evaluator prefreeze"
+            ),
+        )
+        utility = {
+            "COMPARATOR_AUDIT": 1.0,
+            "RETURN_BOUNDARY_AUDIT": 0.9,
+        }
+        utility_first = choose_study_method(
+            item,
+            utility,
+            "RETURN_UTILITY_FIRST",
+        )
+        signal_first = choose_study_method(
+            item,
+            utility,
+            "TARGET_SIGNAL_FIRST",
+        )
+        self.assertEqual(utility_first, "COMPARATOR_AUDIT")
+        self.assertEqual(signal_first, "RETURN_BOUNDARY_AUDIT")
+        self.assertNotEqual(utility_first, signal_first)
+
+
 if __name__ == "__main__":
     unittest.main()
