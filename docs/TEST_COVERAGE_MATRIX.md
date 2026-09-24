@@ -4,14 +4,14 @@ This is the planning/control surface for issue #35. It maps each current open is
 
 | Issue | Layer | Obligation | Current/Planned Test | Promotion condition |
 |---:|---|---|---|---|
-| #4 | T0/T2 | custody/replay | tests + custody audit | Recover exact EDU16 carrier or preserve non-replay boundary |
+| #4 | T0/T2 | custody/replay | machine-typed exact-evidence/non-replay boundary + custody audits | Recover exact EDU16 carrier or preserve non-replay boundary |
 | #5 | T7/T6 | formal frontier | NO_AUTOMATED_TEST_YET | Instantiate non-tautological I and mature-formalism translation |
 | #6 | T7 | formal verification | planned Lean/equivalent | Machine-check OFE separating/composition core |
 | #7 | T8/T7 | freshness + formal reconstruction | watch + proof reconstruction | Reconcile Sept 2026 NS state and independently reconstruct |
 | #8 | T7 | mature substitution | NO_AUTOMATED_TEST_YET | RegisterBridge substitution against mature formalisms |
 | #9 | T7/T6 | cross-register invariant | NO_AUTOMATED_TEST_YET | Find consequence-relevant residual or reduce |
 | #10 | T5 | matched causal ablation | planned harness | Run Venus vs ablations vs mature substitute |
-| #11 | T8 | freshness watch | planned CI watch | Per-entry freshness + reconciliation |
+| #11 | T8 | freshness watch | machine-readable freshness state + CI decay audit; source-change detection still open | Per-entry freshness + reconciliation |
 | #12 | T5/T6 | self-improvement benchmark | planned external benchmark | Persistent improvement vs mature systems |
 | #13 | T6 | autonomous science | planned benchmark | End-to-end hidden research episodes |
 | #14 | T6 | agency | planned benchmark | External capability battery |
@@ -30,13 +30,13 @@ This is the planning/control surface for issue #35. It maps each current open is
 | #27 | T6/T9 | theophenomenology | planned held-out human/expert eval | Cross-tradition prediction + hostile reading |
 | #28 | T9 | public interface | human reconstruction | Blind outsider reconstruction |
 | #29 | T0/T2 | Canonical retirement | coverage audit | Every causal distinction typed/tested/dispositioned |
-| #30 | T3 | VMK2 trust | planned adversarial tests | Characterize trust boundary under hostile inputs |
-| #31 | T4/T5 | semantic discriminator | planned hidden benchmark | Prospective MENTION != INCIDENCE transfer |
-| #32 | T0/T7 | construct disposition | NO_AUTOMATED_TEST_YET | Repository-wide mature-substitution outcomes |
-| #33 | T7 | formal hygiene | planned naming/audit test | Separate theorem structure from proof verification |
+| #30 | T3 | VMK2 trust | mutable-state/root-drift adversarial tests + trust-boundary doc; external authentication still open | Characterize trust boundary under hostile inputs |
+| #31 | T4/T5 | semantic discriminator | public dev benchmark + lexical baseline + CI traps; hidden split/run still open | Prospective MENTION != INCIDENCE transfer |
+| #32 | T0/T7 | construct disposition | typed construct-disposition state + CI validator; substitution evidence still open | Repository-wide mature-substitution outcomes |
+| #33 | T7 | formal hygiene | proof-container target renamed/clarified in Makefile+CI; machine proof remains #6 | Separate theorem structure from proof verification |
 | #34 | T5/T9 | product/infrastructure | planned integration/comparator test | Standalone governance package |
-| #35 | T0-T9 | test archaeology | this matrix + causal audit | Every issue and historical distinction has owner |
-| #36 | T9 | UX/navigation | planned automated + human tests | Two-hop authoritative reader paths |
+| #35 | T0-T9 | test archaeology | historical registry + semantic regressions + causal audit; deep extraction ongoing | Every issue and historical distinction has owner |
+| #36 | T9 | UX/navigation | START_HERE/TESTS/REPRODUCE/ROADMAP hubs + navigation CI; blind human study open | Two-hop authoritative reader paths |
 | #37 | T9 | roadmap/orchestration | roadmap consistency | Dependency-ordered execution remains complete |
 
 ## Interpretation
