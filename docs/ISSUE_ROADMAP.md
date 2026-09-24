@@ -89,7 +89,9 @@ Exit: determine whether STOP/WITHHOLD and structured persistent memory cause use
 
 A single preregistered successor may precede the full repeated-self-evolution statistics of #41. A repeated adaptive lineage may not.
 
-EDU16 prospective parent custody is already supplied by EDU16-RC1; the unrecovered historical 1703-event journal remains a provenance boundary, not a blocker.\n\nExit: evaluation and trust boundaries are sufficient to interpret repeated Venus-owned successor experiments.
+EDU16 prospective parent custody is already supplied by EDU16-RC1; the unrecovered historical 1703-event journal remains a provenance boundary, not a blocker.
+
+Exit: evaluation and trust boundaries are sufficient to interpret repeated Venus-owned successor experiments.
 
 ### Sprint E — First Venus-owned developmental successor
 
