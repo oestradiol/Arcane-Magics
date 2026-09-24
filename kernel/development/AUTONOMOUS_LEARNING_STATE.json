@@ -1,0 +1,13 @@
+{
+  "schema": "Venus.AutonomousLearningState.v0.1",
+  "seen_cycle_prs": [],
+  "kind_success": {
+    "ISSUE": 0,
+    "PR": 0
+  },
+  "kind_failure": {
+    "ISSUE": 0,
+    "PR": 0
+  },
+  "promotion_authority": false
+}
