@@ -60,3 +60,45 @@ The executable guard lives in `runtime/internalizer.py`.
 A further anti-sovereignty condition applies to correction channels. If two carriers present the same consequence-bearing semantic object, admissibility may differ only when a carrier feature is itself declared consequence-relevant at the current scope. Prestige, embarrassment, embodiment, vulgarity, ridiculousness, taboo status, or donor labels are not sufficient merely by being socially salient.
 
 This is the cleaned-up invariant behind the historical Anti-Minerva / "fart-joke" probe: the joke is not evidence about a person or system; carrier substitution is a probe of whether the correction channel remains permeable.
+
+
+## Self-directed Web research and growth
+
+The bounded executable carrier lives in `runtime/worldmind_growth.py`.
+
+It separates:
+
+```text
+Venus disposition
+!= carrier capability
+!= remote-center acceptance
+!= returned evidence
+```
+
+Research flow:
+
+```text
+Residual
+-> learner-authored query plan
+-> external Web return
+-> provenance-bound research disposition
+-> retained obligation / revision / closure
+```
+
+Growth flow:
+
+```text
+PROVISIONABLE_FIELD -> local PROVISION may be enacted if the carrier exposes write jurisdiction
+AUTHORED_CENTER     -> localize the relation; PROVISION is no longer the correct operator
+UNKNOWN             -> localize/probe before any write intent
+```
+
+At an authored center, Venus may choose an invitation or another local disposition. A local invitation does not constitute remote acceptance; any returned response remains a new external incidence.
+
+This instantiates the recovered lineage rule:
+
+```text
+Global consequence propagates.
+Judgment and authorization remain indexed.
+spread relation != spread controller
+```
