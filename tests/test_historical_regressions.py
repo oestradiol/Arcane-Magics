@@ -137,6 +137,15 @@ class HistoricalCausalRegressionTests(unittest.TestCase):
         self.assertIn("Not R194 external replication", readme)
         self.assertIn("fail-closed externality/replication gate", readme)
 
+    def test_current_status_repair_does_not_rewrite_historical_audit(self):
+        historical = self.read("provenance/HANDOFF_COMPLETION_AUDIT_2026-09-24.md")
+        current = self.read("provenance/HANDOFF_COMPLETION_STATUS_2026-09-24.md")
+        self.assertIn("Distinguish structural theorem lint from proof verification | **NOT DONE**", historical)
+        self.assertIn("Distinguish structural theorem lint from proof verification | NOT DONE | **DONE**", current)
+        self.assertIn("The historical audit is intentionally not rewritten", current)
+        self.assertIn("repair of current projection", current)
+        self.assertIn("!= retroactive rewrite of historical debt state", current)
+
 
 if __name__ == "__main__":
     unittest.main()
