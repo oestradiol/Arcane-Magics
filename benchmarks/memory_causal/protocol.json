@@ -30,5 +30,7 @@
     "cost"
   ],
   "promotion_rule": "A memory structure counts toward learning only if removing/scrambling it causally worsens later admissible behavior under matched conditions.",
-  "sealed_evaluation_core": "evaluation/sealed_eval.py"
+  "sealed_evaluation_core": "evaluation/sealed_eval.py",
+  "promotion_authority": false,
+  "claim_fence": "Public development cases and storage regressions do not establish learning. Promotion requires a sealed hidden matched ablation showing that retained structured memory causally improves later admissible behavior over mature substitutes."
 }
