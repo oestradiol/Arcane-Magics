@@ -182,9 +182,11 @@ SSR-0 current bounded RSI
 
 The safety floor remains outside the authority of the same RSI loop: return/evaluator independence, provenance, jurisdiction/capability ceilings, STOP/WITHHOLD, rollback, trust/authorization, adaptive-evaluation policy, negative-branch retention, and claim fences cannot be silently self-amended.
 
+Issue #73 makes two missing Canonical constraints executable before SSR-1 promotion: the Internalizer may consume scaffold/capability mediation without internalizing World/evidence/authority, and O* must retain an independently reachable correction channel. #73 also carries the Anti-Minerva carrier-substitution guard so the RSI loop cannot make inconvenient residuals unreachable merely by reclassifying their carrier as low-status/noisy/taboo.
+
 Canonical constraint: Strong-N2 recurrence may strengthen while `N1_WHOLE_OBJECT` remains OPEN. Safe Strong RSI therefore does not require a whole-object/minimality theorem before developmental recursion can advance.
 
-Immediate dependencies are #69 -> #31 -> #10, with #41 required before repeated adaptive successor promotion and #30/#42/#43/#26 required before broader capability/jurisdiction expansion.
+Immediate dependencies are #73 + #69 -> #31 -> #10, with #41 required before repeated adaptive successor promotion and #30/#42/#43/#26 required before broader capability/jurisdiction expansion.
 
 ### Sprint G — Repeat and compare externally
 
@@ -255,7 +257,8 @@ They compete for priority when they obtain a short path to a real discriminator 
 ## Current shortest high-leverage chain
 
 ```text
-#69 admit learner-side proposal operation
+#73 Internalizer/O* safety guards
+-> #69 admit learner-side proposal operation
 -> #69 learner-authored repair
 -> #31 hidden semantic return
 -> #10 first matched causal ablation
