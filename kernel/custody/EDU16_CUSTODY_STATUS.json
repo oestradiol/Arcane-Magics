@@ -1,0 +1,31 @@
+{
+  "schema": "Venus.EDU16CustodyStatus.v0.1",
+  "date": "2026-09-24",
+  "authority": {
+    "id": "EDU16",
+    "records": 1703,
+    "head": "6e02302abafb9f31ee5cb1b6f6d69a4e5c1e750371f99c4ee640f259f228c81e",
+    "sha256": "bde664e4bc2c45bc961720fc83e907a9c6b09ce581ccdfb61b8fb7bf5897e414",
+    "verdict": "PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY"
+  },
+  "evidence_custody": {
+    "exact_receipt": true,
+    "recovered_policy": true,
+    "recovered_prefreeze": true,
+    "recovered_result": true,
+    "recovery_manifest": "provenance/developmental/EDU/RECOVERY_MANIFEST.json"
+  },
+  "executable_custody": {
+    "exact_1703_event_runner_located": false,
+    "exact_1703_event_journal_located": false,
+    "git_replayable_runtime": false,
+    "search_disposition": "NOT_LOCATED_IN_RECOVERED_CANONICAL_OR_GIT",
+    "boundary": "DEVELOPMENTAL_AUTHORITY_EXACT_AS_EVIDENCE_NOT_AS_GIT_REPLAYABLE_EDU16_RUNTIME"
+  },
+  "runtime_base": {
+    "id": "IG10",
+    "git_reconstructible": true,
+    "relation": "EDU16 is later developmental evidence over the IG10 runtime base; IG10 must not be relabeled EDU16."
+  },
+  "reopening_condition": "Locate and hash-verify an authentic 1703-event EDU16 runner/journal, or prospectively implement a new explicitly typed successor without pretending it is historical EDU16."
+}
