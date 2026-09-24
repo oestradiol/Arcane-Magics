@@ -1,0 +1,31 @@
+{
+  "schema": "Venus.EDU17R1RepairAuthorshipStatus.v0.1",
+  "date": "2026-09-24",
+  "issue": 69,
+  "parent": {
+    "carrier_id": "EDU16-RC1",
+    "state": "kernel/development/EDU16_RECONSTRUCTED_STATE.json",
+    "replay": "kernel/development/replay_edu16_reconstructed.py",
+    "claim_bearing_state_replay": true,
+    "historical_event_replay": false
+  },
+  "residual": "MENTION != INCIDENCE",
+  "ownership_contract": "kernel/development/edu17r1_repair_contract.py",
+  "candidate_status": "NOT_AUTHORED",
+  "admitted_developmental_controller_operation": {
+    "available": false,
+    "operation": null,
+    "reason": "EDU16-RC1 reconstructs claim-bearing developmental state but does not expose an admitted executable operation that authors a new repair proposal."
+  },
+  "hidden_evaluation_exposed": false,
+  "external_model_may_supply_substantive_repair": false,
+  "next_lawful_transition": [
+    "materialize or admit an executable Venus developmental proposal operation from the reconstructed parent",
+    "expose only admitted parent state/history plus the frozen residual",
+    "receive a candidate authored by that controller",
+    "bind candidate and implementation identity with the ownership contract",
+    "only then run hidden issue #31 evaluation"
+  ],
+  "promotion_authority": false,
+  "claim_fence": "Infrastructure and custody readiness do not establish learner-owned authorship. No EDU17R1 repair candidate is admitted by this status."
+}
