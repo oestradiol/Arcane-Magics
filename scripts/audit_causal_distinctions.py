@@ -31,6 +31,9 @@ ALLOWED_STATUS = {
     "REFERENCE_PASS_CURRENT_INVARIANT_COVERED",
     "REFERENCE_PASS_PROSPECTIVE_TRANSFER_TEST_OPEN",
     "READY_ONLY_EXTERNAL_RETURN_OPEN",
+    "RECONSTRUCTED_CLAIM_STATE_EVENT_REPLAY_OPEN",
+    "EXTERNAL_HEAVY_CUSTODY_HASH_BOUND",
+    "OPEN_EXTRACTION_FROM_CANONICAL_CUSTODY",
 }
 
 REQUIRED_FIELDS = {
@@ -55,7 +58,7 @@ REQUIRED_CONCEPTS = (
     "stored state != demonstrated learning",
     "current future-equivalence != permanent identity",
     "uncertainty-marker mention != object-level unresolved empirical incidence",
-    "exact developmental evidence authority != replayable executable custody",
+    "exact historical event replay != reconstructed claim-bearing developmental carrier",
     "failure of realization/proxy != parent/global rejection",
     "malformed question != immortal OPEN research object",
     "structural bridge/analogy != target-domain theorem",
