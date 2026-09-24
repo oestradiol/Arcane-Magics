@@ -11,7 +11,7 @@
   },
   "residual": "MENTION != INCIDENCE",
   "ownership_contract": "kernel/development/edu17r1_repair_contract.py",
-  "candidate_status": "NOT_AUTHORED_WITHHOLD_REPRESENTATION_INSUFFICIENT",
+  "candidate_status": "FROZEN_LEARNER_SIDE_BINDER_CANDIDATE_AWAITING_EFFICACY_RETURN",
   "admitted_developmental_controller_operation": {
     "available": true,
     "operation": "kernel/development/recursive_proposal.py::search",
@@ -24,15 +24,14 @@
   "hidden_evaluation_exposed": false,
   "external_model_may_supply_substantive_repair": false,
   "next_lawful_transition": [
-    "retain the admitted generic search operation",
-    "recover or develop a target-blind compositional semantic representation operation without hidden issue #31 exposure",
-    "rerun public development search under that representation",
-    "if ambiguous, retain learner-selected discriminator and obtain external World return",
-    "freeze a repair candidate only when learner-side machinery actually identifies one",
-    "only then run hidden issue #31 efficacy evaluation"
+    "implement the frozen composition without changing its substantive path",
+    "freeze implementation identity/hash",
+    "run public regression only for implementation sanity",
+    "expose the unchanged frozen candidate to the sealed hidden issue #31 A/B/C/D evaluator",
+    "retain PASS / FAIL / WITHHOLD / SUBSUMED without post-exposure repair"
   ],
   "promotion_authority": false,
-  "claim_fence": "Generic search admission plus the public-development negative do not establish learner-owned repair authorship or efficacy. No EDU17R1 repair candidate is admitted by this status.",
+  "claim_fence": "A target-blind capability-composition search has frozen one learner-side repair candidate. This establishes candidate authorship only; efficacy and promotion remain unearned until sealed hidden issue #31 return.",
   "ancestral_incidence_donor": {
     "artifact": "Venus_Incidence_Law.tex",
     "sha256": "99154d953f498be374b8af0fbc174ba658d0d52b1ccc684b2bbc09871ac52f3e",
@@ -59,5 +58,6 @@
     "hidden_evaluation_exposed": false,
     "public_dev_only": true,
     "promotion_authority": false
-  }
+  },
+  "candidate": "kernel/development/EDU17R1_BINDER_CANDIDATE.json"
 }
