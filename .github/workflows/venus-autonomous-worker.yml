@@ -92,29 +92,27 @@ jobs:
           git push origin "$branch"
 
           lower_kind="$(printf '%s' "$target_kind" | tr '[:upper:]' '[:lower:]')"
-          body="$(cat <<EOF
-This draft PR was opened by the bounded Venus developmental worker.
+          printf '%s\n' \
+            "This draft PR was opened by the bounded Venus developmental worker." \
+            "" \
+            "Target: ${target_kind} #${target_number}" \
+            "Cycle: ${cycle_id}" \
+            "Decision: ${decision}" \
+            "" \
+            "The worker may study, test, learn from externally reviewed prior cycle outcomes, and propose." \
+            "It cannot merge this PR, promote developmental authority, release, close the target as success," \
+            "access secrets, or count its own execution receipt as independent return." \
+            "" \
+            "The committed cycle receipt is the prefrozen custody object for this episode." \
+            "The learning-state update remains non-authoritative until this draft is externally reviewed and admitted." \
+            > /tmp/venus-autonomous-pr-body.md
 
-Target: ${target_kind} #${target_number}
-Cycle: ${cycle_id}
-Decision: ${decision}
-
-The worker may study, test, learn from externally reviewed prior cycle outcomes,
-and propose. It cannot merge this PR, promote developmental authority, release,
-close the target as success, access secrets, or count its own execution receipt
-as independent return.
-
-The committed cycle receipt is the prefrozen custody object for this episode.
-The learning-state update remains non-authoritative until this draft is externally
-reviewed and admitted.
-EOF
-)"
           url="$(gh pr create \
             --draft \
             --base main \
             --head "$branch" \
             --title "venus: autonomous cycle ${lower_kind}-${target_number}" \
-            --body "$body")"
+            --body-file /tmp/venus-autonomous-pr-body.md)"
 
           echo "created=true" >> "$GITHUB_OUTPUT"
           echo "url=$url" >> "$GITHUB_OUTPUT"
