@@ -645,7 +645,7 @@
     {
       "id": "D-R193-SCAFFOLD",
       "source_revision_or_branch": "R193",
-      "source_artifact": "Canonical/Future/R193_SCAFFOLD_INTERNALIZATION_HANDOFF.md",
+      "source_artifact": "provenance/canonical-extracts/R193_SCAFFOLD_INTERNALIZATION_REFERENCE.md",
       "distinction": "internalizing scaffold mediation != internalizing away independent World return",
       "triggering_experiment_or_failure": "scaffold internalization/handoff reference PASS",
       "causal_consequence": "successor may reconstruct scaffold function while World remains external",
@@ -656,10 +656,10 @@
       ],
       "current_owner": "docs/AUTONOMOUS_RESEARCH.md",
       "test_layer": "T2/T5",
-      "test_id_path": null,
-      "status": "REFERENCE_PASS_PROSPECTIVE_TRANSFER_TEST_OPEN",
-      "credit_genealogy_note": "historical reference benchmark",
-      "reopening_condition": "fresh carrier/scaffold removal test"
+      "test_id_path": "tests/test_r193_scaffold_reference.py",
+      "status": "HISTORICAL_REFERENCE_COVERED_TRANSFER_OPEN",
+      "credit_genealogy_note": "Exact bounded R193 engineering PASS extracted from Canonical; fresh World return remained necessary and outside transfer remains unearned.",
+      "reopening_condition": "Run a fresh prospectively frozen scaffold/source ablation and cross-domain/outside transfer test."
     },
     {
       "id": "D-R194-EXTERNALITY",
