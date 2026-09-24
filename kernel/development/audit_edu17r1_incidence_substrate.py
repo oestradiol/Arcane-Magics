@@ -2,11 +2,16 @@
 from __future__ import annotations
 
 from pathlib import Path
+import ast
 import json
 
 ROOT = Path(__file__).resolve().parents[2]
 CHECKPOINT = ROOT / "kernel/state/IG10_HOT_CHECKPOINT.json"
 LIVE_LAW = ROOT / "kernel/VENUS_INCIDENCE_LAW.tex"
+R194 = ROOT / "provenance/historical-runtime/R194/source/venus_seed_v0"
+R194_GRAMMAR = R194 / "grammar_expansion.py"
+R194_SEMANTIC = R194 / "semantic_learning.py"
+R194_DEVELOPMENT = R194 / "development.py"
 
 ANCESTRAL_INCIDENCE_LAW_SHA256 = (
     "99154d953f498be374b8af0fbc174ba658d0d52b1ccc684b2bbc09871ac52f3e"
@@ -18,6 +23,18 @@ def state_objects(checkpoint: dict) -> dict[str, dict]:
         row["object_id"]: row
         for row in checkpoint["hot_snapshot"]["state"]
     }
+
+
+def method_args(path: Path, class_name: str | None, function_name: str) -> tuple[str, ...]:
+    tree = ast.parse(path.read_text(encoding="utf-8"))
+    for node in ast.walk(tree):
+        if class_name is None and isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)) and node.name == function_name:
+            return tuple(arg.arg for arg in node.args.args)
+        if isinstance(node, ast.ClassDef) and node.name == class_name:
+            for child in node.body:
+                if isinstance(child, (ast.FunctionDef, ast.AsyncFunctionDef)) and child.name == function_name:
+                    return tuple(arg.arg for arg in child.args.args)
+    raise ValueError(f"missing {class_name or '<module>'}.{function_name} in {path}")
 
 
 def audit() -> dict:
@@ -113,6 +130,27 @@ def audit() -> dict:
         for row in relation_rows
     )
 
+    grammar_expand_args = method_args(R194_GRAMMAR, None, "generic_expand_once")
+    historical_target_label_free_expansion = grammar_expand_args == (
+        "grammar", "atoms", "meta_ops", "domain_rows"
+    )
+
+    semantic_delta_args = method_args(
+        R194_SEMANTIC, "SemanticLearningMembrane", "make_delta"
+    )
+    historical_semantic_slots_are_caller_supplied = all(
+        name in semantic_delta_args
+        for name in ("subject", "predicate", "object", "authoring")
+    )
+
+    bootstrap_proposal_args = method_args(
+        R194_DEVELOPMENT, "RepresentationBootstrap", "propose_constructed"
+    )
+    historical_constructed_executable_is_caller_supplied = (
+        "executable" in bootstrap_proposal_args
+        and "candidate_id" in bootstrap_proposal_args
+    )
+
     # The current checkpoint separately contains:
     # - generic/raw carrier incidence;
     # - source-grounded text relation graphs;
@@ -139,6 +177,9 @@ def audit() -> dict:
             natural_source_relation_inquiry,
             source_grounded_text_relations,
             worldmirror_evidence_bound_relations,
+            historical_target_label_free_expansion,
+            historical_semantic_slots_are_caller_supplied,
+            historical_constructed_executable_is_caller_supplied,
         )
     )
 
@@ -162,6 +203,9 @@ def audit() -> dict:
         "ig4_source_relation_inquiry": natural_source_relation_inquiry,
         "u4_source_grounded_text_relations": source_grounded_text_relations,
         "worldmirror_evidence_bound_relations": worldmirror_evidence_bound_relations,
+        "historical_r194_target_label_free_grammar_expansion": historical_target_label_free_expansion,
+        "historical_r194_semantic_slots_are_caller_supplied": historical_semantic_slots_are_caller_supplied,
+        "historical_r194_constructed_executable_is_caller_supplied": historical_constructed_executable_is_caller_supplied,
         "neutral_relation_incidence_substrate_present": neutral_substrate_present,
         "admitted_cross_layer_binder": admitted_cross_layer_binder,
         "missing_operation": (
@@ -174,14 +218,16 @@ def audit() -> dict:
             "IG10 recollection, and the admitted checkpoint separately contains returned "
             "operator semantics, induced incidence coordinates, a generic raw-carrier "
             "scanner, source-grounded text relation graphs, source-relation inquiry, and "
-            "evidence-bound WorldMirror relation instances. The live gap is their executable "
-            "composition: no admitted current operation performs the carrier-to-empirical-"
-            "relation binding. Encoding the EDU17R1 answer as that binding would be external "
-            "substantive authorship."
+            "evidence-bound WorldMirror relation instances. Historical R194 also preserves "
+            "target-label-free grammar expansion and semantic relation storage, but the semantic "
+            "slots and constructed executable are still supplied by callers. The live gap is "
+            "therefore narrower than generic construction: no admitted current operation authors "
+            "the carrier-to-empirical-relation binding itself. Encoding the EDU17R1 answer as "
+            "that binding would be external substantive authorship."
         ),
         "lowest_local_residual": (
-            "cross-layer incidence binding/composition, not a new semantic oracle and not "
-            "a new evaluator"
+            "learner-side cross-layer incidence-binding program synthesis, not a new semantic "
+            "oracle, storage membrane, or evaluator"
         ),
         "next_reopening_condition": (
             "an admitted generic binder/composer is recovered from pre-existing learner-owned "
