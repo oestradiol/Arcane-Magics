@@ -11,6 +11,12 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from kernel.development.autonomous_worker import load_work_items, make_cycle
+from kernel.development.autonomous_problem_formation import (
+    bind_problem_to_carriers,
+    form_problem,
+    problem_dict,
+    snapshot_to_incidence,
+)
 from kernel.development.autonomous_learning import (
     active_autonomous_cycle,
     from_json,
@@ -32,6 +38,7 @@ def main() -> int:
     parser.add_argument("--learning-output", required=True)
     parser.add_argument("--developmental-parent-state", default=str(ROOT / "kernel/development/EDU16_RECONSTRUCTED_STATE.json"))
     parser.add_argument("--current-state-receipt", default=str(ROOT / "kernel/custody/R226_CURRENT_STATE_RECEIPT.json"))
+    parser.add_argument("--problem-output")
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
 
@@ -67,6 +74,15 @@ def main() -> int:
     barriers = target_barriers(history_carriers)
     active_cycle = active_autonomous_cycle(history_carriers)
 
+    all_items = tuple(issues) + tuple(prs)
+    formed_problem = form_problem(snapshot_to_incidence(all_items))
+    allowed_target_keys = bind_problem_to_carriers(formed_problem, all_items)
+    if args.problem_output:
+        Path(args.problem_output).write_text(
+            json.dumps(problem_dict(formed_problem), indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+
     cycle = make_cycle(
         issues=issues,
         prs=prs,
@@ -78,6 +94,8 @@ def main() -> int:
         method_utility=method_utility,
         developmental_parent=developmental_parent,
         current_state_receipt=current_state_receipt,
+        formed_problem=problem_dict(formed_problem),
+        allowed_target_keys=allowed_target_keys,
     )
     Path(args.output).write_text(
         json.dumps(asdict(cycle), indent=2, sort_keys=True) + "\n",
