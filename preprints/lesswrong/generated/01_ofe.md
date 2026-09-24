@@ -19,7 +19,7 @@ We propose a future-sufficiency criterion: a coarse-graining map should preserve
 
 The argument is organized to minimize dependence on project-specific language. defines the quotient and proves its universal property. gives approximate versions. shows how quantum processes instantiate the construction. proves when structural evolution descends consistently between quotients with evolving test families. makes the indexing physical through relational observables and reference frames. defines operational relational nonfactorization, causal enrichment, synchronistic event witnesses, and carrier-substitution discriminators. formulates the quantum-gravity proposal. returns to control and AI, where closely related abstractions are already operational. states what would falsify or reduce the proposal.
 
-<div id="tab:claim-status">
+
 
 | Status      | Meaning in this paper                                                                                                                              |
 |:------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -34,14 +34,12 @@ Claim status used throughout the paper. The table separates exact mathematics, e
 
 Let $\mathcal S$ be a set of physical states, histories, boundary data, or process descriptions. A test is any admissible operation whose outcome distribution can depend on an element of $\mathcal S$. The word “test” is intentionally broad: it may be a measurement, an intervention sequence, a continuation of a boundary amplitude, a policy, or a task-indexed query. What matters is that the theory specifies observable consequences.
 
-**Definition.**
 
 **Definition 1** (Future-test family). *A future-test family $\mathcal F$ is a set of admissible tests $T$. For each $T\in\mathcal F$ and $x\in\mathcal S$, let $$P_T(\cdot\mid x)$$ be the outcome law predicted by the theory. The associated future map is $$\Phi_{\mathcal F}:\mathcal S\longrightarrow\mathcal Y_{\mathcal F},
   \qquad
   \Phi_{\mathcal F}(x):=\bigl(P_T(\cdot\mid x)\bigr)_{T\in\mathcal F}.
   $$*
 
-**Definition.**
 
 **Definition 2** (Future-equivalence). *For $x,y\in\mathcal S$, $$x\sim_{\mathcal F}y
   \quad\Longleftrightarrow\quad
@@ -53,7 +51,7 @@ Let $\mathcal S$ be a set of physical states, histories, boundary data, or proce
 
 The relation $\sim_{\mathcal F}$ is immediately an equivalence relation because equality in $\mathcal Y_{\mathcal F}$ is reflexive, symmetric, and transitive. The important property is not that a quotient exists, but what kind of compression it represents.
 
-<div id="prop:coarsest" class="proposition">
+
 
 **Proposition 3** (Coarsest exact $\mathcal F$-sufficient representation). *Let $R:\mathcal S\to\mathcal Z$ be any representation from which all $\mathcal F$-test statistics can be recovered, so that there exists $g:R(\mathcal S)\to\mathcal Y_{\mathcal F}$ with $$\Phi_{\mathcal F}=g\circ R.
    $$ Then there exists a unique map $h:R(\mathcal S)\to\mathcal Q_{\mathcal F}$ such that $$\pi_{\mathcal F}=h\circ R.
@@ -61,11 +59,10 @@ The relation $\sim_{\mathcal F}$ is immediately an equivalence relation because 
 
 **Proof.**
 
-*Proof.* If $R(x)=R(y)$, then [eq:sufficient-map] gives $\Phi_{\mathcal F}(x)=\Phi_{\mathcal F}(y)$, so $x\sim_{\mathcal F}y$ and $\pi_{\mathcal F}(x)=\pi_{\mathcal F}(y)$. Hence $h(R(x)):=\pi_{\mathcal F}(x)$ is well defined. Surjectivity of $R$ onto its image gives uniqueness. ◻
+*Proof.* If $R(x)=R(y)$, then the referenced result gives $\Phi_{\mathcal F}(x)=\Phi_{\mathcal F}(y)$, so $x\sim_{\mathcal F}y$ and $\pi_{\mathcal F}(x)=\pi_{\mathcal F}(y)$. Hence $h(R(x)):=\pi_{\mathcal F}(x)$ is well defined. Surjectivity of $R$ onto its image gives uniqueness. ◻
 
 The result is a familiar sufficient-statistics argument in a deliberately general form. It says that the quotient does not preserve a preferred microscopic ontology. It preserves exactly the distinctions required to reconstruct the declared family of future predictions. When $\mathcal F$ is enlarged, the quotient can only become finer; when tests are removed, it can only become coarser.
 
-**Proposition.**
 
 **Proposition 4** (Monotonicity under test-family inclusion). *If $\mathcal F_1\subseteq\mathcal F_2$, then $$x\sim_{\mathcal F_2}y \;\Longrightarrow\; x\sim_{\mathcal F_1}y.
    $$ Equivalently, there is a canonical surjection $$q_{21}:\mathcal Q_{\mathcal F_2}\twoheadrightarrow\mathcal Q_{\mathcal F_1}.$$*
@@ -96,7 +93,6 @@ Exact equality is too rigid for empirical work, numerical coarse graining, and l
 
 This makes approximate coarse graining precise. A representation $R$ is $\varepsilon$-sufficient for $\mathcal F$ when a predictor using $R(x)$ reproduces each admitted test law to error at most $\varepsilon$ under the chosen divergence. One can then ask for the minimum-complexity representation satisfying that bound. This connects directly to predictive information bottlenecks, causal-state reconstruction, state abstraction, and learned latent dynamics .
 
-**Example.**
 
 **Example 5** (Restricted quantum distinguishability). *Let $\mathcal S$ be density operators on a finite-dimensional Hilbert space and let $\mathcal F$ be a set of effects $0\le E\le I$. For trace-zero Hermitian $\Delta=\rho-\sigma$, define $$\|\Delta\|_{\mathcal F}
   :=
@@ -119,10 +115,10 @@ Let $\Upsilon_{t:0}$ denote a process tensor over a time interval and let $A$ de
 
 This realization supplies two ingredients needed later. First, the “state” of a system need not be an instantaneous configuration; it may be the minimum history-dependent object sufficient for future predictions. Second, admissible tests are compositional physical operations rather than an external observer’s arbitrary questions. The construction can therefore be physical without identifying operational relevance with consciousness, linguistic meaning, or a privileged agent.
 
-<figure id="fig:cycle">
 
-<figcaption>The paper’s core circulation. Compression is relative to an admitted family of future tests. Returned consequence may update the structural state, the test family, or both, so the next quotient need not preserve the previous partition.</figcaption>
-</figure>
+
+*The paper’s core circulation. Compression is relative to an admitted family of future tests. Returned consequence may update the structural state, the test family, or both, so the next quotient need not preserve the previous partition.*
+
 
 # Coupled dynamics of state and distinction
 
@@ -139,7 +135,6 @@ Let $$Z_t=(X_t,\mathcal F_t).$$ We write the most general discrete update schema
 
 This is not a second substance added to physics. $\mathcal F_t$ is a relational object: it encodes the family of distinctions that the current physical arrangement can make consequential. In an AI or control realization, $\mathcal C_t$ may include a task or policy family; in a physical realization it must be grounded in actual operations, boundary data, or relational observables. A purely verbal relabeling of $\mathcal F$ that changes no admissible statistics has no physical effect.
 
-**Definition.**
 
 **Definition 6** (Relevance transition). *For a pair $x,y\in\mathcal S$, a gauge-to-separator transition occurs at $t\to t+1$ when $$x\sim_{\mathcal F_t}y
   \quad\text{but}\quad
@@ -157,7 +152,7 @@ Let $U_t:\mathcal S_t\to\mathcal S_{t+1}$ be a physical or process evolution. Ev
   P_T(\cdot\mid U_t x).
   $$
 
-<div id="prop:quotient-transport" class="proposition">
+
 
 **Proposition 7** (Quotient transport criterion). *The following are equivalent:*
 
@@ -180,7 +175,7 @@ Let $U_t:\mathcal S_t\to\mathcal S_{t+1}$ be a physical or process evolution. Ev
 
 **Proof.**
 
-*Proof.* Statements (i) and (ii) are the standard descent condition for a map on equivalence classes: (i) implies (ii) because equal earlier classes have equal images under $\overline U_t$, while (ii) makes $\overline U_t([x]_{\mathcal F_t}):=[U_t x]_{\mathcal F_{t+1}}$ well defined and unique. Statements (ii) and (iii) are equivalent by the definition of $\sim_{\mathcal F_{t+1}}$: every later test statistic must take the same value on every earlier equivalence class. Finally, if [eq:pullback-closure] holds and $x\sim_{\mathcal F_t}y$, then for each $T\in\mathcal F_{t+1}$, $$P_T(\cdot\mid U_t x)
+*Proof.* Statements (i) and (ii) are the standard descent condition for a map on equivalence classes: (i) implies (ii) because equal earlier classes have equal images under $\overline U_t$, while (ii) makes $\overline U_t([x]_{\mathcal F_t}):=[U_t x]_{\mathcal F_{t+1}}$ well defined and unique. Statements (ii) and (iii) are equivalent by the definition of $\sim_{\mathcal F_{t+1}}$: every later test statistic must take the same value on every earlier equivalence class. Finally, if the referenced result holds and $x\sim_{\mathcal F_t}y$, then for each $T\in\mathcal F_{t+1}$, $$P_T(\cdot\mid U_t x)
 =P_{U_t^{\ast}T}(\cdot\mid x)
 =P_{U_t^{\ast}T}(\cdot\mid y)
 =P_T(\cdot\mid U_t y),$$ so (ii) follows. ◻
@@ -189,17 +184,16 @@ The abstract descent condition is not claimed as a new theorem of quotient theor
 
 The converse obstruction is equally useful. If $x\sim_{\mathcal F_t}y$ but some $T\in\mathcal F_{t+1}$ distinguishes $U_t x$ from $U_t y$, then no map on the old quotient classes can reproduce the new predictions. The later test has reopened a distinction that the earlier quotient erased. The remedy is not interpretive: refine the earlier state representation, enlarge the earlier test family when physically justified, or accept that the old quotient was task-local rather than dynamically sufficient.
 
-**Example.**
 
 **Example 8** (Quantum channels: states forward, effects backward). *Let $U_t=\mathcal E_t$ be a completely positive trace-preserving map. A later effect $E$ pulls back by the Heisenberg adjoint, $$E\longmapsto \mathcal E_t^{\dagger}(E),
   \qquad
   \mathrm{Tr}[E\,\mathcal E_t(\rho)]
   =
   \mathrm{Tr}[\mathcal E_t^{\dagger}(E)\rho].
-  $$ Therefore Proposition <a href="#prop:quotient-transport" data-reference-type="ref" data-reference="prop:quotient-transport">7</a> applies whenever $$\mathcal E_t^{\dagger}(\mathcal F_{t+1})\subseteq\mathcal F_t.
-  $$ For a qubit dephasing channel in the $Z$ basis and a future family containing only $Z$-diagonal effects, the pullback remains $Z$-diagonal and phase coherence may be safely absent from the operational quotient. By contrast, under identity evolution with $\mathcal F_t$ containing only $Z$ tests and $\mathcal F_{t+1}$ enlarged to include an $X$ test, the states $|+\rangle$ and $|-\rangle$ are equivalent at $t$ but distinguishable at $t+1$. Equation [eq:pullback-closure] fails exactly because the new $X$ effect was not represented by the earlier test family.*
+  $$ Therefore Proposition 7 applies whenever $$\mathcal E_t^{\dagger}(\mathcal F_{t+1})\subseteq\mathcal F_t.
+  $$ For a qubit dephasing channel in the $Z$ basis and a future family containing only $Z$-diagonal effects, the pullback remains $Z$-diagonal and phase coherence may be safely absent from the operational quotient. By contrast, under identity evolution with $\mathcal F_t$ containing only $Z$ tests and $\mathcal F_{t+1}$ enlarged to include an $X$ test, the states $|+\rangle$ and $|-\rangle$ are equivalent at $t$ but distinguishable at $t+1$. Equation the referenced result fails exactly because the new $X$ effect was not represented by the earlier test family.*
 
-The adjoint relation in [eq:heisenberg-pullback] is standard Schrödinger–Heisenberg duality. Its role here is not to rename that duality, but to expose exactly when a changing family of operational distinctions is compatible with quotienting the simultaneously evolving state.
+The adjoint relation in the referenced result is standard Schrödinger–Heisenberg duality. Its role here is not to rename that duality, but to expose exactly when a changing family of operational distinctions is compatible with quotienting the simultaneously evolving state.
 
 This forward-state/backward-test relation is the precise sense in which structural dynamics and distinction dynamics are coupled. The physical state propagates forward; later operational questions pull backward through the dynamics. A quotient is dynamically legitimate only when these two directions commute.
 
@@ -238,14 +232,13 @@ Let $\mathcal S_{AB}$ be a joint state or history space with local projection ma
   \bigr).
   $$ The joint future map is $\Phi_{\mathcal F_{AB}}: \mathcal S_{AB}\to\mathcal Y_{\mathcal F_{AB}}$.
 
-**Definition.**
 
 **Definition 9** (Operational relational factorization). *The declared joint description is *relationally reducible* when there exists a map $g$ such that $$\Phi_{\mathcal F_{AB}}
   =
   g\circ R_{\mathrm{loc}}.
   $$ It is *operationally relationally nonfactorizable* relative to $(\mathcal F_A,\mathcal F_B,\mathcal F_{AB})$ when no such $g$ exists.*
 
-<div id="prop:relational-witness" class="proposition">
+
 
 **Proposition 10** (Separating witness for relational nonfactorization). *Operational relational nonfactorization holds if and only if there exist $x,y\in\mathcal S_{AB}$ such that $$R_{\mathrm{loc}}(x)=R_{\mathrm{loc}}(y)
   \quad\text{but}\quad
@@ -254,7 +247,7 @@ Let $\mathcal S_{AB}$ be a joint state or history space with local projection ma
 
 **Proof.**
 
-*Proof.* A factorization through $R_{\mathrm{loc}}$ exists exactly when $\Phi_{\mathcal F_{AB}}$ is constant on every fiber of $R_{\mathrm{loc}}$. Equation [eq:relational-witness] is precisely a witness that this constancy fails. ◻
+*Proof.* A factorization through $R_{\mathrm{loc}}$ exists exactly when $\Phi_{\mathcal F_{AB}}$ is constant on every fiber of $R_{\mathrm{loc}}$. Equation the referenced result is precisely a witness that this constancy fails. ◻
 
 The criterion is deliberately operational. It does not say that the two local components have fused, that one global agent exists, or that the microscopic carrier is ordinary quantum mechanics. Classical common causes, shared memory, latent environmental variables, and explicit interaction histories can all make joint futures depend on information absent from separately chosen local state descriptions. Conversely, a Hilbert-space quantum state can be entangled while a restricted operational family fails to reveal that entanglement. The present factorization criterion is therefore broader than physical quantum separability, but it overlaps the established notion of generalized entanglement when a composite system has local observables that fail to determine a globally constrained state . The carrier must decide which notion is physically warranted.
 
@@ -269,7 +262,7 @@ For the approximate case, define a relational-separation radius $$\Delta_{\mathr
 
 ## Causal enrichment and nested shared-world null models
 
-Failure of Equation [eq:relational-factorization] is only as informative as the local state descriptions supplied to it. If a shared cause, interaction history, communication channel, environmental trace, or network-mediated dependency is omitted from the state, the missing variable can masquerade as an irreducible relation. This is especially important for biological and social systems, which are embedded in common environments and persistent communication networks rather than sampled as isolated pairs.
+Failure of Equation the referenced result is only as informative as the local state descriptions supplied to it. If a shared cause, interaction history, communication channel, environmental trace, or network-mediated dependency is omitted from the state, the missing variable can masquerade as an irreducible relation. This is especially important for biological and social systems, which are embedded in common environments and persistent communication networks rather than sampled as isolated pairs.
 
 Let $$H:\mathcal S_{AB}\to\mathcal H
   $$ collect a declared shared-history / common-cause state. Depending on the carrier, $H$ may contain prior interaction, common stimuli, communication records, environmental variables, shared memory, technical-network traces, or other independently motivated causal coordinates. Define the enriched representation $$R_{\mathrm{enr}}(x)
@@ -295,12 +288,12 @@ This enrichment step also makes multiscale embedding explicit. A dyad can be sim
 
 The relation between nonseparability and synchronicity has a substantial prior literature and should not be introduced as a new analogy. The Pauli–Jung program treated mental and material descriptions as complementary aspects of an underlying psychophysically neutral order, and later work developed structural typologies of mind–matter correlations in that dual-aspect setting . In GQT, a composite system admits identifiable subsystems with mutually compatible local observables, together with a global observable of the whole that is complementary to those local observables. A generalized entangled state is then an eigenstate of the global observable without being an eigenstate of the corresponding local observables . The formalism was designed precisely to retain a well-defined notion of complementarity and entanglement after dropping structures special to microscopic quantum physics. Von Lucadou, Römer, and Walach subsequently interpreted synchronistic phenomena as entanglement correlations in this generalized sense and imposed a no-transmission condition forbidding their use as controllable signals . This is established prior art for the structural claim, not evidence that reported human synchronicities are Hilbert-space quantum entanglement.
 
-The present quotient language recovers the core nonseparability statement in a test-relative form. If the local families $\mathcal F_A$ and $\mathcal F_B$ exhaust the declared local observables, while a global test $T_G\in\mathcal F_{AB}$ distinguishes joint states that have the same local quotient pair, then $T_G$ is a witness of Equation [eq:relational-witness]. In other words, the local operational states fail to determine the joint operational state. GQT reaches a related conclusion from global/local complementarity; the present criterion does not require noncommuting observables and is therefore formally broader.
+The present quotient language recovers the core nonseparability statement in a test-relative form. If the local families $\mathcal F_A$ and $\mathcal F_B$ exhaust the declared local observables, while a global test $T_G\in\mathcal F_{AB}$ distinguishes joint states that have the same local quotient pair, then $T_G$ is a witness of Equation the referenced result. In other words, the local operational states fail to determine the joint operational state. GQT reaches a related conclusion from global/local complementarity; the present criterion does not require noncommuting observables and is therefore formally broader.
 
 A realized event should be called a *synchronistic relational witness* here only when two independent requirements are kept separate. First, it must instantiate relational separation: the relevant joint test distinguishes histories that are identical under the declared local quotient pair. For a stronger claim, the same separation must survive the causal-enrichment test of , so that explicitly modeled shared history, communication, environmental structure, and network traces do not already restore factorization. Second, its returned consequence must remain future-separating, $$\rho\in\mathrm{Res}_{\mathcal F_{AB}}(C),
   $$ so that the event changes an admitted continuation, reachability relation, prediction, or lawful response rather than merely attracting retrospective attention. An *entanglement-like* interpretation adds the further no-transmission obligation that admissible manipulations of either subsystem cannot be used to control the marginal outcome law of the other. None of these conditions alone establishes Bell nonlocality or an ordinary quantum carrier.
 
-This formulation also exposes the strongest ordinary rival. Empirical psychology operationalizes synchronicity as a conjunction of event awareness and subsequent meaning-detection rather than as a demonstrated nonlocal mechanism . A 2026 matched study of ultra-Orthodox and secular participants found similar levels of synchronicity awareness and meaning-detection across the groups, while the relation between attachment to God and meaning in life depended on meaning-detection rather than awareness alone . This supports a useful separation between occurrence, interpretation, and downstream consequence; it does not test relational nonfactorization. More strongly, a recent biosemiotic account explains synchronistic experience through anticipation, salience alignment, memory, communication, niche construction, and causal opacity without requiring acausal order . Under the present framework such mechanisms belong inside $H$ before nonfactorization is assessed. A subjective synchronistic experience is therefore not itself evidence for Equation [eq:relational-witness]; the stronger claim survives only if an adequately enriched causal state still fails the factorization test.
+This formulation also exposes the strongest ordinary rival. Empirical psychology operationalizes synchronicity as a conjunction of event awareness and subsequent meaning-detection rather than as a demonstrated nonlocal mechanism . A 2026 matched study of ultra-Orthodox and secular participants found similar levels of synchronicity awareness and meaning-detection across the groups, while the relation between attachment to God and meaning in life depended on meaning-detection rather than awareness alone . This supports a useful separation between occurrence, interpretation, and downstream consequence; it does not test relational nonfactorization. More strongly, a recent biosemiotic account explains synchronistic experience through anticipation, salience alignment, memory, communication, niche construction, and causal opacity without requiring acausal order . Under the present framework such mechanisms belong inside $H$ before nonfactorization is assessed. A subjective synchronistic experience is therefore not itself evidence for Equation the referenced result; the stronger claim survives only if an adequately enriched causal state still fails the factorization test.
 
 ## Carrier substitution as a discriminator
 
@@ -313,7 +306,7 @@ A shared diagrammatic shape is not sufficient to identify mechanisms across doma
 \end{aligned}
 $$ A correspondence that preserves only visual geometry, terminology, or an endpoint state is therefore insufficient. The point of the criterion is to distinguish a reusable invariant from an attractive analogy.
 
-Recent neuroscience provides useful partial stress tests because it exhibits distributed, history-bearing spatiotemporal organization without thereby supplying a quantum or gravitational mechanism. Spiral-like cortical waves propagate around phase-singularity centres, interact across scales, and show task-dependent organization . A recent review emphasizes that cortical traveling waves introduce spatiotemporal dependencies not naturally captured by purely feedforward or feedback descriptions and can embed sensory history in evolving activity patterns . Human intracranial recordings further show that co-occurring ripple oscillations coordinate long-range, stimulus-specific neuronal co-firing during working memory , while sustained visual perception exhibits stable distributed content representations in occipitotemporal regions and more transient onset-related representations in frontoparietal regions . At the interpersonal scale, hyperscanning research studies neural and behavioral processes that extend across interacting partners, with cross-brain synchrony implicated in communication, coordination, and learning . At a still larger scale, social-network topology changes how memories, beliefs, and problem-solving information are integrated across human groups . These results instantiate some slots in Equation [eq:carrier-substitution], including distributed local activity, temporal organization, coordination, retained interaction history, and multiscale embedding. They also illustrate why the enrichment state $H$ cannot be omitted when testing human dyads: shared stimuli, reciprocal behavior, social topology, and technological communication can all generate joint dependence. None of these results by themselves establish Equation [eq:relational-witness], quantum process nonseparability, or a theory of consciousness. In particular, a spiral phase singularity is an organizing locus of a wave field, not automatically a fixed point in the dynamical-systems sense.
+Recent neuroscience provides useful partial stress tests because it exhibits distributed, history-bearing spatiotemporal organization without thereby supplying a quantum or gravitational mechanism. Spiral-like cortical waves propagate around phase-singularity centres, interact across scales, and show task-dependent organization . A recent review emphasizes that cortical traveling waves introduce spatiotemporal dependencies not naturally captured by purely feedforward or feedback descriptions and can embed sensory history in evolving activity patterns . Human intracranial recordings further show that co-occurring ripple oscillations coordinate long-range, stimulus-specific neuronal co-firing during working memory , while sustained visual perception exhibits stable distributed content representations in occipitotemporal regions and more transient onset-related representations in frontoparietal regions . At the interpersonal scale, hyperscanning research studies neural and behavioral processes that extend across interacting partners, with cross-brain synchrony implicated in communication, coordination, and learning . At a still larger scale, social-network topology changes how memories, beliefs, and problem-solving information are integrated across human groups . These results instantiate some slots in Equation the referenced result, including distributed local activity, temporal organization, coordination, retained interaction history, and multiscale embedding. They also illustrate why the enrichment state $H$ cannot be omitted when testing human dyads: shared stimuli, reciprocal behavior, social topology, and technological communication can all generate joint dependence. None of these results by themselves establish Equation the referenced result, quantum process nonseparability, or a theory of consciousness. In particular, a spiral phase singularity is an organizing locus of a wave field, not automatically a fixed point in the dynamical-systems sense.
 
 A recent and independent quantum-foundations proposal gives a different comparator. Pettini considers a warped $(3,2)$-dimensional spacetime in which local four-dimensional detector readouts are projections of a shared bulk field; the model explicitly distinguishes a factorized sector from a proposed non-separable contextual drive and predicts a distance-dependent cross-pair correlation absent for independently prepared Bell pairs in standard quantum mechanics . This supplies a concrete example of the logical pattern “distinct local projections plus a nonfactorizing higher-dimensional carrier.” It is not evidence for the present quantum-gravity proposal, for a preferred ontology of observers, or for any neural realization. Its relevance here is narrower: it shows how the factorization discriminator can be attached to a carrier-specific dynamical hypothesis with an independent experimental failure condition.
 
@@ -332,7 +325,7 @@ Let $\mathcal F_{\Delta}$ be a physically justified family of future boundary co
   
 \end{aligned}$$
 
-<div id="conj:fscp" class="conjecture">
+
 
 **Conjecture 11** (Future-sufficient coarse-graining principle). *For each admissible refinement $\Delta\preceq\Delta'$ and physically justified family $\mathcal F_{\Delta}$, an exact minimal coarse-graining map $C^{\mathcal F}_{\Delta'\to\Delta}$, when it exists, should satisfy two independent requirements: $$\begin{aligned}
 \text{prediction preservation: }&
@@ -349,7 +342,7 @@ x\sim_{\mathcal F_{\Delta}}y.
 
 \end{aligned}$$ Thus the coarse state is sufficient for every admitted future continuation and carries no additional independent coordinate that separates states invisible to all such continuations, unless another explicitly stated physical constraint requires it.*
 
-The two clauses must not be collapsed. Equation [eq:fscp-sufficiency] can hold for a representation that retains redundant microscopic information; equation [eq:fscp-minimality] can hold for a quotient that has not yet been equipped with a physically correct coarse prediction map. Together they identify the coarse state space with the operational quotient up to a change of coordinates.
+The two clauses must not be collapsed. Equation the referenced result can hold for a representation that retains redundant microscopic information; equation the referenced result can hold for a quotient that has not yet been equipped with a physically correct coarse prediction map. Together they identify the coarse state space with the operational quotient up to a change of coordinates.
 
 For approximate calculations, define the prediction error of a coarse map by $$\mathrm{Err}_{\mathcal F_{\Delta}}(C)
   :=
@@ -364,7 +357,7 @@ For approximate calculations, define the prediction error of a coarse map by $$\
 A viable refinement family must also obey structural obligations. First, equivalence must survive admitted composition: if $R$ is a common boundary continuation that maps states on $\Delta$ to a later boundary $\Delta_R$, then $$x\sim_{\mathcal F_{\Delta}}y
   \quad\Longrightarrow\quad
   R\circ x\sim_{\mathcal F_{\Delta_R}}R\circ y
-  $$ for every continuation that the claimed coarse theory treats as admissible. This is the boundary version of Proposition <a href="#prop:quotient-transport" data-reference-type="ref" data-reference="prop:quotient-transport">7</a>.
+  $$ for every continuation that the claimed coarse theory treats as admissible. This is the boundary version of Proposition 7.
 
 Second, whenever the fine-to-coarse maps descend to quotient maps $\overline C_{\Delta'\to\Delta}$, successive refinements should form a coherent projective diagram: $$\overline C_{\Delta''\to\Delta}
   =
@@ -375,7 +368,7 @@ Second, whenever the fine-to-coarse maps descend to quotient maps $\overline C_{
   (\Delta\preceq\Delta'\preceq\Delta'').
   $$ Third, a lawful change of physical reference frame should itself satisfy the quotient-transport criterion after translating the corresponding test family. Finally, any candidate continuum object must recover the appropriate relational observables, correlations, and dynamics of general relativity in its semiclassical regime.
 
-The variance of the continuum construction should not be guessed from notation. Fine-to-coarse maps such as [eq:qg-coarse-map] naturally define a projective system; coarse-to-fine embedding maps used elsewhere in loop quantum gravity naturally support inductive constructions. The relevant category, maps, topology, and convergence notion must therefore be supplied by the chosen quantum-gravity model before one writes a specific limit.
+The variance of the continuum construction should not be guessed from notation. Fine-to-coarse maps such as the referenced result naturally define a projective system; coarse-to-fine embedding maps used elsewhere in loop quantum gravity naturally support inductive constructions. The relevant category, maps, topology, and convergence notion must therefore be supplied by the chosen quantum-gravity model before one writes a specific limit.
 
 ## Why the 2026 continuum result matters
 
@@ -391,7 +384,7 @@ The polyhedral interpretation of intertwiners is structurally suggestive because
 
 The AI literature is useful here because it has already confronted the practical version of the same question: what is the smallest state representation that remains sufficient for future behavior?
 
-Computational mechanics defines causal states by an equivalence relation on histories: two pasts belong to the same causal state when they induce the same conditional distribution over futures. The resulting $\epsilon$-machine is minimal among equally predictive representations under the theory’s assumptions . Predictive-state representations replace hidden latent states with predictions of outcomes of future experiments and can represent controlled dynamical systems directly through observable tests . These are exceptionally close mathematical neighbors of [eq:future-equivalence].
+Computational mechanics defines causal states by an equivalence relation on histories: two pasts belong to the same causal state when they induce the same conditional distribution over futures. The resulting $\epsilon$-machine is minimal among equally predictive representations under the theory’s assumptions . Predictive-state representations replace hidden latent states with predictions of outcomes of future experiments and can represent controlled dynamical systems directly through observable tests . These are exceptionally close mathematical neighbors of the referenced result.
 
 Markov decision-process abstraction adds action and value relevance. Givan, Dean, and Greig develop equivalence relations and minimization procedures in which aggregated states preserve the properties needed to induce optimal policies . Bisimulation metrics extend this idea quantitatively and give bounds connecting state similarity to value functions . Information-bottleneck work asks which information about a past should be retained because it predicts the future, explicitly trading complexity against predictive power . Still *et al.* connect nonpredictive stored information to thermodynamic inefficiency in driven systems .
 
@@ -416,12 +409,12 @@ The transport theorem of also suggests an algorithmic object: learned representa
   \right],
   $$ subject to an admissibility set $\mathcal A_t$ that prevents the test generator from inventing impossible interventions or reading evaluator-only information.
 
-Equations [eq:pred-loss]–[eq:test-search] implement a bounded alternation: $$\text{compress for current tests}
+Equations the referenced result–the referenced result implement a bounded alternation: $$\text{compress for current tests}
   \longleftrightarrow
   \text{search for admissible separating tests}.
   $$ The representation becomes more independent of a fixed teacher-supplied vocabulary because new discriminators can be generated from held-out consequences rather than from answer-shaped labels. But the external environment remains indispensable: a learner may generate a test or method, yet it does not author the returned evidence that the method works.
 
-<div id="tab:cross-domain">
+
 
 | Domain                   | State/history object            | Future tests                        | Quotient meaning                            |
 |:-------------------------|:--------------------------------|:------------------------------------|:--------------------------------------------|
@@ -445,7 +438,7 @@ Third, quotient preservation may conflict with composition. If two boundary stat
 
 Fourth, a candidate continuum quotient may fail the semiclassical limit. Preserving a set of quantum tests is insufficient if the resulting large-scale state space does not reproduce the appropriate relational observables, correlations, and dynamics of general relativity.
 
-Fifth, the coupled $\mathcal F_t$ dynamics may be unnecessary in a target domain. If every physically relevant discriminator can be fixed once and for all, then [eq:test-update] is surplus structure and should be frozen. Conversely, if $\mathcal F_t$ is allowed to change arbitrarily, the theory becomes vacuous because any failed prediction can be hidden by redefining what matters. Equation [eq:no-self-seal] exists precisely to block that move.
+Fifth, the coupled $\mathcal F_t$ dynamics may be unnecessary in a target domain. If every physically relevant discriminator can be fixed once and for all, then the referenced result is surplus structure and should be frozen. Conversely, if $\mathcal F_t$ is allowed to change arbitrarily, the theory becomes vacuous because any failed prediction can be hidden by redefining what matters. Equation the referenced result exists precisely to block that move.
 
 Several stronger claims do not follow from the framework: $$\begin{aligned}
 \text{operational quotient} &\not\Rightarrow \text{quantum measurement collapse},\\
@@ -520,7 +513,7 @@ If these questions cannot be answered from the formal objects and cited literatu
 
 References below include DOI identifiers when a journal DOI was verified against a publisher or an authoritative bibliographic record during manuscript preparation. For arXiv-only or conference references for which no journal DOI is used here, the arXiv identifier is given instead. A source-verification ledger is included as ancillary material with the submission package.
 
-99
+
 
 J. P. Crutchfield and K. Young, “Inferring statistical complexity,” *Phys. Rev. Lett.* **63**, 105–108 (1989). [doi:10.1103/PhysRevLett.63.105](https://doi.org/10.1103/PhysRevLett.63.105).
 
