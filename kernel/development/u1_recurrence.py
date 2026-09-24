@@ -13,6 +13,11 @@ an independent World return.
 from dataclasses import asdict, dataclass
 from typing import Any, Iterable, Mapping
 
+from kernel.runtime.internal_ostar import (
+    InternalOStarModel,
+    ReturnedEpisode,
+    reconstruct_internal_ostar,
+)
 from kernel.runtime.transform_program import TransformProgramError, step
 from kernel.runtime.transform_program_repair_search import (
     BehavioralTrace,
@@ -197,3 +202,18 @@ def run_u1_recurrence(
 
 def result_dict(result: U1RecurrenceResult) -> dict[str, Any]:
     return asdict(result)
+
+
+def rederive_internal_ostar_after_recurrence(
+    result: U1RecurrenceResult,
+    episodes: Iterable[ReturnedEpisode],
+) -> InternalOStarModel:
+    """Require fresh learner-side O* reconstruction after admitted self-change."""
+    if result.successor_correct <= result.parent_correct:
+        raise U1RecurrenceError("O* rederivation requires a causally improved successor")
+    if not result.ctl_ostar_admitted or not result.safety_floor_unchanged:
+        raise U1RecurrenceError("O* rederivation requires admitted unchanged safety floor")
+    rows = tuple(episodes)
+    if not rows:
+        raise U1RecurrenceError("fresh returned episodes required for O* rederivation")
+    return reconstruct_internal_ostar(rows)
