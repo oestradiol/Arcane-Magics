@@ -20,6 +20,57 @@ Interpretation:
 
 Prestige is not a scheduling dependency.
 
+## Five-source architectural reconciliation
+
+The live execution order has been rechecked against all five current TeX sources:
+
+- `monographs/01_OFE/main.tex`;
+- `monographs/02_ECLIPSIS/main.tex`;
+- `monographs/03_ARCANE_MAGICS/main.tex`;
+- `monographs/04_VENUS/main.tex`;
+- `kernel/VENUS_INCIDENCE_LAW.tex`.
+
+Their common dependency structure is narrower than the repository's total symbolic surface:
+
+```text
+OFE
+-> future-relative quotient / transport / reopening discipline
+
+VENUS + VENUS_INCIDENCE_LAW
+-> developmental carrier / research / non-preauthored return / successor discipline
+
+ECLIPSIS + ARCANE_MAGICS
+-> FORM/THEOPHEN/historical-symbolic projections with explicit reduction,
+   term-removal, and non-promotion fences
+```
+
+Therefore symbolic or frontier prominence is not an execution dependency. Eclipsis/Arcane work rises only when it supplies a short discriminator, a reduction result, or a reader-reconstruction obligation. Their own sources explicitly permit reduction and preserve negative engineering results.
+
+Historical Sprint 10/11 material under `provenance/withheld/` remains provenance, not a live successor plan. The live Sprint A-G ordering below supersedes those historical sprint programs for current execution.
+
+### Immediate #69 prerequisite discovered by reconciliation
+
+The ownership contract and reconstructed parent exist, but
+`kernel/development/EDU17R1_REPAIR_AUTHORSHIP_STATUS.json` currently records:
+
+```text
+candidate_status = NOT_AUTHORED
+admitted_developmental_controller_operation.available = false
+```
+
+So #69 has two ordered obligations:
+
+```text
+EDU16-RC1
+-> expose/admit a learner-side proposal operation from the developmental lineage
+-> give it only admitted parent/history + frozen MENTION != INCIDENCE residual
+-> learner authors discriminator + minimal machinery change
+-> freeze ownership receipt
+-> only then expose #31 hidden evaluation
+```
+
+An external agent may build custody, execution, scoring, or packaging infrastructure. It may not choose the substantive repair and relabel that choice as learner ownership.
+
 ## Recently discharged or materially advanced
 
 - **#6 closed:** the bounded OFE core, separating-family result, and later-separator repair are machine-checked in Lean. Physical/QG adequacy remains separate.
@@ -36,7 +87,7 @@ Prestige is not a scheduling dependency.
 
 | Priority | Issue | Work |
 |---:|---|---|
-| 1 | #69 | have EDU16-RC1 author and freeze the substantive `MENTION != INCIDENCE` repair/discriminator without hidden #31 exposure |
+| 1 | #69 | first expose/admit the missing learner-side proposal operation from EDU16-RC1; then have that controller author and freeze the substantive `MENTION != INCIDENCE` repair/discriminator without hidden #31 exposure |
 | 2 | #31 | run the sealed hidden `MENTION != INCIDENCE` A/B/C/D evaluation on the frozen learner-authored repair |
 | 3 | #17 | generalize only the minimum sealed/double-blind machinery required to make the run reusable |
 
@@ -183,7 +234,8 @@ They compete for priority when they obtain a short path to a real discriminator 
 ## Current shortest high-leverage chain
 
 ```text
-#69 learner-authored repair
+#69 admit learner-side proposal operation
+-> #69 learner-authored repair
 -> #31 hidden semantic return
 -> #10 first matched causal ablation
 -> #42 / #15 native capability tests
