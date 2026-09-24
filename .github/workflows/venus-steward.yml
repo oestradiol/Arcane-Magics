@@ -60,6 +60,9 @@ jobs:
       - name: Matched experiment contract audit
         run: python scripts/validate_experiment_manifest.py evaluation/MATCHED_EXPERIMENT_TEMPLATE.json
 
+      - name: Hidden benchmark protocol audit
+        run: python scripts/audit_hidden_benchmarks.py
+
       - name: Construct disposition audit
         run: python scripts/audit_construct_dispositions.py
 
