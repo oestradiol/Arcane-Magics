@@ -184,7 +184,10 @@ def inspect_public(md: Path) -> list[str]:
         scrubbed = re.sub(r"\$\$.*?\$\$", "", scrubbed)
         scrubbed = re.sub(r"\$[^$]+\$", "", scrubbed)
         if not display_math and TEX_OUTSIDE_MATH.search(scrubbed):
-            errors.append(f"{rel(md)}:{i}: TeX command appears outside math/code")
+            snippet = scrubbed.strip().replace("\t", " ")[:180]
+            errors.append(
+                f"{rel(md)}:{i}: TeX command appears outside math/code: {snippet!r}"
+            )
 
     if display_math:
         errors.append(f"{rel(md)}: unclosed $$ display math")
