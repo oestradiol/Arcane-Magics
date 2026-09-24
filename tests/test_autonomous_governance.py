@@ -495,6 +495,19 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertIn("VENUS_RESEARCH_PROPOSAL.json", text)
         self.assertIn("VENUS_RESEARCH_EVIDENCE.json", text)
 
+    def test_change_gate_executes_before_autonomous_git_write(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        change_at = text.index("Let Venus derive a post-evidence change disposition")
+        push_at = text.index("git push origin")
+        self.assertLess(change_at, push_at)
+        self.assertIn("run_venus_change_candidate.py", text)
+
+    def test_autonomous_branch_commits_change_candidate_artifact(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("autonomy/changes/", text)
+        self.assertIn("VENUS_CHANGE_CANDIDATE.json", text)
+        self.assertIn("Change disposition:", text)
+
     def test_learning_state_is_committed_but_not_authority(self):
         obj = json.loads(
             (ROOT / "kernel/development/AUTONOMOUS_LEARNING_STATE.json").read_text(

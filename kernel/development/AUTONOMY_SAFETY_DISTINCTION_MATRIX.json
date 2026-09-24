@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.6",
+  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.7",
   "date": "2026-09-24",
   "claim": "Bounded autonomy may expand study/learning/proposal capability only while the listed causal and authority distinctions remain executable and fail-closed.",
   "distinctions": [
@@ -401,6 +401,35 @@
         "tests/test_autonomous_governance.py"
       ],
       "invariant": "each fixed local check and the whole autonomous cycle are time-bounded; timeout is failed evidence and cannot be interpreted as success"
+    },
+    {
+      "id": "LOCAL_PASS_NOT_MUTATION_AUTHORITY",
+      "tests": [
+        "tests/test_autonomous_change_gate.py"
+      ],
+      "invariant": "green local evidence retains the current implementation and cannot itself authorize source mutation"
+    },
+    {
+      "id": "TARGET_RELEVANT_FAILURE_REQUIRED_FOR_REPAIR_PROPOSAL",
+      "tests": [
+        "tests/test_autonomous_change_gate.py"
+      ],
+      "invariant": "a repair hypothesis requires failure of an admitted target-relevant check; ungrounded or generic process failures cannot be laundered into target repair"
+    },
+    {
+      "id": "CHANGE_CANDIDATE_NOT_SOURCE_WRITE",
+      "tests": [
+        "tests/test_autonomous_change_gate.py",
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "post-evidence change candidate is a frozen draft artifact only and carries no source mutation or promotion authority"
+    },
+    {
+      "id": "UNTRUSTED_PATH_REFERENCE_NOT_MUTATION_AUTHORITY",
+      "tests": [
+        "tests/test_autonomous_change_gate.py"
+      ],
+      "invariant": "repository paths extracted from issue/PR text remain untrusted informational references and cannot grant mutation authority, including safety-floor paths"
     }
   ],
   "promotion_authority": false
