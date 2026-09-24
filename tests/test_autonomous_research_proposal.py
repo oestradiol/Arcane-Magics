@@ -16,7 +16,7 @@ from kernel.development.autonomous_proposal import (
 )
 from kernel.development.autonomous_learning import METHODS, empty_state, update_from_cycle_prs
 from kernel.development.autonomous_worker import WorkItem, make_cycle
-from kernel.development.autonomous_evidence import run_proposal_checks
+from kernel.development.autonomous_evidence import SAFE_CHECK_TIMEOUT_SECONDS, run_proposal_checks
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -131,6 +131,7 @@ class AutonomousResearchProposalTests(unittest.TestCase):
         self.assertIn("scripts/audit_autonomy_safety_matrix.py", command)
         self.assertNotIsInstance(command, str)
         self.assertTrue(all(isinstance(part, str) for part in command))
+        self.assertEqual(run.call_args.kwargs["timeout"], SAFE_CHECK_TIMEOUT_SECONDS)
 
     @patch("kernel.development.autonomous_evidence.subprocess.run")
     def test_vmk2_trust_evidence_uses_fixed_test_modules(self, run):
@@ -158,6 +159,23 @@ class AutonomousResearchProposalTests(unittest.TestCase):
         self.assertTrue(evidence.all_local_checks_passed)
         self.assertFalse(evidence.external_return_satisfied)
 
+    @patch("kernel.development.autonomous_evidence.subprocess.run")
+    def test_check_timeout_is_failed_returned_evidence(self, run):
+        from subprocess import TimeoutExpired
+
+        run.side_effect = TimeoutExpired(
+            cmd=("python", "-m", "unittest"),
+            timeout=SAFE_CHECK_TIMEOUT_SECONDS,
+            output="partial",
+            stderr="timed out",
+        )
+        proposal = proposal_dict(make_research_proposal(cycle("DEPENDENCY_TRACE")))
+        evidence = run_proposal_checks(proposal)
+        self.assertEqual(evidence.status, "LOCAL_CHECKS_FAIL")
+        self.assertFalse(evidence.all_local_checks_passed)
+        self.assertEqual(evidence.results[0].returncode, 124)
+        self.assertFalse(evidence.results[0].passed)
+
     def test_unknown_check_id_fails_closed(self):
         proposal = proposal_dict(make_research_proposal(cycle("DEPENDENCY_TRACE")))
         proposal["check_ids"] = ["echo malicious-body"]
@@ -180,7 +198,7 @@ class AutonomousResearchProposalTests(unittest.TestCase):
                 "reviews": [{
                     "id": 1,
                     "body": "\n".join(review_lines),
-                    "author": {"login": "external-reviewer"},
+                    "author": {"login": "oestradiol"},
                     "submittedAt": "2026-09-24T21:00:00Z",
                 }],
             }],
