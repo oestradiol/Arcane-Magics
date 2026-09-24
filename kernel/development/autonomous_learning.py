@@ -44,8 +44,10 @@ def empty_state() -> WorkLearningState:
 
 
 def from_json(obj: Mapping[str, Any]) -> WorkLearningState:
-    # v0.1 compatibility: old seen_cycle_prs are intentionally not treated as
-    # learning returns because merge/close status was an invalid reward source.
+    # v0.1 used merge/close status as reward. None of those counts may migrate
+    # into the corrected learner because admission != task utility.
+    if obj.get("schema") == "Venus.AutonomousLearningState.v0.1":
+        return empty_state()
     return WorkLearningState(
         seen_return_ids=tuple(str(x) for x in obj.get("seen_return_ids", ())),
         kind_success={str(k): int(v) for k, v in obj.get("kind_success", {}).items()},
