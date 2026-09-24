@@ -529,9 +529,9 @@
       "current_owner": "provenance/historical-runtime/R194",
       "test_layer": "T2/T3",
       "test_id_path": null,
-      "status": "HISTORICAL_REGRESSION_ORACLE_NEEDS_MINIMAL_REEXECUTION_ROUTE",
-      "credit_genealogy_note": "historical experimental carrier",
-      "reopening_condition": "materialize minimal regression fixture against current kernel"
+      "status": "OPEN_EXTRACTION_FROM_CANONICAL_CUSTODY",
+      "credit_genealogy_note": "Historical R154 regression oracle is referenced by Git, but its exact state payloads remain in Canonical custody and are not yet extracted into the live Git provenance carrier.",
+      "reopening_condition": "Extract authentic R154 state/manifest payloads from Canonical, hash-bind them into Git provenance, then add the minimal re-execution route without rewriting historical authority."
     },
     {
       "id": "D-R179-VMK1",
