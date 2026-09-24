@@ -97,6 +97,24 @@ Examples:
 
 See `PUBLICATION_CONSTITUTION.md` and `docs/FRONTIER_RESEARCH.md`.
 
+## Humane interface check
+
+For reader-facing work, include at least one ordinary-language reconstruction of what the machinery means for an indexed participant or affected system.
+
+Useful prompts:
+
+- what is being received?
+- where does it land?
+- what action or continuation changes?
+- what can return independently?
+- who pays the maintenance cost?
+- can another center disagree, refuse, fork, or exit?
+- what remains stable, and what is allowed to reopen?
+
+Do not invent personal stories merely to make a theory feel warm. The point is operational legibility, not sentimentality.
+
+See `docs/INHABITABLE_READER_PATH.md`.
+
 ## Reproducibility
 
 Start with:
