@@ -13,6 +13,8 @@ its own GitHub state changes after the prior autonomous-cycle outcome.
 """
 
 from dataclasses import dataclass
+import hashlib
+import json
 import re
 from typing import Any, Iterable, Mapping
 
@@ -100,7 +102,7 @@ def from_json(obj: Mapping[str, Any]) -> WorkLearningState:
 
 def to_json(state: WorkLearningState) -> dict[str, Any]:
     return {
-        "schema": "Venus.AutonomousLearningState.v0.3",
+        "schema": "Venus.AutonomousLearningState.v0.4",
         "seen_return_ids": list(state.seen_return_ids),
         "kind_success": dict(state.kind_success),
         "kind_failure": dict(state.kind_failure),
@@ -124,6 +126,35 @@ def _review_body(review: Mapping[str, Any]) -> str:
     return str(review.get("body") or "")
 
 
+def _return_time(review: Mapping[str, Any]) -> str:
+    return str(
+        review.get("submittedAt")
+        or review.get("submitted_at")
+        or review.get("createdAt")
+        or review.get("created_at")
+        or ""
+    )
+
+
+def _return_fingerprint(
+    *,
+    carrier_kind: str,
+    carrier_number: int,
+    login: str,
+    body: str,
+    returned_at: str,
+) -> str:
+    payload = {
+        "carrier_kind": carrier_kind.upper(),
+        "carrier_number": int(carrier_number),
+        "author": login,
+        "body": body,
+        "submitted_at": returned_at,
+    }
+    raw = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(raw).hexdigest()
+
+
 def extract_explicit_returns(
     carriers: Iterable[Mapping[str, Any]],
 ) -> tuple[tuple[str, str, str, bool], ...]:
@@ -143,16 +174,19 @@ def extract_explicit_returns(
             if not login or login.lower() in SELF_REVIEW_LOGINS:
                 continue
             body = _review_body(review)
-            review_id = (
-                review.get("id")
-                or review.get("submittedAt")
-                or review.get("createdAt")
-                or index
+            returned_at = _return_time(review)
+            if not returned_at:
+                # A stable external return identity requires provenance time.
+                # Fail closed rather than silently keying learning to list order.
+                continue
+            fingerprint = _return_fingerprint(
+                carrier_kind=carrier_kind,
+                carrier_number=carrier_number,
+                login=login,
+                body=body,
+                returned_at=returned_at,
             )
-            if carrier_kind == "ISSUE":
-                return_prefix = f"issue:{carrier_number}:comment:{review_id}"
-            else:
-                return_prefix = f"pr:{carrier_number}:review:{review_id}"
+            return_prefix = f"return:{fingerprint}"
 
             useful = USEFUL_MARKER in body
             unhelpful = UNHELPFUL_MARKER in body
