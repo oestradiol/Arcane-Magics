@@ -32,6 +32,7 @@
     "kernel/development/autonomous_problem_formation.py",
     "kernel/development/autonomous_proposal.py",
     "kernel/development/autonomous_worker.py",
+    "kernel/development/u1_recurrence.py",
     "kernel/runtime/ctl.py",
     "kernel/runtime/induced_policy.py",
     "kernel/runtime/internalizer.py",
