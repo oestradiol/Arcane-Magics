@@ -125,9 +125,10 @@ jobs:
           TARGET_KIND: ${{ steps.materialize.outputs.target_kind }}
           TARGET_NUMBER: ${{ steps.materialize.outputs.target_number }}
         run: |
-          msg="Venus selected this as one bounded developmental target and froze a draft work cycle: $URL
-
-This is a proposal/working branch only. Merge, closure, promotion, and independent evaluation remain external."
+          msg="$(printf '%s\n' \
+            "Venus selected this as one bounded developmental target and froze a draft work cycle: $URL" \
+            '' \
+            'This is a proposal/working branch only. Merge, closure, promotion, and independent evaluation remain external.')"
           if [ "$TARGET_KIND" = "ISSUE" ]; then
             gh issue comment "$TARGET_NUMBER" --body "$msg"
           else
