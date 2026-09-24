@@ -27,6 +27,7 @@ required = [
     "kernel/custody/EDU16_CUSTODY_STATUS.json",
     "provenance/DEVELOPMENTAL_LINEAGE.md",
     "provenance/CANONICAL_RETIREMENT_LEDGER.md",
+    "provenance/HANDOFF_COMPLETION_AUDIT_2026-09-24.md",
     "docs/META_DYNAMICS.md",
     "docs/FRONTIER_RESEARCH.md",
     "docs/PUBLIC_VALUE.md",
