@@ -127,7 +127,7 @@ Release or promotion is blocked by any unresolved item below that is material to
 11. theological, phenomenological, formal, engineering, or physical warrant laundering;
 12. rescue route that makes the claim effectively unfalsifiable.
 
-Reviewer objections are typed as: fatal inconsistency, unsupported promotion, missing comparator/prior art, ambiguous register/index, proof defect, reproducibility defect, founder-dependence/didactic defect, provenance/licensing defect, bounded weakness, or style. Style alone does not change truth status.
+Reviewer objections are typed as: fatal inconsistency, unsupported promotion, missing comparator/credit relation, ambiguous register/index, proof defect, reproducibility defect, founder-dependence/didactic defect, provenance/licensing defect, bounded weakness, or style. Style alone does not change truth status.
 
 ## 5. Proof audit
 
