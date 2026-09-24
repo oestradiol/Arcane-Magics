@@ -108,7 +108,7 @@ FAIL(realization r)
 -/-> unrelated parent/sibling erasure
 ```
 
-## 5. Devil's Audit
+## 4. Devil's Audit
 
 A hostile-but-fair reviewer attacks the strongest version of the claim.
 
@@ -129,7 +129,7 @@ Release or promotion is blocked by any unresolved item below that is material to
 
 Reviewer objections are typed as: fatal inconsistency, unsupported promotion, missing comparator/prior art, ambiguous register/index, proof defect, reproducibility defect, founder-dependence/didactic defect, provenance/licensing defect, bounded weakness, or style. Style alone does not change truth status.
 
-## 4. Proof audit
+## 5. Proof audit
 
 Formal typography does not increase warrant.
 
