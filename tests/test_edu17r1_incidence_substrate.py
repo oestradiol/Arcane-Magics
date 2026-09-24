@@ -26,6 +26,7 @@ class EDU17R1IncidenceSubstrateAuditTests(unittest.TestCase):
             "ig2_induced_incidence_basis",
             "ig3_generic_raw_carrier_scanner",
             "ig4_source_relation_inquiry",
+            "u1_state_owned_add_relation_repair",
             "u4_source_grounded_text_relations",
             "worldmirror_evidence_bound_relations",
             "historical_r194_target_label_free_grammar_expansion",
