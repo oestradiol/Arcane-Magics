@@ -21,7 +21,17 @@ body:
     id: comparator
     attributes:
       label: Comparator / null / rival
-      description: What would falsify, reduce, or mature-substitute the proposal?
+      description: What would falsify, reduce, or mature-substitute the proposal at this task/index?
+  - type: textarea
+    id: credit_relation
+    attributes:
+      label: Credit / genealogy relation
+      description: If external work is relevant, type it separately as historical predecessor, independent rediscovery, comparative recurrence, technical donor, mature comparator, or subsuming substitute. Do not infer one from another.
+  - type: textarea
+    id: residual
+    attributes:
+      label: Residual contribution / deletion test
+      description: What consequence changes if the project relation is removed and the strongest mature substitute is used instead?
   - type: textarea
     id: fence
     attributes:
