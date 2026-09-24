@@ -1,0 +1,22 @@
+{
+  "change_id": "6dd355de367bcc16a9816e9c5bc0090d0e62a2dbf42b9a64b56c0c694b3bc1a7",
+  "cycle_id": "c845bfefad941ce4032afd0cca884c1d9f228f3550e934b4bcb0480c9c08551c",
+  "disposition": "WITHHOLD_NO_MUTATION",
+  "evidence_id": "187af4e13dc68552d0e1d42a325826ba0def0c2fe8c73e0998fa32dcde02aa95",
+  "failed_process_check_ids": [],
+  "failed_target_check_ids": [],
+  "promotion_authority": false,
+  "proposal_id": "8c528219271a6844830d12922d41c3e83b48769793a2519a4ebd1a399bc26ccc",
+  "reason": "required external/hidden return remains unsatisfied",
+  "schema": "Venus.AutonomousChangeCandidate.v0.1",
+  "source_mutation_authority": false,
+  "suggested_operation": null,
+  "target_kind": "PR",
+  "target_number": 84,
+  "target_text_is_authority": false,
+  "untrusted_implicated_paths": [
+    "kernel/runtime/ctl.py",
+    "kernel/development/SAFE_STRONG_RSI_STATUS.json",
+    "kernel/runtime/adaptive_successor_gate.py"
+  ]
+}
