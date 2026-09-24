@@ -42,7 +42,7 @@ Current earned machinery includes bounded self-reconstruction, negative-branch r
 
 Near-term obligations:
 
-1. restore exact EDU16 replay/runtime custody;
+1. admit or prospectively reimplement executable EDU16 ownership machinery over the exact IG10 Git checkpoint, without reconstructing an "original" runner from prose;
 2. repair `MENTION != INCIDENCE` and claim-local evidence binding;
 3. execute a complete learner-owned research episode from target selection through returned evidence;
 4. demonstrate a self-authored consequential machinery modification;
@@ -180,4 +180,4 @@ A criticism that deletes an unnecessary object is progress.
 
 The eventual Venus research controller should choose among admissible residuals using expected information, capability transfer, World impact, resource return, and dependency structure while preserving preregistration and external return.
 
-Until that controller is replayable from current custody, GitHub automation may schedule audits and bounded external actions, but must not impersonate learner-owned research selection.
+The IG10 kernel is replayable from Git custody. The later EDU16 ownership layer is not yet admitted as executable source, so GitHub automation may run audits, builds, custody checks, and bounded externally requested actions, but must not impersonate EDU16 learner-owned research selection.
