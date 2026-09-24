@@ -198,6 +198,41 @@ def inspect_public(md: Path) -> list[str]:
     return errors
 
 
+def inspect_navigation_contract() -> list[str]:
+    errors: list[str] = []
+
+    required_start_links = (
+        "../kernel/CURRENT_STATE.md",
+        "../kernel/README.md",
+        "EARNED_MILESTONES.md",
+        "TEST_COVERAGE_MATRIX.md",
+        "../provenance/CANONICAL_RETIREMENT_LEDGER.md",
+    )
+    start = ROOT / "docs/START_HERE.md"
+    if not start.exists():
+        errors.append("missing docs/START_HERE.md")
+    else:
+        text = start.read_text(encoding="utf-8", errors="replace")
+        for link in required_start_links:
+            if f"]({link})" not in text:
+                errors.append(f"docs/START_HERE.md: missing authoritative route {link}")
+
+    readme = ROOT / "README.md"
+    if readme.exists():
+        text = readme.read_text(encoding="utf-8", errors="replace")
+        if "docs/START_HERE.md" not in text:
+            errors.append("README.md: does not route through docs/START_HERE.md")
+
+    coverage = ROOT / "docs/TEST_COVERAGE_MATRIX.md"
+    if coverage.exists():
+        text = coverage.read_text(encoding="utf-8", errors="replace")
+        for issue in range(4, 38):
+            if f"#{issue} " not in text and f"#{issue} |" not in text:
+                errors.append(f"docs/TEST_COVERAGE_MATRIX.md: missing issue #{issue}")
+
+    return errors
+
+
 def inspect_state_consistency() -> list[str]:
     errors: list[str] = []
 
@@ -251,6 +286,7 @@ def main() -> int:
             errors.extend(inspect_public(md))
 
     errors.extend(inspect_state_consistency())
+    errors.extend(inspect_navigation_contract())
 
     if errors:
         print("MARKDOWN / READER-SURFACE AUDIT FAIL")
