@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 WORKFLOW = ROOT / ".github/workflows/venus-autonomous-worker.yml"
 
 
-def external_review(body: str, *, login: str = "external-reviewer", review_id: int = 1):
+def external_review(body: str, *, login: str = "oestradiol", review_id: int = 1):
     return {
         "id": review_id,
         "body": body,
@@ -104,6 +104,42 @@ class AutonomousGovernanceTests(unittest.TestCase):
         )
         self.assertEqual(updated.kind_success["ISSUE"], 0)
 
+    def test_unauthorized_external_reviewer_cannot_train_learning_state(self):
+        updated = update_from_cycle_prs(
+            empty_state(),
+            [{
+                "number": 299,
+                "title": "venus: autonomous cycle issue-72",
+                "state": "OPEN",
+                "reviews": [
+                    external_review(
+                        USEFUL_MARKER + "\nVENUS_METHOD_RETURN: REPRODUCTION: USEFUL",
+                        login="random-commenter",
+                        review_id=900,
+                    )
+                ],
+            }],
+        )
+        self.assertEqual(updated.kind_success["ISSUE"], 0)
+        self.assertEqual(updated.method_success["REPRODUCTION"], 0)
+        self.assertEqual(updated.seen_return_ids, ())
+
+    def test_explicit_authority_parameter_fails_closed_on_wildcard(self):
+        with self.assertRaisesRegex(ValueError, "non-wildcard"):
+            update_from_cycle_prs(
+                empty_state(),
+                [],
+                authorized_logins={"*"},
+            )
+
+    def test_self_identity_cannot_be_authorized_as_external_return(self):
+        with self.assertRaisesRegex(ValueError, "self-review"):
+            update_from_cycle_prs(
+                empty_state(),
+                [],
+                authorized_logins={"github-actions[bot]"},
+            )
+
     def test_ambiguous_review_marker_is_ignored(self):
         body = USEFUL_MARKER + "\n" + UNHELPFUL_MARKER
         updated = update_from_cycle_prs(
@@ -166,7 +202,7 @@ class AutonomousGovernanceTests(unittest.TestCase):
             "comments": [{
                 "id": 991,
                 "body": f"VENUS_METHOD_RETURN: {method}: USEFUL",
-                "author": {"login": "external-reviewer"},
+                "author": {"login": "oestradiol"},
                 "createdAt": "2026-09-24T22:00:00Z",
             }],
         }]
@@ -217,13 +253,13 @@ class AutonomousGovernanceTests(unittest.TestCase):
                 {
                     "id": 1,
                     "body": body,
-                    "author": {"login": "external-reviewer"},
+                    "author": {"login": "oestradiol"},
                     "createdAt": "2026-09-24T22:00:00Z",
                 },
                 {
                     "id": 2,
                     "body": body,
-                    "author": {"login": "external-reviewer"},
+                    "author": {"login": "oestradiol"},
                     "createdAt": "2026-09-24T22:05:00Z",
                 },
             ],
