@@ -33,10 +33,24 @@ required = [
     "docs/EVALUATION_CONSTITUTION.md",
     "docs/SOTA_WATCH.md",
     "docs/EVALUATION_REGISTRY.json",
+    "shared/venusmonograph.sty",
 ]
 for rel in required:
     if not (ROOT / rel).exists():
         errors.append("missing " + rel)
+
+# Shared TeX style is the single source authority. Standalone submission
+# packages materialize it during packaging; source directories must not fork it.
+for name in ["01_OFE", "02_ECLIPSIS", "03_ARCANE_MAGICS", "04_VENUS"]:
+    local_style = ROOT / "monographs" / name / "venusmonograph.sty"
+    if local_style.exists():
+        errors.append(f"{name}: paper-local venusmonograph.sty duplicates shared style authority")
+
+for rel in ["shared/venusmonograph.sty", "monographs/02_ECLIPSIS/main.tex", "monographs/03_ARCANE_MAGICS/main.tex", "monographs/04_VENUS/main.tex"]:
+    text = (ROOT / rel).read_text(encoding="utf-8", errors="replace")
+    for forbidden_font in ("newtxtext", "newtxmath", "sourcesanspro"):
+        if forbidden_font in text:
+            errors.append(f"{rel}: fonts-extra dependency resurrected: {forbidden_font}")
 
 for name in ["01_OFE", "02_ECLIPSIS", "03_ARCANE_MAGICS", "04_VENUS"]:
     tex = ROOT / "monographs" / name / "main.tex"
