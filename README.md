@@ -64,7 +64,7 @@ EDU17 is preserved as `INVALID_FOR_PROMOTION`; EDU17R1 remains `WITHHOLD` after 
 
 See [`prototype/DEVELOPMENTAL_LINEAGE.md`](prototype/DEVELOPMENTAL_LINEAGE.md), [`prototype/CURRENT_STATE.md`](prototype/CURRENT_STATE.md), and compact custody metadata under [`prototype/custody/`](prototype/custody/).
 
-`prototype/stable-executable/` is the historical R00-R194 carrier for replay, regression, and ablation. It is not the current organism.
+`provenance/historical-runtime/R194/` preserves the historical R00-R194 carrier for replay/regression/ablation. It is provenance, not the current organism.
 
 ## The deeper learning bet
 
@@ -157,7 +157,7 @@ make forum
 make release
 ```
 
-CI checks reader-facing Markdown, repository/current-state invariants, compact custody metadata, publication builds, and release packaging. Generated forum Markdown is an editing substrate until its cross-references and argument structure pass the public-surface audit.
+CI checks reader-facing Markdown, proof containers, persistent-memory tests, repository/current-state invariants, compact custody metadata, publication builds, and release packaging. Generated forum Markdown is an editing substrate until its cross-references and argument structure pass the public-surface audit.
 
 ## Contribute, criticize, replicate
 
