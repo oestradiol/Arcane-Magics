@@ -29,11 +29,5 @@
   "parent_meta_digest": "1ceac73a67267db2ce147a3eb14ec41de0a4dd1537acc02877f58c3f8423a473",
   "selected_operation": "REMOVE_TRANSITION",
   "selection_provenance": "SSR2_CYCLE2_TRAINING_RETURNS",
-  "hidden_evaluation_exposed": false,
-  "max_patch_count": 1,
-  "available_patch_counts": [
-    1,
-    2
-  ],
-  "composition_rule": "INDEPENDENT_PAIR_PATCHES_MAY_COMPOSE_WHEN_EACH_IS_UNIQUELY_RETURN_IDENTIFIED"
+  "hidden_evaluation_exposed": false
 }
