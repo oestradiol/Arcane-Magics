@@ -22,22 +22,20 @@
     "hidden_evaluation_access": false,
     "promotion_authority": false
   },
-  "neutral_feature_substrate": {
-    "artifact": "kernel/development/relation_feature_adapter.py",
-    "disposition": "HOST_RECONSTRUCTED_NEUTRAL_SUBSTRATE_NOT_LEARNER_AUTHORED",
-    "source_lineage": [
-      "U4 source-grounded neutral relation extraction",
-      "WorldMirror evidence-bound relation instances"
+  "claim_fence": "Admission makes only the target-blind generic search operation available. It does not duplicate IG1-IG10 semantic/incidence machinery, does not establish learner-authored cross-layer binding, does not emit the EDU17R1 repair, and does not grant promotion authority.",
+  "current_lineage_context": {
+    "exact_runtime_checkpoint": "IG10 [1308]",
+    "positive_developmental_authority": "EDU16 [1703]",
+    "already_admitted_substrate": [
+      "IG1 returned operator semantics",
+      "IG2 induced incidence basis",
+      "IG3 generic raw-carrier incidence grammar",
+      "IG4 natural-artifact relation induction",
+      "IG7 reconstructed semantic method",
+      "IG8/IG8R1 evolving future tests and developmental routing",
+      "IG9 boundary equivalence",
+      "IG10 replayable developed-VM handoff"
     ],
-    "target_specific_policy_embedded": false,
-    "coordinates": [
-      "source_coordinates_present",
-      "source_provenance_present",
-      "neutral_relation_operator_present",
-      "relation_endpoints_present",
-      "typed_relation_instance_present",
-      "independent_return_present"
-    ]
-  },
-  "claim_fence": "Admission makes a generic inherited search operation available to the current developmental carrier. It does not establish historical EDU16 ownership, learner-authored feature construction, a repair candidate, repair efficacy, or promotion."
+    "remaining_gap": "learner-side cross-layer binder from raw/source carrier relation occurrence to typed object/source-level empirical relation instance under source coordinates, provenance, and independent return"
+  }
 }
