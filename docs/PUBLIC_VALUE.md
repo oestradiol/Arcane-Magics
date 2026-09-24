@@ -40,6 +40,8 @@ PASS_MODEL_SPECIFIC_PHYSICAL_F_WITNESS
 
 These are different layers of one lineage.
 
+The repository also contains newer **admitted infrastructure** that does not advance the developmental head: a state-owned inherited generic residual-search capability and executable Internalizer/O*/Anti-Minerva guards. They make the next repair path more self-contained while preserving World return, evaluator independence, authority, jurisdiction, STOP/WITHHOLD, and parent custody outside the capability.
+
 ## The failure that best explains the architecture
 
 EDU17 initially looked like a successful research episode.
@@ -58,6 +60,8 @@ EDU17R1 then preregistered a claim-local evidence repair. Its fresh test surface
 WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION
 MENTION != INCIDENCE
 ```
+
+A later prospective repair cycle has now frozen `EDU17R1-RC1-WORD-JACCARD-K3-v1` before hidden evaluation. A state-owned generic method family selected `WORD_JACCARD_K3` on public development under a frozen selection law; an ownership receipt binds the candidate to EDU16-RC1, and hidden #31 remains unexposed. This earns repair **authorship at the bounded public-development/freeze scope**, not efficacy.
 
 That sequence is a compact example of the project:
 
@@ -152,7 +156,7 @@ The repository does not currently establish:
 
 - AGI;
 - capability-SOTA;
-- DNN replacement;
+- substrate independence or hosted-model replacement where such a substrate is actually present;
 - open-ended RSI;
 - autonomous science;
 - unrestricted semantic understanding;

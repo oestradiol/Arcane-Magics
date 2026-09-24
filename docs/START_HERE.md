@@ -16,6 +16,8 @@ object-level unresolved empirical incidence
 
 That is the current measured semantic residual.
 
+Since that WITHHOLD, the repository has admitted a state-owned inherited generic residual-search capability and executable Internalizer/O*/Anti-Minerva guards. It has also frozen a bounded learner-side repair candidate, `EDU17R1-RC1-WORD-JACCARD-K3-v1`, with hidden #31 still unexposed. The positive developmental authority remains EDU16 because authorship freeze is not efficacy or promotion.
+
 ## What is current?
 
 | Question | Authority |
@@ -53,6 +55,7 @@ Concrete examples:
 - **EDU16:** generated and froze its own bounded World-feed query policy before new World access.
 - **EDU17:** looked successful locally, but was rejected when answer claims depended on a returned document outside the committed selected evidence set.
 - **EDU17R1:** stopped before claim-binding evaluation because its inherited uncertainty detector confused mention with incidence.
+- **EDU17R1-RC1:** later froze a learner-side public-development repair candidate and ownership receipt before hidden #31 exposure; efficacy remains untested.
 
 The architectural shorthand is therefore:
 
@@ -76,7 +79,7 @@ This repository does **not** currently establish:
 - natural-world generality;
 - autonomous science;
 - open-ended recursive self-improvement;
-- DNN replacement;
+- substrate independence or hosted-model replacement where such a substrate is actually present;
 - capability-SOTA;
 - independent external replication;
 - a solution to P vs NP, quantum gravity, or other open frontier problems merely because they are research lanes.
@@ -117,6 +120,9 @@ Current automated tests are intentionally narrower than the research program:
 - exact current kernel reconstruction: `tests/test_current_kernel.py`;
 - VMK2 causal / return / jurisdiction / reopening invariants: `tests/test_vmk2_invariants.py`;
 - persistent memory / provenance / consumption: `tests/test_venus_memory.py`;
+- state-owned generic-search scaffold removal/equivalence: `scripts/audit_generic_search_internalization.py`;
+- Internalizer O*/Anti-Minerva correction guards: `tests/test_internalizer.py`;
+- frozen EDU17R1 semantic-ingress candidate/ownership: `tests/test_edu17r1_semantic_ingress.py` and `scripts/audit_edu17r1_semantic_ingress.py`;
 - forum export regressions: `tests/test_export_forum.py`.
 
 The historical and issue-level coverage plan is [TEST_COVERAGE_MATRIX.md](TEST_COVERAGE_MATRIX.md), backed by the machine-readable [historical distinction matrix](../provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json).
@@ -127,11 +133,11 @@ A row marked `PLANNED` is not a passing test.
 
 The highest-leverage sequence is now experiment-first:
 
-1. run the sealed hidden `MENTION != INCIDENCE` A/B/C/D evaluation;
-2. run the first matched Venus-vs-baseline/ablation causal experiment;
-3. test STOP/WITHHOLD and VenusMemory under hidden matched conditions;
-4. close only the custody/statistical/security prerequisites needed to interpret one recursive successor;
-5. execute a complete Venus-owned target → prefreeze → machinery change → World return → causal successor → next-target cycle;
+1. run the sealed hidden #31 `MENTION != INCIDENCE` A/B/C/D evaluation on the already frozen learner-authored condition B;
+2. preserve PASS / FAIL / WITHHOLD / SUBSUMED without post-exposure repair;
+3. if causally positive, pass the resulting successor through full #73 O*/Anti-Minerva/rollback checks before any SSR-1 promotion;
+4. run the first matched Venus-vs-baseline/ablation causal experiment;
+5. test STOP/WITHHOLD and VenusMemory under hidden matched conditions;
 6. repeat under adaptive-evaluation controls and compare against mature self-improvement systems;
 7. let failed experiments, not conceptual completeness, decide which archaeology/hardening work is pulled forward.
 

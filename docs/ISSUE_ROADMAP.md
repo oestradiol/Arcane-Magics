@@ -25,10 +25,12 @@ Prestige is not a scheduling dependency.
 - **#6 closed:** the bounded OFE core, separating-family result, and later-separator repair are machine-checked in Lean. Physical/QG adequacy remains separate.
 - **#33 closed:** theorem-structure lint is explicitly separated from formal proof verification.
 - **#30 advanced:** deterministic unordered canonicalization, finite-number policy, digest fixtures, and state-purity regressions have landed. External authentication/trust-root/revocation work remains.
-- **#31 advanced:** public development cases, frozen naive lexical failure floor, sealed hidden-evaluation protocol, scorer, and A/B/C/D condition contract exist. The remaining burden is the independent hidden matched run.
+- **#31 advanced:** public development cases, naive failure floor, sealed protocol/analysis plan, exact prefrozen A/B/C/D executors, condition-freeze manifest, scorer, and hidden-readiness audit now exist. Status is `HARNESS_READY_EXTERNAL_HIDDEN_RETURN_REQUIRED`; the remaining burden is an independently authored/sealed hidden split and matched run.
 - **#15 advanced:** public causal-memory dev set, scorer, ablation protocol, and weak floor controls exist. Hidden matched memory ablation remains.
 - **#41–#43 advanced:** public reliability-pressure surfaces now exist for false-promotion/self-evolution, ACT/GATHER/WITHHOLD/STOP, and adversarial World-input/security. Hidden/dynamic matched evaluation remains.
 - **#35/#36 advanced:** historical distinction routing, live issue coverage, START_HERE, TESTS, REPRODUCE, and navigation contracts exist. Remaining archaeology/UX work no longer blocks discriminating experiments unless a specific experiment depends on it.
+- **#73 minimal substrate landed:** #89 internalized the generic residual search as state-owned inherited capability; #91 completed the current O*/Anti-Minerva guard surface. Full recurrent #73 remains open only across an actual learner-owned successor transition.
+- **#69 closed at bounded repair-authorship freeze:** `EDU17R1-RC1-WORD-JACCARD-K3-v1` is `AUTHORED_FROZEN` with hidden #31 unexposed. Repair efficacy is still unearned.
 
 ## Critical path: execute, do not add more doctrine
 
@@ -36,10 +38,8 @@ Prestige is not a scheduling dependency.
 
 | Priority | Issue | Work |
 |---:|---|---|
-| 1 | #73 (minimal slice) | **LANDED via #89:** generic proposal/search scaffold is state-owned and donor-free under semantic-equivalence/removal audit; finish O*/Anti-Minerva recurrence guards on the live Internalizer |
-| 2 | #69 | use the admitted learner-side search capability to form/freeze the substantive `MENTION != INCIDENCE` repair/discriminator without hidden #31 exposure; ambiguity must generate another discriminator rather than an externally supplied answer |
-| 3 | #31 | run the sealed hidden `MENTION != INCIDENCE` A/B/C/D evaluation on the frozen learner-authored repair |
-| 4 | #17 | generalize only the minimum sealed/double-blind machinery required to make the run reusable |
+| 1 | #31 | run the sealed hidden `MENTION != INCIDENCE` A/B/C/D evaluation on the already frozen learner-authored condition B; no post-exposure repair |
+| 2 | #17 | generalize only the minimum sealed/double-blind machinery required to make the run reusable |
 
 Exit:
 
@@ -86,7 +86,7 @@ Exit: determine whether STOP/WITHHOLD and structured persistent memory cause use
 | Priority | Issue | Work |
 |---:|---|---|
 | 1 | #41 | move from public null-pressure simulation to statistically valid repeated-successor acceptance on identical candidate streams |
-| 2 | #73 (remaining O* slice) | extend the already-used scaffold internalizer into the full recurrent O* transition contract: correction/reopening reachable, provenance reconstructible, no self-sealing, and no safety-floor self-waiver |
+| 2 | #73 (remaining recurrent slice) | exercise the already-landed Internalizer/O*/Anti-Minerva guards across an actual Venus-owned successor transition: correction/reopening reachable, provenance reconstructible, no self-sealing, rollback/parent custody preserved |
 | 3 | #72 | stage Safe Strong RSI only after one causally interpretable Venus-owned repair and through #73's full executable safety boundary |
 | 4 | #43 + #30 | move from public attack/disposition surfaces to dynamic hostile World-return, forged-authority, and poisoned-memory evaluation |
 
@@ -123,9 +123,8 @@ External coding/research machinery remains distinct from Venus developmental own
 |---:|---|---|
 | 1 | #12 | compare repeated Venus development with DGM/AlphaEvolve/POWERPLAY/POET/Voyager/current successors |
 | 2 | #78 | after the first learner-owned repair, let Venus select retained issues/residuals, formulate Web research, consume provenance-bound returns, and provision only genuinely unclaimed/authorized fields while preserving indexed authorship |
-| 3 | #82 | consume #78's mutable research/growth policy into writable Venus TransformProgram state; Python remains interpreter/adapters/custody rather than permanent issue/query/disposition policy |
-| 4 | #41 + #73 + #72 | measure repeated self-development under adaptive statistics and the executable Strong-N2/CTL/O* safety floor |
-| 5 | #14 | long-horizon/general agency once repeated self-development itself is measurable |
+| 3 | #41 + #73 + #72 | measure repeated self-development under adaptive statistics and the executable Strong-N2/CTL/O* safety floor |
+| 4 | #14 | long-horizon/general agency once repeated self-development itself is measurable |
 
 Exit: repeated durable improvement or an explicit negative/reduction result.
 
@@ -142,7 +141,7 @@ Exit: repeated durable improvement or an explicit negative/reduction result.
 | #13 | autonomous science |
 | #20 | causal science |
 | #19 | world modeling / embodiment |
-| #18 | DNN dependence |
+| #18 | external-substrate attribution / scaffold removal; DNN only when actually present |
 | #21 | external mathematical research |
 
 ## Continuous support, not critical-path blockers
@@ -188,14 +187,11 @@ They compete for priority when they obtain a short path to a real discriminator 
 ## Current shortest high-leverage chain
 
 ```text
-#73 minimal scaffold internalization
--> #69 learner-authored repair
--> #31 hidden semantic return
+#31 hidden semantic return on frozen EDU17R1-RC1 condition B
 -> #10 first matched causal ablation
 -> #42 / #15 native capability tests
 -> #41 + #73 -> #72 + #43/#30 repeated-recursion protection
 -> #78 learner-selected issue/Web research
--> #82 state-owned research/growth policy
 -> next learner-selected residual
 -> #12 repeated self-development comparison
 ```
@@ -203,3 +199,18 @@ They compete for priority when they obtain a short path to a real discriminator 
 The unit of scheduling is now:
 
 > What is the cheapest next returned consequence that can confirm, kill, reduce, or unlock the largest number of downstream claims?
+
+
+## Branch-only results are not main authority
+
+Draft PR #84 contains substantial TransformProgram/internalization/Safe-Strong-RSI experiments and issue #82 is currently closed at that branch-scoped target. Because PR #84 is not merged, those results are **not current `main` authority** and are not used above as discharged mainline dependencies. They may be reconciled, reduced, or admitted later after ordinary review/CI and current-state update.
+
+By contrast, the EDU17R1 authorship freeze from merged PR #93 is current `main` authority at its declared candidate scope. It advances the next experiment to #31 but does not advance the positive developmental head or establish efficacy.
+
+This is an application of the repository completion law:
+
+```text
+WRITTEN on a branch
+!=
+ADMITTED to current repository authority
+```

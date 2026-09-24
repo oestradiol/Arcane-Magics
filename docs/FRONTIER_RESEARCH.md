@@ -42,15 +42,15 @@ Current earned machinery includes bounded self-reconstruction, negative-branch r
 
 Near-term obligations:
 
-1. use the admitted `EDU16-RC1` reconstructed parent to expose a lawful learner-side proposal operation, without pretending the lost historical 1703-event runner was recovered;
-2. under #69, have that controller consume the preserved `MENTION != INCIDENCE` residual and freeze its own candidate repair before hidden evaluation exposure;
-3. under #31, expose the frozen candidate to non-preauthored hidden evaluation and retain PASS / FAIL / WITHHOLD / SUBSUMED;
+1. retain `EDU16-RC1` as the prospective parent and the frozen `EDU17R1-RC1-WORD-JACCARD-K3-v1` ownership artifact without pretending the lost historical 1703-event runner was recovered;
+2. treat #69 as closed at bounded authorship-freeze scope and prohibit further condition-B tuning after hidden exposure;
+3. under #31, expose only the frozen learner-authored candidate to sealed non-preauthored hidden evaluation and retain PASS / FAIL / WITHHOLD / SUBSUMED;
 4. execute the broader matched Venus-vs-baseline causal ablation (#10);
 5. close one complete learner-owned residual -> repair -> external return -> retained successor episode;
 6. repeat only then under adaptive-evaluation controls (#41), transfer across unfamiliar domains, and compare against contemporary self-improving agents;
-7. progressively ablate dependence on pretrained DNN cognition rather than merely governing it.
+7. identify the actual consequential external substrate in each tested carrier, then ablate/remove/substitute it; DNN dependence is only one conditional case if a DNN is actually present.
 
-The replacement-DNN burden includes language, perception, reasoning, transfer, continual learning, causal repair, robustness, and compute/data efficiency. The repository does not currently claim victory on those axes.
+The substrate-attribution burden includes language, perception, reasoning, transfer, continual learning, causal repair, robustness, and compute/data efficiency. The repository does not currently claim substrate independence or hosted-model replacement on those axes.
 
 ## B. Millennium and theorem-level mathematics
 
@@ -182,4 +182,4 @@ A criticism that deletes an unnecessary object is progress.
 
 The scheduling order is lexicographic: maximize composable learning leverage first, then prefer the shortest path to discriminating information, then use resource leverage as a tie-breaker. The eventual Venus research controller should apply that ordering to admissible residuals while preserving preregistration and external return.
 
-The IG10 kernel is replayable from Git custody. EDU16-RC1 now reconstructs the admitted EDU16 claim-bearing state and may serve as a prospective parent, but it still does not expose an admitted executable operation that authors the next repair. GitHub/external models may provide tooling and World-side execution; they must not supply the substantive #69 repair and relabel it learner-owned.
+The IG10 kernel is replayable from Git custody. EDU16-RC1 reconstructs the admitted EDU16 claim-bearing state. The generic residual-search scaffold has been internalized as state-owned inherited capability, the O*/Anti-Minerva correction boundary is executable, and a bounded learner-side EDU17R1 semantic-ingress candidate is now frozen with hidden evaluation still unexposed. The missing scientific consequence is no longer authorship; it is sealed hidden efficacy and causal transfer. GitHub/external models may provide tooling and World-side execution, but post-exposure repair is forbidden.

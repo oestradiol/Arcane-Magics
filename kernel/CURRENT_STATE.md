@@ -8,8 +8,12 @@ Two current objects are deliberately distinguished:
 exact Git-reconstructible runtime checkpoint   IG10 [1308]
 current positive developmental authority      EDU16 [1703]
 reconstructed developmental carrier           EDU16-RC1
+admitted generic search capability            GENERIC_RESIDUAL_SEARCH (state-owned; inherited)
+admitted recurrent safety substrate           Internalizer + O* + Anti-Minerva guards
 preserved negative branch                     EDU17 INVALID_FOR_PROMOTION
-current repair disposition                    EDU17R1 WITHHOLD
+preserved repair-origin disposition            EDU17R1 WITHHOLD
+current repair disposition                     EDU17R1-RC1-WORD-JACCARD-K3-v1 / AUTHORED_FROZEN
+hidden efficacy                                PENDING_SEALED_#31
 ```
 
 They are layers of one developmental lineage, not competing heads.
@@ -40,6 +44,10 @@ verdict   PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY
 ```
 
 EDU16 transferred bounded World-feed query-policy generation into learner ownership while World execution and independent evaluation remained external. EDU17 is preserved as `INVALID_FOR_PROMOTION / PRESERVED_NEGATIVE`. EDU17R1 remains `WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION` after exposing `MENTION != INCIDENCE`.
+
+Later repository work has admitted **infrastructure without advancing the positive developmental head**: the target-label-free generic residual search is now a state-owned inherited capability, and the Internalizer/O*/Anti-Minerva guards are executable.
+
+A prospective EDU17R1 repair candidate is now also frozen as `EDU17R1-RC1-WORD-JACCARD-K3-v1` with a repository-bound ownership receipt. Its status is `AUTHORED_FROZEN`: learner-side repair authorship is admitted at the public-development/freeze scope, hidden #31 remains unexposed, and efficacy/promotion remain unearned.
 
 Machine-readable authority is in `development/EDU_CURRENT.json`; exact developmental evidence is under `../provenance/developmental/EDU/`.
 
@@ -81,4 +89,4 @@ R194 is historical implementation provenance only. Full ancestry is in `../prove
 
 ## Claim boundary
 
-The admitted kernel demonstrates bounded developmental machinery and exact state custody at the stated scopes. AGI, DNN replacement, open-ended RSI, autonomous science, consciousness, unrestricted semantic understanding, natural-world generality, a quantum-gravity solution, and Millennium-problem solutions remain targets requiring their own evidence.
+The admitted kernel demonstrates bounded developmental machinery and exact state custody at the stated scopes. AGI, substrate independence, hosted-model replacement where such a model is actually present, open-ended RSI, autonomous science, consciousness, unrestricted semantic understanding, natural-world generality, a quantum-gravity solution, and Millennium-problem solutions remain targets requiring their own evidence.

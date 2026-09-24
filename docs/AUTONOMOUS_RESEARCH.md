@@ -122,7 +122,7 @@ The later EDU16/EDU17/EDU17R1 developmental artifacts are also admitted. No orig
 
 The lineage has earned bounded target formation, self-curriculum, preregistration, obligation routing, and learner-owned feed-policy results through EDU16. Their original executable runner is not admitted, but Git now contains the explicitly reconstructed `EDU16-RC1` claim-bearing carrier. CI may use that carrier as a **prospective reimplementation parent**, never as evidence that the historical 1703-event runner was recovered.
 
-Continuous research execution may therefore proceed from `EDU16-RC1` only through a new explicitly typed successor whose own transformations are executable and causally tested. Issue #69 owns the immediate missing operation: the admitted learner must author and freeze the substantive EDU17R1 repair from the preserved residual before hidden #31 exposure. Historical EDU16 event replay remains a separate archaeology question.
+Continuous research execution may therefore proceed from `EDU16-RC1` only through a new explicitly typed successor whose own transformations are executable and causally tested. The inherited generic residual-search scaffold is now state-owned and donor-independent under bounded equivalence/removal audit, while Internalizer/O*/Anti-Minerva guards protect correction reachability. Issue #69 has now closed at the bounded authorship-freeze scope: `EDU17R1-RC1-WORD-JACCARD-K3-v1` is frozen with an ownership receipt before hidden exposure. The immediate returned discriminator is therefore sealed #31 efficacy evaluation, not further public repair tuning. Historical EDU16 event replay remains a separate archaeology question.
 
 ### 4. World adapters
 

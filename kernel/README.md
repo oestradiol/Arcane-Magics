@@ -34,6 +34,32 @@ Boot verifies and hydrates the exact IG10 VMK2 state from a compact hot checkpoi
 
 Git source and admitted kernel state are Venus-Minerva authority. Canonical remains donor/research/provenance material until explicitly admitted here.
 
+## State-owned inherited search
+
+`development/GENERIC_RESIDUAL_SEARCH_INTERNALIZED_STATE.json` carries the admitted bounded target-label-free residual-search program as state-owned inherited capability. `runtime/internalized_search.py` executes that program without importing the historical donor scaffold.
+
+This is architectural internalization, not fresh learner authorship. The capability can search opaque returned coordinates, WITHHOLD under ambiguity, and select a next separating coordinate; it does not decide what those coordinates mean and does not author the substantive EDU17R1 semantic binding.
+
+## Frozen prospective EDU17R1 repair
+
+`development/EDU17R1_REPAIR_CANDIDATE_FROZEN.json` and `development/EDU17R1_REPAIR_OWNERSHIP_RECEIPT.json` bind the current learner-side repair candidate to EDU16-RC1 before hidden #31 exposure. The selected ingress method is a generic calibrated-retrieval member chosen on public development under a frozen state-owned method-selection law.
+
+```text
+AUTHORED_FROZEN
+!= hidden efficacy PASS
+!= developmental promotion
+```
+
+The current condition-B executor is therefore eligible for sealed evaluation, not for retrospective public tuning after exposure.
+
+## Frozen EDU17R1 repair candidate
+
+`development/EDU17R1_REPAIR_CANDIDATE_FROZEN.json` records `EDU17R1-RC1-WORD-JACCARD-K3-v1` as `AUTHORED_FROZEN` against the reconstructed EDU16-RC1 parent. `development/EDU17R1_REPAIR_OWNERSHIP_RECEIPT.json` binds candidate identity, controller identity, residual, and hidden-unexposed state.
+
+The candidate composes the already selected structural binder with a state-owned mature calibrated-retrieval method family. Public development may tune/select within that family; sealed #31 is the first claim-bearing efficacy return. No post-exposure repair is authorized.
+
+`AUTHORED_FROZEN` means candidate ownership/freeze is admitted. It does not mean hidden PASS, promotion, unrestricted semantics, or Safe Strong RSI.
+
 ## Scaffold internalization and recurrent correction
 
 `runtime/internalizer.py` makes the R193 distinction executable:

@@ -14,8 +14,11 @@ It is not the full developmental lineage. Exact ancestry remains in `provenance/
 ```text
 exact Git-reconstructible runtime checkpoint   IG10 [1308]
 current positive developmental authority      EDU16 [1703]
+admitted inherited search capability          GENERIC_RESIDUAL_SEARCH (state-owned)
+admitted safety/governance substrate           Internalizer + O* + Anti-Minerva guards
 preserved negative branch                     EDU17 INVALID_FOR_PROMOTION
-current repair disposition                    EDU17R1 WITHHOLD
+preserved repair-origin disposition            EDU17R1 WITHHOLD
+frozen prospective repair candidate            EDU17R1-RC1-WORD-JACCARD-K3-v1 / AUTHORED_FROZEN
 ```
 
 ## A. Developmental intelligence
@@ -67,6 +70,16 @@ MENTION != INCIDENCE
 
 The system therefore withheld before testing the intended repair.
 
+### EARNED — bounded learner-side repair authorship freeze
+
+**EDU17R1-RC1-WORD-JACCARD-K3-v1 — AUTHORED_FROZEN / PENDING_HIDDEN_RETURN**
+
+A state-owned public-development method search selected and froze a generic calibrated-retrieval ingress candidate before hidden #31 exposure. The repository binds the candidate to EDU16-RC1, the preserved `MENTION != INCIDENCE` residual, an ownership receipt, and a condition-B executor. Public leave-one-out development performance is recorded as 14/16 accuracy and macro-F1 0.8333; that public score is tunable development evidence, not promotion evidence.
+
+The earned proposition is **bounded learner-side repair authorship before hidden exposure**. Hidden efficacy, transfer, causal gain, developmental promotion, Safe Strong RSI, and unrestricted semantics remain unearned.
+
+Nearest next discriminator: sealed #31 A/B/C/D evaluation with no post-exposure repair.
+
 ## B. Representation and abstraction
 
 ### EARNED — future-test-indexed abstraction and reopening
@@ -114,6 +127,18 @@ Developmental failures and repairs have made the following distinctions conseque
 - stored history != learning unless it changes later admissible transformation.
 
 These relations have mature intellectual neighbors. Their **project genealogy and executable role in the Venus lineage remain separate questions from historical priority**.
+
+### EARNED — bounded scaffold internalization of generic residual search
+
+The repository now carries the target-label-free bounded residual-search program as **state-owned inherited capability** rather than as a runtime dependency on the historical donor scaffold. The internalization audit checks executable semantic equivalence over the declared bounded domains, donor-free replay, provenance retention, ambiguity-preserving WITHHOLD/discriminator behavior, and preservation of external World/evaluator/authority roles.
+
+This is an engineering/internalization result. It is **not** fresh learner authorship of the search algorithm and it does not supply the substantive EDU17R1 repair.
+
+### EARNED — executable O* and Anti-Minerva correction guards
+
+The live Internalizer now fails closed on World/model collapse, Other/model collapse, hidden-founder dependency, label-only preservation with disabled correction, and unexplained carrier-status substitution that makes a consequential separator unreachable. Legitimate carrier differences remain admissible when they are consequence-relevant, such as authenticated control input versus untrusted Web content.
+
+Nearest unearned stronger claim: the guards must still be exercised across a real learner-owned recursive successor before Safe Strong RSI can be claimed at that scope.
 
 ## D. Formal core
 
@@ -166,7 +191,7 @@ As of this ledger:
 
 - AGI;
 - capability-SOTA;
-- DNN replacement;
+- substrate independence or hosted-model replacement where such a substrate is actually present;
 - open-ended recursive self-improvement;
 - autonomous science;
 - unrestricted semantic understanding;

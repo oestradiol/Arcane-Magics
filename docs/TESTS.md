@@ -13,6 +13,8 @@ That currently covers:
 - reader-surface Markdown/link integrity;
 - theorem/proof-container structure lint;
 - custody/current-state checks;
+- generic-search scaffold-removal/equivalence audit;
+- Internalizer O*/Anti-Minerva correction-boundary regressions;
 - historical causal-distinction registry integrity;
 - source-tree release boundaries.
 
@@ -99,3 +101,14 @@ The repository now contains three non-promotional public reliability surfaces:
 - `benchmarks/world_input_security/` — returned-content / instruction / authority / memory disposition cases (#43).
 
 They define executable failure surfaces and baseline floors. Claim-bearing results still require hidden/matched or dynamic external evaluation against mature substitutes.
+
+## Developmental infrastructure checks
+
+Two current T3/T5-adjacent checks are easy to misread as developmental promotion:
+
+- `scripts/audit_generic_search_internalization.py` checks that the inherited generic residual-search function survives scaffold removal as state-owned capability while keeping World/evaluator/authority roles external.
+- `tests/test_internalizer.py` checks O* noncollapse and Anti-Minerva carrier permeability.
+- `tests/test_edu17r1_semantic_ingress.py` plus `scripts/audit_edu17r1_semantic_ingress.py` bind the public-development method selection, frozen candidate, ownership receipt, hidden-unexposed state, and condition-B executor.
+- `benchmarks/edu17r1_mention_incidence/CONDITION_IMPLEMENTATIONS.json`, `scripts/audit_edu17r1_condition_freeze.py`, and `scripts/audit_hidden_run_readiness.py` bind the complete prefrozen A/B/C/D executor set while requiring the actual hidden split/return to remain external.
+
+Passing the first two establishes infrastructure/governance consequences at their tested scope. The semantic-ingress freeze audit additionally establishes bounded learner-side repair authorship before hidden exposure. The harness may therefore be **ready** while efficacy remains entirely unknown. None of these establishes hidden #31 efficacy, developmental promotion, or Safe Strong RSI.

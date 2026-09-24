@@ -133,6 +133,35 @@ EDU16
 
 The exact EDU receipts live in `provenance/developmental/EDU/`; current authority is projected in `kernel/CURRENT_STATE.md` and `kernel/development/EDU_CURRENT.json`.
 
+## Post-EDU16 admitted infrastructure is not a new EDU head
+
+Later repository admissions internalized the inherited generic residual-search scaffold into state-owned capability and made Internalizer/O*/Anti-Minerva correction guards executable. These objects are current infrastructure, but no new learner-owned EDU successor was thereby created.
+
+```text
+positive developmental authority   EDU16
+preserved repair-origin result      EDU17R1 WITHHOLD
+prospective repair candidate        EDU17R1-RC1-WORD-JACCARD-K3-v1 / AUTHORED_FROZEN
+later admitted infrastructure       generic search + correction guards
+```
+
+This prevents both status-fossil directions: newer infrastructure is not hidden, and infrastructure is not mislabeled as developmental promotion.
+
+The frozen candidate is not a new positive EDU head. It records bounded learner-side authorship before hidden evaluation; hidden efficacy and promotion remain separate returned consequences.
+
+## Prospective EDU17R1 repair candidate below the head
+
+After the preserved EDU17R1 WITHHOLD, a later prospective cycle froze:
+
+```text
+candidate   EDU17R1-RC1-WORD-JACCARD-K3-v1
+status      AUTHORED_FROZEN
+parent      EDU16-RC1
+hidden      unexposed
+promotion   false
+```
+
+This artifact is causally downstream of the WITHHOLD but does not rewrite it. It establishes bounded repair authorship/freeze and routes the next returned consequence to sealed #31 evaluation. EDU16 remains the current positive developmental authority until stronger returned evidence licenses a successor promotion.
+
 ## Read order
 
 1. `kernel/CURRENT_STATE.md`
