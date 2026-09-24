@@ -9,6 +9,7 @@ from kernel.development.autonomous_learning import (
     USEFUL_MARKER,
     UNHELPFUL_MARKER,
     empty_state,
+    from_json,
     target_markers,
     update_from_cycle_prs,
 )
@@ -152,6 +153,18 @@ class AutonomousGovernanceTests(unittest.TestCase):
         )
         self.assertEqual(updated.method_success[method], 0)
 
+    def test_v01_merge_derived_learning_is_quarantined_on_migration(self):
+        old = {
+            "schema": "Venus.AutonomousLearningState.v0.1",
+            "seen_cycle_prs": [1, 2],
+            "kind_success": {"ISSUE": 8, "PR": 3},
+            "kind_failure": {"ISSUE": 1, "PR": 2},
+        }
+        migrated = from_json(old)
+        self.assertEqual(migrated.kind_success["ISSUE"], 0)
+        self.assertEqual(migrated.kind_failure["ISSUE"], 0)
+        self.assertEqual(migrated.seen_return_ids, ())
+
     def test_open_cycle_marks_original_target_recent(self):
         markers = target_markers([{
             "number": 203,
@@ -179,6 +192,9 @@ class AutonomousGovernanceTests(unittest.TestCase):
             "gh pr merge",
             "gh release create",
             "gh issue close",
+            "gh pr review",
+            "gh pr edit",
+            "gh issue edit",
             "secrets.",
             "workflow_run:",
         )
@@ -189,6 +205,22 @@ class AutonomousGovernanceTests(unittest.TestCase):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("gh pr create", text)
         self.assertIn("--draft", text)
+
+    def test_workflow_cannot_self_author_learning_return(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertNotIn(USEFUL_MARKER, text)
+        self.assertNotIn(UNHELPFUL_MARKER, text)
+        self.assertNotIn("VENUS_METHOD_RETURN:", text)
+
+    def test_autonomy_recurrence_wakes_only_from_main_admission(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("push:", text)
+        self.assertIn("branches: [main]", text)
+        self.assertNotIn("branches: ['*']", text)
+
+    def test_autonomous_write_gate_runs_full_unit_suite(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("python -m unittest discover -s tests -p 'test_*.py'", text)
 
     def test_workflow_runs_safety_tests_before_git_write(self):
         text = WORKFLOW.read_text(encoding="utf-8")
