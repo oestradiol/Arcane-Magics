@@ -487,6 +487,21 @@
         "tests/test_autonomous_worker.py"
       ],
       "invariant": "DIRTY, BLOCKED and CONFLICTING PR states all reach the internalized correction/reopening path rather than being silently treated as ordinary reachable state"
+    },
+    {
+      "id": "UNKNOWN_PR_STATE_FAIL_CLOSED",
+      "tests": [
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "UNKNOWN or missing PR merge state remains unresolved and reaches internalized correction/reopening rather than being treated as clean"
+    },
+    {
+      "id": "PR_CHANGED_FILE_WORLD_SURFACE",
+      "tests": [
+        "tests/test_autonomous_worker.py",
+        "tests/test_autonomous_write_scope.py"
+      ],
+      "invariant": "autonomous PR study receives changed-file paths from GitHub as returned repository facts and patch planning classifies them without converting visibility into write authority"
     }
   ],
   "promotion_authority": false
