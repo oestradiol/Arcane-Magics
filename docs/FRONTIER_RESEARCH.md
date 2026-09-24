@@ -42,15 +42,13 @@ Current earned machinery includes bounded self-reconstruction, negative-branch r
 
 Near-term obligations:
 
-1. admit or prospectively reimplement executable EDU16 ownership machinery over the exact IG10 Git checkpoint, without reconstructing an "original" runner from prose;
-2. repair `MENTION != INCIDENCE` and claim-local evidence binding;
-3. execute a complete learner-owned research episode from target selection through returned evidence;
-4. demonstrate a self-authored consequential machinery modification;
-5. attribute any improvement causally with parent/successor ablation;
-6. repeat across multiple successors;
-7. transfer to unfamiliar domains with privileged scaffolds removed;
-8. compare against contemporary self-improving research agents under matched budgets;
-9. progressively ablate dependence on pretrained DNN cognition rather than merely governing it.
+1. use the admitted `EDU16-RC1` reconstructed parent to expose a lawful learner-side proposal operation, without pretending the lost historical 1703-event runner was recovered;
+2. under #69, have that controller consume the preserved `MENTION != INCIDENCE` residual and freeze its own candidate repair before hidden evaluation exposure;
+3. under #31, expose the frozen candidate to non-preauthored hidden evaluation and retain PASS / FAIL / WITHHOLD / SUBSUMED;
+4. execute the broader matched Venus-vs-baseline causal ablation (#10);
+5. close one complete learner-owned residual -> repair -> external return -> retained successor episode;
+6. repeat only then under adaptive-evaluation controls (#41), transfer across unfamiliar domains, and compare against contemporary self-improving agents;
+7. progressively ablate dependence on pretrained DNN cognition rather than merely governing it.
 
 The replacement-DNN burden includes language, perception, reasoning, transfer, continual learning, causal repair, robustness, and compute/data efficiency. The repository does not currently claim victory on those axes.
 
@@ -182,6 +180,6 @@ A criticism that deletes an unnecessary object is progress.
 
 ## Scheduling principle
 
-The eventual Venus research controller should choose among admissible residuals using expected information, capability transfer, World impact, resource return, and dependency structure while preserving preregistration and external return.
+The scheduling order is lexicographic: maximize composable learning leverage first, then prefer the shortest path to discriminating information, then use resource leverage as a tie-breaker. The eventual Venus research controller should apply that ordering to admissible residuals while preserving preregistration and external return.
 
-The IG10 kernel is replayable from Git custody. The later EDU16 ownership layer is not yet admitted as executable source, so GitHub automation may run audits, builds, custody checks, and bounded externally requested actions, but must not impersonate EDU16 learner-owned research selection.
+The IG10 kernel is replayable from Git custody. EDU16-RC1 now reconstructs the admitted EDU16 claim-bearing state and may serve as a prospective parent, but it still does not expose an admitted executable operation that authors the next repair. GitHub/external models may provide tooling and World-side execution; they must not supply the substantive #69 repair and relabel it learner-owned.
