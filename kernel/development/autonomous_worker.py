@@ -243,7 +243,7 @@ def _correction_reachable(item: WorkItem) -> bool:
 
 def _item_references(item: WorkItem) -> tuple[int, ...]:
     return tuple(dict.fromkeys(
-        int(x) for x in re.findall(r"(?<!\\w)#(\\d+)", item.body or "")
+        int(x) for x in re.findall(r"(?<!\w)#(\d+)", item.body or "")
         if int(x) != item.number
     ))
 
