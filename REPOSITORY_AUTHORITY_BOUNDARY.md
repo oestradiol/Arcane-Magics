@@ -56,4 +56,4 @@ WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION
 measured separator: MENTION != INCIDENCE
 ```
 
-The repository now ships an exact Git-reconstructible IG10 VMK2 checkpoint under `kernel/`; R194 is historical implementation provenance only. EDU16 remains the latest positive developmental authority represented by exact policy/result artifacts, but no original self-contained replayable 1703-event EDU16 runner/journal is currently admitted here.
+The repository ships an exact Git-reconstructible IG10 VMK2 checkpoint under `kernel/`; R194 is historical implementation provenance only. EDU16 remains the latest positive developmental authority. The original self-contained 1703-event EDU16 runner/journal is still not recovered, but `kernel/development/EDU16-RC1` custody now deterministically reconstructs the admitted claim-bearing EDU16 state from the exact recovered Canonical EDU13→EDU16 artifacts. That reconstructed carrier is not historical event-level replay and grants no promotion authority.
