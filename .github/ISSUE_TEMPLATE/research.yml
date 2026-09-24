@@ -29,3 +29,8 @@ body:
       description: What this episode cannot establish even if it passes.
     validations:
       required: true
+  - type: textarea
+    id: inhabitable
+    attributes:
+      label: Inhabitable reading
+      description: Who or what receives consequence, what can return independently, and what changes without destroying continuity?
