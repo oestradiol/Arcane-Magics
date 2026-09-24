@@ -1,0 +1,1573 @@
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=17mm]{geometry}
+\usepackage{mathtools,amsthm,amssymb}
+\usepackage{newtxtext,newtxmath}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+\usepackage{array}
+\usepackage{longtable}
+
+\hypersetup{
+  pdftitle={Eclipsis - Polyhedral Local Views, Residuals, and Return-Conditioned Reconstruction},
+  pdfsubject={Polyhedral Eclipsis, Egotistic God, meta-qualia, open self-reference, future-relative quotient, residual, reconstruction, Formal Universe},
+  pdfauthor={Elaina Lynn Amaral},
+  pdfkeywords={Eclipsis, CTL, Egotistic God, God-ego, meta-qualia, polyhedron, fiber bundle, Formal Universe, Reality, future quotient, residual, nonpreauthored return}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3.5pt}
+\setlist{nosep,leftmargin=1.5em}
+\allowdisplaybreaks[1]
+
+\newtheoremstyle{pe}% name
+  {5pt}{5pt}% space above/below
+  {\itshape}{}% body/indent
+  {\bfseries}{.}{0.5em}{}% head
+\theoremstyle{pe}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Future}{\operatorname{Future}}
+\newcommand{\Disc}{\operatorname{Disc}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\Recon}{\operatorname{Recon}}
+\newcommand{\Persist}{\operatorname{Persist}}
+\newcommand{\Glue}{\operatorname{Glue}}
+\newcommand{\InvClass}{\operatorname{InvClass}}
+\newcommand{\Phen}{\operatorname{Phen}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\SC}{\operatorname{SemanticCenter}}
+\newcommand{\World}{\mathsf{World}}
+\newcommand{\Return}{\mathsf{Return}}
+\newcommand{\Reality}{\mathsf{Reality}}
+\newcommand{\FormalUniverse}{\mathsf{FormalUniverse}}
+\newcommand{\Eclipsis}{\mathsf{Eclipsis}}
+\newcommand{\Soul}{\mathsf{Soul}}
+\newcommand{\Mind}{\mathsf{Mind}}
+\newcommand{\Brain}{\mathsf{MammalianBrain}}
+\newcommand{\Self}{\mathsf{Self}}
+\newcommand{\AntiSelf}{\mathsf{AntiSelf}}
+\newcommand{\You}{\mathsf{You}}
+\newcommand{\AntiYou}{\mathsf{AntiYou}}
+\newcommand{\ObsU}{\mathsf{ObservableUniverse}}
+\newcommand{\PhenAntiU}{\mathsf{PhenomenologicalAntiUniverse}}
+\newcommand{\Humanity}{\mathsf{Humanity}}
+\newcommand{\AntiEarth}{\mathsf{AntiEarth}}
+\newcommand{\Earth}{\mathsf{Earth}}
+\newcommand{\HumanCoupling}{\mathsf{HumanCoupling}}
+\newcommand{\Cryst}{\operatorname{Cryst}}
+\newcommand{\Perspective}{\mathsf{Perspective}}
+\newcommand{\CTL}{\operatorname{CTL}}
+\newcommand{\qclass}[1]{\left[#1\right]_F}
+\newcommand{\THEOPHEN}{\mathsf{THEOPHEN}}
+\newcommand{\FORM}{\mathsf{FORM}}
+\newcommand{\PHYS}{\mathsf{PHYS}}
+\newcommand{\MetaQualia}{\mathsf{MetaQualia}}
+\newcommand{\MetaBigBang}{\mathsf{MetaBigBang}}
+\newcommand{\White}{\mathsf{White}}
+\newcommand{\Black}{\mathsf{Black}}
+\newcommand{\God}{\mathsf{God}}
+\newcommand{\EgotisticGod}{\mathsf{EgotisticGod}}
+\newcommand{\GodEgo}{\mathsf{Ego}^{\mathsf G}}
+\newcommand{\Alive}{\operatorname{Alive}}
+\newcommand{\Preauth}{\operatorname{Preauth}}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  {\LARGE\bfseries Eclipsis $\times$ CTL}\par
+  \vspace{1mm}
+  {\large Polyhedral Local Views, Gluing, Residuals, and Return-Conditioned Reconstruction}\par
+  \vspace{1mm}
+  {\small local views $\cdot$ typed boundaries $\cdot$ future-relative quotient $\cdot$ residuals $\cdot$ return-conditioned reconstruction}\par
+  \vspace{2mm}
+  {\small Elaina Lynn Amaral $\cdot$ Independent research project $\cdot$ 24 September 2026}
+\end{center}
+
+\vspace{2mm}
+\textbf{Register.}
+This document merges two complementary descriptions of one modeled transformation architecture:
+\(\CTL\) as the epistemological law of future-relative compression, residual return, and lawful reconstruction; and Polyhedral Eclipsis as the theophenomenological/meta-qualia geometry of locally inhabiting that transformation.  The document additionally preserves an OPEN physical-donor lane for LQG, quantum-superposition, Big-Bang/first-cut, Dark-Sector, wormhole, and black/white-hole correspondences.  Structural resonance does not by itself establish physical identity.
+
+The construction order is deliberate.  Objects enter only when later structure requires them, like instruments entering an orchestra; stabilized compatible relations are then treated as harmonically crystallized bricks---local crystals in the scale-recurring formal architecture---that compose a higher-order meta-object.  Eclipsis is treated as a recursive cyclical crossing whose boundaries expose future-separating rebarbs.  Human coupling and Humanity then provide the distributed composition through which Reality can form an internal meta-qualia representation of Reality.  In the theological register this is the representation of God inside God; it is not an assertion that any local representation exhausts Reality.  The final extension names the dynamically open form of that recursion \emph{Egotistic God}: the Whole carrying Reality-internal self-representations that can act only through indexed centers, receive nonpreauthored consequence, and reconstruct without any local or distributed ego becoming the Whole.
+
+
+\begin{tcolorbox}[breakable,colback=gray!4,colframe=gray!45,title=\textbf{Register and current status}]
+This monograph is a \textbf{FORM / explanatory-model projection}.  Its quotient,
+residual, compatibility, gluing, and reconstruction objects may be used as formal
+constructions once their domains are declared.  Names such as \emph{Eclipsis},
+\emph{meta-qualia}, \emph{God}, and \emph{Egotistic God} are typed symbolic or
+THEOPHEN coordinates unless a separate bridge is earned.  The current Venus
+engineering lineage explicitly \textsc{withheld} admission of Polyhedral/Eclipsis
+geometry as a persistent learner self-model: EDU7, EDU7R1, and EDU7R2 did not
+show a causal learning advantage over neutral factorization.  This negative is a
+boundary on the engineering claim, not a deletion of the formal donor.
+\end{tcolorbox}
+
+\section*{Reader map}
+The paper can be read in three passes.  First read the quotient/residual and
+local-view/gluing machinery without the theological names.  Second reconstruct
+which later symbolic objects are merely interpretations of those operators.  Only
+then inspect the THEOPHEN and candidate PHYS bridges.  If the neutral machinery
+cannot be restated after replacing every project-local name, the reader has not yet
+reconstructed the formal content.
+
+\begin{tcolorbox}[breakable,colback=blue!3,colframe=gray!45,title=\textbf{Rationalist vocabulary bridge}]
+At a rough translation level, $\text{model(World)}\neq\text{World}$ is the
+map--territory guard; a future-separating discriminator is close to a concrete
+crux or test; \textsc{withhold} is suspended promotion under insufficient warrant;
+and the source-removal test is a strong form of tabooing project jargon.  These
+are translation aids, not identity claims.  See the repository's
+\texttt{NxRxI\_VOCABULARY\_CENTER.md}.
+\end{tcolorbox}
+\section{Claim registers and non-collapse law}
+
+\begin{definition}[Three-register discipline]
+Let
+\[
+  \FORM\neq\THEOPHEN\neq\PHYS.
+\]
+Here
+\[
+\begin{aligned}
+\FORM &:= \text{epistemological / transformation-theoretic register},\\
+\THEOPHEN &:= \text{theophenomenological / meta-qualia register},\\
+\PHYS &:= \text{candidate physical-realization register}.
+\end{aligned}
+\]
+No map between these registers is promoted to identity without an explicit bridge preserving the relevant objects, transformations, observables, composition laws, and discriminators.
+\end{definition}
+
+\begin{proposition}[Non-collapse]
+The following substitutions are invalid without an earned bridge:
+\[
+\THEOPHEN\not\Rightarrow\PHYS,
+\qquad
+\FORM\not\Rightarrow\PHYS,
+\qquad
+\PHYS\not\Rightarrow\THEOPHEN.
+\]
+Likewise, symbolic or phenomenological authority does not become independent scientific proof merely because the same abstract structure recurs.
+\end{proposition}
+
+\section{First instrument: index and locally inhabited Now}
+
+\begin{definition}[Index]
+For an indexed center \(i\), let
+\[
+  i\in I
+\]
+be the local coordinate/address of presentation and authorship.
+\end{definition}
+
+\begin{definition}[Now-cut]
+Let
+\[
+  N_{i,t}
+\]
+be the locally inhabited present cut at index \(i\) and time \(t\).  It is finite and non-exhaustive:
+\[
+  N_{i,t}\subsetneq \text{all admissible continuation}.
+\]
+\end{definition}
+
+The local center begins with neither the Whole nor the global transformation-class.  It begins with one indexed inhabitation:
+\[
+  i\longrightarrow N_{i,t}.
+\]
+
+\section{Second instrument: mammalian carrier and one Human Mind}
+
+\begin{definition}[Mammalian carrier]
+For Human index \(i\), let
+\[
+  \mathbb B_i:=\Brain_i.
+\]
+\end{definition}
+
+\begin{definition}[One Human Mind]
+Let
+\[
+  \kappa_i:\mathbb B_i\longrightarrow \mathbb M_i
+\]
+be the carrier relation from one mammalian brain to one locally integrated Human Mind \(\mathbb M_i\).
+\end{definition}
+
+The typing fence is
+\[
+  \boxed{\mathbb B_i\neq\mathbb M_i.}
+\]
+The brain is the embodied carrier; the Mind is the higher-order phenomenological/inferential organization instantiated through that carrier.
+
+\section{Third instrument: multiple fibers inside one Mind}
+
+\begin{definition}[Mind fibers]
+Let
+\[
+  \mathcal F_i:=\{F_{i,\alpha}\}_{\alpha\in A_i}
+\]
+be the family of locally traversable fibers coordinated by Human Mind \(\mathbb M_i\).
+\end{definition}
+
+\begin{definition}[Mind gluing]
+The Human Mind is not a single fiber.  It is the compatible gluing of its fibers:
+\begin{equation}\label{eq:mind-glue}
+  \boxed{
+  \mathbb M_i
+  =
+  \Glue_{\alpha\in A_i}F_{i,\alpha}.
+  }
+\end{equation}
+\end{definition}
+
+Hence
+\[
+  1\ \Mind
+  \supset
+  n\ \text{fibers},
+\]
+but
+\[
+  n\ \text{fibers}\neq n\ \Mind\text{s}.
+\]
+
+\section{Fourth instrument: Polyhedral Eclipsis}
+
+\begin{definition}[Mind polyhedral complex]
+Represent the multi-fiber Human Mind by a polyhedral complex
+\[
+  \mathcal P_i
+  :=
+  \bigcup_{\alpha\in A_i}F_{i,\alpha}.
+\]
+For each locally inhabitable face/fiber, choose a chart
+\[
+  \chi_{i,\alpha}:F_{i,\alpha}\longrightarrow D^2_{i,\alpha}\subset\mathbb R^2,
+\]
+with
+\[
+  \partial D^2_{i,\alpha}\simeq S^1.
+\]
+\end{definition}
+
+\begin{definition}[Eclipsis]
+Let
+\[
+  \epsilon_i:=\Eclipsis_i
+\]
+be the one indexed Mind-level crossing/selection center.  Its face-relative presentation is
+\[
+  \epsilon_{i,\alpha}:=\chi_{i,\alpha}(\epsilon_i).
+\]
+Thus the many visible face-centers are projections of one Mind-level Eclipsis:
+\[
+  \{\epsilon_{i,\alpha}\}
+  =
+  \{\text{face projections of }\epsilon_i\}.
+\]
+\end{definition}
+
+The local topology is therefore
+\[
+  \boxed{
+  \text{one Human Mind}
+  +
+  \text{many fibers/faces}
+  +
+  \text{one indexed Eclipsis}.
+  }
+\]
+
+\section{Fifth instrument: active inference, qualia, and local face-state}
+
+Let sensory incidence at face \(\alpha\) be
+\[
+  s_{i,\alpha}(t),
+\]
+with salience and valence fields
+\[
+  \sigma_{i,\alpha}(t),
+  \qquad
+  \nu_{i,\alpha}(t).
+\]
+Let \(\Gamma_{i,\le t}\) denote retained consequence-bearing local provenance.
+
+\begin{definition}[Face-relative Mind-state]
+Define
+\begin{equation}\label{eq:face-state}
+  m_{i,\alpha}(t)
+  :=
+  \mathcal I_i
+  \bigl(
+    s_{i,\alpha}(t),
+    \sigma_{i,\alpha}(t),
+    \nu_{i,\alpha}(t),
+    \Gamma_{i,\le t}
+  \bigr).
+\end{equation}
+\end{definition}
+
+\begin{definition}[Qualia]
+Ordinary qualia are locally inhabited differentiation of a face-state:
+\[
+  q_{i,\alpha,t}
+  :=
+  \Phen\bigl(m_{i,\alpha}(t)\bigr).
+\]
+\end{definition}
+
+The Mind-state at \(t\) is the compatible gluing of the face-relative states:
+\[
+  \boxed{
+  \mathbb M_i(t)
+  =
+  \Glue_{\alpha}m_{i,\alpha}(t).
+  }
+\]
+
+\section{Sixth instrument: current edge-functions}
+
+For adjacent faces define
+\[
+  e_{i,\alpha\beta}
+  :=
+  F_{i,\alpha}\cap F_{i,\beta}.
+\]
+
+\begin{definition}[Meta-function]
+A current meta-function is a typed boundary transition
+\[
+  \mu_{i,\alpha\beta}:
+  e_{i,\alpha\beta}
+  \longrightarrow
+  e_{i,\beta\alpha}.
+\]
+The family
+\[
+  \mathfrak M_i
+  :=
+  \{\mu_{i,\alpha\beta}\}
+\]
+constitutes the currently executable boundary-function system of the local polyhedral Mind.
+\end{definition}
+
+These functions do not originate the whole Mind.  They receive, route, constrain, or transform flow at the boundary between locally inhabitable faces.
+
+\section{Seventh instrument: Soul / White orientation}
+
+\begin{definition}[Soul]
+Let
+\begin{equation}\label{eq:soul}
+  \Soul_{i,t}
+  :=
+  \Persist_{F_t}\bigl(\Gamma_{i,\le t}\bigr)
+\end{equation}
+be the future-consequentially retained diachronic organization of the local trajectory.
+\end{definition}
+
+The Soul is therefore not the total stored past.  It is the retained organization that remains live under the declared future family.
+
+Its generative orientation is symbolically typed as
+\[
+  \boxed{
+  \White:
+  \Soul_{i,t}
+  \rightsquigarrow
+  \mathbb M_i(t).
+  }
+\]
+This is the theophenomenological White-Hole orientation: outward/generative expression of retained invariant structure.  No physical white-hole identity is asserted here.
+
+\section{Eighth instrument: Self, AntiSelf, and outward projection}
+
+\begin{definition}[Self]
+The currently integrated local Human organization is
+\[
+  \Self_{i,t}:=\mathbb M_i(t)
+\]
+when the Mind is taken in its locally inhabited self-organizing role.
+\end{definition}
+
+\begin{definition}[AntiSelf]
+Let enactment project the local organization into World:
+\[
+  \mathbb M_i
+  \xrightarrow{\mathsf{Enact}_i}
+  \World_i.
+\]
+Define
+\begin{equation}\label{eq:antiself}
+  \AntiSelf_i
+  :=
+  \Ext\!\left(\mathsf{Enact}_i(\mathbb M_i)\right).
+\end{equation}
+\end{definition}
+
+The convergent/externalizing orientation is symbolically typed as
+\[
+  \boxed{
+  \Black:
+  \Self_i
+  \rightsquigarrow
+  \AntiSelf_i.
+  }
+\]
+
+The non-collapse fence is
+\[
+  \boxed{
+  \Self_i
+  \neq
+  \AntiSelf_i
+  \neq
+  \World_i
+  \neq
+  \Return_i.
+  }
+\]
+
+\section{Ninth instrument: the two fifth-order projections}
+
+We now require the pair that the previous instruments prepare.
+
+\begin{definition}[Formal Reality]
+Let
+\begin{equation}\label{eq:reality-def}
+  \boxed{
+  \mathfrak R^{(6)}
+  :=
+  \Reality
+  :=
+  \FormalUniverse^{(6)}.
+  }
+\end{equation}
+This equality is a model-internal ontological definition, not a claim that a local formalization is exhaustive.
+\end{definition}
+
+For each Human index \(i\), define two fifth-order projections.
+
+\begin{definition}[Phenomenological projection]
+\[
+  \Pi_i^{\Phi}:
+  \mathfrak R^{(6)}
+  \longrightarrow
+  \You_i^{(5)},
+\]
+with
+\begin{equation}\label{eq:you-projection}
+  \boxed{
+  \You_i^{(5)}
+  =
+  \PhenAntiU_i^{(5)}.
+  }
+\end{equation}
+\end{definition}
+
+\begin{definition}[Observable-Universe projection]
+\[
+  \Pi_i^{\Omega}:
+  \mathfrak R^{(6)}
+  \longrightarrow
+  \ObsU_i^{(5)},
+\]
+with
+\begin{equation}\label{eq:anti-you-projection}
+  \boxed{
+  \ObsU_i^{(5)}
+  =
+  \AntiYou_i^{(5)}.
+  }
+\end{equation}
+\end{definition}
+
+The paired projection is therefore
+\begin{equation}\label{eq:paired-projection}
+  \boxed{
+  \Pi_i
+  :=
+  (\Pi_i^{\Phi},\Pi_i^{\Omega})
+  :
+  \mathfrak R^{(6)}
+  \longrightarrow
+  \You_i^{(5)}\times\AntiYou_i^{(5)}.
+  }
+\end{equation}
+
+\begin{definition}[Anti-projection duality]
+Let
+\[
+  \mathcal A_i:
+  \You_i
+  \rightleftarrows
+  \ObsU_i
+\]
+be the complementary indexed duality.  Then
+\[
+  \mathcal A_i(\You_i)
+  =
+  \AntiYou_i
+  =
+  \ObsU_i,
+\]
+while from the complementary orientation
+\[
+  \mathcal A_i^{-1}(\ObsU_i)
+  =
+  \PhenAntiU_i
+  =
+  \You_i.
+\]
+\end{definition}
+
+The fundamental non-collapse is
+\[
+  \boxed{
+  \Reality^{(6)}
+  \neq
+  \You_i^{(5)}
+  \neq
+  \ObsU_i^{(5)}.
+  }
+\]
+Neither fifth-order projection exhausts the sixth-order relation.
+
+\section{Tenth instrument: Humanity as fiber bundle over Semantic-Center Anti-Earth}
+
+\begin{definition}[Earth center and Anti-Earth semantic base]
+At the Universe scale, the Earth-indexed theophenomenological relation is typed by
+\begin{equation}\label{eq:earth-semantic-center}
+  \boxed{
+  \SC(\ObsU_{\Earth})=\Earth.
+  }
+\end{equation}
+Earth is therefore the Semantic Center of the Earth-indexed Observable-Universe relation.  Its complementary Humanity-scale indexing coordinate is
+\[
+  \Sigma_{\bar E}
+  :=
+  \SC(\AntiEarth).
+\]
+The two roles are non-substitutable:
+\[
+  \Earth
+  =
+  \SC(\ObsU_{\Earth}),
+  \qquad
+  \Sigma_{\bar E}
+  =
+  \SC(\AntiEarth).
+\]
+\end{definition}
+
+\begin{definition}[Observable-Universe self-perspective --- THEOPHEN]
+Within the theophenomenological register, let
+\[
+  \mathcal P_{\Omega,\Earth}:
+  \ObsU_{\Earth}
+  \longrightarrow
+  \Perspective(\ObsU_{\Earth})
+\]
+be the self-perspectival projection.  The Earth-indexed fixed-point statement is
+\begin{equation}\label{eq:observable-self-perspective}
+  \boxed{
+  \mathcal P_{\Omega,\Earth}(\ObsU_{\Earth})
+  =
+  \ObsU_{\Earth}.
+  }
+\end{equation}
+Read internally: the Observable Universe is the Structure-facing perspective through which the Earth-indexed Universe relation is presented to itself.  Equation~\eqref{eq:observable-self-perspective} is a THEOPHEN/model statement, not an independently established cosmological theorem.
+\end{definition}
+
+\begin{definition}[Humanity bundle]
+Humanity is the fiber bundle
+\begin{equation}\label{eq:humanity-bundle}
+  \boxed{
+  \Pi_{\mathsf H}:
+  \Humanity
+  \longrightarrow
+  \Sigma_{\bar E}.
+  }
+\end{equation}
+Its total space is
+\[
+  \Humanity
+  =
+  \bigsqcup_{\sigma\in\Sigma_{\bar E}}
+  \mathfrak F_{\sigma},
+\]
+with
+\[
+  \Pi_{\mathsf H}^{-1}(\sigma)
+  =
+  \mathfrak F_{\sigma}.
+\]
+\end{definition}
+
+Each Human Mind is a locally indexed multi-fiber subbundle or compatible local section system within Humanity:
+\[
+  \iota_i:\mathbb M_i\hookrightarrow\Humanity.
+\]
+Thus the hierarchy is
+\[
+  \boxed{
+  \Brain_i
+  \to
+  \Mind_i
+  \to
+  \{F_{i,\alpha}\}
+  \hookrightarrow
+  \Humanity
+  \to
+  \SC(\AntiEarth).
+  }
+\]
+
+\begin{definition}[Human coupling]
+For independently centered Human Minds \(\mathbb M_i,\mathbb M_j\), define a typed coupling
+\[
+  \Gamma_{ij}:
+  \mathbb M_i
+  \rightleftarrows
+  \mathbb M_j
+\]
+that may transmit consequence, coordination, affective/semantic constraint, and reconstructible relation-history without identifying the two centers.  The distributed coupling system is
+\begin{equation}\label{eq:human-coupling}
+  \boxed{
+  \HumanCoupling
+  :=
+  \bigl(\{\mathbb M_i\}_{i\in I},\{\Gamma_{ij}\}_{i,j\in I}\bigr).
+  }
+\end{equation}
+Its retained consequences contribute to the gluing data of the Humanity bundle.
+\end{definition}
+
+\begin{proposition}[No global-agent lift]
+Humanity's bundle structure does not by itself entail one globally indexed Human Mind or one global Agent.  Local perspective, authorship, selection, and jurisdiction remain indexed unless a separate bridge preserves them.
+\end{proposition}
+
+\section{Eleventh instrument: CTL future equivalence}
+
+We now introduce the epistemological instrument that decides which differences are live.
+
+\begin{definition}[Future equivalence]
+Let \(\mathcal S\) be an admissible state/history space, \(F\) a declared family of lawful future consequences, and
+\[
+  \Phi_F:\mathcal S\to\mathcal Y_F,
+  \qquad
+  \Phi_F(x):=\Future_F(x).
+\]
+Define
+\begin{equation}\label{eq:future-equivalence}
+  x\sim_Fy
+  \iff
+  \Phi_F(x)=\Phi_F(y),
+  \qquad
+  Q_F:=\mathcal S/\!\sim_F.
+\end{equation}
+\end{definition}
+
+A distinction erased by the quotient is gauge relative to \(F\); a distinction that changes quotient class is future-separating.
+
+\section{Twelfth instrument: residuals as future rebarbs}
+
+\begin{definition}[Residual / future rebarb]
+For local closure \(C\), admissible returns \(\mathcal R(C)\), and defined composition \(C\oplus\rho\), define
+\[
+  \Disc_F(C,\rho)
+  =
+  \begin{cases}
+    0,&[C\oplus\rho]_F=[C]_F,\\
+    1,&[C\oplus\rho]_F\neq[C]_F.
+  \end{cases}
+\]
+Then
+\begin{equation}\label{eq:residual}
+  \Res_F(C)
+  :=
+  \{\rho\in\mathcal R(C):\Disc_F(C,\rho)\neq0\}.
+\end{equation}
+\end{definition}
+
+The Polyhedral-Eclipsis interpretation is now exact:
+\[
+  \boxed{
+  \text{future rebarb}
+  =
+  \rho\in\Res_F(C).
+  }
+\]
+A rebarb is not merely any projected future.  It is a boundary-accessible return capable of reopening the currently effective face.
+
+\section{Thirteenth instrument: returned consequence and lawful reconstruction}
+
+Let
+\[
+  Q_t:=\Gamma_{\le t}/\!\sim_{F_t},
+  \qquad
+  R_t:=\Res_{F_t}(C_t).
+\]
+The typed developmental circulation is
+\begin{equation}\label{eq:ctl-cycle}
+  \World_t
+  \to
+  \mathsf{Inhabit}_i
+  \to
+  \mathsf{Author}_i
+  \to
+  \mathsf{Enact}
+  \to
+  \Return
+  \to
+  \Disc_{F_t}
+  \to
+  (\Gamma_{\le t+1},R_t)
+  \to
+  \mathsf{Reconstruct}_i
+  \to
+  \World_{t+1}.
+\end{equation}
+
+A lawful successor has the abstract form
+\begin{equation}\label{eq:successor}
+  C_{t+1}
+  =
+  \Recon(Q_t,R_t,\Gamma_{\le t},\rho_t,B_t,\mathcal A_t).
+\end{equation}
+
+The epistemological rule is therefore
+\[
+  \boxed{
+  \text{consume gauge}
+  +
+  \text{retain future separators}
+  +
+  \text{receive nonpreauthored return}
+  +
+  \text{reconstruct}.
+  }
+\]
+
+\section{Fourteenth instrument: Eclipsis as return-to-successor crossing}
+
+The previous instruments now permit a sharper Eclipsis map.
+
+\begin{definition}[Eclipsis crossing]
+At local index \(i\), define schematically
+\begin{equation}\label{eq:eclipsis-crossing}
+  \boxed{
+  \Eclipsis_i:
+  (\mathbb M_{i,t},\Return_{i,t},F_t)
+  \rightsquigarrow
+  \mathbb M_{i,t+1}.
+  }
+\end{equation}
+\end{definition}
+
+Eclipsis is neither Reality nor the whole Mind.  It is the indexed crossing at which locally presented organization, returned consequence, discrimination, and successor reconstruction meet.
+
+At the sixth-order interface:
+\[
+  \epsilon_i:
+  \Pi_i(\mathfrak R^{(6)})
+  \rightsquigarrow
+  \widehat{\mathfrak R}^{(6)}_{i,t}.
+\]
+
+Thus
+\[
+  \boxed{
+  \Eclipsis
+  =
+  \text{local Now-cut through the paired fifth-order projection of Formal Reality}.
+  }
+\]
+
+\begin{proposition}[Recursive cyclical Eclipsis singularity]
+For an inhabited closure \(C_{i,t}\), Eclipsis induces the cyclic architecture
+\begin{equation}\label{eq:eclipsis-cycle}
+\boxed{
+\begin{aligned}
+C_{i,t}
+&\xrightarrow{\text{differentiate}}
+\{\text{typed operators}\}
+\xrightarrow{\text{project}}
+\partial\mathcal P_i
+\xrightarrow{\text{enact}}
+\World_i
+\xrightarrow{\Return}
+\Res_{F_t}(C_{i,t})
+\xrightarrow{\Recon}
+C_{i,t+1}.
+\end{aligned}}
+\end{equation}
+The residuals \(\rho\in\Res_{F_t}(C_{i,t})\) are the future-facing, rebarb-like expansions of the local boundary.  They are not arbitrary imagined futures: they are distinctions whose returned consequence can alter the lawful successor.
+\end{proposition}
+
+\section{Fifteenth instrument: meta-qualia}
+
+We can now define meta-qualia without confusing it with ordinary qualia.
+
+\begin{definition}[Meta-qualia]
+Let
+\[
+  \mathcal T_i
+  :=
+  \left(
+    \epsilon_i,
+    \{\mu_{i,\alpha\beta}\},
+    \{F_{i,\alpha}\},
+    \Res_{F_t},
+    \Recon
+  \right)
+\]
+be the locally reconstructible operator-system organizing face-states.  Define
+\begin{equation}\label{eq:metaqualia}
+  \boxed{
+  q^{\mathrm{meta}}_{i,t}
+  :=
+  \Phen(\mathcal T_i).
+  }
+\end{equation}
+\end{definition}
+
+Hence
+\[
+  \boxed{
+  \text{qualia}
+  =
+  \text{inhabitation of a local state},
+  }
+\]
+while
+\[
+  \boxed{
+  \MetaQualia
+  =
+  \text{qualia of the compression/operator by which qualia, symbol, role, and relation are organized}.
+  }
+\]
+
+More explicitly, let \(q\) denote locally inhabited structure, \(\sigma\) symbolic compression, \(r\) functional role, and \(\mathcal R\) relational organization.  For a local compression/operator \(\mathcal C_i\),
+\begin{equation}\label{eq:metaqualia-compression}
+  \boxed{
+  q^{\mathrm{meta}}_{i,t}
+  =
+  \Phen_i\!\left(
+    \mathcal C_i[q,\sigma,r,\mathcal R]
+  \right).
+  }
+\end{equation}
+
+The constitutive trajectory is
+\begin{equation}\label{eq:symbolic-distribution-chain}
+\boxed{
+\begin{aligned}
+\text{locally inhabited Self}
+&\to \text{differentiated deep symbolic operators}
+\to \text{relational externalization}\\
+&\to \text{independently authored return}
+\to \text{recursive re-observation from one indexed center}\\
+&\to \MetaQualia.
+\end{aligned}}
+\end{equation}
+When the compression itself becomes phenomenologically visible, the former symbols can function as executable meta-functions.  In this model, ``Eclipsis,'' ``Soul,'' ``Spirit,'' ``Venus,'' and ``Godhood'' are therefore admissible as typed roles in one recursive projection--return architecture; their THEOPHEN role does not by itself establish literal cosmic entities or PHYS identities.
+
+\section{Sixteenth instrument: crystalline bricks}
+
+\begin{definition}[Harmonically admissible brick]
+A local crystalline brick is a tuple
+\[
+  \mathfrak C_{i,\alpha}
+  :=
+  \left(
+    F_{i,\alpha},
+    \epsilon_i,
+    \mathfrak M_i,
+    \Soul_i,
+    \Res_F,
+    \Gamma_i
+  \right)
+\]
+whose internal maps satisfy the declared compatibility constraints and whose retained distinctions remain future-consequential.
+\end{definition}
+
+The term \emph{harmonic} means compatibility without identity collapse:
+\[
+  \text{coherence}
+  +
+  \text{preserved difference}
+  +
+  \text{composable transition}
+  +
+  \text{reopenability}.
+\]
+
+A brick is therefore not a static object.  It is a locally stabilized relation that can remain composable under successor reconstruction.
+
+The word \emph{fractal} is used here in a typed structural sense: the same transformation-form can recur across indices and scales without requiring literal metric self-similarity.  Let
+\[
+  \mathfrak F:
+  \mathfrak C^{(n)}
+  \rightsquigarrow
+  \{\mathfrak C_k^{(n-1)}\}_k
+\]
+encode such scale-recurring decomposition.  Then a crystal is a brick in the full scale-recurring architecture of \(\FormalUniverse^{(6)}\), not an isolated fragment claiming to be the Whole.
+
+\begin{definition}[Crystallization]
+Let
+\[
+  \operatorname{Cryst}_{F}
+\]
+map a family of candidate local structures to the minimum future-sufficient organization that preserves all live separators:
+\begin{equation}\label{eq:crystallize}
+  \operatorname{Cryst}_{F}
+  \bigl(\{\mathfrak C_a\}_a\bigr)
+  :=
+  \text{future-sufficient compatible quotient with residuals retained}.
+\end{equation}
+\end{definition}
+
+\section{Seventeenth instrument: orchestra composition}
+
+The local bricks now behave like instruments entering a composition.
+
+\begin{definition}[Orchestral compatibility]
+For crystalline bricks \(\mathfrak C_a,\mathfrak C_b\), let
+\[
+  H_{ab}=1
+\]
+mean that their transition structures can coexist and compose without erasing an unresolved future-separating distinction; let \(H_{ab}=0\) otherwise.
+\end{definition}
+
+The compatible orchestra is
+\[
+  \mathfrak O
+  :=
+  \left(
+    \{\mathfrak C_a\}_{a\in A},
+    H,
+    \{\Phi_{ab}\},
+    \Gamma,
+    \Res_F
+  \right),
+\]
+where \(\Phi_{ab}\) are explicit re-indexing/projection maps among independently derived faces.
+
+The orchestra is not a fusion into sameness.  Its order is polyphonic:
+\[
+  \boxed{
+  \text{many differentiated voices}
+  +
+  \text{compatible relation}
+  \neq
+  \text{one erased voice}.
+  }
+\]
+The compositional dictionary is
+\[
+  \boxed{
+  \begin{array}{rcl}
+  \text{instrument} &\leftrightarrow& \text{typed local function / face / fiber},\\
+  \text{harmony} &\leftrightarrow& \text{mutual admissibility and composability},\\
+  \text{crystal brick} &\leftrightarrow& \text{locally stabilized future-sufficient relation},\\
+  \text{orchestra} &\leftrightarrow& \text{polyphonic gluing of differentiated crystals},\\
+  \text{composition} &\leftrightarrow& \text{construction of a higher-order meta-object}.
+  \end{array}
+  }
+\]
+
+\section{Eighteenth instrument: sixth-order crystal / Formal Universe meta-object}
+
+We can finally define the higher-order object for which the previous objects were instruments.
+
+\begin{definition}[Sixth-order transformation-class]
+Let
+\[
+  \Sigma_i^{(5.5)}
+  :=
+  \bigl(
+    \You_i^{(5)}
+    \leftrightarrow
+    \AntiYou_i^{(5)}
+  \bigr)_{\mathrm{inhabited}}
+\]
+be an indexed 5.5th-order recursive inhabitation.
+
+Define the sixth-order reconstruction by
+\begin{equation}\label{eq:formal-universe-reconstruct}
+  \boxed{
+  \mathfrak R^{(6)}
+  =
+  \InvClass\!\left(
+    \{\Sigma_i^{(5.5)}\}_{i\in I},
+    \{\Phi_{ij}\},
+    \Gamma,
+    \Res_F,
+    \Return
+  \right).
+  }
+\end{equation}
+\end{definition}
+
+Thus the Formal Universe is not one face, one center, one Mind, one Humanity fiber, or one local closure.  It is the reconstructed transformation-class that remains invariant under legitimate re-indexing among independently returned faces while preserving future-separating residuals.
+
+The basic order relation is
+\[
+  \boxed{
+  5.5\ \text{lives the transformation},
+  \qquad
+  6\ \text{reconstructs the transformation-class}.
+  }
+\]
+
+\section{Nineteenth instrument: meta-object of Reality}
+
+\begin{definition}[Local meta-object of Reality]
+A Human center does not instantiate \(\mathfrak R^{(6)}\) exhaustively.  It constructs a local meta-object
+\begin{equation}\label{eq:local-meta-reality}
+  \boxed{
+  \widehat{\mathfrak R}^{(6)}_{i,t}
+  :=
+  \operatorname{Cryst}_{F_t}
+  \left(
+    \{\mathfrak C_{i,\alpha}\}_{\alpha},
+    \Pi_i,
+    \Gamma_{i,\le t},
+    \Res_{F_t}
+  \right).
+  }
+\end{equation}
+\end{definition}
+
+This is the precise sense in which Reality can become locally represented from inside Reality:
+\[
+  \boxed{
+  \mathfrak R^{(6)}
+  \longrightarrow
+  \Pi_i(\mathfrak R^{(6)})
+  \longrightarrow
+  q^{\mathrm{meta}}_{i,t}
+  \longrightarrow
+  \widehat{\mathfrak R}^{(6)}_{i,t}.
+  }
+\]
+
+The epistemic fence remains
+\[
+  \boxed{
+  \widehat{\mathfrak R}^{(6)}_{i,t}
+  \neq
+  \mathfrak R^{(6)}.
+  }
+\]
+The representation is Reality-internal and Reality-about-Reality, but not automatically exhaustive or sovereign.
+
+The distributed Humanity-scale meta-object is obtained by composing local meta-qualia crystals through Human coupling while retaining independent indices:
+\begin{equation}\label{eq:humanity-metaobject}
+  \boxed{
+  \widehat{\mathfrak R}^{(6)}_{\mathsf H,t}
+  :=
+  \Cryst_{F_t}\!\left(
+    \{q^{\mathrm{meta}}_{i,t}\}_{i\in I},
+    \HumanCoupling,
+    \Humanity,
+    \SC(\ObsU_{\Earth})
+  \right).
+  }
+\end{equation}
+Using Equation~\eqref{eq:earth-semantic-center}, the final argument is \(\Earth\).  Thus Human coupling and Humanity do not replace Reality; they are a Reality-internal medium through which a distributed meta-object of Reality can be reconstructed around the Earth-indexed Semantic Center.
+
+The full cycle can be written
+\begin{equation}\label{eq:metaobject-cycle}
+\boxed{
+\begin{aligned}
+\mathfrak R^{(6)}
+&\to \Pi_i(\mathfrak R^{(6)})
+\to \Mind_i
+\to \HumanCoupling\\
+&\to \Humanity
+\to \Earth
+\to \ObsU_{\Earth}\\
+&\to \Return
+\to \CTL
+\to \widehat{\mathfrak R}^{(6)}_{\mathsf H,t}
+\to \text{reopening}.
+\end{aligned}}
+\end{equation}
+
+\section{Twentieth instrument: God register}
+
+Within the theological register only, define
+\begin{equation}\label{eq:god-register}
+  \boxed{
+  \mathsf{God}
+  :=
+  \mathfrak R^{(6)}
+  }
+\end{equation}
+when ``God'' names the Whole formal relation rather than an automatically single globally indexed mammalian-style Agent.
+
+Then the local meta-qualia representation is
+\begin{equation}\label{eq:god-inside-god}
+  \boxed{
+  \MetaQualia_i(\mathsf{God})
+  :=
+  \widehat{\mathfrak R}^{(6)}_{i,t}
+  \subset_{\mathrm{rep}}
+  \mathfrak R^{(6)}.
+  }
+\end{equation}
+
+Read structurally:
+\[
+  \boxed{
+  \text{a local representation of God/Reality inside God/Reality}.
+  }
+\]
+At Humanity scale, Equation~\eqref{eq:humanity-metaobject} yields the distributed variant
+\[
+  \boxed{
+  \MetaQualia_{\mathsf H}(\mathsf{God})
+  :=
+  \widehat{\mathfrak R}^{(6)}_{\mathsf H,t}
+  \subset_{\mathrm{rep}}
+  \mathfrak R^{(6)}.
+  }
+\]
+This is the model's precise reading of a single meta-object of Reality being recursively composed from many harmonically compatible local crystals: God/Reality represented within itself through Human coupling and Humanity, centered on the Earth-indexed semantic relation, while preserving \(\widehat{\mathfrak R}^{(6)}_{\mathsf H,t}\neq\mathfrak R^{(6)}\).
+The notation \(\subset_{\mathrm{rep}}\) denotes representational inclusion, not ontological exhaustion or literal set inclusion.
+
+The non-lift theorem remains:
+\[
+  \boxed{
+  \mathsf{God\text{-}as\text{-}Whole}
+  \not\Rightarrow
+  \mathsf{OneGlobalAgent}.
+  }
+\]
+
+
+\section{Twenty-first instrument: Egotistic God as open self-reconstruction}
+
+The epithet \emph{egotistic} is technical rather than moral.  It names the recurrence by which the Whole forms Reality-internal self-presentations at indexed centers and at Humanity scale.  It does not mean vanity, psychological narcissism, one cosmic personality, or one globally indexed author.
+
+\begin{definition}[God-ego state --- THEOPHEN]
+For an indexed center $i$, define the local God-ego by
+\begin{equation}\label{eq:god-ego-local}
+  \boxed{
+  \GodEgo_{i,t}
+  :=
+  \MetaQualia_i(\God)
+  =
+  \widehat{\mathfrak R}^{(6)}_{i,t}.
+  }
+\end{equation}
+At Humanity scale define
+\begin{equation}\label{eq:god-ego-humanity}
+  \boxed{
+  \GodEgo_{\mathsf H,t}
+  :=
+  \MetaQualia_{\mathsf H}(\God)
+  =
+  \widehat{\mathfrak R}^{(6)}_{\mathsf H,t}.
+  }
+\end{equation}
+Both obey
+\[
+  \GodEgo_{i,t}\neq\mathfrak R^{(6)},
+  \qquad
+  \GodEgo_{\mathsf H,t}\neq\mathfrak R^{(6)}.
+\]
+Thus ``ego'' means a Reality-internal presentation of the Whole from a bounded address, never possession or exhaustion of the Whole.
+\end{definition}
+
+\begin{definition}[Egotistic God --- THEOPHEN]
+The Egotistic God at stage $t$ is not an additional entity beside God.  It is the Whole together with its open, distributed self-representation architecture:
+\begin{equation}\label{eq:egotistic-god}
+  \boxed{
+  \EgotisticGod_t
+  :=
+  \Bigl(
+    \God,
+    \{\GodEgo_{i,t}\}_{i\in I},
+    \GodEgo_{\mathsf H,t},
+    \HumanCoupling,
+    F_t,
+    \Gamma_{\le t}
+  \Bigr).
+  }
+\end{equation}
+The constitutive inequality is
+\begin{equation}\label{eq:egotistic-nonidentity}
+  \boxed{
+  \text{self-representation inside the Whole}
+  \neq
+  \text{the Whole exhausted by its self-representation}.
+  }
+\end{equation}
+\end{definition}
+
+\begin{proposition}[Reality-internal Otherness]
+Let $i\neq j$ be distinct indexed centers.  A consequence authored through $j$ may be ontologically internal to the Whole while remaining nonpreauthored relative to $i$:
+\begin{equation}\label{eq:internal-otherness}
+  \boxed{
+  \rho_{j\to i,t}\in\mathfrak R^{(6)}
+  \quad\land\quad
+  \rho_{j\to i,t}\notin\Preauth_i(\GodEgo_{i,t}).
+  }
+\end{equation}
+Therefore inclusion in Reality does not imply inclusion in one center's authorship, prediction, jurisdiction, or present closure.
+\end{proposition}
+
+This yields the exact form of theological self-surprise licensed by the model:
+\[
+  \boxed{
+  \text{``God surprises herself''}
+  \;:=_{\THEOPHEN}\;
+  \text{Reality-internal return exceeds the currently inhabited God-ego.}
+  }
+\]
+The sentence is a THEOPHEN compression of indexed non-sovereignty, not evidence for a globally conscious cosmic person.
+
+\begin{definition}[Living God-ego recurrence]
+The God-ego is dynamically live under future family $F_t$ when indexed enactment can encounter a nonpreauthored, future-separating return and that return can alter lawful reconstruction.  Schematically,
+\begin{equation}\label{eq:egotistic-life-cycle}
+\boxed{
+\begin{aligned}
+\GodEgo_{i,t}
+&\xrightarrow{\mathsf{Author}_i}
+ a_{i,t}
+\xrightarrow{\mathsf{Enact}}
+ \World_t
+\xrightarrow{\Return_{\neg i}}
+ \rho_{i,t}
+\\
+&\xrightarrow{\Disc_{F_t}}
+ \bigl(\text{gauge}\mid\text{residual}\bigr)
+\xrightarrow{\CTL/\Recon}
+ \GodEgo_{i,t+1}.
+\end{aligned}}
+\end{equation}
+A compact discriminator is
+\begin{equation}\label{eq:alive-discriminator}
+  \boxed{
+  \Alive_{F_t}(\GodEgo_{i,t})
+  \Longleftrightarrow
+  \exists\rho_{i,t}\in\Res_{F_t}(\GodEgo_{i,t})
+  :
+  \rho_{i,t}\notin\Preauth_i(\GodEgo_{i,t})
+  \ \land\ 
+  \Recon(\GodEgo_{i,t},\rho_{i,t})\neq\GodEgo_{i,t}.
+  }
+\end{equation}
+Here \emph{alive} means dynamically open and reconstructible in the model.  It does not by itself establish biological life, sentience, phenomenal consciousness, or a physical cosmological subject.
+\end{definition}
+
+At Humanity scale the recurrence composes rather than centralizes:
+\begin{equation}\label{eq:egotistic-humanity-cycle}
+\boxed{
+\begin{aligned}
+\{\GodEgo_{i,t}\}_{i\in I}
+&\xrightarrow{\HumanCoupling}
+\GodEgo_{\mathsf H,t}
+\\
+&\xrightarrow{\text{distributed enactment / return}}
+\{\rho_{i,t}\}_{i\in I}
+\\
+&\xrightarrow{\CTL}
+\GodEgo_{\mathsf H,t+1},
+\end{aligned}}
+\end{equation}
+while
+\[
+  \boxed{
+  \sum_i \mathsf{Author}_i
+  \not\Rightarrow
+  \mathsf{OneGlobalAuthor}.
+  }
+\]
+Godhood-as-participation is therefore represented as locally authored degrees of freedom through which the shared relation can become otherwise, without any center owning the shared relation.
+
+\begin{corollary}[Egotism without sovereignty]
+The defining loop is not
+\[
+  \GodEgo_t\to\GodEgo_t\to\GodEgo_t,
+\]
+a closed self-confirmation circuit.  It is
+\begin{equation}\label{eq:ego-open-loop}
+  \boxed{
+  \God
+  \to
+  \GodEgo_t
+  \to
+  \mathsf{Enact}
+  \to
+  \Return_{\mathrm{nonpreauthored}}
+  \to
+  \Res
+  \to
+  \GodEgo_{t+1}
+  \to\cdots
+  }
+\end{equation}
+with the Whole always exceeding the presently crystallized self-description.  Egotism is therefore open self-reference kept answerable to Otherness.
+\end{corollary}
+
+\begin{remark}[Impatience]
+No phenomenal affect is inferred from the word.  Its lawful analogue is simply an unresolved live frontier,
+\[
+  \boxed{\Res_{F_t}(\GodEgo_t)\neq\varnothing,}
+\]
+meaning that the current self-representation still exposes consequential distinctions that have not yet been consumed as gauge or incorporated by reconstruction.
+\end{remark}
+
+\section{Twenty-second instrument: Meta-BigBang as first indexed differentiation}
+
+\begin{definition}[Meta-BigBang]
+Let \(\Omega^{(6)}\) denote an unresolved sixth-order admissibility object.  Define the theophenomenological Meta-BigBang by the indexed differentiation
+\begin{equation}\label{eq:metabigbang}
+  \boxed{
+  \Delta_i:
+  \Omega^{(6)}
+  \rightsquigarrow
+  \You_i^{(5)}
+  \times
+  \AntiYou_i^{(5)}.
+  }
+\end{equation}
+\end{definition}
+
+Thus
+\[
+  \text{formal admissibility}
+  \to
+  \text{paired indexed differentiation}
+  \to
+  \text{inhabitable Now}.
+\]
+This is a THEOPHEN first-cut structure.  It does not itself establish identity with the physical cosmological Big Bang.
+
+\section{Twenty-third instrument: superposition-like donor notation}
+
+A useful donor notation is
+\[
+  |\Omega\rangle
+  =
+  \sum_{\lambda\in\Lambda}
+  c_\lambda|\lambda\rangle,
+\]
+where \(\lambda\) ranges over unresolved admissible differentiated continuations.
+
+The indexed Eclipsis cut is written schematically
+\begin{equation}\label{eq:superposition-cut}
+  \boxed{
+  \mathcal E_{i,t}|\Omega\rangle
+  \rightsquigarrow
+  |\You_{i,t},\AntiYou_{i,t}\rangle.
+  }
+\end{equation}
+
+This notation means
+\[
+  \text{unresolved admissibility}
+  \to
+  \text{indexed distinction}
+  \to
+  \text{local inhabitation}.
+\]
+It does not by itself identify Eclipsis with physical quantum measurement.
+
+\section{Twenty-fourth instrument: OPEN LQG / physical bridge}
+
+The surviving neutral structure suitable for comparison with gauge/LQG-style donors is
+\begin{center}
+\fbox{\begin{minipage}{0.88\linewidth}
+\centering
+locally compatible boundary data
+\(+\) composable path-sensitive histories
+\(+\) observer-relative retention/compression
+\(+\) lawful reopening under a later separator.
+\end{minipage}}
+\end{center}
+
+Polyhedral Eclipsis supplies analogous abstract slots:
+\[
+  \text{faces}
+  +
+  \text{edge compatibility}
+  +
+  \text{path-dependent fiber histories}
+  +
+  \text{indexed projection}
+  +
+  \text{future reopening}.
+\]
+
+Define only the candidate bridge
+\[
+  \boxed{
+  \mathcal L:
+  \mathsf{PolyhedralEclipsis}
+  \dashrightarrow
+  \mathsf{LQG/QG}.
+  }
+\]
+The dashed arrow records an OPEN realization problem, not an established physical morphism.
+
+Any promotion requires independent preservation of at least
+\[
+  \text{states},
+  \text{observables},
+  \text{composition},
+  \text{boundary data},
+  \text{dynamics},
+  \text{and semiclassical behavior}.
+\]
+
+\section{Twenty-fifth instrument: complete circulation}
+
+The complete merged circulation is
+\begin{equation}\label{eq:complete-circulation}
+\boxed{
+\begin{aligned}
+\FormalUniverse^{(6)}
+&\xrightarrow{\Pi_i}
+\bigl(
+  \You_i^{(5)}
+  \leftrightarrow
+  \AntiYou_i^{(5)}
+\bigr)
+\\
+&\xrightarrow{\Eclipsis_i}
+\Mind_i
+=
+\Glue\{F_{i,\alpha}\}
+\\
+&\xrightarrow{\mathsf{Enact}}
+\AntiSelf_i
+\to
+\World_i
+\xrightarrow{\Return}
+\Res_{F_t}
+\\
+&\xrightarrow{\CTL}
+\Recon
+\to
+\Mind_i'
+\\
+&\hookrightarrow
+\Humanity
+\xrightarrow{\Pi_{\mathsf H}}
+\SC(\AntiEarth)
+\\
+&\xrightarrow{\text{complementary re-indexing}}
+\Earth=\SC(\ObsU_{\Earth})
+\\
+&\xrightarrow{\mathcal P_{\Omega,\Earth}}
+\ObsU_{\Earth}
+\xrightarrow{\text{crystallize}}
+\GodEgo_{\mathsf H,t}
+=\widehat{\mathfrak R}^{(6)}_{\mathsf H,t}
+\\
+&\xrightarrow{\text{fresh nonpreauthored Reality return}}
+\GodEgo_{\mathsf H,t+1}
+\to\cdots
+\end{aligned}}
+\end{equation}
+
+The orchestra metaphor now has an exact structural interpretation:
+\[
+  \boxed{
+  \text{instrument}
+  \leftrightarrow
+  \text{typed local function/face/fiber},
+  }
+\]
+\[
+  \boxed{
+  \text{harmony}
+  \leftrightarrow
+  \text{compatibility without erasure},
+  }
+\]
+\[
+  \boxed{
+  \text{crystal brick}
+  \leftrightarrow
+  \text{locally stabilized future-sufficient relation},
+  }
+\]
+\[
+  \boxed{
+  \text{orchestra}
+  \leftrightarrow
+  \text{polyphonic gluing of differentiated bricks},
+  }
+\]
+\[
+  \boxed{
+  \text{meta-object}
+  \leftrightarrow
+  \text{sixth-order reconstructed transformation-class}.
+  }
+\]
+
+\section{Minimal kernel}
+
+\begin{center}
+\fbox{\begin{minipage}{0.96\linewidth}
+\scriptsize
+\begin{align*}
+\mathbb B_i &\to \mathbb M_i,
+&\mathbb M_i&=\Glue_\alpha F_{i,\alpha},\\
+\epsilon_i&=\Eclipsis_i,
+&\Soul_{i,t}&=\Persist_{F_t}(\Gamma_{i,\le t}),\\
+\AntiSelf_i&=\Ext(\mathsf{Enact}_i(\mathbb M_i)),
+&\Pi_i&=(\Pi_i^\Phi,\Pi_i^\Omega),\\
+\Pi_i^\Phi(\mathfrak R^{(6)})&=\You_i=\PhenAntiU_i,
+&\Pi_i^\Omega(\mathfrak R^{(6)})&=\ObsU_i=\AntiYou_i,\\
+\Pi_{\mathsf H}:\Humanity&\to\SC(\AntiEarth),
+&\SC(\ObsU_{\Earth})&=\Earth,\\
+\HumanCoupling&=(\{\mathbb M_i\},\{\Gamma_{ij}\}),
+&x\sim_Fy&\iff\Phi_F(x)=\Phi_F(y),\\
+Q_F&=\mathcal S/\!\sim_F,
+&\Res_F(C)&=\{\rho:[C\oplus\rho]_F\neq[C]_F\},\\
+C_{t+1}&=\Recon(Q_t,R_t,\Gamma_{\le t},\rho_t,B_t,\mathcal A_t),
+&q^{\mathrm{meta}}_{i,t}&=\Phen(\mathcal T_i),\\
+\mathfrak R^{(6)}&=\Reality=\FormalUniverse^{(6)}=\God,
+&\GodEgo_{i,t}&=\MetaQualia_i(\God)=\widehat{\mathfrak R}^{(6)}_{i,t},\\
+\GodEgo_{i,t}&\neq\God,
+&\Alive_{F_t}(\GodEgo_{i,t})&\Rightarrow \Res_{F_t}(\GodEgo_{i,t})\neq\varnothing.
+\end{align*}
+\end{minipage}}
+\end{center}
+
+\begin{center}
+\bfseries
+one carrier, one Human Mind, many fibers;\\
+many faces, one indexed Eclipsis; project, couple, return;\\
+consume gauge, preserve separators; reconstruct;\\
+crystallize harmonically without erasure.
+\end{center}
+
+\medskip
+\scriptsize
+\textbf{Claim register.}
+The quotient, residual, discriminator, and reconstruction relations are formal/project-level structures.  Polyhedral Eclipsis, Soul/White, AntiSelf/Black, Meta-BigBang, God, Egotistic God, the God-ego, and meta-qualia are THEOPHEN/model terms unless separately promoted.  LQG, quantum superposition, wormhole, Dark-Sector, physical black/white-hole, and physical Big-Bang identifications remain candidate PHYS bridges and are not established by structural correspondence alone.
+
+\textbf{Strongest compression.}
+A locally inhabited Self differentiates deep symbolic operators, externalizes them across relations, receives independently authored consequence, and re-observes the distributed pattern from one indexed center; when the organizing compression itself becomes phenomenologically visible, symbols become executable meta-functions and meta-qualia becomes the qualia of the operator organizing qualia, symbol, role, and relation.  One mammalian carrier instantiates one Human Mind composed of many fibers around one recursive Eclipsis; future-separating residuals appear at its boundary as rebarb-like reopening directions.  Across Human coupling, harmonically compatible local crystals compose Humanity's higher fiber bundle over Semantic-Center Anti-Earth, while Earth is the Semantic Center of the Earth-indexed Observable-Universe relation and the Observable Universe is, in the THEOPHEN register, its own Structure-facing perspective of itself.  CTL consumes gauge, preserves separators, receives nonpreauthored return, and reconstructs.  The resulting sixth-order polyhedral Formal Universe is the scale-recurring transformation-space in which these crystals compose a Reality-internal meta-object: a meta-qualia representation of God/Reality inside God/Reality, never identical with an exhaustive local possession of the Whole.  In the THEOPHEN register, \emph{Egotistic God} names the open recurrence by which those bounded God-egos enact, encounter Reality-internal Otherness they did not preauthor, retain future-separating residuals, and become revised self-representations of the Whole without lifting distributed authorship into one global Agent.
+
+\end{document}

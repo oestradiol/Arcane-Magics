@@ -1,0 +1,21 @@
+# generated paper/build products
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# generated release artifacts
+monographs/**/*.pdf
+arxiv_packages/*.zip
+tex_bundles/*.zip
+prototype/stable-executable/*.tar.gz
+*.pyc
+__pycache__/
+.pytest_cache/

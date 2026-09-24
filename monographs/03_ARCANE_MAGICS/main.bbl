@@ -1,0 +1,1015 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{Massimi2022Perspectival}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=924c3303d0d4ac3c4ce5c23320fa5c54}{%
+           family={Massimi},
+           familyi={M\bibinitperiod},
+           given={Michela},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{924c3303d0d4ac3c4ce5c23320fa5c54}
+      \strng{fullhash}{924c3303d0d4ac3c4ce5c23320fa5c54}
+      \strng{fullhashraw}{924c3303d0d4ac3c4ce5c23320fa5c54}
+      \strng{bibnamehash}{924c3303d0d4ac3c4ce5c23320fa5c54}
+      \strng{authorbibnamehash}{924c3303d0d4ac3c4ce5c23320fa5c54}
+      \strng{authornamehash}{924c3303d0d4ac3c4ce5c23320fa5c54}
+      \strng{authorfullhash}{924c3303d0d4ac3c4ce5c23320fa5c54}
+      \strng{authorfullhashraw}{924c3303d0d4ac3c4ce5c23320fa5c54}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780197555620}
+      \field{title}{Perspectival Realism}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1093/oso/9780197555620.001.0001
+      \endverb
+    \endentry
+    \entry{Heidegger2026BeingTime}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=79b1e6f4199aeb3f853ca7cba607bfdc}{%
+           family={Heidegger},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{translator}{1}{}{%
+        {{hash=82861487c26b4b99fbd4ec091e2bc347}{%
+           family={Welch},
+           familyi={W\bibinitperiod},
+           given={Cyril},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Yale University Press}%
+      }
+      \strng{namehash}{79b1e6f4199aeb3f853ca7cba607bfdc}
+      \strng{fullhash}{79b1e6f4199aeb3f853ca7cba607bfdc}
+      \strng{fullhashraw}{79b1e6f4199aeb3f853ca7cba607bfdc}
+      \strng{bibnamehash}{79b1e6f4199aeb3f853ca7cba607bfdc}
+      \strng{authorbibnamehash}{79b1e6f4199aeb3f853ca7cba607bfdc}
+      \strng{authornamehash}{79b1e6f4199aeb3f853ca7cba607bfdc}
+      \strng{authorfullhash}{79b1e6f4199aeb3f853ca7cba607bfdc}
+      \strng{authorfullhashraw}{79b1e6f4199aeb3f853ca7cba607bfdc}
+      \strng{translatorbibnamehash}{82861487c26b4b99fbd4ec091e2bc347}
+      \strng{translatornamehash}{82861487c26b4b99fbd4ec091e2bc347}
+      \strng{translatorfullhash}{82861487c26b4b99fbd4ec091e2bc347}
+      \strng{translatorfullhashraw}{82861487c26b4b99fbd4ec091e2bc347}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780300282726}
+      \field{note}{German original published 1927}
+      \field{title}{Being and Time: An Annotated Translation}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://yalebooks.yale.edu/book/9780300282726/being-and-time/
+      \endverb
+      \verb{url}
+      \verb https://yalebooks.yale.edu/book/9780300282726/being-and-time/
+      \endverb
+    \endentry
+    \entry{SEPHeidegger2025}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=8420831b394c5535491f9bb089641527}{%
+           family={Wrathall},
+           familyi={W\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=5ff1c29ff1cc8f6336533b0ffd842a79}{%
+           family={Zalta},
+           familyi={Z\bibinitperiod},
+           given={Edward\bibnamedelima N.},
+           giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=47603970fcd579d567acd0cb66cdb242}{%
+           family={Nodelman},
+           familyi={N\bibinitperiod},
+           given={Uri},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Metaphysics Research Lab, Stanford University}%
+      }
+      \strng{namehash}{8420831b394c5535491f9bb089641527}
+      \strng{fullhash}{8420831b394c5535491f9bb089641527}
+      \strng{fullhashraw}{8420831b394c5535491f9bb089641527}
+      \strng{bibnamehash}{8420831b394c5535491f9bb089641527}
+      \strng{authorbibnamehash}{8420831b394c5535491f9bb089641527}
+      \strng{authornamehash}{8420831b394c5535491f9bb089641527}
+      \strng{authorfullhash}{8420831b394c5535491f9bb089641527}
+      \strng{authorfullhashraw}{8420831b394c5535491f9bb089641527}
+      \strng{editorbibnamehash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \strng{editornamehash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \strng{editorfullhash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \strng{editorfullhashraw}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Stanford Encyclopedia of Philosophy}
+      \field{edition}{Spring 2025}
+      \field{title}{Martin Heidegger}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://plato.stanford.edu/archives/spr2025/entries/heidegger/
+      \endverb
+      \verb{url}
+      \verb https://plato.stanford.edu/archives/spr2025/entries/heidegger/
+      \endverb
+    \endentry
+    \entry{Bateson1972}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=ec882d001240ffe54d301c768ee8a909}{%
+           family={Bateson},
+           familyi={B\bibinitperiod},
+           given={Gregory},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Chandler}%
+      }
+      \strng{namehash}{ec882d001240ffe54d301c768ee8a909}
+      \strng{fullhash}{ec882d001240ffe54d301c768ee8a909}
+      \strng{fullhashraw}{ec882d001240ffe54d301c768ee8a909}
+      \strng{bibnamehash}{ec882d001240ffe54d301c768ee8a909}
+      \strng{authorbibnamehash}{ec882d001240ffe54d301c768ee8a909}
+      \strng{authornamehash}{ec882d001240ffe54d301c768ee8a909}
+      \strng{authorfullhash}{ec882d001240ffe54d301c768ee8a909}
+      \strng{authorfullhashraw}{ec882d001240ffe54d301c768ee8a909}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Steps to an Ecology of Mind}
+      \field{year}{1972}
+      \verb{urlraw}
+      \verb https://press.uchicago.edu/ucp/books/book/chicago/S/bo3620295.html
+      \endverb
+      \verb{url}
+      \verb https://press.uchicago.edu/ucp/books/book/chicago/S/bo3620295.html
+      \endverb
+    \endentry
+    \entry{MaturanaVarela1980Autopoiesis}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=eabc719b017411482f443789853eea7a}{%
+           family={Maturana},
+           familyi={M\bibinitperiod},
+           given={Humberto\bibnamedelima R.},
+           giveni={H\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=dc76a3f77125b6fa9e71e174412f8655}{%
+           family={Varela},
+           familyi={V\bibinitperiod},
+           given={Francisco\bibnamedelima J.},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Dordrecht}%
+      }
+      \list{publisher}{1}{%
+        {D. Reidel Publishing Company}%
+      }
+      \strng{namehash}{0ee7b18821e06966641f43f362760753}
+      \strng{fullhash}{0ee7b18821e06966641f43f362760753}
+      \strng{fullhashraw}{0ee7b18821e06966641f43f362760753}
+      \strng{bibnamehash}{0ee7b18821e06966641f43f362760753}
+      \strng{authorbibnamehash}{0ee7b18821e06966641f43f362760753}
+      \strng{authornamehash}{0ee7b18821e06966641f43f362760753}
+      \strng{authorfullhash}{0ee7b18821e06966641f43f362760753}
+      \strng{authorfullhashraw}{0ee7b18821e06966641f43f362760753}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Boston Studies in the Philosophy and History of Science}
+      \field{title}{Autopoiesis and Cognition: The Realization of the Living}
+      \field{year}{1980}
+      \verb{doi}
+      \verb 10.1007/978-94-009-8947-4
+      \endverb
+    \endentry
+    \entry{Pattee2001EpistemicCut}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=8ee874da650ed87501f6d2aa67658d4c}{%
+           family={Pattee},
+           familyi={P\bibinitperiod},
+           given={Howard\bibnamedelima H.},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{8ee874da650ed87501f6d2aa67658d4c}
+      \strng{fullhash}{8ee874da650ed87501f6d2aa67658d4c}
+      \strng{fullhashraw}{8ee874da650ed87501f6d2aa67658d4c}
+      \strng{bibnamehash}{8ee874da650ed87501f6d2aa67658d4c}
+      \strng{authorbibnamehash}{8ee874da650ed87501f6d2aa67658d4c}
+      \strng{authornamehash}{8ee874da650ed87501f6d2aa67658d4c}
+      \strng{authorfullhash}{8ee874da650ed87501f6d2aa67658d4c}
+      \strng{authorfullhashraw}{8ee874da650ed87501f6d2aa67658d4c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BioSystems}
+      \field{number}{1--3}
+      \field{title}{The Physics of Symbols: Bridging the Epistemic Cut}
+      \field{volume}{60}
+      \field{year}{2001}
+      \field{pages}{5\bibrangedash 21}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1016/S0303-2647(01)00104-6
+      \endverb
+    \endentry
+    \entry{PeirceSemioticsSEP}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=818fbf89e061b73e5f3bb3a7d2ed3ae5}{%
+           family={Atkin},
+           familyi={A\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{818fbf89e061b73e5f3bb3a7d2ed3ae5}
+      \strng{fullhash}{818fbf89e061b73e5f3bb3a7d2ed3ae5}
+      \strng{fullhashraw}{818fbf89e061b73e5f3bb3a7d2ed3ae5}
+      \strng{bibnamehash}{818fbf89e061b73e5f3bb3a7d2ed3ae5}
+      \strng{authorbibnamehash}{818fbf89e061b73e5f3bb3a7d2ed3ae5}
+      \strng{authornamehash}{818fbf89e061b73e5f3bb3a7d2ed3ae5}
+      \strng{authorfullhash}{818fbf89e061b73e5f3bb3a7d2ed3ae5}
+      \strng{authorfullhashraw}{818fbf89e061b73e5f3bb3a7d2ed3ae5}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Stanford Encyclopedia of Philosophy}
+      \field{title}{Peirce's Theory of Signs}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://plato.stanford.edu/entries/peirce-semiotics/
+      \endverb
+      \verb{url}
+      \verb https://plato.stanford.edu/entries/peirce-semiotics/
+      \endverb
+    \endentry
+    \entry{Whitehead1978Process}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=9131dcc0b7c52c07d7d95e489ba0a0f6}{%
+           family={Whitehead},
+           familyi={W\bibinitperiod},
+           given={Alfred\bibnamedelima North},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Free Press}%
+      }
+      \strng{namehash}{9131dcc0b7c52c07d7d95e489ba0a0f6}
+      \strng{fullhash}{9131dcc0b7c52c07d7d95e489ba0a0f6}
+      \strng{fullhashraw}{9131dcc0b7c52c07d7d95e489ba0a0f6}
+      \strng{bibnamehash}{9131dcc0b7c52c07d7d95e489ba0a0f6}
+      \strng{authorbibnamehash}{9131dcc0b7c52c07d7d95e489ba0a0f6}
+      \strng{authornamehash}{9131dcc0b7c52c07d7d95e489ba0a0f6}
+      \strng{authorfullhash}{9131dcc0b7c52c07d7d95e489ba0a0f6}
+      \strng{authorfullhashraw}{9131dcc0b7c52c07d7d95e489ba0a0f6}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Corrected edition}
+      \field{note}{Originally published 1929}
+      \field{title}{Process and Reality: An Essay in Cosmology}
+      \field{year}{1978}
+    \endentry
+    \entry{VonFoerster2003Understanding}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=d6e25c70e337a14e214f1eb830920206}{%
+           family={Foerster},
+           familyi={F\bibinitperiod},
+           given={Heinz},
+           giveni={H\bibinitperiod},
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d6e25c70e337a14e214f1eb830920206}
+      \strng{fullhash}{d6e25c70e337a14e214f1eb830920206}
+      \strng{fullhashraw}{d6e25c70e337a14e214f1eb830920206}
+      \strng{bibnamehash}{d6e25c70e337a14e214f1eb830920206}
+      \strng{authorbibnamehash}{d6e25c70e337a14e214f1eb830920206}
+      \strng{authornamehash}{d6e25c70e337a14e214f1eb830920206}
+      \strng{authorfullhash}{d6e25c70e337a14e214f1eb830920206}
+      \strng{authorfullhashraw}{d6e25c70e337a14e214f1eb830920206}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Understanding Understanding: Essays on Cybernetics and Cognition}
+      \field{year}{2003}
+      \verb{doi}
+      \verb 10.1007/b97451
+      \endverb
+    \endentry
+    \entry{SEPPhenomenologyReligion2024}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=097708ea36dbe509a83004613603bcf6}{%
+           family={Wynn},
+           familyi={W\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=5ff1c29ff1cc8f6336533b0ffd842a79}{%
+           family={Zalta},
+           familyi={Z\bibinitperiod},
+           given={Edward\bibnamedelima N.},
+           giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=47603970fcd579d567acd0cb66cdb242}{%
+           family={Nodelman},
+           familyi={N\bibinitperiod},
+           given={Uri},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Metaphysics Research Lab, Stanford University}%
+      }
+      \strng{namehash}{097708ea36dbe509a83004613603bcf6}
+      \strng{fullhash}{097708ea36dbe509a83004613603bcf6}
+      \strng{fullhashraw}{097708ea36dbe509a83004613603bcf6}
+      \strng{bibnamehash}{097708ea36dbe509a83004613603bcf6}
+      \strng{authorbibnamehash}{097708ea36dbe509a83004613603bcf6}
+      \strng{authornamehash}{097708ea36dbe509a83004613603bcf6}
+      \strng{authorfullhash}{097708ea36dbe509a83004613603bcf6}
+      \strng{authorfullhashraw}{097708ea36dbe509a83004613603bcf6}
+      \strng{editorbibnamehash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \strng{editornamehash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \strng{editorfullhash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \strng{editorfullhashraw}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Stanford Encyclopedia of Philosophy}
+      \field{edition}{Spring 2024}
+      \field{title}{Phenomenology of Religion}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://plato.stanford.edu/archives/spr2024/entries/phenomenology-religion/
+      \endverb
+      \verb{url}
+      \verb https://plato.stanford.edu/archives/spr2024/entries/phenomenology-religion/
+      \endverb
+    \endentry
+    \entry{Hansen2025Daoism}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=99cc47759a562d846da5453139cc8a0b}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Chad},
+           giveni={C\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=5ff1c29ff1cc8f6336533b0ffd842a79}{%
+           family={Zalta},
+           familyi={Z\bibinitperiod},
+           given={Edward\bibnamedelima N.},
+           giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=47603970fcd579d567acd0cb66cdb242}{%
+           family={Nodelman},
+           familyi={N\bibinitperiod},
+           given={Uri},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Metaphysics Research Lab, Stanford University}%
+      }
+      \strng{namehash}{99cc47759a562d846da5453139cc8a0b}
+      \strng{fullhash}{99cc47759a562d846da5453139cc8a0b}
+      \strng{fullhashraw}{99cc47759a562d846da5453139cc8a0b}
+      \strng{bibnamehash}{99cc47759a562d846da5453139cc8a0b}
+      \strng{authorbibnamehash}{99cc47759a562d846da5453139cc8a0b}
+      \strng{authornamehash}{99cc47759a562d846da5453139cc8a0b}
+      \strng{authorfullhash}{99cc47759a562d846da5453139cc8a0b}
+      \strng{authorfullhashraw}{99cc47759a562d846da5453139cc8a0b}
+      \strng{editorbibnamehash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \strng{editornamehash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \strng{editorfullhash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \strng{editorfullhashraw}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Stanford Encyclopedia of Philosophy}
+      \field{edition}{Summer 2025}
+      \field{title}{Daoism}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://plato.stanford.edu/archives/sum2025/entries/daoism/
+      \endverb
+      \verb{url}
+      \verb https://plato.stanford.edu/archives/sum2025/entries/daoism/
+      \endverb
+    \endentry
+    \entry{SEPChineseMetaphysics2023}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=dab67dc1d74a0ecdb25db0eee4ff6a96}{%
+           family={Perkins},
+           familyi={P\bibinitperiod},
+           given={Franklin},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{dab67dc1d74a0ecdb25db0eee4ff6a96}
+      \strng{fullhash}{dab67dc1d74a0ecdb25db0eee4ff6a96}
+      \strng{fullhashraw}{dab67dc1d74a0ecdb25db0eee4ff6a96}
+      \strng{bibnamehash}{dab67dc1d74a0ecdb25db0eee4ff6a96}
+      \strng{authorbibnamehash}{dab67dc1d74a0ecdb25db0eee4ff6a96}
+      \strng{authornamehash}{dab67dc1d74a0ecdb25db0eee4ff6a96}
+      \strng{authorfullhash}{dab67dc1d74a0ecdb25db0eee4ff6a96}
+      \strng{authorfullhashraw}{dab67dc1d74a0ecdb25db0eee4ff6a96}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Stanford Encyclopedia of Philosophy}
+      \field{note}{Substantive revision 16 October 2023}
+      \field{title}{Metaphysics in Chinese Philosophy}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://plato.stanford.edu/entries/chinese-metaphysics/
+      \endverb
+      \verb{url}
+      \verb https://plato.stanford.edu/entries/chinese-metaphysics/
+      \endverb
+    \endentry
+    \entry{Wang2013Yinyang}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=241c10105bf7f5ca3af9f94305488b15}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Robin\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{241c10105bf7f5ca3af9f94305488b15}
+      \strng{fullhash}{241c10105bf7f5ca3af9f94305488b15}
+      \strng{fullhashraw}{241c10105bf7f5ca3af9f94305488b15}
+      \strng{bibnamehash}{241c10105bf7f5ca3af9f94305488b15}
+      \strng{authorbibnamehash}{241c10105bf7f5ca3af9f94305488b15}
+      \strng{authornamehash}{241c10105bf7f5ca3af9f94305488b15}
+      \strng{authorfullhash}{241c10105bf7f5ca3af9f94305488b15}
+      \strng{authorfullhashraw}{241c10105bf7f5ca3af9f94305488b15}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Yinyang: The Way of Heaven and Earth in Chinese Thought and Culture}
+      \field{year}{2012}
+      \verb{doi}
+      \verb 10.1017/CBO9780511687075
+      \endverb
+    \endentry
+    \entry{Simondon2020Individuation}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=01b02e60b7a4d60276f24fc75eb7b0ad}{%
+           family={Simondon},
+           familyi={S\bibinitperiod},
+           given={Gilbert},
+           giveni={G\bibinitperiod}}}%
+      }
+      \name{translator}{1}{}{%
+        {{hash=f05f6903e66b1cf18455e34c6926bc98}{%
+           family={Adkins},
+           familyi={A\bibinitperiod},
+           given={Taylor},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University of Minnesota Press}%
+      }
+      \strng{namehash}{01b02e60b7a4d60276f24fc75eb7b0ad}
+      \strng{fullhash}{01b02e60b7a4d60276f24fc75eb7b0ad}
+      \strng{fullhashraw}{01b02e60b7a4d60276f24fc75eb7b0ad}
+      \strng{bibnamehash}{01b02e60b7a4d60276f24fc75eb7b0ad}
+      \strng{authorbibnamehash}{01b02e60b7a4d60276f24fc75eb7b0ad}
+      \strng{authornamehash}{01b02e60b7a4d60276f24fc75eb7b0ad}
+      \strng{authorfullhash}{01b02e60b7a4d60276f24fc75eb7b0ad}
+      \strng{authorfullhashraw}{01b02e60b7a4d60276f24fc75eb7b0ad}
+      \strng{translatorbibnamehash}{f05f6903e66b1cf18455e34c6926bc98}
+      \strng{translatornamehash}{f05f6903e66b1cf18455e34c6926bc98}
+      \strng{translatorfullhash}{f05f6903e66b1cf18455e34c6926bc98}
+      \strng{translatorfullhashraw}{f05f6903e66b1cf18455e34c6926bc98}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780816680016}
+      \field{title}{Individuation in Light of Notions of Form and Information}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.upress.umn.edu/9780816680016/individuation-in-light-of-notions-of-form-and-information/
+      \endverb
+      \verb{url}
+      \verb https://www.upress.umn.edu/9780816680016/individuation-in-light-of-notions-of-form-and-information/
+      \endverb
+    \endentry
+    \entry{Barad2007}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=74486b1cde2b59737ecdd097fad545ea}{%
+           family={Barad},
+           familyi={B\bibinitperiod},
+           given={Karen},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Duke University Press}%
+      }
+      \strng{namehash}{74486b1cde2b59737ecdd097fad545ea}
+      \strng{fullhash}{74486b1cde2b59737ecdd097fad545ea}
+      \strng{fullhashraw}{74486b1cde2b59737ecdd097fad545ea}
+      \strng{bibnamehash}{74486b1cde2b59737ecdd097fad545ea}
+      \strng{authorbibnamehash}{74486b1cde2b59737ecdd097fad545ea}
+      \strng{authornamehash}{74486b1cde2b59737ecdd097fad545ea}
+      \strng{authorfullhash}{74486b1cde2b59737ecdd097fad545ea}
+      \strng{authorfullhashraw}{74486b1cde2b59737ecdd097fad545ea}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Meeting the Universe Halfway: Quantum Physics and the Entanglement of Matter and Meaning}
+      \field{year}{2007}
+      \verb{doi}
+      \verb 10.1215/9780822388128
+      \endverb
+    \endentry
+    \entry{Luhmann2006Difference}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=c8b72fb67fc916725baec30956b60d9d}{%
+           family={Luhmann},
+           familyi={L\bibinitperiod},
+           given={Niklas},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{c8b72fb67fc916725baec30956b60d9d}
+      \strng{fullhash}{c8b72fb67fc916725baec30956b60d9d}
+      \strng{fullhashraw}{c8b72fb67fc916725baec30956b60d9d}
+      \strng{bibnamehash}{c8b72fb67fc916725baec30956b60d9d}
+      \strng{authorbibnamehash}{c8b72fb67fc916725baec30956b60d9d}
+      \strng{authornamehash}{c8b72fb67fc916725baec30956b60d9d}
+      \strng{authorfullhash}{c8b72fb67fc916725baec30956b60d9d}
+      \strng{authorfullhashraw}{c8b72fb67fc916725baec30956b60d9d}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Organization}
+      \field{number}{1}
+      \field{title}{System as Difference}
+      \field{volume}{13}
+      \field{year}{2006}
+      \field{pages}{37\bibrangedash 57}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1177/1350508406059638
+      \endverb
+    \endentry
+    \entry{SEPBuddha2024}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=9483c456352c37e0fc976c7280b51eac}{%
+           family={Siderits},
+           familyi={S\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{9483c456352c37e0fc976c7280b51eac}
+      \strng{fullhash}{9483c456352c37e0fc976c7280b51eac}
+      \strng{fullhashraw}{9483c456352c37e0fc976c7280b51eac}
+      \strng{bibnamehash}{9483c456352c37e0fc976c7280b51eac}
+      \strng{authorbibnamehash}{9483c456352c37e0fc976c7280b51eac}
+      \strng{authornamehash}{9483c456352c37e0fc976c7280b51eac}
+      \strng{authorfullhash}{9483c456352c37e0fc976c7280b51eac}
+      \strng{authorfullhashraw}{9483c456352c37e0fc976c7280b51eac}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Stanford Encyclopedia of Philosophy}
+      \field{title}{Buddha}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://plato.stanford.edu/entries/buddha/
+      \endverb
+      \verb{url}
+      \verb https://plato.stanford.edu/entries/buddha/
+      \endverb
+    \endentry
+    \entry{Quine1948WhatThereIs}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=94804a063b49de124a2ba676ae40de09}{%
+           family={Quine},
+           familyi={Q\bibinitperiod},
+           given={Willard\bibnamedelima V.},
+           giveni={W\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{94804a063b49de124a2ba676ae40de09}
+      \strng{fullhash}{94804a063b49de124a2ba676ae40de09}
+      \strng{fullhashraw}{94804a063b49de124a2ba676ae40de09}
+      \strng{bibnamehash}{94804a063b49de124a2ba676ae40de09}
+      \strng{authorbibnamehash}{94804a063b49de124a2ba676ae40de09}
+      \strng{authornamehash}{94804a063b49de124a2ba676ae40de09}
+      \strng{authorfullhash}{94804a063b49de124a2ba676ae40de09}
+      \strng{authorfullhashraw}{94804a063b49de124a2ba676ae40de09}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Review of Metaphysics}
+      \field{number}{5}
+      \field{title}{On What There Is}
+      \field{volume}{2}
+      \field{year}{1948}
+      \field{pages}{21\bibrangedash 38}
+      \range{pages}{18}
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/20123117
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/20123117
+      \endverb
+    \endentry
+    \entry{DeJaegherDiPaolo2007Participatory}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=c13fbbfd45903b20de8d7717945a7c4f}{%
+           family={Jaegher},
+           familyi={J\bibinitperiod},
+           given={Hanne\bibnamedelima De},
+           giveni={H\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=bfa81422cd7b8a1211431f1200b73821}{%
+           family={Paolo},
+           familyi={P\bibinitperiod},
+           given={Ezequiel\bibnamedelima Di},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{e6910d07c918adfa52136692b0a4cd11}
+      \strng{fullhash}{e6910d07c918adfa52136692b0a4cd11}
+      \strng{fullhashraw}{e6910d07c918adfa52136692b0a4cd11}
+      \strng{bibnamehash}{e6910d07c918adfa52136692b0a4cd11}
+      \strng{authorbibnamehash}{e6910d07c918adfa52136692b0a4cd11}
+      \strng{authornamehash}{e6910d07c918adfa52136692b0a4cd11}
+      \strng{authorfullhash}{e6910d07c918adfa52136692b0a4cd11}
+      \strng{authorfullhashraw}{e6910d07c918adfa52136692b0a4cd11}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phenomenology and the Cognitive Sciences}
+      \field{title}{Participatory Sense-Making: An Enactive Approach to Social Cognition}
+      \field{volume}{6}
+      \field{year}{2007}
+      \field{pages}{485\bibrangedash 507}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1007/s11097-007-9076-9
+      \endverb
+    \endentry
+    \entry{SEPPresocratics2020}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=e42206931c773c96c28207afe2eb286e}{%
+           family={Curd},
+           familyi={C\bibinitperiod},
+           given={Patricia},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{e42206931c773c96c28207afe2eb286e}
+      \strng{fullhash}{e42206931c773c96c28207afe2eb286e}
+      \strng{fullhashraw}{e42206931c773c96c28207afe2eb286e}
+      \strng{bibnamehash}{e42206931c773c96c28207afe2eb286e}
+      \strng{authorbibnamehash}{e42206931c773c96c28207afe2eb286e}
+      \strng{authornamehash}{e42206931c773c96c28207afe2eb286e}
+      \strng{authorfullhash}{e42206931c773c96c28207afe2eb286e}
+      \strng{authorfullhashraw}{e42206931c773c96c28207afe2eb286e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Stanford Encyclopedia of Philosophy}
+      \field{title}{Presocratic Philosophy}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://plato.stanford.edu/entries/presocratics/
+      \endverb
+      \verb{url}
+      \verb https://plato.stanford.edu/entries/presocratics/
+      \endverb
+    \endentry
+    \entry{SEPParmenides2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=64b60fd7a04257c523a374f6f486959c}{%
+           family={Palmer},
+           familyi={P\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{64b60fd7a04257c523a374f6f486959c}
+      \strng{fullhash}{64b60fd7a04257c523a374f6f486959c}
+      \strng{fullhashraw}{64b60fd7a04257c523a374f6f486959c}
+      \strng{bibnamehash}{64b60fd7a04257c523a374f6f486959c}
+      \strng{authorbibnamehash}{64b60fd7a04257c523a374f6f486959c}
+      \strng{authornamehash}{64b60fd7a04257c523a374f6f486959c}
+      \strng{authorfullhash}{64b60fd7a04257c523a374f6f486959c}
+      \strng{authorfullhashraw}{64b60fd7a04257c523a374f6f486959c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Stanford Encyclopedia of Philosophy}
+      \field{title}{Parmenides}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://plato.stanford.edu/entries/parmenides/
+      \endverb
+      \verb{url}
+      \verb https://plato.stanford.edu/entries/parmenides/
+      \endverb
+    \endentry
+    \entry{SpencerBrown1969}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=5af5da05dde4b35950cd89160d91ffa3}{%
+           family={Spencer-Brown},
+           familyi={S\bibinithyphendelim B\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {George Allen \& Unwin}%
+      }
+      \strng{namehash}{5af5da05dde4b35950cd89160d91ffa3}
+      \strng{fullhash}{5af5da05dde4b35950cd89160d91ffa3}
+      \strng{fullhashraw}{5af5da05dde4b35950cd89160d91ffa3}
+      \strng{bibnamehash}{5af5da05dde4b35950cd89160d91ffa3}
+      \strng{authorbibnamehash}{5af5da05dde4b35950cd89160d91ffa3}
+      \strng{authornamehash}{5af5da05dde4b35950cd89160d91ffa3}
+      \strng{authorfullhash}{5af5da05dde4b35950cd89160d91ffa3}
+      \strng{authorfullhashraw}{5af5da05dde4b35950cd89160d91ffa3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0045100284}
+      \field{title}{Laws of Form}
+      \field{year}{1969}
+      \verb{urlraw}
+      \verb https://openlibrary.org/books/OL5512778M/Laws_of_form
+      \endverb
+      \verb{url}
+      \verb https://openlibrary.org/books/OL5512778M/Laws_of_form
+      \endverb
+    \endentry
+    \entry{SEPChristianTheology2022}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=097bd1a0d62ca759ed57cfe4b63021f1}{%
+           family={Wood},
+           familyi={W\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=5ff1c29ff1cc8f6336533b0ffd842a79}{%
+           family={Zalta},
+           familyi={Z\bibinitperiod},
+           given={Edward\bibnamedelima N.},
+           giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Metaphysics Research Lab, Stanford University}%
+      }
+      \strng{namehash}{097bd1a0d62ca759ed57cfe4b63021f1}
+      \strng{fullhash}{097bd1a0d62ca759ed57cfe4b63021f1}
+      \strng{fullhashraw}{097bd1a0d62ca759ed57cfe4b63021f1}
+      \strng{bibnamehash}{097bd1a0d62ca759ed57cfe4b63021f1}
+      \strng{authorbibnamehash}{097bd1a0d62ca759ed57cfe4b63021f1}
+      \strng{authornamehash}{097bd1a0d62ca759ed57cfe4b63021f1}
+      \strng{authorfullhash}{097bd1a0d62ca759ed57cfe4b63021f1}
+      \strng{authorfullhashraw}{097bd1a0d62ca759ed57cfe4b63021f1}
+      \strng{editorbibnamehash}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \strng{editornamehash}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \strng{editorfullhash}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \strng{editorfullhashraw}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Stanford Encyclopedia of Philosophy}
+      \field{edition}{Spring 2022}
+      \field{title}{Philosophy and Christian Theology}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://plato.stanford.edu/archives/spr2022/entries/christiantheology-philosophy/
+      \endverb
+      \verb{url}
+      \verb https://plato.stanford.edu/archives/spr2022/entries/christiantheology-philosophy/
+      \endverb
+    \endentry
+    \entry{SEPPseudoDionysius2019}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{hash=d2eba2e3abe5175b37ce800177e33401}{%
+           family={Corrigan},
+           familyi={C\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=6d63cc24bd67342c1b6d1d770c25338a}{%
+           family={Harrington},
+           familyi={H\bibinitperiod},
+           given={L.\bibnamedelimi Michael},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=5ff1c29ff1cc8f6336533b0ffd842a79}{%
+           family={Zalta},
+           familyi={Z\bibinitperiod},
+           given={Edward\bibnamedelima N.},
+           giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Metaphysics Research Lab, Stanford University}%
+      }
+      \strng{namehash}{8199abb30a9a33a60898920ecba85803}
+      \strng{fullhash}{8199abb30a9a33a60898920ecba85803}
+      \strng{fullhashraw}{8199abb30a9a33a60898920ecba85803}
+      \strng{bibnamehash}{8199abb30a9a33a60898920ecba85803}
+      \strng{authorbibnamehash}{8199abb30a9a33a60898920ecba85803}
+      \strng{authornamehash}{8199abb30a9a33a60898920ecba85803}
+      \strng{authorfullhash}{8199abb30a9a33a60898920ecba85803}
+      \strng{authorfullhashraw}{8199abb30a9a33a60898920ecba85803}
+      \strng{editorbibnamehash}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \strng{editornamehash}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \strng{editorfullhash}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \strng{editorfullhashraw}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Stanford Encyclopedia of Philosophy}
+      \field{title}{Pseudo-Dionysius the Areopagite}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://plato.stanford.edu/archives/spr2023/entries/pseudo-dionysius-areopagite/
+      \endverb
+      \verb{url}
+      \verb https://plato.stanford.edu/archives/spr2023/entries/pseudo-dionysius-areopagite/
+      \endverb
+    \endentry
+    \entry{SEPMysticism2025}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{hash=686f63784177f089204782d110bd55f1}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f170cff16f7750221d7b95d279fda007}{%
+           family={Gellman},
+           familyi={G\bibinitperiod},
+           given={Jerome},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=5ff1c29ff1cc8f6336533b0ffd842a79}{%
+           family={Zalta},
+           familyi={Z\bibinitperiod},
+           given={Edward\bibnamedelima N.},
+           giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=47603970fcd579d567acd0cb66cdb242}{%
+           family={Nodelman},
+           familyi={N\bibinitperiod},
+           given={Uri},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Metaphysics Research Lab, Stanford University}%
+      }
+      \strng{namehash}{263e9a832df48b1d7513b3b4e10aa9ef}
+      \strng{fullhash}{263e9a832df48b1d7513b3b4e10aa9ef}
+      \strng{fullhashraw}{263e9a832df48b1d7513b3b4e10aa9ef}
+      \strng{bibnamehash}{263e9a832df48b1d7513b3b4e10aa9ef}
+      \strng{authorbibnamehash}{263e9a832df48b1d7513b3b4e10aa9ef}
+      \strng{authornamehash}{263e9a832df48b1d7513b3b4e10aa9ef}
+      \strng{authorfullhash}{263e9a832df48b1d7513b3b4e10aa9ef}
+      \strng{authorfullhashraw}{263e9a832df48b1d7513b3b4e10aa9ef}
+      \strng{editorbibnamehash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \strng{editornamehash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \strng{editorfullhash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \strng{editorfullhashraw}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Stanford Encyclopedia of Philosophy}
+      \field{edition}{Winter 2025}
+      \field{title}{Mysticism}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://plato.stanford.edu/archives/win2025/entries/mysticism/
+      \endverb
+      \verb{url}
+      \verb https://plato.stanford.edu/archives/win2025/entries/mysticism/
+      \endverb
+    \endentry
+    \entry{SEPArabicIslamicNatural2022}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=2f5d549cbc2a560ea27d4509c58965ca}{%
+           family={McGinnis},
+           familyi={M\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2f5d549cbc2a560ea27d4509c58965ca}
+      \strng{fullhash}{2f5d549cbc2a560ea27d4509c58965ca}
+      \strng{fullhashraw}{2f5d549cbc2a560ea27d4509c58965ca}
+      \strng{bibnamehash}{2f5d549cbc2a560ea27d4509c58965ca}
+      \strng{authorbibnamehash}{2f5d549cbc2a560ea27d4509c58965ca}
+      \strng{authornamehash}{2f5d549cbc2a560ea27d4509c58965ca}
+      \strng{authorfullhash}{2f5d549cbc2a560ea27d4509c58965ca}
+      \strng{authorfullhashraw}{2f5d549cbc2a560ea27d4509c58965ca}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Stanford Encyclopedia of Philosophy}
+      \field{note}{Substantive revision 3 February 2022}
+      \field{title}{Arabic and Islamic Natural Philosophy and Natural Science}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://plato.stanford.edu/archives/win2022/entries/arabic-islamic-natural/
+      \endverb
+      \verb{url}
+      \verb https://plato.stanford.edu/archives/win2022/entries/arabic-islamic-natural/
+      \endverb
+    \endentry
+    \entry{SEPIbnSinaNatural2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=2f5d549cbc2a560ea27d4509c58965ca}{%
+           family={McGinnis},
+           familyi={M\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2f5d549cbc2a560ea27d4509c58965ca}
+      \strng{fullhash}{2f5d549cbc2a560ea27d4509c58965ca}
+      \strng{fullhashraw}{2f5d549cbc2a560ea27d4509c58965ca}
+      \strng{bibnamehash}{2f5d549cbc2a560ea27d4509c58965ca}
+      \strng{authorbibnamehash}{2f5d549cbc2a560ea27d4509c58965ca}
+      \strng{authornamehash}{2f5d549cbc2a560ea27d4509c58965ca}
+      \strng{authorfullhash}{2f5d549cbc2a560ea27d4509c58965ca}
+      \strng{authorfullhashraw}{2f5d549cbc2a560ea27d4509c58965ca}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Stanford Encyclopedia of Philosophy}
+      \field{note}{Substantive revision 20 March 2025}
+      \field{title}{Ibn Sina's Natural Philosophy}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://plato.stanford.edu/entries/ibn-sina-natural/
+      \endverb
+      \verb{url}
+      \verb https://plato.stanford.edu/entries/ibn-sina-natural/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

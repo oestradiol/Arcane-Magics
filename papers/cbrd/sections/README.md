@@ -1,1 +1,0 @@
-CBRD successor source is split across section files solely for transfer, review, and rebuildability. `../main.tex` is the entry point. Section boundaries do not imply independent publication or claim authority.

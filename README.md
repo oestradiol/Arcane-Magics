@@ -1,66 +1,70 @@
-# Venus × Minerva
+# Venus-Minerva Research Family
 
-A model can be useful and still exclude a real possibility. A message can be delivered and still fail to change its receiver. Two histories can end in the same visible state while preserving different future possibilities. A reader can repeat a theory's vocabulary without being able to reconstruct the distinction that vocabulary was supposed to name.
+A four-monograph research family plus executable/provenance infrastructure. Start with the projection that matches your question; do **not** treat the bundle as one giant proof.
 
-**Venus × Minerva** studies problems of that kind: how consequential differences cross boundaries, change later possibilities, survive compression, return from independently authoring centers, and remain corrigible when they are represented, formalized, governed, or published.
+## Start here
 
-The repository is a public research substrate, not a single theory document or a sovereign agent. Its maintained state is split along two independent axes.
+| If you care about... | Read | Register |
+|---|---|---|
+| future-sufficient state, operational equivalence, quantum/control/QG tests | **I. Operational Future Equivalence** | SCI / FORM |
+| local views, quotienting, gluing, residuals, return-conditioned reconstruction | **II. Eclipsis** | FORM + typed interpretation |
+| comparative religion, philosophy, phenomenology, humanitarian Mythos | **III. Arcane Magics** | HIST / PHEN / THEOPHEN / MYTHOS |
+| developmental intelligence, provenance, self-curriculum, preregistration, WorldMind | **IV. Venus** | ENG / GOVERNANCE |
 
-## Continuity and correction: HOME ↔ FRONTIER
+PDFs are in each monograph directory after `make papers`. Source zips suitable for arXiv upload are generated with `make arxiv`.
 
-- **HOME** collects what is currently reconstructible enough to support continued work: constitutional constraints, accepted scoped results, retained provenance, evidence chains, and release state.
-- **FRONTIER** carries what can still change that state: unresolved bridges, criticism, residuals, countermodels, experiments, failed realizations, and returned consequence.
+## One law before everything else
 
-They are projections over one provenance-bearing history, not separate worlds.
+**Shared governance does not imply shared truth status.** A theorem in Eclipsis does not prove a religious interpretation. A historical recurrence in Arcane does not validate a physical conjecture in OFE. A Venus engineering PASS does not establish AGI or consciousness.
 
-## Two publication projections: Arcane Magics ↔ CBRD
+Read `PUBLICATION_CONSTITUTION.md` and `NxRxI_VOCABULARY_CENTER.md` before cross-paper interpretation.
 
-Only after that research relation is visible do the paper names become useful.
+## Current Venus developmental boundary
 
-- **Arcane Magics** is **Inhabited THEO–PHEN ↔ Corrigible Ontological Articulation**. It asks how inhabited occurrence, embodiment, interpretation, theological orientation, alterity, and explicit ontology can interact without one register silently acquiring the warrant of another.
-- **Consequence-Bearing Relational Dynamics (CBRD)** is the **epistemic–formal–operational projection**. It asks how to type the relations, compare them against prior art, preserve provenance, expose missing bridges, derive formal obligations, build tests, and retire failed objects.
+Latest verified return represented here:
 
-Neither is sovereign over the other. `HOME↔FRONTIER` is also not `Arcane↔CBRD`; both papers contain continuity and correction functions.
+`EDU15R1 -> PASS_BOUNDED_SELF_PREREGISTRATION_GATE_OWNERSHIP -> 1699 records`
 
-## Start with a problem, not a project term
+Current bounded ownership includes curriculum target selection and curriculum gate proposal. World execution and independent evaluation remain external. AGI, consciousness, open-ended RSI, unrestricted semantics, natural-world generality, autonomous science, and independent external replication are **not established**.
 
-The knowledge bank is the recommended entry surface:
+The GitHub tree carries the audited R00-R194 Python source snapshot plus exact later developmental receipts. The full self-contained R194 release archive is generated/distributed as a release artifact rather than committed as an 18 MB binary blob. A receipt is not silently promoted into an executable checkpoint.
 
-- [Information is not the act of informing someone](knowledge/problems/INFORMATION_AND_INFORMING.md)
-- [What exists is not the same question as what a model admits](knowledge/problems/WHAT_EXISTS_AND_WHAT_A_MODEL_EXCLUDES.md)
-- [A world is encountered from somewhere](knowledge/problems/SITUATED_WORLD_AND_PERSPECTIVALIZATION.md)
-- [Another center can return consequence without becoming your model](knowledge/problems/RETURNED_CONSEQUENCE_AND_OTHER.md)
-- [Continuity need not mean unchanged substance](knowledge/problems/CONTINUITY_DIFFERENCE_AND_IDENTITY.md)
-- [A compression that works now may fail after it is used](knowledge/problems/COMPRESSION_UNDER_FUTURE_USE.md)
-- [A projection does not guarantee reconstruction of its source](knowledge/problems/PROJECTION_AND_RECONSTRUCTION.md)
+## Build
 
-Then use the [comparative dossiers](knowledge/INDEX.md#comparative-subtraction) to ask what earlier researchers already solved, what their objects are not identical to here, and what remains after novelty is subtracted.
+Requirements: Python 3, `latexmk`, pdfLaTeX/TeX Live, and optionally `pandoc` for forum exports.
 
-## Public Canon and current frontier
+```bash
+make papers       # build all four PDFs
+make arxiv        # create clean per-paper arXiv source zips
+make texbundle    # create reusable TeX/source bundles
+make forum        # create LessWrong/BetterWrong-oriented Markdown drafts
+make audit        # claim/license/source/package checks
+make bundle       # create the full repository ZIP beside the repo
+make release      # build + package + audit + manifest + repository ZIP
+```
 
-- [Public HOME](canon/home/README.md)
-- [Constitution](canon/home/CONSTITUTION.md)
-- [Public ontology](canon/home/PUBLIC_ONTOLOGY.md)
-- [Projection model](canon/home/PROJECTION_MODEL.md)
-- [Research frontier](canon/frontier/RESEARCH_FRONTIER.md)
-- [Claims and register boundaries](docs/CLAIMS_AND_BOUNDARIES.md)
+## Public-preprint note
 
-A compact public Canon is allowed to omit private history. It is not allowed to omit distinctions whose absence changes warrant, jurisdiction, reconstruction, or future admissibility.
+The generated LessWrong/BetterWrong Markdown files are editing substrates, not automatic ready-to-post copies. LessWrong currently requires substantial LLM-generated or substantially LLM-revised wording to be marked with its LLM-content feature; the human author should independently verify, understand, and deliberately own the posted prose. See `docs/LESSWRONG_BETTERWRONG_GUIDE.md`.
 
-## Manuscripts
+## Front-door norms
 
-The live manuscript sources are under [`papers/`](papers/README.md). They are working projections, not published releases. Their current versions restore useful material lost during earlier compression while retyping obsolete claims through current Canonical constraints.
+- first expose the referent, then the project term;
+- state epistemic/register status before speculative bridges;
+- strongest ordinary comparator first;
+- negative results remain visible;
+- OPEN and WITHHOLD are not shameful intermediate typography;
+- source removal and founder independence are publication tests;
+- readers should be able to disagree without first learning the project's private dialect.
 
-## Implementation
+## Licenses
 
-The executable research architecture is specified; the runtime is not yet implemented. See [Architecture](docs/ARCHITECTURE.md) and [Roadmap](ROADMAP.md). A build, schema, or compiler stage never counts as evidence that the modeled world-level relation exists.
+Project-owned theory/docs/monographs/knowledge: **CC BY-NC-SA 4.0**. Project-owned software: **PolyForm Noncommercial 1.0.0**. Software is source-available/noncommercial, not OSI Open Source. See `licenses/README.md` and `LICENSE`.
 
-## Provenance and credit
+## Preprint publication
 
-Historical priority, project origin, participant return, later constraint, comparative convergence, formal inheritance, publication freeze, and model/tool contribution are distinct relations. See [public credit routing](knowledge/credit/CREDIT_RELATIONS.md) and [public provenance](provenance/README.md).
+`preprints/lesswrong/` contains a sequence map and forum template. Current LessWrong supports Markdown/WYSIWYG editing and LaTeX; conversion between editor modes can be lossy, so generated Markdown should be reviewed before posting. BetterWrong-specific indexed documentation was not independently available during this audit; the exports therefore target the conservative shared rationalist Markdown/MathJax vocabulary subset.
 
-Private source archives and the protected canonical provenance ledger remain outside the public repository. On 1 September 2026 the maintained public Git graph was sanitized onto a fresh parentless root carrying the audited current tree; non-main rebuild branches were removed and no tags remain. This closes the public-history gate for intentionally reachable release refs at that state. Platform-managed pull-request refs, caches, and artifact retention are not claimed to be erased by that operation. See [public-history policy](provenance/PUBLIC_HISTORY_POLICY.md).
+## Repository archaeology
 
-## Licensing
-
-New original theory, Canon, documentation, and knowledge first released through Venus × Minerva use **CC BY-NC-SA 4.0** by default. New original software uses **PolyForm Noncommercial 1.0.0** by default. Existing grants and third-party rights remain governed by their own terms. See [LICENSE_POLICY.md](LICENSE_POLICY.md).
+`archaeology/S10_S11/` contains the transmission-adjusted comparative evidence artifacts that constrain Arcane. Archaeology is provenance and regression material, not present authority merely because it is older or more dramatic.

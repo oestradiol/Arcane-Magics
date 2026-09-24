@@ -1,13 +1,9 @@
 cff-version: 1.2.0
-message: "If you use Venus × Minerva, cite the repository release or the specific published projection you actually used."
-title: "Venus × Minerva"
-type: software
-version: "0.0-development"
+message: "Cite the specific monograph or release artifact actually used."
+title: "Venus-Minerva Research Family"
+type: collection
+version: "2026-09-24-bundle-v1"
 authors:
-  - family-names: "Elaina"
-repository-code: "https://github.com/oestradiol/Venus-Minerva"
-license: "NOASSERTION"
-abstract: >-
-  Living public research organism for consequence-bearing relational dynamics,
-  perspectivalization, recursive reconstruction, governance, verification,
-  and reciprocal Arcane Magics / CBRD publication projections.
+  - family-names: "Amaral"
+    given-names: "Elaina Lynn"
+license: CC-BY-NC-SA-4.0

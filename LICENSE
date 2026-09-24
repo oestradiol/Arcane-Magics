@@ -1,9 +1,10 @@
-Venus × Minerva uses a file-scoped mixed licensing policy.
+# Venus × Minerva license dispatcher
 
-New original theory, Canon, documentation, and knowledge: CC BY-NC-SA 4.0.
-New original software: PolyForm Noncommercial 1.0.0.
-Previously distributed material retains any rights already granted under the terms applicable to that distribution.
-Third-party material retains its own legal status.
-Commercial permissions for copyright held by the project may be granted separately in writing.
+This repository is the current public distribution boundary for project-owned material in this tree. Historical distributions retain any rights actually granted with those distributions.
 
-The controlling map, canonical license links, third-party boundaries, and contribution rules are in LICENSE_POLICY.md and THIRD_PARTY_NOTICES.md.
+- Project-owned theory, Canon, documentation, knowledge, reconstruction records, and manuscript source are offered under **CC BY-NC-SA 4.0 International**.
+- Project-owned software and executable tooling are offered under **PolyForm Noncommercial 1.0.0**.
+- Commercial permissions require a separate written grant from the rightsholder.
+- Third-party material, quotations, bibliographic metadata, and license texts remain subject to their own rights/status.
+
+Exact scope and official-license references are in `licenses/`.
