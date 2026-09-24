@@ -57,14 +57,20 @@ def _plainify_raw_tex(segment: str) -> str:
         previous = segment
         for command in ("boxed", "mathcal", "mathrm", "mathsf", "text"):
             segment = re.sub(
-                rf"\\{command}\{{([^{{}}]*)\}}",
+                rf"\\+{command}\{{([^{{}}]*)\}}",
                 r"\1",
                 segment,
             )
+            # Pandoc can leave nested/raw wrappers that the simple balanced-brace
+            # pattern cannot consume in one pass. Outside math/code, the command
+            # itself carries no forum-rendering value, so remove the command token
+            # and preserve its brace-delimited content for later passes.
+            segment = re.sub(rf"\\+{command}\b", "", segment)
     for source, target in _SIMPLE_TEX.items():
-        segment = segment.replace(source, target)
+        name = source.lstrip("\\")
+        segment = re.sub(rf"\\+{re.escape(name)}\b", target, segment)
     segment = re.sub(
-        r"\\(?:begin|end)\{(?:aligned|alignedat|array|cases|split|gathered|matrix|pmatrix|bmatrix)\}",
+        r"\\+(?:begin|end)\{(?:aligned|alignedat|array|cases|split|gathered|matrix|pmatrix|bmatrix)\}",
         "",
         segment,
     )
