@@ -22,6 +22,19 @@ Venus also asks whether a learning system can preserve only the distinctions tha
 
 The project is ambitious on purpose. Its claim grammar is equally strict: **formal result, engineering result, physical bridge, symbolic interpretation, and target capability do not inherit one another's warrant.** Claim fences are not an instruction to hide earned value: the strongest true positive contribution should be stated first, followed by its scope and nearest unearned promotion.
 
+## Verify the current kernel
+
+The shortest executable path is:
+
+```bash
+python -m kernel.runtime.current
+make audit
+```
+
+The first command hydrates and verifies the exact IG10 checkpoint. `make audit` runs source-integrity, kernel/unit, Markdown, proof-container, custody, and release-boundary checks. Publication builds are separate because TeX/package failures should not be confused with kernel failure.
+
+Current runtime/developmental authority lives in [`kernel/CURRENT_STATE.md`](kernel/CURRENT_STATE.md). The positive-claim ledger is [`docs/EARNED_MILESTONES.md`](docs/EARNED_MILESTONES.md).
+
 ## What is already here
 
 | Object | Current contribution | Status |
