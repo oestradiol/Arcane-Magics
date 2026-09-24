@@ -56,4 +56,4 @@ WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION
 measured separator: MENTION != INCIDENCE
 ```
 
-The R00-R194 package remains the latest self-contained stable executable carrier shipped here. EDU16 is the latest positive developmental claim head represented by receipts, not a self-contained replayable 1703-event checkpoint in this release.
+The repository now ships an exact Git-reconstructible IG10 VMK2 checkpoint under `kernel/`; R194 is historical implementation provenance only. EDU16 remains the latest positive developmental authority represented by exact policy/result artifacts, but no original self-contained replayable 1703-event EDU16 runner/journal is currently admitted here.
