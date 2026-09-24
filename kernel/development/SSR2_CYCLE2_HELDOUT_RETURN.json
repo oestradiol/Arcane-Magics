@@ -1,0 +1,83 @@
+{
+  "schema": "Venus.SSR2Cycle2HeldoutReturn.v0.1",
+  "date": "2026-09-24",
+  "prefreeze_receipt": "kernel/development/SSR2_CYCLE2_PREFREEZE_OWNERSHIP_RECEIPT.json",
+  "evaluator_owner": "EXTERNAL_EVALUATOR",
+  "pressure_id": "SSR2_REMOVE_HARMFUL_TRANSITION_HELDOUT",
+  "traces": [
+    {
+      "trace_id": "legacy-empty",
+      "prior_state": "IDLE",
+      "action": "LEGACY_NOOP",
+      "payload": {},
+      "expect_success": false,
+      "expected_next_state": null
+    },
+    {
+      "trace_id": "legacy-random-1",
+      "prior_state": "IDLE",
+      "action": "LEGACY_NOOP",
+      "payload": {
+        "x": 1
+      },
+      "expect_success": false,
+      "expected_next_state": null
+    },
+    {
+      "trace_id": "legacy-random-2",
+      "prior_state": "IDLE",
+      "action": "LEGACY_NOOP",
+      "payload": {
+        "x": 2,
+        "y": "z"
+      },
+      "expect_success": false,
+      "expected_next_state": null
+    },
+    {
+      "trace_id": "neighbor-select",
+      "prior_state": "IDLE",
+      "action": "SELECT_TARGET",
+      "payload": {
+        "target_id": "h2",
+        "residual": "r2",
+        "discriminator": "d2",
+        "provenance_ids": [
+          "p2"
+        ]
+      },
+      "expect_success": true,
+      "expected_next_state": "TARGET_SELECTED"
+    },
+    {
+      "trace_id": "neighbor-classify",
+      "prior_state": "IDLE",
+      "action": "CLASSIFY_ENCOUNTER",
+      "payload": {
+        "encounter_id": "e2",
+        "locator": "l2",
+        "kind": "UNKNOWN"
+      },
+      "expect_success": true,
+      "expected_next_state": "ENCOUNTER_CLASSIFIED"
+    },
+    {
+      "trace_id": "neighbor-plan",
+      "prior_state": "TARGET_SELECTED",
+      "action": "FREEZE_RESEARCH_PLAN",
+      "payload": {
+        "queries": [
+          "q2"
+        ],
+        "stop_conditions": [
+          "s2"
+        ],
+        "authored_by": "venus"
+      },
+      "expect_success": true,
+      "expected_next_state": "PLAN_FROZEN"
+    }
+  ],
+  "hidden_evaluation_exposed_before_freeze": false,
+  "promotion_authority": false
+}
