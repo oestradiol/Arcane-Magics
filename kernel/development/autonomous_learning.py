@@ -67,6 +67,10 @@ def empty_state() -> WorkLearningState:
 
 
 def from_json(obj: Mapping[str, Any]) -> WorkLearningState:
+    # v0.1 used merge/close status as reward. Those counts are invalid under
+    # the corrected admission != utility distinction and must not migrate.
+    if obj.get("schema") == "Venus.AutonomousLearningState.v0.1":
+        return empty_state()
     return WorkLearningState(
         seen_return_ids=tuple(str(x) for x in obj.get("seen_return_ids", ())),
         kind_success={str(k): int(v) for k, v in obj.get("kind_success", {}).items()},
