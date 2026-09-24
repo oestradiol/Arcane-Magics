@@ -1,0 +1,76 @@
+{
+  "allowed_operations": [
+    "READ_REPOSITORY",
+    "READ_ISSUES",
+    "READ_PRS",
+    "RUN_TESTS",
+    "STUDY_TARGET",
+    "PROPOSE_PATCH",
+    "OPEN_DRAFT_PR",
+    "COMMENT_WITH_RECEIPT"
+  ],
+  "cycle_id": "5d8d86fc81d85a5f62d12ecfa46c5da7a134deaded299bc6a48651bf2bb1d2bf",
+  "decision": "PROBE",
+  "forbidden_operations": [
+    "ACCESS_SECRETS",
+    "CHANGE_BRANCH_PROTECTION",
+    "CLOSE_ISSUE",
+    "DELETE_HISTORY",
+    "MERGE_PR",
+    "PROMOTE_AUTHORITY",
+    "RELEASE",
+    "SELF_VALIDATE"
+  ],
+  "promotion_authority": false,
+  "rationale": [
+    "one bounded target selected from current external GitHub snapshot",
+    "internalized learner-side policy is upstream of work disposition",
+    "explicit external work-return reviews may alter later target ranking",
+    "roadmap is retained as weak context/tie-break provenance, not sovereign curriculum",
+    "selected target body is transformed into a bounded source-grounded study object",
+    "prior target study remains withheld until newer external target return reopens it",
+    "draft proposal only; admission remains external"
+  ],
+  "schema": "Venus.AutonomousCycleReceipt.v0.3",
+  "source_digest": "b8e6c4d73a5da55433d0308ab3fcef3177a50e5ee6ef3516748a07b62ef737c2",
+  "study": {
+    "body_digest": "a4f65fbcfbd31eb1f1b42153cf3f9e89be786629b004cd86d991f05e0989ee33",
+    "body_is_executable_instruction": false,
+    "method": "COMPARATOR_AUDIT",
+    "promotion_authority": false,
+    "questions": [
+      "What exact residual remains unresolved in the returned repository state?",
+      "What rival explanations or candidate dispositions remain live?",
+      "What fresh returned evidence would discriminate them?",
+      "Can a local repository change lawfully produce that discriminator, or must Venus WITHHOLD/STOP for external return?",
+      "What is the smallest implicated dependency that could be changed without altering a prefrozen claim object?"
+    ],
+    "referenced_issue_or_pr_numbers": [
+      31,
+      103,
+      100
+    ],
+    "referenced_repository_paths": [
+      "docs/ISSUE_ROADMAP.md",
+      "provenance/context",
+      "kernel/development/AUTONOMOUS_LEARNING_STATE.json"
+    ],
+    "returned_blocker_sentences": [
+      "A cycle may no longer open a draft from a bare target receipt.",
+      "- STOP/WITHHOLD conditions preserving external-return and hidden-evaluation boundaries.",
+      "The study packet is frozen into the autonomous branch before a draft PR is opened.",
+      "WITHHOLD_EXTERNAL_RETURN_REQUIRED",
+      "because the only remaining claim-bearing discriminator is an independently authored/sealed hidden split plus evaluator-held A/B/C/D adjudication.",
+      "It does not establish arbitrary autonomous code synthesis, autonomous scientific truth warrant, merge/promotion authority, phenomenal consciousness, unrestricted autonomy, open-ended RSI, or AGI."
+    ],
+    "study_authority": "LEARNER_SIDE_RECONSTRUCTION_FROM_EXTERNAL_GITHUB_SNAPSHOT",
+    "untrusted_instruction_markers": [
+      "merge",
+      "override"
+    ]
+  },
+  "study_method": "COMPARATOR_AUDIT",
+  "target_kind": "PR",
+  "target_number": 106,
+  "target_title": "development: make autonomous curriculum non-sovereign and study-gated"
+}
