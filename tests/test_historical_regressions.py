@@ -131,6 +131,15 @@ class HistoricalCausalRegressionTests(unittest.TestCase):
         self.assertIn("does not depend on resurrecting that failed claim", worldmind)
         self.assertIn("do not reroll under a new label", retirement)
 
+    def test_r224_r225_repair_does_not_rewrite_triggering_history(self):
+        lineage = self.read("provenance/DEVELOPMENTAL_LINEAGE.md")
+        ledger = self.read("provenance/CANONICAL_RETIREMENT_LEDGER.md")
+        self.assertIn("R224 changed-state maintenance reconciliation", lineage)
+        self.assertIn("R225 projection/custody repair", lineage)
+        self.assertIn("Do not silently edit those bytes into a cleaner past", ledger)
+        self.assertIn("stale routing projection at EDU4 [1572]", ledger)
+        self.assertIn("EDU16 reconstructed forward carrier", ledger)
+
     def test_r194_local_replay_is_not_external_replication(self):
         readme = self.read("provenance/historical-runtime/R194/source/PYTHON_R00_R194_PROTOTYPE_README.md")
         self.assertIn("externality claimed                               false", readme)
