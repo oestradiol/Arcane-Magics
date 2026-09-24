@@ -124,7 +124,7 @@ make audit
 make papers
 ```
 
-The current developmental lineage lives under `prototype/`; historical R194 runtime code is preserved under `provenance/historical-runtime/R194/`.
+The live executable state lives under `kernel/`; developmental ancestry and receipts live under `provenance/`; historical R194 runtime code is preserved under `provenance/historical-runtime/R194/`.
 
 If your result depends on a generated artifact, include enough source and commands for another person to regenerate it.
 
