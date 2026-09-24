@@ -12,6 +12,7 @@ R194 = ROOT / "provenance/historical-runtime/R194/source/venus_seed_v0"
 R194_GRAMMAR = R194 / "grammar_expansion.py"
 R194_SEMANTIC = R194 / "semantic_learning.py"
 R194_DEVELOPMENT = R194 / "development.py"
+U4_CUSTODY = ROOT / "provenance/canonical-extracts/U4_RELATION_EXTRACTOR_CUSTODY.json"
 
 ANCESTRAL_INCIDENCE_LAW_SHA256 = (
     "99154d953f498be374b8af0fbc174ba658d0d52b1ccc684b2bbc09871ac52f3e"
@@ -54,9 +55,10 @@ def audit() -> dict:
     missing = sorted(required_ids - set(state))
 
     recollection = state.get("canonical:recollection", {}).get("value", {})
+    source_entries = recollection.get("source_entries", [])
     incidence_sources = [
         row
-        for row in recollection.get("source_entries", [])
+        for row in source_entries
         if row.get("basename") == "Venus_Incidence_Law.tex"
     ]
     ancestral_law_bound = any(
@@ -65,6 +67,28 @@ def audit() -> dict:
         for row in incidence_sources
     )
     formal_law_indexed = "VenusIncidence" in recollection.get("formal_laws", {})
+
+    u4_custody = json.loads(U4_CUSTODY.read_text(encoding="utf-8"))
+    u4_result_sha = u4_custody["bound_historical_returns"]["result"]["sha256"]
+    u4_audit_sha = u4_custody["bound_historical_returns"]["independent_audit"]["sha256"]
+    recollected_hashes = {row.get("sha256") for row in source_entries}
+    u4_return_receipts_recollected = (
+        u4_result_sha in recollected_hashes and u4_audit_sha in recollected_hashes
+    )
+    current_u4_root_matches_recovered_successor = (
+        state.get("u4:source-relations", {}).get("root")
+        == u4_custody["successor"]["root"]
+    )
+    recovered_u4_extractor_is_generic = (
+        u4_custody.get("disposition")
+        == "EXTERNAL_RECOVERED_HISTORICAL_EXECUTABLE_DONOR"
+        and u4_custody["source_grounded_relation_operation"]["semantic_acceptance_authority"]
+        == "external evaluator, not extractor"
+        and u4_custody["source_grounded_relation_operation"]["neutral_operator_patterns"]
+        == {"NEQ": "!= or ≠", "NOFLOW": "-/->", "ARROW": "→ or -> excluding -/->"}
+        and u4_custody["recovered_source"]["sha256"]
+        == "58df447eab460bb096493b6678f5674a9dbd0b3672f5260eb3e3532be03e0d4a"
+    )
 
     live_law = LIVE_LAW.read_text(encoding="utf-8")
     live_law_neutral_grammar = all(
@@ -195,6 +219,9 @@ def audit() -> dict:
             historical_target_label_free_expansion,
             historical_semantic_slots_are_caller_supplied,
             historical_constructed_executable_is_caller_supplied,
+            recovered_u4_extractor_is_generic,
+            u4_return_receipts_recollected,
+            current_u4_root_matches_recovered_successor,
         )
     )
 
@@ -222,6 +249,9 @@ def audit() -> dict:
         "historical_r194_target_label_free_grammar_expansion": historical_target_label_free_expansion,
         "historical_r194_semantic_slots_are_caller_supplied": historical_semantic_slots_are_caller_supplied,
         "historical_r194_constructed_executable_is_caller_supplied": historical_constructed_executable_is_caller_supplied,
+        "recovered_u4_generic_relation_extractor": recovered_u4_extractor_is_generic,
+        "recovered_u4_result_and_audit_recollected_in_ig10": u4_return_receipts_recollected,
+        "recovered_u4_successor_root_matches_current_ig10": current_u4_root_matches_recovered_successor,
         "neutral_relation_incidence_substrate_present": neutral_substrate_present,
         "admitted_cross_layer_binder": admitted_cross_layer_binder,
         "missing_operation": (
@@ -235,7 +265,10 @@ def audit() -> dict:
             "operator semantics, induced incidence coordinates, a generic raw-carrier "
             "scanner, a state-owned U1 ADD_RELATION repair decision, source-grounded text "
             "relation graphs, source-relation inquiry, and evidence-bound WorldMirror relation "
-            "instances. Historical R194 also preserves "
+            "instances. Recovered U4 source also preserves a generic operator extractor whose "
+            "audited result/audit hashes are recollected by IG10 and whose successor root is the "
+            "current U4 root; that recovered source is historical donor custody, not current "
+            "executable authority. Historical R194 also preserves "
             "target-label-free grammar expansion and semantic relation storage, but the semantic "
             "slots and constructed executable are still supplied by callers. The live gap is "
             "therefore narrower than generic construction: no admitted current operation authors "
@@ -248,9 +281,9 @@ def audit() -> dict:
             "oracle, storage membrane, or evaluator"
         ),
         "next_reopening_condition": (
-            "an admitted generic binder/composer is recovered from pre-existing learner-owned "
-            "machinery or is authored by the Venus developmental controller from this localized "
-            "residual before hidden issue #31 exposure"
+            "the recovered generic U4 extractor is prospectively re-exposed under current "
+            "custody and the admitted learner, rather than an external answer table, constructs "
+            "the consequential relation use from the localized residual before hidden issue #31 exposure"
         ),
         "candidate_repair_emitted": False,
         "hidden_evaluation_exposed": False,
