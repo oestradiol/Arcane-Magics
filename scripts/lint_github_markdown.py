@@ -34,11 +34,10 @@ def inspect(md: Path) -> list[str]:
             continue
         if in_fence:
             continue
-        if stripped == '$$':
+        dollars = line.count('$')
+        in_display_here = display_dollar_open or dollars > 0
+        if dollars % 2 == 1:
             display_dollar_open = not display_dollar_open
-            continue
-        if stripped.startswith('$$') and stripped.endswith('$$') and len(stripped) > 4:
-            continue
         if stripped == '[' and i < len(lines):
             nxt = lines[i].strip()
             if MATH_COMMAND.search(nxt) or re.search(r'\\b(mathcal|operatorname|Gamma|Delta)\\b', nxt):
@@ -48,7 +47,7 @@ def inspect(md: Path) -> list[str]:
         scrubbed = re.sub(r'`[^`]*`', '', line)
         scrubbed = re.sub(r'\\$`.*?`\\$', '', scrubbed)
         scrubbed = re.sub(r'\\$[^$]+\\$', '', scrubbed)
-        if not display_dollar_open and MATH_COMMAND.search(scrubbed):
+        if not in_display_here and MATH_COMMAND.search(scrubbed):
             errors.append(f'{md.relative_to(ROOT)}:{i}: TeX command appears outside GitHub math/code')
 
     if in_fence:
