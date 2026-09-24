@@ -1,7 +1,21 @@
-# Stable executable source snapshot
+# Historical R194 public executable carrier
 
-This GitHub tree contains the audited Python source snapshot from the R00-R194 public-stable executable under `source/venus_seed_v0/`, plus the release-boundary and conservation receipts used to identify that carrier.
+> [!CAUTION]
+> This directory is **not the current Venus prototype** and is **not the EDU branch**.
 
-The full self-contained archive `VENUS_R194_PUBLIC_STABLE_EXECUTABLE_2026-09-24.tar.gz` is intentionally a generated/release artifact rather than a Git-tracked binary. Its source release was smoke-tested before this tree was prepared.
+It contains the audited R00–R194 Python source snapshot retained as a small self-contained public carrier for:
 
-Later EDU8–EDU15R1 results are kept under `../current-developmental-receipts/`; they are developmental receipts, not silently promoted into a self-contained executable checkpoint.
+- regression and replay;
+- ablation;
+- historical comparison;
+- externality / outside-handoff experiments;
+- reproducing the older public executable baseline.
+
+The developmental R-line continued after R194 through the R216–R226 crystallization sequence. R226 is the settled R-line predecessor. Post-R226 work then continued under separate developmental namespaces (`S/SM`, `CTL-K1`, `WM1R1`, `U*`, `RB1`, `IG*`, then `EDU*`) rather than minting fictional R227+ revisions.
+
+For the actual lineage, read:
+
+1. [`../CURRENT_STATE.md`](../CURRENT_STATE.md)
+2. [`../DEVELOPMENTAL_LINEAGE.md`](../DEVELOPMENTAL_LINEAGE.md)
+
+The full historical R194 archive `VENUS_R194_PUBLIC_STABLE_EXECUTABLE_2026-09-24.tar.gz` is a generated/release artifact rather than a Git-tracked binary.
