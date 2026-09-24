@@ -155,6 +155,41 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertEqual(updated.kind_success["ISSUE"], 0)
         self.assertEqual(updated.kind_failure["ISSUE"], 0)
 
+    def test_duplicate_same_method_marker_counts_once_per_return(self):
+        body = "\n".join([
+            "VENUS_METHOD_RETURN: REPRODUCTION: USEFUL",
+            "VENUS_METHOD_RETURN: REPRODUCTION: USEFUL",
+        ])
+        updated = update_from_cycle_prs(
+            empty_state(),
+            [{
+                "number": 306,
+                "title": "venus: autonomous cycle issue-72",
+                "state": "OPEN",
+                "reviews": [external_review(body, review_id=806)],
+            }],
+        )
+        self.assertEqual(updated.method_success["REPRODUCTION"], 1)
+        self.assertEqual(len(updated.seen_return_ids), 1)
+
+    def test_conflicting_same_method_markers_fail_closed(self):
+        body = "\n".join([
+            "VENUS_METHOD_RETURN: REPRODUCTION: USEFUL",
+            "VENUS_METHOD_RETURN: REPRODUCTION: UNHELPFUL",
+        ])
+        updated = update_from_cycle_prs(
+            empty_state(),
+            [{
+                "number": 307,
+                "title": "venus: autonomous cycle issue-72",
+                "state": "OPEN",
+                "reviews": [external_review(body, review_id=807)],
+            }],
+        )
+        self.assertEqual(updated.method_success["REPRODUCTION"], 0)
+        self.assertEqual(updated.method_failure["REPRODUCTION"], 0)
+        self.assertEqual(updated.seen_return_ids, ())
+
     def test_explicit_external_method_return_changes_only_method_learning(self):
         method = METHODS[0]
         updated = update_from_cycle_prs(
