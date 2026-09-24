@@ -62,6 +62,7 @@ class AutonomousWriteScopeTests(unittest.TestCase):
             "kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json",
             "kernel/development/autonomous_learning.py",
             "kernel/development/autonomous_worker.py",
+            "kernel/development/autonomous_problem_formation.py",
         )
         for path in protected:
             with self.subTest(path=path):
