@@ -14,6 +14,8 @@ from kernel.runtime.vmk2 import (
     TransitionPolicy,
     VMK2Error,
     VMK2Reference,
+    canonical,
+    digest,
 )
 
 
@@ -24,6 +26,40 @@ class MutatingBackend(Backend):
     def update(self, old_value, decoded):
         old_value["items"].append(decoded)
         return old_value
+
+
+class VMK2CanonicalizationTests(unittest.TestCase):
+    def test_unordered_containers_have_order_independent_digest(self):
+        left = {"targets": {"beta", "alpha"}, "modes": frozenset({"PORTAL", "WORD"})}
+        right = {"modes": frozenset({"WORD", "PORTAL"}), "targets": {"alpha", "beta"}}
+        self.assertEqual(canonical(left), canonical(right))
+        self.assertEqual(digest(left), digest(right))
+
+    def test_cross_process_fixture_is_exact(self):
+        value = {"alpha": frozenset({"z", "a"}), "n": 1.25, "seq": (2, 1)}
+        self.assertEqual(
+            canonical(value),
+            b'{"alpha":["a","z"],"n":1.25,"seq":[2,1]}',
+        )
+        self.assertEqual(
+            digest(value),
+            "b0dbdc03c8014b6bad308f71247188797b467f165aa19711aed4d15b41a6ee75",
+        )
+
+    def test_nonfinite_numbers_fail_closed(self):
+        for value in (
+            float("nan"),
+            float("inf"),
+            float("-inf"),
+            {"nested": [1, float("nan")]},
+        ):
+            with self.subTest(value=value):
+                with self.assertRaisesRegex(VMK2Error, "non-finite"):
+                    canonical(value)
+
+    def test_non_string_mapping_keys_fail_closed(self):
+        with self.assertRaisesRegex(VMK2Error, "string keys"):
+            canonical({1: "ambiguous-cross-language-key"})
 
 
 class VMK2InvariantTests(unittest.TestCase):
