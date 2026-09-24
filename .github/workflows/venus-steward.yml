@@ -46,6 +46,9 @@ jobs:
       - name: Custody/state audit
         run: python scripts/audit_custody.py
 
+      - name: Historical causal-distinction / issue coverage audit
+        run: python scripts/audit_causal_distinctions.py
+
       - name: Source-tree release audit
         env:
           SOURCE_TREE_ONLY: "1"
