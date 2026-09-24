@@ -1,6 +1,8 @@
 {
   "schema": "Venus.AutonomousLearningState.v0.3",
-  "seen_return_ids": [],
+  "seen_return_ids": [
+    "pr:124:review:5310656803:method:0:COMPARATOR_AUDIT"
+  ],
   "kind_success": {
     "ISSUE": 0,
     "PR": 0
@@ -20,7 +22,7 @@
     "DEPENDENCY_TRACE": 0,
     "DISCRIMINATOR_DESIGN": 0,
     "REPRODUCTION": 0,
-    "COMPARATOR_AUDIT": 0,
+    "COMPARATOR_AUDIT": 1,
     "RETURN_BOUNDARY_AUDIT": 0
   },
   "promotion_authority": false,

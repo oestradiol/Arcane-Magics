@@ -184,6 +184,51 @@ def choose_study_method(
     return ranked[0]
 
 
+METHOD_OBLIGATIONS: Mapping[str, tuple[str, ...]] = {
+    "DEPENDENCY_TRACE": (
+        "Enumerate the target's explicit issue/PR and repository-path dependencies.",
+        "Identify the smallest dependency whose changed state would alter the target disposition.",
+        "Separate blocking dependencies from merely related context.",
+    ),
+    "DISCRIMINATOR_DESIGN": (
+        "State at least two live rival explanations or dispositions.",
+        "Define one prospective observation that separates those rivals.",
+        "Identify who may lawfully supply that observation and whether it must remain hidden/prefrozen.",
+    ),
+    "REPRODUCTION": (
+        "Identify the smallest executable or replayable claim in the target.",
+        "Specify expected versus observed behavior and the environment needed to reproduce it.",
+        "Treat inability to reproduce as returned evidence rather than silent failure.",
+    ),
+    "COMPARATOR_AUDIT": (
+        "Name the strongest ordinary/mature substitute or matched baseline relevant to the target.",
+        "Compare the claimed Venus-specific consequence against that substitute at matched scope.",
+        "Separate learner-owned causal gain from mechanism novelty, necessity, or superiority.",
+    ),
+    "RETURN_BOUNDARY_AUDIT": (
+        "Identify which facts are local execution receipts versus independent World/evaluator returns.",
+        "Locate prefreeze, evaluator-separation, STOP/WITHHOLD, and reopening boundaries.",
+        "Reject any path where the learner can mint the return that validates its own change.",
+    ),
+}
+
+METHOD_SIGNAL_TERMS: Mapping[str, tuple[str, ...]] = {
+    "DEPENDENCY_TRACE": ("requires", "depends", "blocked", "dependency", "upstream", "downstream"),
+    "DISCRIMINATOR_DESIGN": ("rival", "discriminator", "hidden", "held-out", "separate", "compare"),
+    "REPRODUCTION": ("reproduce", "replay", "run", "test", "expected", "observed"),
+    "COMPARATOR_AUDIT": ("comparator", "baseline", "substitute", "ablation", "mature", "matched"),
+    "RETURN_BOUNDARY_AUDIT": ("return", "receipt", "evaluator", "prefreeze", "withhold", "stop", "reopen"),
+}
+
+
+def _method_signals(body: str, method: str) -> tuple[str, ...]:
+    lowered = body.lower()
+    return tuple(
+        term for term in METHOD_SIGNAL_TERMS[method]
+        if term in lowered
+    )
+
+
 def study_target(item: WorkItem, *, method: str) -> dict[str, Any]:
     """Extract a bounded, source-grounded study object from the selected target."""
     body = item.body or ""
@@ -223,6 +268,13 @@ def study_target(item: WorkItem, *, method: str) -> dict[str, Any]:
         "untrusted_instruction_markers": instruction_markers,
         "body_is_executable_instruction": False,
         "method": method,
+        "method_obligations": METHOD_OBLIGATIONS[method],
+        "method_observed_signals": _method_signals(body, method),
+        "method_contract_digest": digest({
+            "method": method,
+            "obligations": METHOD_OBLIGATIONS[method],
+            "observed_signals": _method_signals(body, method),
+        }),
         "questions": (
             "What exact residual remains unresolved in the returned repository state?",
             "What rival explanations or candidate dispositions remain live?",

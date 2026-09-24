@@ -255,6 +255,19 @@ class AutonomousGovernanceTests(unittest.TestCase):
         push_at = text.index("git push origin")
         self.assertLess(tests_at, push_at)
 
+    def test_retained_external_method_failure_is_canonical_learning_state(self):
+        obj = json.loads(
+            (ROOT / "kernel/development/AUTONOMOUS_LEARNING_STATE.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertIn(
+            "pr:124:review:5310656803:method:0:COMPARATOR_AUDIT",
+            obj["seen_return_ids"],
+        )
+        self.assertEqual(obj["method_failure"]["COMPARATOR_AUDIT"], 1)
+        self.assertEqual(obj["kind_failure"]["PR"], 0)
+
     def test_learning_state_is_committed_but_not_authority(self):
         obj = json.loads(
             (ROOT / "kernel/development/AUTONOMOUS_LEARNING_STATE.json").read_text(
