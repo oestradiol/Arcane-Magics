@@ -4,6 +4,7 @@
 **Base authority:** `main` at `4a450be38f8d7deffef1ddf676b6b03b72acf379`
 **Commit history reviewed:** 285 commits, from `55dc1b2261624cbb01ac5573be55606fcc345597` (2026-09-01 public-root rebuild) through the base authority above.
 **Markdown inventory reviewed:** 82 files.
+**Disposition count:** 15 live files reconciled; 26 live files reviewed with no material change; 41 historical/frozen files reviewed and preserved.
 
 ## Method
 
@@ -97,7 +98,6 @@ Issue #82 is closed, but its stronger implementation/result surface is carried o
 - `kernel/CURRENT_STATE.md`
 - `monographs/04_VENUS/README.md`
 - `provenance/DEVELOPMENTAL_LINEAGE.md`
-
 - `kernel/README.md`
 
 ## Live Markdown reviewed with no material change required
