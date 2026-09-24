@@ -378,6 +378,14 @@
         "tests/test_autonomous_research_proposal.py"
       ],
       "invariant": "state-owned target routing may select only externally admitted check IDs and cannot invent executable commands"
+    },
+    {
+      "id": "AUTHORIZED_EXTERNAL_RETURN_REQUIRED",
+      "tests": [
+        "tests/test_autonomous_return_authority.py",
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "non-self identity alone is insufficient for learning; only explicitly authorized external reviewers may supply work/method learning returns, and autonomy cannot rewrite that authority policy"
     }
   ],
   "promotion_authority": false
