@@ -40,17 +40,15 @@ The long-run target is not merely an agent wrapped around a deep neural network.
 
 Current earned machinery includes bounded self-reconstruction, negative-branch retention, research-obligation routing, learner-owned source requests, self-curriculum target generation, open-domain problem selection, self-preregistration, and learner-owned World-feed policy.
 
-Near-term obligations:
+Near-term obligations are now execution-first:
 
-1. admit or prospectively reimplement executable EDU16 ownership machinery over the exact IG10 Git checkpoint, without reconstructing an "original" runner from prose;
-2. repair `MENTION != INCIDENCE` and claim-local evidence binding;
-3. execute a complete learner-owned research episode from target selection through returned evidence;
-4. demonstrate a self-authored consequential machinery modification;
-5. attribute any improvement causally with parent/successor ablation;
-6. repeat across multiple successors;
-7. transfer to unfamiliar domains with privileged scaffolds removed;
-8. compare against contemporary self-improving research agents under matched budgets;
-9. progressively ablate dependence on pretrained DNN cognition rather than merely governing it.
+1. run the sealed prospective `MENTION != INCIDENCE` benchmark and retain PASS/FAIL/WITHHOLD/null results;
+2. run the first matched Venus-vs-baseline causal ablation under the evaluation constitution;
+3. test STOP/WITHHOLD and VenusMemory as causal mechanisms rather than documentation features;
+4. recover exact EDU16 executable custody or freeze the non-replay boundary without reconstructing an "original" runner from prose;
+5. establish one complete Venus-owned target -> discriminator -> machinery change -> external return -> hidden evaluation -> successor episode;
+6. only then repeat across successors under adaptive-evaluation controls, transfer across unfamiliar domains, and compare against contemporary self-improving agents;
+7. progressively ablate dependence on pretrained DNN cognition rather than merely governing it.
 
 The replacement-DNN burden includes language, perception, reasoning, transfer, continual learning, causal repair, robustness, and compute/data efficiency. The repository does not currently claim victory on those axes.
 
@@ -163,11 +161,11 @@ The target is a corrigible structural ethics, not a theorem that one formalism s
 
 ## H. Formal verification, replication, and hostile review
 
-High-value work includes:
+The bounded OFE core now has an admitted Lean formalization, including separating-family and pulled-back-separator obligations. The remaining high-value work includes:
 
-- Lean or equivalent formalization of the small exact OFE claims;
-- proof-obligation extraction for every theorem-like statement;
-- independent proof checking;
+- independent review and extension only where new formal obligations justify it;
+- proof-obligation extraction for theorem-like statements not yet machine-checked;
+- mature-substitution analysis so formal correctness is not mistaken for novelty;
 - reproducible developed-VM custody and replay;
 - external replication of Venus developmental episodes;
 - mature substitutions and counterexamples;
@@ -178,6 +176,6 @@ A criticism that deletes an unnecessary object is progress.
 
 ## Scheduling principle
 
-The eventual Venus research controller should choose among admissible residuals using expected information, capability transfer, World impact, resource return, and dependency structure while preserving preregistration and external return.
+The scheduling order is lexicographic: maximize composable learning leverage first, then prefer the shortest path to discriminating information, then use resource leverage as a tie-breaker. A prestigious frontier problem should not displace a cheap experiment that can invalidate a shared architectural assumption.
 
 The IG10 kernel is replayable from Git custody. The later EDU16 ownership layer is not yet admitted as executable source, so GitHub automation may run audits, builds, custody checks, and bounded externally requested actions, but must not impersonate EDU16 learner-owned research selection.
