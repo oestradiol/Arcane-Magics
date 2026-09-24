@@ -78,8 +78,11 @@ jobs:
           fi
           python scripts/run_venus_research_proposal.py \
             --cycle /tmp/VENUS_AUTONOMOUS_CYCLE.json \
+            --issues /tmp/venus-issues.json \
+            --prs /tmp/venus-prs.json \
             --proposal-output /tmp/VENUS_RESEARCH_PROPOSAL.json \
-            --evidence-output /tmp/VENUS_RESEARCH_EVIDENCE.json
+            --evidence-output /tmp/VENUS_RESEARCH_EVIDENCE.json \
+            --execution-output /tmp/VENUS_REPRODUCTION_EXECUTION.json
           echo "generated=true" >> "$GITHUB_OUTPUT"
           cat /tmp/VENUS_RESEARCH_PROPOSAL.json
           cat /tmp/VENUS_RESEARCH_EVIDENCE.json
@@ -101,12 +104,16 @@ jobs:
 
           branch="venus/autonomous-${GITHUB_RUN_ID}"
           git checkout -b "$branch"
-          mkdir -p autonomy/cycles autonomy/proposals autonomy/evidence
+          mkdir -p autonomy/cycles autonomy/proposals autonomy/evidence autonomy/executions
           cp /tmp/VENUS_AUTONOMOUS_CYCLE.json "autonomy/cycles/${cycle_id}.json"
           proposal_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_RESEARCH_PROPOSAL.json"))["proposal_id"])')"
           evidence_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_RESEARCH_EVIDENCE.json"))["evidence_id"])')"
           cp /tmp/VENUS_RESEARCH_PROPOSAL.json "autonomy/proposals/${proposal_id}.json"
           cp /tmp/VENUS_RESEARCH_EVIDENCE.json "autonomy/evidence/${evidence_id}.json"
+          if [ -f /tmp/VENUS_REPRODUCTION_EXECUTION.json ]; then
+            cp /tmp/VENUS_REPRODUCTION_EXECUTION.json \
+              "autonomy/executions/${cycle_id}.reproduction.json"
+          fi
           cp /tmp/AUTONOMOUS_LEARNING_STATE.json \
             kernel/development/AUTONOMOUS_LEARNING_STATE.json
 
@@ -117,6 +124,9 @@ jobs:
             "autonomy/proposals/${proposal_id}.json" \
             "autonomy/evidence/${evidence_id}.json" \
             kernel/development/AUTONOMOUS_LEARNING_STATE.json
+          if [ -f "autonomy/executions/${cycle_id}.reproduction.json" ]; then
+            git add "autonomy/executions/${cycle_id}.reproduction.json"
+          fi
           git commit -m "venus: freeze autonomous developmental cycle ${cycle_id}"
           git push origin "$branch"
 
@@ -129,6 +139,7 @@ jobs:
             "Decision: ${decision}" \
             "Proposal: ${proposal_id}" \
             "Local evidence: ${evidence_id}" \
+            "Target reproduction: autonomy/executions/${cycle_id}.reproduction.json (REPRODUCTION only)" \
             '' \
             'The worker may study, run fixed repository-owned checks, learn from explicitly returned external review outcomes, and propose.' \
             'It cannot merge this PR, promote developmental authority, release, close the target as success,' \
@@ -152,6 +163,9 @@ jobs:
               "Cycle: ${cycle_id}" \
               "Decision: ${decision}" \
               "Frozen branch: ${branch_url}" \
+              "Proposal: ${proposal_id}" \
+              "Local evidence: ${evidence_id}" \
+              "Target reproduction: autonomy/executions/${cycle_id}.reproduction.json (REPRODUCTION only)" \
               '' \
               'GitHub Actions policy blocked draft-PR creation, so the cycle remains branch-frozen and externally reviewable here.' \
               'This carrier cannot merge, promote, release, self-validate, or close the target as success.')"
