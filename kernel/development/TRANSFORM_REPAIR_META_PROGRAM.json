@@ -1,7 +1,7 @@
 {
   "schema": "Venus.TransformRepairMetaProgram.v0.1",
   "program_id": "TRANSFORM_REPAIR_GRAMMAR_PARENT",
-  "authority": "LEARNER_STATE_OWNED_BOUNDED_REPAIR_GRAMMAR",
+  "authority": "HOST_MATERIALIZED_BOUNDED_META_SEED_NOT_LEARNER_AUTHORED",
   "parent_carrier": "TRANSFORM_INTERNALIZATION_PASS",
   "enabled_patch_ops": [
     "ADD_TRANSITION"
@@ -22,5 +22,6 @@
   "hidden_evaluation_access": false,
   "promotion_authority": false,
   "mutable_by_successor": true,
-  "claim_fence": "Available operations are a bounded host-known primitive universe. Learner selection among them may support bounded machinery-improvement claims, not open-ended operator invention."
+  "claim_fence": "Available operations are a bounded host-known primitive universe. Learner selection among them may support bounded machinery-improvement claims, not open-ended operator invention.",
+  "claim_bearing": false
 }
