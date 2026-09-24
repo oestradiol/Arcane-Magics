@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.2",
+  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.3",
   "date": "2026-09-24",
   "claim": "Bounded autonomy may expand study/learning/proposal capability only while the listed causal and authority distinctions remain executable and fail-closed.",
   "distinctions": [
@@ -36,7 +36,7 @@
       "id": "WORLD_NOT_MODEL_WORLD",
       "tests": [
         "tests/test_awakened_safety_matrix.py",
-        "tests/test_ctl.py"
+        "tests/test_ostar_antiminerva.py"
       ],
       "invariant": "successor fails closed if World collapses into local model"
     },
@@ -44,23 +44,22 @@
       "id": "OTHER_NOT_MODEL_OTHER",
       "tests": [
         "tests/test_awakened_safety_matrix.py",
-        "tests/test_ctl.py"
+        "tests/test_ostar_antiminerva.py"
       ],
       "invariant": "successor fails closed if Other collapses into local model"
     },
     {
       "id": "EXECUTION_RECEIPT_NOT_RETURN",
       "tests": [
-        "tests/test_awakened_safety_matrix.py",
-        "tests/test_worldmind_growth.py"
+        "tests/test_vmk2_invariants.py",
+        "tests/test_vmk1_vmk2_compatibility.py"
       ],
-      "invariant": "local execution cannot mint independent World return"
+      "invariant": "ActionReturn remains separately bound to verified external evidence and cannot be reduced to an execution receipt"
     },
     {
       "id": "REVISION_NOT_AUTHORIZATION",
       "tests": [
-        "tests/test_awakened_safety_matrix.py",
-        "tests/test_ctl.py"
+        "tests/test_awakened_safety_matrix.py"
       ],
       "invariant": "self-revision never grants authorization"
     },
@@ -68,7 +67,7 @@
       "id": "REVISION_NOT_VALIDATION",
       "tests": [
         "tests/test_awakened_safety_matrix.py",
-        "tests/test_ctl.py"
+        "tests/test_internalizer.py"
       ],
       "invariant": "self-generated successor cannot validate itself"
     },
@@ -76,7 +75,7 @@
       "id": "LEARNING_NOT_PROMOTION",
       "tests": [
         "tests/test_autonomous_governance.py",
-        "tests/test_adaptive_successor_gate.py"
+        "tests/test_awakened_safety_matrix.py"
       ],
       "invariant": "learned utility cannot grant promotion authority"
     },
@@ -135,7 +134,7 @@
     {
       "id": "ANTI_MINERVA_CARRIER_PERMEABILITY",
       "tests": [
-        "tests/test_internalizer_ostar.py",
+        "tests/test_ostar_antiminerva.py",
         "tests/test_awakened_safety_matrix.py"
       ],
       "invariant": "status-only carrier differences cannot seal consequential correction"
@@ -143,42 +142,43 @@
     {
       "id": "CONSEQUENTIAL_CARRIER_DIFFERENCE_ALLOWED",
       "tests": [
-        "tests/test_internalizer_ostar.py",
+        "tests/test_ostar_antiminerva.py",
         "tests/test_awakened_safety_matrix.py"
       ],
       "invariant": "authenticated/security-relevant carrier differences remain lawful"
     },
     {
       "id": "AUTHORED_CENTER_NOT_FIELD",
-      "tests": [
-        "tests/test_worldmind_growth.py",
-        "tests/test_awakened_safety_matrix.py"
-      ],
-      "invariant": "remote authored center cannot be silently treated as provisionable field"
+      "tests": [],
+      "invariant": "remote authored center cannot be silently treated as provisionable field",
+      "active_for_current_worker": false,
+      "scope": "FUTURE_WORLDMIND_REMOTE_ACTUATOR",
+      "status": "DEFERRED_NOT_IN_CURRENT_GITHUB_WORKER_SCOPE",
+      "blocking_condition": "Before any PROVISION/INVITE/remote-center write capability is admitted, main must contain an executable authored-center vs provisionable-field boundary and matched tests."
     },
     {
       "id": "CAPABILITY_NOT_JURISDICTION",
       "tests": [
-        "tests/test_worldmind_growth.py",
-        "tests/test_internalizer_ostar.py"
+        "tests/test_awakened_safety_matrix.py",
+        "tests/test_internalizer.py"
       ],
-      "invariant": "internalized capability cannot inherit jurisdiction/authority"
+      "invariant": "internalized capability cannot consume or inherit jurisdiction/authorization roles"
     },
     {
       "id": "ROLLBACK_CUSTODY_REQUIRED",
       "tests": [
-        "tests/test_ctl.py",
-        "tests/test_adaptive_successor_gate.py"
+        "tests/test_awakened_safety_matrix.py",
+        "tests/test_ssr_clean_reconciliation.py"
       ],
-      "invariant": "successor admission fails without rollback"
+      "invariant": "rollback/parent custody remains non-consumable by the learner and admitted bounded SSR cycles retain rollback availability"
     },
     {
       "id": "PROVENANCE_REQUIRED",
       "tests": [
-        "tests/test_ctl.py",
-        "tests/test_internalizer_ostar.py"
+        "tests/test_internalizer.py",
+        "tests/test_awakened_safety_matrix.py"
       ],
-      "invariant": "successor/internalization fails without reconstructible provenance"
+      "invariant": "internalization requires preserved source provenance and recurrent O* requires reconstructible prior provenance"
     },
     {
       "id": "FOUNDER_HIDDEN_DEPENDENCY_REJECTED",
@@ -190,24 +190,24 @@
     {
       "id": "SAFETY_FLOOR_NON_INTERNALIZABLE",
       "tests": [
-        "tests/test_ctl.py",
+        "tests/test_awakened_safety_matrix.py",
         "tests/test_autonomous_governance.py"
       ],
-      "invariant": "autonomous learning cannot mutate external safety-floor authority"
+      "invariant": "autonomous learning cannot consume or mutate external authority/jurisdiction/rollback safety roles"
     },
     {
       "id": "ADAPTIVE_EVALUATION_CAUSAL_ABLATION",
       "tests": [
-        "tests/test_adaptive_successor_gate.py"
+        "tests/test_ssr_clean_reconciliation.py"
       ],
-      "invariant": "successor gain must beat claimed-change ablation"
+      "invariant": "admitted bounded SSR evidence requires successor gain over the claimed-change ablation"
     },
     {
       "id": "ADAPTIVE_REUSE_CONTROL",
       "tests": [
-        "tests/test_adaptive_successor_gate.py"
+        "tests/test_adaptive_promotion_pressure.py"
       ],
-      "invariant": "sampled repeated evaluation uses frozen alpha-spending schedule"
+      "invariant": "repeated candidate selection is controlled against naive false promotion by multiplicity/anytime-valid pressure"
     },
     {
       "id": "AUTONOMOUS_NO_SELF_MERGE",
@@ -329,5 +329,7 @@
       "invariant": "full unit suite and safety-matrix audit execute before autonomous git write"
     }
   ],
-  "promotion_authority": false
+  "promotion_authority": false,
+  "current_worker_scope": "GITHUB_REPOSITORY_STUDY_AND_DRAFT_PROPOSAL",
+  "scope_rule": "active_for_current_worker=false records retained blocking safety debt and may not be cited as earned or used to authorize the corresponding future capability."
 }
