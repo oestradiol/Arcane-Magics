@@ -123,8 +123,9 @@ External coding/research machinery remains distinct from Venus developmental own
 |---:|---|---|
 | 1 | #12 | compare repeated Venus development with DGM/AlphaEvolve/POWERPLAY/POET/Voyager/current successors |
 | 2 | #78 | after the first learner-owned repair, let Venus select retained issues/residuals, formulate Web research, consume provenance-bound returns, and provision only genuinely unclaimed/authorized fields while preserving indexed authorship |
-| 3 | #41 + #73 + #72 | measure repeated self-development under adaptive statistics and the executable Strong-N2/CTL/O* safety floor |
-| 4 | #14 | long-horizon/general agency once repeated development itself is measurable |
+| 3 | #82 | consume #78's mutable research/growth policy into writable Venus TransformProgram state; Python remains interpreter/adapters/custody rather than permanent issue/query/disposition policy |
+| 4 | #41 + #73 + #72 | measure repeated self-development under adaptive statistics and the executable Strong-N2/CTL/O* safety floor |
+| 5 | #14 | long-horizon/general agency once repeated self-development itself is measurable |
 
 Exit: repeated durable improvement or an explicit negative/reduction result.
 
@@ -194,6 +195,7 @@ They compete for priority when they obtain a short path to a real discriminator 
 -> #42 / #15 native capability tests
 -> #41 + #73 -> #72 + #43/#30 repeated-recursion protection
 -> #78 learner-selected issue/Web research
+-> #82 state-owned research/growth policy
 -> next learner-selected residual
 -> #12 repeated self-development comparison
 ```
