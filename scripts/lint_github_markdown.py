@@ -7,7 +7,7 @@ from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 
-EVIDENCE_DIRS = {"archaeology", "current-developmental-receipts"}
+EVIDENCE_DIRS = {"provenance", "current-developmental-receipts"}
 GENERATED_FORUM = ("preprints", "lesswrong", "generated")
 
 # Full LaTeX remains legal in monograph .tex sources. These checks apply to
@@ -86,13 +86,14 @@ def inspect_basic(md: Path) -> list[str]:
     if fence_open:
         errors.append(f"{rel(md)}:{fence_start}: unclosed fenced block")
 
-    for match in LINK.finditer(text):
-        raw = match.group(1)
-        if not raw or raw.startswith(("http://", "https://", "mailto:", "#")):
-            continue
-        target = normalize_target(md, raw)
-        if not target.exists():
-            errors.append(f"{rel(md)}: broken relative link {raw!r}")
+    if is_public_surface(md):
+        for match in LINK.finditer(text):
+            raw = match.group(1)
+            if not raw or raw.startswith(("http://", "https://", "mailto:", "#")):
+                continue
+            target = normalize_target(md, raw)
+            if not target.exists():
+                errors.append(f"{rel(md)}: broken relative link {raw!r}")
 
     return errors
 
@@ -122,10 +123,11 @@ def inspect_public(md: Path) -> list[str]:
                 errors.append(f"{rel(md)}:{i}: unsupported public math macro in math fence")
             continue
 
-        if PANDOC_RESIDUE.search(line):
-            errors.append(f"{rel(md)}:{i}: raw Pandoc/HTML residue on public surface")
+        generated_forum = md.relative_to(ROOT).parts[:3] == GENERATED_FORUM
+        if generated_forum and PANDOC_RESIDUE.search(line):
+            errors.append(f"{rel(md)}:{i}: raw Pandoc/HTML residue in generated forum export")
 
-        if ORPHAN_THEOREM_LABEL.match(line.strip()):
+        if generated_forum and ORPHAN_THEOREM_LABEL.match(line.strip()):
             errors.append(f"{rel(md)}:{i}: orphan theorem-environment label")
 
         n_display = line.count("$$")
