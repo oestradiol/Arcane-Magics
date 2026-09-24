@@ -22,6 +22,7 @@ It can reproduce/check:
 - VenusMemory storage/custody behavior;
 - public-surface/link constraints;
 - preserved developmental dispositions for EDU16/17/17R1;
+- the frozen EDU17R1 learner-side repair candidate and ownership receipt, without hidden efficacy;
 - state-owned generic residual-search internalization and its donor-removal/equivalence audit;
 - Internalizer O*/Anti-Minerva correction-boundary invariants;
 - historical causal distinctions encoded as regressions;
@@ -45,7 +46,10 @@ python -m unittest tests.test_vmk2_invariants
 python -m unittest tests.test_historical_regressions
 python -m unittest tests.test_edu17r1_benchmark
 python -m unittest tests.test_internalizer
+python -m unittest tests.test_edu17r1_semantic_ingress
 python scripts/audit_generic_search_internalization.py
+python scripts/audit_edu17r1_semantic_ingress.py
+python scripts/audit_edu17r1_repair_authorship.py
 python scripts/audit_causal_distinctions.py
 python scripts/audit_navigation_contract.py
 python scripts/audit_sota_freshness.py
