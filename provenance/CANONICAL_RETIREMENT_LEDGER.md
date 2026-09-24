@@ -88,7 +88,7 @@ Preserved history may contain statements later shown stale or mislabeled. Do not
 
 - `provenance/historical-runtime/R194/source/PUBLIC_RELEASE_BOUNDARY.md` says the later developmental lineage reaches "EDU16 (1699 records)." Current admitted evidence shows **1699 = EDU15R1** and **EDU16 = 1703**. The historical text remains provenance only and must not route current authority.
 
-## 7. Canonical projections to consume, not import
+## 6. Canonical projections to consume, not import
 
 Candidate `CONSUMED` surfaces include:
 
@@ -108,7 +108,7 @@ all live distinctions + provenance + reopening routes
 remain reachable elsewhere
 ```
 
-## 6. NRI / methodology extraction
+## 7. NRI / methodology extraction
 
 The 2026-09-22 Canonical resynthesis correctly preserves:
 
