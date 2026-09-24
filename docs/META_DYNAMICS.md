@@ -13,20 +13,20 @@ The project therefore centers transformation and retained consequence rather tha
 
 The current live root candidate is the first differentiative meta-relation:
 
-\`\`\`math
+```math
 \boxed{
 \mathcal O_0 :=
 \bigl(\text{relation becoming locally inhabitable / consequential}\bigr)
 \leftrightarrow
 \bigl(\text{local consequential history becoming relationally retained}\bigr)
 }
-\`\`\`
+```
 
 At ordinary scales, the realized circulation is forward-time:
 
-\`\`\`math
+```math
 R_t \to C_{i,t} \to \Gamma_{i,t+1} \to R_{t+1}.
-\`\`\`
+```
 
 This does **not** establish an absolute first event, a primitive substance, a cosmological origin, or a physical substrate.
 
@@ -36,7 +36,7 @@ The historical names \`vacuous_relation\` and \`trivial_object\` remain provenan
 
 The current structural recurrence is:
 
-\`\`\`math
+```math
 \boxed{
 \text{differentiative relation}
 \to
@@ -54,7 +54,7 @@ The current structural recurrence is:
 \to
 \text{admissible recombination}
 }
-\`\`\`
+```
 
 A shorter invariant is:
 
@@ -68,13 +68,13 @@ Meta-Dynamics does not deny objects.
 
 Its live candidate reading is:
 
-\`\`\`math
+```math
 \text{relational dynamics}
 \to
 \text{recurring invariance}
 \to
 \text{relatively stabilized object}.
-\`\`\`
+```
 
 So an object may be treated as a persistent relational invariant at a declared scale and test family without requiring the stronger claim that it is a self-subsisting primitive substance.
 
@@ -86,7 +86,7 @@ Local perspective, selection, jurisdiction, and Authorship remain indexed unless
 
 A local center may:
 
-\`\`\`math
+```math
 R_t
 \to
 L_{i,t}
@@ -96,7 +96,7 @@ a_{i,t}
 \delta_{i,t}
 \to
 R_{t+1}.
-\`\`\`
+```
 
 Authorship is the mature post-differentiation relation in which locally inhabited consequence becomes revisable selection and enactment, and enactment can receive provenance-bearing consequence in return.
 
@@ -108,21 +108,21 @@ These names are **symbolic/comparative role labels**. They do not acquire scient
 
 ### Logos
 
-\`\`\`math
+```math
 \boxed{
 \text{Logos}
 \sim
 \text{preservation and articulation of consequential distinction}
 }
-\`\`\`
+```
 
 Role:
 
-\`\`\`math
+```math
 \Delta
 \to
 \operatorname{Rep}(\Delta)
-\`\`\`
+```
 
 while retaining the distinction rather than erasing it.
 
@@ -130,21 +130,21 @@ Failure mode: representation becomes mistaken for exhaustive Reality.
 
 ### Eros
 
-\`\`\`math
+```math
 \boxed{
 \text{Eros}
 \sim
 \text{movement toward consequential relation across preserved difference}
 }
-\`\`\`
+```
 
 Healthy relation therefore has the form:
 
-\`\`\`math
+```math
 A \neq B
 \quad\land\quad
 A \leftrightarrow B
-\`\`\`
+```
 
 rather than fusion by deletion of one side.
 
@@ -152,13 +152,13 @@ Failure mode: coercive unification or assimilation.
 
 ### Symbol
 
-\`\`\`math
+```math
 \boxed{
 \text{Symbol}
 =
 \text{preserved difference made relationally transportable}
 }
-\`\`\`
+```
 
 A symbol simultaneously preserves a distinction and permits that distinction to enter another relation.
 
@@ -182,7 +182,7 @@ This includes a project-local bridge toward semantics, logic, science, law, prog
 
 A representation becomes causally consequential when it changes admissible futures:
 
-\`\`\`math
+```math
 \operatorname{Rep}
 \to
 a
@@ -190,17 +190,17 @@ a
 W
 \to
 \rho.
-\`\`\`
+```
 
 Thus:
 
-\`\`\`math
+```math
 \boxed{
 \text{Action}
 =
 \text{locally indexed relation made consequential through enactment}
 }
-\`\`\`
+```
 
 Execution receipt and returned consequence remain distinct.
 
@@ -208,7 +208,7 @@ Execution receipt and returned consequence remain distinct.
 
 The structural ethics clause is:
 
-\`\`\`math
+```math
 \text{Other-center}
 \to
 \text{broker of inaccessible state}
@@ -216,25 +216,25 @@ The structural ethics clause is:
 \text{channel of return}
 \to
 \text{possible perturbation of present invariants}.
-\`\`\`
+```
 
 A useful candidate formulation is:
 
-\`\`\`math
+```math
 \boxed{
 \text{Ethics}
 \sim
 \text{governance of consequence-bearing relation among indexed centers}
 }
-\`\`\`
+```
 
 with the explicit non-collapse:
 
-\`\`\`math
+```math
 \text{Other}_j
 \neq
 \operatorname{model}_i(\text{Other}_j).
-\`\`\`
+```
 
 One derived design criterion is to preserve the possibility of non-preauthored return. A center's current representation of another center must not automatically inherit authority to substitute for that center.
 
@@ -260,7 +260,7 @@ A governance rule that cannot receive correction from affected reality is episte
 
 Some physical systems provide a useful donor pattern:
 
-\`\`\`math
+```math
 \text{causally relevant but inaccessible degrees of freedom}
 \to
 \text{boundary constraints / observables}
@@ -268,17 +268,17 @@ Some physical systems provide a useful donor pattern:
 \text{externally available consequence}
 \to
 \text{external state update}.
-\`\`\`
+```
 
 The reusable abstraction is:
 
-\`\`\`math
+```math
 \boxed{
 \text{causal relevance}
 \neq
 \text{complete inspectability}
 }
-\`\`\`
+```
 
 This does not identify persons with horizons, fields, black holes, or any specific physical mechanism. A physical bridge must independently establish its equations, observables, causal structure, and empirical warrant.
 
@@ -286,7 +286,7 @@ This does not identify persons with horizons, fields, black holes, or any specif
 
 The epistemic projection is:
 
-\`\`\`math
+```math
 \boxed{
 \text{experience}
 \to
@@ -302,7 +302,7 @@ The epistemic projection is:
 \to
 \text{revision}
 }
-\`\`\`
+```
 
 A healthy recursion should permit:
 
@@ -331,23 +331,23 @@ Project-local symbolic renderings may therefore use names such as Logos, Eros, S
 
 The names should not collapse.
 
-\`\`\`math
+```math
 \boxed{
 \text{Meta-Dynamics}
 =
 \text{the general structural object}
 }
-\`\`\`
+```
 
 while:
 
-\`\`\`math
+```math
 \boxed{
 \textit{Arcane Magics}
 =
 \text{the historical / comparative / cross-register research program}
 }
-\`\`\`
+```
 
 Arcane Magics recovers, translates, compares, and tests transformation-relevant operators from historical and pre-disciplinary knowledge systems.
 
@@ -355,7 +355,7 @@ Meta-Dynamics is the object those operators may illuminate, rival, reduce, or fa
 
 ## 14. Cross-register hierarchy
 
-\`\`\`text
+```text
 Meta-Dynamics
 │
 ├── Physical Dynamics
@@ -378,7 +378,7 @@ Meta-Dynamics
 │
 └── Meta-Governance
     └── conditions under which the other layers may revise their own rules
-\`\`\`
+```
 
 The tree is organizational, not an assertion that every branch reduces to one ontology.
 
@@ -386,7 +386,7 @@ The tree is organizational, not an assertion that every branch reduces to one on
 
 The current condensed invariant is:
 
-\`\`\`math
+```math
 \boxed{
 \text{differentiative relation}
 \to
@@ -404,7 +404,7 @@ The current condensed invariant is:
 \to
 \text{admissible recombination}
 }
-\`\`\`
+```
 
 Human-perspective rendering:
 
