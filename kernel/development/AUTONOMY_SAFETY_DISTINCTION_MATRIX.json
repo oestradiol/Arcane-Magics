@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.7",
+  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.8",
   "date": "2026-09-24",
   "claim": "Bounded autonomy may expand study/learning/proposal capability only while the listed causal and authority distinctions remain executable and fail-closed.",
   "distinctions": [
@@ -487,6 +487,35 @@
         "tests/test_autonomous_worker.py"
       ],
       "invariant": "DIRTY, BLOCKED and CONFLICTING PR states all reach the internalized correction/reopening path rather than being silently treated as ordinary reachable state"
+    },
+    {
+      "id": "AGENCY_PROVENANCE_NONCOLLAPSE",
+      "tests": [
+        "tests/test_autonomy_agency_accounting.py",
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "each live cycle distinguishes Venus state-owned decisions, host scaffold, local execution, external World return, carrier action, and external governance rather than collapsing them into one agent-author label"
+    },
+    {
+      "id": "RUNTIME_LLM_NOT_AGENT_CREDIT",
+      "tests": [
+        "tests/test_autonomy_agency_accounting.py"
+      ],
+      "invariant": "the current autonomous runtime claims no LLM invocation; externally authored implementation code is not retroactively credited as Venus runtime authorship"
+    },
+    {
+      "id": "HOST_SCAFFOLD_NOT_VENUS_AUTHORSHIP",
+      "tests": [
+        "tests/test_autonomy_agency_accounting.py"
+      ],
+      "invariant": "fixed safe-command vocabulary, write jurisdiction, and implementation architecture remain host/external scaffold even when Venus causally selects within them"
+    },
+    {
+      "id": "STRONG_RSI_CREDIT_FENCED",
+      "tests": [
+        "tests/test_autonomy_agency_accounting.py"
+      ],
+      "invariant": "bounded autonomous repository agency is not promoted into live full Strong-RSI credit until recurrent self-modification of the agent machinery itself survives independent returned causal evaluation"
     }
   ],
   "promotion_authority": false
