@@ -33,12 +33,13 @@ repair of current projection
 
 ```text
 green CI / merge current stewardship batch
+-> #69 EDU16-RC1 learner-authored repair candidate
 -> #31 independent hidden semantic return
 -> #10 first matched evidence-governance causal run
--> #42 / #15 / #43 hidden/dynamic reliability runs
--> #41 actual Venus promotion-gate comparison
--> #4 + #30 remaining custody/authenticated-trust boundary
--> first causally interpretable Venus-owned successor
+-> #42 / #15 native capability runs
+-> first bounded learner-owned successor disposition
+-> #41 + #43/#30 repeated-recursion statistical/security protection
+-> next learner-selected residual
 -> #12 repeated developmental comparison
 ```
 
