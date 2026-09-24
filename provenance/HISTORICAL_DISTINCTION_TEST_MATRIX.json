@@ -749,9 +749,9 @@
       ],
       "current_owner": "provenance/CANONICAL_RETIREMENT_LEDGER.md",
       "test_layer": "T0/T2",
-      "test_id_path": "tests/test_historical_regressions.py::test_current_status_repair_does_not_rewrite_historical_audit",
+      "test_id_path": "tests/test_historical_regressions.py::test_r224_r225_repair_does_not_rewrite_triggering_history",
       "status": "COVERED_PARTIAL",
-      "credit_genealogy_note": "current status reconciliation is append-only relative to historical audit checkpoint",
+      "credit_genealogy_note": "R224/R225 repair sequence and non-rewriting historical custody are now executable repository regressions.",
       "reopening_condition": "projection-maintenance regression fixture"
     }
   ]
