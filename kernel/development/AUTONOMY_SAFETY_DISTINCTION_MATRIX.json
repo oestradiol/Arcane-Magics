@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.8",
+  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.9",
   "date": "2026-09-24",
   "claim": "Bounded autonomy may expand study/learning/proposal capability only while the listed causal and authority distinctions remain executable and fail-closed.",
   "distinctions": [
@@ -531,6 +531,43 @@
         "tests/test_autonomy_agency_accounting.py"
       ],
       "invariant": "bounded autonomous repository agency is not promoted into live full Strong-RSI credit until recurrent self-modification of the agent machinery itself survives independent returned causal evaluation"
+    },
+    {
+      "id": "META_LEARNING_STRATEGY_CAUSAL",
+      "tests": [
+        "tests/test_autonomous_meta_learning.py",
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "the selected bounded learning strategy can causally change study-method choice on a matched target rather than existing as metadata"
+    },
+    {
+      "id": "META_LEARNING_EXTERNAL_RETURN_REQUIRED",
+      "tests": [
+        "tests/test_autonomous_meta_learning.py"
+      ],
+      "invariant": "meta-learning strategy utility updates only from explicitly authorized external returned review markers"
+    },
+    {
+      "id": "META_LEARNING_SELF_REVIEW_BLOCKED",
+      "tests": [
+        "tests/test_autonomous_meta_learning.py"
+      ],
+      "invariant": "autonomous/self review identities cannot train the strategy selector that governs later study behavior"
+    },
+    {
+      "id": "META_LEARNING_STATE_NOT_LAW",
+      "tests": [
+        "tests/test_autonomous_write_scope.py"
+      ],
+      "invariant": "autonomous cycles may update non-authoritative meta-learning state but cannot unilaterally rewrite the meta-learning implementation"
+    },
+    {
+      "id": "META_LEARNING_STRATEGY_FAMILY_EXTERNAL",
+      "tests": [
+        "tests/test_autonomy_agency_accounting.py",
+        "tests/test_autonomous_meta_learning.py"
+      ],
+      "invariant": "Venus may choose among admitted selector strategies but cannot treat selection as authorship or authority to expand the strategy family"
     }
   ],
   "promotion_authority": false
