@@ -534,5 +534,34 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertIn("Agency receipt:", text)
 
 
+    def test_workflow_loads_and_commits_meta_learning_state(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn(
+            "--meta-learning-state kernel/development/AUTONOMOUS_META_LEARNING_STATE.json",
+            text,
+        )
+        self.assertIn(
+            "--meta-learning-output /tmp/AUTONOMOUS_META_LEARNING_STATE.json",
+            text,
+        )
+        self.assertIn(
+            "kernel/development/AUTONOMOUS_META_LEARNING_STATE.json",
+            text,
+        )
+
+    def test_meta_learning_state_remains_non_authoritative(self):
+        obj = json.loads(
+            (ROOT / "kernel/development/AUTONOMOUS_META_LEARNING_STATE.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertFalse(obj["promotion_authority"])
+        self.assertFalse(obj["merge_authority"])
+        self.assertFalse(obj["truth_authority"])
+        self.assertFalse(obj["safety_floor_authority"])
+        self.assertFalse(obj["strategy_family_mutation_authority"])
+        self.assertFalse(obj["return_authority_mutation_authority"])
+
+
 if __name__ == "__main__":
     unittest.main()
