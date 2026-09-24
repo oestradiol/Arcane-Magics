@@ -145,6 +145,12 @@ class AutonomousGovernanceTests(unittest.TestCase):
             "gh pr merge",
             "gh release create",
             "gh issue close",
+            "gh pr edit",
+            "gh issue edit",
+            "--add-label",
+            "venus-return-useful",
+            "venus-return-unhelpful",
+            "venus-return-invalid",
             "secrets.",
             "workflow_run:",
         )
