@@ -39,6 +39,7 @@ class U1RecurrenceResult:
     schema: str
     recurrence_id: str
     selected_problem_id: str
+    problem_pressure_digest: str
     parent_program_digest: str
     successor_program_digest: str | None
     search_status: str
@@ -54,6 +55,47 @@ class U1RecurrenceResult:
     ctl_ostar_admitted: bool
     mechanism_unique_or_necessary: bool
     promotion_authority: bool
+
+
+def _bind_problem_to_training_return(
+    formed_problem: Mapping[str, Any],
+    training_return: Mapping[str, Any],
+) -> dict[str, Any]:
+    """Bind learner-formed problem content into an externally typed trace shell.
+
+    The external return still controls expected success/failure and next-state
+    semantics. The learner contributes the selected problem's identity,
+    residual, discriminator, and provenance-bearing source streams.
+    """
+    out = {
+        key: value
+        for key, value in training_return.items()
+        if key != "traces"
+    }
+    residual = "|".join(
+        str(x) for x in formed_problem.get("residual_coordinates", ())
+    )
+    discriminator = str(formed_problem.get("discriminator") or "")
+    provenance_ids = tuple(
+        str(x) for x in formed_problem.get("source_stream_ids", ())
+    )
+    problem_id = str(formed_problem.get("problem_id") or "")
+    traces = []
+    for row in training_return.get("traces", ()):
+        new = dict(row)
+        payload = dict(row.get("payload") or {})
+        if "target_id" in payload:
+            payload["target_id"] = problem_id
+        if "residual" in payload:
+            payload["residual"] = residual
+        if "discriminator" in payload:
+            payload["discriminator"] = discriminator
+        if "provenance_ids" in payload:
+            payload["provenance_ids"] = list(provenance_ids)
+        new["payload"] = payload
+        traces.append(new)
+    out["traces"] = traces
+    return out
 
 
 def _trace_rows(obj: Mapping[str, Any]) -> tuple[BehavioralTrace, ...]:
@@ -137,9 +179,20 @@ def run_u1_recurrence(
     if ctl_ostar_admission.get("execution_owner") != "EXTERNAL_TOOLING":
         raise U1RecurrenceError("CTL/O* admission must remain externally executed")
 
+    bound_training_return = _bind_problem_to_training_return(
+        formed_problem, training_return
+    )
+    problem_pressure_digest = digest({
+        "problem_id": problem_id,
+        "residual_coordinates": tuple(formed_problem.get("residual_coordinates", ())),
+        "discriminator": formed_problem.get("discriminator"),
+        "source_stream_ids": tuple(formed_problem.get("source_stream_ids", ())),
+        "bound_training_return": bound_training_return,
+    })
+
     search = search_transition_repair(
         pressure_parent,
-        _trace_rows(training_return),
+        _trace_rows(bound_training_return),
         allowed_patch_ops=("REPLACE_TRANSITION",),
     )
 
@@ -171,6 +224,7 @@ def run_u1_recurrence(
     body = {
         "schema": "Venus.U1RecurrenceRecompilation.v0.1",
         "selected_problem_id": problem_id,
+        "problem_pressure_digest": problem_pressure_digest,
         "parent_program_digest": search.parent_program_digest,
         "successor_program_digest": successor_digest,
         "search_status": search.status,
