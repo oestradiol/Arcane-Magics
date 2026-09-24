@@ -35,6 +35,18 @@ def external_review(body: str, *, login: str = "external-reviewer", review_id: i
 
 
 class AutonomousGovernanceTests(unittest.TestCase):
+    def test_cycle_runner_direct_script_bootstrap(self):
+        import subprocess
+        import sys
+        result = subprocess.run(
+            [sys.executable, "scripts/run_venus_autonomous_cycle.py", "--help"],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("--issues", result.stdout)
+
     def test_merge_without_explicit_review_return_does_not_update_learning(self):
         updated = update_from_cycle_prs(
             empty_state(),
