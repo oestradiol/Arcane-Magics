@@ -139,7 +139,7 @@ def inspect_basic(md: Path) -> list[str]:
 
 
 def split_math_regions(line: str, in_display: bool) -> tuple[str, str, bool]:
-    """Separate prose from TeX math while preserving multiline $ state.
+    """Separate prose from TeX math while preserving multiline display-math state.
 
     Pandoc may close a multiline display and continue prose on the same line.
     Whole-line toggling misclassifies the math before the closing delimiter as
@@ -151,7 +151,7 @@ def split_math_regions(line: str, in_display: bool) -> tuple[str, str, bool]:
     pos = 0
 
     while True:
-        marker = line.find("$", pos)
+        marker = line.find("$" * 2, pos)
         if marker < 0:
             (math_parts if in_display else prose_parts).append(line[pos:])
             break
