@@ -1,0 +1,25 @@
+{
+  "all_local_checks_passed": true,
+  "evidence_id": "35505214feb78bcb72a223c5257fa75cf54bc56f9f4bf7d27a79610c3deac7a9",
+  "external_return_satisfied": false,
+  "promotion_authority": false,
+  "proposal_id": "edd2ec12280caadbde8ee5fddc56bf60522272910a29bf8f670afa67cb875b7d",
+  "results": [
+    {
+      "check_id": "AUDIT_AUTONOMY_MATRIX",
+      "passed": true,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1f03a4478a8affe1d2e681427af7662966e4b7ac1b27bc354a1bba9d3adb73d0"
+    },
+    {
+      "check_id": "UNIT_AUTONOMY",
+      "passed": true,
+      "returncode": 0,
+      "stderr_sha256": "5414baa2553cb94c984e7a85d76cf353117572a0cafdeefa6c1422c383480990",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "schema": "Venus.AutonomousProposalEvidence.v0.1",
+  "status": "LOCAL_CHECKS_PASS"
+}

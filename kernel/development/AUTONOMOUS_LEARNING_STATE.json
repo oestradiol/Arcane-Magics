@@ -1,32 +1,41 @@
 {
-  "schema": "Venus.AutonomousLearningState.v0.4",
-  "seen_return_ids": [
-    "return:a44091dbba6e54ebc12cf8fa8952604bd5e0070758a365084cb47a253b28ace0:method:0:COMPARATOR_AUDIT"
-  ],
-  "kind_success": {
-    "ISSUE": 0,
-    "PR": 0
-  },
   "kind_failure": {
     "ISSUE": 0,
     "PR": 0
   },
-  "method_success": {
-    "DEPENDENCY_TRACE": 0,
+  "kind_success": {
+    "ISSUE": 0,
+    "PR": 4
+  },
+  "merge_authority": false,
+  "method_failure": {
+    "COMPARATOR_AUDIT": 1,
+    "DEPENDENCY_TRACE": 1,
     "DISCRIMINATOR_DESIGN": 0,
-    "REPRODUCTION": 0,
-    "COMPARATOR_AUDIT": 0,
+    "REPRODUCTION": 1,
     "RETURN_BOUNDARY_AUDIT": 0
   },
-  "method_failure": {
-    "DEPENDENCY_TRACE": 0,
+  "method_success": {
+    "COMPARATOR_AUDIT": 0,
+    "DEPENDENCY_TRACE": 3,
     "DISCRIMINATOR_DESIGN": 0,
     "REPRODUCTION": 0,
-    "COMPARATOR_AUDIT": 1,
     "RETURN_BOUNDARY_AUDIT": 0
   },
   "promotion_authority": false,
-  "merge_authority": false,
-  "truth_authority": false,
-  "safety_floor_authority": false
+  "safety_floor_authority": false,
+  "schema": "Venus.AutonomousLearningState.v0.4",
+  "seen_return_ids": [
+    "return:0e0e21f638c9a49fc5888a11562fb4a2b6c012bb1944e3cec6b77e96b5f10b3c:method:0:REPRODUCTION",
+    "return:2168882e26796e51f162a7c500ff9e3751070400f25b88a21209f61e51a18a16:method:0:DEPENDENCY_TRACE",
+    "return:2168882e26796e51f162a7c500ff9e3751070400f25b88a21209f61e51a18a16:work",
+    "return:43f9e60fc5215764389cecac6cd87d4107fb1d63c477de7ae6ba8cbeb2b26664:method:0:DEPENDENCY_TRACE",
+    "return:43f9e60fc5215764389cecac6cd87d4107fb1d63c477de7ae6ba8cbeb2b26664:work",
+    "return:791f7c3ff5d8397e8c0bfea569d6266dd3fe7b559c3a4e3d80d9b33002dc4af1:method:0:DEPENDENCY_TRACE",
+    "return:791f7c3ff5d8397e8c0bfea569d6266dd3fe7b559c3a4e3d80d9b33002dc4af1:work",
+    "return:a44091dbba6e54ebc12cf8fa8952604bd5e0070758a365084cb47a253b28ace0:method:0:COMPARATOR_AUDIT",
+    "return:f167f7aefc9c965fb0bc9af94dcbfe5e9f3dcd4463771a6fbdf35d9aadb78422:method:0:DEPENDENCY_TRACE",
+    "return:f167f7aefc9c965fb0bc9af94dcbfe5e9f3dcd4463771a6fbdf35d9aadb78422:work"
+  ],
+  "truth_authority": false
 }
