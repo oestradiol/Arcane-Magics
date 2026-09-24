@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import unittest
 
+from kernel.development.autonomous_learning import TargetBarrier
 from kernel.development.autonomous_worker import (
     ALLOWED_OPERATIONS,
     FORBIDDEN_OPERATIONS,
@@ -50,17 +51,52 @@ class AutonomousWorkerTests(unittest.TestCase):
         chosen = choose_target(items, roadmap_text="#31")
         self.assertEqual((chosen.kind, chosen.number), ("PR", 99))
 
-    def test_recent_target_is_not_rerolled_immediately(self):
+    def test_open_cycle_barrier_blocks_same_target(self):
         items = (
-            WorkItem("ISSUE", 31, "benchmark"),
-            WorkItem("ISSUE", 72, "Safe Strong RSI"),
+            WorkItem("ISSUE", 31, "benchmark", updated_at="2026-09-24T21:00:00Z"),
+            WorkItem("ISSUE", 72, "other", updated_at="2026-09-24T21:00:00Z"),
         )
-        chosen = choose_target(
-            items,
-            roadmap_text="#31\n#72",
-            recent_targets=(("ISSUE", 31),),
+        barriers = (
+            TargetBarrier("ISSUE", 31, 103, "OPEN", None),
         )
+        chosen = choose_target(items, roadmap_text="#31\n#72", target_barriers=barriers)
         self.assertEqual(chosen.number, 72)
+
+    def test_resolved_cycle_barrier_blocks_until_target_changes(self):
+        item = WorkItem(
+            "ISSUE", 31, "benchmark", updated_at="2026-09-24T20:59:00Z"
+        )
+        barriers = (
+            TargetBarrier(
+                "ISSUE", 31, 103, "MERGED", "2026-09-24T21:00:00Z"
+            ),
+        )
+        self.assertIsNone(
+            choose_target((item,), roadmap_text="#31", target_barriers=barriers)
+        )
+
+    def test_newer_world_update_reopens_resolved_target(self):
+        item = WorkItem(
+            "ISSUE", 31, "benchmark", updated_at="2026-09-24T21:01:00Z"
+        )
+        barriers = (
+            TargetBarrier(
+                "ISSUE", 31, 103, "MERGED", "2026-09-24T21:00:00Z"
+            ),
+        )
+        chosen = choose_target((item,), roadmap_text="#31", target_barriers=barriers)
+        self.assertEqual(chosen.number, 31)
+
+    def test_missing_target_timestamp_fails_closed_behind_prior_barrier(self):
+        item = WorkItem("ISSUE", 31, "benchmark", updated_at=None)
+        barriers = (
+            TargetBarrier(
+                "ISSUE", 31, 103, "CLOSED", "2026-09-24T21:00:00Z"
+            ),
+        )
+        self.assertIsNone(
+            choose_target((item,), roadmap_text="#31", target_barriers=barriers)
+        )
 
     def test_no_work_stops(self):
         cycle = make_cycle(
