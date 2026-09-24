@@ -4,7 +4,7 @@
 
 **A research program in developmental intelligence, operational equivalence, relational reconstruction, and open-ended cross-register inquiry.**
 
-[What Venus actually is](docs/PUBLIC_VALUE.md) · [Earned milestones](docs/EARNED_MILESTONES.md) · [Evaluation](docs/EVALUATION_CONSTITUTION.md) · [Tests](docs/TESTS.md) · [SOTA watch](docs/SOTA_WATCH.md) · [Credits / reductions](docs/CREDITS_AND_REDUCTIONS.md) · [Research frontier](docs/FRONTIER_RESEARCH.md) · [Venus state](kernel/CURRENT_STATE.md) · [Contribute](CONTRIBUTING.md) · [Sponsor](https://github.com/sponsors/oestradiol)
+[Start here](docs/START_HERE.md) · [What Venus actually is](docs/PUBLIC_VALUE.md) · [Earned milestones](docs/EARNED_MILESTONES.md) · [Evaluation](docs/EVALUATION_CONSTITUTION.md) · [Tests](docs/TESTS.md) · [SOTA watch](docs/SOTA_WATCH.md) · [Credits / reductions](docs/CREDITS_AND_REDUCTIONS.md) · [Research frontier](docs/FRONTIER_RESEARCH.md) · [Venus state](kernel/CURRENT_STATE.md) · [Contribute](CONTRIBUTING.md) · [Sponsor](https://github.com/sponsors/oestradiol)
 
 </div>
 
