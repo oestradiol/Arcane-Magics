@@ -60,12 +60,46 @@ def is_public_surface(path: Path) -> bool:
     return False
 
 
-def normalize_target(md: Path, raw: str) -> Path:
+def split_link(raw: str) -> tuple[str, str]:
     raw = unquote(raw.strip().strip("<>"))
-    raw = raw.split("#", 1)[0].split("?", 1)[0]
-    if raw.startswith("/"):
-        return ROOT / raw.lstrip("/")
-    return (md.parent / raw).resolve()
+    raw = raw.split("?", 1)[0]
+    if "#" in raw:
+        path, fragment = raw.split("#", 1)
+        return path, fragment
+    return raw, ""
+
+
+def normalize_target(md: Path, raw_path: str) -> Path:
+    if not raw_path:
+        return md.resolve()
+    if raw_path.startswith("/"):
+        return ROOT / raw_path.lstrip("/")
+    return (md.parent / raw_path).resolve()
+
+
+def github_heading_slugs(md: Path) -> set[str]:
+    """Conservative GitHub-style slugs for ordinary Markdown headings.
+
+    We validate only anchors that use this ordinary heading form. This is not a
+    general HTML-anchor parser and deliberately ignores generated/raw-HTML ids.
+    """
+    text = md.read_text(encoding="utf-8", errors="replace")
+    seen: dict[str, int] = {}
+    slugs: set[str] = set()
+    for line in text.splitlines():
+        m = re.match(r"^#{1,6}\s+(.+?)\s*#*\s*$", line)
+        if not m:
+            continue
+        heading = re.sub(r"[\x60*_~]", "", m.group(1)).strip().lower()
+        heading = re.sub(r"[^\w\- ]", "", heading, flags=re.UNICODE)
+        base = re.sub(r"\s+", "-", heading).strip("-")
+        if not base:
+            continue
+        count = seen.get(base, 0)
+        slug = base if count == 0 else f"{base}-{count}"
+        seen[base] = count + 1
+        slugs.add(slug)
+    return slugs
 
 
 def inspect_basic(md: Path) -> list[str]:
@@ -87,11 +121,19 @@ def inspect_basic(md: Path) -> list[str]:
     if is_public_surface(md):
         for match in LINK.finditer(text):
             raw = match.group(1)
-            if not raw or raw.startswith(("http://", "https://", "mailto:", "#")):
+            if not raw or raw.startswith(("http://", "https://", "mailto:")):
                 continue
-            target = normalize_target(md, raw)
+            raw_path, fragment = split_link(raw)
+            target = normalize_target(md, raw_path)
             if not target.exists():
                 errors.append(f"{rel(md)}: broken relative link {raw!r}")
+                continue
+            if fragment and target.is_file() and target.suffix.lower() == ".md":
+                slugs = github_heading_slugs(target)
+                if fragment not in slugs:
+                    errors.append(
+                        f"{rel(md)}: relative Markdown anchor {raw!r} not found in {rel(target)}"
+                    )
 
     return errors
 
