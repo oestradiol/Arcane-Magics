@@ -362,7 +362,7 @@ Ordering, tempo, carrier, interface, and history are retained only where the dec
 
 This object is inherited from Canonical's LT-24 research lineage, but the historical label is not required for its current use.
 
-## 15. Spiritual / inhabited projection
+## 14. Spiritual / inhabited projection
 
 The spiritual register is not hidden physics.
 
@@ -375,7 +375,7 @@ Project-local symbolic renderings may therefore use names such as Logos, Eros, S
 3. the symbolic name does not transfer scientific or formal warrant;
 4. deletion of the name leaves the operative structure reconstructible.
 
-## 14. Arcane Magics and Meta-Dynamics
+## 15. Arcane Magics and Meta-Dynamics
 
 The names should not collapse.
 
