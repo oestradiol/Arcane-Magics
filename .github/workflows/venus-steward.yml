@@ -30,6 +30,7 @@ jobs:
       - name: Compile live Python
         run: |
           python -m py_compile kernel/runtime/*.py
+          python -m py_compile kernel/development/*.py
           python -m py_compile scripts/*.py
           python -m py_compile kernel/custody/*.py
 
@@ -47,6 +48,9 @@ jobs:
 
       - name: EDU16 evidence/runtime custody boundary
         run: python scripts/audit_edu16_custody.py
+
+      - name: Replay EDU16 reconstructed carrier
+        run: python kernel/development/replay_edu16_reconstructed.py
 
       - name: Historical causal-distinction / issue coverage audit
         run: python scripts/audit_causal_distinctions.py
