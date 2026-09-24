@@ -1,4 +1,19 @@
-.PHONY: papers arxiv texbundle forum audit manifest bundle release clean
+.PHONY: test lint proof custody audit papers arxiv texbundle forum manifest bundle release clean
+
+test:
+	python3 -m unittest discover -s tests -p 'test_*.py'
+
+lint:
+	python3 scripts/lint_github_markdown.py
+
+proof:
+	python3 scripts/audit_proof_containers.py
+
+custody:
+	python3 scripts/audit_custody.py
+
+audit: test lint proof custody
+	SOURCE_TREE_ONLY=1 python3 scripts/audit_release.py
 
 papers:
 	python3 scripts/build_all.py
@@ -11,9 +26,7 @@ texbundle:
 
 forum:
 	python3 scripts/export_forum.py
-
-audit:
-	python3 scripts/audit_release.py
+	python3 scripts/lint_github_markdown.py
 
 manifest:
 	python3 scripts/make_manifest.py
@@ -21,7 +34,11 @@ manifest:
 bundle:
 	python3 scripts/package_repository.py
 
-release: papers arxiv texbundle forum audit clean manifest bundle
+release: audit papers arxiv texbundle forum
+	python3 scripts/audit_release.py
+	$(MAKE) clean
+	$(MAKE) manifest
+	$(MAKE) bundle
 
 clean:
 	find monographs -type f \( -name '*.aux' -o -name '*.log' -o -name '*.out' -o -name '*.toc' -o -name '*.fdb_latexmk' -o -name '*.fls' -o -name 'main.pdf' -o -name '*.bcf' -o -name '*.run.xml' -o -name '*-SAVE-ERROR' \) -delete
