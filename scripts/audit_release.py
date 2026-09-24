@@ -71,7 +71,7 @@ if "provenance/historical-runtime/R194" not in lineage:
     errors.append("lineage does not locate historical R194 runtime in provenance")
 
 meta = (ROOT / "docs/META_DYNAMICS.md").read_text(encoding="utf-8", errors="replace")
-for token in ("vacuous_relation", "Structure × Semantics", "Polyhedral", "meta-qualia", "Qualia", "Quantum"):
+for token in ("vacuous_relation", "Structure × Semantics", "Polyhedral", "meta-qualia", "Qualia", "Quantum", "Temporal inhabitation: map is not traversal"):
     if token not in meta:
         errors.append(f"Meta-Dynamics missing live object: {token}")
 
@@ -126,7 +126,7 @@ for token in (
     "parent vs successor",
     "causal machinery gain",
     "Learner ownership",
-    "Cost surface",
+    "Execution condition and cost surface",
 ):
     if token not in evaluation:
         errors.append(f"evaluation constitution missing {token}")
@@ -142,6 +142,17 @@ for token in (
 ):
     if token not in sota:
         errors.append(f"SOTA watch missing {token}")
+
+method = (ROOT / "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md").read_text(encoding="utf-8", errors="replace")
+for token in (
+    "STATUS_FOSSIL",
+    "NEGATIVE_GLOBALIZE",
+    "MALFORMED_OPEN",
+    "BRIDGE_THEOREM_LAUNDER",
+    "INTENDED -> WRITTEN -> VERIFIED -> ADMITTED",
+):
+    if token not in method:
+        errors.append(f"review methodology missing {token}")
 
 agents = (ROOT / "AGENTS.md").read_text(encoding="utf-8", errors="replace")
 for token in (
