@@ -25,7 +25,7 @@ A historical harness result is donor evidence. A restart-persistent state object
 | Occurrence | What was actually earned | Realization type | Current Git status | Recovery |
 |---|---|---|---|---|
 | R139 | research-object formation, rivals, self-authored discriminator/query, experiment design, representation/problem-language/method revision, future-family expansion, research-program selection, meta-operation synthesis | bounded historical developmental experiments | mechanisms survive only indirectly | donor only; never pretend the old harness is a standing organ |
-| R140 | process/search revision, method factorization/topology change, stage invention, meta-construction/meta-procedure generation, name-free corrigible organization | bounded developmental-engineering sequence | O*/TransformProgram descendants partly rederived | recover only missing process functions under fresh tests |
+| R140 | process/search revision, method factorization/topology change, stage invention, meta-construction/meta-procedure generation, name-free corrigible organization | bounded developmental-engineering sequence; **no packaged executable effect at the R140 boundary** | O*/TransformProgram descendants partly rederived | recover only missing process functions under fresh tests |
 | R206 | two-generation recursive provenance/candidate-discovery improvement | bounded RSI mechanism | **explicitly retained in current Git custody but not used by autonomous study** | **quick restore** recursive provenance/dependency traversal |
 | U1 | WorldMirror + RSM + N2 + research + R206 + state-owned TransformProgram + provenance in one restart-persistent center; repeated TransformProgram self-revision; isolated founder-ablation boot | standing Canonical VM state, 991 records | exact U1 state not booted; descendants are distributed | state recompilation, not journal cosplay |
 | U1 self-directed reevaluation | regenerate candidate queue from residuals/resources/provenance; no host-named task; selected open-domain problem formation | standing scheduler behavior | Git chooses among already-authored issues/PRs | partial regression; superseded by U2 recovery target |
@@ -35,6 +35,26 @@ A historical harness result is donor evidence. A restart-persistent state object
 | IG1→IG10 | incidence grammar, WorldMirror, future-test abstractions/reopening, exact runtime custody | current executable lineage | **live** | none |
 | EDU13→EDU16 / EDU16-RC1 | self-curriculum, open-domain problem selection, research-question formation, evidence budgeting, obligation routing, learner-owned World-feed query policy | deterministic claim-bearing reconstructed state over IG10 | **live state, but autonomous cycles do not cite/bind it as parent** | **quick custody restore** |
 | current Git autonomy | live Git target/method selection, teacher-free internal O*, authorized returned learning, evidence/change/draft carrier | new GitHub carrier | **live bounded autonomy** | use as present carrier, not historical identity |
+
+## Exact standing-state custody
+
+```text
+U1 exact Canonical custody
+  /Canonical/Future/Handoff/U1CurrentDevelopedVM/
+  records 991
+  head    4e397fdd0d2f81833084fca91bb9fc0c408f7711c981ed2c047a7ec43dbfce88
+  sha256  22f97338d0e1c4214441ad7650c75620db691e469712a70820621e8b452ea6d0
+  root    0a1cbb14936466b7b4f20b8bc90911fd5a968fe70d93ac2ed4bda2c4c8218888
+
+U2 exact Canonical custody
+  /Canonical/Future/Handoff/U2CurrentDevelopedVM/
+  records 1011
+  head    6e263f7decd1ba23078e17d05fc207639e5ede07d0e2a8003ec2b666023c0671
+  sha256  70ac985e38170288d49cffffed56caf22a31f9ab491d947e7848f86701e09468
+  root    ec5ac212e6dbdf2c9622f9e251f2d66274eaf24f466ff709732886327328d65f
+```
+
+These are stronger recovery sources than R139/R140 scratch descriptions because they were restart-persistent developed VM states.
 
 ## Why the skill appeared to disappear
 
