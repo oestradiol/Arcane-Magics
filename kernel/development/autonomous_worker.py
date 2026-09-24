@@ -69,6 +69,7 @@ class AutonomousCycleReceipt:
     decision: str
     rationale: tuple[str, ...]
     study_method: str | None
+    learning_strategy: str | None
     study: Mapping[str, Any] | None
     allowed_operations: tuple[str, ...]
     forbidden_operations: tuple[str, ...]
@@ -169,21 +170,35 @@ def _sentences(text: str) -> tuple[str, ...]:
 def choose_study_method(
     item: WorkItem,
     method_utility: Mapping[str, float] | None = None,
+    learning_strategy: str = "RETURN_UTILITY_FIRST",
 ) -> str:
-    """Choose a study method from learned external-return utility.
+    """Choose a study method under the currently learned selector strategy.
 
-    With no learned preference, tie-breaking is content-addressed from the
-    selected target and method identity rather than host-supplied ordering.
+    RETURN_UTILITY_FIRST preserves the prior behavior: explicit external-return
+    utility dominates, with content-addressed tie-breaking.
+
+    TARGET_SIGNAL_FIRST is a bounded meta-learned alternative: target-grounded
+    method-signal density dominates, then external-return utility, then the same
+    content-addressed tie-break.
+
+    The strategy family is externally admitted; the learner may only select
+    among these strategies from authorized returned meta-utility.
     """
     utility = method_utility or {}
-    ranked = sorted(
-        METHODS,
-        key=lambda method: (
+    if learning_strategy == "RETURN_UTILITY_FIRST":
+        key = lambda method: (
             -float(utility.get(method, 0.0)),
             digest({"target": [item.kind, item.number, item.title], "method": method}),
-        ),
-    )
-    return ranked[0]
+        )
+    elif learning_strategy == "TARGET_SIGNAL_FIRST":
+        key = lambda method: (
+            -len(_method_signals(item.body or "", method)),
+            -float(utility.get(method, 0.0)),
+            digest({"target": [item.kind, item.number, item.title], "method": method}),
+        )
+    else:
+        raise ValueError(f"unsupported learning strategy: {learning_strategy}")
+    return sorted(METHODS, key=key)[0]
 
 
 METHOD_OBLIGATIONS: Mapping[str, tuple[str, ...]] = {
@@ -334,6 +349,7 @@ def make_cycle(
         "recent_targets": tuple(recent_targets),
         "kind_utility": dict(kind_utility or {}),
         "method_utility": dict(method_utility or {}),
+        "learning_strategy": learning_strategy,
     }
 
     if target is None:
@@ -344,7 +360,7 @@ def make_cycle(
         study_method = None
         study = None
     else:
-        study_method = choose_study_method(target, method_utility)
+        study_method = choose_study_method(target, method_utility, learning_strategy)
         study = study_target(target, method=study_method)
         features = {
             "f0": True,
@@ -370,13 +386,14 @@ def make_cycle(
         )
 
     body = {
-        "schema": "Venus.AutonomousCycleReceipt.v0.3",
+        "schema": "Venus.AutonomousCycleReceipt.v0.4",
         "target_kind": target.kind if target else None,
         "target_number": target.number if target else None,
         "target_title": target.title if target else None,
         "decision": decision,
         "rationale": rationale,
         "study_method": study_method,
+        "learning_strategy": learning_strategy if target else None,
         "study": study,
         "allowed_operations": ALLOWED_OPERATIONS,
         "forbidden_operations": tuple(sorted(FORBIDDEN_OPERATIONS)),
