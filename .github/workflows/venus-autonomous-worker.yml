@@ -68,7 +68,7 @@ jobs:
           cat /tmp/VENUS_AUTONOMOUS_CYCLE.json
           cat /tmp/AUTONOMOUS_LEARNING_STATE.json
 
-      - name: Let Venus form a bounded research proposal and obtain local returned evidence
+      - name: Let Venus form a bounded research proposal and obtain local execution evidence
         id: research
         run: |
           decision="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["decision"])')"
