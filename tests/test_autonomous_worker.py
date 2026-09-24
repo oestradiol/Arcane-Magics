@@ -105,6 +105,14 @@ class AutonomousWorkerTests(unittest.TestCase):
         self.assertIsNone(cycle.target_number)
         self.assertTrue(any("already awaiting external return" in x for x in cycle.rationale))
 
+    def test_autonomous_cycle_issue_is_not_selected_as_target(self):
+        items = (
+            WorkItem("ISSUE", 300, "venus: autonomous cycle pr-106"),
+            WorkItem("ISSUE", 72, "Safe Strong RSI"),
+        )
+        chosen = choose_target(items, roadmap_text="#72")
+        self.assertEqual((chosen.kind, chosen.number), ("ISSUE", 72))
+
     def test_no_work_stops(self):
         cycle = make_cycle(
             issues=(),
