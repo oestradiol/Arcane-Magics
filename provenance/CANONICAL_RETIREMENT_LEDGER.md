@@ -173,6 +173,11 @@ Formal or symbolic donors do not become executable authority by migration.
 
 Several Canonical structures were inspected and **not** promoted as new Git objects because their live consequence is already present:
 
+- R180 `FrameSuccession` remains historical MODEL/THEO/PHEN routing; its neutral consequence is covered by indexed/temporal inhabitation and explicit frame/index transforms. The specific antipodal temporal bridge remains historical/open rather than becoming a new live kernel object.
+- R181 `ReconstructionComma_F`, `OctaveReconstruction`, and `TemperamentTradeoff` were MODEL-level routing around lawful finite-cycle nonclosure; the Pythagorean comma was explicitly a mature comparator, not project evidence. No separate live object survives deletion beyond the current reconstruction/nonclosure vocabulary.
+- R182 `SelfIndexedStandingCirculation` and its incidence decomposition are represented by the current Venus Incidence / Meta-Dynamics / WorldMind circulation. The historical name is not needed as another authority layer.
+- R206's bounded improver remains explicitly retained in current kernel/custody state; it is not lost by retiring the surrounding R-line projections.
+- R216–R226 are represented as the late crystallization lineage and R226 custody. R217–R225 maintenance/audit/intake/packaging revisions do not each justify a separate current architecture once their consequences are conserved in the settled R226 predecessor and current post-R226 lineage.
 - CPC `REGISTER -> GENERATE -> ENACT -> RETURN -> COMPENSATE` is a readable projection of the current Meta-Dynamics / kernel action-return-reconstruction cycle; the CPC label is not required as another live layer.
 - participant non-substitution is already represented in Meta-Dynamics, frontier ethics/governance, WorldMind, and the preserved S10-S11 genealogy;
 - recursive sufficiency is already represented in Strong-N2/kernel/frontier vocabulary;
