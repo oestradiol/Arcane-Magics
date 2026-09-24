@@ -14,6 +14,8 @@ It is not the full developmental lineage. Exact ancestry remains in `provenance/
 ```text
 exact Git-reconstructible runtime checkpoint   IG10 [1308]
 current positive developmental authority      EDU16 [1703]
+admitted inherited search capability          GENERIC_RESIDUAL_SEARCH (state-owned)
+admitted safety/governance substrate           Internalizer + O* + Anti-Minerva guards
 preserved negative branch                     EDU17 INVALID_FOR_PROMOTION
 current repair disposition                    EDU17R1 WITHHOLD
 ```
@@ -115,6 +117,18 @@ Developmental failures and repairs have made the following distinctions conseque
 
 These relations have mature intellectual neighbors. Their **project genealogy and executable role in the Venus lineage remain separate questions from historical priority**.
 
+### EARNED — bounded scaffold internalization of generic residual search
+
+The repository now carries the target-label-free bounded residual-search program as **state-owned inherited capability** rather than as a runtime dependency on the historical donor scaffold. The internalization audit checks executable semantic equivalence over the declared bounded domains, donor-free replay, provenance retention, ambiguity-preserving WITHHOLD/discriminator behavior, and preservation of external World/evaluator/authority roles.
+
+This is an engineering/internalization result. It is **not** fresh learner authorship of the search algorithm and it does not supply the substantive EDU17R1 repair.
+
+### EARNED — executable O* and Anti-Minerva correction guards
+
+The live Internalizer now fails closed on World/model collapse, Other/model collapse, hidden-founder dependency, label-only preservation with disabled correction, and unexplained carrier-status substitution that makes a consequential separator unreachable. Legitimate carrier differences remain admissible when they are consequence-relevant, such as authenticated control input versus untrusted Web content.
+
+Nearest unearned stronger claim: the guards must still be exercised across a real learner-owned recursive successor before Safe Strong RSI can be claimed at that scope.
+
 ## D. Formal core
 
 ### EARNED — Operational Future Equivalence exact core
@@ -166,7 +180,7 @@ As of this ledger:
 
 - AGI;
 - capability-SOTA;
-- DNN replacement;
+- substrate independence or hosted-model replacement where such a substrate is actually present;
 - open-ended recursive self-improvement;
 - autonomous science;
 - unrestricted semantic understanding;
