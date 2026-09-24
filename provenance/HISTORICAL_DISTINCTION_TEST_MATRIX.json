@@ -140,10 +140,10 @@
       ],
       "current_owner": "kernel/runtime/memory.py",
       "test_layer": "T1/T5",
-      "test_id_path": "tests/test_venus_memory.py; issue #15",
+      "test_id_path": "tests/test_venus_memory.py",
       "status": "COVERED_STORAGE_ONLY",
       "credit_genealogy_note": "persistence implemented; learning effect unproven",
-      "reopening_condition": "matched memory ablation shows causal learning gain"
+      "reopening_condition": "Issue #15: matched memory ablation shows causal later-learning/behavior gain"
     },
     {
       "id": "D-MEMORY-PARENT",
