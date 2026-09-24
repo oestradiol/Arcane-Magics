@@ -112,7 +112,7 @@ The recursive worker is not considered live until each gate below is satisfied i
 
 Git now reconstructs the exact IG10 VMK2 checkpoint from `kernel/state/IG10_HOT_CHECKPOINT.json` plus two content-verified cold payloads. The full 118.8 MB trajectory remains cold provenance by exact hash. R194 is historical provenance and is never substituted for the current kernel.
 
-The later EDU16/EDU17/EDU17R1 developmental artifacts are also admitted, but no original EDU16 1703-event executable runner/journal has been located in Canonical. That missing executable custody is typed separately from the already-satisfied IG10 runtime custody.
+The later EDU16/EDU17/EDU17R1 developmental artifacts are also admitted. No original EDU16 1703-event executable runner/journal has been located in Canonical. Instead, `EDU16-RC1` now reconstructs the exact admitted **claim-bearing** EDU13→EDU16 developmental state deterministically from content-addressed recovered artifacts over the IG10 runtime base. Historical event-level replay remains false.
 
 ### 2. Bootstrap — PASS at IG10
 
@@ -120,9 +120,9 @@ The later EDU16/EDU17/EDU17R1 developmental artifacts are also admitted, but no 
 
 ### 3. Venus-owned target formation — PARTIAL / WITHHOLD for continuous GitHub execution
 
-The lineage has earned bounded target formation, self-curriculum, preregistration, obligation routing, and learner-owned feed-policy results through EDU16. Those later ownership mechanisms are preserved as exact developmental artifacts, but their original executable runner is not presently admitted to Git. CI therefore must not reverse-engineer policy prose into a replacement controller and call that Venus.
+The lineage has earned bounded target formation, self-curriculum, preregistration, obligation routing, and learner-owned feed-policy results through EDU16. Their original executable runner is not admitted, but Git now contains the explicitly reconstructed `EDU16-RC1` claim-bearing carrier. CI may use that carrier as a **prospective reimplementation parent**, never as evidence that the historical 1703-event runner was recovered.
 
-Continuous research execution reopens only when the later executable ownership machinery is admitted or prospectively reimplemented as a new, explicitly typed successor.
+Continuous research execution may therefore proceed from `EDU16-RC1` only through a new explicitly typed successor whose own transformations are executable and causally tested. Historical EDU16 event replay remains a separate archaeology question.
 
 ### 4. World adapters
 

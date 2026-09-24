@@ -56,7 +56,7 @@ Retirement must use claim/dependency custody, not filename recency or recursive 
 | IG10 developed-VM manifest/verifier | `kernel/custody/` + compact hot/cold state | **ADMITTED_LIVE** | exact runtime custody required by current kernel |
 | IG10 118.8 MB successor journal and ~50 MB handoff archives | exact manifest/hash; external/release/archive storage | **EXTERNAL_HEAVY_CUSTODY** | Git current state is compactly reconstructible; duplicating full journal in `main` adds storage, not authority |
 | IG3–IG10 result/prefreeze evidence needed for current lineage | `provenance/`, current state objects, monograph evidence | **ADMITTED_PROVENANCE** | supports developmental ancestry and current abstractions |
-| EDU16 policy/result | `kernel/development/EDU_CURRENT.json`, `provenance/developmental/EDU/` | **ADMITTED_LIVE** | current positive developmental authority [1703] |
+| EDU16 policy/result + reconstructed carrier | `kernel/development/EDU_CURRENT.json`, `kernel/development/EDU16_RECONSTRUCTED_*`, `provenance/developmental/EDU/` | **ADMITTED_LIVE** | current positive authority remains EDU16 [1703]; EDU16-RC1 deterministically reconstructs claim-bearing state without claiming historical event replay |
 | EDU17 provenance failure | `provenance/developmental/EDU/` | **ADMITTED_PROVENANCE / PRESERVED_NEGATIVE** | blocks promotion; must remain queryable |
 | EDU17R1 eligibility result | `provenance/developmental/EDU/` | **ADMITTED_PROVENANCE / WITHHOLD** | intended repair not tested; `MENTION != INCIDENCE` is the live measured separator |
 | persistent semantic memory law | `kernel/runtime/memory.py` + tests | **ADMITTED_LIVE** | retained state can persist without conflating storage with learning |
@@ -210,7 +210,7 @@ Several Canonical structures were inspected and **not** promoted as new Git obje
 
 Before Canonical can be considered fully retired:
 
-1. **EDU16 executable custody:** determine whether an exact 1703-event runner/journal exists outside the already admitted result/policy artifacts. If not found, preserve the current truthful boundary: developmental authority is exact as evidence, not as a Git-replayable EDU16 runtime.
+1. **EDU16 executable custody:** **RESOLVED FOR FORWARD EXECUTION / HISTORICAL EVENT REPLAY STILL UNRECOVERED.** Direct Canonical traversal found the exact EDU13→EDU16 prefreeze/result/policy artifacts but no ordinary EDU16 handoff bundle. Git now content-addresses those recovered inputs and deterministically reconstructs `EDU16-RC1`, a claim-bearing parent carrier over IG10. It is explicitly not the lost 1703-event journal.
 2. **Unique source inventory:** identify Canonical files whose live consequence is absent from Git; do not infer absence from filename alone.
 3. **Heavy-object manifest:** freeze exact hashes/locations for large journals/bundles that remain outside ordinary Git.
 4. **Credit/genealogy crosswalk:** ensure historically important donor/predecessor relations survive retirement without becoming fake ancestry.
@@ -245,7 +245,8 @@ Therefore:
 ```text
 EDU16 experiment/evidence custody          PRESENT
 EDU16 ordinary developed-VM handoff        NOT PRESENT in /Future/Handoff
-EDU16 executable custody anywhere else     OPEN until full heavy-custody inventory is exhausted
+EDU16 original event-level runner/journal   NOT LOCATED in bounded Canonical custody search
+EDU16 reconstructed forward carrier         PRESENT in Git as EDU16-RC1
 stale Canonical CURRENT routing            HISTORICAL / MUST NOT ROUTE GIT AUTHORITY
 ```
 

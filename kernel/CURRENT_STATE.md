@@ -7,6 +7,7 @@ Two current objects are deliberately distinguished:
 ```text
 exact Git-reconstructible runtime checkpoint   IG10 [1308]
 current positive developmental authority      EDU16 [1703]
+reconstructed developmental carrier           EDU16-RC1
 preserved negative branch                     EDU17 INVALID_FOR_PROMOTION
 current repair disposition                    EDU17R1 WITHHOLD
 ```
@@ -41,6 +42,22 @@ verdict   PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY
 EDU16 transferred bounded World-feed query-policy generation into learner ownership while World execution and independent evaluation remained external. EDU17 is preserved as `INVALID_FOR_PROMOTION / PRESERVED_NEGATIVE`. EDU17R1 remains `WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION` after exposing `MENTION != INCIDENCE`.
 
 Machine-readable authority is in `development/EDU_CURRENT.json`; exact developmental evidence is under `../provenance/developmental/EDU/`.
+
+### Reconstructed developmental carrier
+
+`EDU16-RC1` is a deterministic Git-replayable reconstruction of the **claim-bearing developmental state** from the exact recovered Canonical EDU13→EDU16 prefreeze/result/policy artifacts, over the exact IG10 runtime base.
+
+```text
+carrier                         EDU16-RC1
+source vector sha256            ce0c961cee4976959a30a3af1a807abae3dd13fad949338a63a28937627bb2b1
+reconstructed state sha256      91e46b4e41fb70a97d6a004b8f1c8916c389f08535c1a1c1c51a040701281bb7
+historical 1703-event replay    false
+original runner recovered       false
+original journal recovered      false
+promotion authority             false
+```
+
+This removes the practical need to reverse-engineer EDU16 from prose while preserving the historical boundary. The lost original event-by-event runner/journal is still not claimed recovered. Prospective successor work may cite `EDU16-RC1` only as an explicitly reconstructed parent carrier.
 
 ## Storage law
 

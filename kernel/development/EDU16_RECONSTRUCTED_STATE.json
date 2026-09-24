@@ -1,0 +1,90 @@
+{
+  "carrier_id": "EDU16-RC1",
+  "checkpoints": [
+    {
+      "head": "a4f73bbb24ac315087185f7e1066f849e3020049ef5e84ae427d2620dbdc9ded",
+      "id": "EDU13",
+      "records": 1676,
+      "sha256": "7f07f0c834f89fada5159688fb3a5cfa22d730f3acfa93bcf8423f7bf4dacc21",
+      "verdict": "PASS_BOUNDED_SELF_CURRICULUM_TARGET_GENERATION"
+    },
+    {
+      "head": "cf3afb50a7541dc46c657b6e4c97c15102a751657c83596aa457e3f49fa010b1",
+      "id": "EDU14",
+      "records": 1691,
+      "sha256": "711c7f6e6c279e0eb27e109ff8ba59c7b6171b4ede2974dbc553e9c9663b19db",
+      "verdict": "PASS_BOUNDED_SELF_CURRICULUM_OPEN_DOMAIN_PROBLEM_SELECTION"
+    },
+    {
+      "head": "71c4cb66e532d37100d2b4f4192f2fba892fed9e1296716920bcf323f2dda927",
+      "id": "EDU15",
+      "records": 1697,
+      "sha256": "dca689cf5d23b4b7b0fd14b591610744d7213ece9b7ad4451a3336bfc4fd8565",
+      "verdict": "WITHHOLD_EDU15"
+    },
+    {
+      "head": "cb3bd4e27e4964bee816bc2348353b43845e91ca75a8b8fb070d1991946af186",
+      "id": "EDU15R1",
+      "records": 1699,
+      "sha256": "a9ff6a77ba38ede840a9700d1aca3865ec65fac0423b5566343437b24876f3ee",
+      "verdict": "PASS_BOUNDED_SELF_PREREGISTRATION_GATE_OWNERSHIP"
+    },
+    {
+      "head": "6e02302abafb9f31ee5cb1b6f6d69a4e5c1e750371f99c4ee640f259f228c81e",
+      "id": "EDU16",
+      "records": 1703,
+      "sha256": "bde664e4bc2c45bc961720fc83e907a9c6b09ce581ccdfb61b8fb7bf5897e414",
+      "verdict": "PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY"
+    }
+  ],
+  "claim_fence": {
+    "agi": false,
+    "autonomous_science": false,
+    "consciousness": false,
+    "natural_world_generality": false,
+    "open_ended_rsi": false,
+    "unrestricted_semantics": false
+  },
+  "external": [
+    "World interface execution",
+    "independent evaluation",
+    "authorization beyond admitted interface scope"
+  ],
+  "historical_equivalence": {
+    "authority_id": "EDU16",
+    "event_level_journal_equivalent": false,
+    "original_journal_recovered": false,
+    "original_runner_recovered": false,
+    "record_count": 1703
+  },
+  "owned": [
+    "curriculum target selection",
+    "curriculum gate proposal",
+    "open-domain problem selection",
+    "research-question formation",
+    "evidence role/budget",
+    "research-obligation routing",
+    "World-feed sampling/query policy"
+  ],
+  "promotion_authority": false,
+  "replay_kind": "DETERMINISTIC_CLAIM_BEARING_STATE_RECONSTRUCTION",
+  "runtime_base": {
+    "exact_git_checkpoint": true,
+    "id": "IG10"
+  },
+  "schema": "Venus.EDU16ReconstructedCarrierState.v0.1",
+  "source_vector_sha256": "ce0c961cee4976959a30a3af1a807abae3dd13fad949338a63a28937627bb2b1",
+  "world_feed_policy": {
+    "evaluation_owner": "INDEPENDENT_EVALUATOR",
+    "schema": "Venus.EDU16LearnerOwnedFeedPolicy.v1",
+    "selected_internalization_target": "WORLD_FEED_SAMPLING_POLICY",
+    "selected_source_families": [
+      "AGRI",
+      "COMPUTING",
+      "HEALTH",
+      "LABOR"
+    ],
+    "stop_rule": "if returned feed contains no actionable residual, STOP_NO_CURRICULUM_PROBLEM",
+    "world_execution_owner": "EXTERNAL_WORLD_INTERFACE"
+  }
+}

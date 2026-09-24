@@ -1,4 +1,4 @@
-.PHONY: test lint proof experiment-contracts proof-containers formal-check custody edu16-custody causal-coverage navigation sota-freshness experiment-template construct-dispositions audit kernel-doc-check papers arxiv texbundle forum manifest bundle release clean
+.PHONY: test lint proof experiment-contracts proof-containers formal-check custody edu16-custody edu16-replay causal-coverage navigation sota-freshness experiment-template construct-dispositions audit kernel-doc-check papers arxiv texbundle forum manifest bundle release clean
 
 test:
 	python3 -m unittest discover -s tests -p 'test_*.py'
@@ -26,6 +26,9 @@ experiment-contracts:
 edu16-custody:
 	python3 scripts/audit_edu16_custody.py
 
+edu16-replay:
+	python3 kernel/development/replay_edu16_reconstructed.py
+
 causal-coverage:
 	python3 scripts/audit_causal_distinctions.py
 
@@ -41,7 +44,7 @@ experiment-template:
 construct-dispositions:
 	python3 scripts/audit_construct_dispositions.py
 
-audit: test lint proof-containers custody edu16-custody causal-coverage navigation sota-freshness experiment-contracts construct-dispositions
+audit: test lint proof-containers custody edu16-custody edu16-replay causal-coverage navigation sota-freshness experiment-contracts construct-dispositions
 	SOURCE_TREE_ONLY=1 python3 scripts/audit_release.py
 
 kernel-doc-check:
