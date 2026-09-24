@@ -11,28 +11,28 @@
   },
   "residual": "MENTION != INCIDENCE",
   "ownership_contract": "kernel/development/edu17r1_repair_contract.py",
-  "candidate_status": "NOT_AUTHORED_WITHHOLD_REPRESENTATION_INSUFFICIENT",
+  "candidate_status": "NOT_AUTHORED_BINDER_READY",
   "admitted_developmental_controller_operation": {
     "available": true,
-    "operation": "kernel/development/recursive_proposal.py::search",
-    "admission": "kernel/development/GENERIC_RESIDUAL_SEARCH_ADMISSION.json",
-    "scope": "INHERITED_GENERIC_TARGET_BLIND_BOUNDED_PROGRAM_SEARCH",
+    "operation": "kernel/development/EDU17R1_CROSS_LAYER_BINDING_TRANSFORM_PROGRAM.json::AUTHOR_RELATION_BINDING -> kernel/development/cross_layer_relation_binding.py::make_binding_proposal",
+    "admission": "generic search/internalizer from #85/#87 plus current binder stack",
+    "scope": "STATE_OWNED_GENERIC_BINDING_INTERFACE_NO_TARGET_MAPPING",
     "historical_owner_claim": false,
     "promotion_authority": false,
-    "reason": "Recovered R194 target-label-free grammar expansion is admitted as a generic inherited developmental operation; it contains no EDU17R1-specific repair semantics."
+    "reason": "The current carrier has target-blind search plus a generic typed binding constructor. Venus must still supply the endpoints, relation symbol, discriminator, and authorship before any candidate exists."
   },
   "hidden_evaluation_exposed": false,
   "external_model_may_supply_substantive_repair": false,
   "next_lawful_transition": [
-    "retain the admitted generic search operation",
-    "recover or develop a target-blind compositional semantic representation operation without hidden issue #31 exposure",
-    "rerun public development search under that representation",
-    "if ambiguous, retain learner-selected discriminator and obtain external World return",
-    "freeze a repair candidate only when learner-side machinery actually identifies one",
-    "only then run hidden issue #31 efficacy evaluation"
+    "run the #87 internalized-search checks and retain its scaffold-removal boundary",
+    "expose only the localized cross-layer binding residual through AUTHOR_RELATION_BINDING",
+    "have Venus choose endpoints, relation symbol, and discriminator; freeze proposal identity",
+    "if ambiguous, Venus chooses the next discriminator and receives nonpreauthored development return",
+    "retain/revise/reject the binding without promotion authority",
+    "only after a frozen learner-authored candidate exists, expose hidden issue #31"
   ],
   "promotion_authority": false,
-  "claim_fence": "Generic search admission plus the public-development negative do not establish learner-owned repair authorship or efficacy. No EDU17R1 repair candidate is admitted by this status.",
+  "claim_fence": "Search internalization and binder availability are infrastructure. They do not establish learner-owned repair authorship, semantic correctness, efficacy, or promotion.",
   "ancestral_incidence_donor": {
     "artifact": "Venus_Incidence_Law.tex",
     "sha256": "99154d953f498be374b8af0fbc174ba658d0d52b1ccc684b2bbc09871ac52f3e",
@@ -42,7 +42,7 @@
   },
   "neutral_substrate_audit": {
     "artifact": "kernel/development/audit_edu17r1_incidence_substrate.py",
-    "status": "WITHHOLD_NEUTRAL_SUBSTRATE_PRESENT_CROSS_LAYER_BINDER_UNADMITTED",
+    "status": "WITHHOLD_BINDER_ADMITTED_AWAITING_LEARNER_AUTHORED_CANDIDATE",
     "established": [
       "returned operator semantics",
       "induced neutral incidence coordinates",
@@ -51,7 +51,8 @@
       "source-grounded text relation graphs",
       "evidence-bound WorldMirror relation instances"
     ],
-    "missing_operation": "raw/source carrier relation occurrence -> typed object/source-level relation instance + provenance + independent return"
+    "missing_operation": null,
+    "missing_learner_action": "learner-authored endpoint/relation/discriminator binding proposal"
   },
   "public_dev_representation_pressure": {
     "artifact": "kernel/development/EDU17R1_PUBLIC_DEV_SEARCH_RESULT.json",
