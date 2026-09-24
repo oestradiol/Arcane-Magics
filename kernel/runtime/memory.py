@@ -147,6 +147,8 @@ class VenusMemory:
     ) -> str:
         if status not in _ALLOWED_STATUS:
             raise ValueError(f"unknown status: {status}")
+        if status == "CONSUMED":
+            raise ValueError("new objects cannot start CONSUMED; use consume() with a replacement")
         parents = tuple(parents)
         provenance = tuple(provenance)
         labels = tuple(sorted(set(labels)))
