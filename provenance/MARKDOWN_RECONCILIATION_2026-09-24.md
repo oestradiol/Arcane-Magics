@@ -1,10 +1,10 @@
 # Markdown Reconciliation — 2026-09-24
 
 **Register:** repository governance / provenance
-**Base authority:** `main` at `4a450be38f8d7deffef1ddf676b6b03b72acf379`
-**Commit history reviewed:** 285 commits, from `55dc1b2261624cbb01ac5573be55606fcc345597` (2026-09-01 public-root rebuild) through the base authority above.
+**Base authority:** `main` at `e025c31988e18cbe478b8711c40d59507302571b`
+**Commit history reviewed:** 286 commits, from `55dc1b2261624cbb01ac5573be55606fcc345597` (2026-09-01 public-root rebuild) through the base authority above.
 **Markdown inventory reviewed:** 82 files.
-**Disposition count:** 15 live files reconciled; 26 live files reviewed with no material change; 41 historical/frozen files reviewed and preserved.
+**Disposition count:** 16 live files reconciled; 25 live files reviewed with no material change; 41 historical/frozen files reviewed and preserved.
 
 ## Method
 
@@ -42,9 +42,11 @@ later admitted infrastructure:
   state-owned inherited generic residual search   merged #89
   Internalizer / O* / Anti-Minerva guards         merged #91
 
+prospective repair candidate:
+  EDU17R1-RC1-WORD-JACCARD-K3-v1                  AUTHORED_FROZEN
+  hidden #31 efficacy                              NOT YET RETURNED
+
 not current main authority:
-  substantive EDU17R1 binder/candidate            not yet admitted
-  draft PR #90 binder implementation               prospective
   draft PR #84 TransformProgram / SSR results      branch-only
 ```
 
@@ -81,6 +83,23 @@ The repository now exposes state-owned inherited search and correction guards wi
 ### 6. Branch-only results leaked into forward scheduling
 
 Issue #82 is closed, but its stronger implementation/result surface is carried on unmerged draft PR #84. Live roadmap/coverage now record this as branch-scoped evidence pending reconciliation/admission rather than silently treating it as `main` authority.
+
+### 7. #69 advanced during the reconciliation
+
+While this audit was in progress, merged PR #93 changed `main` materially:
+
+```text
+EDU16-RC1
++ preserved MENTION != INCIDENCE residual
++ state-owned public-development method search
+-> EDU17R1-RC1-WORD-JACCARD-K3-v1
+-> AUTHORED_FROZEN
+-> hidden #31 still unexposed
+```
+
+This changed the live dependency from “author the repair next” to “run sealed hidden efficacy next.” The reconciliation was therefore reopened against the returned repository state before admission.
+
+The original EDU17R1 WITHHOLD remains historical provenance; it is not erased by the later repair candidate.
 
 ## Live Markdown reconciled
 
@@ -126,7 +145,6 @@ Issue #82 is closed, but its stronger implementation/result surface is carried o
 - `monographs/01_OFE/README.md`
 - `monographs/02_ECLIPSIS/README.md`
 - `monographs/03_ARCANE_MAGICS/README.md`
-- `provenance/CANONICAL_RETIREMENT_LEDGER.md`
 - `review/REVIEWER_AND_RESEARCHER_PROTOCOL.md`
 
 These files were intentionally left byte-stable because no claim, dependency, navigation route, or authority status materially changed under the audit.
@@ -179,12 +197,10 @@ These artifacts remain evidence of their own historical state. Present authority
 
 ## Remaining live edges after reconciliation
 
-1. `#69`: the admitted learner still has to author and freeze the substantive EDU17R1 binding/discriminator before hidden evaluation.
-2. `#31`: remains sealed until that learner-authored candidate exists.
-3. `#73`: current guard substrate is landed; recurrent O*/Anti-Minerva/rollback behavior must still be exercised over an actual learner-owned successor.
-4. `#18`: attribution must follow the actual carrier substrate rather than an assumed DNN.
-5. PR #84 / issue #82: branch-scoped results require ordinary reconciliation/admission before becoming `main` evidence.
-6. PR #90: prospective cross-layer binder work is not current authority until reconciled and admitted.
+1. `#31`: run the sealed hidden A/B/C/D evaluation on the already frozen EDU17R1 condition B; no post-exposure repair.
+2. `#73`: if #31 is causally positive, recurrent O*/Anti-Minerva/rollback behavior must still be exercised over the actual learner-owned successor before stronger RSI promotion.
+3. `#18`: attribution must follow the actual carrier substrate rather than an assumed DNN.
+4. PR #84 / issue #82: branch-scoped results require ordinary reconciliation/admission before becoming `main` evidence.
 
 ## Claim fence
 
