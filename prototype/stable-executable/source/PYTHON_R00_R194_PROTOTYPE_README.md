@@ -1,6 +1,6 @@
 # Python Canonical Transformation Kernel — R00→R194 Lossless Integration Candidate
 
-**Status:** immediate prototype integration candidate. Not R194 external replication, not the Rust port, not AGI/consciousness evidence, and not open-ended RSI.
+**Status:** historical executable integration carrier. Not R194 external replication, not the Rust port, not AGI/consciousness evidence, and not open-ended RSI.
 
 ## Parent
 
