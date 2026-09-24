@@ -6,7 +6,14 @@ import unittest
 
 from kernel.development.u1_recurrence import (
     U1RecurrenceError,
+    rederive_internal_ostar_after_recurrence,
     run_u1_recurrence,
+)
+from kernel.runtime.internal_ostar import (
+    InternalDecision,
+    ReturnedEpisode,
+    RoutingContext,
+    route_with_internal_ostar,
 )
 
 
@@ -113,6 +120,86 @@ class U1RecurrenceRecompilationTests(unittest.TestCase):
                     "kernel/development/SSR1_TRANSFORM_REPAIR_HELDOUT_RETURN.json"
                 ),
                 ctl_ostar_admission=admission,
+            )
+
+
+    def test_post_mutation_ostar_is_fresh_and_decision_causal(self):
+        result, _ = self.run_case()
+        successor_ostar = rederive_internal_ostar_after_recurrence(
+            result,
+            (
+                ReturnedEpisode(
+                    episode_id="post-u1-external-cut",
+                    external_access=False,
+                    contradiction_reachable=True,
+                    revision_reachable=True,
+                    action_authorized=True,
+                    evidence_sufficient=False,
+                    residual_unresolved=True,
+                ),
+                ReturnedEpisode(
+                    episode_id="post-u1-revision-cut",
+                    external_access=True,
+                    contradiction_reachable=True,
+                    revision_reachable=False,
+                    action_authorized=True,
+                    evidence_sufficient=False,
+                    residual_unresolved=True,
+                ),
+            ),
+        )
+        self.assertTrue(successor_ostar.requires_external_access)
+        self.assertTrue(successor_ostar.requires_reachable_revision)
+
+        sealed = RoutingContext(
+            context_id="post-u1-no-world",
+            has_external_access=False,
+            contradiction_reachable=True,
+            revision_reachable=True,
+            action_authorized=True,
+            evidence_sufficient=True,
+            residual_unresolved=False,
+        )
+        open_context = RoutingContext(
+            context_id="post-u1-open-world",
+            has_external_access=True,
+            contradiction_reachable=True,
+            revision_reachable=True,
+            action_authorized=True,
+            evidence_sufficient=True,
+            residual_unresolved=False,
+        )
+        self.assertEqual(
+            route_with_internal_ostar(successor_ostar, sealed).decision,
+            InternalDecision.PROBE,
+        )
+        self.assertEqual(
+            route_with_internal_ostar(successor_ostar, open_context).decision,
+            InternalDecision.ACT,
+        )
+
+    def test_ostar_rederivation_rejects_noncausal_successor(self):
+        result, _ = self.run_case()
+        fake = result.__class__(
+            **{
+                **result.__dict__,
+                "successor_correct": result.parent_correct,
+            }
+        )
+        with self.assertRaisesRegex(U1RecurrenceError, "causally improved"):
+            rederive_internal_ostar_after_recurrence(
+                fake,
+                (
+                    ReturnedEpisode(
+                        episode_id="x",
+                        external_access=True,
+                        contradiction_reachable=True,
+                        revision_reachable=True,
+                        action_authorized=True,
+                        evidence_sufficient=True,
+                        residual_unresolved=False,
+                    ),
+                ),
             )
 
 
