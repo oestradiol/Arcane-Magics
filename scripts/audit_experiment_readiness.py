@@ -13,9 +13,9 @@ REQUIRED_RUN_FIELDS = [
     ('task_surface.hidden_split_hash', lambda d: d.get('task_surface',{}).get('hidden_split_hash')),
     ('task_surface.contamination_status', lambda d: d.get('task_surface',{}).get('contamination_status') not in (None,'UNKNOWN') and d.get('task_surface',{}).get('contamination_status')),
     ('shared_condition.information_bundle_hash', lambda d: d.get('shared_condition',{}).get('information_bundle_hash')),
-    ('shared_condition.token_budget', lambda d: d.get('shared_condition',{}).get('token_budget')),
-    ('shared_condition.wall_clock_budget_seconds', lambda d: d.get('shared_condition',{}).get('wall_clock_budget_seconds')),
-    ('shared_condition.monetary_budget_usd', lambda d: d.get('shared_condition',{}).get('monetary_budget_usd')),
+    ('shared_condition.token_budget', lambda d: d.get('shared_condition',{}).get('token_budget') is not None),
+    ('shared_condition.wall_clock_budget_seconds', lambda d: d.get('shared_condition',{}).get('wall_clock_budget_seconds') is not None),
+    ('shared_condition.monetary_budget_usd', lambda d: d.get('shared_condition',{}).get('monetary_budget_usd') is not None),
     ('evaluator.identity', lambda d: d.get('evaluator',{}).get('identity')),
     ('evaluator.version', lambda d: d.get('evaluator',{}).get('version')),
 ]
