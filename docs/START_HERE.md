@@ -9,6 +9,8 @@ Venus-Minerva is an experimental developmental-intelligence and research-governa
 3. [Tests and evidence](TESTS.md) — what CI checks, what remains external, and how historical distinctions are preserved.
 4. [Evaluation](EVALUATION_CONSTITUTION.md) — what would establish comparative causal value.
 5. [Public value](PUBLIC_VALUE.md) — ordinary-language explanation of the architecture and its current limits.
+6. [Reproduce](REPRODUCE.md) — exact automated reproduction boundary.
+7. [Issue roadmap](ISSUE_ROADMAP.md) — dependency-ordered work surface.
 
 ## What failed?
 
