@@ -160,6 +160,10 @@ experiment does not depend on it
 
 #11 remains continuous. A materially changed comparator reopens the affected experiment/comparison, not unrelated repository state.
 
+### Roadmap stewardship
+
+#37 owns this dependency-ordered scheduling surface. It changes when returned evidence changes the critical path; it does not count roadmap churn as research progress.
+
 ### Product/resource leverage
 
 #34 is event-triggered.
