@@ -43,6 +43,16 @@ The reference kernel can correctly reject a transition that violates a registere
 
 Those belong to issue #30 and any future deployment adapter.
 
+## Reference VMK2 canonicalization
+
+The live reference VMK2 canonicalizer now:
+- sorts normalized unordered containers before hashing;
+- rejects NaN and positive/negative infinity;
+- requires string mapping keys for cross-language authority-bearing JSON;
+- carries an exact byte/digest fixture in the test suite.
+
+These changes are required to leave the admitted IG10 JSON-state roots unchanged; `tests/test_current_kernel.py` remains the regression oracle. This does not rewrite historical non-JSON objects or migrate old custody roots.
+
 ## Historical hash contract
 
 The exact IG10 checkpoint depends on the historical VMK2 serialization/hash contract. New repository objects use `kernel/runtime/canonical.py`, whose unordered-container canonicalization is stricter.
