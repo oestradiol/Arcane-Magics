@@ -36,7 +36,7 @@ Before execution, record only what the claim needs:
 - exact parent state or source;
 - register and index;
 - question;
-- strongest mature comparator or rival;
+- strongest mature comparator or rival, with genealogy/precedence/substitution relation typed separately;
 - admitted evidence and budget;
 - discriminator or proof obligation;
 - success, failure, and WITHHOLD conditions;
@@ -63,13 +63,25 @@ discriminator failure              -> REJECTED
 
 History is preserved through provenance. A consumed scaffold does not remain a live top-level object merely because it once mattered.
 
+Mature comparison follows the live credit law:
+
+```text
+project causal derivation
+!= historical priority
+!= comparative recurrence
+!= technical realization
+!= residual contribution
+```
+
+A comparator reduces a project claim only at an index where substitution preserves the declared consequence. Reduction may retire mechanism novelty while leaving independent project genealogy, bounded causal results, and non-subsumed residuals intact. See `docs/CREDITS_AND_REDUCTIONS.md`.
+
 ## 3. Devil's Audit
 
 A hostile-but-fair reviewer attacks the strongest version of the claim.
 
 Release or promotion is blocked by any unresolved item below that is material to the claim:
 
-1. strongest mature comparator/prior art not addressed;
+1. strongest mature comparator / historical predecessor / technical donor not addressed, or their relation to project genealogy and residual contribution left ambiguous;
 2. conclusion already encoded in a premise or definition;
 3. hidden bridge, index, jurisdiction, or regularity assumption;
 4. local result silently generalized;
@@ -181,7 +193,8 @@ A release may advance only when:
 - generated public surfaces contain no known renderer/conversion failures;
 - custody hashes/manifests are internally consistent;
 - negative and WITHHOLD branches remain visible;
-- the positive contribution is stated before its nearest claim fence;
+- the positive contribution is stated before its nearest claim fence and agrees with `docs/EARNED_MILESTONES.md`;
+- the SOTA/comparator surface is not materially stale for any public superiority claim;
 - no unresolved blocking Devil's Audit objection remains.
 
 ## 10. Methodology self-application
