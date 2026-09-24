@@ -23,6 +23,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Lint GitHub Markdown
+        run: python3 scripts/lint_github_markdown.py
+
       - name: Audit source tree
         env:
           SOURCE_TREE_ONLY: "1"
