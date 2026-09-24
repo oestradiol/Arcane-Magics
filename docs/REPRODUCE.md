@@ -1,80 +1,109 @@
 # Reproduce Venus-Minerva
 
-This page separates **repository/runtime reproduction** from **external scientific replication**.
+This page separates four different operations that are easy to conflate:
 
-## 1. Verify the current runtime and repository invariants
+~~~text
+repository integrity
+!=
+runtime replay
+!=
+formal verification
+!=
+external scientific/capability replication
+~~~
+
+## 1. Reconstruct the current runtime
 
 Requirements: Python 3.12-compatible runtime.
 
-```bash
+~~~bash
 python -m kernel.runtime.current
+~~~
+
+This reconstructs and verifies the exact IG10 checkpoint from admitted Git custody.
+
+## 2. Run repository integrity checks
+
+~~~bash
 make audit
-```
+~~~
 
-This checks the exact IG10 checkpoint and the live automated integrity surface, including historical causal-distinction coverage, current-state/custody checks, navigation, SOTA freshness, and experiment-manifest structure.
+This checks the live automated integrity surface: unit/runtime invariants, custody/current-state agreement, Markdown/navigation, historical causal distinctions, issue-to-test coverage, experiment-manifest structure, and release boundaries.
 
-## 2. What this reproduces
+Passing this audit establishes only what those checks test.
 
-It can reproduce/check:
-- the Git-reconstructible IG10 runtime checkpoint;
-- state-root and custody invariants;
-- selected VMK2 governance/reopening invariants;
-- VenusMemory storage/custody behavior;
-- public-surface/link constraints;
-- preserved developmental dispositions for EDU16/17/17R1;
-- historical causal distinctions encoded as regressions;
-- required issue-to-test ownership.
+## 3. Verify the admitted formal subset
 
-It does **not** reproduce:
-- independent EDU16 external execution if the exact external carrier/journal is unavailable;
-- capability superiority;
-- autonomous science;
-- AGI;
-- mathematical novelty;
-- physical/QG validity;
-- independent replication.
+~~~bash
+make formal-check
+~~~
 
-See issue #4 for the exact EDU16 replay-custody gap.
+This checks the current Lean OFE subset, including future-equivalence/setoid structure, test-family monotonicity, sufficient-representation/refinement results, quotient transport, common-refinement sufficiency, separating-family equality, and pulled-back-separator reopening.
 
-## 3. Run focused checks
+Machine-checked correctness of that formal subset does not establish novelty or physical validity.
 
-```bash
+## 4. Run focused benchmark/invariant checks
+
+Examples:
+
+~~~bash
 python -m unittest tests.test_vmk2_invariants
 python -m unittest tests.test_historical_regressions
 python -m unittest tests.test_edu17r1_benchmark
-python scripts/audit_causal_distinctions.py
-python scripts/audit_navigation_contract.py
-python scripts/audit_sota_freshness.py
-python scripts/validate_experiment_manifest.py evaluation/MATCHED_EXPERIMENT_TEMPLATE.json
-```
+python -m unittest tests.test_edu17r1_sealed_eval
+python -m unittest tests.test_memory_causal_benchmark
+~~~
 
-## 4. Historical carrier
+The EDU17R1 and memory benchmarks currently contain public development infrastructure. Public dev performance is not promotion evidence.
 
-The historical R00-R194 public executable carrier is under:
+## 5. What the repository can currently reproduce
 
-`provenance/historical-runtime/R194/`
+It can reproduce/check:
 
-It is for historical replay, regression, ablation, and genealogy. It is not current authority.
+- exact IG10 runtime reconstruction;
+- state-root and custody invariants;
+- selected VMK2 governance/reopening invariants;
+- persistent memory/custody behavior;
+- deterministic finite canonical hashing and digest fixtures;
+- preserved EDU16/17/17R1 developmental dispositions;
+- historical causal distinctions encoded as regressions;
+- issue-to-test ownership;
+- the bounded Lean OFE subset;
+- benchmark/evaluation harness structure.
 
-## 5. External experiments
+It does **not** currently reproduce or establish:
 
-Any matched Venus-vs-baseline result should instantiate:
+- an exact self-contained EDU16 1703-event runtime replay;
+- matched-budget Venus capability superiority;
+- autonomous science;
+- AGI;
+- open-ended recursive self-improvement;
+- mathematical novelty;
+- QG/physical validity;
+- broad independent replication.
 
-`evaluation/MATCHED_EXPERIMENT_TEMPLATE.json`
+Issue #4 owns the EDU16 exact-replay custody gap.
 
-and preserve:
-- frozen model/harness;
-- tools/information;
+## 6. Sealed external experiments
+
+Matched Venus-vs-baseline experiments should instantiate the repository evaluation contract and preserve:
+
+- exact parent/model/harness;
+- tools and information;
 - budgets;
-- hidden-eval custody;
+- hidden-evaluation custody;
 - preregistered PASS/FAIL/WITHHOLD;
 - raw trajectories;
 - negative/null results;
-- independent evaluator identity;
+- evaluator identity;
 - no self-granted promotion authority.
 
-## 6. Independent replication
+The EDU17R1 benchmark provides a concrete sealed-run example under `benchmarks/edu17r1_mention_incidence/`.
 
-Independent replication requires an outside party/process to execute or reconstruct the target under separately typed custody. Same-project replay, handoff, or reimplementation is useful evidence but does not automatically count as independent replication.
+## 7. Independent replication
 
-See [Evaluation Constitution](EVALUATION_CONSTITUTION.md) and [Tests and evidence](TESTS.md).
+Independent replication requires an outside party or separately controlled process to execute/reconstruct the target under independently typed custody.
+
+Same-project replay, handoff, CI, or reimplementation can be strong reproducibility evidence. They are not automatically independent replication.
+
+See [Evaluation Constitution](EVALUATION_CONSTITUTION.md), [Tests and evidence](TESTS.md), and [Earned Milestones](EARNED_MILESTONES.md).
