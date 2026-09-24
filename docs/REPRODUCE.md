@@ -23,6 +23,7 @@ It can reproduce/check:
 - public-surface/link constraints;
 - preserved developmental dispositions for EDU16/17/17R1;
 - the frozen EDU17R1 learner-side repair candidate and ownership receipt, without hidden efficacy;
+- exact prefrozen EDU17R1 A/B/C/D condition implementations and hidden-run readiness state;
 - state-owned generic residual-search internalization and its donor-removal/equivalence audit;
 - Internalizer O*/Anti-Minerva correction-boundary invariants;
 - historical causal distinctions encoded as regressions;
@@ -50,6 +51,8 @@ python -m unittest tests.test_edu17r1_semantic_ingress
 python scripts/audit_generic_search_internalization.py
 python scripts/audit_edu17r1_semantic_ingress.py
 python scripts/audit_edu17r1_repair_authorship.py
+python scripts/audit_edu17r1_condition_freeze.py
+python scripts/audit_hidden_run_readiness.py
 python scripts/audit_causal_distinctions.py
 python scripts/audit_navigation_contract.py
 python scripts/audit_sota_freshness.py
