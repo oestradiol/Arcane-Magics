@@ -92,23 +92,19 @@ jobs:
           git push origin "$branch"
 
           lower_kind="$(printf '%s' "$target_kind" | tr '[:upper:]' '[:lower:]')"
-          body="$(cat <<EOF
-This draft PR was opened by the bounded Venus developmental worker.
-
-Target: ${target_kind} #${target_number}
-Cycle: ${cycle_id}
-Decision: ${decision}
-
-The worker may study, test, learn from externally reviewed prior cycle outcomes,
-and propose. It cannot merge this PR, promote developmental authority, release,
-close the target as success, access secrets, or count its own execution receipt
-as independent return.
-
-The committed cycle receipt is the prefrozen custody object for this episode.
-The learning-state update remains non-authoritative until this draft is externally
-reviewed and admitted.
-EOF
-)"
+          body="$(printf '%s\n' \
+            'This draft PR was opened by the bounded Venus developmental worker.' \
+            '' \
+            "Target: ${target_kind} #${target_number}" \
+            "Cycle: ${cycle_id}" \
+            "Decision: ${decision}" \
+            '' \
+            'The worker may study, test, learn from explicitly returned external review outcomes, and propose.' \
+            'It cannot merge this PR, promote developmental authority, release, close the target as success,' \
+            'access secrets, alter the external safety floor, or count its own execution as independent return.' \
+            '' \
+            'The committed cycle receipt is the prefrozen custody object for this episode.' \
+            'The learning-state update remains non-authoritative until externally reviewed and admitted.')"
           url="$(gh pr create \
             --draft \
             --base main \
