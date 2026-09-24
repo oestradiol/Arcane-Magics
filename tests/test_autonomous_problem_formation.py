@@ -3,6 +3,7 @@ from __future__ import annotations
 import unittest
 
 from kernel.development.autonomous_problem_formation import (
+    bind_problem_to_carriers,
     form_problem,
     snapshot_to_incidence,
 )
@@ -141,6 +142,54 @@ class RecompiledU2ProblemFormationTests(unittest.TestCase):
         )))
         self.assertFalse(problem.carrier_binding_authority)
         self.assertFalse(problem.promotion_authority)
+
+
+    def test_formed_problem_binds_only_its_source_carrier(self):
+        items = (
+            WorkItem(
+                "PR", 401, "first",
+                merge_state="DIRTY",
+                updated_at="2026-09-24T23:00:00Z",
+            ),
+            WorkItem(
+                "ISSUE", 402, "second",
+                updated_at="2026-09-24T23:00:00Z",
+            ),
+        )
+        problem = form_problem(snapshot_to_incidence(items))
+        self.assertEqual(
+            bind_problem_to_carriers(problem, items),
+            (("PR", 401),),
+        )
+
+    def test_stop_problem_binds_no_carrier(self):
+        items = (
+            WorkItem(
+                "PR", 401, "clean",
+                merge_state="CLEAN",
+                updated_at="2026-09-24T23:00:00Z",
+            ),
+        )
+        problem = form_problem(snapshot_to_incidence(items))
+        self.assertEqual(problem.disposition, "STOP_NO_CONSEQUENTIAL_RESIDUAL")
+        self.assertEqual(bind_problem_to_carriers(problem, items), ())
+
+    def test_missing_problem_source_fails_closed_instead_of_reranking(self):
+        original = (
+            WorkItem(
+                "PR", 401, "dirty",
+                merge_state="DIRTY",
+                updated_at="2026-09-24T23:00:00Z",
+            ),
+        )
+        problem = form_problem(snapshot_to_incidence(original))
+        unrelated = (
+            WorkItem(
+                "ISSUE", 999, "unrelated",
+                updated_at="2026-09-24T23:00:00Z",
+            ),
+        )
+        self.assertEqual(bind_problem_to_carriers(problem, unrelated), ())
 
 
 if __name__ == "__main__":
