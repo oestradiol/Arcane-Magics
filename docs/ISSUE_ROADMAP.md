@@ -184,6 +184,19 @@ Before such evidence, productization packages hypotheses rather than validated c
 
 They compete for priority when they obtain a short path to a real discriminator or unlock substantial downstream learning. They do not outrank the critical path merely by being grand.
 
+### Canonical capability recovery lane
+
+Issue #154 restores an already-earned Canonical function that the current Git carrier does not presently execute at the same causal location.
+
+```text
+#153 capability map / EDU16 parent custody / R206 recursive provenance restoration
+-> #154 U2-style unlabeled problem formation before Git target selection
+-> integrate formed problem with current O*/autonomy carrier
+-> then revisit U1-level state-owned research/TransformProgram recurrence
+```
+
+This lane does not outrank sealed external-return work by rhetoric alone, but it may run in parallel because it repairs a demonstrated carrier regression rather than minting a new broad capability claim.
+
 ## Current shortest high-leverage chain
 
 ```text
