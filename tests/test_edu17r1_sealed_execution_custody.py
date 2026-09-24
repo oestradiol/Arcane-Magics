@@ -15,6 +15,7 @@ from benchmarks.edu17r1_mention_incidence.run_sealed_conditions import (
 
 ROOT = Path(__file__).resolve().parents[1]
 DEV = ROOT / "benchmarks/edu17r1_mention_incidence/dev.jsonl"
+FREEZE = ROOT / "benchmarks/edu17r1_mention_incidence/CONDITION_IMPLEMENTATIONS.json"
 
 
 def sha256_bytes(path: Path) -> str:
@@ -47,6 +48,7 @@ class EDU17R1SealedExecutionCustodyTests(unittest.TestCase):
                         "schema": "Venus.EDU17R1BlindInputManifest.v0.1",
                         "benchmark": "edu17r1_mention_incidence",
                         "source_hidden_sha256": "0" * 64,
+                        "condition_freeze_sha256": sha256_bytes(FREEZE),
                         "blind_input_sha256": sha256_bytes(blind),
                         "n": len(rows),
                         "excluded_fields": ["answer", "expected", "gold", "label", "rationale"],
@@ -80,6 +82,7 @@ class EDU17R1SealedExecutionCustodyTests(unittest.TestCase):
                     {
                         "schema": "Venus.EDU17R1BlindInputManifest.v0.1",
                         "source_hidden_sha256": "0" * 64,
+                        "condition_freeze_sha256": sha256_bytes(FREEZE),
                         "blind_input_sha256": sha256_bytes(blind),
                         "n": 1,
                         "labels_exposed": False,
@@ -101,6 +104,7 @@ class EDU17R1SealedExecutionCustodyTests(unittest.TestCase):
                     {
                         "schema": "Venus.EDU17R1BlindInputManifest.v0.1",
                         "source_hidden_sha256": "0" * 64,
+                        "condition_freeze_sha256": sha256_bytes(FREEZE),
                         "blind_input_sha256": "f" * 64,
                         "n": 1,
                         "labels_exposed": False,
