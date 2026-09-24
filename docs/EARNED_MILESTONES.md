@@ -17,7 +17,8 @@ current positive developmental authority      EDU16 [1703]
 admitted inherited search capability          GENERIC_RESIDUAL_SEARCH (state-owned)
 admitted safety/governance substrate           Internalizer + O* + Anti-Minerva guards
 preserved negative branch                     EDU17 INVALID_FOR_PROMOTION
-current repair disposition                    EDU17R1 WITHHOLD
+preserved repair-origin disposition            EDU17R1 WITHHOLD
+frozen prospective repair candidate            EDU17R1-RC1-WORD-JACCARD-K3-v1 / AUTHORED_FROZEN
 ```
 
 ## A. Developmental intelligence
@@ -68,6 +69,16 @@ MENTION != INCIDENCE
 ```
 
 The system therefore withheld before testing the intended repair.
+
+### EARNED — bounded learner-side repair authorship freeze
+
+**EDU17R1-RC1-WORD-JACCARD-K3-v1 — AUTHORED_FROZEN / PENDING_HIDDEN_RETURN**
+
+A state-owned public-development method search selected and froze a generic calibrated-retrieval ingress candidate before hidden #31 exposure. The repository binds the candidate to EDU16-RC1, the preserved `MENTION != INCIDENCE` residual, an ownership receipt, and a condition-B executor. Public leave-one-out development performance is recorded as 14/16 accuracy and macro-F1 0.8333; that public score is tunable development evidence, not promotion evidence.
+
+The earned proposition is **bounded learner-side repair authorship before hidden exposure**. Hidden efficacy, transfer, causal gain, developmental promotion, Safe Strong RSI, and unrestricted semantics remain unearned.
+
+Nearest next discriminator: sealed #31 A/B/C/D evaluation with no post-exposure repair.
 
 ## B. Representation and abstraction
 
