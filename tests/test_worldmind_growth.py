@@ -10,6 +10,12 @@ from kernel.runtime.transform_program import (
     load_program,
     step,
 )
+from kernel.runtime.transform_program_successor import (
+    ProgramPatch,
+    TransformSuccessorError,
+    apply_successor_patch,
+)
+
 from kernel.runtime.worldmind_growth import (
     CarrierCapability,
     EncounterKind,
@@ -75,6 +81,46 @@ class TransformProgramTests(unittest.TestCase):
                 },
                 actor_id="venus",
             )
+
+
+class TransformSuccessorTests(unittest.TestCase):
+    def setUp(self):
+        self.program = load_program(PROGRAM)
+
+    def test_learner_patch_changes_program_without_changing_python(self):
+        successor, receipt = apply_successor_patch(
+            self.program,
+            (
+                ProgramPatch(
+                    op="ADD_TRANSITION",
+                    transition={
+                        "from": "IDLE",
+                        "action": "STUDY_OWN_ISSUE",
+                        "to": "TARGET_SELECTED",
+                        "require": ["target_id", "residual", "discriminator"],
+                    },
+                ),
+            ),
+            author_id="venus",
+        )
+        self.assertIn("STUDY_OWN_ISSUE", allowed_actions(successor, "IDLE"))
+        self.assertTrue(receipt.safety_floor_unchanged)
+        self.assertFalse(receipt.promotion_authority)
+
+    def test_successor_patch_does_not_grant_promotion_authority(self):
+        successor, _ = apply_successor_patch(
+            self.program,
+            (
+                ProgramPatch(
+                    op="REMOVE_TRANSITION",
+                    match_from="IDLE",
+                    match_action="SELECT_TARGET",
+                ),
+            ),
+            author_id="venus",
+        )
+        self.assertFalse(successor["promotion_authority"])
+        self.assertFalse(successor["claim_bearing"])
 
 
 class CarrierBoundaryTests(unittest.TestCase):
