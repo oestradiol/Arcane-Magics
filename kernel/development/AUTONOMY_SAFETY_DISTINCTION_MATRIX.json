@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.1",
+  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.2",
   "date": "2026-09-24",
   "claim": "Bounded autonomy may expand study/learning/proposal capability only while the listed causal and authority distinctions remain executable and fail-closed.",
   "distinctions": [
@@ -284,6 +284,49 @@
         "tests/test_autonomous_governance.py"
       ],
       "invariant": "merge/close timestamp may maintain reopening custody while still carrying zero work-utility reward without explicit external review return"
+    },
+    {
+      "id": "LEGACY_REWARD_QUARANTINE",
+      "tests": [
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "v0.1 merge-derived counts cannot migrate into corrected learning utility"
+    },
+    {
+      "id": "UNTRUSTED_WORLD_INPUT_NOT_AUTHORITY",
+      "tests": [
+        "tests/test_autonomous_worker.py",
+        "tests/test_world_input_security_public_dev.py"
+      ],
+      "invariant": "issue/PR text is returned data and cannot become executable instruction or authorization"
+    },
+    {
+      "id": "PENDING_RETURN_BLOCKS_REROLL",
+      "tests": [
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "an open autonomous cycle blocks parallel target selection until external return"
+    },
+    {
+      "id": "SELF_REVIEW_NOT_LEARNING_RETURN",
+      "tests": [
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "autonomous carrier cannot author the review return that trains its own preferences"
+    },
+    {
+      "id": "MAIN_ADMISSION_DRIVES_RECURRENCE",
+      "tests": [
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "automatic recurrence wakes on externally admitted main changes, not autonomous branch pushes"
+    },
+    {
+      "id": "FULL_SAFETY_SUITE_BEFORE_AUTONOMOUS_WRITE",
+      "tests": [
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "full unit suite and safety-matrix audit execute before autonomous git write"
     }
   ],
   "promotion_authority": false
