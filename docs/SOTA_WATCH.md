@@ -86,3 +86,25 @@ recheck trigger
 Tracking a SOTA system means Venus knows what it has to beat or distinguish itself from.
 
 It does not mean Venus already beats it.
+
+## Scheduled source-state probe
+
+The daily steward can record a non-authoritative source observation with:
+
+```bash
+python scripts/probe_sota_sources.py --output SOTA_SOURCE_PROBE.json
+```
+
+The resulting artifact records reachability, final URL, HTTP metadata, and a bounded response-body fingerprint for every source in `SOTA_WATCH_STATE.json`.
+
+This deliberately means only:
+
+```text
+source bytes/metadata observed at time t
+!= source claim true
+!= independent validation
+!= repository claim should change
+!= credit/prize/institutional disposition
+```
+
+A later cross-run comparator may use these fingerprints to enqueue reconciliation when a source materially changes. It must not automatically rewrite scientific authority from a hash difference.
