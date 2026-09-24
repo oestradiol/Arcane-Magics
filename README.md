@@ -8,6 +8,11 @@
 
 </div>
 
+<p align="center">
+  <a href="https://github.com/oestradiol/Venus-Minerva/actions/workflows/venus-steward.yml"><img alt="Venus steward" src="https://github.com/oestradiol/Venus-Minerva/actions/workflows/venus-steward.yml/badge.svg"></a>
+  <a href="https://github.com/oestradiol/Venus-Minerva/issues"><img alt="Research issues" src="https://img.shields.io/github/issues/oestradiol/Venus-Minerva"></a>
+  <a href="https://github.com/sponsors/oestradiol"><img alt="Sponsor" src="https://img.shields.io/badge/sponsor-GitHub%20Sponsors-EA4AAA?logo=githubsponsors"></a>
+</p>
 > [!IMPORTANT]
 > This repository deliberately mixes several research registers, but it does **not** collapse their truth conditions. Formal results, engineering experiments, physical conjectures, historical comparisons, and symbolic interpretations remain separately typed.
 
@@ -47,6 +52,20 @@ For open problems and bounded next experiments, start at:
 ```text
 docs/FRONTIER_RESEARCH.md
 ```
+
+## When not to use this repository
+
+Do not use Venus-Minerva as:
+
+- a substitute for domain-standard proofs, peer review, or experimental validation;
+- evidence that a symbolic analogy establishes a physical mechanism;
+- a source of medical, legal, financial, or other high-stakes decisions;
+- a shortcut around current complexity-theory, PDE, or quantum-gravity literature;
+- an autonomous authority that may certify its own research promotions.
+
+Use it as a source of bounded formal objects, executable experiments, research questions, provenance, and falsifiable proposals.
+
+For continuous automation constraints, see [`docs/AUTONOMOUS_RESEARCH.md`](docs/AUTONOMOUS_RESEARCH.md).
 
 ## What this is not
 
