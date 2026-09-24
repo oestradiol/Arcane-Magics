@@ -19,7 +19,11 @@ from kernel.runtime.transform_program import (
 from kernel.runtime.transform_program_repair_search import (
     BehavioralTrace,
     search_missing_transition,
+    search_transition_repair,
 )
+from kernel.runtime.transform_program_multi_repair import search_composed_repairs
+from kernel.runtime.transform_repair_composition_meta import search_composition_depth
+from kernel.runtime.transform_repair_meta_search import search_repair_grammar_expansion
 
 from kernel.runtime.transform_program_successor import (
     ProgramPatch,
@@ -219,6 +223,97 @@ class TransformRepairSearchTests(unittest.TestCase):
         )
         out = search_missing_transition(self.ablated, traces)
         self.assertEqual(out.status, "WITHHOLD_AMBIGUOUS_MINIMAL_PATCHES")
+
+
+class RepairMetaProgressionTests(unittest.TestCase):
+    def setUp(self):
+        self.program = load_program(PROGRAM)
+
+    def test_replace_is_selected_when_existing_transition_is_wrong(self):
+        wrong = copy.deepcopy(self.program)
+        for row in wrong["transitions"]:
+            if row["from"] == "IDLE" and row["action"] == "SELECT_TARGET":
+                row["to"] = "RETURN_AVAILABLE"
+
+        good = {
+            "target_id": "opaque",
+            "residual": "opaque",
+            "discriminator": "opaque",
+            "provenance_ids": ["returned"],
+        }
+        traces = (
+            BehavioralTrace("ok", "IDLE", "SELECT_TARGET", good, True, "TARGET_SELECTED", "r:ok"),
+            BehavioralTrace(
+                "missing",
+                "IDLE",
+                "SELECT_TARGET",
+                {k: v for k, v in good.items() if k != "target_id"},
+                False,
+                None,
+                "r:missing",
+            ),
+        )
+        meta = {
+            "enabled_patch_ops": ["ADD_TRANSITION"],
+            "available_patch_ops": ["ADD_TRANSITION", "REMOVE_TRANSITION", "REPLACE_TRANSITION"],
+        }
+        out = search_repair_grammar_expansion(meta, wrong, traces)
+        self.assertEqual(out.status, "UNIQUE_META_IMPROVEMENT_CANDIDATE")
+        self.assertEqual(out.selected_operation, "REPLACE_TRANSITION")
+
+    def test_remove_is_selected_when_action_should_not_exist(self):
+        harmful = copy.deepcopy(self.program)
+        harmful["transitions"].append(
+            {"from": "IDLE", "action": "LEGACY", "to": "TARGET_SELECTED", "require": []}
+        )
+        traces = (
+            BehavioralTrace("a", "IDLE", "LEGACY", {}, False, None, "r:a"),
+            BehavioralTrace("b", "IDLE", "LEGACY", {"x": 1}, False, None, "r:b"),
+        )
+        meta = {
+            "enabled_patch_ops": ["ADD_TRANSITION", "REPLACE_TRANSITION"],
+            "available_patch_ops": ["ADD_TRANSITION", "REMOVE_TRANSITION", "REPLACE_TRANSITION"],
+        }
+        out = search_repair_grammar_expansion(meta, harmful, traces)
+        self.assertEqual(out.status, "UNIQUE_META_IMPROVEMENT_CANDIDATE")
+        self.assertEqual(out.selected_operation, "REMOVE_TRANSITION")
+
+    def test_two_defects_require_composition_depth_two(self):
+        broken = copy.deepcopy(self.program)
+        for row in broken["transitions"]:
+            if row["from"] == "IDLE" and row["action"] == "SELECT_TARGET":
+                row["to"] = "RETURN_AVAILABLE"
+        broken["transitions"].append(
+            {"from": "IDLE", "action": "LEGACY2", "to": "TARGET_SELECTED", "require": []}
+        )
+
+        good = {
+            "target_id": "opaque",
+            "residual": "opaque",
+            "discriminator": "opaque",
+            "provenance_ids": ["returned"],
+        }
+        traces = (
+            BehavioralTrace("select", "IDLE", "SELECT_TARGET", good, True, "TARGET_SELECTED", "r:s"),
+            BehavioralTrace("legacy", "IDLE", "LEGACY2", {}, False, None, "r:l"),
+        )
+        one = search_composed_repairs(
+            broken,
+            traces,
+            allowed_patch_ops=("ADD_TRANSITION", "REPLACE_TRANSITION", "REMOVE_TRANSITION"),
+            max_patch_count=1,
+        )
+        self.assertEqual(one.status, "WITHHOLD_COMPOSITION_DEPTH_INSUFFICIENT")
+
+        meta = {
+            "enabled_patch_ops": ["ADD_TRANSITION", "REPLACE_TRANSITION", "REMOVE_TRANSITION"],
+            "max_patch_count": 1,
+            "available_patch_counts": [1, 2],
+        }
+        out = search_composition_depth(meta, broken, traces)
+        self.assertEqual(out.status, "UNIQUE_COMPOSITION_DEPTH_IMPROVEMENT")
+        self.assertEqual(out.selected_max_patch_count, 2)
+        self.assertEqual(len(out.selected_patches), 2)
 
 
 class CarrierBoundaryTests(unittest.TestCase):
