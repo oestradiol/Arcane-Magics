@@ -79,6 +79,9 @@ jobs:
       - name: EDU17R1 incidence-substrate audit
         run: python kernel/development/audit_edu17r1_incidence_substrate.py
 
+      - name: Generic residual-search internalization audit
+        run: python scripts/audit_generic_search_internalization.py
+
       - name: EDU17R1 repair authorship audit
         run: python scripts/audit_edu17r1_repair_authorship.py
 
