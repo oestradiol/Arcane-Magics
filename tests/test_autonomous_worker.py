@@ -50,17 +50,21 @@ class AutonomousWorkerTests(unittest.TestCase):
         chosen = choose_target(items, roadmap_text="#31")
         self.assertEqual((chosen.kind, chosen.number), ("PR", 99))
 
-    def test_recent_target_is_not_rerolled_immediately(self):
-        items = (
-            WorkItem("ISSUE", 31, "benchmark"),
-            WorkItem("ISSUE", 72, "Safe Strong RSI"),
-        )
-        chosen = choose_target(
-            items,
+    def test_pending_autonomous_cycle_forces_stop_instead_of_parallel_reroll(self):
+        cycle = make_cycle(
+            issues=(
+                WorkItem("ISSUE", 31, "benchmark"),
+                WorkItem("ISSUE", 72, "Safe Strong RSI"),
+            ),
+            prs=(),
             roadmap_text="#31\n#72",
+            internal_policy=POLICY,
             recent_targets=(("ISSUE", 31),),
+            active_cycle_pending=True,
         )
-        self.assertEqual(chosen.number, 72)
+        self.assertEqual(cycle.decision, "STOP")
+        self.assertIsNone(cycle.target_number)
+        self.assertTrue(any("awaiting external review" in x for x in cycle.rationale))
 
     def test_no_work_stops(self):
         cycle = make_cycle(
