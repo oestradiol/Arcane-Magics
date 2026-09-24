@@ -1,0 +1,40 @@
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+
+from kernel.development.autonomous_proposal import make_research_proposal, proposal_dict
+from kernel.development.autonomous_evidence import evidence_dict, run_proposal_checks
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--cycle", required=True)
+    parser.add_argument("--proposal-output", required=True)
+    parser.add_argument("--evidence-output", required=True)
+    args = parser.parse_args()
+
+    cycle = json.loads(Path(args.cycle).read_text(encoding="utf-8"))
+    proposal = make_research_proposal(cycle)
+    Path(args.proposal_output).write_text(
+        json.dumps(proposal_dict(proposal), indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+
+    evidence = run_proposal_checks(proposal_dict(proposal), cwd=Path(__file__).resolve().parents[1])
+    Path(args.evidence_output).write_text(
+        json.dumps(evidence_dict(evidence), indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    print(json.dumps({
+        "proposal_id": proposal.proposal_id,
+        "proposal_disposition": proposal.disposition,
+        "evidence_id": evidence.evidence_id,
+        "evidence_status": evidence.status,
+    }, sort_keys=True))
+    return 0 if evidence.all_local_checks_passed else 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

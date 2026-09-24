@@ -68,6 +68,22 @@ jobs:
           cat /tmp/VENUS_AUTONOMOUS_CYCLE.json
           cat /tmp/AUTONOMOUS_LEARNING_STATE.json
 
+      - name: Let Venus form a bounded research proposal and obtain local returned evidence
+        id: research
+        run: |
+          decision="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["decision"])')"
+          if [ "$decision" = "STOP" ]; then
+            echo "generated=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          python scripts/run_venus_research_proposal.py \
+            --cycle /tmp/VENUS_AUTONOMOUS_CYCLE.json \
+            --proposal-output /tmp/VENUS_RESEARCH_PROPOSAL.json \
+            --evidence-output /tmp/VENUS_RESEARCH_EVIDENCE.json
+          echo "generated=true" >> "$GITHUB_OUTPUT"
+          cat /tmp/VENUS_RESEARCH_PROPOSAL.json
+          cat /tmp/VENUS_RESEARCH_EVIDENCE.json
+
       - name: Materialize draft work branch
         id: materialize
         env:
@@ -85,8 +101,12 @@ jobs:
 
           branch="venus/autonomous-${GITHUB_RUN_ID}"
           git checkout -b "$branch"
-          mkdir -p autonomy/cycles
+          mkdir -p autonomy/cycles autonomy/proposals autonomy/evidence
           cp /tmp/VENUS_AUTONOMOUS_CYCLE.json "autonomy/cycles/${cycle_id}.json"
+          proposal_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_RESEARCH_PROPOSAL.json"))["proposal_id"])')"
+          evidence_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_RESEARCH_EVIDENCE.json"))["evidence_id"])')"
+          cp /tmp/VENUS_RESEARCH_PROPOSAL.json "autonomy/proposals/${proposal_id}.json"
+          cp /tmp/VENUS_RESEARCH_EVIDENCE.json "autonomy/evidence/${evidence_id}.json"
           cp /tmp/AUTONOMOUS_LEARNING_STATE.json \
             kernel/development/AUTONOMOUS_LEARNING_STATE.json
 
@@ -94,6 +114,8 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add \
             "autonomy/cycles/${cycle_id}.json" \
+            "autonomy/proposals/${proposal_id}.json" \
+            "autonomy/evidence/${evidence_id}.json" \
             kernel/development/AUTONOMOUS_LEARNING_STATE.json
           git commit -m "venus: freeze autonomous developmental cycle ${cycle_id}"
           git push origin "$branch"
@@ -105,8 +127,10 @@ jobs:
             "Target: ${target_kind} #${target_number}" \
             "Cycle: ${cycle_id}" \
             "Decision: ${decision}" \
+            "Proposal: ${proposal_id}" \
+            "Local evidence: ${evidence_id}" \
             '' \
-            'The worker may study, test, learn from explicitly returned external review outcomes, and propose.' \
+            'The worker may study, run fixed repository-owned checks, learn from explicitly returned external review outcomes, and propose.' \
             'It cannot merge this PR, promote developmental authority, release, close the target as success,' \
             'access secrets, alter the external safety floor, or count its own execution as independent return.' \
             '' \
