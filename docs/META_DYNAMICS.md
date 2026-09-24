@@ -121,7 +121,7 @@ Role:
 ```math
 \Delta
 \to
-\operatorname{Rep}(\Delta)
+\mathrm{Rep}(\Delta)
 ```
 
 while retaining the distinction rather than erasing it.
@@ -183,7 +183,7 @@ This includes a project-local bridge toward semantics, logic, science, law, prog
 A representation becomes causally consequential when it changes admissible futures:
 
 ```math
-\operatorname{Rep}
+\mathrm{Rep}
 \to
 a
 \to
@@ -233,7 +233,7 @@ with the explicit non-collapse:
 ```math
 \text{Other}_j
 \neq
-\operatorname{model}_i(\text{Other}_j).
+\mathrm{model}_i(\text{Other}_j).
 ```
 
 One derived design criterion is to preserve the possibility of non-preauthored return. A center's current representation of another center must not automatically inherit authority to substitute for that center.
