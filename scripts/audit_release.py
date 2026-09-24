@@ -46,6 +46,10 @@ required = [
     "docs/SOTA_WATCH_STATE.json",
     "docs/CONSTRUCT_DISPOSITIONS.json",
     "evaluation/MATCHED_EXPERIMENT_TEMPLATE.json",
+    "formal/lean/VenusFormal.lean",
+    "formal/lean/VenusFormal/OFE.lean",
+    "formal/lean/lakefile.toml",
+    "formal/lean/lean-toolchain",
     "shared/venusmonograph.sty",
 ]
 for rel in required:

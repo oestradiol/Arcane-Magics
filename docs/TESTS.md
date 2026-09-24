@@ -85,3 +85,7 @@ Those require World-side return and remain separate from automated integrity.
 ## Memory causal learning benchmark
 
 `benchmarks/memory_causal/` is a public development benchmark for issue #15. It tests whether retained dispositions, provenance, negative branches, and replacement relations change later admissible action. Public dev accuracy is not promotion evidence; the protocol requires hidden matched ablations.
+
+## Machine-checked formal subset
+
+`formal/lean/` machine-checks a bounded OFE core: future-equivalence as a setoid, test-family monotonicity, sufficient-representation refinement, quotient transport under equivalence preservation, and pullback closure as a sufficient condition. `tests/test_proof_container_semantics.py` separately locks the fact that theorem-container lint is only structural. These checks do not establish OFE novelty, physical correctness, or mature-substitution residual.
