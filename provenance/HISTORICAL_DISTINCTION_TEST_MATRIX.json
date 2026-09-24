@@ -620,8 +620,8 @@
       ],
       "current_owner": "provenance/DEVELOPMENTAL_LINEAGE.md; kernel/CURRENT_STATE.md",
       "test_layer": "T2/T4",
-      "test_id_path": null,
-      "status": "CLOSED_NEGATIVE_DO_NOT_REROLL",
+      "test_id_path": "tests/test_historical_regressions.py::test_r191_closed_negative_cannot_silently_reenter_worldmind",
+      "status": "COVERED",
       "credit_genealogy_note": "negative benchmark evidence",
       "reopening_condition": "genuinely new separator not equivalent to the failed fixed-point claim"
     },
@@ -673,8 +673,8 @@
       ],
       "current_owner": "docs/EARNED_MILESTONES.md; docs/FRONTIER_RESEARCH.md",
       "test_layer": "T6",
-      "test_id_path": null,
-      "status": "READY_ONLY_EXTERNAL_RETURN_OPEN",
+      "test_id_path": "tests/test_historical_regressions.py::test_r194_local_replay_is_not_external_replication",
+      "status": "COVERED",
       "credit_genealogy_note": "historical externality target",
       "reopening_condition": "independent outside party executes frozen packet and returns evidence"
     }
