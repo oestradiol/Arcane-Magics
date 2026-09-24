@@ -7,7 +7,7 @@
 |---|---|---|---|---|
 | #4 EDU16 replay custody | T0/T3 | receipts + `EDU16_CUSTODY_STATUS.json` + CI boundary audit | authentic 1703-event runner/journal still not located | exact bytes verified, or non-replay boundary remains typed |
 | #5 P vs NP | T6/T7 | existing obstruction program in research/provenance | non-tautological invariant violated by every polynomial-time section | formal counterexample/proof result under frozen target |
-| #6 OFE/QG formal core | T7 | Lean encoding now includes common-refinement factorization, separating-family equality, and pulled-back-separator repair in addition to quotient transport | independent review and carrier-specific physical instantiation | machine proof accepted; physical application remains separately fenced |
+| #6 OFE/QG formal core | T7 | OFE manuscript + Lean machine-checkable future-equivalence/monotonicity/sufficiency/transport core | stronger separating/composition formalization and independent review | proof checked independently; physical application still separately fenced |
 | #7 Navier–Stokes | T8/T6 | frontier/SOTA reconstruction issue | current 2026 proof/formal/institutional state + any residual open problem | dated source reconciliation and, for new math, independent proof burden |
 | #8 RegisterBridge | T7/T5 | frontier construct | mature-substitution/deletion test | residual survives comparator or construct is reduced/consumed |
 | #9 Meta-Dynamics | T5/T7 | docs/META_DYNAMICS.md | invariant/deletion discriminator | measurable/formal consequence not reproduced by simpler substitute |
