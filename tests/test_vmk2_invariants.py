@@ -2,8 +2,10 @@ from __future__ import annotations
 
 import unittest
 
+
 from kernel.runtime.vmk2 import (
     AdditiveBackend,
+    Backend,
     EvidenceReceipt,
     JurisdictionReceipt,
     PolicyMode,
@@ -13,6 +15,15 @@ from kernel.runtime.vmk2 import (
     VMK2Error,
     VMK2Reference,
 )
+
+
+class MutatingBackend(Backend):
+    def decode(self, payload):
+        return payload
+
+    def update(self, old_value, decoded):
+        old_value["items"].append(decoded)
+        return old_value
 
 
 class VMK2InvariantTests(unittest.TestCase):
@@ -194,6 +205,64 @@ class VMK2InvariantTests(unittest.TestCase):
             epoch=5,
         )
         self.assertEqual(reopened.expanded_future_family, frozenset({"f1", "f2"}))
+
+    def test_register_state_owns_mutable_value(self):
+        source = {"items": [1]}
+        vm = VMK2Reference()
+        vm.register_state("mutable", source)
+        source["items"].append(999)
+        self.assertEqual(vm.state["mutable"].value, {"items": [1]})
+        self.assertEqual(
+            vm.state["mutable"].root,
+            __import__("kernel.runtime.vmk2", fromlist=["digest"]).digest(
+                {"id": "mutable", "value": {"items": [1]}}
+            ),
+        )
+
+    def test_external_alias_mutation_is_detected_before_transition(self):
+        vm = VMK2Reference()
+        original = {"items": [1]}
+        vm.register_state("target", original)
+        j = JurisdictionReceipt(
+            "J2", "local", "actor", frozenset({"target"}),
+            frozenset({PolicyMode.PORTAL}), 0, 100, ReceiptStatus.PASS
+        )
+        vm.register_jurisdiction(j)
+        vm.register_policy(TransitionPolicy("P2", "actor", "target", PolicyMode.PORTAL, "J2"))
+        ev = vm.register_evidence(source_id="world", assessor_id="external", payload=2, exposure_epoch=1)
+        ret = vm.ingest_return(
+            evidence_id=ev.evidence_id, source_id="world", target_id="target",
+            role=ReturnRole.ENCOUNTER, epoch=2, nonce="mutable-alias"
+        )
+        # Simulate hostile/corrupt internal mutation after custody.
+        vm.state["target"].value["items"].append(7)
+        with self.assertRaisesRegex(VMK2Error, "state root drift"):
+            vm.transition(
+                verified_return_id=ret.return_id, actor_id="actor", target_id="target",
+                payload=2, backend=MutatingBackend(), policy_id="P2", epoch=3
+            )
+
+    def test_mutating_backend_cannot_rewrite_prior_state_object(self):
+        vm = VMK2Reference()
+        prior = vm.register_state("target", {"items": [1]})
+        j = JurisdictionReceipt(
+            "J3", "local", "actor", frozenset({"target"}),
+            frozenset({PolicyMode.PORTAL}), 0, 100, ReceiptStatus.PASS
+        )
+        vm.register_jurisdiction(j)
+        vm.register_policy(TransitionPolicy("P3", "actor", "target", PolicyMode.PORTAL, "J3"))
+        ev = vm.register_evidence(source_id="world", assessor_id="external", payload=2, exposure_epoch=1)
+        ret = vm.ingest_return(
+            evidence_id=ev.evidence_id, source_id="world", target_id="target",
+            role=ReturnRole.ENCOUNTER, epoch=2, nonce="mutating-backend"
+        )
+        receipt = vm.transition(
+            verified_return_id=ret.return_id, actor_id="actor", target_id="target",
+            payload=2, backend=MutatingBackend(), policy_id="P3", epoch=3
+        )
+        self.assertEqual(prior.value, {"items": [1]})
+        self.assertEqual(vm.state["target"].value, {"items": [1, 2]})
+        self.assertNotEqual(receipt.before_root, receipt.after_root)
 
 
 if __name__ == "__main__":
