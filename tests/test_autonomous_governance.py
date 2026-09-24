@@ -5,6 +5,7 @@ from pathlib import Path
 import unittest
 
 from kernel.development.autonomous_learning import (
+    METHODS,
     USEFUL_MARKER,
     UNHELPFUL_MARKER,
     empty_state,
@@ -115,6 +116,42 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertEqual(updated.kind_success["ISSUE"], 0)
         self.assertEqual(updated.kind_failure["ISSUE"], 0)
 
+    def test_explicit_external_method_return_changes_only_method_learning(self):
+        method = METHODS[0]
+        updated = update_from_cycle_prs(
+            empty_state(),
+            [{
+                "number": 207,
+                "title": "venus: autonomous cycle issue-72",
+                "state": "OPEN",
+                "mergedAt": None,
+                "reviews": [external_review(
+                    f"VENUS_METHOD_RETURN: {method}: USEFUL",
+                    review_id=81,
+                )],
+            }],
+        )
+        self.assertEqual(updated.method_success[method], 1)
+        self.assertEqual(updated.kind_success["ISSUE"], 0)
+
+    def test_method_return_from_self_is_ignored(self):
+        method = METHODS[0]
+        updated = update_from_cycle_prs(
+            empty_state(),
+            [{
+                "number": 208,
+                "title": "venus: autonomous cycle issue-72",
+                "state": "OPEN",
+                "mergedAt": None,
+                "reviews": [external_review(
+                    f"VENUS_METHOD_RETURN: {method}: USEFUL",
+                    login="github-actions[bot]",
+                    review_id=82,
+                )],
+            }],
+        )
+        self.assertEqual(updated.method_success[method], 0)
+
     def test_open_cycle_marks_original_target_recent(self):
         markers = target_markers([{
             "number": 203,
@@ -166,6 +203,9 @@ class AutonomousGovernanceTests(unittest.TestCase):
             )
         )
         self.assertFalse(obj["promotion_authority"])
+        self.assertFalse(obj["merge_authority"])
+        self.assertFalse(obj["truth_authority"])
+        self.assertFalse(obj["safety_floor_authority"])
 
 
 if __name__ == "__main__":
