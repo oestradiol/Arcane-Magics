@@ -1,3 +1,3 @@
 # IV. Venus
 
-Engineering / developmental projection. Current verified result in this release: **EDU16, 1699 records, PASS_BOUNDED_SELF_PREREGISTRATION_GATE_OWNERSHIP**. AGI, consciousness, natural-world generality, autonomous science, unrestricted semantics, external replication, and open-ended RSI remain unestablished.
+Engineering / developmental projection. Exact Git-reconstructible runtime checkpoint: **IG10 [1308], PASS_MODEL_SPECIFIC_PHYSICAL_F_WITNESS**. Current positive developmental authority: **EDU16 [1703], PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY**. AGI, consciousness, natural-world generality, autonomous science, unrestricted semantics, external replication, and open-ended RSI remain unestablished.
