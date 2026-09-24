@@ -29,11 +29,11 @@ def method_args(path: Path, class_name: str | None, function_name: str) -> tuple
     tree = ast.parse(path.read_text(encoding="utf-8"))
     for node in ast.walk(tree):
         if class_name is None and isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)) and node.name == function_name:
-            return tuple(arg.arg for arg in node.args.args)
+            return tuple(arg.arg for arg in (*node.args.args, *node.args.kwonlyargs))
         if isinstance(node, ast.ClassDef) and node.name == class_name:
             for child in node.body:
                 if isinstance(child, (ast.FunctionDef, ast.AsyncFunctionDef)) and child.name == function_name:
-                    return tuple(arg.arg for arg in child.args.args)
+                    return tuple(arg.arg for arg in (*child.args.args, *child.args.kwonlyargs))
     raise ValueError(f"missing {class_name or '<module>'}.{function_name} in {path}")
 
 
