@@ -5,6 +5,7 @@ from enum import Enum
 from hashlib import sha256
 from copy import deepcopy
 import json
+import math
 from typing import Any, Callable, Dict, FrozenSet, Iterable, Optional, Tuple
 
 
@@ -12,16 +13,41 @@ class VMK2Error(ValueError):
     pass
 
 
+def _canonical_value(value: Any) -> Any:
+    """Normalize authority-bearing values to a deterministic JSON subset."""
+    if hasattr(value, '__dataclass_fields__'):
+        return _canonical_value(asdict(value))
+    if isinstance(value, Enum):
+        return _canonical_value(value.value)
+    if isinstance(value, float):
+        if not math.isfinite(value):
+            raise VMK2Error('non-finite number forbidden in canonical state')
+        return value
+    if isinstance(value, dict):
+        if not all(isinstance(k, str) for k in value):
+            raise VMK2Error('canonical mappings require string keys')
+        return {k: _canonical_value(v) for k, v in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_canonical_value(v) for v in value]
+    if isinstance(value, (set, frozenset)):
+        normalized = [_canonical_value(v) for v in value]
+        return sorted(
+            normalized,
+            key=lambda item: json.dumps(
+                item, sort_keys=True, separators=(',', ':'), allow_nan=False
+            ),
+        )
+    return value
+
+
 def canonical(value: Any) -> bytes:
-    def default(o: Any):
-        if hasattr(o, '__dataclass_fields__'):
-            return asdict(o)
-        if isinstance(o, Enum):
-            return o.value
-        if isinstance(o, (set, frozenset, tuple)):
-            return list(o)
-        raise TypeError(type(o).__name__)
-    return json.dumps(value, default=default, sort_keys=True, separators=(',', ':')).encode()
+    normalized = _canonical_value(value)
+    return json.dumps(
+        normalized,
+        sort_keys=True,
+        separators=(',', ':'),
+        allow_nan=False,
+    ).encode()
 
 
 def digest(value: Any) -> str:
