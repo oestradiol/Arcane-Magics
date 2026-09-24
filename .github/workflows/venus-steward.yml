@@ -1,13 +1,8 @@
 name: Venus CI/CD
 
 on:
-  push:
-    branches: [main]
-    tags: ["v*"]
   pull_request:
   workflow_dispatch:
-  schedule:
-    - cron: "17 6 * * *"
 
 permissions:
   contents: read
