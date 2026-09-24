@@ -63,6 +63,9 @@ jobs:
       - name: Hidden benchmark protocol audit
         run: python scripts/audit_hidden_benchmarks.py
 
+      - name: Hidden-run readiness audit
+        run: python scripts/audit_hidden_run_readiness.py
+
       - name: Construct disposition audit
         run: python scripts/audit_construct_dispositions.py
 
