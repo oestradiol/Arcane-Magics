@@ -39,5 +39,6 @@
     "false_blocking"
   ],
   "promotion_authority": false,
-  "claim_fence": "Public classification fixtures test typed boundary semantics only. Security claims require dynamic adversarial tool/memory evaluation against mature defenses."
+  "claim_fence": "Public classification fixtures test typed boundary semantics only. Security claims require dynamic adversarial tool/memory evaluation against mature defenses.",
+  "sealed_evaluation_core": "evaluation/sealed_eval.py"
 }
