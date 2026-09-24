@@ -4,7 +4,7 @@
 
 **A research family for operational equivalence, relational reconstruction, developmental intelligence, and bounded open-ended inquiry.**
 
-[Research frontier](docs/FRONTIER_RESEARCH.md) · [Current Venus state](prototype/CURRENT_STATE.md) · [Publication constitution](PUBLICATION_CONSTITUTION.md) · [Contribute](CONTRIBUTING.md) · [Sponsor](https://github.com/sponsors/oestradiol)
+[Meta-Dynamics](docs/META_DYNAMICS.md) · [Research frontier](docs/FRONTIER_RESEARCH.md) · [Current Venus state](prototype/CURRENT_STATE.md) · [Publication constitution](PUBLICATION_CONSTITUTION.md) · [Contribute](CONTRIBUTING.md) · [Sponsor](https://github.com/sponsors/oestradiol)
 
 </div>
 
