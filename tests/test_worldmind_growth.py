@@ -10,6 +10,11 @@ from kernel.runtime.transform_program import (
     load_program,
     step,
 )
+from kernel.runtime.transform_program_repair_search import (
+    BehavioralTrace,
+    search_missing_transition,
+)
+
 from kernel.runtime.transform_program_successor import (
     ProgramPatch,
     TransformSuccessorError,
@@ -121,6 +126,67 @@ class TransformSuccessorTests(unittest.TestCase):
         )
         self.assertFalse(successor["promotion_authority"])
         self.assertFalse(successor["claim_bearing"])
+
+
+class TransformRepairSearchTests(unittest.TestCase):
+    def setUp(self):
+        self.program = load_program(PROGRAM)
+        self.ablated = copy.deepcopy(self.program)
+        self.ablated["transitions"] = [
+            row for row in self.ablated["transitions"]
+            if not (row["from"] == "IDLE" and row["action"] == "SELECT_TARGET")
+        ]
+
+    def test_returned_behavior_reconstructs_missing_transition_without_policy_rule(self):
+        good = {
+            "target_id": "opaque-target",
+            "residual": "opaque-residual",
+            "discriminator": "opaque-discriminator",
+            "provenance_ids": ["world-return"],
+        }
+        traces = [
+            BehavioralTrace(
+                "ok", "IDLE", "SELECT_TARGET", good, True, "TARGET_SELECTED", "eval:ok"
+            ),
+        ]
+        for field in tuple(good):
+            bad = dict(good)
+            bad.pop(field)
+            traces.append(
+                BehavioralTrace(
+                    "missing-" + field,
+                    "IDLE",
+                    "SELECT_TARGET",
+                    bad,
+                    False,
+                    None,
+                    "eval:missing:" + field,
+                )
+            )
+
+        out = search_missing_transition(self.ablated, traces)
+        self.assertEqual(out.status, "UNIQUE_MINIMAL_PATCH")
+        transition = out.selected_patch["transition"]
+        self.assertEqual(transition["from"], "IDLE")
+        self.assertEqual(transition["action"], "SELECT_TARGET")
+        self.assertEqual(transition["to"], "TARGET_SELECTED")
+        self.assertEqual(set(transition["require"]), set(good))
+        self.assertFalse(out.promotion_authority)
+
+    def test_ambiguous_return_yields_withhold(self):
+        traces = (
+            BehavioralTrace(
+                "ok",
+                "IDLE",
+                "SELECT_TARGET",
+                {"x": 1},
+                True,
+                None,
+                "eval:underspecified",
+            ),
+        )
+        out = search_missing_transition(self.ablated, traces)
+        self.assertEqual(out.status, "WITHHOLD_AMBIGUOUS_MINIMAL_PATCHES")
 
 
 class CarrierBoundaryTests(unittest.TestCase):
