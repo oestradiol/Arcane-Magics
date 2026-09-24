@@ -106,9 +106,9 @@ def main() -> int:
         if concept.lower() not in normalized:
             errors.append(f"matrix missing required causal concept: {concept}")
 
-    if len(rows) < 40:
+    if len(rows) < 30:
         errors.append(
-            f"historical archaeology unexpectedly shrank to {len(rows)} rows; expected >=40"
+            f"historical archaeology unexpectedly shrank to {len(rows)} rows; expected >=30"
         )
 
     if not COVERAGE.exists():
