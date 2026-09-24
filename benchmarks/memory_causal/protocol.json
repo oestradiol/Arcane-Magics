@@ -29,5 +29,6 @@
     "latency",
     "cost"
   ],
-  "promotion_rule": "A memory structure counts toward learning only if removing/scrambling it causally worsens later admissible behavior under matched conditions."
+  "promotion_rule": "A memory structure counts toward learning only if removing/scrambling it causally worsens later admissible behavior under matched conditions.",
+  "sealed_evaluation_core": "evaluation/sealed_eval.py"
 }
