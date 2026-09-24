@@ -41,7 +41,7 @@ experiment-template:
 construct-dispositions:
 	python3 scripts/audit_construct_dispositions.py
 
-audit: test lint proof-containers custody edu16-custody causal-coverage navigation sota-freshness experiment-template construct-dispositions
+audit: test lint proof-containers custody edu16-custody causal-coverage navigation sota-freshness experiment-contracts construct-dispositions
 	SOURCE_TREE_ONLY=1 python3 scripts/audit_release.py
 
 kernel-doc-check:
