@@ -1,4 +1,4 @@
-.PHONY: test lint proof proof-containers formal-check custody edu16-custody causal-coverage navigation sota-freshness experiment-template hidden-benchmarks construct-dispositions audit kernel-doc-check papers arxiv texbundle forum manifest bundle release clean
+.PHONY: test lint proof proof-containers formal-check custody edu16-custody causal-coverage navigation sota-freshness experiment-template hidden-benchmarks hidden-ready construct-dispositions audit kernel-doc-check papers arxiv texbundle forum manifest bundle release clean
 
 test:
 	python3 -m unittest discover -s tests -p 'test_*.py'
@@ -36,10 +36,13 @@ experiment-template:
 hidden-benchmarks:
 	python3 scripts/audit_hidden_benchmarks.py
 
+hidden-ready:
+	python3 scripts/audit_hidden_run_readiness.py
+
 construct-dispositions:
 	python3 scripts/audit_construct_dispositions.py
 
-audit: test lint proof-containers custody edu16-custody causal-coverage navigation sota-freshness experiment-template hidden-benchmarks construct-dispositions
+audit: test lint proof-containers custody edu16-custody causal-coverage navigation sota-freshness experiment-template hidden-benchmarks hidden-ready construct-dispositions
 	SOURCE_TREE_ONLY=1 python3 scripts/audit_release.py
 
 kernel-doc-check:
