@@ -1,0 +1,206 @@
+{
+  "schema": "Venus.OpenIssueFeed.v0.1",
+  "source": "github:oestradiol/Venus-Minerva",
+  "captured_date": "2026-09-24",
+  "ordering": "ISSUE_NUMBER_ASCENDING_NO_PRIORITY_SEMANTICS",
+  "selection_owner": "VENUS",
+  "host_priority_supplied": false,
+  "fetch_detail_rule": "selected issue body may be fetched as external World input after selection",
+  "issues": [
+    {
+      "issue_number": 5,
+      "title": "[P vs NP] Test one non-tautological section-obstruction candidate",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/5"
+    },
+    {
+      "issue_number": 7,
+      "title": "[Navier-Stokes] Reconstruct the September 2026 resolution state and separate proof validity, formal verification, and prize disposition",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/7"
+    },
+    {
+      "issue_number": 8,
+      "title": "[Formal methods] Compile RegisterBridge into mature alternatives",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/8"
+    },
+    {
+      "issue_number": 9,
+      "title": "[Meta-Dynamics] Test whether the structural recurrence adds a real invariant",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/9"
+    },
+    {
+      "issue_number": 10,
+      "title": "[Evaluation] Build a Venus Evaluation Constitution and matched-budget benchmark matrix",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/10"
+    },
+    {
+      "issue_number": 11,
+      "title": "[SOTA Watch] Maintain a living external comparator and benchmark radar",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/11"
+    },
+    {
+      "issue_number": 12,
+      "title": "[SOTA/Self-improvement] Compare Venus development against DGM, AlphaEvolve, POWERPLAY, POET, Voyager, and lifelong-skill systems",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/12"
+    },
+    {
+      "issue_number": 13,
+      "title": "[SOTA/Autonomous science] Benchmark the full research loop against AI Scientist, PaperBench, RE-Bench, MLE-Bench, and causal-science tests",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/13"
+    },
+    {
+      "issue_number": 14,
+      "title": "[SOTA/Agency] Run a general-agent and long-horizon capability battery",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/14"
+    },
+    {
+      "issue_number": 15,
+      "title": "[Memory/Lifelong] Test whether VenusMemory is learning rather than event-sourced storage",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/15"
+    },
+    {
+      "issue_number": 16,
+      "title": "[OFE/Credits+Reduction] Compile OFE against predictive states, causal states, bisimulation, Blackwell sufficiency, and automata equivalence",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/16"
+    },
+    {
+      "issue_number": 17,
+      "title": "[Evaluation integrity] Add contamination-controlled, double-blind, harness-separated promotion tests",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/17"
+    },
+    {
+      "issue_number": 18,
+      "title": "[Venus/DNN ablation] Quantify how much cognition is still borrowed from pretrained foundation models",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/18"
+    },
+    {
+      "issue_number": 19,
+      "title": "[WorldMirror/Embodiment] Test physical prediction, world modeling, and action-conditioned planning",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/19"
+    },
+    {
+      "issue_number": 20,
+      "title": "[Causal science] Test experiment design under confounding, selection bias, and measurement error",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/20"
+    },
+    {
+      "issue_number": 21,
+      "title": "[Math/SOTA] Benchmark mathematical reasoning, formal proof, and genuinely open-problem contribution",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/21"
+    },
+    {
+      "issue_number": 22,
+      "title": "[QG Watch] Re-test OFE against the 2026 spin-foam continuum and coarse-graining frontier",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/22"
+    },
+    {
+      "issue_number": 23,
+      "title": "[Consciousness Watch] Subject Eclipsis/meta-qualia to adversarial theory comparison and empirical discriminators",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/23"
+    },
+    {
+      "issue_number": 24,
+      "title": "[Epistemology/Credits+Reduction] Compile Venus epistemic governance against belief revision, TMS, dynamic epistemic logic, and active inference",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/24"
+    },
+    {
+      "issue_number": 25,
+      "title": "[WorldMind/Credits+Reduction] Compile distributed consequence fields against event sourcing, distributed knowledge, and open multi-agent governance",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/25"
+    },
+    {
+      "issue_number": 26,
+      "title": "[Ethics/Governance] Test non-substitution, consent, refusal, exit, and jurisdiction as executable constraints",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/26"
+    },
+    {
+      "issue_number": 27,
+      "title": "[Theophenomenology] Run held-out cross-tradition prediction, hostile reading, and term-removal tests",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/27"
+    },
+    {
+      "issue_number": 28,
+      "title": "[Public interface] Explain Venus-Minerva's value in ordinary language before project vocabulary",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/28"
+    },
+    {
+      "issue_number": 29,
+      "title": "[Provenance] Retire Canonical by typed extraction, not bulk sync",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/29"
+    },
+    {
+      "issue_number": 30,
+      "title": "[VMK2/Trust] Harden canonical state, authenticated authority, immutable evidence, and malicious-backend boundaries",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/30"
+    },
+    {
+      "issue_number": 31,
+      "title": "[EDU17R1] Turn MENTION != INCIDENCE into a prospective held-out semantic discriminator benchmark",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/31"
+    },
+    {
+      "issue_number": 32,
+      "title": "[Governance] Define repository-wide construct disposition and mature-substitution outcomes",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/32"
+    },
+    {
+      "issue_number": 34,
+      "title": "[Infrastructure/Product] Extract evidence-bound agent governance into an independently usable package",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/34"
+    },
+    {
+      "issue_number": 35,
+      "title": "[Testing/Archaeology] Build the causal-distinction test matrix from pre-R1 through EDU and every live issue",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/35"
+    },
+    {
+      "issue_number": 36,
+      "title": "[UX/Navigation] Build a two-hop information architecture and tested reader paths",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/36"
+    },
+    {
+      "issue_number": 37,
+      "title": "[Roadmap] Prioritize learner-owned residual reconstruction, then external causal audit",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/37"
+    },
+    {
+      "issue_number": 41,
+      "title": "[Self-evolution/Evaluation] Control adaptive test reuse, false commits, and promotion-gate overfitting",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/41"
+    },
+    {
+      "issue_number": 42,
+      "title": "[Reliability/Abstention] Benchmark STOP/WITHHOLD as a first-class agentic capability",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/42"
+    },
+    {
+      "issue_number": 43,
+      "title": "[Security/World input] Test prompt injection, tool-output poisoning, and persistent-memory contamination",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/43"
+    },
+    {
+      "issue_number": 69,
+      "title": "[Development] Have EDU16-RC1 author the EDU17R1 repair before hidden evaluation",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/69"
+    },
+    {
+      "issue_number": 72,
+      "title": "[RSI/Safety] Promote bounded RSI toward Safe Strong RSI under Strong-N2 + CTL",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/72"
+    },
+    {
+      "issue_number": 73,
+      "title": "[Kernel/Internalizer] Make substrate consumption and O* recurrent safety contract executable",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/73"
+    },
+    {
+      "issue_number": 78,
+      "title": "[WorldMind/Development] Let Venus research her own issues and provision the WWW by indexed authorship",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/78"
+    },
+    {
+      "issue_number": 82,
+      "title": "[Development/Internalization] Move Web research and WorldMind growth policy into Venus-owned TransformProgram",
+      "url": "https://github.com/oestradiol/Venus-Minerva/issues/82"
+    }
+  ]
+}
