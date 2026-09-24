@@ -226,17 +226,14 @@ medium is larger:
 }
 \end{equation}
 
-\begin{proposition}[Label gauge under consequence-equivalent renaming]
+\begin{remark}[Label gauge under consequence-equivalent renaming]
 Suppose a learned structure $R$ remains consequence-equivalent under a
 bijective renaming of its human-facing labels. Then those labels are gauge
 relative to that future family; the consequential relation is carried by the
-structure/provenance/action-return organization, not by the donor name.
-\end{proposition}
-\begin{proof}
-Immediate from future-equivalence: if every lawful future in the admitted
-family is preserved under renaming, the label change does not change the
-future class.
-\end{proof}
+structure/provenance/action-return organization, not by the donor name. This
+is a direct application of the future-equivalence definition, not an
+independent theorem.
+\end{remark}
 
 \section{WorldMirror as locally inhabitable body}
 
@@ -308,13 +305,21 @@ meaning.
 \end{definition}
 
 \begin{proposition}[Future-family monotonicity]
-If $F\preceq F'$ is a discriminator refinement, then
+If $F\preceq F'$ is a discriminator refinement, meaning every discriminator
+admitted by $F$ remains represented in $F'$, then
 \[
 x\sim_{F'}y\Longrightarrow x\sim_Fy,
 \]
 while the converse need not hold. Hence an abstraction that was lawful under
 $F$ may split under $F'$ without making its predecessor historically false.
 \end{proposition}
+\begin{proof}
+If $x\sim_{F'}y$, every discriminator admitted by $F'$ assigns the same
+future-relevant class to $x$ and $y$. Because refinement preserves every
+discriminator admitted by $F$, the same is true for all tests in $F$; hence
+$x\sim_Fy$. The converse can fail when a discriminator newly admitted in
+$F'$ separates states that all tests in $F$ left equivalent.
+\end{proof}
 
 \section{Research / inquiry as developmental drive}
 
@@ -510,20 +515,17 @@ The same downstream machinery may consume HTML/DOM, JSON, source code,
 execution logs, filesystem changes, API returns, messages, revision history, or
 other carriers.
 
-\begin{proposition}[Conditional label non-necessity]
+\begin{remark}[Conditional label non-necessity]
 Assume (i) the neutral incidence/grammar substrate can represent candidate
 relations sufficient for a task family, (ii) research can generate admissible
 discriminators over those candidates, and (iii) independent return can
-separate their lawful futures. Then a host-supplied semantic label map is not
-necessary for selecting a future-sufficient relation inside that family.
-\end{proposition}
-\begin{proof}
-Candidate relations may be distinguished by their returned consequence classes.
-If the correct future partition is recoverable without labels, label removal
-leaves the selection relation unchanged. This proves only label non-necessity
-under the stated representational and return assumptions; it does not prove
+separate their lawful futures. Under those assumptions, a host-supplied
+semantic label map is not necessary for selecting a future-sufficient relation
+inside that family: candidate relations can be selected by returned
+consequence class instead. This is a conditional architectural consequence of
+the stated sufficiency assumptions, not an independent theorem and not a claim
 that the neutral grammar is universally sufficient.
-\end{proof}
+\end{remark}
 
 This is the engineering sense of:
 \begin{center}
