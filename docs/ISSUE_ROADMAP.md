@@ -36,8 +36,8 @@ Prestige is not a scheduling dependency.
 
 | Priority | Issue | Work |
 |---:|---|---|
-| 1 | #73 (minimal slice) | internalize the generic proposal/search scaffold as capability while preserving R193's boundary: scaffold mediation may migrate inward; World return, evaluator independence, authority/jurisdiction, STOP/WITHHOLD, and parent custody may not |
-| 2 | #69 | use the admitted learner-side search capability to form/freeze the substantive `MENTION != INCIDENCE` repair/discriminator without hidden #31 exposure; ambiguity must generate another discriminator rather than an externally supplied answer |
+| 1 | #73 (minimal slice) | state-backed donor-free generic search is now structurally available; obtain independent scaffold-removal return before claiming internalization PASS, while World return, evaluator independence, authority/jurisdiction, STOP/WITHHOLD, and parent custody remain external |
+| 2 | #69 | generic cross-layer binder and state-owned AUTHOR_RELATION_BINDING action are available; after #73 return, Venus must choose/freeze endpoints, relation symbol, and discriminator without hidden #31 exposure; ambiguity must generate another discriminator rather than an externally supplied answer |
 | 3 | #31 | run the sealed hidden `MENTION != INCIDENCE` A/B/C/D evaluation on the frozen learner-authored repair |
 | 4 | #17 | generalize only the minimum sealed/double-blind machinery required to make the run reusable |
 
@@ -187,8 +187,8 @@ They compete for priority when they obtain a short path to a real discriminator 
 ## Current shortest high-leverage chain
 
 ```text
-#73 minimal scaffold internalization
--> #69 learner-authored repair
+#73 independent scaffold-removal return for state-backed search
+-> #69 learner-authored relation-binding proposal
 -> #31 hidden semantic return
 -> #10 first matched causal ablation
 -> #42 / #15 native capability tests
