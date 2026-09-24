@@ -473,6 +473,20 @@
         "tests/test_autonomous_write_scope.py"
       ],
       "invariant": "patch planning carries no arbitrary code-write, merge, promotion, truth or safety-floor authority"
+    },
+    {
+      "id": "RETURNED_REPOSITORY_STATE_RETAINED",
+      "tests": [
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "selected issue/PR study retains current external repository state, including PR merge-state/draft/update facts, rather than reconstructing only target prose"
+    },
+    {
+      "id": "DIRTY_PR_CORRECTION_REACHABILITY",
+      "tests": [
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "DIRTY, BLOCKED and CONFLICTING PR states all reach the internalized correction/reopening path rather than being silently treated as ordinary reachable state"
     }
   ],
   "promotion_authority": false
