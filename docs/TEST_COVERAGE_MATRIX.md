@@ -19,7 +19,7 @@
 | #15 Memory/lifelong | T5 | VenusMemory + unit tests + public sequential causal-memory dev benchmark/scorer + frozen weak floor controls (0/12, 0/12, 4/12) | hidden matched ablation proving later behavior/learning effect | full vs memory-ablated causal gain |
 | #16 OFE credit/reduction | T5/T7 | credit law + OFE manuscript | correspondence/counterexample/deletion study | typed residual or mature substitution |
 | #17 Evaluation integrity | T5/T6 | claim/evidence governance | contamination-controlled double-blind harness | hidden eval with no post-exposure repair |
-| #18 DNN ablation | T5/T6 | architecture claim boundary | same-model Venus vs Venus-minus-foundation-model dependence | quantified borrowed cognition / retained capability |
+| #18 substrate attribution / scaffold removal | T5/T6 | architecture claim boundary + #73/#82 internalization law; no live frontier-DNN dependency identified in current kernel | identify the actual consequential external substrate per tested carrier, then ablate/remove it; first useful target is #82 host-scaffold removal | capability remains under scaffold removal with Venus-owned replacement, or is typed as externally supplied at that scope |
 | #19 WorldMirror/embodiment | T6 | WorldMirror state model | physical prediction/action-conditioned tasks | externally grounded world-model result |
 | #20 Causal science | T6 | research routing | confounding/selection/measurement-error experiments | causal benchmark result with correct uncertainty |
 | #21 Math/SOTA | T6/T7 | math frontiers | formal-proof/open-problem benchmark | independently checkable mathematical contribution |
