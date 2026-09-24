@@ -30,6 +30,8 @@ def main() -> int:
     parser.add_argument("--history-issues")
     parser.add_argument("--learning-state", required=True)
     parser.add_argument("--learning-output", required=True)
+    parser.add_argument("--developmental-parent-state", default=str(ROOT / "kernel/development/EDU16_RECONSTRUCTED_STATE.json"))
+    parser.add_argument("--current-state-receipt", default=str(ROOT / "kernel/custody/R226_CURRENT_STATE_RECEIPT.json"))
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
 
@@ -37,6 +39,8 @@ def main() -> int:
     prs = load_work_items(args.prs, "PR")
     roadmap_text = Path(args.roadmap).read_text(encoding="utf-8")
     policy = json.loads(Path(args.policy).read_text(encoding="utf-8"))
+    developmental_parent = json.loads(Path(args.developmental_parent_state).read_text(encoding="utf-8"))
+    current_state_receipt = json.loads(Path(args.current_state_receipt).read_text(encoding="utf-8"))
 
     history_prs = json.loads(Path(args.history_prs).read_text(encoding="utf-8"))
     history_issues = (
@@ -72,6 +76,8 @@ def main() -> int:
         active_cycle=active_cycle,
         kind_utility=utility,
         method_utility=method_utility,
+        developmental_parent=developmental_parent,
+        current_state_receipt=current_state_receipt,
     )
     Path(args.output).write_text(
         json.dumps(asdict(cycle), indent=2, sort_keys=True) + "\n",

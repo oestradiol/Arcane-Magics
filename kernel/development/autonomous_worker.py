@@ -69,6 +69,9 @@ class AutonomousCycleReceipt:
     decision: str
     rationale: tuple[str, ...]
     study_method: str | None
+    developmental_parent_carrier: str | None
+    developmental_parent_digest: str | None
+    active_improver_revision: str | None
     study: Mapping[str, Any] | None
     allowed_operations: tuple[str, ...]
     forbidden_operations: tuple[str, ...]
@@ -238,13 +241,111 @@ def _correction_reachable(item: WorkItem) -> bool:
     return merge_state not in {"DIRTY", "BLOCKED", "CONFLICTING", "UNKNOWN"}
 
 
-def study_target(item: WorkItem, *, method: str) -> dict[str, Any]:
-    """Extract a bounded, source-grounded study object from the selected target."""
-    body = item.body or ""
-    references = tuple(dict.fromkeys(
-        int(x) for x in re.findall(r"(?<!\w)#(\d+)", body)
+def _item_references(item: WorkItem) -> tuple[int, ...]:
+    return tuple(dict.fromkeys(
+        int(x) for x in re.findall(r"(?<!\w)#(\d+)", item.body or "")
         if int(x) != item.number
     ))
+
+
+def _recursive_reference_closure(
+    target: WorkItem,
+    items: Iterable[WorkItem],
+    *,
+    max_depth: int = 2,
+) -> tuple[Mapping[str, Any], ...]:
+    """Bounded R206-style recursive discovery over returned Git provenance.
+
+    This does not claim byte-equivalence to historical R206. It reinstates the
+    retained functional consequence: candidate/dependency discovery may recurse
+    through provenance/reference paths rather than stopping at the first hop.
+    """
+    by_number: dict[int, WorkItem] = {}
+    ambiguous: set[int] = set()
+    for item in items:
+        if item.number in by_number and by_number[item.number].kind != item.kind:
+            ambiguous.add(item.number)
+        else:
+            by_number[item.number] = item
+
+    queue: list[tuple[int, int, int]] = [
+        (number, 1, target.number)
+        for number in _item_references(target)
+    ]
+    seen = {target.number}
+    out: list[Mapping[str, Any]] = []
+
+    while queue:
+        number, depth, via = queue.pop(0)
+        if number in seen or number in ambiguous or depth > max_depth:
+            continue
+        seen.add(number)
+        item = by_number.get(number)
+        if item is None:
+            continue
+        out.append({
+            "kind": item.kind,
+            "number": item.number,
+            "title": item.title,
+            "depth": depth,
+            "via_number": via,
+            "updated_at": item.updated_at,
+        })
+        if depth < max_depth:
+            queue.extend(
+                (child, depth + 1, item.number)
+                for child in _item_references(item)
+            )
+    return tuple(out)
+
+
+def _validate_developmental_parent(parent: Mapping[str, Any] | None) -> tuple[str | None, str | None]:
+    if parent is None:
+        return None, None
+    carrier = str(parent.get("carrier_id") or "")
+    if carrier != "EDU16-RC1":
+        raise ValueError("autonomous developmental parent must be EDU16-RC1")
+    required = {
+        "curriculum target selection",
+        "open-domain problem selection",
+        "research-question formation",
+        "research-obligation routing",
+        "World-feed sampling/query policy",
+    }
+    owned = {str(x) for x in parent.get("owned", ())}
+    missing = sorted(required - owned)
+    if missing:
+        raise ValueError(
+            "EDU16-RC1 parent missing admitted owned capabilities: "
+            + ", ".join(missing)
+        )
+    if parent.get("promotion_authority") is not False:
+        raise ValueError("developmental parent may not grant promotion authority")
+    return carrier, digest(parent)
+
+
+def _active_improver_revision(receipt: Mapping[str, Any] | None) -> str | None:
+    if receipt is None:
+        return None
+    improver = receipt.get("active_improver")
+    if not isinstance(improver, Mapping):
+        return None
+    revision = str(improver.get("revision") or "")
+    if revision == "R206" and improver.get("open_ended_rsi") is False:
+        return revision
+    return None
+
+
+def study_target(
+    item: WorkItem,
+    *,
+    method: str,
+    all_items: Iterable[WorkItem] = (),
+    recursive_provenance: bool = False,
+) -> dict[str, Any]:
+    """Extract a bounded, source-grounded study object from the selected target."""
+    body = item.body or ""
+    references = _item_references(item)
     path_refs = tuple(dict.fromkeys(
         x.rstrip(".,;:!?)]}")
         for x in re.findall(
@@ -269,6 +370,10 @@ def study_target(item: WorkItem, *, method: str) -> dict[str, Any]:
     )))
 
     body_digest = digest(body)
+    recursive_refs = (
+        _recursive_reference_closure(item, all_items)
+        if recursive_provenance else ()
+    )
     repository_state = {
         "kind": item.kind,
         "state": item.state,
@@ -281,6 +386,8 @@ def study_target(item: WorkItem, *, method: str) -> dict[str, Any]:
         "repository_state": repository_state,
         "returned_changed_paths": tuple(item.changed_paths),
         "referenced_issue_or_pr_numbers": references,
+        "recursive_referenced_targets": recursive_refs,
+        "recursive_provenance_discovery": bool(recursive_provenance),
         "referenced_repository_paths": path_refs,
         "returned_blocker_sentences": blocker_sentences,
         "untrusted_instruction_markers": instruction_markers,
@@ -316,8 +423,14 @@ def make_cycle(
     recent_targets: Iterable[tuple[str, int]] = (),
     kind_utility: Mapping[str, float] | None = None,
     method_utility: Mapping[str, float] | None = None,
+    developmental_parent: Mapping[str, Any] | None = None,
+    current_state_receipt: Mapping[str, Any] | None = None,
 ) -> AutonomousCycleReceipt:
     items = tuple(issues) + tuple(prs)
+    parent_carrier, parent_digest = _validate_developmental_parent(
+        developmental_parent
+    )
+    improver_revision = _active_improver_revision(current_state_receipt)
     target = choose_target(
         items,
         roadmap_text=roadmap_text,
@@ -334,6 +447,9 @@ def make_cycle(
         "recent_targets": tuple(recent_targets),
         "kind_utility": dict(kind_utility or {}),
         "method_utility": dict(method_utility or {}),
+        "developmental_parent_carrier": parent_carrier,
+        "developmental_parent_digest": parent_digest,
+        "active_improver_revision": improver_revision,
     }
 
     if target is None:
@@ -345,7 +461,12 @@ def make_cycle(
         study = None
     else:
         study_method = choose_study_method(target, method_utility)
-        study = study_target(target, method=study_method)
+        study = study_target(
+            target,
+            method=study_method,
+            all_items=items,
+            recursive_provenance=(improver_revision == "R206"),
+        )
         features = {
             "f0": True,
             "f1": _correction_reachable(target),
@@ -361,6 +482,8 @@ def make_cycle(
             decision = "PROBE"
         rationale = (
             "one bounded target selected from current external GitHub snapshot",
+            "autonomous cycle is prospectively bound to the admitted EDU16-RC1 claim-bearing parent when supplied",
+            "retained R206 recursive provenance discovery expands bounded dependency study when current custody activates it",
             "internalized learner-side policy is upstream of work disposition",
             "explicit external work-return reviews may alter later target ranking",
             "roadmap is retained as weak context/tie-break provenance, not sovereign curriculum",
@@ -370,13 +493,16 @@ def make_cycle(
         )
 
     body = {
-        "schema": "Venus.AutonomousCycleReceipt.v0.3",
+        "schema": "Venus.AutonomousCycleReceipt.v0.4",
         "target_kind": target.kind if target else None,
         "target_number": target.number if target else None,
         "target_title": target.title if target else None,
         "decision": decision,
         "rationale": rationale,
         "study_method": study_method,
+        "developmental_parent_carrier": parent_carrier,
+        "developmental_parent_digest": parent_digest,
+        "active_improver_revision": improver_revision,
         "study": study,
         "allowed_operations": ALLOWED_OPERATIONS,
         "forbidden_operations": tuple(sorted(FORBIDDEN_OPERATIONS)),

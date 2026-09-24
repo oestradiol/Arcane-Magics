@@ -318,5 +318,96 @@ class AutonomousWorkerTests(unittest.TestCase):
         )
 
 
+    def test_autonomous_cycle_binds_exact_edu16_reconstructed_parent(self):
+        parent = json.loads(
+            (ROOT / "kernel/development/EDU16_RECONSTRUCTED_STATE.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        receipt = json.loads(
+            (ROOT / "kernel/custody/R226_CURRENT_STATE_RECEIPT.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        cycle = make_cycle(
+            issues=(WorkItem("ISSUE", 72, "Safe Strong RSI"),),
+            prs=(),
+            roadmap_text="",
+            internal_policy=POLICY,
+            developmental_parent=parent,
+            current_state_receipt=receipt,
+        )
+        self.assertEqual(cycle.developmental_parent_carrier, "EDU16-RC1")
+        self.assertIsNotNone(cycle.developmental_parent_digest)
+        self.assertEqual(cycle.active_improver_revision, "R206")
+
+    def test_invalid_developmental_parent_fails_closed(self):
+        with self.assertRaisesRegex(ValueError, "EDU16-RC1"):
+            make_cycle(
+                issues=(WorkItem("ISSUE", 72, "Safe Strong RSI"),),
+                prs=(),
+                roadmap_text="",
+                internal_policy=POLICY,
+                developmental_parent={
+                    "carrier_id": "FAKE",
+                    "owned": [],
+                    "promotion_authority": False,
+                },
+            )
+
+    def test_r206_recursive_provenance_discovery_reaches_second_hop(self):
+        parent = json.loads(
+            (ROOT / "kernel/development/EDU16_RECONSTRUCTED_STATE.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        receipt = json.loads(
+            (ROOT / "kernel/custody/R226_CURRENT_STATE_RECEIPT.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        cycle = make_cycle(
+            issues=(
+                WorkItem("ISSUE", 500, "root target", body="requires #501"),
+                WorkItem("ISSUE", 501, "first dependency", body="blocked by #502"),
+                WorkItem("ISSUE", 502, "second dependency", body="terminal"),
+            ),
+            prs=(),
+            roadmap_text="#500",
+            internal_policy=POLICY,
+            developmental_parent=parent,
+            current_state_receipt=receipt,
+            method_utility={"DEPENDENCY_TRACE": 1.0},
+        )
+        rows = cycle.study["recursive_referenced_targets"]
+        self.assertTrue(cycle.study["recursive_provenance_discovery"])
+        self.assertEqual(
+            [(row["number"], row["depth"], row["via_number"]) for row in rows],
+            [(501, 1, 500), (502, 2, 501)],
+        )
+
+    def test_without_r206_custody_study_does_not_mint_recursive_improver(self):
+        parent = json.loads(
+            (ROOT / "kernel/development/EDU16_RECONSTRUCTED_STATE.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        cycle = make_cycle(
+            issues=(
+                WorkItem("ISSUE", 500, "root target", body="requires #501"),
+                WorkItem("ISSUE", 501, "first dependency", body="blocked by #502"),
+                WorkItem("ISSUE", 502, "second dependency", body="terminal"),
+            ),
+            prs=(),
+            roadmap_text="#500",
+            internal_policy=POLICY,
+            developmental_parent=parent,
+            current_state_receipt={},
+            method_utility={"DEPENDENCY_TRACE": 1.0},
+        )
+        self.assertFalse(cycle.study["recursive_provenance_discovery"])
+        self.assertEqual(cycle.study["recursive_referenced_targets"], ())
+
+
 if __name__ == "__main__":
     unittest.main()
