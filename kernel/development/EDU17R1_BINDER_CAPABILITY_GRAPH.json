@@ -1,0 +1,85 @@
+{
+  "schema": "Venus.CapabilityCompositionProblem.v0.1",
+  "authority": "PUBLIC_CURRENT_STATE_DERIVED_INPUT",
+  "parent_candidate": "EDU16-RC1",
+  "residual": "MENTION != INCIDENCE",
+  "source_type": "RAW_SOURCE_RELATION_OCCURRENCE",
+  "target_type": "EVIDENCE_BOUND_TYPED_RELATION_INSTANCE",
+  "required_invariants": [
+    "SOURCE_COORDINATES",
+    "PROVENANCE",
+    "INDEPENDENT_RETURN",
+    "NO_SELF_MINTED_AUTHORITY"
+  ],
+  "capabilities": [
+    {
+      "id": "IG3_GENERIC_RAW_CARRIER_SCANNER",
+      "input_type": "RAW_SOURCE_RELATION_OCCURRENCE",
+      "output_type": "RAW_INCIDENCE_COORDINATES",
+      "preserves": [
+        "SOURCE_COORDINATES",
+        "PROVENANCE",
+        "INDEPENDENT_RETURN",
+        "NO_SELF_MINTED_AUTHORITY"
+      ],
+      "cost": 1,
+      "provenance": "IG3 raw-carrier incidence / current IG10 checkpoint"
+    },
+    {
+      "id": "IG2_INDUCED_INCIDENCE_BASIS",
+      "input_type": "RAW_INCIDENCE_COORDINATES",
+      "output_type": "INDUCED_RELATION_COORDINATES",
+      "preserves": [
+        "SOURCE_COORDINATES",
+        "PROVENANCE",
+        "INDEPENDENT_RETURN",
+        "NO_SELF_MINTED_AUTHORITY"
+      ],
+      "cost": 1,
+      "provenance": "IG2 induced incidence coordinates / current IG10 checkpoint"
+    },
+    {
+      "id": "U4_SOURCE_GROUNDED_RELATION_BINDING",
+      "input_type": "INDUCED_RELATION_COORDINATES",
+      "output_type": "SOURCE_RELATION_GRAPH",
+      "preserves": [
+        "SOURCE_COORDINATES",
+        "PROVENANCE",
+        "INDEPENDENT_RETURN",
+        "NO_SELF_MINTED_AUTHORITY"
+      ],
+      "cost": 1,
+      "provenance": "U4 recovered generic relation extractor + returned validation custody"
+    },
+    {
+      "id": "WORLDMIRROR_EVIDENCE_BOUND_RELATION",
+      "input_type": "SOURCE_RELATION_GRAPH",
+      "output_type": "EVIDENCE_BOUND_TYPED_RELATION_INSTANCE",
+      "preserves": [
+        "SOURCE_COORDINATES",
+        "PROVENANCE",
+        "INDEPENDENT_RETURN",
+        "NO_SELF_MINTED_AUTHORITY"
+      ],
+      "cost": 1,
+      "provenance": "WorldMirror evidence-bound relation instances in IG10"
+    },
+    {
+      "id": "R194_CALLER_SUPPLIED_SEMANTIC_SLOT",
+      "input_type": "RAW_SOURCE_RELATION_OCCURRENCE",
+      "output_type": "EVIDENCE_BOUND_TYPED_RELATION_INSTANCE",
+      "preserves": [
+        "SOURCE_COORDINATES",
+        "PROVENANCE"
+      ],
+      "cost": 1,
+      "provenance": "historical R194 semantic membrane; caller-supplied slots"
+    }
+  ],
+  "input_fence": {
+    "hidden_issue_31_examples_exposed": false,
+    "hidden_labels_exposed": false,
+    "public_dev_labels_used": false,
+    "target_specific_answer_table": false
+  }
+}
