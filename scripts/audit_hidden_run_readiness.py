@@ -66,8 +66,11 @@ def main() -> int:
             errors.append(f"{name}: missing required conditions {sorted(missing)}")
         if data.get("sealed_evaluation_core") != "evaluation/sealed_eval.py":
             errors.append(f"{name}: shared sealed evaluation core not bound")
-        if data.get("promotion_authority") is not False:
-            errors.append(f"{name}: protocol grants promotion authority")
+        authority = data.get("promotion_authority")
+        if authority is None and isinstance(data.get("promotion_rule"), dict):
+            authority = data["promotion_rule"].get("authority")
+        if authority is not False:
+            errors.append(f"{name}: protocol must explicitly deny promotion authority")
         report.append({
             "benchmark":name,
             "issue":cfg["issue"],
