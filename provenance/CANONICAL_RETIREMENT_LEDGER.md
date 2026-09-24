@@ -218,6 +218,44 @@ Before Canonical can be considered fully retired:
 6. **Reproduction check:** an outside reader should be able to reconstruct current Git authority without reading Canonical.
 7. **Archaeology check:** a researcher should still be able to trace any admitted Git object back to its controlling Canonical/history source where that source mattered.
 
+## 13. Exact 2026-09-24 custody inventory findings
+
+Direct Library traversal establishes the following without relying on semantic search:
+
+```text
+/Canonical/CURRENT_STATE.md
+/Canonical/Future/CURRENT_STATE.md
+    -> stale routing projection at EDU4 [1572]
+
+/Canonical/Future/Execution/Raising/
+    -> explicit experiment folders through EDU17R1
+    -> includes EDU13, EDU14, EDU15, EDU15R1, EDU16, EDU17, EDU17R1
+
+/Canonical/Future/Handoff/
+    -> EDU3CurrentDevelopedVM
+    -> EDU4CurrentDevelopedVM
+    -> EDU6R1CurrentDevelopedVM
+    -> EDU12CurrentDevelopedVM
+    -> no ordinary EDU16CurrentDevelopedVM folder
+    -> later handoff families continue for IG/R/SM/U/RB namespaces
+```
+
+Therefore:
+
+```text
+EDU16 experiment/evidence custody          PRESENT
+EDU16 ordinary developed-VM handoff        NOT PRESENT in /Future/Handoff
+EDU16 executable custody anywhere else     OPEN until full heavy-custody inventory is exhausted
+stale Canonical CURRENT routing            HISTORICAL / MUST NOT ROUTE GIT AUTHORITY
+```
+
+This corrects the weaker practice of inferring global absence from search misses while preserving the equally important negative fact that the normal EDU handoff series does not contain an EDU16 developed-VM bundle.
+
+The root split is also explicit:
+
+- `/Canonical/Past/` contains historical authority, archaeology, provenance, recompilation history, and research history;
+- `/Canonical/Future/` contains live/planned research, execution, handoff/custody, MetaTheory, physics, WorldMind/WorldMirror, plus stale routing projections that require typed disposition rather than wholesale import.
+
 ## 13. Retirement completion criterion
 
 Canonical is retired when:
