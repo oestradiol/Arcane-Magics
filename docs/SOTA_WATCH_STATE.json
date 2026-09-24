@@ -91,6 +91,42 @@
         "https://arxiv.org/abs/2607.04293"
       ],
       "distinction": "causal benchmark != general research competence"
+    },
+    {
+      "id": "self_evolution_acceptance",
+      "area": "self-improvement/evaluation-integrity",
+      "last_checked": "2026-09-24",
+      "stale_after_days": 14,
+      "status": "WATCH",
+      "sources": [
+        "https://arxiv.org/abs/2606.17546",
+        "https://arxiv.org/abs/2606.08106"
+      ],
+      "distinction": "candidate score improvement != statistically valid successor promotion under adaptive test reuse"
+    },
+    {
+      "id": "agentic_abstention",
+      "area": "reliability/abstention",
+      "last_checked": "2026-09-24",
+      "stale_after_days": 30,
+      "status": "WATCH",
+      "sources": [
+        "https://arxiv.org/abs/2607.10059",
+        "https://arxiv.org/abs/2606.28733"
+      ],
+      "distinction": "task capability != calibrated act/gather/STOP/WITHHOLD capability"
+    },
+    {
+      "id": "agent_world_input_security",
+      "area": "security/tool-use/memory",
+      "last_checked": "2026-09-24",
+      "stale_after_days": 14,
+      "status": "WATCH",
+      "sources": [
+        "https://github.com/ethz-spylab/agentdojo",
+        "https://arxiv.org/abs/2602.03117"
+      ],
+      "distinction": "returned untrusted content != instruction != evidence != authority != persistent policy/memory"
     }
   ]
 }

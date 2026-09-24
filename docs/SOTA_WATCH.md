@@ -27,6 +27,9 @@ new SOTA
 | world models | V-JEPA 2 and successors | physical prediction plus action-conditioned planning/robot control | can WorldMirror predict/control external dynamics and reopen representations when new interventions separate prior equivalence classes? |
 | mathematical research | FrontierMath / FrontierMath Open Problems plus proof-evaluation/formalization suites | expert/research-level problem solving and externally verifiable mathematical progress | can Venus contribute verified new mathematics, not merely internal analogies? |
 | evaluation integrity | private/semi-private sets, harness comparisons, contamination and reward-hacking audits | resistance to benchmark gaming and scaffold confounds | can Venus's preregistration/provenance machinery materially improve evaluation reliability? |
+| adaptive self-evolution | SEAGym / PACE-style acceptance protocols | separates candidate generation from statistically valid successor acceptance under repeated adaptive evaluation | can Venus reduce false/harmful commits while preserving real held-out ID/OOD improvement across lineage depth? |
+| agentic abstention | AgentAbstain / sequential abstention benchmarks | paired act-vs-abstain competence, including ambiguity, missing capability, tool failure, and emergent risk | does Venus STOP/WITHHOLD improve justified abstention without merely suppressing useful action? |
+| agent security | AgentDojo / dynamic prompt-injection and memory-poisoning evaluations | resistance to hostile retrieved/tool content and persistent contamination while preserving utility | do Venus provenance/authority/memory dispositions add security beyond mature information-flow/capability defenses? |
 
 ## Primary references checked for this snapshot
 
@@ -42,6 +45,12 @@ new SOTA
 - **CausalGame**: https://arxiv.org/abs/2607.04293
 - Meta, **V-JEPA 2**: https://ai.meta.com/research/vjepa/
 - Epoch AI, **FrontierMath Open Problems**: https://epoch.ai/frontiermath/open-problems
+- **SEAGym** (self-evolving agent-harness evaluation): https://arxiv.org/abs/2606.17546
+- **PACE** (statistically valid self-evolution acceptance): https://arxiv.org/abs/2606.08106
+- **AgentAbstain** (agentic abstention): https://arxiv.org/abs/2607.10059
+- **Agentic Abstention** (sequential answer/gather/stop decisions): https://arxiv.org/abs/2606.28733
+- **AgentDojo** (indirect prompt-injection benchmark): https://github.com/ethz-spylab/agentdojo
+- **AgentDyn** (dynamic prompt-injection evaluation): https://arxiv.org/abs/2602.03117
 
 ## Watch triggers
 
