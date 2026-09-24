@@ -197,6 +197,7 @@ def update_from_cycle_prs(
         if markers is None:
             continue
         _cycle_id, features, custody = markers
+        pattern_digest = digest({name: bool(features[name]) for name in FEATURE_NAMES})
 
         reward = _returned_reward(pr)
         if reward is None:
@@ -214,12 +215,12 @@ def update_from_cycle_prs(
         current = WorkLearningState(
             seen_cycle_prs=current.seen_cycle_prs,
             weights=weights,
-            learning_rate=_next_learning_rate(current, reward, custody),
+            learning_rate=_next_learning_rate(current, reward, pattern_digest),
             min_learning_rate=current.min_learning_rate,
             max_learning_rate=current.max_learning_rate,
             max_abs_weight=current.max_abs_weight,
             last_reward=reward,
-            last_feature_digest=custody,
+            last_feature_digest=pattern_digest,
         )
         seen.add(number)
 
