@@ -35,8 +35,7 @@
     {
       "profile_id": "AUTONOMY_GOVERNANCE",
       "match_title_terms": [
-        "autonomous",
-        "autonomy"
+        "autonomous"
       ],
       "match_repository_path_prefixes": [
         "kernel/development/autonomous_",
