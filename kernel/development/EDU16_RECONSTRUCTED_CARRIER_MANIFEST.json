@@ -1,0 +1,134 @@
+{
+  "schema": "Venus.EDU16ReconstructedCarrierManifest.v0.1",
+  "carrier_id": "EDU16-RC1",
+  "status": "PREFROZEN_RECONSTRUCTION_CONTRACT",
+  "reconstruction_scope": "claim-bearing developmental state only",
+  "historical_event_replay": false,
+  "original_runner_recovered": false,
+  "original_journal_recovered": false,
+  "runtime_base": {
+    "id": "IG10",
+    "path": "kernel/state/IG10_HOT_CHECKPOINT.json",
+    "exact_git_checkpoint": true
+  },
+  "source_vector_sha256": "ce0c961cee4976959a30a3af1a807abae3dd13fad949338a63a28937627bb2b1",
+  "expected_reconstructed_state_sha256": "91e46b4e41fb70a97d6a004b8f1c8916c389f08535c1a1c1c51a040701281bb7",
+  "sources": [
+    {
+      "path": "kernel/state/IG10_HOT_CHECKPOINT.json",
+      "git_blob_sha": "9aef6a54076b28b4a27f1004312fdc5a3e6d560b",
+      "role": "exact runtime base",
+      "canonical_origin": "/Canonical/Future/Handoff/IG10CurrentDevelopedVM/"
+    },
+    {
+      "path": "provenance/developmental/EDU/EDU13_SELF_CURRICULUM_TARGET_GENERATION_PREFREEZE.md",
+      "git_blob_sha": "956a4b86360e9964b8aed10e7feff26c1fa7bb55",
+      "role": "EDU13 frozen contract",
+      "canonical_origin": "/Canonical/Future/Execution/Raising/EDU13SelfCurriculumTarget/"
+    },
+    {
+      "path": "provenance/developmental/EDU/EDU13_SELF_CURRICULUM_TARGET_GENERATION_RESULT.md",
+      "git_blob_sha": "9611f1a7e37a31e24da18a49ba73777484ffcbaf",
+      "role": "EDU13 result",
+      "canonical_origin": "/Canonical/Future/Execution/Raising/EDU13SelfCurriculumTarget/"
+    },
+    {
+      "path": "provenance/developmental/EDU/EDU14_SELF_CURRICULUM_OPEN_DOMAIN_PROBLEM_SELECTION_PREFREEZE.md",
+      "git_blob_sha": "ed030f62dc0000b3138a3f7165062638f2a6ac3d",
+      "role": "EDU14 frozen contract",
+      "canonical_origin": "/Canonical/Future/Execution/Raising/EDU14OpenDomainProblemSelection/"
+    },
+    {
+      "path": "provenance/developmental/EDU/EDU14_SELF_CURRICULUM_OPEN_DOMAIN_PROBLEM_SELECTION_RESULT.md",
+      "git_blob_sha": "ede247c90b7cb70dd9914c6e558ef2970cc8363c",
+      "role": "EDU14 result",
+      "canonical_origin": "/Canonical/Future/Execution/Raising/EDU14OpenDomainProblemSelection/"
+    },
+    {
+      "path": "provenance/developmental/EDU/EDU15_SELF_PREREGISTRATION_PREFREEZE.md",
+      "git_blob_sha": "f9e7af3efb5c46ef726969808534a7a9794d6f9b",
+      "role": "EDU15 frozen contract",
+      "canonical_origin": "/Canonical/Future/Execution/Raising/EDU15SelfPreregistration/"
+    },
+    {
+      "path": "provenance/developmental/EDU/EDU15_SELF_PREREGISTRATION_RESULT.md",
+      "git_blob_sha": "44e823f1766d0221dde76b81a80cf4869dbb91e6",
+      "role": "EDU15 WITHHOLD result",
+      "canonical_origin": "/Canonical/Future/Execution/Raising/EDU15SelfPreregistration/"
+    },
+    {
+      "path": "provenance/developmental/EDU/EDU15R1_SELF_PREREGISTRATION_VERIFIER_REPAIR.md",
+      "git_blob_sha": "4462a4dfe746f38d450c8a78fb5b304ca9fea8c2",
+      "role": "EDU15R1 repair contract",
+      "canonical_origin": "/Canonical/Future/Execution/Raising/EDU15R1VerifierRepair/"
+    },
+    {
+      "path": "provenance/developmental/EDU/EDU15R1_SELF_PREREGISTRATION_VERIFIER_REPAIR_RESULT.md",
+      "git_blob_sha": "8911e4d39e8b541a29bcaf2dd11a42ecdb6971c0",
+      "role": "EDU15R1 result",
+      "canonical_origin": "/Canonical/Future/Execution/Raising/EDU15R1VerifierRepair/"
+    },
+    {
+      "path": "provenance/developmental/EDU/EDU16_WORLD_FEED_SAMPLING_POLICY_PREFREEZE.md",
+      "git_blob_sha": "8cfd21b46f3b281c6f753f400d6f902dc5f3ce4e",
+      "role": "EDU16 frozen contract",
+      "canonical_origin": "/Canonical/Future/Execution/Raising/EDU16LearnerOwnedFeedPolicy/"
+    },
+    {
+      "path": "provenance/developmental/EDU/EDU16_LEARNER_GENERATED_WORLD_FEED_POLICY.json",
+      "git_blob_sha": "dfb5e69a6eccca02d953122ceb765d083a351714",
+      "role": "EDU16 learner-generated policy",
+      "canonical_origin": "/Canonical/Future/Execution/Raising/EDU16LearnerOwnedFeedPolicy/"
+    },
+    {
+      "path": "provenance/developmental/EDU/EDU16_WORLD_FEED_SAMPLING_POLICY_RESULT.md",
+      "git_blob_sha": "9ad96c1932bf65c9c4f114e645cf32bd066f283e",
+      "role": "EDU16 result",
+      "canonical_origin": "/Canonical/Future/Execution/Raising/EDU16LearnerOwnedFeedPolicy/"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "EDU13",
+      "records": 1676,
+      "head": "a4f73bbb24ac315087185f7e1066f849e3020049ef5e84ae427d2620dbdc9ded",
+      "sha256": "7f07f0c834f89fada5159688fb3a5cfa22d730f3acfa93bcf8423f7bf4dacc21",
+      "verdict": "PASS_BOUNDED_SELF_CURRICULUM_TARGET_GENERATION",
+      "result_path": "provenance/developmental/EDU/EDU13_SELF_CURRICULUM_TARGET_GENERATION_RESULT.md"
+    },
+    {
+      "id": "EDU14",
+      "records": 1691,
+      "head": "cf3afb50a7541dc46c657b6e4c97c15102a751657c83596aa457e3f49fa010b1",
+      "sha256": "711c7f6e6c279e0eb27e109ff8ba59c7b6171b4ede2974dbc553e9c9663b19db",
+      "verdict": "PASS_BOUNDED_SELF_CURRICULUM_OPEN_DOMAIN_PROBLEM_SELECTION",
+      "result_path": "provenance/developmental/EDU/EDU14_SELF_CURRICULUM_OPEN_DOMAIN_PROBLEM_SELECTION_RESULT.md"
+    },
+    {
+      "id": "EDU15",
+      "records": 1697,
+      "head": "71c4cb66e532d37100d2b4f4192f2fba892fed9e1296716920bcf323f2dda927",
+      "sha256": "dca689cf5d23b4b7b0fd14b591610744d7213ece9b7ad4451a3336bfc4fd8565",
+      "verdict": "WITHHOLD_EDU15",
+      "result_path": "provenance/developmental/EDU/EDU15_SELF_PREREGISTRATION_RESULT.md"
+    },
+    {
+      "id": "EDU15R1",
+      "records": 1699,
+      "head": "cb3bd4e27e4964bee816bc2348353b43845e91ca75a8b8fb070d1991946af186",
+      "sha256": "a9ff6a77ba38ede840a9700d1aca3865ec65fac0423b5566343437b24876f3ee",
+      "verdict": "PASS_BOUNDED_SELF_PREREGISTRATION_GATE_OWNERSHIP",
+      "result_path": "provenance/developmental/EDU/EDU15R1_SELF_PREREGISTRATION_VERIFIER_REPAIR_RESULT.md"
+    },
+    {
+      "id": "EDU16",
+      "records": 1703,
+      "head": "6e02302abafb9f31ee5cb1b6f6d69a4e5c1e750371f99c4ee640f259f228c81e",
+      "sha256": "bde664e4bc2c45bc961720fc83e907a9c6b09ce581ccdfb61b8fb7bf5897e414",
+      "verdict": "PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY",
+      "result_path": "provenance/developmental/EDU/EDU16_WORLD_FEED_SAMPLING_POLICY_RESULT.md"
+    }
+  ],
+  "boundary": "EDU16-RC1 reconstructs the exact admitted claim-bearing developmental state from content-addressed recovered artifacts. It is not the lost historical 1703-event journal and cannot be cited as event-level replay.",
+  "successor_rule": "Prospective successor work may use EDU16-RC1 as an explicitly reconstructed parent carrier. It may not claim recovery of the original EDU16 runner/journal."
+}
