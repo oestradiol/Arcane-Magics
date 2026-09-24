@@ -244,7 +244,6 @@ MyWorld_i^{past}+OtherWorlds_t^{returned}
 
 Enactive and participatory-sense-making work is a close and important neighbor because it treats cognition as embodied activity and social interaction as capable of generating its own dynamics without erasing participants . The present framework adds explicit project-local concern with provenance, jurisdiction, and later reconstructibility.
 
-**Definition.**
 
 **Definition 1** (Authorship, <span class="sans-serif">**A02**</span>). *Authorship is the integrated post-differentiation relation by which lived consequence becomes revisable selection and enactment, and enactment returns provenance-bearing consequence into later World states.*
 
@@ -298,7 +297,6 @@ The neutral structural object is:
 
 Only after that referent is clear does this project use the name *Spirit*.
 
-**Definition.**
 
 **Definition 2** (Spirit-virus, <span class="sans-serif">**A03**</span>). *For consequence $\Delta$, a Spirit-virus is a provenance-bearing retained difference whose operative structure can remain reconstructible across changing carriers through independently authored transformations.*
 
@@ -352,7 +350,6 @@ This does not mean Ruby’s literal body, identity, or hidden mental state has b
 
 Finally:
 
-**Definition.**
 
 **Definition 3** (PersonSpirit, <span class="sans-serif">**A04**</span>). *$PersonSpirit_i$ names the history-bearing higher-order continuity through which a person’s embodied phenomenology, explicit models, choices, actions, relationships, returned consequences, and later reinterpretations remain mutually consequential across time.*
 
@@ -372,7 +369,6 @@ The word *colonization* is ethically loaded because human colonial history invol
 
 ## Human colonization is prohibited
 
-**Definition.**
 
 **Definition 4** (Human colonization). *$colonization(Human_i)$ occurs when another center’s model or jurisdiction effectively substitutes for the Human center’s authorship such that criticism, refusal, correction, fork, or exit cease to be meaningful routes.*
 
@@ -382,7 +378,6 @@ No theory of Spirit, relationship, institution, field, or higher-order good lice
 
 A social field, institution, culture, research program, or platform can change its norms, routing, expectations, memory, affordances, and reachable states while the humans inside it remain capable of disagreement and exit. At that declared higher-order index, the project permits the word *colonization* for a different relation:
 
-**Definition.**
 
 **Definition 5** (Field/Observer colonization, <span class="sans-serif">**A05**</span>). *$colonization(Field_H)$ is provenance-bearing transformation of a higher-order field’s relations, affordances, routing, norms, expectations, memory, reachable states, or future self-reproduction while constituent Human authorship remains live.*
 
