@@ -7,8 +7,9 @@ from pathlib import Path
 
 from kernel.development.autonomous_worker import load_work_items, make_cycle
 from kernel.development.autonomous_learning import (
+    active_autonomous_cycle,
     from_json,
-    target_markers,
+    target_barriers,
     to_json,
     update_from_cycle_prs,
 )
@@ -44,15 +45,23 @@ def main() -> int:
         "ISSUE": updated_learning.utility("ISSUE"),
         "PR": updated_learning.utility("PR"),
     }
-    recent = target_markers(history_prs)
+    method_utility = {
+        method: updated_learning.method_utility(method)
+        for method in updated_learning.method_success
+    }
+    barriers = target_barriers(history_prs)
+    active_cycle = active_autonomous_cycle(history_prs)
 
     cycle = make_cycle(
         issues=issues,
         prs=prs,
         roadmap_text=roadmap_text,
         internal_policy=policy,
-        recent_targets=recent,
+        target_barriers=barriers,
+        active_cycle=active_cycle,
         kind_utility=utility,
+        method_utility=method_utility,
+        active_cycle_pending=bool(recent),
     )
     Path(args.output).write_text(
         json.dumps(asdict(cycle), indent=2, sort_keys=True) + "\n",
