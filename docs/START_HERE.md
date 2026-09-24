@@ -55,6 +55,7 @@ Concrete examples:
 - **EDU16:** generated and froze its own bounded World-feed query policy before new World access.
 - **EDU17:** looked successful locally, but was rejected when answer claims depended on a returned document outside the committed selected evidence set.
 - **EDU17R1:** stopped before claim-binding evaluation because its inherited uncertainty detector confused mention with incidence.
+- **EDU17R1-RC1:** later froze a learner-side public-development repair candidate and ownership receipt before hidden #31 exposure; efficacy remains untested.
 
 The architectural shorthand is therefore:
 
@@ -121,6 +122,7 @@ Current automated tests are intentionally narrower than the research program:
 - persistent memory / provenance / consumption: `tests/test_venus_memory.py`;
 - state-owned generic-search scaffold removal/equivalence: `scripts/audit_generic_search_internalization.py`;
 - Internalizer O*/Anti-Minerva correction guards: `tests/test_internalizer.py`;
+- frozen EDU17R1 semantic-ingress candidate/ownership: `tests/test_edu17r1_semantic_ingress.py` and `scripts/audit_edu17r1_semantic_ingress.py`;
 - forum export regressions: `tests/test_export_forum.py`.
 
 The historical and issue-level coverage plan is [TEST_COVERAGE_MATRIX.md](TEST_COVERAGE_MATRIX.md), backed by the machine-readable [historical distinction matrix](../provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json).
