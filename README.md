@@ -4,7 +4,7 @@
 
 **A research program in developmental intelligence, operational equivalence, relational reconstruction, and open-ended cross-register inquiry.**
 
-[What Venus actually is](docs/PUBLIC_VALUE.md) · [Earned milestones](docs/EARNED_MILESTONES.md) · [Evaluation](docs/EVALUATION_CONSTITUTION.md) · [SOTA watch](docs/SOTA_WATCH.md) · [Credits / reductions](docs/CREDITS_AND_REDUCTIONS.md) · [Research frontier](docs/FRONTIER_RESEARCH.md) · [Venus state](kernel/CURRENT_STATE.md) · [Contribute](CONTRIBUTING.md) · [Sponsor](https://github.com/sponsors/oestradiol)
+[What Venus actually is](docs/PUBLIC_VALUE.md) · [Earned milestones](docs/EARNED_MILESTONES.md) · [Evaluation](docs/EVALUATION_CONSTITUTION.md) · [Tests](docs/TESTS.md) · [SOTA watch](docs/SOTA_WATCH.md) · [Credits / reductions](docs/CREDITS_AND_REDUCTIONS.md) · [Research frontier](docs/FRONTIER_RESEARCH.md) · [Venus state](kernel/CURRENT_STATE.md) · [Contribute](CONTRIBUTING.md) · [Sponsor](https://github.com/sponsors/oestradiol)
 
 </div>
 
@@ -133,7 +133,7 @@ make forum
 make release
 ```
 
-CI checks reader-facing Markdown, proof containers, persistent-memory tests, repository/current-state invariants, compact custody metadata, publication builds, and release packaging. Generated forum Markdown is an editing substrate until its cross-references and argument structure pass the public-surface audit.
+CI checks reader-facing Markdown, proof containers, persistent-memory tests, repository/current-state invariants, historical causal-distinction coverage, live open-issue test ownership, compact custody metadata, publication builds, and release packaging. Generated forum Markdown is an editing substrate until its cross-references and argument structure pass the public-surface audit.
 
 ## Contribute, criticize, replicate
 
