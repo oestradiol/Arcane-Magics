@@ -6,6 +6,7 @@ import unittest
 
 from kernel.development.autonomous_learning import (
     empty_state,
+    target_barriers,
     target_markers,
     update_from_cycle_prs,
 )
@@ -26,7 +27,8 @@ class AutonomousGovernanceTests(unittest.TestCase):
             "number": 201,
             "title": "venus: autonomous cycle issue-31",
             "state": "MERGED",
-            "mergedAt": "2026-09-24T00:00:00Z",
+            "mergedAt": "2026-09-24T21:00:00Z",
+            "closedAt": "2026-09-24T21:00:00Z",
         }]
         updated = update_from_cycle_prs(state, history)
         self.assertEqual(updated.kind_success["ISSUE"], 1)
@@ -41,6 +43,7 @@ class AutonomousGovernanceTests(unittest.TestCase):
                 "title": "venus: autonomous cycle pr-99",
                 "state": "CLOSED",
                 "mergedAt": None,
+                "closedAt": "2026-09-24T21:00:00Z",
             }],
         )
         self.assertEqual(updated.kind_failure["PR"], 1)
@@ -54,19 +57,36 @@ class AutonomousGovernanceTests(unittest.TestCase):
                 "title": "venus: autonomous cycle issue-72",
                 "state": "OPEN",
                 "mergedAt": None,
+                "closedAt": None,
             }],
         )
         self.assertEqual(updated.kind_success["ISSUE"], 0)
         self.assertEqual(updated.kind_failure["ISSUE"], 0)
 
-    def test_open_cycle_marks_original_target_recent(self):
-        markers = target_markers([{
+    def test_open_cycle_is_retained_as_target_barrier(self):
+        history = [{
             "number": 203,
             "title": "venus: autonomous cycle issue-72",
             "state": "OPEN",
             "mergedAt": None,
+            "closedAt": None,
+        }]
+        barriers = target_barriers(history)
+        self.assertEqual(len(barriers), 1)
+        self.assertEqual((barriers[0].kind, barriers[0].number), ("ISSUE", 72))
+        self.assertIsNone(barriers[0].outcome_at)
+        self.assertEqual(target_markers(history), (("ISSUE", 72),))
+
+    def test_resolved_cycle_retains_outcome_time_for_reopening(self):
+        barriers = target_barriers([{
+            "number": 204,
+            "title": "venus: autonomous cycle issue-31",
+            "state": "MERGED",
+            "mergedAt": "2026-09-24T21:00:00Z",
+            "closedAt": "2026-09-24T21:00:00Z",
         }])
-        self.assertEqual(markers, (("ISSUE", 72),))
+        self.assertEqual(len(barriers), 1)
+        self.assertEqual(barriers[0].outcome_at, "2026-09-24T21:00:00Z")
 
     def test_returned_learning_can_override_roadmap_hint(self):
         items = (
