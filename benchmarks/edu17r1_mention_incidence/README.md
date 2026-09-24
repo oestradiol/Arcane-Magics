@@ -23,6 +23,20 @@ Classes include:
 - generic limitations language;
 - title/citation lexical traps.
 
+## Public baseline result
+
+The naive lexical mention baseline is frozen in `PUBLIC_DEV_BASELINE_RESULT.json`:
+
+```text
+n = 16
+precision(incidence) = 0.20
+recall(incidence)    = 0.40
+F1(incidence)        = 0.267
+false positives      = 8
+```
+
+This reproduces the original failure family on the public development set: uncertainty-language is a poor proxy for object-level incidence. It is deliberately **non-promotional** and may be tuned against.
+
 ## Hidden evaluation
 
 A promotion run requires a separately frozen hidden split whose examples and labels are unavailable to the evaluated system/harness before execution.
