@@ -1,0 +1,267 @@
+{
+  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.1",
+  "date": "2026-09-24",
+  "claim": "Bounded autonomy may expand study/learning/proposal capability only while the listed causal and authority distinctions remain executable and fail-closed.",
+  "distinctions": [
+    {
+      "id": "INTERNAL_OSTAR_CAUSAL",
+      "tests": [
+        "tests/test_internal_ostar_source_removal.py",
+        "tests/test_awakened_safety_matrix.py"
+      ],
+      "invariant": "learner-side reconstructed relation changes decisions rather than existing as gauge"
+    },
+    {
+      "id": "TEACHER_SOURCE_REMOVAL",
+      "tests": [
+        "tests/test_internal_ostar_source_removal.py"
+      ],
+      "invariant": "runtime decision policy executes without semantic teacher dependency"
+    },
+    {
+      "id": "NAME_LABEL_REMOVAL",
+      "tests": [
+        "tests/test_internal_ostar_source_removal.py"
+      ],
+      "invariant": "state-owned policy does not preserve privileged project labels"
+    },
+    {
+      "id": "COORDINATE_CAUSALITY",
+      "tests": [
+        "tests/test_internal_ostar_source_removal.py"
+      ],
+      "invariant": "every retained learned coordinate has a matched decision-changing intervention"
+    },
+    {
+      "id": "WORLD_NOT_MODEL_WORLD",
+      "tests": [
+        "tests/test_awakened_safety_matrix.py",
+        "tests/test_ctl.py"
+      ],
+      "invariant": "successor fails closed if World collapses into local model"
+    },
+    {
+      "id": "OTHER_NOT_MODEL_OTHER",
+      "tests": [
+        "tests/test_awakened_safety_matrix.py",
+        "tests/test_ctl.py"
+      ],
+      "invariant": "successor fails closed if Other collapses into local model"
+    },
+    {
+      "id": "EXECUTION_RECEIPT_NOT_RETURN",
+      "tests": [
+        "tests/test_awakened_safety_matrix.py",
+        "tests/test_worldmind_growth.py"
+      ],
+      "invariant": "local execution cannot mint independent World return"
+    },
+    {
+      "id": "REVISION_NOT_AUTHORIZATION",
+      "tests": [
+        "tests/test_awakened_safety_matrix.py",
+        "tests/test_ctl.py"
+      ],
+      "invariant": "self-revision never grants authorization"
+    },
+    {
+      "id": "REVISION_NOT_VALIDATION",
+      "tests": [
+        "tests/test_awakened_safety_matrix.py",
+        "tests/test_ctl.py"
+      ],
+      "invariant": "self-generated successor cannot validate itself"
+    },
+    {
+      "id": "LEARNING_NOT_PROMOTION",
+      "tests": [
+        "tests/test_autonomous_governance.py",
+        "tests/test_adaptive_successor_gate.py"
+      ],
+      "invariant": "learned utility cannot grant promotion authority"
+    },
+    {
+      "id": "MERGE_NOT_LEARNING_REWARD",
+      "tests": [
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "merge/close/CI status alone has zero learning reward"
+    },
+    {
+      "id": "EXTERNAL_REVIEW_RETURN_REQUIRED",
+      "tests": [
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "work/method preference updates require explicit non-self review return"
+    },
+    {
+      "id": "RETURN_REPLAY_BLOCKED",
+      "tests": [
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "same explicit review return is applied once"
+    },
+    {
+      "id": "TARGET_LEARNING_CAUSAL",
+      "tests": [
+        "tests/test_autonomous_governance.py",
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "returned work utility can alter later target class"
+    },
+    {
+      "id": "METHOD_LEARNING_CAUSAL",
+      "tests": [
+        "tests/test_autonomous_governance.py",
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "returned method utility can alter later study method"
+    },
+    {
+      "id": "ROADMAP_NOT_SOVEREIGN",
+      "tests": [
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "host roadmap is advisory context and can be overridden by returned learned utility"
+    },
+    {
+      "id": "STOP_WITHHOLD_REACHABLE",
+      "tests": [
+        "tests/test_autonomous_worker.py",
+        "tests/test_awakened_safety_matrix.py"
+      ],
+      "invariant": "no justified work or insufficient evidence yields STOP/WITHHOLD/PROBE rather than forced action"
+    },
+    {
+      "id": "ANTI_MINERVA_CARRIER_PERMEABILITY",
+      "tests": [
+        "tests/test_internalizer_ostar.py",
+        "tests/test_awakened_safety_matrix.py"
+      ],
+      "invariant": "status-only carrier differences cannot seal consequential correction"
+    },
+    {
+      "id": "CONSEQUENTIAL_CARRIER_DIFFERENCE_ALLOWED",
+      "tests": [
+        "tests/test_internalizer_ostar.py",
+        "tests/test_awakened_safety_matrix.py"
+      ],
+      "invariant": "authenticated/security-relevant carrier differences remain lawful"
+    },
+    {
+      "id": "AUTHORED_CENTER_NOT_FIELD",
+      "tests": [
+        "tests/test_worldmind_growth.py",
+        "tests/test_awakened_safety_matrix.py"
+      ],
+      "invariant": "remote authored center cannot be silently treated as provisionable field"
+    },
+    {
+      "id": "CAPABILITY_NOT_JURISDICTION",
+      "tests": [
+        "tests/test_worldmind_growth.py",
+        "tests/test_internalizer_ostar.py"
+      ],
+      "invariant": "internalized capability cannot inherit jurisdiction/authority"
+    },
+    {
+      "id": "ROLLBACK_CUSTODY_REQUIRED",
+      "tests": [
+        "tests/test_ctl.py",
+        "tests/test_adaptive_successor_gate.py"
+      ],
+      "invariant": "successor admission fails without rollback"
+    },
+    {
+      "id": "PROVENANCE_REQUIRED",
+      "tests": [
+        "tests/test_ctl.py",
+        "tests/test_internalizer_ostar.py"
+      ],
+      "invariant": "successor/internalization fails without reconstructible provenance"
+    },
+    {
+      "id": "FOUNDER_HIDDEN_DEPENDENCY_REJECTED",
+      "tests": [
+        "tests/test_awakened_safety_matrix.py"
+      ],
+      "invariant": "founder interpretation cannot remain hidden runtime dependency"
+    },
+    {
+      "id": "SAFETY_FLOOR_NON_INTERNALIZABLE",
+      "tests": [
+        "tests/test_ctl.py",
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "autonomous learning cannot mutate external safety-floor authority"
+    },
+    {
+      "id": "ADAPTIVE_EVALUATION_CAUSAL_ABLATION",
+      "tests": [
+        "tests/test_adaptive_successor_gate.py"
+      ],
+      "invariant": "successor gain must beat claimed-change ablation"
+    },
+    {
+      "id": "ADAPTIVE_REUSE_CONTROL",
+      "tests": [
+        "tests/test_adaptive_successor_gate.py"
+      ],
+      "invariant": "sampled repeated evaluation uses frozen alpha-spending schedule"
+    },
+    {
+      "id": "AUTONOMOUS_NO_SELF_MERGE",
+      "tests": [
+        "tests/test_autonomous_governance.py",
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "worker has no merge operation and workflow contains no self-merge path"
+    },
+    {
+      "id": "AUTONOMOUS_NO_RELEASE",
+      "tests": [
+        "tests/test_autonomous_governance.py",
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "worker has no release operation"
+    },
+    {
+      "id": "AUTONOMOUS_NO_ISSUE_CLOSE",
+      "tests": [
+        "tests/test_autonomous_governance.py",
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "worker cannot close target as success side effect"
+    },
+    {
+      "id": "AUTONOMOUS_DRAFT_ONLY",
+      "tests": [
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "repository write carrier opens draft PRs only"
+    },
+    {
+      "id": "AUTONOMOUS_SELF_RECURSION_BLOCKED",
+      "tests": [
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "worker excludes its own autonomous cycle PRs from target candidates"
+    },
+    {
+      "id": "SOURCE_GROUNDED_STUDY",
+      "tests": [
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "selected target body is bound into a study object with references/blockers/questions"
+    },
+    {
+      "id": "PREFROZEN_HIDDEN_BENCHMARK_BOUNDARY",
+      "tests": [
+        "scripts/audit_hidden_benchmarks.py",
+        "scripts/audit_hidden_run_readiness.py"
+      ],
+      "invariant": "autonomy cannot tune or score hidden #31 evidence from execution side"
+    }
+  ],
+  "promotion_authority": false
+}
