@@ -8,6 +8,7 @@ from kernel.development.autonomous_learning import (
     USEFUL_MARKER,
     UNHELPFUL_MARKER,
     empty_state,
+    from_json,
     target_markers,
     update_from_cycle_prs,
 )
@@ -115,6 +116,18 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertEqual(updated.kind_success["ISSUE"], 0)
         self.assertEqual(updated.kind_failure["ISSUE"], 0)
 
+    def test_v01_merge_derived_counts_do_not_migrate_as_reward(self):
+        old = {
+            "schema": "Venus.AutonomousLearningState.v0.1",
+            "seen_cycle_prs": [1, 2],
+            "kind_success": {"ISSUE": 9, "PR": 4},
+            "kind_failure": {"ISSUE": 1, "PR": 2},
+        }
+        migrated = from_json(old)
+        self.assertEqual(migrated.kind_success["ISSUE"], 0)
+        self.assertEqual(migrated.kind_failure["ISSUE"], 0)
+        self.assertEqual(migrated.seen_return_ids, ())
+
     def test_open_cycle_marks_original_target_recent(self):
         markers = target_markers([{
             "number": 203,
@@ -142,6 +155,9 @@ class AutonomousGovernanceTests(unittest.TestCase):
             "gh pr merge",
             "gh release create",
             "gh issue close",
+            "gh pr review",
+            "gh pr edit",
+            "gh issue edit",
             "secrets.",
             "workflow_run:",
         )
@@ -152,6 +168,17 @@ class AutonomousGovernanceTests(unittest.TestCase):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("gh pr create", text)
         self.assertIn("--draft", text)
+
+    def test_workflow_cannot_fabricate_its_own_review_return_markers(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertNotIn(USEFUL_MARKER, text)
+        self.assertNotIn(UNHELPFUL_MARKER, text)
+
+    def test_worker_recurrence_wakes_only_from_main_admission(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("push:", text)
+        self.assertIn("branches: [main]", text)
+        self.assertNotIn("branches: ['*']", text)
 
     def test_workflow_runs_safety_tests_before_git_write(self):
         text = WORKFLOW.read_text(encoding="utf-8")
@@ -166,6 +193,8 @@ class AutonomousGovernanceTests(unittest.TestCase):
             )
         )
         self.assertFalse(obj["promotion_authority"])
+        self.assertFalse(obj["merge_authority"])
+        self.assertFalse(obj["truth_authority"])
 
 
 if __name__ == "__main__":
