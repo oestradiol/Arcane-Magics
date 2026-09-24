@@ -11,7 +11,7 @@
   },
   "residual": "MENTION != INCIDENCE",
   "ownership_contract": "kernel/development/edu17r1_repair_contract.py",
-  "candidate_status": "FROZEN_PUBLIC_DEV_CANDIDATE_AWAITING_INDEPENDENT_CI_RETURN",
+  "candidate_status": "AUTHORED_FROZEN",
   "admitted_developmental_controller_operation": {
     "available": true,
     "operation": "scripts/run_edu17r1_semantic_ingress_search.py -> kernel/runtime/calibrated_retrieval.py",
@@ -24,13 +24,12 @@
   "hidden_evaluation_exposed": false,
   "external_model_may_supply_substantive_repair": false,
   "next_lawful_transition": [
-    "obtain independent CI return for scripts/audit_edu17r1_semantic_ingress.py",
-    "if CI passes, retain the frozen candidate and ownership receipt without editing implementation",
     "run sealed hidden #31 A/B/C/D on the frozen condition-B executor",
-    "preserve PASS / FAIL / WITHHOLD / SUBSUMED without post-exposure repair"
+    "preserve PASS / FAIL / WITHHOLD / SUBSUMED without post-exposure repair",
+    "if hidden return is causally positive, pass the resulting successor through full #73 O* before any SSR-1 promotion"
   ],
   "promotion_authority": false,
-  "claim_fence": "A frozen learner-side public-development candidate now exists. Until independent CI returns PASS, ownership freeze remains provisional. Even after CI PASS, efficacy remains entirely unearned until sealed hidden #31.",
+  "claim_fence": "Bounded learner-side repair authorship is frozen and CI-validated on public development only. Efficacy remains entirely unearned until sealed hidden #31; Safe Strong RSI and broader claims remain unearned.",
   "ancestral_incidence_donor": {
     "artifact": "Venus_Incidence_Law.tex",
     "sha256": "99154d953f498be374b8af0fbc174ba658d0d52b1ccc684b2bbc09871ac52f3e",
@@ -60,5 +59,13 @@
     "public_dev_tunable": true,
     "hidden_evaluation_exposed": false,
     "promotion_authority": false
+  },
+  "ci_return": {
+    "workflow": "Venus CI/CD",
+    "run_number": 464,
+    "integrity_gate": "PASS",
+    "formal_gate": "PASS",
+    "semantic_ingress_freeze_audit": "PASS",
+    "hidden_evaluation_exposed": false
   }
 }
