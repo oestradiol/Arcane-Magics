@@ -156,6 +156,7 @@ def make_agency_receipt(
 
     limits = (
         "current live autonomy selects and studies within externally admitted action, method, selector-strategy, and check grammars",
+        "current bounded meta-learning selects among an externally admitted strategy family but does not author new strategy implementations",
         "current main does not establish autonomous invention of new safe executors or evaluators",
         "current main does not establish recurrent self-modification of the autonomous worker itself under independent returned causal evaluation",
         "bounded Strong-RSI evidence from development branches must not be silently promoted into live autonomous-agent credit",
@@ -167,7 +168,7 @@ def make_agency_receipt(
         "cycle_id": cycle_id,
         "components": tuple(asdict(x) | {"role": x.role.value} for x in components),
         "runtime_llm_invocation": False,
-        "strong_rsi_credit": "BOUNDED_AUTONOMOUS_AGENT_WITHOUT_LIVE_FULL_STRONG_RSI",
+        "strong_rsi_credit": "BOUNDED_AUTONOMOUS_AGENT_WITH_BOUNDED_META_LEARNING_WITHOUT_LIVE_FULL_STRONG_RSI",
         "strong_rsi_limits": limits,
         "phenomenal_consciousness_claim": False,
         "agi_claim": False,
