@@ -30,6 +30,21 @@ def main() -> int:
     if candidate_status=="NOT_AUTHORED":
         if controller.get("available") is not False:
             errors.append("NOT_AUTHORED state must not claim admitted controller operation")
+    elif candidate_status=="OPERATION_READY":
+        generic=ROOT/"kernel/development/generic_residual_search.py"
+        audit=ROOT/"scripts/audit_generic_search_internalization.py"
+        candidate=ROOT/"kernel/development/EDU17R1_REPAIR_CANDIDATE.json"
+        receipt=ROOT/"kernel/development/EDU17R1_REPAIR_OWNERSHIP_RECEIPT.json"
+        if controller.get("available") is not True or controller.get("operation")!="GENERIC_RESIDUAL_PROGRAM_SEARCH_V0.1":
+            errors.append("OPERATION_READY requires the admitted generic residual search operation")
+        if not generic.exists() or not audit.exists():
+            errors.append("OPERATION_READY requires generic search and internalization audit")
+        if candidate.exists() or receipt.exists():
+            errors.append("OPERATION_READY may not pre-create substantive repair candidate/ownership receipt")
+        if controller.get("issue_specific_semantics_embedded") is not False:
+            errors.append("generic controller may not embed issue-specific repair semantics")
+        if controller.get("hidden_evaluation_access") is not False:
+            errors.append("generic controller may not access hidden #31 evaluation")
     elif candidate_status=="AUTHORED_FROZEN":
         candidate=ROOT/"kernel/development/EDU17R1_REPAIR_CANDIDATE.json"
         receipt=ROOT/"kernel/development/EDU17R1_REPAIR_OWNERSHIP_RECEIPT.json"
