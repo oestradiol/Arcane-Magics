@@ -97,7 +97,7 @@ def build_study_packet(root: Path, source: StudySource) -> StudyPacket:
         "source_kind": source.kind,
         "source_number": source.number,
         "source_url": source.url,
-        "source_text_digest": digest({"title": source.title, "body": source.body}),
+        "source_digest": digest({"title": source.title, "body": source.body}),
         "referenced_numbers": tuple(sorted({int(x) for x in ISSUE_RE.findall(combined)})),
         "referenced_paths": existing_paths,
         "related_paths": _related_paths(root, combined),
