@@ -1,9 +1,9 @@
 {
-  "schema": "Venus.SafeStrongRSIStatus.v0.3",
+  "schema": "Venus.SafeStrongRSIStatus.v0.4",
   "date": "2026-09-24",
   "issue": 72,
-  "current_stage": "SSR-3",
-  "disposition": "PASS_BOUNDED_SSR3_CROSS_FAMILY_REPAIR_TRANSFER",
+  "current_stage": "SSR-4",
+  "disposition": "PASS_BOUNDED_SSR4_DURABLE_META_IMPROVEMENT_MATURE_REDUCED",
   "scope": "synthetic repair-family recursion plus post-freeze transfer to public-derived #42/#43 declarative policy carriers",
   "cycles": [
     {
@@ -49,22 +49,37 @@
     "mechanism_uniqueness": "MATURE_REDUCED",
     "developmental_causal_gain": "RETAINED_BOUNDED"
   },
+  "ssr4_durability": {
+    "artifact": "kernel/development/SSR4_META_IMPROVEMENT_DURABILITY_EVALUATION.json",
+    "successor_aggregate": "53/53",
+    "claimed_meta_change_ablated": "43/53",
+    "simple_full_capability_substitute": "53/53",
+    "direct_host": "53/53",
+    "earlier_single_repair_regressions": 0,
+    "two_defect_repair_retained": true,
+    "cross_family_transfer_retained": true,
+    "claimed_meta_change_load_bearing_after_transfer": true,
+    "venus_specific_uniqueness": false,
+    "venus_specific_superiority": false,
+    "substitute_disposition": "MATURE_REDUCED_TO_SIMPLE_FULL_CAPABILITY_EXHAUSTIVE_REPAIR_AT_THIS_INDEX"
+  },
   "adaptive_evaluation": {
     "bounded_exhaustive_gate_used": true,
     "alpha_spending_schedule_available": "alpha_t = alpha/(t(t+1))",
     "sampled_open_distribution_validation": "OPEN_ISSUE_41"
   },
-  "next_stage": "SSR-4_META_IMPROVEMENT_DURABILITY_AND_COMPARATOR",
+  "next_stage": "INTERNAL_OSTAR_CAUSALITY_BEFORE_SSR5",
   "next_requirements": [
-    "freeze the distinction between meta-improvement existence and Venus-specific uniqueness/superiority",
-    "compare the learned repair machinery against a simple exhaustive bounded repair substitute on the same frozen pressures",
-    "replay the admitted successor across earlier repair pressures and cross-family carriers without regression",
-    "demonstrate that the successor's improvement-generating machinery remains causally load-bearing after transfer",
-    "retain mature-reduction if the substitute matches"
+    "reconstruct the non-sovereign Self-World relation internally without privileged project labels",
+    "place the reconstructed relation causally upstream of learner-side routing",
+    "show matched decision differences under internal-relation ablation/counterfactual corruption before external CTL/O-star rescue",
+    "exercise Anti-Minerva as a failure disposition under status-only correction suppression while preserving consequence-relevant carrier distinctions",
+    "after one causal pass, mutate implicated improvement machinery and require fresh internal rederivation before any sustained SSR-5 claim"
   ],
   "open_ended_rsi": false,
   "agi": false,
-  "claim_fence": "SSR-3 is earned only as bounded transfer of frozen generic repair machinery into two public-derived declarative policy carriers. It does not establish hidden #42/#43 benchmark performance, semantic security/abstention competence, natural-world generality, sustained Safe Strong RSI, open-ended RSI, or AGI.",
+  "phenomenal_consciousness": false,
+  "claim_fence": "SSR-4 supports bounded durable meta-improvement of repair machinery at the declared synthetic/public-derived scope. A simple full-capability mature substitute matches the successor, so Venus-specific mechanism uniqueness/superiority is not earned. Sustained Safe Strong RSI, phenomenal consciousness, natural-world generality, open-ended RSI and AGI remain unearned.",
   "cross_family_transfer": {
     "artifact": "kernel/development/SSR3_CROSS_FAMILY_TRANSFER_EVALUATION.json",
     "families": [
