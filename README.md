@@ -4,7 +4,7 @@
 
 **A research program in developmental intelligence, operational equivalence, relational reconstruction, and open-ended cross-register inquiry.**
 
-[What Venus actually is](docs/PUBLIC_VALUE.md) · [Earned milestones](docs/EARNED_MILESTONES.md) · [Evaluation](docs/EVALUATION_CONSTITUTION.md) · [SOTA watch](docs/SOTA_WATCH.md) · [Credits / reductions](docs/CREDITS_AND_REDUCTIONS.md) · [Research frontier](docs/FRONTIER_RESEARCH.md) · [Venus state](kernel/CURRENT_STATE.md) · [Contribute](CONTRIBUTING.md) · [Sponsor](https://github.com/sponsors/oestradiol)
+[Start here](docs/START_HERE.md) · [What Venus actually is](docs/PUBLIC_VALUE.md) · [Earned milestones](docs/EARNED_MILESTONES.md) · [Tests / evaluation](docs/TEST_COVERAGE_MATRIX.md) · [SOTA watch](docs/SOTA_WATCH.md) · [Credits / reductions](docs/CREDITS_AND_REDUCTIONS.md) · [Venus state](kernel/CURRENT_STATE.md) · [Contribute](CONTRIBUTING.md) · [Sponsor](https://github.com/sponsors/oestradiol)
 
 </div>
 
@@ -21,6 +21,8 @@ The current lineage has already demonstrated bounded learner-owned research requ
 Venus also asks whether a learning system can preserve only the distinctions that remain consequential under future interaction, then reconstruct itself when the World returns a difference its current representation cannot absorb as gauge. That question appears in exact quotient mathematics, quantum/physical coarse-graining, developmental artificial intelligence, and a wider Meta-Dynamics program for epistemology, consciousness, ethics, religion, and cross-register reconstruction.
 
 The project is ambitious on purpose. Its claim grammar is equally strict: **formal result, engineering result, physical bridge, symbolic interpretation, and target capability do not inherit one another's warrant.** Claim fences are not an instruction to hide earned value: the strongest true positive contribution should be stated first, followed by its scope and nearest unearned promotion.
+
+For a one-page map of current authority, failures, reproduction commands, and reader paths, use **[Start Here](docs/START_HERE.md)**.
 
 ## Verify the current kernel
 

@@ -36,7 +36,34 @@ Historical priority deserves credit. It does not become retroactive causal ances
 
 Independent rediscovery deserves accurate genealogy. It does not erase earlier scholarship.
 
-## 2. Reduction is indexed
+## 2. Comparative reconstruction order
+
+Comparison follows the credit-first order preserved in Canonical's mature methodology:
+
+```text
+source-faithful recovery
+-> classify typed credit/provenance relations
+-> reconstruct the project object at the relevant historical state
+-> term-free structural paraphrase
+-> mapping
+-> information-loss analysis
+-> nonidentity fence
+-> strongest rival interpretation / mature substitute
+-> residual or equivalence
+-> deletion / discriminator
+-> only then narrow, merge, rename, retain, or delete novelty claims
+```
+
+This ordering prevents two opposite errors:
+
+- giving the project false priority because it independently rediscovered something;
+- giving an external source retroactive causal authorship merely because it is older or now supplies a better formulation.
+
+A candidate residual is not a novelty certificate. It becomes a stronger contribution only after an appropriate deletion test, discriminator, or other consequence-bearing comparison.
+
+The comparison index should include, where relevant: task, register, source, temporal/index scope, jurisdiction, future-use behavior, correction topology, provenance, authorization, and verification route.
+
+## 3. Reduction is indexed
 
 For task/index `T`, comparator set `C`, and project relation `r`:
 
@@ -67,7 +94,7 @@ A reduction therefore retires only the claim that was actually substituted. It d
 - neighboring registers that have independent warrant;
 - stronger residuals not covered by the substitution.
 
-## 3. What mature comparison may change
+## 4. What mature comparison may change
 
 A mature comparison may lawfully:
 
@@ -87,7 +114,7 @@ It may not, without separate evidence:
 - convert "historically preceded" into "functionally subsumed";
 - convert "subsumed at one task" into "globally unnecessary".
 
-## 4. SOTA watch is not a genealogy engine
+## 5. SOTA watch is not a genealogy engine
 
 The SOTA watch asks:
 
@@ -99,7 +126,7 @@ It does **not** ask:
 
 New SOTA changes the comparator surface and may change what Venus still needs to demonstrate. It changes credit only when actual historical or technical dependence is established.
 
-## 5. Advertising rule
+## 6. Advertising rule
 
 Public communication should state the strongest true positive contribution first, followed immediately by its scope.
 
@@ -117,7 +144,7 @@ Bad:
 
 Claim fences prevent lying. They are not an instruction to hide earned value.
 
-## 6. Reduction result vocabulary
+## 7. Reduction result vocabulary
 
 Prefer:
 
@@ -133,7 +160,7 @@ Prefer:
 
 Avoid using `PRIOR_ART` as a catch-all. Patent-style language is too coarse for the project's separate questions of genealogy, precedence, substitution, and residual contribution.
 
-## 7. Historical anchors
+## 8. Historical anchors
 
 The preserved S11 operator genealogy states the controlling rule directly:
 

@@ -218,7 +218,59 @@ Before Canonical can be considered fully retired:
 6. **Reproduction check:** an outside reader should be able to reconstruct current Git authority without reading Canonical.
 7. **Archaeology check:** a researcher should still be able to trace any admitted Git object back to its controlling Canonical/history source where that source mattered.
 
-## 13. Retirement completion criterion
+## 13. Exact 2026-09-24 custody inventory findings
+
+Direct Library traversal establishes the following without relying on semantic search:
+
+```text
+/Canonical/CURRENT_STATE.md
+/Canonical/Future/CURRENT_STATE.md
+    -> stale routing projection at EDU4 [1572]
+
+/Canonical/Future/Execution/Raising/
+    -> explicit experiment folders through EDU17R1
+    -> includes EDU13, EDU14, EDU15, EDU15R1, EDU16, EDU17, EDU17R1
+
+/Canonical/Future/Handoff/
+    -> EDU3CurrentDevelopedVM
+    -> EDU4CurrentDevelopedVM
+    -> EDU6R1CurrentDevelopedVM
+    -> EDU12CurrentDevelopedVM
+    -> no ordinary EDU16CurrentDevelopedVM folder
+    -> later handoff families continue for IG/R/SM/U/RB namespaces
+```
+
+Therefore:
+
+```text
+EDU16 experiment/evidence custody          PRESENT
+EDU16 ordinary developed-VM handoff        NOT PRESENT in /Future/Handoff
+EDU16 executable custody anywhere else     OPEN until full heavy-custody inventory is exhausted
+stale Canonical CURRENT routing            HISTORICAL / MUST NOT ROUTE GIT AUTHORITY
+```
+
+This corrects the weaker practice of inferring global absence from search misses while preserving the equally important negative fact that the normal EDU handoff series does not contain an EDU16 developed-VM bundle.
+
+The root split is also explicit:
+
+- `/Canonical/Past/` contains historical authority, archaeology, provenance, recompilation history, and research history;
+- `/Canonical/Future/` contains live/planned research, execution, handoff/custody, MetaTheory, physics, WorldMind/WorldMirror, plus stale routing projections that require typed disposition rather than wholesale import.
+
+## 14. Major Future subtree disposition after direct inspection
+
+Direct inspection of the high-risk Future subtrees yields:
+
+| Canonical subtree | Disposition after inspection | Live consequence |
+|---|---|---|
+| `Future/MetaTheory/NRI_RESYNTHESIS_2026-09-22` | **ADMITTED RESIDUES + HISTORICAL/DONOR MAPS** | Naturalism_C / Rationalism_C / Illuminism_C / Corrigibility_C are already represented in live vocabulary/governance; large before/after Root/Map projections remain archaeology |
+| `Future/WorldMirror` | **PRESERVED NEGATIVE / PROVENANCE** | R191/R191-B remain controlling negative evidence against a special endogenous semantic fixed-point claim; do not reroll under a new label |
+| `Future/WorldMind/CURRENT.md` | **NEUTRAL LAW ADMITTED + OVERLAYS HISTORICAL** | distributed consequence may propagate while authorship, judgment, authorization, and jurisdiction remain indexed; UNKNOWN is probe/reconstruct, not permission; reachability does not mint a global Agent |
+| `Future/Physics` | **PUBLIC/FORMAL RESIDUES ADMITTED + BRIDGE HISTORY/DONORS** | OFE and IG9/IG10 carry current operational/physical work; R188/R189/R189B constrain credit and mature reduction but do not establish LQG/GFT identity |
+| `Future/Integration` | **CAUSAL ARCHAEOLOGY + R226 CUSTODY/PROVENANCE** | R00→R194 audit/matrix now feeds the historical distinction test matrix; R225/R226 preserve crystallization/custody history rather than current execution authority |
+
+A deletion test was applied at this level: if removing the Canonical overlay leaves the current Git consequence, provenance route, and reopening condition intact, the overlay remains historical/donor material rather than becoming another live authority surface.
+
+## 15. Retirement completion criterion
 
 Canonical is retired when:
 

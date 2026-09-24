@@ -138,6 +138,40 @@ def inspect_basic(md: Path) -> list[str]:
     return errors
 
 
+def split_math_regions(line: str, in_display: bool) -> tuple[str, str, bool]:
+    """Separate prose from TeX math while preserving multiline display-math state.
+
+    Pandoc may close a multiline display and continue prose on the same line.
+    Whole-line toggling misclassifies the math before the closing delimiter as
+    prose. This scanner assigns each segment to the side of the delimiter where
+    it actually occurs, then removes inline $...$ math from the prose channel.
+    """
+    prose_parts: list[str] = []
+    math_parts: list[str] = []
+    pos = 0
+
+    while True:
+        marker = line.find("$" * 2, pos)
+        if marker < 0:
+            (math_parts if in_display else prose_parts).append(line[pos:])
+            break
+
+        (math_parts if in_display else prose_parts).append(line[pos:marker])
+        in_display = not in_display
+        pos = marker + 2
+
+    prose = "".join(prose_parts)
+    inline_math: list[str] = []
+
+    def consume_inline(match: re.Match[str]) -> str:
+        inline_math.append(match.group(1))
+        return ""
+
+    prose = re.sub(r"(?<!\\)\$([^$\n]+?)(?<!\\)\$", consume_inline, prose)
+    prose = re.sub(r"`[^`]*`", "", prose)
+    math = "\n".join(part for part in [*math_parts, *inline_math] if part)
+    return prose, math, in_display
+
 def inspect_public(md: Path) -> list[str]:
     errors: list[str] = []
     text = md.read_text(encoding="utf-8", errors="replace")
@@ -170,20 +204,14 @@ def inspect_public(md: Path) -> list[str]:
         if generated_forum and ORPHAN_THEOREM_LABEL.match(line.strip()):
             errors.append(f"{rel(md)}:{i}: orphan theorem-environment label")
 
-        n_display = line.count("$$")
-        active_math = display_math or n_display > 0
-        if active_math and UNSUPPORTED_PUBLIC_MATH.search(line):
+        prose, math, display_math = split_math_regions(line, display_math)
+        if math and UNSUPPORTED_PUBLIC_MATH.search(math):
             errors.append(f"{rel(md)}:{i}: unsupported public math macro")
-        if n_display % 2:
-            display_math = not display_math
 
         if line.strip() in {r"\[", r"\]"}:
-            errors.append(f"{rel(md)}:{i}: use $$ or a math fence, not \\[ / \\]")
+            errors.append(f"{rel(md)}:{i}: use $ or a math fence, not \\[ / \\]")
 
-        scrubbed = re.sub(r"`[^`]*`", "", line)
-        scrubbed = re.sub(r"\$\$.*?\$\$", "", scrubbed)
-        scrubbed = re.sub(r"\$[^$]+\$", "", scrubbed)
-        if not display_math and TEX_OUTSIDE_MATH.search(scrubbed):
+        if TEX_OUTSIDE_MATH.search(prose):
             errors.append(f"{rel(md)}:{i}: TeX command appears outside math/code")
 
     if display_math:
@@ -194,6 +222,41 @@ def inspect_public(md: Path) -> list[str]:
             errors.append(f"{rel(md)}: unresolved LaTeX cross-reference token remains")
         if re.search(r"(^|\n)99(\n|$)", text):
             errors.append(f"{rel(md)}: stray bibliography counter residue")
+
+    return errors
+
+
+def inspect_navigation_contract() -> list[str]:
+    errors: list[str] = []
+
+    required_start_links = (
+        "../kernel/CURRENT_STATE.md",
+        "../kernel/README.md",
+        "EARNED_MILESTONES.md",
+        "TEST_COVERAGE_MATRIX.md",
+        "../provenance/CANONICAL_RETIREMENT_LEDGER.md",
+    )
+    start = ROOT / "docs/START_HERE.md"
+    if not start.exists():
+        errors.append("missing docs/START_HERE.md")
+    else:
+        text = start.read_text(encoding="utf-8", errors="replace")
+        for link in required_start_links:
+            if f"]({link})" not in text:
+                errors.append(f"docs/START_HERE.md: missing authoritative route {link}")
+
+    readme = ROOT / "README.md"
+    if readme.exists():
+        text = readme.read_text(encoding="utf-8", errors="replace")
+        if "docs/START_HERE.md" not in text:
+            errors.append("README.md: does not route through docs/START_HERE.md")
+
+    coverage = ROOT / "docs/TEST_COVERAGE_MATRIX.md"
+    if coverage.exists():
+        text = coverage.read_text(encoding="utf-8", errors="replace")
+        for issue in range(4, 38):
+            if f"#{issue} " not in text and f"#{issue} |" not in text:
+                errors.append(f"docs/TEST_COVERAGE_MATRIX.md: missing issue #{issue}")
 
     return errors
 
@@ -251,6 +314,7 @@ def main() -> int:
             errors.extend(inspect_public(md))
 
     errors.extend(inspect_state_consistency())
+    errors.extend(inspect_navigation_contract())
 
     if errors:
         print("MARKDOWN / READER-SURFACE AUDIT FAIL")

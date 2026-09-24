@@ -25,6 +25,10 @@ required = [
     "kernel/runtime/memory.py",
     "provenance/DEVELOPMENTAL_LINEAGE.md",
     "provenance/CANONICAL_RETIREMENT_LEDGER.md",
+    "provenance/CANONICAL_RETIREMENT_MANIFEST.json",
+    "provenance/HANDOFF_COMPLETION_AUDIT_2026-09-24.md",
+    "provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json",
+    "docs/TEST_COVERAGE_MATRIX.md",
     "docs/META_DYNAMICS.md",
     "docs/FRONTIER_RESEARCH.md",
     "docs/PUBLIC_VALUE.md",
@@ -189,6 +193,44 @@ for token in (
 ):
     if token not in retirement:
         errors.append(f"Canonical retirement ledger missing {token}")
+
+test_matrix = (ROOT / "provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json").read_text(encoding="utf-8", errors="replace")
+for token in (
+    "D-RECEIPT-RETURN",
+    "D-RETURN-MUTATION-BINDING",
+    "D-MENTION-INCIDENCE",
+    "D-EDU16-EXECUTABLE",
+    "PLANNED",
+):
+    if token not in test_matrix:
+        errors.append(f"historical distinction matrix missing {token}")
+
+coverage = (ROOT / "docs/TEST_COVERAGE_MATRIX.md").read_text(encoding="utf-8", errors="replace")
+for issue in range(4, 38):
+    if f"#{issue} " not in coverage and f"#{issue} |" not in coverage:
+        errors.append(f"test coverage matrix missing issue #{issue}")
+
+handoff = (ROOT / "provenance/HANDOFF_COMPLETION_AUDIT_2026-09-24.md").read_text(encoding="utf-8", errors="replace")
+for token in (
+    "DONE",
+    "PARTIAL",
+    "NOT DONE",
+    "REGRESSED",
+    "Library/Canonical",
+    "whole-repo Devil's Audit",
+):
+    if token not in handoff:
+        errors.append(f"handoff completion audit missing {token}")
+
+canonical_manifest = (ROOT / "provenance/CANONICAL_RETIREMENT_MANIFEST.json").read_text(encoding="utf-8", errors="replace")
+for token in (
+    "CONSUMED_STALE_CURRENT",
+    "EXTERNAL_HEAVY_CUSTODY",
+    "PRESERVED_NEGATIVE_PROVENANCE",
+    "CANON-EDU16-EXEC-CUSTODY",
+):
+    if token not in canonical_manifest:
+        errors.append(f"Canonical retirement manifest missing {token}")
 
 readme = (ROOT / "README.md").read_text(encoding="utf-8", errors="replace")
 for token in (
