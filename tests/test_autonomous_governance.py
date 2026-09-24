@@ -401,6 +401,15 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertEqual(obj["kind_failure"]["PR"], 0)
 
 
+    def test_target_reproduction_is_inside_proposal_pipeline_before_git_write(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        proposal_at = text.index("Let Venus form a bounded research proposal")
+        push_at = text.index("git push origin")
+        self.assertLess(proposal_at, push_at)
+        self.assertIn("--execution-output /tmp/VENUS_REPRODUCTION_EXECUTION.json", text)
+        self.assertIn("autonomy/executions/", text)
+        self.assertNotIn("Execute bounded selected study method", text)
+
     def test_research_proposal_executes_before_autonomous_git_write(self):
         text = WORKFLOW.read_text(encoding="utf-8")
         proposal_at = text.index("Let Venus form a bounded research proposal")
