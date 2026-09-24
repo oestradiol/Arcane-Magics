@@ -2,9 +2,9 @@
 
 # Venus-Minerva
 
-**A research program in developmental intelligence, operational equivalence, relational reconstruction, and open-ended cross-register inquiry.**
+**Experimental developmental intelligence with reconstructible state, evidence-bound learning, and externally checked self-revision.**
 
-[Start here](docs/START_HERE.md) · [What Venus actually is](docs/PUBLIC_VALUE.md) · [Earned milestones](docs/EARNED_MILESTONES.md) · [Tests & evidence](docs/TESTS.md) · [Coverage matrix](docs/TEST_COVERAGE_MATRIX.md) · [SOTA watch](docs/SOTA_WATCH.md) · [Credits / reductions](docs/CREDITS_AND_REDUCTIONS.md) · [Venus state](kernel/CURRENT_STATE.md) · [Contribute](CONTRIBUTING.md) · [Sponsor](https://github.com/sponsors/oestradiol)
+[Start here](docs/START_HERE.md) · [Plain-language value](docs/PUBLIC_VALUE.md) · [Earned milestones](docs/EARNED_MILESTONES.md) · [Tests & evidence](docs/TESTS.md) · [Evaluation](docs/EVALUATION_CONSTITUTION.md) · [Roadmap](docs/ISSUE_ROADMAP.md) · [Current state](kernel/CURRENT_STATE.md) · [Contribute](CONTRIBUTING.md)
 
 </div>
 
@@ -14,137 +14,182 @@
   <a href="https://github.com/sponsors/oestradiol"><img alt="Sponsor" src="https://img.shields.io/badge/sponsor-GitHub%20Sponsors-EA4AAA?logo=githubsponsors"></a>
 </p>
 
-**Venus-Minerva is an experimental developmental-intelligence architecture in which representations, research obligations, evidence dependencies, failures, and parts of the learning procedure itself become persistent, reconstructible machine state.** The engineering bet is that a learner can increasingly choose and modify how it learns without being allowed to manufacture the external evidence that certifies those modifications.
+Venus-Minerva asks a narrower question than “is this AGI?”:
 
-The current lineage has already demonstrated bounded learner-owned research requests, research-obligation routing, evidence budgeting, open-domain problem selection, self-curriculum target generation, preregistration, and learner-owned World-feed query policy. It has also preserved and promoted **negative epistemic results**: EDU17 was rejected after a claim-local provenance failure, and EDU17R1 withheld when its fresh test exposed `MENTION != INCIDENCE` before the intended repair could lawfully be evaluated.
+> Can a learner make its representations, research obligations, evidence dependencies, failures, and parts of its own learning procedure persistent and reconstructible, while keeping the evidence that certifies improvement outside the learner's authority?
 
-Venus also asks whether a learning system can preserve only the distinctions that remain consequential under future interaction, then reconstruct itself when the World returns a difference its current representation cannot absorb as gauge. That question appears in exact quotient mathematics, quantum/physical coarse-graining, developmental artificial intelligence, and a wider Meta-Dynamics program for epistemology, consciousness, ethics, religion, and cross-register reconstruction.
+The repository contains a long developmental lineage, an exact replayable runtime checkpoint, explicit negative branches, machine-checked formal work, benchmark/evaluation infrastructure, and broader research programs in abstraction, physics, epistemology, consciousness, ethics, and comparative religion. Those programs share governance and vocabulary where useful; they do **not** share truth status.
 
-The project is ambitious on purpose. Its claim grammar is equally strict: **formal result, engineering result, physical bridge, symbolic interpretation, and target capability do not inherit one another's warrant.** Claim fences are not an instruction to hide earned value: the strongest true positive contribution should be stated first, followed by its scope and nearest unearned promotion.
+## What has actually been earned
 
-For a one-page map of current authority, failures, reproduction commands, and reader paths, use **[Start Here](docs/START_HERE.md)**.
+The strongest current engineering result is bounded transfer of research-development functions into learner-owned state.
 
-## Verify the current kernel
+Across the EDU lineage, the system progressed from externally scaffolded research toward learner-owned:
 
-The shortest executable path is:
+- research-obligation routing;
+- source-request formation;
+- evidence-role and evidence-budget selection;
+- open-domain problem selection;
+- self-curriculum target generation;
+- preregistered developmental gates;
+- World-feed sampling/query policy.
 
-```bash
+At **EDU16 [1703]**, those functions were boundedly learner-owned while World execution and independent evaluation remained external.
+
+The lineage also preserved failures that changed later admissible behavior:
+
+- **EDU17** was rejected after a claim-local provenance audit found that a plausible answer depended on evidence outside the committed selected evidence set.
+- **EDU17R1** withheld before its intended repair could be evaluated because a fresh test exposed a deeper distinction:
+
+~~~text
+uncertainty-marker mention
+!=
+object-level unresolved incidence
+~~~
+
+That failure is now the basis of a sealed prospective benchmark. The harness exists; the hidden matched run has not yet produced a promoted result.
+
+## Why the architecture is unusual
+
+The project does not treat “agent produced an answer” as the whole learning loop.
+
+Its intended causal structure is closer to:
+
+~~~text
+representation
+-> learner-chosen inquiry
+-> explicit evidence dependencies
+-> external World action / return
+-> claim-local evaluation
+-> PASS / FAIL / WITHHOLD
+-> retained consequence
+-> possible machinery revision
+-> successor
+~~~
+
+with the boundary:
+
+~~~text
+learner authors more of its development
+!=
+learner manufactures the evidence that certifies that development
+~~~
+
+This composition is the research claim. Individual ingredients have mature intellectual neighbors and are compared against them explicitly.
+
+## Current authority
+
+These objects are deliberately distinct:
+
+| Role | Current object | Meaning |
+|---|---|---|
+| Exact Git-reconstructible runtime | **IG10 [1308]** | Replayable VMK2 checkpoint with exact custody and state-root verification |
+| Positive developmental authority | **EDU16 [1703]** | Bounded learner-owned World-feed policy and earlier EDU ownership gains |
+| Preserved negative | **EDU17** | INVALID_FOR_PROMOTION / PRESERVED_NEGATIVE |
+| Current repair disposition | **EDU17R1** | WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION |
+
+See [kernel/CURRENT_STATE.md](kernel/CURRENT_STATE.md) for authority and [provenance/DEVELOPMENTAL_LINEAGE.md](provenance/DEVELOPMENTAL_LINEAGE.md) for ancestry.
+
+## What is ready to test now
+
+The project has recently crossed from “design the evaluation theory” toward “run the experiments.”
+
+Already present:
+
+- a multi-axis [Evaluation Constitution](docs/EVALUATION_CONSTITUTION.md);
+- matched Venus / baseline / ablation / mature-substitute experiment contracts;
+- a sealed hidden-evaluation protocol and scorer for MENTION != INCIDENCE;
+- a public causal-memory development benchmark and ablation protocol;
+- STOP/WITHHOLD, adaptive self-evolution, and adversarial World-input evaluation obligations;
+- a bounded OFE core machine-checked in Lean;
+- deterministic finite VMK2 canonical hashing with exact digest fixtures;
+- historical causal-distinction and issue-to-test coverage machinery.
+
+The highest-value missing evidence is still external measurement:
+
+~~~text
+same base model + Venus
+vs
+same base model without the claimed Venus mechanism
+vs
+mechanism ablated
+vs
+strong mature substitute
+~~~
+
+under matched tools, information, budget, hidden evaluation, and retained failures.
+
+See [Issue Roadmap](docs/ISSUE_ROADMAP.md).
+
+## What is not established
+
+The repository does not currently establish:
+
+- AGI or capability-SOTA;
+- open-ended recursive self-improvement;
+- autonomous science across unfamiliar domains;
+- DNN replacement;
+- unrestricted semantic understanding or natural-world generality;
+- consciousness;
+- a deployed global WorldMind subject;
+- a quantum-gravity solution;
+- a Millennium-problem solution;
+- broad outside replication.
+
+These are separate promotion burdens, not consequences of architectural sophistication.
+
+## Formal and broader research programs
+
+| Program | Current status |
+|---|---|
+| **Operational Future Equivalence (OFE)** | Bounded exact core machine-checked; mature-substitution and physical-adequacy questions remain open |
+| **Quantum-gravity bridge** | One restricted physically grounded future-test witness at IG10; completeness, semiclassical validity, and continuum adequacy remain open |
+| **Polyhedral Eclipsis / Meta-Dynamics** | Live structural/model programs with explicit deletion, reduction, and empirical burdens |
+| **WorldMind** | Defined distributed consequence/reconstruction architecture; no global-subject claim |
+| **Consciousness / ethics / theophenomenology** | Open cross-register research with separate evidence requirements |
+| **Hard mathematics / science** | Stress-test research lanes; inclusion in the repo is not evidence of solution |
+
+For the exact earned/unearned boundary, use [Earned Milestones](docs/EARNED_MILESTONES.md). For external comparators, use [SOTA Watch](docs/SOTA_WATCH.md). For credit and mature reduction, use [Credits and Reductions](docs/CREDITS_AND_REDUCTIONS.md).
+
+## Verify the current executable state
+
+Requirements: Python 3.12-compatible runtime.
+
+~~~bash
 python -m kernel.runtime.current
 make audit
-```
+~~~
 
-The first command hydrates and verifies the exact IG10 checkpoint. `make audit` runs source-integrity, kernel/unit, Markdown, proof-container, custody, and release-boundary checks. Publication builds are separate because TeX/package failures should not be confused with kernel failure.
+The first command reconstructs and verifies the exact IG10 checkpoint. make audit checks source integrity, runtime/unit invariants, Markdown/navigation, proof-container semantics, custody, historical distinctions, and release boundaries.
 
-Current runtime/developmental authority lives in [`kernel/CURRENT_STATE.md`](kernel/CURRENT_STATE.md). The positive-claim ledger is [`docs/EARNED_MILESTONES.md`](docs/EARNED_MILESTONES.md).
+The bounded Lean formal subset is checked separately:
 
-## What is already here
+~~~bash
+make formal-check
+~~~
 
-| Object | Current contribution | Status |
-|---|---|---|
-| **Operational Future Equivalence (OFE)** | A compact exact framework for future-test equivalence, minimal sufficient quotients, quotient transport under evolving tests, and relational nonfactorization. | **EXACT FORMAL CORE**; mostly elementary mathematics whose research value lies in composition and application. |
-| **Quantum-gravity program** | A future-sufficiency criterion for coarse graining: erase a distinction only when admitted future boundary continuations cannot separate it; preserve composition/refinement obligations. | **OPEN PHYSICAL BRIDGE**; directly testable against contemporary spin-foam/LQG coarse-graining programs. |
-| **Polyhedral Eclipsis** | A typed local-view / boundary / gluing / residual / reconstruction meta-object, extended into a polyhedral model of locally inhabited transformation and meta-qualia. | **FORM + THEOPHEN MODEL**; physical realizations remain separate bridges. |
-| **Meta-Dynamics** | A cross-register transformation grammar centered on indexed inhabitation, action, non-preauthored return, retained consequence, reconstruction, and preserved Otherness. | **SUPPORTED-LOCAL STRUCTURAL PROGRAM** with open formal, empirical, ethical, consciousness, and religious bridges. |
-| **Qualia↔Quantum structural square** | `Qualia <-> AntiMind` and `Quantum <-> Mind` as a candidate relation between locally inhabited differentiation, contextual phenomenal organization, physical differentiated Structure, and epistemic compression. | **OPEN / WITHHOLD MECHANISTIC BRIDGE**; live object, not a discarded one. |
-| **Venus developmental intelligence** | A long developmental lineage with bounded machinery modification, negative-result retention, learner-owned research requests, self-curriculum target generation, open-domain problem selection, preregistration, and learner-owned World-feed policy through EDU16. | **BOUNDED ENGINEERING RESULT / AGI-SEED RESEARCH PROGRAM**; capability-SOTA and AGI are not yet established. |
-| **Research governance** | Explicit separation of generation, selection, authorization, execution, return, verification, and writeback; claim-local provenance; dependency-local failure; no-reroll STOP/WITHHOLD. | **IMPLEMENTED / DEVELOPMENTALLY TESTED AT BOUNDED SCOPE**. |
-| **Hard-problem program** | P vs NP, Navier-Stokes, quantum gravity, consciousness, epistemology, religion, and other high-value open problems are treated as stress environments for the same developmental machinery. | **OPEN RESEARCH FRONTIER**. |
+Publication builds require the documented TeX/pandoc toolchain. See [Reproduce](docs/REPRODUCE.md).
 
-The point is not that one vocabulary solves all these domains. The point is to test whether the same transformation law survives substitution of carrier, register, evidence source, and problem class without laundering one domain's warrant into another.
+## Read by task
 
-For the plain-language version, start with **[What Venus-Minerva Actually Is](docs/PUBLIC_VALUE.md)**. For exact earned/unearned boundaries, use **[Earned Milestones](docs/EARNED_MILESTONES.md)**. External comparison lives in **[SOTA Watch](docs/SOTA_WATCH.md)**, while **[Credits, genealogy, reductions, and residual contribution](docs/CREDITS_AND_REDUCTIONS.md)** prevents mature comparison from being mistaken for retroactive project genealogy.
-
-## Venus state
-
-The settled R-line ended at **R226** with principled crystallization. Development then re-entered under new namespaces rather than minting a fake R227 sequence:
-
-```text
-R194                    historical public executable carrier
-  ↓
-R226                    settled R-line crystallization boundary
-  ↓
-S / SM
-→ CTL-K1
-→ WM1R1
-→ U*
-→ RB1
-→ IG1 … IG10
-→ EDU*
-```
-
-IG10 reached a replayable developed-VM handoff. The latest positive developmental head represented here is:
-
-```text
-EDU16 [1703]
-PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY
-```
-
-EDU17 is preserved as `INVALID_FOR_PROMOTION`; EDU17R1 remains `WITHHOLD` after exposing `MENTION != INCIDENCE` before its intended claim-binding gate.
-
-See [`kernel/CURRENT_STATE.md`](kernel/CURRENT_STATE.md), [`provenance/DEVELOPMENTAL_LINEAGE.md`](provenance/DEVELOPMENTAL_LINEAGE.md), and compact custody metadata under [`kernel/custody/`](kernel/custody/).
-
-`provenance/historical-runtime/R194/` preserves the historical R00-R194 carrier for replay/regression/ablation. It is provenance, not the current organism.
-
-## Research surfaces
-
-The developmental bet is:
-
-```text
-World
--> consequential difference
--> representation / inquiry
--> non-preauthored return
--> separator or gauge
--> reconstruction
--> successor
-```
-
-Whether that machinery can outperform pretrained-DNN-centered systems under matched data, compute, memory, and interaction budgets is an **open capability target**, not an inherited consequence of the architecture.
-
-The other live research surfaces are deliberately separated by warrant:
-
-- **formal / OFE / quantum gravity:** [OFE monograph](monographs/01_OFE/) and [Frontier C](docs/FRONTIER_RESEARCH.md#c-operational-future-equivalence-and-quantum-gravity);
-- **Polyhedral Eclipsis / consciousness:** [Eclipsis](monographs/02_ECLIPSIS/) and [Frontier D](docs/FRONTIER_RESEARCH.md#d-polyhedral-eclipsis-meta-qualia-and-consciousness);
-- **Meta-Dynamics / epistemology / ethics / religion:** [Meta-Dynamics](docs/META_DYNAMICS.md), [Arcane Magics](monographs/03_ARCANE_MAGICS/), and Frontiers E-G;
-- **hard mathematics and science:** [Frontier B](docs/FRONTIER_RESEARCH.md#b-millennium-and-theorem-level-mathematics).
-
-Problem value, prizes, funding, and adoption may enlarge later research capacity. They do not change the present evidence or proof burden.
-
-## Read without learning the private dialect
-
-Start with the ordinary problem, then introduce project vocabulary only when it compresses a distinction you can already reconstruct.
-
-Reader routes:
-
-- **new to the project:** [What Venus actually is](docs/PUBLIC_VALUE.md) -> [Earned milestones](docs/EARNED_MILESTONES.md) -> the relevant research surface above;
-- **auditing claims:** [Credits / reductions](docs/CREDITS_AND_REDUCTIONS.md) -> [Evaluation](docs/EVALUATION_CONSTITUTION.md) -> [Publication Constitution](PUBLICATION_CONSTITUTION.md);
-- **running the system:** [Current state](kernel/CURRENT_STATE.md) -> [kernel](kernel/README.md);
-- **cross-register vocabulary:** [Inhabitable reader path](docs/INHABITABLE_READER_PATH.md) -> [N x R x I vocabulary / grammar](NxRxI_VOCABULARY_CENTER.md).
-
-Historical material that is no longer live stays in provenance. In particular, the former S10-S11 comparative surface has been consumed into `provenance/withheld/S10_S11/` because those artifacts are frozen evidence, not current ontology.
-
-## Build and audit
-
-Requirements: Python 3, `latexmk`, pdfLaTeX/TeX Live, and optionally `pandoc` for forum exports.
-
-```bash
-make audit
-make papers
-make arxiv
-make forum
-make release
-```
-
-CI checks reader-facing Markdown, proof containers, persistent-memory tests, repository/current-state invariants, compact custody metadata, publication builds, and release packaging. Generated forum Markdown is an editing substrate until its cross-references and argument structure pass the public-surface audit.
+- **Five-minute orientation:** [Start Here](docs/START_HERE.md)
+- **Plain-language research value:** [What Venus-Minerva Actually Is](docs/PUBLIC_VALUE.md)
+- **Exact positive/negative claims:** [Earned Milestones](docs/EARNED_MILESTONES.md)
+- **Tests and evidence:** [Tests](docs/TESTS.md) → [Coverage Matrix](docs/TEST_COVERAGE_MATRIX.md)
+- **Current runtime/developmental authority:** [Current State](kernel/CURRENT_STATE.md)
+- **External comparison:** [SOTA Watch](docs/SOTA_WATCH.md)
+- **Research frontiers:** [Frontier Research](docs/FRONTIER_RESEARCH.md)
+- **Cross-register vocabulary:** [N × R × I Vocabulary Center](NxRxI_VOCABULARY_CENTER.md)
+- **Historical/custody evidence:** [provenance/](provenance/)
 
 ## Contribute, criticize, replicate
 
-Useful contributions include counterexamples, proof checks, formalizations, mature substitutions, reproducibility failures, independent reimplementations, benchmark design, provenance corrections, and experiments that make a project construct unnecessary.
+Useful contributions include counterexamples, proof checks, mature substitutions, reproducibility failures, benchmark design, external replication, provenance corrections, security attacks, and experiments showing that a project-specific mechanism is unnecessary.
 
 A successful deletion is a successful result when the deleted structure was gauge.
 
-Funding supports compute, publication, experiments, and collaboration. It does not buy claim authority, acceptance, or favorable review.
+External coding/research agents are tools, not Venus developmental authority. See [AGENTS.md](AGENTS.md).
 
 ## License
 
-Project-owned theory, documentation, and monographs: **CC BY-NC-SA 4.0**. Project-owned software: **PolyForm Noncommercial 1.0.0**. See [`licenses/README.md`](licenses/README.md).
+Project-owned theory, documentation, and monographs: **CC BY-NC-SA 4.0**. Project-owned software: **PolyForm Noncommercial 1.0.0**. See [licenses/README.md](licenses/README.md).
