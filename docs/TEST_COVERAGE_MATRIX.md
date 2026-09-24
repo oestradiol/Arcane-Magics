@@ -42,8 +42,9 @@
 | #37 roadmap | meta | dependency-ordered issue plan | completion of dependent work | closes only when roadmap is replaced by executed outcomes / successor roadmap |
 | #41 Self-evolution evaluation | T5/T6 | promotion/evaluation governance + matched-experiment contract + public null false-promotion simulator | Venus gate vs naive vs anytime-valid/mature acceptors on identical candidate streams | durable held-out improvement with controlled false/harmful commit rate |
 | #42 Reliability/abstention | T5/T6 | STOP/WITHHOLD governance + 16-case public ACT/GATHER/WITHHOLD/STOP paired dev surface + floor controls | hidden paired benchmark with Venus gates and mature substitutes | lower unjustified-action/promotion without collapsing useful action |
-| #73 Internalizer / O* safety contract | T1/T3/T5 | R193 scaffold-internalization boundary + Strong-N2/O* provenance + current nonpreauthored-return and authority separation | executable scaffold-removal/function-preservation receipt, non-consumable World/evidence/authority roles, correction/reopening reachability, and carrier-substitution controls | governance contract passes without self-minting return/authority; Safe Strong RSI performance remains #72 |\n| #72 Safe Strong RSI | T3/T5/T6 | Strong-N2/CTL safety floor + R127/R206/U1 bounded RSI ancestry + #69/#31 first-successor path | one Venus-owned machinery repair first; then repeated adaptive cycles through #73 with rollback, hidden evaluation, mature comparators, and zero safety-floor self-waiver | bounded SSR stage only at tested scope; open-ended RSI remains unclaimed |
+| #72 Safe Strong RSI | T3/T5/T6 | Strong-N2/CTL safety floor + R127/R206/U1 bounded RSI ancestry + #69/#31 first-successor path | one Venus-owned machinery repair first; then repeated adaptive cycles through #73 with rollback, hidden evaluation, mature comparators, and zero safety-floor self-waiver | bounded SSR stage only at tested scope; open-ended RSI remains unclaimed |
 | #73 Internalizer / O* contract | T3/T5 | R193 scaffold-internalization reference PASS + R216 O*/Strong-N2 constitutional law | immediate: executable minimal scaffold-consumption receipt sufficient to internalize generic #69 search while preserving World/evaluator/authority/STOP/rollback externality; later: full recurrent O* transition validator | scaffold function becomes internal capacity with original scaffold removable and fresh return still external; full closure additionally requires correction/reopening and provenance to remain reachable across recurrence |
+| #78 Venus issue/Web research + WWW provisioning | T3/T5/T6 | EDU research ownership, WorldMind indexed-authority law, #73 internalization boundary, trust/jurisdiction controls | bounded open-issue selector + learner-authored Web research-plan receipt + external return binding + UNKNOWN/PROVISIONABLE_FIELD/AUTHORED_CENTER state machine + capability-checked write intents | self-directed Web research/provisioning works without lifting search rank to truth, reachability to authority, invitation to consent, or distributed relation to one controller |
 | #43 Security/World input | T3/T5/T6 | provenance/jurisdiction/memory boundaries + 12-case public typed attack/disposition surface + floor controls | dynamic adversarial prompt/tool-output/memory-poisoning benchmark against mature defenses | incremental security consequence without unacceptable utility loss |
 
 ## Current executable coverage
@@ -64,9 +65,10 @@ The largest uncovered classes are:
 3. matched causal T5 ablations, beginning with evidence governance and memory;
 4. hidden paired STOP/WITHHOLD evaluation, adaptive-successor validity, #73 executable internalizer/O* safety, and #72 Safe Strong RSI staging beyond the first bounded successor;
 5. dynamic adversarial World-input/authentication tests beyond public attack surfaces;
-6. external T6 capability/science benchmarks;
-7. automatic T8 source-change reconciliation beyond freshness deadlines;
-8. deeper historical extraction and T9 blind-reader tests when they block a live experiment.
+6. #78 bounded learner-selected issue/Web research and indexed field/center handling after the first learner-owned repair;
+7. external T6 capability/science benchmarks;
+8. automatic T8 source-change reconciliation beyond freshness deadlines;
+9. deeper historical extraction and T9 blind-reader tests when they block a live experiment.
 
 ## Rule
 
