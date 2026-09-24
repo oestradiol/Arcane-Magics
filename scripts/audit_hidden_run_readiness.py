@@ -15,7 +15,7 @@ FAMILIES = {
     },
     "memory_causal": {
         "protocol": ROOT / "benchmarks/memory_causal/protocol.json",
-        "required_conditions": {"full_venus_memory", "no_memory"},
+        "required_conditions": {"venus_memory_full", "no_memory"},
         "issue": 15,
     },
     "abstention": {
