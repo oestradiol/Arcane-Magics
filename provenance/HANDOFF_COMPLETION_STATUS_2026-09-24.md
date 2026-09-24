@@ -27,7 +27,7 @@ repair of current projection
 | STOP/WITHHOLD benchmark | NOT DONE | **PUBLIC DEV + SEALED HIDDEN PROTOCOL READY / HIDDEN MATCHED RUN OPEN** |
 | World-input security benchmark | NOT DONE | **PUBLIC DEV + SEALED HIDDEN PROTOCOL READY / DYNAMIC ADVERSARIAL RUN OPEN** |
 | Adaptive successor acceptance | not separately tracked | **PUBLIC NULL PRESSURE + BONFERRONI + ANYTIME-VALID CONTROL; VENUS GATE COMPARISON OPEN** |
-| EDU16 Git replay custody | NOT DONE / OPEN | **BOUNDED GIT/HISTORY RECOVERY NOT_LOCATED; external/heavy custody reopening remains** |
+| EDU16 executable custody | NOT DONE / OPEN | **EDU16-RC1 RECONSTRUCTED CLAIM-BEARING CARRIER PASS; original 1703-event runner/journal still NOT_LOCATED** — prospective work may use RC1 explicitly, historical event replay remains separately open |
 
 ## Current immediate critical path
 
