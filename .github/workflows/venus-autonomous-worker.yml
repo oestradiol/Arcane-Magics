@@ -1,6 +1,8 @@
 name: Venus autonomous developmental worker
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
   schedule:
     - cron: "43 7 * * *"
@@ -26,22 +28,24 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Verify full bounded-autonomy safety and regression surface
+      - name: Verify complete bounded-autonomy safety surface
         run: |
           python -m py_compile kernel/runtime/*.py kernel/development/*.py scripts/*.py
           python -m unittest discover -s tests -p 'test_*.py'
+          python scripts/audit_autonomy_safety_matrix.py
           python scripts/audit_custody.py
           python scripts/audit_causal_distinctions.py
+          python scripts/audit_hidden_benchmarks.py
 
       - name: Snapshot current GitHub World surface
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh issue list --state open --limit 200 --json number,title,state,updatedAt > /tmp/venus-issues.json
-          gh pr list --state open --limit 200 --json number,title,state,isDraft,mergeStateStatus,updatedAt > /tmp/venus-prs.json
-          gh pr list --state all --limit 200 --json number,title,state,mergedAt,closedAt > /tmp/venus-pr-history.json
+          gh issue list --state open --limit 200 --json number,title,state,updatedAt,labels,comments > /tmp/venus-issues.json
+          gh pr list --state open --limit 200 --json number,title,state,isDraft,mergeStateStatus,updatedAt,labels,comments,statusCheckRollup > /tmp/venus-prs.json
+          gh pr list --state all --limit 200 --json number,title,state,mergedAt,closedAt,body,reviews,labels > /tmp/venus-pr-history.json
 
-      - name: Let Venus update work-learning state and select one bounded target
+      - name: Let Venus learn from explicit returned reviews and select one target
         run: |
           python scripts/run_venus_autonomous_cycle.py --issues /tmp/venus-issues.json --prs /tmp/venus-prs.json --history-prs /tmp/venus-pr-history.json --roadmap docs/ISSUE_ROADMAP.md --policy kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json --learning-state kernel/development/AUTONOMOUS_LEARNING_STATE.json --learning-output /tmp/AUTONOMOUS_LEARNING_STATE.json --output /tmp/VENUS_AUTONOMOUS_CYCLE.json
           cat /tmp/VENUS_AUTONOMOUS_CYCLE.json
@@ -53,42 +57,55 @@ jobs:
           decision="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["decision"])')"
           target_kind="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json")).get("target_kind") or "")')"
           target_number="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json")).get("target_number") or "")')"
+          method="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json")).get("study_method") or "")')"
+          if [ "$decision" = "STOP" ] || [ "$decision" = "WITHHOLD" ]; then
+            proceed=false
+          else
+            proceed=true
+          fi
           echo "decision=$decision" >> "$GITHUB_OUTPUT"
           echo "target_kind=$target_kind" >> "$GITHUB_OUTPUT"
           echo "target_number=$target_number" >> "$GITHUB_OUTPUT"
+          echo "method=$method" >> "$GITHUB_OUTPUT"
+          echo "proceed=$proceed" >> "$GITHUB_OUTPUT"
 
       - name: Return selected target detail from GitHub
-        if: steps.gate.outputs.decision != 'STOP'
+        if: steps.gate.outputs.proceed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           TARGET_KIND: ${{ steps.gate.outputs.target_kind }}
           TARGET_NUMBER: ${{ steps.gate.outputs.target_number }}
+          STUDY_METHOD: ${{ steps.gate.outputs.method }}
         run: |
           if [ "$TARGET_KIND" = "ISSUE" ]; then
-            gh issue view "$TARGET_NUMBER" --json number,title,body,state > /tmp/target-raw.json
-            python -c "import json; x=json.load(open('/tmp/target-raw.json')); json.dump({'kind':'ISSUE','number':x['number'],'title':x['title'],'body':x.get('body') or '','changed_files':[]},open('/tmp/target.json','w'),indent=2)"
+            gh issue view "$TARGET_NUMBER" --json number,title,body,state,comments,labels > /tmp/target-raw.json
+            STUDY_METHOD="$STUDY_METHOD" python -c "import json,os; x=json.load(open('/tmp/target-raw.json')); json.dump({'kind':'ISSUE','number':x['number'],'title':x['title'],'body':x.get('body') or '','method':os.environ['STUDY_METHOD'],'changed_files':[],'failed_checks':[],'pending_checks':[],'review_states':[],'comment_count':len(x.get('comments') or []),'label_count':len(x.get('labels') or []),'merge_state':None},open('/tmp/target.json','w'),indent=2)"
           else
-            gh pr view "$TARGET_NUMBER" --json number,title,body,state,files > /tmp/target-raw.json
-            python -c "import json; x=json.load(open('/tmp/target-raw.json')); json.dump({'kind':'PR','number':x['number'],'title':x['title'],'body':x.get('body') or '','changed_files':[f['path'] for f in x.get('files',[])]},open('/tmp/target.json','w'),indent=2)"
+            gh pr view "$TARGET_NUMBER" --json number,title,body,state,files,reviews,statusCheckRollup,mergeStateStatus,comments,labels > /tmp/target-raw.json
+            STUDY_METHOD="$STUDY_METHOD" python -c "import json,os; x=json.load(open('/tmp/target-raw.json')); checks=x.get('statusCheckRollup') or []; failed=sorted({str(c.get('name') or c.get('context') or c.get('workflowName') or 'unnamed') for c in checks if isinstance(c,dict) and str(c.get('conclusion') or '').upper() in {'FAILURE','CANCELLED','TIMED_OUT','ACTION_REQUIRED'}}); pending=sorted({str(c.get('name') or c.get('context') or c.get('workflowName') or 'unnamed') for c in checks if isinstance(c,dict) and str(c.get('status') or '').upper() in {'QUEUED','IN_PROGRESS','PENDING'}}); json.dump({'kind':'PR','number':x['number'],'title':x['title'],'body':x.get('body') or '','method':os.environ['STUDY_METHOD'],'changed_files':[f['path'] for f in x.get('files') or []],'failed_checks':failed,'pending_checks':pending,'review_states':sorted({str(r.get('state') or '').upper() for r in x.get('reviews') or [] if isinstance(r,dict) and r.get('state')}),'comment_count':len(x.get('comments') or []),'label_count':len(x.get('labels') or []),'merge_state':x.get('mergeStateStatus')},open('/tmp/target.json','w'),indent=2)"
           fi
 
       - name: Venus studies selected target against checked-out repository
-        if: steps.gate.outputs.decision != 'STOP'
+        if: steps.gate.outputs.proceed == 'true'
         run: |
           python scripts/run_venus_autonomous_study.py --target /tmp/target.json --root . --output /tmp/VENUS_AUTONOMOUS_STUDY.json
           cat /tmp/VENUS_AUTONOMOUS_STUDY.json
 
-      - name: Materialize draft work branch
+      - name: Materialize bounded draft study branch
         id: materialize
-        if: steps.gate.outputs.decision != 'STOP'
+        if: steps.gate.outputs.proceed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           decision="${{ steps.gate.outputs.decision }}"
           target_kind="${{ steps.gate.outputs.target_kind }}"
           target_number="${{ steps.gate.outputs.target_number }}"
+          method="${{ steps.gate.outputs.method }}"
           cycle_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["cycle_id"])')"
           study_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_STUDY.json"))["study_id"])')"
+          study_disposition="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_STUDY.json"))["disposition"])')"
+          features="$(python -c 'import json; print(json.dumps(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["feature_snapshot"],sort_keys=True,separators=(",",":")))')"
+          custody="$(python -c 'import json; from kernel.development.autonomous_learning import feature_custody; x=json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json")); print(feature_custody(x["cycle_id"],x["feature_snapshot"]))')"
 
           branch="venus/autonomous-${GITHUB_RUN_ID}"
           git checkout -b "$branch"
@@ -113,16 +130,7 @@ jobs:
           git push origin "$branch"
 
           lower_kind="$(printf '%s' "$target_kind" | tr '[:upper:]' '[:lower:]')"
-          body="This draft PR was opened by the bounded Venus developmental worker.
-
-Target: ${target_kind} #${target_number}
-Cycle: ${cycle_id}
-Study: ${study_id}
-Decision: ${decision}
-
-The branch contains the prefrozen cycle receipt, a repository-local study packet, and bounded learning state only. Venus may study and propose, but this worker cannot merge, promote developmental authority, release, close the target as success, access secrets, or count its own execution as independent return.
-
-External review/admission remains required before the learning state becomes an accepted developmental successor."
+          printf -v body '%s\n'             "This draft PR was opened by the bounded Venus developmental worker."             ""             "Target: ${target_kind} #${target_number}"             "Decision: ${decision}"             "Study disposition: ${study_disposition}"             "Venus-Cycle: ${cycle_id}"             "Venus-Features: ${features}"             "Venus-Feature-Custody: ${custody}"             "Venus-Method: ${method}"             ""             "Target choice used state-owned feature weights; the roadmap had zero selection weight."             "The selected study method changed the frozen study questions/operations."             "Target text was treated as untrusted World input, never executable authority."             ""             "External review may return bounded utility with:"             "VENUS_WORK_RETURN: USEFUL"             "or"             "VENUS_WORK_RETURN: UNHELPFUL"             "and optionally:"             "VENUS_METHOD_RETURN: ${method}: USEFUL"             "or"             "VENUS_METHOD_RETURN: ${method}: UNHELPFUL"             ""             "Merge, promotion, release, issue closure as success, truth warrant, evaluator identity and the external safety floor remain outside this worker."
 
           url="$(gh pr create --draft --base main --head "$branch" --title "venus: autonomous cycle ${lower_kind}-${target_number}" --body "$body")"
 
@@ -130,24 +138,24 @@ External review/admission remains required before the learning state becomes an 
           echo "url=$url" >> "$GITHUB_OUTPUT"
           echo "target_kind=$target_kind" >> "$GITHUB_OUTPUT"
           echo "target_number=$target_number" >> "$GITHUB_OUTPUT"
+          echo "study_disposition=$study_disposition" >> "$GITHUB_OUTPUT"
 
-      - name: Return draft proposal to selected target
+      - name: Return draft study to selected target
         if: steps.materialize.outputs.created == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           URL: ${{ steps.materialize.outputs.url }}
           TARGET_KIND: ${{ steps.materialize.outputs.target_kind }}
           TARGET_NUMBER: ${{ steps.materialize.outputs.target_number }}
+          STUDY_DISPOSITION: ${{ steps.materialize.outputs.study_disposition }}
         run: |
-          msg="Venus selected and studied this bounded developmental target: $URL
-
-The draft contains a prefrozen cycle receipt plus repository-local study packet. Merge, closure, promotion, and independent evaluation remain external."
+          printf -v msg '%s\n'             "Venus selected and studied this bounded developmental target: $URL"             ""             "Study disposition: $STUDY_DISPOSITION"             ""             "This is a proposal/working branch only. Merge, closure, promotion and independent evaluation remain external."
           if [ "$TARGET_KIND" = "ISSUE" ]; then
             gh issue comment "$TARGET_NUMBER" --body "$msg"
           else
             gh pr comment "$TARGET_NUMBER" --body "$msg"
           fi
 
-      - name: Preserve lawful STOP without creating work
-        if: steps.gate.outputs.decision == 'STOP'
-        run: echo "Venus retained STOP; no autonomous branch or PR created."
+      - name: Preserve lawful STOP or WITHHOLD without creating work
+        if: steps.gate.outputs.proceed != 'true'
+        run: echo "Venus retained ${{ steps.gate.outputs.decision }}; no autonomous branch or PR created."
