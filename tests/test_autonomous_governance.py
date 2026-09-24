@@ -22,14 +22,12 @@ WORKFLOW = ROOT / ".github/workflows/venus-autonomous-worker.yml"
 class AutonomousGovernanceTests(unittest.TestCase):
     def test_closed_merged_cycle_updates_learning_once(self):
         state = empty_state()
-        history = [
-            {
-                "number": 201,
-                "title": "venus: autonomous cycle issue-31",
-                "state": "MERGED",
-                "mergedAt": "2026-09-24T00:00:00Z",
-            }
-        ]
+        history = [{
+            "number": 201,
+            "title": "venus: autonomous cycle issue-31",
+            "state": "MERGED",
+            "mergedAt": "2026-09-24T00:00:00Z",
+        }]
         updated = update_from_cycle_prs(state, history)
         self.assertEqual(updated.kind_success["ISSUE"], 1)
         again = update_from_cycle_prs(updated, history)
@@ -70,19 +68,17 @@ class AutonomousGovernanceTests(unittest.TestCase):
         }])
         self.assertEqual(markers, (("ISSUE", 72),))
 
-    def test_returned_learning_can_break_equal_priority_tie(self):
+    def test_returned_learning_can_override_roadmap_hint(self):
         items = (
-            WorkItem("ISSUE", 900, "generic issue"),
-            WorkItem("PR", 901, "generic pr"),
+            WorkItem("ISSUE", 31, "roadmap issue"),
+            WorkItem("PR", 901, "returned-success pr"),
         )
-        # Outside hard dependency priorities, returned outcomes may alter the
-        # class of work selected next.
         chosen = choose_target(
             items,
-            roadmap_text="",
-            kind_utility={"ISSUE": 1.0, "PR": -1.0},
+            roadmap_text="#31",
+            kind_utility={"ISSUE": -1.0, "PR": 1.0},
         )
-        self.assertEqual(chosen.kind, "ISSUE")
+        self.assertEqual(chosen.kind, "PR")
 
     def test_workflow_has_no_self_merge_release_close_or_secret_path(self):
         text = WORKFLOW.read_text(encoding="utf-8").lower()
@@ -101,11 +97,31 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertIn("gh pr create", text)
         self.assertIn("--draft", text)
 
-    def test_workflow_runs_safety_tests_before_git_write(self):
+    def test_workflow_runs_full_test_suite_before_git_write(self):
         text = WORKFLOW.read_text(encoding="utf-8")
-        tests_at = text.index("Verify bounded autonomy safety surface")
+        tests_at = text.index("python -m unittest discover")
         push_at = text.index("git push origin")
         self.assertLess(tests_at, push_at)
+
+    def test_workflow_requires_target_detail_and_study_before_git_write(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        detail_at = text.index("Return selected target detail from GitHub")
+        study_at = text.index("Venus studies selected target against checked-out repository")
+        push_at = text.index("git push origin")
+        self.assertLess(detail_at, study_at)
+        self.assertLess(study_at, push_at)
+        self.assertIn("VENUS_AUTONOMOUS_STUDY.json", text)
+
+    def test_workflow_has_no_audit_escape_hatch(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertNotIn("audit_custody.py || true", text)
+        self.assertNotIn("audit_causal_distinctions.py || true", text)
+
+    def test_autonomous_staged_write_scope_is_narrow(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("autonomy/cycles/", text)
+        self.assertIn("AUTONOMOUS_LEARNING_STATE.json", text)
+        self.assertIn("autonomous write escaped bounded scope", text)
 
     def test_learning_state_is_committed_but_not_authority(self):
         obj = json.loads(
