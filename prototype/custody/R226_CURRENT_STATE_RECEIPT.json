@@ -1,0 +1,27 @@
+{
+  "active_improver": {
+    "bounded_rsi_receipt": "e54c8c6d3d8ac61bedad851de7b1e6fa92190c148ef8477f450e93c8e9c97d22",
+    "code_sha256": "0242daeb28bff89d5bfe88de0b2419959eba8e265f64bce32f21a16959784819",
+    "mechanism": "recursive provenance discovery",
+    "open_ended_rsi": false,
+    "revision": "R206"
+  },
+  "externality": false,
+  "journal_head": "7faa24f57cc2ea3bae33ad799d92fed9fec83e6f589a39acdb5bfc9091b5d3f2",
+  "journal_records": 554,
+  "journal_sha256": "51af6740c4a512b37ef197732695f46f70416c655b195fbfd1d64c9bd182ca62",
+  "obligations": 194,
+  "open_ended_rsi": false,
+  "project_state_digest": "40075e3a5e0fa1343f533be2efb4a6a194447c6a012a4ed300bf6915802b73fb",
+  "public_carrier_sha256": "6f64b9d4c0d5b22fb8d3844ab0e24d615e90f26a19c98faff954df34bd005b24",
+  "root_sha256": "e70495e83fe326ae8cd8d9b5ab25fd73e310faef0aede5e03225c2da11754f1a",
+  "rsm": {
+    "chosen_next": null,
+    "cycle": 28,
+    "ready_queue": [],
+    "scheduler_state": "WITHHOLD_NO_DECLARED_READY_TASK",
+    "state_digest": "cf13db8773f09c50db438ed637d3e0c9f68ede1ebda72a1592c1bd023003eb1d"
+  },
+  "schema": "Canonical.R226.CurrentDevelopedSeedReceipt.v1",
+  "vmk2_digest": "afe74aea361b2bda168a798dc2ce538fcc2ba5927265504d5e854fd3d0e3bad2"
+}
