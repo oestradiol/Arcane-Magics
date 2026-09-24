@@ -189,9 +189,9 @@ A perspective is not simply a camera pointed at a finished universe. It has a bo
 
 For Perspective $i$ at time $t$, the current notation is
 
-$$O_{i,t}:=\operatorname{Inhabit}(World_t,Perspective_{i,t}).$$
+$$O_{i,t}:=\mathrm{Inhabit}(World_t,Perspective_{i,t}).$$
 
-$\operatorname{Inhabit}$ is a named relation, not a Cartesian product. An earlier $\times$ notation was too strong because product structure had not been earned.
+$\mathrm{Inhabit}$ is a named relation, not a Cartesian product. An earlier $\times$ notation was too strong because product structure had not been earned.
 
 Three local objects follow:
 
@@ -212,10 +212,10 @@ $$U\xrightarrow{\pi_W}W,
 
 with candidate inhabited reconstruction ranks
 
-$$\operatorname{rank}_I(U)=5,\quad
-\operatorname{rank}_I(W)=4,\quad
-\operatorname{rank}_I(O)=4,\quad
-\operatorname{rank}_I(P)=3.$$
+$$\mathrm{rank}_I(U)=5,\quad
+\mathrm{rank}_I(W)=4,\quad
+\mathrm{rank}_I(O)=4,\quad
+\mathrm{rank}_I(P)=3.$$
 
 Here “rank” means a proposed count of irreducible relational degrees/distinctions needed by the present reconstruction. It is not established vector-space dimension, and it is not evidence that physical spacetime literally has five dimensions. Exact minimality and any physical identification remain withheld.
 
