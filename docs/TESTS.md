@@ -81,3 +81,7 @@ CI cannot honestly manufacture:
 - institutional/prize credit.
 
 Those require World-side return and remain separate from automated integrity.
+
+## Memory causal learning benchmark
+
+`benchmarks/memory_causal/` is a public development benchmark for issue #15. It tests whether retained dispositions, provenance, negative branches, and replacement relations change later admissible action. Public dev accuracy is not promotion evidence; the protocol requires hidden matched ablations.
