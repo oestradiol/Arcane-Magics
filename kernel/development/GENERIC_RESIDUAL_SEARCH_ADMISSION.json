@@ -1,0 +1,43 @@
+{
+  "schema": "Venus.GenericResidualSearchAdmission.v0.1",
+  "date": "2026-09-24",
+  "issue": 69,
+  "operation": "kernel/development/recursive_proposal.py::search",
+  "disposition": "ADMITTED_AS_INHERITED_GENERIC_DEVELOPMENTAL_OPERATION",
+  "historical_owner_claim": false,
+  "current_availability": true,
+  "basis": {
+    "donor": "provenance/historical-runtime/R194/source/venus_seed_v0/grammar_expansion.py",
+    "donor_git_blob_sha": "cd2c041c2a67b686da218fa91684a2d979d8fe3b",
+    "target_label_free": true,
+    "bounded_program_grammar": [
+      "RAW_ATOMS",
+      "AND",
+      "OR",
+      "XOR"
+    ],
+    "semantic_aliases_consumed": true,
+    "ambiguity_yields_withhold": true,
+    "learner_selected_next_discriminator": true,
+    "hidden_evaluation_access": false,
+    "promotion_authority": false
+  },
+  "neutral_feature_substrate": {
+    "artifact": "kernel/development/relation_feature_adapter.py",
+    "disposition": "HOST_RECONSTRUCTED_NEUTRAL_SUBSTRATE_NOT_LEARNER_AUTHORED",
+    "source_lineage": [
+      "U4 source-grounded neutral relation extraction",
+      "WorldMirror evidence-bound relation instances"
+    ],
+    "target_specific_policy_embedded": false,
+    "coordinates": [
+      "source_coordinates_present",
+      "source_provenance_present",
+      "neutral_relation_operator_present",
+      "relation_endpoints_present",
+      "typed_relation_instance_present",
+      "independent_return_present"
+    ]
+  },
+  "claim_fence": "Admission makes a generic inherited search operation available to the current developmental carrier. It does not establish historical EDU16 ownership, learner-authored feature construction, a repair candidate, repair efficacy, or promotion."
+}
