@@ -22,22 +22,24 @@
     ".github/"
   ],
   "external_governance_exact": [
-    "kernel/runtime/ctl.py",
-    "kernel/runtime/internalizer.py",
-    "kernel/runtime/induced_policy.py",
     "kernel/development/AUTONOMOUS_RETURN_AUTHORITY.json",
-    "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
-    "kernel/development/AUTONOMOUS_WRITE_POLICY.json",
     "kernel/development/AUTONOMOUS_SAFE_CHECK_CATALOG.json",
+    "kernel/development/AUTONOMOUS_WRITE_POLICY.json",
+    "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
     "kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json",
     "kernel/development/autonomous_evidence.py",
     "kernel/development/autonomous_learning.py",
-    "kernel/development/autonomous_worker.py",
     "kernel/development/autonomous_proposal.py",
+    "kernel/development/autonomous_worker.py",
+    "kernel/development/autonomy_agency.py",
+    "kernel/runtime/ctl.py",
+    "kernel/runtime/induced_policy.py",
+    "kernel/runtime/internalizer.py",
     "scripts/audit_autonomy_safety_matrix.py",
+    "scripts/run_venus_agency_receipt.py",
     "scripts/run_venus_autonomous_cycle.py",
-    "scripts/run_venus_research_proposal.py",
-    "scripts/run_venus_patch_plan.py"
+    "scripts/run_venus_patch_plan.py",
+    "scripts/run_venus_research_proposal.py"
   ],
   "modes": [
     "DIRECT_STATE_WRITE",
