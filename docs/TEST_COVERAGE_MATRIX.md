@@ -16,7 +16,7 @@
 | #12 Self-improvement | T5/T6 | developmental lineage | matched DGM/AlphaEvolve/etc comparison | budget-matched external result |
 | #13 Autonomous science | T6 | EDU research machinery | end-to-end external science benchmark | independently scored research loop under frozen protocol |
 | #14 Long-horizon agency | T6 | current kernel/dev state | general-agent/long-horizon battery | externally scored battery with cost/failure retention |
-| #15 Memory/lifelong | T5 | VenusMemory + unit tests + public sequential causal-memory dev benchmark/scorer | hidden matched ablation proving later behavior/learning effect | full vs memory-ablated causal gain |
+| #15 Memory/lifelong | T5 | VenusMemory + unit tests + public sequential causal-memory dev benchmark/scorer + frozen weak floor controls (0/12, 0/12, 4/12) | hidden matched ablation proving later behavior/learning effect | full vs memory-ablated causal gain |
 | #16 OFE credit/reduction | T5/T7 | credit law + OFE manuscript | correspondence/counterexample/deletion study | typed residual or mature substitution |
 | #17 Evaluation integrity | T5/T6 | claim/evidence governance | contamination-controlled double-blind harness | hidden eval with no post-exposure repair |
 | #18 DNN ablation | T5/T6 | architecture claim boundary | same-model Venus vs Venus-minus-foundation-model dependence | quantified borrowed cognition / retained capability |
@@ -32,7 +32,7 @@
 | #28 Public interface | T9 | README/PUBLIC_VALUE/milestones | blind outsider reconstruction | readers recover claims/boundaries/credit accurately |
 | #29 Canonical retirement | T0/T2/T3 | retirement ledger | full typed inventory + no untracked live premise | every unique consequence disposed and custody hash-bound |
 | #30 VMK2 trust | T3 | invariant tests + mutable-state/root-drift tests + deterministic unordered canonicalization + finite-number/cross-process digest fixtures + trust-boundary doc | cryptographic issuer/trust-root authentication, revocation distribution, forged-principal/receipt-substitution matrix | threat model covered with negative tests |
-| #31 MENTION != INCIDENCE | T4 | preserved WITHHOLD + public typed dev benchmark + naive lexical baseline | sealed hidden split + prospective matched run | repaired condition beats baselines without invalid promotion |
+| #31 MENTION != INCIDENCE | T4 | preserved WITHHOLD + public typed dev benchmark + frozen naive lexical failure floor + sealed A/B/C/D protocol + hidden-split hash custody + scorer | independently authored sealed hidden split + prospective matched run | repaired condition beats ablated/baseline/mature-substitute conditions without invalid promotion |
 | #32 construct disposition | T0/T5 | credit/reduction law + typed construct disposition state + validator | mature-substitution evidence for each live residual | every public construct gets typed disposition |
 | #33 proof hygiene | T7 | proof-container lint explicitly separated from `formal-check`; OFE subset machine-checked in Lean; false-theorem container regression proves lint is only structural | expand machine-checked subset as warranted | structural lint and proof verification remain separately named |
 | #34 governance package | T6/T9 | AGENTS/review governance | independent package + external integration | one real external consumer/use case |
@@ -56,13 +56,13 @@ Existing automated coverage currently concentrates on:
 
 The largest uncovered classes are:
 
-1. deeper historical T2 behavioral regressions beyond surface-preservation checks;
-2. hidden semantic T4 promotion tests beyond the public EDU17R1 dev set;
-3. matched causal T5 ablations;
-4. external T6 capability/science benchmarks;
-5. semantic/formal T7 proof verification beyond container lint;
+1. independently authored hidden T4 evaluation for EDU17R1;
+2. matched causal T5 ablations, beginning with evidence governance and memory;
+3. hidden paired STOP/WITHHOLD evaluation and adaptive-successor validity beyond public pressure surfaces;
+4. dynamic adversarial World-input/authentication tests beyond public attack surfaces;
+5. external T6 capability/science benchmarks;
 6. automatic T8 source-change reconciliation beyond freshness deadlines;
-7. T9 blind-reader reconstruction tests.
+7. deeper historical extraction and T9 blind-reader tests when they block a live experiment.
 
 ## Rule
 
