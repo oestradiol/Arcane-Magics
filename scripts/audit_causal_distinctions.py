@@ -20,6 +20,17 @@ ALLOWED_STATUS = {
     "OPEN_EXTRACTION",
     "NO_AUTOMATED_TEST_YET",
     "HISTORICAL_ONLY",
+    "HISTORICAL_EVIDENCE_NO_CURRENT_REGRESSION",
+    "HISTORICAL_EVIDENCE_MATURE_REDUCED",
+    "HISTORICAL_REGRESSION_ORACLE_NEEDS_MINIMAL_REEXECUTION_ROUTE",
+    "HISTORICAL_PROMOTED_KERNEL",
+    "PRESERVED_NEGATIVE_CARRIER_GAP",
+    "HISTORICAL_MATURE_REDUCTION",
+    "HISTORICAL_RESULT_MECHANISM_REDUCED",
+    "CLOSED_NEGATIVE_DO_NOT_REROLL",
+    "REFERENCE_PASS_CURRENT_INVARIANT_COVERED",
+    "REFERENCE_PASS_PROSPECTIVE_TRANSFER_TEST_OPEN",
+    "READY_ONLY_EXTERNAL_RETURN_OPEN",
 }
 
 REQUIRED_FIELDS = {
@@ -89,6 +100,12 @@ def main() -> int:
         for rel in source_paths(row["source_artifact"]):
             # Some historical rows name issue/review composites rather than one path.
             if rel.startswith(("issue ", "issues/", "review +", "historical ")):
+                continue
+            # The archaeology matrix may cite retired Canonical-only objects or
+            # named historical packets that are intentionally not live Git paths.
+            # Their absence from Git is part of the custody/disposition fact, not
+            # a malformed matrix row.
+            if rel.startswith("Canonical") or rel.startswith("R191_"):
                 continue
             p = ROOT / rel
             if not p.exists():
