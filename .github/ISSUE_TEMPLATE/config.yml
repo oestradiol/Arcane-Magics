@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Research frontier
+    url: https://github.com/oestradiol/Venus-Minerva/blob/main/docs/FRONTIER_RESEARCH.md
+    about: Read the current bounded research queue before opening a broad proposal.
