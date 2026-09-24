@@ -331,6 +331,7 @@ def make_cycle(
     recent_targets: Iterable[tuple[str, int]] = (),
     kind_utility: Mapping[str, float] | None = None,
     method_utility: Mapping[str, float] | None = None,
+    learning_strategy: str = "RETURN_UTILITY_FIRST",
 ) -> AutonomousCycleReceipt:
     items = tuple(issues) + tuple(prs)
     target = choose_target(
