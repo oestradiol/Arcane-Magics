@@ -1,13 +1,20 @@
 {
-  "schema": "Venus.AutonomousLearningState.v0.1",
-  "seen_cycle_prs": [],
-  "kind_success": {
+  "schema": "Venus.AutonomousLearningState.v0.2",
+  "seen_review_prs": [],
+  "kind_useful": {
     "ISSUE": 0,
     "PR": 0
   },
-  "kind_failure": {
+  "kind_unhelpful": {
     "ISSUE": 0,
     "PR": 0
   },
-  "promotion_authority": false
+  "review_return_semantics": {
+    "venus-return-useful": "useful for future work selection only",
+    "venus-return-unhelpful": "unhelpful for future work selection only",
+    "venus-return-invalid": "invalid episode; no preference update"
+  },
+  "truth_authority": false,
+  "promotion_authority": false,
+  "merge_authority": false
 }
