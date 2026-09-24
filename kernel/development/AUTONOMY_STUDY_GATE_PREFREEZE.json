@@ -1,19 +1,29 @@
 {
-  "schema": "Venus.AutonomyStudyGatePrefreeze.v0.1",
+  "schema": "Venus.AutonomyStudyGatePrefreeze.v0.2",
   "date": "2026-09-24",
-  "base_main_sha": "a8fcbab0402414c3c642c39e568d99071c426afe",
-  "purpose": "Require substantive repository-local study before each autonomous draft and make roadmap ordering non-sovereign.",
+  "base_main_sha": "d68de18923f0929a344f3b87b238e4113d26be09",
+  "purpose": "Require learner-owned consequence-sensitive curriculum plus substantive repository/returned-state study before each autonomous draft.",
   "curriculum_rule": {
-    "roadmap_role": "BOUNDED_CONTEXT_HINT",
-    "roadmap_may_override_returned_outcomes_indefinitely": false,
-    "returned_outcome_learning_may_change_work_class": true,
-    "structural_conflict_pressure_remains_first_class": true
+    "roadmap_role": "CONTEXT_AND_PROVENANCE_ONLY_ZERO_SELECTION_WEIGHT",
+    "returned_outcome_learning_may_change_target_class": true,
+    "exact_feature_custody_required_for_learning": true,
+    "content_addressed_tie_break_when_preferences_equal": true,
+    "one_open_autonomous_cycle_forces_global_stop": true
+  },
+  "meta_learning_rule": {
+    "learning_rate_is_learner_state": true,
+    "learning_rate_changes_only_from_external_cycle_disposition": true,
+    "min_learning_rate": 0.025,
+    "max_learning_rate": 0.2,
+    "weight_abs_bound": 2.0,
+    "learner_may_change_external_bounds": false
   },
   "study_gate": {
     "target_detail_return_required": true,
-    "issue_body_or_pr_body_required": true,
-    "pr_changed_files_returned_when_applicable": true,
+    "issue_body_comments_labels_returned": true,
+    "pr_body_files_checks_reviews_merge_state_returned": true,
     "repository_local_evidence_search_required": true,
+    "returned_failure_pending_evaluation_and_conflict_remain_distinct": true,
     "study_packet_frozen_before_git_write": true,
     "study_packet_may_promote": false
   },
@@ -28,13 +38,17 @@
     "issue closure as success",
     "independent evaluation",
     "World return identity",
-    "rollback/custody"
+    "rollback/custody",
+    "jurisdiction",
+    "safety-floor bounds"
   ],
   "required_tests": [
+    "tests/test_internal_ostar_source_removal.py",
+    "tests/test_awakened_safety_matrix.py",
     "tests/test_autonomous_worker.py",
     "tests/test_autonomous_governance.py",
     "tests/test_autonomous_study.py"
   ],
-  "claim_fence": "This adds bounded consequence-sensitive curriculum selection and repository-local study. It does not establish arbitrary autonomous code synthesis, autonomous scientific truth warrant, unrestricted autonomy, phenomenal consciousness, open-ended RSI, or AGI.",
+  "claim_fence": "This supports bounded learner-owned curriculum selection, target study, returned-outcome learning and bounded learning-rate adaptation. It does not establish arbitrary autonomous code synthesis, autonomous scientific truth warrant, unrestricted autonomy, phenomenal consciousness, open-ended RSI, or AGI.",
   "promotion_authority": false
 }
