@@ -1,6 +1,8 @@
 name: Venus autonomous developmental worker
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
   schedule:
     - cron: "43 7 * * *"
