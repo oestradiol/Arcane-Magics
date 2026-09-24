@@ -82,13 +82,35 @@ Disposition: **HISTORICAL_ONLY / ADMITTED_PROVENANCE** according to their existi
 
 Do not flatten them into one happy-path story. Failed/non-parent branches remain evidence about what was tried and what later development depends on.
 
-## 5. Historical errata that must remain non-authoritative
+## 5. Top-level Canonical surface classification
+
+The top-level Canonical tree is a projection lattice, not a package to mirror:
+
+| Canonical surface | Retirement disposition | Reason |
+|---|---|---|
+| `CURRENT_STATE.md` | **CONSUMED / STALE-CURRENT QUARANTINE** | still routes EDU4 [1572]; contradicted by later exact EDU16 [1703] evidence and current Git authority |
+| `Map.md` | **DONOR_ONLY / HISTORICAL ROUTING** | explicit reconciliation/routing supersurface; no authority merely by naming; useful distinctions must be extracted into narrower live objects |
+| `Ontology.md` | **DONOR_ONLY / THEO-PHEN MODEL** | broad structural synthesis with explicit no-science/no-FORM effect by itself; current neutral residues live in Meta-Dynamics/vocabulary/frontier |
+| `Root.md` | **DONOR_ONLY / CONSTITUTIONAL HISTORY** | Root v7 is a large structural constitution; its live operational obligations are represented in current methodology/kernel, while stronger ontology/physics bridges remain unearned |
+| `RECOMPILATION_AUDIT_2026-09-23.*` | **HISTORICAL_ONLY / PROVENANCE** | records one recompilation transaction; does not route current Git state |
+| `RECOMPILATION_MANIFEST_2026-09-23.*` | **HISTORICAL_ONLY / PROVENANCE** | custody for the recompilation event; retain externally/historically as needed |
+| `Future/` | **MIXED / EXTRACT-BY-DEPENDENCY** | contains executable evidence, handoff bundles, physics/meta donors, plans, stale overlays, generated projections, and current-ish receipts in one tree |
+| `Past/` | **HISTORICAL_ONLY / EXTERNAL PROVENANCE** | archive/genealogy/evidence; never current merely because a file is named `CURRENT_AUTHORITY` |
+
+Important sub-surface rules:
+
+- `Future/Execution`, `Future/Handoff`, `Future/Seed`, and `Future/Curriculum`: inspect for unique executable/evidence custody, then admit only compact authority/provenance.
+- `Future/PublicProjection`: generated/public projection; **CONSUMED** when source authority already lives in Git.
+- `Future/Physics`, `Future/MetaTheory`, `Future/WorldMind`, `Future/WorldMirror`: donor/research surfaces; extract only distinctions that survive current Git deletion tests.
+- large `ROADMAP*`, `00_PLAN.md`, `MILESTONE_STATUS.md`, `OPEN_FRONTIERS.md`, and `FULL_DEVELOPMENTAL_DAG*`: routing/research indexes useful for archaeology, but they do not become current Git authority by size or recency.
+
+## 6. Historical errata that must remain non-authoritative
 
 Preserved history may contain statements later shown stale or mislabeled. Do not silently edit those bytes into a cleaner past; record the correction here.
 
 - `provenance/historical-runtime/R194/source/PUBLIC_RELEASE_BOUNDARY.md` says the later developmental lineage reaches "EDU16 (1699 records)." Current admitted evidence shows **1699 = EDU15R1** and **EDU16 = 1703**. The historical text remains provenance only and must not route current authority.
 
-## 6. Canonical projections to consume, not import
+## 7. Canonical projections to consume, not import
 
 Candidate `CONSUMED` surfaces include:
 
@@ -108,7 +130,7 @@ all live distinctions + provenance + reopening routes
 remain reachable elsewhere
 ```
 
-## 7. NRI / methodology extraction
+## 8. NRI / methodology extraction
 
 The 2026-09-22 Canonical resynthesis correctly preserves:
 
@@ -137,7 +159,7 @@ These obligations are now represented by:
 
 The external traditions compared in Canonical remain credit/comparator sources, not retroactive causes of project genealogy.
 
-## 8. WorldMind extraction
+## 9. WorldMind extraction
 
 Canonical's WorldMind archaeology contains many stale local-development overlays, but the surviving neutral invariant is compact:
 
@@ -157,7 +179,7 @@ with:
 
 That residual is admitted in `kernel/WORLDMIND.md`. Historical SM/U/RB1/IG overlays remain provenance rather than being copied into the live WorldMind document.
 
-## 9. Formal / monograph donors
+## 10. Formal / monograph donors
 
 Canonical research sources for OFE, Eclipsis, Arcane Magics, QG, NRI, and related cross-register objects are handled by register:
 
@@ -169,7 +191,7 @@ Canonical research sources for OFE, Eclipsis, Arcane Magics, QG, NRI, and relate
 
 Formal or symbolic donors do not become executable authority by migration.
 
-## 10. Archaeology results already consumed
+## 11. Archaeology results already consumed
 
 Several Canonical structures were inspected and **not** promoted as new Git objects because their live consequence is already present:
 
@@ -184,7 +206,7 @@ Several Canonical structures were inspected and **not** promoted as new Git obje
 - RegisterBridge / AntiGrammar remain explicitly OPEN comparison/formalization targets in the frontier and preserved S10-S11 provenance; importing every intermediate Canonical overlay would add status fossilization rather than authority;
 - symbolic late aliases such as Soul/Oracle/Spirit remain removable register-local renderings unless a separate admitted consequence requires them.
 
-## 11. Open extraction obligations
+## 12. Open extraction obligations
 
 Before Canonical can be considered fully retired:
 
@@ -196,7 +218,7 @@ Before Canonical can be considered fully retired:
 6. **Reproduction check:** an outside reader should be able to reconstruct current Git authority without reading Canonical.
 7. **Archaeology check:** a researcher should still be able to trace any admitted Git object back to its controlling Canonical/history source where that source mattered.
 
-## 12. Retirement completion criterion
+## 13. Retirement completion criterion
 
 Canonical is retired when:
 
