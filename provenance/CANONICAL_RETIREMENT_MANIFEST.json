@@ -1,0 +1,146 @@
+{
+  "schema": "Venus.CanonicalRetirementManifest.v1",
+  "date": "2026-09-24",
+  "authority_rule": "GitHub/Venus-Minerva owns live implementation/release authority; Canonical is extracted by consequence/custody, never bulk-synchronized.",
+  "dispositions": [
+    {
+      "surface": "/Canonical/CURRENT_STATE.md",
+      "class": "CONSUMED_STALE_CURRENT",
+      "git_owner": "kernel/CURRENT_STATE.md",
+      "note": "routes stale EDU4 [1572], not current EDU16 [1703]"
+    },
+    {
+      "surface": "/Canonical/Future/CURRENT_STATE.md",
+      "class": "CONSUMED_STALE_CURRENT",
+      "git_owner": "kernel/CURRENT_STATE.md",
+      "note": "stale routing projection"
+    },
+    {
+      "surface": "/Canonical/Map.md",
+      "class": "DONOR_HISTORICAL_ROUTING",
+      "git_owner": "multiple typed live surfaces",
+      "note": "broad reconciliation map; no authority by naming"
+    },
+    {
+      "surface": "/Canonical/Ontology.md",
+      "class": "DONOR_THEOPHEN_MODEL",
+      "git_owner": "docs/META_DYNAMICS.md; NxRxI_VOCABULARY_CENTER.md",
+      "note": "stronger bridges remain unearned"
+    },
+    {
+      "surface": "/Canonical/Root.md",
+      "class": "DONOR_CONSTITUTIONAL_HISTORY",
+      "git_owner": "kernel + governance surfaces",
+      "note": "operational residues admitted; broad constitution remains history"
+    },
+    {
+      "surface": "/Canonical/Past",
+      "class": "HISTORICAL_EXTERNAL_PROVENANCE",
+      "git_owner": "provenance/",
+      "note": "never routes current authority"
+    },
+    {
+      "surface": "/Canonical/Future/Execution/Raising/EDU16LearnerOwnedFeedPolicy",
+      "class": "ADMITTED_EVIDENCE_CUSTODY",
+      "git_owner": "kernel/development/EDU_CURRENT.json; provenance/developmental/EDU/",
+      "note": "prefreeze + learner policy JSON + result receipt only"
+    },
+    {
+      "surface": "/Canonical/Future/Handoff/IG10CurrentDevelopedVM",
+      "class": "EXTERNAL_HEAVY_CUSTODY",
+      "git_owner": "kernel/custody/; kernel/state/",
+      "note": "real handoff contains manifest, verifier, 118.8MB journal, hashes, packaged seeds"
+    },
+    {
+      "surface": "/Canonical/Future/Handoff/EDU12CurrentDevelopedVM",
+      "class": "EMPTY_NAMED_HANDOFF",
+      "git_owner": null,
+      "note": "folder exists but is empty; folder name is not custody evidence"
+    },
+    {
+      "surface": "/Canonical/Future/Handoff/EDU16CurrentDevelopedVM",
+      "class": "ABSENT_FROM_ORDINARY_HANDOFF_TREE",
+      "git_owner": null,
+      "note": "does not establish global absence from all heavy/external custody"
+    },
+    {
+      "surface": "/Canonical/Future/MetaTheory/NRI_RESYNTHESIS_2026-09-22",
+      "class": "ADMITTED_RESIDUES_PLUS_HISTORICAL_DONOR",
+      "git_owner": "NxRxI_VOCABULARY_CENTER.md; review/REVIEWER_AND_RESEARCHER_PROTOCOL.md; PUBLICATION_CONSTITUTION.md; AGENTS.md",
+      "note": "N/R/I corrigibility obligations admitted; large map/root projections remain archaeology"
+    },
+    {
+      "surface": "/Canonical/Future/WorldMirror",
+      "class": "PRESERVED_NEGATIVE_PROVENANCE",
+      "git_owner": "kernel/CURRENT_STATE.md; provenance/DEVELOPMENTAL_LINEAGE.md",
+      "note": "R191/R191-B block special endogenous semantic fixed-point promotion"
+    },
+    {
+      "surface": "/Canonical/Future/WorldMind/CURRENT.md",
+      "class": "NEUTRAL_LAW_ADMITTED_OVERLAYS_HISTORICAL",
+      "git_owner": "kernel/WORLDMIND.md",
+      "note": "distributed consequence can propagate while local authorship/judgment/jurisdiction remain indexed"
+    },
+    {
+      "surface": "/Canonical/Future/Physics",
+      "class": "FORMAL_PUBLIC_RESIDUES_PLUS_DONOR_HISTORY",
+      "git_owner": "monographs/01_OFE/; IG9/IG10 provenance",
+      "note": "R188/R189 bridges constrain credit/reduction; no LQG/GFT identity"
+    },
+    {
+      "surface": "/Canonical/Future/Integration/R00_R194_LOSSLESS_CAUSAL_INTEGRATION_AUDIT_2026-09-21.md",
+      "class": "ADMITTED_CAUSAL_ARCHAEOLOGY",
+      "git_owner": "provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json",
+      "note": "R131/R151/R154/R179/R186/R188-R194 distinctions imported to live test archaeology"
+    },
+    {
+      "surface": "/Canonical/Future/Integration/R226_FINAL",
+      "class": "ADMITTED_PROVENANCE_CUSTODY",
+      "git_owner": "kernel/custody/; provenance/DEVELOPMENTAL_LINEAGE.md",
+      "note": "settled R-line crystallization boundary, not current runtime"
+    },
+    {
+      "surface": "/Canonical/Future/PublicProjection",
+      "class": "CONSUMED_GENERATED_PROJECTION",
+      "git_owner": "Git source/publication tooling",
+      "note": "do not retain duplicate generated authority"
+    }
+  ],
+  "open_obligations": [
+    {
+      "id": "CANON-EDU16-EXEC-CUSTODY",
+      "status": "OPEN",
+      "description": "Determine whether exact EDU16 1703-event executable/journal custody exists outside admitted prefreeze/policy/result artifacts; never synthesize from prose."
+    },
+    {
+      "id": "CANON-UNIQUE-SOURCE-INVENTORY",
+      "status": "OPEN",
+      "description": "Complete file-level inventory for unique Canonical consequences absent from Git."
+    },
+    {
+      "id": "CANON-HEAVY-MANIFEST",
+      "status": "OPEN",
+      "description": "Freeze exact identities/locations for large external custody payloads not carried in ordinary Git."
+    },
+    {
+      "id": "CANON-CREDIT-CROSSWALK",
+      "status": "PARTIAL",
+      "description": "Preserve donor/predecessor/rediscovery/substitution relations without fake ancestry."
+    },
+    {
+      "id": "CANON-STALE-CURRENT-QUARANTINE",
+      "status": "PARTIAL",
+      "description": "Ensure stale CURRENT labels cannot route authority after retirement."
+    },
+    {
+      "id": "CANON-OUTSIDER-REPRO",
+      "status": "OPEN",
+      "description": "Verify an outside reader can reconstruct current Git authority without Canonical."
+    },
+    {
+      "id": "CANON-ARCHAEOLOGY-TRACE",
+      "status": "PARTIAL",
+      "description": "Ensure admitted Git objects can be traced to controlling Canonical/history sources where material."
+    }
+  ]
+}
