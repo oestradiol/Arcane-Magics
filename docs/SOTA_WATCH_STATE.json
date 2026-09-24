@@ -8,15 +8,17 @@
       "area": "mathematics/frontier-status",
       "last_checked": "2026-09-24",
       "stale_after_days": 3,
-      "status": "RECONCILE",
+      "status": "WATCH",
       "sources": [
         "https://openai.com/index/navier-stokes-solution/",
         "https://www.claymath.org/news/navier-stokes-announcement/"
       ],
       "distinction": "claimed solution != independent validation != formal verification alone != prize disposition",
       "issue": 7,
-      "recheck_trigger": "freshness deadline or material source/status change",
-      "reconciliation_state": "OPEN"
+      "recheck_trigger": "new independent mathematical validation, formal-verification defect, CMI/prize update, corrected proof, or freshness deadline",
+      "reconciliation_state": "CLEAN",
+      "reconciliation_artifact": "docs/NAVIER_STOKES_STATUS_2026-09-24.md",
+      "current_state": "PUBLIC_CLAIMED_RESOLUTION_WITH_LEAN; CMI_APPARENTLY_SETTLED; INDEPENDENT_VALIDATION_AND_PRIZE_DISPOSITION_TRACKED_SEPARATELY"
     },
     {
       "id": "darwin_godel_machine",
