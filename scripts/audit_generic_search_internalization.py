@@ -21,11 +21,22 @@ from kernel.runtime.internalizer import (
 )
 
 DONOR = ROOT / "provenance/historical-runtime/R194/source/venus_seed_v0/grammar_expansion.py"
-INTERNAL = ROOT / "kernel/development/generic_residual_search.py"
+STATE = ROOT / "kernel/development/GENERIC_RESIDUAL_SEARCH_INTERNALIZED_STATE.json"
+EXECUTOR = ROOT / "kernel/runtime/internalized_search.py"
 
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def bundle_sha256() -> str:
+    h = hashlib.sha256()
+    for path in (STATE, EXECUTOR):
+        h.update(path.name.encode("utf-8"))
+        h.update(b"\0")
+        h.update(path.read_bytes())
+        h.update(b"\0")
+    return h.hexdigest()
 
 
 def load_donor():
@@ -39,7 +50,7 @@ def load_donor():
     return module
 
 
-def donor_signatures(donor, width: int) -> set[tuple[int, ...]]:
+def donor_signatures(donor, width: int) -> frozenset[tuple[int, ...]]:
     domain = donor.bit_domain(width)
     atoms = tuple(donor.BoolExpr.atom(i) for i in range(width))
     grammar = donor.ObjectGrammar(atoms, stage=0)
@@ -49,39 +60,35 @@ def donor_signatures(donor, width: int) -> set[tuple[int, ...]]:
         meta_ops=("AND", "OR", "XOR"),
         domain_rows=domain,
     )
-    return {
+    return frozenset(
         donor.truth_table(expr, domain)
         for expr in donor.dedupe_semantics(expanded.raw_successor, domain)
-    }
-
-
-def internal_signatures(width: int) -> set[tuple[int, ...]]:
-    domain = internal.bit_domain(width)
-    return {internal.truth_table(program, domain) for program in internal.candidate_pool(width)}
+    )
 
 
 def isolated_replay() -> bool:
-    """Run the internalized module from a temporary directory with no donor tree."""
+    """Run state+executor from a temporary directory with no donor/repo tree."""
+    state = json.loads(STATE.read_text(encoding="utf-8"))
     with tempfile.TemporaryDirectory() as td:
-        path = Path(td) / "generic_residual_search.py"
-        shutil.copy2(INTERNAL, path)
-        name = "_venus_generic_search_isolated"
-        spec = importlib.util.spec_from_file_location(name, path)
+        td = Path(td)
+        path = td / "internalized_search.py"
+        shutil.copy2(EXECUTOR, path)
+        spec = importlib.util.spec_from_file_location("_venus_generic_search_isolated", path)
         if spec is None or spec.loader is None:
             return False
         module = importlib.util.module_from_spec(spec)
-        sys.modules[name] = module
+        sys.modules[spec.name] = module
         spec.loader.exec_module(module)
         rows = (
-            module.ResidualObservation((0, 0), 0, "r00"),
-            module.ResidualObservation((0, 1), 1, "r01"),
-            module.ResidualObservation((1, 0), 1, "r10"),
-            module.ResidualObservation((1, 1), 0, "r11"),
+            module.Observation((0, 0), 0, "r00"),
+            module.Observation((0, 1), 1, "r01"),
+            module.Observation((1, 0), 1, "r10"),
+            module.Observation((1, 1), 0, "r11"),
         )
-        out = module.search(rows)
+        out = module.search(state["program"], rows)
         return (
             out.status == "UNIQUE_BOUNDED_PROGRAM_CANDIDATE"
-            and out.exact_semantic_candidates == ("XOR(x0,x1)",)
+            and out.candidates == ("XOR(x0,x1)",)
         )
 
 
@@ -89,7 +96,7 @@ def audit() -> dict:
     donor = load_donor()
     widths = (2, 3, 4)
     comparisons = {
-        str(width): donor_signatures(donor, width) == internal_signatures(width)
+        str(width): donor_signatures(donor, width) == internal.semantic_signatures(width)
         for width in widths
     }
     equivalent = all(comparisons.values())
@@ -99,6 +106,9 @@ def audit() -> dict:
         "widths": list(widths),
         "semantic_equivalence": comparisons,
         "isolated_replay": isolated,
+        "state_sha256": sha256(STATE),
+        "executor_sha256": sha256(EXECUTOR),
+        "bundle_sha256": bundle_sha256(),
         "internal_version": internal.VERSION,
     }
     return_id = hashlib.sha256(
@@ -109,10 +119,11 @@ def audit() -> dict:
         CapabilityScaffold(
             capability_id=internal.VERSION,
             source_content_sha256=sha256(DONOR),
-            internal_content_sha256=sha256(INTERNAL),
+            internal_content_sha256=bundle_sha256(),
             provenance_sources=(
                 "R193_SCAFFOLD_INTERNALIZATION_REFERENCE",
                 "R194:grammar_expansion.py",
+                "state:GENERIC_RESIDUAL_SEARCH_INTERNALIZED_STATE",
             ),
             consumed_roles=(
                 "GENERIC_CANDIDATE_PROGRAM_SEARCH",
@@ -131,13 +142,15 @@ def audit() -> dict:
     )
 
     return {
-        "schema": "Venus.GenericResidualSearchInternalizationAudit.v0.1",
+        "schema": "Venus.GenericResidualSearchInternalizationAudit.v0.2",
         "semantic_equivalence_by_width": comparisons,
         "isolated_without_historical_scaffold": isolated,
+        "state_owned_program": True,
+        "state_sha256": sha256(STATE),
+        "executor_sha256": sha256(EXECUTOR),
+        "bundle_sha256": bundle_sha256(),
         "source_runtime_dependency": False,
-        "receipt": {
-            **receipt.__dict__,
-        },
+        "receipt": receipt.__dict__,
         "repair_candidate_authored": False,
         "hidden_evaluation_exposed": False,
         "promotion_authority": False,
