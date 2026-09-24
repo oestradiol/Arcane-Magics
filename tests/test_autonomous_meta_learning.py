@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import unittest
 
+from kernel.development.autonomous_worker import WorkItem, choose_study_method
 from kernel.development.autonomous_meta_learning import (
     STRATEGIES,
     choose_strategy,
@@ -93,6 +94,35 @@ class AutonomousMetaLearningTests(unittest.TestCase):
             STRATEGIES,
             ("RETURN_UTILITY_FIRST", "TARGET_SIGNAL_FIRST"),
         )
+
+
+    def test_learned_strategy_is_causally_upstream_of_method_choice(self):
+        item = WorkItem(
+            "ISSUE",
+            72,
+            "bounded meta-learning",
+            body=(
+                "external return receipt evaluator prefreeze withhold stop reopen "
+                "return receipt evaluator prefreeze"
+            ),
+        )
+        utility = {
+            "COMPARATOR_AUDIT": 1.0,
+            "RETURN_BOUNDARY_AUDIT": 0.9,
+        }
+        utility_first = choose_study_method(
+            item,
+            utility,
+            "RETURN_UTILITY_FIRST",
+        )
+        signal_first = choose_study_method(
+            item,
+            utility,
+            "TARGET_SIGNAL_FIRST",
+        )
+        self.assertEqual(utility_first, "COMPARATOR_AUDIT")
+        self.assertEqual(signal_first, "RETURN_BOUNDARY_AUDIT")
+        self.assertNotEqual(utility_first, signal_first)
 
 
 if __name__ == "__main__":
