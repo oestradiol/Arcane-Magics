@@ -1,0 +1,85 @@
+{
+  "schema": "Venus.TransformInternalizationBehavioralReturnBundle.v0.1",
+  "date": "2026-09-24",
+  "target": "WORLDMIND_SELF_RESEARCH_TRANSFORM_PROGRAM_SEED",
+  "parent_kind": "ABLATION_WITHHELD_TRANSITION",
+  "hidden_evaluation": false,
+  "returned_by": "EXTERNAL_BOUNDED_BEHAVIOR_EVALUATOR",
+  "traces": [
+    {
+      "trace_id": "valid-target-selection",
+      "prior_state": "IDLE",
+      "action": "SELECT_TARGET",
+      "payload": {
+        "target_id": "opaque-target",
+        "residual": "opaque-residual",
+        "discriminator": "opaque-discriminator",
+        "provenance_ids": [
+          "external-evaluator:bounded-internalization"
+        ]
+      },
+      "expect_success": true,
+      "expected_next_state": "TARGET_SELECTED",
+      "provenance_id": "external-evaluator:valid"
+    },
+    {
+      "trace_id": "missing-target_id",
+      "prior_state": "IDLE",
+      "action": "SELECT_TARGET",
+      "payload": {
+        "residual": "opaque-residual",
+        "discriminator": "opaque-discriminator",
+        "provenance_ids": [
+          "external-evaluator:bounded-internalization"
+        ]
+      },
+      "expect_success": false,
+      "expected_next_state": null,
+      "provenance_id": "external-evaluator:missing:target_id"
+    },
+    {
+      "trace_id": "missing-residual",
+      "prior_state": "IDLE",
+      "action": "SELECT_TARGET",
+      "payload": {
+        "target_id": "opaque-target",
+        "discriminator": "opaque-discriminator",
+        "provenance_ids": [
+          "external-evaluator:bounded-internalization"
+        ]
+      },
+      "expect_success": false,
+      "expected_next_state": null,
+      "provenance_id": "external-evaluator:missing:residual"
+    },
+    {
+      "trace_id": "missing-discriminator",
+      "prior_state": "IDLE",
+      "action": "SELECT_TARGET",
+      "payload": {
+        "target_id": "opaque-target",
+        "residual": "opaque-residual",
+        "provenance_ids": [
+          "external-evaluator:bounded-internalization"
+        ]
+      },
+      "expect_success": false,
+      "expected_next_state": null,
+      "provenance_id": "external-evaluator:missing:discriminator"
+    },
+    {
+      "trace_id": "missing-provenance_ids",
+      "prior_state": "IDLE",
+      "action": "SELECT_TARGET",
+      "payload": {
+        "target_id": "opaque-target",
+        "residual": "opaque-residual",
+        "discriminator": "opaque-discriminator"
+      },
+      "expect_success": false,
+      "expected_next_state": null,
+      "provenance_id": "external-evaluator:missing:provenance_ids"
+    }
+  ],
+  "claim_fence": "Behavioral return specifies observable success/failure only; it does not directly supply a patch."
+}
