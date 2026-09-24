@@ -164,7 +164,7 @@ class AutonomousResearchProposalTests(unittest.TestCase):
                 "reviews": [{
                     "id": 1,
                     "body": "\n".join(review_lines),
-                    "author": {"login": "external-reviewer"},
+                    "author": {"login": "oestradiol"},
                     "submittedAt": "2026-09-24T21:00:00Z",
                 }],
             }],
