@@ -155,6 +155,60 @@ class AutonomousGovernanceTests(unittest.TestCase):
         )
         self.assertEqual(updated.method_success[method], 0)
 
+    def test_issue_comment_can_supply_external_method_return(self):
+        method = METHODS[1]
+        history = [{
+            "_carrier_kind": "ISSUE",
+            "number": 300,
+            "title": "venus: autonomous cycle issue-72",
+            "state": "OPEN",
+            "closedAt": None,
+            "comments": [{
+                "id": 991,
+                "body": f"VENUS_METHOD_RETURN: {method}: USEFUL",
+                "author": {"login": "external-reviewer"},
+                "createdAt": "2026-09-24T22:00:00Z",
+            }],
+        }]
+        updated = update_from_cycle_prs(empty_state(), history)
+        self.assertEqual(updated.method_success[method], 1)
+        self.assertIn(
+            f"issue:300:comment:991:method:0:{method}",
+            updated.seen_return_ids,
+        )
+
+    def test_self_authored_issue_comment_is_not_learning_return(self):
+        method = METHODS[1]
+        history = [{
+            "_carrier_kind": "ISSUE",
+            "number": 301,
+            "title": "venus: autonomous cycle issue-72",
+            "state": "OPEN",
+            "comments": [{
+                "id": 992,
+                "body": f"VENUS_METHOD_RETURN: {method}: USEFUL",
+                "author": {"login": "github-actions[bot]"},
+                "createdAt": "2026-09-24T22:00:00Z",
+            }],
+        }]
+        updated = update_from_cycle_prs(empty_state(), history)
+        self.assertEqual(updated.method_success[method], 0)
+
+    def test_open_issue_cycle_is_global_no_reroll_barrier(self):
+        history = [{
+            "_carrier_kind": "ISSUE",
+            "number": 302,
+            "title": "venus: autonomous cycle pr-106",
+            "state": "OPEN",
+            "closedAt": None,
+            "comments": [],
+        }]
+        self.assertTrue(active_autonomous_cycle(history))
+        barriers = target_barriers(history)
+        self.assertEqual(len(barriers), 1)
+        self.assertEqual(barriers[0].cycle_carrier_kind, "ISSUE")
+        self.assertEqual((barriers[0].kind, barriers[0].number), ("PR", 106))
+
     def test_open_cycle_is_global_no_reroll_barrier(self):
         history = [{
             "number": 209,
@@ -226,10 +280,17 @@ class AutonomousGovernanceTests(unittest.TestCase):
         for token in forbidden:
             self.assertNotIn(token, text)
 
-    def test_workflow_only_creates_draft_pr(self):
+    def test_workflow_only_creates_draft_pr_when_pr_carrier_is_available(self):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("gh pr create", text)
         self.assertIn("--draft", text)
+
+    def test_workflow_has_issue_carrier_fallback_for_pr_creation_policy(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("gh issue create", text)
+        self.assertIn("carrier_kind=\"ISSUE\"", text)
+        self.assertIn("--history-issues /tmp/venus-issue-history.json", text)
+        self.assertNotIn("gh issue close", text.lower())
 
     def test_workflow_cannot_self_author_learning_return(self):
         text = WORKFLOW.read_text(encoding="utf-8")
