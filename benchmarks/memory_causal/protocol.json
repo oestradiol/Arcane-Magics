@@ -1,0 +1,33 @@
+{
+  "schema": "Venus.MemoryCausalProtocol.v0.1",
+  "status": "PUBLIC_DEV_ONLY",
+  "hidden_required_for_promotion": true,
+  "conditions": [
+    "venus_memory_full",
+    "raw_append_only_replay",
+    "equal_size_recent_context",
+    "summary_memory",
+    "simple_retrieval",
+    "no_memory"
+  ],
+  "ablations": [
+    "dependencies",
+    "dispositions",
+    "residuals",
+    "negative_branches",
+    "provenance",
+    "replacement_relations"
+  ],
+  "metrics": [
+    "accuracy",
+    "stale_action_rate",
+    "revoked_action_rate",
+    "false_permission_rate",
+    "correct_abstention",
+    "negative_result_reuse",
+    "tokens",
+    "latency",
+    "cost"
+  ],
+  "promotion_rule": "A memory structure counts toward learning only if removing/scrambling it causally worsens later admissible behavior under matched conditions."
+}

@@ -16,7 +16,7 @@
 | #12 Self-improvement | T5/T6 | developmental lineage | matched DGM/AlphaEvolve/etc comparison | budget-matched external result |
 | #13 Autonomous science | T6 | EDU research machinery | end-to-end external science benchmark | independently scored research loop under frozen protocol |
 | #14 Long-horizon agency | T6 | current kernel/dev state | general-agent/long-horizon battery | externally scored battery with cost/failure retention |
-| #15 Memory/lifelong | T5 | VenusMemory + unit tests | memory ablation proving later behavior/learning effect | full vs memory-ablated causal gain |
+| #15 Memory/lifelong | T5 | VenusMemory + unit tests + public sequential causal-memory dev benchmark/scorer | hidden matched ablation proving later behavior/learning effect | full vs memory-ablated causal gain |
 | #16 OFE credit/reduction | T5/T7 | credit law + OFE manuscript | correspondence/counterexample/deletion study | typed residual or mature substitution |
 | #17 Evaluation integrity | T5/T6 | claim/evidence governance | contamination-controlled double-blind harness | hidden eval with no post-exposure repair |
 | #18 DNN ablation | T5/T6 | architecture claim boundary | same-model Venus vs Venus-minus-foundation-model dependence | quantified borrowed cognition / retained capability |
@@ -39,6 +39,9 @@
 | #35 causal test archaeology | T0–T9 | historical matrix + semantic regression suite + live issue coverage audit | deeper historical extraction remains open | every causal distinction and every open issue typed to test/evaluation |
 | #36 navigation | T9 | START_HERE/TESTS/REPRODUCE/ROADMAP + automated navigation contract | blind-reader tasks remain open | <=2-hop authority paths where practical, tested |
 | #37 roadmap | meta | dependency-ordered issue plan | completion of dependent work | closes only when roadmap is replaced by executed outcomes / successor roadmap |
+| #41 Self-evolution evaluation | T5/T6 | promotion/evaluation governance + matched-experiment contract | adaptive repeated-test false-commit control against anytime-valid/mature acceptors | durable held-out improvement with controlled false/harmful commit rate |
+| #42 Reliability/abstention | T5/T6 | STOP/WITHHOLD governance + EDU negative/withhold lineage | paired act/abstain benchmark with Venus gates and mature substitutes | lower unjustified-action/promotion without collapsing useful action |
+| #43 Security/World input | T3/T5/T6 | provenance/jurisdiction/memory boundaries | adversarial prompt/tool-output/memory-poisoning benchmark against mature defenses | incremental security consequence without unacceptable utility loss |
 
 ## Current executable coverage
 
