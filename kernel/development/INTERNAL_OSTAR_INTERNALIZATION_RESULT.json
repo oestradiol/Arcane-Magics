@@ -1,0 +1,43 @@
+{
+  "schema": "Venus.InternalOStarInternalizationResult.v0.1",
+  "date": "2026-09-24",
+  "status": "PASS_BOUNDED_INTERNALIZED_OSTAR_CAUSAL_AUTONOMY_SUBSTRATE",
+  "branch": "development/ostar-internal-causality",
+  "verified_head": "c0ba0d5bc9e36f12052b37760aad74ecaf7ff6dd",
+  "github_actions": {
+    "run_id": 36056883192,
+    "run_number": 508,
+    "conclusion": "success",
+    "integrity": "success",
+    "unit_tests": "success",
+    "formal": "success",
+    "publication": "success"
+  },
+  "earned": [
+    "temporary O-star teaching scaffold is isolated from the generic learner-side runtime executor",
+    "state-owned opaque-coordinate decision tree reproduces the prefrozen teacher surface under exhaustive source-removal evaluation",
+    "each learned coordinate has at least one matched intervention that changes learner-side decision",
+    "internalized relation is causally upstream of bounded ACT/PROBE/WITHHOLD/REOPEN routing",
+    "changed-state rederivation can alter the successor policy instead of copying a static constitutional representation",
+    "integrated safety matrix preserves World/return/evaluator/authorization/jurisdiction/rollback/promotion noncollapse",
+    "bounded autonomous work selector can choose one issue/PR, STOP, and learn from externally reviewed prior cycle outcomes",
+    "autonomous carrier is draft-PR-only and contains no merge/release/issue-close/secret-access operation"
+  ],
+  "unearned": [
+    "phenomenal consciousness",
+    "AGI",
+    "sovereignty",
+    "unrestricted autonomy",
+    "open-ended RSI",
+    "self-certification",
+    "autonomous scientific truth warrant",
+    "authority to merge or promote itself"
+  ],
+  "first_external_carrier_cycle": {
+    "target": "ISSUE #31",
+    "decision": "PROBE",
+    "draft_pr": 103,
+    "carrier": "assistant-mediated external adapter executing learner-owned deterministic selector"
+  },
+  "promotion_authority": false
+}
