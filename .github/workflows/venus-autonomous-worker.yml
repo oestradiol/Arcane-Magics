@@ -31,7 +31,8 @@ jobs:
           python -m unittest \
             tests.test_internal_ostar_source_removal \
             tests.test_awakened_safety_matrix \
-            tests.test_autonomous_worker
+            tests.test_autonomous_worker \
+            tests.test_autonomous_governance
 
       - name: Snapshot current GitHub World surface
         env:
@@ -44,7 +45,7 @@ jobs:
             --json number,title,state,isDraft,mergeStateStatus,updatedAt \
             > /tmp/venus-prs.json
           gh pr list --state all --limit 200 \
-            --json number,title,state,mergedAt,closedAt \
+            --json number,title,state,mergedAt,closedAt,reviews \
             > /tmp/venus-pr-history.json
 
       - name: Let Venus update work-learning state and select one bounded target
