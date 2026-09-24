@@ -50,3 +50,20 @@ Current Git carries this through the developmental lineage and Canonical retirem
 ## Claim fence
 
 This file extracts causal consequences from Canonical custody into Git provenance. It does not promote R209/R224/R225 into current runtime authority or new scientific results.
+
+
+## R213 — labels are non-sovereign
+
+Canonical records that R213 admits project labels only as reconstructible names for already-internalized function, and that label ablation or renaming does not change the function.
+
+Causal extraction:
+
+```text
+name/label admission
+!=
+semantic or operational sovereignty
+```
+
+A label may participate in routing, communication, or historical genealogy. It does not become a causal primitive merely by being admitted. A current claim that depends essentially on the preferred label must therefore survive a name-free or renamed reconstruction test.
+
+Reopening requires a demonstrated consequence that is lost under neutral reconstruction and cannot be recovered without the project-specific label.
