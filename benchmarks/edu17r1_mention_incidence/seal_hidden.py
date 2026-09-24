@@ -8,6 +8,8 @@ from pathlib import Path
 from typing import Any
 
 LABELS = {"incidence", "non_incidence"}
+HERE = Path(__file__).resolve().parent
+CONDITION_FREEZE = HERE / "CONDITION_IMPLEMENTATIONS.json"
 
 
 def load_and_validate(path: Path) -> list[dict[str, Any]]:
@@ -38,6 +40,7 @@ def build_manifest(hidden_path: Path, *, frozen_at: str, evaluator: str, contami
         "schema": "Venus.SealedHiddenSplit.v0.1",
         "benchmark": "edu17r1_mention_incidence",
         "dataset_sha256": hashlib.sha256(hidden_path.read_bytes()).hexdigest(),
+        "condition_freeze_sha256": hashlib.sha256(CONDITION_FREEZE.read_bytes()).hexdigest(),
         "n": len(rows),
         "frozen_at": frozen_at,
         "evaluator": evaluator,
