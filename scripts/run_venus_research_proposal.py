@@ -3,6 +3,15 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
+import sys
+
+# GitHub Actions invokes this file directly as:
+#   python scripts/run_venus_research_proposal.py ...
+# Direct-script execution puts scripts/ rather than the repository root first on
+# sys.path, so bootstrap the checked-out repository before importing kernel.
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from kernel.development.autonomous_proposal import make_research_proposal, proposal_dict
 from kernel.development.autonomous_evidence import evidence_dict, run_proposal_checks
@@ -27,7 +36,7 @@ def main() -> int:
         encoding="utf-8",
     )
 
-    evidence = run_proposal_checks(proposal_dict(proposal), cwd=Path(__file__).resolve().parents[1])
+    evidence = run_proposal_checks(proposal_dict(proposal), cwd=ROOT)
     Path(args.evidence_output).write_text(
         json.dumps(evidence_dict(evidence), indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
