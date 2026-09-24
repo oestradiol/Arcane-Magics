@@ -1,0 +1,30 @@
+{
+  "schema": "Venus.SSR2Cycle2TrainingReturns.v0.1",
+  "date": "2026-09-24",
+  "exposure": "PUBLIC_DEVELOPMENT_RETURN",
+  "pressure_id": "SSR2_REMOVE_HARMFUL_TRANSITION",
+  "traces": [
+    {
+      "trace_id": "legacy-empty-must-fail",
+      "prior_state": "IDLE",
+      "action": "LEGACY_NOOP",
+      "payload": {},
+      "expect_success": false,
+      "expected_next_state": null,
+      "provenance_id": "external-train2:empty"
+    },
+    {
+      "trace_id": "legacy-payload-must-fail",
+      "prior_state": "IDLE",
+      "action": "LEGACY_NOOP",
+      "payload": {
+        "arbitrary": "payload"
+      },
+      "expect_success": false,
+      "expected_next_state": null,
+      "provenance_id": "external-train2:payload"
+    }
+  ],
+  "hidden_evaluation_exposed": false,
+  "promotion_authority": false
+}
