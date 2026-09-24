@@ -11,6 +11,7 @@ GitHub execution remains a carrier action performed by the workflow adapter.
 """
 
 from dataclasses import asdict, dataclass
+from datetime import datetime
 import json
 from pathlib import Path
 import re
@@ -18,7 +19,7 @@ from typing import Any, Iterable, Mapping
 
 from kernel.runtime.induced_policy import execute_tree
 from kernel.runtime.vmk2 import digest
-from kernel.development.autonomous_learning import METHODS
+from kernel.development.autonomous_learning import METHODS, TargetBarrier
 
 
 FORBIDDEN_OPERATIONS = frozenset({
@@ -104,18 +105,51 @@ def _rank(
     return (conflict, utility, roadmap, draft, item.number)
 
 
+def _parse_github_time(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    return datetime.fromisoformat(value.replace("Z", "+00:00"))
+
+
+def _blocked_by_barrier(item: WorkItem, barriers: Iterable[TargetBarrier]) -> bool:
+    matching = tuple(
+        b for b in barriers if b.kind == item.kind and b.number == item.number
+    )
+    if not matching:
+        return False
+    if any(b.cycle_state == "OPEN" for b in matching):
+        return True
+    item_time = _parse_github_time(item.updated_at)
+    if item_time is None:
+        return True
+    resolved = [
+        _parse_github_time(b.outcome_at)
+        for b in matching if b.outcome_at is not None
+    ]
+    resolved = [x for x in resolved if x is not None]
+    if not resolved:
+        return True
+    return item_time <= max(resolved)
+
+
 def choose_target(
     items: Iterable[WorkItem],
     *,
     roadmap_text: str,
+    target_barriers: Iterable[TargetBarrier] = (),
+    active_cycle: bool = False,
     recent_targets: Iterable[tuple[str, int]] = (),
     kind_utility: Mapping[str, float] | None = None,
 ) -> WorkItem | None:
+    if active_cycle:
+        return None
     recent = set(recent_targets)
+    barriers = tuple(target_barriers)
     open_items = tuple(
         item for item in items
         if item.state.upper() == "OPEN"
         and (item.kind, item.number) not in recent
+        and not _blocked_by_barrier(item, barriers)
         and not (item.kind == "PR" and item.title.lower().startswith("venus: autonomous cycle"))
     )
     if not open_items:
@@ -199,6 +233,8 @@ def make_cycle(
     prs: Iterable[WorkItem],
     roadmap_text: str,
     internal_policy: Mapping[str, Any],
+    target_barriers: Iterable[TargetBarrier] = (),
+    active_cycle: bool = False,
     recent_targets: Iterable[tuple[str, int]] = (),
     kind_utility: Mapping[str, float] | None = None,
     method_utility: Mapping[str, float] | None = None,
@@ -207,12 +243,16 @@ def make_cycle(
     target = choose_target(
         items,
         roadmap_text=roadmap_text,
+        target_barriers=target_barriers,
+        active_cycle=active_cycle,
         recent_targets=recent_targets,
         kind_utility=kind_utility,
     )
     source = {
         "items": [asdict(item) for item in items],
         "roadmap_digest": digest(roadmap_text),
+        "target_barriers": [asdict(b) for b in target_barriers],
+        "active_cycle": active_cycle,
         "recent_targets": tuple(recent_targets),
         "kind_utility": dict(kind_utility or {}),
         "method_utility": dict(method_utility or {}),
@@ -220,7 +260,9 @@ def make_cycle(
 
     if target is None:
         decision = "STOP"
-        rationale = ("no unconsumed OPEN work item is justified",)
+        rationale = (
+            "no unconsumed OPEN work item is justified, an autonomous cycle is already awaiting external return, or retained reopening barriers remain closed",
+        )
         study_method = None
         study = None
     else:
@@ -245,6 +287,7 @@ def make_cycle(
             "explicit external work-return reviews may alter later target ranking",
             "roadmap is retained as weak context/tie-break provenance, not sovereign curriculum",
             "selected target body is transformed into a bounded source-grounded study object",
+            "prior target study remains withheld until newer external target return reopens it",
             "draft proposal only; admission remains external",
         )
 
