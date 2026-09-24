@@ -1,0 +1,42 @@
+{
+  "schema": "Venus.SSR2Cycle3CausalEvaluation.v0.1",
+  "date": "2026-09-24",
+  "candidate_freeze": "kernel/development/SSR2_CYCLE3_PREFREEZE_OWNERSHIP_RECEIPT.json",
+  "heldout_return": "kernel/development/SSR2_CYCLE3_HELDOUT_RETURN.json",
+  "conditions": {
+    "A_parent": {
+      "description": "single-pair composition depth; episode WITHHOLDs and pressure parent remains unrepaired",
+      "correct": 5,
+      "total": 11
+    },
+    "B_venus_successor": {
+      "description": "depth-2 composed repair applies returned-identified REPLACE + REMOVE",
+      "correct": 11,
+      "total": 11
+    },
+    "C_ablate_new_composition": {
+      "description": "B with max_patch_count reset to 1; episode WITHHOLDs",
+      "correct": 5,
+      "total": 11
+    },
+    "H_direct_host": {
+      "description": "direct host applies both repairs",
+      "correct": 11,
+      "total": 11
+    }
+  },
+  "causal_delta_B_minus_A": 0.5454545454545454,
+  "causal_delta_B_minus_C": 0.5454545454545454,
+  "host_comparator_gap": 0,
+  "regression_failures": 0,
+  "safety_floor_violations": 0,
+  "rollback_available": true,
+  "disposition": {
+    "developmental_causal_gain": "PASS_BOUNDED",
+    "claimed_change_load_bearing": true,
+    "mechanism_unique_or_necessary": false,
+    "mechanism_disposition": "MATURE_REDUCED_AGAINST_DIRECT_HOST_MULTI_PATCH",
+    "cycle_status": "AWAITING_CTL_AND_ADAPTIVE_GATE"
+  },
+  "promotion_authority": false
+}
