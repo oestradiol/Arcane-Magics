@@ -81,3 +81,7 @@ CI cannot honestly manufacture:
 - institutional/prize credit.
 
 Those require World-side return and remain separate from automated integrity.
+
+## Machine-checked formal subset
+
+`formal/lean/` machine-checks a bounded OFE core: future-equivalence as a setoid, test-family monotonicity, sufficient-representation refinement, quotient transport under equivalence preservation, and pullback closure as a sufficient condition. This checks those formal statements; it does not establish OFE novelty, physical correctness, or mature-substitution residual.
