@@ -41,6 +41,7 @@ ALLOWED_OPERATIONS = (
     "STUDY_TARGET",
     "PROPOSE_PATCH",
     "OPEN_DRAFT_PR",
+    "OPEN_CYCLE_ISSUE_CARRIER",
     "COMMENT_WITH_RECEIPT",
 )
 
@@ -150,7 +151,7 @@ def choose_target(
         if item.state.upper() == "OPEN"
         and (item.kind, item.number) not in recent
         and not _blocked_by_barrier(item, barriers)
-        and not (item.kind == "PR" and item.title.lower().startswith("venus: autonomous cycle"))
+        and not item.title.lower().startswith("venus: autonomous cycle")
     )
     if not open_items:
         return None

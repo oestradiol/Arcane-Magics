@@ -27,6 +27,7 @@ def main() -> int:
     parser.add_argument("--roadmap", required=True)
     parser.add_argument("--policy", required=True)
     parser.add_argument("--history-prs", required=True)
+    parser.add_argument("--history-issues")
     parser.add_argument("--learning-state", required=True)
     parser.add_argument("--learning-output", required=True)
     parser.add_argument("--output", required=True)
@@ -38,10 +39,15 @@ def main() -> int:
     policy = json.loads(Path(args.policy).read_text(encoding="utf-8"))
 
     history_prs = json.loads(Path(args.history_prs).read_text(encoding="utf-8"))
+    history_issues = (
+        json.loads(Path(args.history_issues).read_text(encoding="utf-8"))
+        if args.history_issues else []
+    )
+    history_carriers = tuple(history_prs) + tuple(history_issues)
     learning_state = from_json(
         json.loads(Path(args.learning_state).read_text(encoding="utf-8"))
     )
-    updated_learning = update_from_cycle_prs(learning_state, history_prs)
+    updated_learning = update_from_cycle_prs(learning_state, history_carriers)
     Path(args.learning_output).write_text(
         json.dumps(to_json(updated_learning), indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
@@ -54,8 +60,8 @@ def main() -> int:
         method: updated_learning.method_utility(method)
         for method in updated_learning.method_success
     }
-    barriers = target_barriers(history_prs)
-    active_cycle = active_autonomous_cycle(history_prs)
+    barriers = target_barriers(history_carriers)
+    active_cycle = active_autonomous_cycle(history_carriers)
 
     cycle = make_cycle(
         issues=issues,

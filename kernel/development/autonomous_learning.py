@@ -45,6 +45,7 @@ class TargetBarrier:
     cycle_pr_number: int
     cycle_state: str
     outcome_at: str | None
+    cycle_carrier_kind: str = "PR"
 
 
 @dataclass(frozen=True)
@@ -124,29 +125,40 @@ def _review_body(review: Mapping[str, Any]) -> str:
 
 
 def extract_explicit_returns(
-    prs: Iterable[Mapping[str, Any]],
+    carriers: Iterable[Mapping[str, Any]],
 ) -> tuple[tuple[str, str, str, bool], ...]:
-    """Return (return_id, axis, key, useful) from explicit external reviews."""
+    """Return (return_id, axis, key, useful) from explicit external carrier returns."""
     out: list[tuple[str, str, str, bool]] = []
-    for pr in prs:
-        title = str(pr.get("title", ""))
+    for carrier in carriers:
+        title = str(carrier.get("title", ""))
         match = _CYCLE_TITLE.match(title)
         if not match:
             continue
         kind = match.group(1).upper()
-        pr_number = int(pr["number"])
-        for index, review in enumerate(pr.get("reviews") or ()):
+        carrier_number = int(carrier["number"])
+        carrier_kind = str(carrier.get("_carrier_kind") or "PR").upper()
+        returned_items = carrier.get("reviews") or carrier.get("comments") or ()
+        for index, review in enumerate(returned_items):
             login = _review_login(review)
             if not login or login.lower() in SELF_REVIEW_LOGINS:
                 continue
             body = _review_body(review)
-            review_id = review.get("id") or review.get("submittedAt") or index
+            review_id = (
+                review.get("id")
+                or review.get("submittedAt")
+                or review.get("createdAt")
+                or index
+            )
+            if carrier_kind == "ISSUE":
+                return_prefix = f"issue:{carrier_number}:comment:{review_id}"
+            else:
+                return_prefix = f"pr:{carrier_number}:review:{review_id}"
 
             useful = USEFUL_MARKER in body
             unhelpful = UNHELPFUL_MARKER in body
             if useful != unhelpful:
                 out.append((
-                    f"pr:{pr_number}:review:{review_id}:work",
+                    f"{return_prefix}:work",
                     "KIND",
                     kind,
                     useful,
@@ -156,7 +168,7 @@ def extract_explicit_returns(
                 method = mm.group(1).upper()
                 disposition = mm.group(2).upper()
                 out.append((
-                    f"pr:{pr_number}:review:{review_id}:method:{mindex}:{method}",
+                    f"{return_prefix}:method:{mindex}:{method}",
                     "METHOD",
                     method,
                     disposition == "USEFUL",
@@ -168,6 +180,7 @@ def update_from_cycle_prs(
     state: WorkLearningState,
     prs: Iterable[Mapping[str, Any]],
 ) -> WorkLearningState:
+    """Compatibility name: accepts PR or issue cycle-carrier records."""
     seen = set(state.seen_return_ids)
     kind_success = dict(state.kind_success)
     kind_failure = dict(state.kind_failure)
@@ -210,6 +223,7 @@ def target_barriers(prs: Iterable[Mapping[str, Any]]) -> tuple[TargetBarrier, ..
             cycle_pr_number=int(pr["number"]),
             cycle_state=state_name,
             outcome_at=str(outcome_at) if outcome_at else None,
+            cycle_carrier_kind=str(pr.get("_carrier_kind") or "PR").upper(),
         ))
     return tuple(sorted(out, key=lambda x: (x.kind, x.number, x.cycle_pr_number)))
 

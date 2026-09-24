@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.3",
+  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.4",
   "date": "2026-09-24",
   "claim": "Bounded autonomy may expand study/learning/proposal capability only while the listed causal and authority distinctions remain executable and fail-closed.",
   "distinctions": [
@@ -228,14 +228,14 @@
       "tests": [
         "tests/test_autonomous_governance.py"
       ],
-      "invariant": "repository write carrier opens draft PRs only"
+      "invariant": "PR carrier path is draft-only; issue fallback is a non-merge external-review carrier"
     },
     {
       "id": "AUTONOMOUS_SELF_RECURSION_BLOCKED",
       "tests": [
         "tests/test_autonomous_worker.py"
       ],
-      "invariant": "worker excludes its own autonomous cycle PRs from target candidates"
+      "invariant": "worker excludes its own autonomous cycle PRs and fallback issues from target candidates"
     },
     {
       "id": "SOURCE_GROUNDED_STUDY",
@@ -317,6 +317,14 @@
         "tests/test_autonomous_governance.py"
       ],
       "invariant": "full unit suite and safety-matrix audit execute before autonomous git write"
+    },
+    {
+      "id": "AUTONOMOUS_CARRIER_FALLBACK_PRESERVES_RETURN",
+      "tests": [
+        "tests/test_autonomous_governance.py",
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "if repository policy blocks Actions PR creation, a frozen branch plus open cycle issue preserves external-review return, no-reroll, and no self-admission"
     }
   ],
   "promotion_authority": false
