@@ -35,6 +35,8 @@ required = [
     "docs/TEST_COVERAGE_MATRIX.md",
     "provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json",
     "docs/SOTA_WATCH.md",
+    "docs/SOTA_WATCH_STATE.json",
+    "evaluation/MATCHED_EXPERIMENT_TEMPLATE.json",
     "docs/EVALUATION_REGISTRY.json",
     "shared/venusmonograph.sty",
 ]
