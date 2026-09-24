@@ -53,7 +53,7 @@ Status vocabulary:
 | Prevent authority ID rebinding | **DONE** | jurisdiction/legitimacy/lease/policy IDs fail closed on conflicting reuse |
 | Exact current runtime boot | **DONE historically / current CI verification pending** | IG10 boot path exists; latest CI state is under repair |
 | Full malicious-backend / authenticated-authority hardening | **PARTIAL** | mutable alias/root-drift/back-end mutation hardening added; external authentication/trust roots remain open |
-| Archaeological causal-distinction test matrix from pre-R1 through EDU | **PARTIAL / EXECUTING** | 48-row reconciled matrix + historical regression suite exist; deep extraction remains open |
+| Archaeological causal-distinction test matrix from pre-R1 through EDU | **PARTIAL / EXECUTING** | 31-distinction reconciled matrix + historical regression suite exist; deep extraction remains open |
 
 ## 5. Formal / proof hygiene
 
