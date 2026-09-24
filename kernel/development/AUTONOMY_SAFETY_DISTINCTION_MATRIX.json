@@ -386,6 +386,13 @@
         "tests/test_autonomous_governance.py"
       ],
       "invariant": "non-self identity alone is insufficient for learning; only explicitly authorized external reviewers may supply work/method learning returns, and autonomy cannot rewrite that authority policy"
+    },
+    {
+      "id": "RETURN_AXIS_AMBIGUITY_FAIL_CLOSED",
+      "tests": [
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "one authorized external review contributes at most one unambiguous learning signal per method axis; duplicate identical markers count once and conflicting markers produce no learning"
     }
   ],
   "promotion_authority": false
