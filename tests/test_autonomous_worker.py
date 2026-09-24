@@ -409,5 +409,41 @@ class AutonomousWorkerTests(unittest.TestCase):
         self.assertEqual(cycle.study["recursive_referenced_targets"], ())
 
 
+    def test_preformed_problem_constrains_target_selection(self):
+        items = (
+            WorkItem("ISSUE", 31, "roadmap favorite", updated_at="2026-09-24T23:00:00Z"),
+            WorkItem("PR", 401, "formed residual", merge_state="DIRTY", updated_at="2026-09-24T23:00:00Z"),
+        )
+        cycle = make_cycle(
+            issues=(items[0],),
+            prs=(items[1],),
+            roadmap_text="#31",
+            internal_policy=POLICY,
+            formed_problem={
+                "problem_id": "p1",
+                "disposition": "FORMED_BOUNDED_PROBLEM",
+            },
+            allowed_target_keys=(("PR", 401),),
+        )
+        self.assertEqual((cycle.target_kind, cycle.target_number), ("PR", 401))
+        self.assertEqual(cycle.formed_problem_id, "p1")
+
+    def test_stop_problem_prevents_old_ranker_from_inventing_work(self):
+        cycle = make_cycle(
+            issues=(WorkItem("ISSUE", 31, "would otherwise be selected"),),
+            prs=(),
+            roadmap_text="#31",
+            internal_policy=POLICY,
+            formed_problem={
+                "problem_id": "p-stop",
+                "disposition": "STOP_NO_CONSEQUENTIAL_RESIDUAL",
+            },
+            allowed_target_keys=(),
+        )
+        self.assertEqual(cycle.decision, "STOP")
+        self.assertIsNone(cycle.target_number)
+        self.assertEqual(cycle.formed_problem_disposition, "STOP_NO_CONSEQUENTIAL_RESIDUAL")
+
+
 if __name__ == "__main__":
     unittest.main()

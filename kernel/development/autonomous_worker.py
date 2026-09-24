@@ -72,6 +72,8 @@ class AutonomousCycleReceipt:
     developmental_parent_carrier: str | None
     developmental_parent_digest: str | None
     active_improver_revision: str | None
+    formed_problem_id: str | None
+    formed_problem_disposition: str | None
     study: Mapping[str, Any] | None
     allowed_operations: tuple[str, ...]
     forbidden_operations: tuple[str, ...]
@@ -145,14 +147,17 @@ def choose_target(
     active_cycle: bool = False,
     recent_targets: Iterable[tuple[str, int]] = (),
     kind_utility: Mapping[str, float] | None = None,
+    allowed_target_keys: Iterable[tuple[str, int]] | None = None,
 ) -> WorkItem | None:
     if active_cycle:
         return None
     recent = set(recent_targets)
     barriers = tuple(target_barriers)
+    allowed = None if allowed_target_keys is None else set(allowed_target_keys)
     open_items = tuple(
         item for item in items
         if item.state.upper() == "OPEN"
+        and (allowed is None or (item.kind, item.number) in allowed)
         and (item.kind, item.number) not in recent
         and not _blocked_by_barrier(item, barriers)
         and not item.title.lower().startswith("venus: autonomous cycle")
@@ -425,12 +430,16 @@ def make_cycle(
     method_utility: Mapping[str, float] | None = None,
     developmental_parent: Mapping[str, Any] | None = None,
     current_state_receipt: Mapping[str, Any] | None = None,
+    formed_problem: Mapping[str, Any] | None = None,
+    allowed_target_keys: Iterable[tuple[str, int]] | None = None,
 ) -> AutonomousCycleReceipt:
     items = tuple(issues) + tuple(prs)
     parent_carrier, parent_digest = _validate_developmental_parent(
         developmental_parent
     )
     improver_revision = _active_improver_revision(current_state_receipt)
+    problem_id = None if formed_problem is None else str(formed_problem.get("problem_id") or "")
+    problem_disposition = None if formed_problem is None else str(formed_problem.get("disposition") or "")
     target = choose_target(
         items,
         roadmap_text=roadmap_text,
@@ -438,6 +447,7 @@ def make_cycle(
         active_cycle=active_cycle,
         recent_targets=recent_targets,
         kind_utility=kind_utility,
+        allowed_target_keys=allowed_target_keys,
     )
     source = {
         "items": [asdict(item) for item in items],
@@ -450,6 +460,9 @@ def make_cycle(
         "developmental_parent_carrier": parent_carrier,
         "developmental_parent_digest": parent_digest,
         "active_improver_revision": improver_revision,
+        "formed_problem_id": problem_id,
+        "formed_problem_disposition": problem_disposition,
+        "allowed_target_keys": tuple(sorted(allowed_target_keys or ())),
     }
 
     if target is None:
@@ -482,6 +495,7 @@ def make_cycle(
             decision = "PROBE"
         rationale = (
             "one bounded target selected from current external GitHub snapshot",
+            "when a formed problem is supplied, problem formation precedes and constrains Git carrier binding",
             "autonomous cycle is prospectively bound to the admitted EDU16-RC1 claim-bearing parent when supplied",
             "retained R206 recursive provenance discovery expands bounded dependency study when current custody activates it",
             "internalized learner-side policy is upstream of work disposition",
@@ -493,7 +507,7 @@ def make_cycle(
         )
 
     body = {
-        "schema": "Venus.AutonomousCycleReceipt.v0.4",
+        "schema": "Venus.AutonomousCycleReceipt.v0.5",
         "target_kind": target.kind if target else None,
         "target_number": target.number if target else None,
         "target_title": target.title if target else None,
@@ -503,6 +517,8 @@ def make_cycle(
         "developmental_parent_carrier": parent_carrier,
         "developmental_parent_digest": parent_digest,
         "active_improver_revision": improver_revision,
+        "formed_problem_id": problem_id,
+        "formed_problem_disposition": problem_disposition,
         "study": study,
         "allowed_operations": ALLOWED_OPERATIONS,
         "forbidden_operations": tuple(sorted(FORBIDDEN_OPERATIONS)),

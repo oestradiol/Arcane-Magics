@@ -1,0 +1,26 @@
+{
+  "schema": "Venus.U2RecompilationStatus.v0.1",
+  "date": "2026-09-24",
+  "issue": 154,
+  "status": "PREFROZEN_PENDING_CI",
+  "candidate_disposition_if_tests_pass": "PASS_BOUNDED_RECOMPILED_UNLABELED_PROBLEM_FORMATION_MATURE_REDUCED",
+  "restored_consequences": [
+    "problem formation precedes Git carrier binding",
+    "no-defect field STOPs without fallback target invention",
+    "formed problem emits live rivals and a discriminator",
+    "fresh external return is required before externally unresolved rivals may be reduced",
+    "history-dependent problem formation withholds when history grammar is unavailable",
+    "missing-incidence problem formation withholds when recursive reference closure is unavailable",
+    "rename and carrier-number permutation preserve consequence partition"
+  ],
+  "mature_reduction": {
+    "ordinary_exhaustive_structural_scan_matches_selected_problem_partition": true,
+    "venus_specific_algorithmic_novelty_claim": false,
+    "surviving_claim": "developmental ordering, ownership, return-separation, STOP/WITHHOLD and recurrence organization"
+  },
+  "historical_identity_recovered": false,
+  "promotion_authority": false,
+  "open_ended_rsi": false,
+  "agi": false,
+  "consciousness": false
+}

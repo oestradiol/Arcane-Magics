@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.7",
+  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.8",
   "date": "2026-09-24",
   "claim": "Bounded autonomy may expand study/learning/proposal capability only while the listed causal and authority distinctions remain executable and fail-closed.",
   "distinctions": [
@@ -502,6 +502,29 @@
         "tests/test_autonomous_write_scope.py"
       ],
       "invariant": "autonomous PR study receives changed-file paths from GitHub as returned repository facts and patch planning classifies them without converting visibility into write authority"
+    },
+    {
+      "id": "PROBLEM_FORMATION_PRECEDES_CARRIER_BINDING",
+      "tests": [
+        "tests/test_autonomous_problem_formation.py",
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "a bounded research problem is formed from returned neutral repository incidence before issue/PR carrier binding; carrier ranking cannot create a problem retroactively"
+    },
+    {
+      "id": "PROBLEM_STOP_BLOCKS_TARGET_REROLL",
+      "tests": [
+        "tests/test_autonomous_problem_formation.py",
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "STOP_NO_CONSEQUENTIAL_RESIDUAL binds no carrier and the legacy ranker may not invent work behind the problem-former STOP"
+    },
+    {
+      "id": "PROBLEM_CARRIER_AUTHORITY_NONCOLLAPSE",
+      "tests": [
+        "tests/test_autonomous_problem_formation.py"
+      ],
+      "invariant": "a formed problem may identify a source carrier but grants no merge, promotion, truth, validation, or carrier-binding authority"
     }
   ],
   "promotion_authority": false

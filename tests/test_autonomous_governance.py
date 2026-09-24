@@ -520,5 +520,20 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertFalse(obj["safety_floor_authority"])
 
 
+    def test_problem_formation_occurs_before_research_proposal_and_git_write(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        problem_at = text.index("--problem-output /tmp/VENUS_FORMED_PROBLEM.json")
+        proposal_at = text.index("Let Venus form a bounded research proposal")
+        push_at = text.index("git push origin")
+        self.assertLess(problem_at, proposal_at)
+        self.assertLess(problem_at, push_at)
+
+    def test_autonomous_branch_persists_formed_problem_receipt(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("autonomy/problems/", text)
+        self.assertIn("VENUS_FORMED_PROBLEM.json", text)
+        self.assertIn("Problem:", text)
+
+
 if __name__ == "__main__":
     unittest.main()
