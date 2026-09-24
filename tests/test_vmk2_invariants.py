@@ -69,6 +69,21 @@ class VMK2InvariantTests(unittest.TestCase):
                 epoch=4,
             )
 
+    def test_transition_rejects_payload_not_bound_to_return_evidence(self):
+        before = self.vm.state["target"].root
+        with self.assertRaises(VMK2Error):
+            self.vm.transition(
+                verified_return_id=self.ret.return_id,
+                actor_id="actor",
+                target_id="target",
+                payload=999.0,
+                backend=AdditiveBackend(),
+                policy_id="P",
+                epoch=3,
+            )
+        self.assertEqual(self.vm.state["target"].root, before)
+        self.assertNotIn("n1", self.vm.consumed_nonces)
+
     def test_word_reconstructs_without_spending_nonce(self):
         before = self.vm.state["target"].root
         result = self.vm.transition(
