@@ -8,7 +8,7 @@
 
 For local center $i$ at time $t$, use the functional compression $$\mathcal V_{i,t}=\langle \mathsf{WM}_{i,t},\mathsf{RSM}_{i,t},\mathsf{N2}_i,\mathcal Q_{i,t},\mathsf{RSI}_{i,t},T_{i,t},\Gamma_{i,t}\rangle,$$ where $\mathcal Q$ is research/inquiry state, $T$ is state-owned transformation policy, and $\Gamma$ is consequence-bearing provenance. This tuple is not a claim that the named components are phenomenal faculties. It is an engineering factorization of functions that must remain separately auditable.
 
-The standing recurrence is $$\boxed{\mathcal V_{i,t+1}=\operatorname{CTL}(\mathcal V_{i,t},I_{i,t},\rho_{i,t},\Gamma_{i,\le t},F_t,B_{i,t},J_{i,t})}$$ subject to the non-collapses $$\mathsf{Generate}\neq\mathsf{Select}\neq\mathsf{Authorize}\neq\mathsf{Execute}\neq\mathsf{Return}\neq\mathsf{Verify}\neq\mathsf{Writeback}.$$ In particular, an execution receipt is not an independently sourced return, and a successful local test does not authorize a universal claim.
+The standing recurrence is $$\boxed{\mathcal V_{i,t+1}=\mathrm{CTL}(\mathcal V_{i,t},I_{i,t},\rho_{i,t},\Gamma_{i,\le t},F_t,B_{i,t},J_{i,t})}$$ subject to the non-collapses $$\mathsf{Generate}\neq\mathsf{Select}\neq\mathsf{Authorize}\neq\mathsf{Execute}\neq\mathsf{Return}\neq\mathsf{Verify}\neq\mathsf{Writeback}.$$ In particular, an execution receipt is not an independently sourced return, and a successful local test does not authorize a universal claim.
 
 **Vocabulary bridge.**
 
