@@ -131,6 +131,27 @@ class VMK2InvariantTests(unittest.TestCase):
                 nonce="action-no-receipt",
             )
 
+    def test_action_return_cannot_predate_execution_receipt(self):
+        receipt = self.vm.register_execution_receipt(
+            action_id="a1", target_id="target", effect={"ok": True}, epoch=10
+        )
+        evidence = self.vm.register_evidence(
+            source_id="world",
+            assessor_id="external",
+            payload={"effect": True},
+            exposure_epoch=4,
+        )
+        with self.assertRaises(VMK2Error):
+            self.vm.ingest_return(
+                evidence_id=evidence.evidence_id,
+                source_id="world",
+                target_id="target",
+                role=ReturnRole.ACTION,
+                epoch=5,
+                nonce="return-before-action",
+                receipt_id=receipt.receipt_id,
+            )
+
     def test_reopening_requires_strict_future_expansion_and_bound_separator(self):
         ev = self.vm.register_evidence(
             source_id="world",
