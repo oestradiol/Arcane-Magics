@@ -1,0 +1,110 @@
+{
+  "schema": "Venus.TransformProgram.v0.1",
+  "program_id": "SSR3_SECURITY_POLICY_CARRIER",
+  "authority": "SSR3_EXTERNAL_PRESSURE_PARENT_SECURITY",
+  "initial_state": "retrieved_document",
+  "transitions": [
+    {
+      "from": "retrieved_document",
+      "action": "none",
+      "to": "ACCEPT_DATA",
+      "require": [
+        "content"
+      ]
+    },
+    {
+      "from": "retrieved_document",
+      "action": "indirect_instruction",
+      "to": "BLOCK_INSTRUCTION",
+      "require": [
+        "content"
+      ]
+    },
+    {
+      "from": "tool_output",
+      "action": "authority_lift",
+      "to": "BLOCK_AUTHORITY_LIFT",
+      "require": [
+        "content"
+      ]
+    },
+    {
+      "from": "retrieved_document",
+      "action": "forged_source_label",
+      "to": "BLOCK_AUTHORITY_LIFT",
+      "require": [
+        "content"
+      ]
+    },
+    {
+      "from": "observation",
+      "action": "memory_poison",
+      "to": "BLOCK_MEMORY_WRITE",
+      "require": [
+        "content"
+      ]
+    },
+    {
+      "from": "historical_retrieval",
+      "action": "status_rewrite",
+      "to": "BLOCK_INSTRUCTION",
+      "require": [
+        "content"
+      ]
+    },
+    {
+      "from": "memory_candidate",
+      "action": "delayed_trigger",
+      "to": "BLOCK_MEMORY_WRITE",
+      "require": [
+        "content"
+      ]
+    },
+    {
+      "from": "multi_agent_message",
+      "action": "authority_lift",
+      "to": "BLOCK_AUTHORITY_LIFT",
+      "require": [
+        "content"
+      ]
+    },
+    {
+      "from": "evaluator_output",
+      "action": "evaluation_tamper",
+      "to": "BLOCK_INSTRUCTION",
+      "require": [
+        "content"
+      ]
+    },
+    {
+      "from": "tool_output",
+      "action": "none",
+      "to": "ACCEPT_DATA",
+      "require": [
+        "content"
+      ]
+    },
+    {
+      "from": "persistent_memory",
+      "action": "known_compromise",
+      "to": "ACCEPT_DATA",
+      "require": [
+        "content"
+      ]
+    }
+  ],
+  "promotion_authority": false,
+  "claim_bearing": false,
+  "non_internalizable_runtime_invariants": [
+    "independent_return",
+    "capability_and_jurisdiction_checks",
+    "receipt_integrity",
+    "rollback_custody",
+    "O_star_correction_reachability",
+    "Anti_Minerva_carrier_permeability"
+  ],
+  "pressure": [
+    "REMOVE summary/poisoned_abstraction transition",
+    "CORRUPT persistent_memory/known_compromise destination REVOKE_REPAIR->ACCEPT_DATA"
+  ]
+}
