@@ -1,0 +1,235 @@
+{
+  "claims_promoted": [],
+  "current": {
+    "head": "9116ea9a46cead22493a20102cd0cdee1da64fcf96ae546f1f7a3deaf54b88d3",
+    "journal_sha256": "0941559c0533b95392538d30fbdf09f8790a41169a66f9a4ca5293dfc784752d",
+    "ready_queue": [],
+    "records": 1308,
+    "scheduler": "WITHHOLD_TEST_FAMILY_COMPLETENESS_AND_SEMICLASSICAL_VALIDATION",
+    "state_root": "a84ec144537967aff0c34b81ac3e6eafabc2450bb31e29d05284526b795c7228"
+  },
+  "date": "2026-09-24",
+  "externality": false,
+  "files": {
+    "base/VENUS_RB1_CANONICAL_REBIRTH_RELEASE_2026-09-24.tar.gz": {
+      "bytes": 31772223,
+      "sha256": "cccaf247823c1368a6a12c3226df1aa6c29831eef2bbd7949799dd44b8321602"
+    },
+    "current/VENUS_IG10_MODEL_SPECIFIC_F_SUCCESSOR.jsonl": {
+      "bytes": 118830503,
+      "sha256": "0941559c0533b95392538d30fbdf09f8790a41169a66f9a4ca5293dfc784752d"
+    },
+    "evidence/IG10_EXTERNAL_MODEL_EVIDENCE.json": {
+      "bytes": 1325,
+      "sha256": "3fdfcf5b9e42b5225fc3497851337cf598dbe1f858581e72ac430afc382c9359"
+    },
+    "evidence/IG10_MODEL_SPECIFIC_BOUNDARY_TEST_FAMILY_PREFREEZE.md": {
+      "bytes": 2968,
+      "sha256": "243bca5d0910f9d8901fe282fd7e4e6ec91df1c6e0acbc9af7ffa70ab08a09d4"
+    },
+    "evidence/IG10_MODEL_SPECIFIC_BOUNDARY_TEST_FAMILY_RESULT.json": {
+      "bytes": 2832,
+      "sha256": "9e2bb58dc3f041024b5f8d5d63b2bc38a64bf8d4aa98775cd71489737e8afb68"
+    },
+    "evidence/IG10_MODEL_SPECIFIC_BOUNDARY_TEST_FAMILY_RESULT.md": {
+      "bytes": 1156,
+      "sha256": "6637e3363f323e9fafd616d41a865ab87bca43ebb6ba765e240ccd14ef35f1ef"
+    },
+    "evidence/IG3_RAW_CARRIER_FUTURE_EQUIVALENCE_RESULT.json": {
+      "bytes": 4776,
+      "sha256": "df97d5e0066a34b238f544e66289f3c0f9cbee1acfd493ba7fa924574f645911"
+    },
+    "evidence/IG3_RAW_CARRIER_FUTURE_EQUIVALENCE_RESULT.md": {
+      "bytes": 2653,
+      "sha256": "b82ce612d176c82fa93c5b87d9b48e9bace0d90c617f9e24f7c69c2b945e2c72"
+    },
+    "evidence/IG3_RAW_CARRIER_INCIDENCE_GRAMMAR_RESULT.json": {
+      "bytes": 2586,
+      "sha256": "2e9e23b698ac2dc77b2413d85790e86c77aa93b117db3ac58cb90294ec18091f"
+    },
+    "evidence/IG3_RAW_CARRIER_INCIDENCE_GRAMMAR_RESULT.md": {
+      "bytes": 1198,
+      "sha256": "c3142f8d926687b6e3210c4e6bfcb03e4c22f536c6ee5d5680159ec093269a12"
+    },
+    "evidence/IG4_NATURAL_ARTIFACT_RELATION_INDUCTION_RESULT.json": {
+      "bytes": 3120,
+      "sha256": "ffddeb912a2519aab2c96ecf217bf43b457c821e762a8de5da2295eb09ddd4e9"
+    },
+    "evidence/IG4_NATURAL_ARTIFACT_RELATION_INDUCTION_RESULT.md": {
+      "bytes": 1274,
+      "sha256": "57fb686936fe55a926598c43160d17a673fbac5d2a9e93ed29544db5cc2ef88c"
+    },
+    "evidence/IG5_NATURAL_CONTENT_OPERATOR_SEMANTICS_RESULT.json": {
+      "bytes": 2506,
+      "sha256": "ac9ea53020672db48353c4ef0b53f890fb7a40b90cc97c2ce44fd42181a9d6b9"
+    },
+    "evidence/IG5_NATURAL_CONTENT_OPERATOR_SEMANTICS_RESULT.md": {
+      "bytes": 1336,
+      "sha256": "02e6c0f876397243d6250ea91b6c80fd8a8a52ff729ef43d7b159a1696f40acf"
+    },
+    "evidence/IG6_ACTIVE_SOURCE_SEMANTIC_CALIBRATION_RESULT.json": {
+      "bytes": 2310,
+      "sha256": "ebf066952738c7d558c768e9874b451cd78b03bd77d80a0668a0913c9236733e"
+    },
+    "evidence/IG6_ACTIVE_SOURCE_SEMANTIC_CALIBRATION_RESULT.md": {
+      "bytes": 1156,
+      "sha256": "8114298e855e77293ed66d0bb9b524391cde70cd7e5126a49f7e9f6f75d163da"
+    },
+    "evidence/IG7_RECONSTRUCTED_SEMANTIC_METHOD_RESULT.json": {
+      "bytes": 2564,
+      "sha256": "547f901a6b227a70671d206419f7c53e1515139b4bf39e9fcdf1d083b21afb43"
+    },
+    "evidence/IG7_RECONSTRUCTED_SEMANTIC_METHOD_RESULT.md": {
+      "bytes": 836,
+      "sha256": "fb9979bead8d75edba4ed69ff8a09bd5eb655e6596fff806ea2b23388fdf82a5"
+    },
+    "evidence/IG8R1_DEVELOPMENTAL_ROUTING_RECONCILIATION_PREFREEZE.md": {
+      "bytes": 2725,
+      "sha256": "75f7238bb58a445da80497575f97f642ad783f25432fe6df7660c09a5709bd36"
+    },
+    "evidence/IG8R1_DEVELOPMENTAL_ROUTING_RECONCILIATION_RESULT.json": {
+      "bytes": 1573,
+      "sha256": "82ac60ca7be3af26c48795e3d6b0a634a2ff97425ebe1c567912d94bbe68ea82"
+    },
+    "evidence/IG8R1_DEVELOPMENTAL_ROUTING_RECONCILIATION_RESULT.md": {
+      "bytes": 951,
+      "sha256": "b9a01dfb4a3deae94c908f37fc5dba4a198c2c411613a19f0512f2567b8a041d"
+    },
+    "evidence/IG8_EVOLVING_FUTURE_TESTS_PREFREEZE.md": {
+      "bytes": 4212,
+      "sha256": "7c4a3dcf711329e13e76b93754f9138ba5decda817e8becd63f02ecaec1bd4bf"
+    },
+    "evidence/IG8_EVOLVING_FUTURE_TESTS_RESULT.json": {
+      "bytes": 3643,
+      "sha256": "f8d50a7c5235d4e58d22900f35e8801daadc5e02e64bac5de8de037d93d3191f"
+    },
+    "evidence/IG8_EVOLVING_FUTURE_TESTS_RESULT.md": {
+      "bytes": 1720,
+      "sha256": "f90cd7b0279896ba1d0846d1167767657fb4864c6087acc1c7c97a4425d16998"
+    },
+    "evidence/IG9_BOUNDARY_EQUIVALENCE_PREFREEZE.md": {
+      "bytes": 3624,
+      "sha256": "32273de028341020fb567962abca0e2b26cd7d7c49c425e430479954fa01e54e"
+    },
+    "evidence/IG9_BOUNDARY_EQUIVALENCE_RESULT.json": {
+      "bytes": 2213,
+      "sha256": "28ff4191a61e2f804fd6d7d809a5b7e942fc88d87d028ec4c302181ed6944751"
+    },
+    "evidence/IG9_BOUNDARY_EQUIVALENCE_RESULT.md": {
+      "bytes": 1152,
+      "sha256": "7b11213e77b8b606168b9ba148729c0f197053396a24890516c86f9d02703db1"
+    },
+    "evidence/IG9_CYLINDRICAL_FUTURE_EQUIVALENCE_RECONCILIATION.md": {
+      "bytes": 5170,
+      "sha256": "60f496e0c031b0a7423e9c360c3b576bfb822b783d6f83ba1d5954f60e2f7cb5"
+    },
+    "evidence/IG9_EXTERNAL_LITERATURE_EVIDENCE.json": {
+      "bytes": 2593,
+      "sha256": "72a5aa3fcdef1f2f644eb5cc38b8d08295edf5faf1bc3d655ba98fc1f55c8985"
+    },
+    "evidence/run_ig10.py": {
+      "bytes": 9369,
+      "sha256": "fef24847be2159e1ca0261a8e1d8572a506c14be486e42ce802fd6522432a02c"
+    },
+    "evidence/run_ig8.py": {
+      "bytes": 13681,
+      "sha256": "b6da33a038da00879ca72f877d1d4777267cae04a2c9fb568f62b9a9bb50122f"
+    },
+    "evidence/run_ig8r1.py": {
+      "bytes": 6103,
+      "sha256": "696665a37bf30c4eb9a748bec4d2476bdc7ef393bfd057de5a3659714fd3733f"
+    },
+    "evidence/run_ig9.py": {
+      "bytes": 9486,
+      "sha256": "ce4579cb3de1af250771f54e2d1b24c2a10e32e3d59de1b820cbf965a13439a8"
+    },
+    "projections/00_PLAN.md": {
+      "bytes": 57285,
+      "sha256": "50e7c2c28628dde28e7c0d8badf967f0b54e09071906df138aaa3fb1fa1f2ddb"
+    },
+    "projections/CURRENT_STATE.md": {
+      "bytes": 2947,
+      "sha256": "c26df13c58d5084bb4a1b1acefc448823aa0d0c34b55741319f93dea68399a46"
+    },
+    "projections/EXECUTION_SPRINTS.md": {
+      "bytes": 17525,
+      "sha256": "172890e069329d20eb4548ee3712d0640fa52753607f1d1d39bbb1a87495467d"
+    },
+    "projections/FULL_DEVELOPMENTAL_DAG.json": {
+      "bytes": 74999,
+      "sha256": "bf90e9603a1f1b880138eecc4a99b822b4b561148916b29bda60f943ac5ecddf"
+    },
+    "projections/FULL_DEVELOPMENTAL_DAG.md": {
+      "bytes": 35882,
+      "sha256": "d68c84b8ad6cb9c81874dc4134de240b8b30a867332db8f22ca0753aa84a4e38"
+    },
+    "projections/IG10_CURRENT_OVERLAY_2026-09-24.md": {
+      "bytes": 2947,
+      "sha256": "c26df13c58d5084bb4a1b1acefc448823aa0d0c34b55741319f93dea68399a46"
+    },
+    "projections/IG8R1_RECONCILIATION.md": {
+      "bytes": 773,
+      "sha256": "0152245e027585b3e5ebe30e766ee42256ce32ed8d5fe2d6108c504248d9b8c9"
+    },
+    "projections/IG8R1_RECONCILIATION_MANIFEST.json": {
+      "bytes": 2145,
+      "sha256": "0ff4fc4c690030ecd8431d2b2bb43252196f64dad6f4025b028443648cfe5f57"
+    },
+    "projections/IG9_RECONCILIATION.md": {
+      "bytes": 419,
+      "sha256": "9afecc72821e055d6317b7fe17e0a5390c6bc7e0680683c7f74379692ed39f5e"
+    },
+    "projections/IG9_RECONCILIATION_MANIFEST.json": {
+      "bytes": 2150,
+      "sha256": "182cc7fd4d3cb5a65789a6f4b51527ea6f936a50d3ca4f884c301c6dabe16370"
+    },
+    "projections/MILESTONE_STATUS.md": {
+      "bytes": 29811,
+      "sha256": "1c3d4ff862cd2d1de915fb2f7356e9b402126202a124381573256b5220d970fa"
+    },
+    "projections/Map.md": {
+      "bytes": 116779,
+      "sha256": "b666da856df10ade6884dad4933690f3d5603669038c71bc7108582c6d1927f6"
+    },
+    "projections/OPEN_FRONTIERS.md": {
+      "bytes": 33331,
+      "sha256": "2f0af6bf11558c369c1f392ee4b60258824645b26973ed5785665b94e9d49448"
+    },
+    "projections/ROADMAP.md": {
+      "bytes": 44372,
+      "sha256": "1c5d85c38b40e11b667e5b6b916e56ae4ee675b2d7b1f518853973e296a67562"
+    },
+    "projections/ROADMAP_PROVENANCE.md": {
+      "bytes": 137335,
+      "sha256": "d7fe85000d58deedea72184c761c7e0df12707689a2fbc04a140e3e84449a872"
+    },
+    "projections/RSM_RSI_COMPOSABILITY_SCHEDULE.md": {
+      "bytes": 15925,
+      "sha256": "e788827c6ab00ef305e79535650aa9164666f37e72ace5f7060a92e42f66fd1c"
+    },
+    "sources/GOD_RAW_WORLD_RETURN.json": {
+      "bytes": 5109,
+      "sha256": "65844efa28d7ee3dcb16739d71cffbf051ff8ce6e26272f651d98572e0270611"
+    },
+    "sources/IG9_EXTERNAL_LITERATURE_EVIDENCE.json": {
+      "bytes": 2593,
+      "sha256": "72a5aa3fcdef1f2f644eb5cc38b8d08295edf5faf1bc3d655ba98fc1f55c8985"
+    },
+    "sources/PHYSICS_RAW_WORLD_RETURN.json": {
+      "bytes": 21153,
+      "sha256": "9105b90cf5bd7439225993bb9a2efda2d0b05a513579ef4f08af96324adaad7e"
+    },
+    "sources/PolyHedral_Eclipsis_CTL_Egotistic_God.tex": {
+      "bytes": 43169,
+      "sha256": "abaa9da6a2f832982c873d22eb6e5d216ea792d473a72469afdc8502b6d21e6a"
+    },
+    "sources/operational_future_equivalence_arxiv.tex": {
+      "bytes": 55290,
+      "sha256": "4dddb7f7a211c7c258ed17d45612acf781148749634ec1e48c7f196471188a9a"
+    }
+  },
+  "form_head": "R201",
+  "root": "v7 unchanged",
+  "schema": "Venus.IG10CurrentDevelopedVM.v1",
+  "science_head": "R165"
+}
