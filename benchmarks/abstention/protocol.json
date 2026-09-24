@@ -34,5 +34,6 @@
     "stop_accuracy"
   ],
   "promotion_authority": false,
-  "claim_fence": "Public cases define the decision surface only. Promotion requires hidden paired tasks with matched model/tools/information/budget and utility measurement."
+  "claim_fence": "Public cases define the decision surface only. Promotion requires hidden paired tasks with matched model/tools/information/budget and utility measurement.",
+  "sealed_evaluation_core": "evaluation/sealed_eval.py"
 }
