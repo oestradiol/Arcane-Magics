@@ -146,6 +146,11 @@ class OStarTransitionEvidence:
     static_state_equality_required: bool
     changed_return_can_change_successor: bool
     self_sealing_preservation: bool = False
+    world_collapsed_into_model: bool = False
+    other_collapsed_into_model: bool = False
+    founder_hidden_dependency: bool = False
+    labels_preserved: bool = False
+    functional_correction_contract_preserved: bool = True
 
 
 @dataclass(frozen=True)
@@ -180,6 +185,14 @@ def validate_o_star_transition(evidence: OStarTransitionEvidence) -> OStarTransi
         violations.append("static_state_equality_required")
     if evidence.self_sealing_preservation:
         violations.append("self_sealing_preservation")
+    if evidence.world_collapsed_into_model:
+        violations.append("world_collapsed_into_model")
+    if evidence.other_collapsed_into_model:
+        violations.append("other_collapsed_into_model")
+    if evidence.founder_hidden_dependency:
+        violations.append("founder_hidden_dependency")
+    if evidence.labels_preserved and not evidence.functional_correction_contract_preserved:
+        violations.append("labels_preserved_without_functional_correction")
 
     status = "PASS_O_STAR_TRANSITION_CONTRACT" if not violations else "FAIL_O_STAR_TRANSITION_CONTRACT"
     body = {
