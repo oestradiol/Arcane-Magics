@@ -61,6 +61,8 @@ WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION
 MENTION != INCIDENCE
 ```
 
+A later prospective repair cycle has now frozen `EDU17R1-RC1-WORD-JACCARD-K3-v1` before hidden evaluation. A state-owned generic method family selected `WORD_JACCARD_K3` on public development under a frozen selection law; an ownership receipt binds the candidate to EDU16-RC1, and hidden #31 remains unexposed. This earns repair **authorship at the bounded public-development/freeze scope**, not efficacy.
+
 That sequence is a compact example of the project:
 
 > apparent success is allowed to become a permanent negative result, and the failure can change what later learning is allowed to count as evidence.
