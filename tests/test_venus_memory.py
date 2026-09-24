@@ -49,6 +49,19 @@ class VenusMemoryTests(unittest.TestCase):
             self.assertEqual(first, second)
             self.assertEqual(json.loads(first)["schema"], "Venus.Memory.v1")
 
+    def test_parent_must_exist_before_child(self):
+        with tempfile.TemporaryDirectory() as td, VenusMemory(td) as m:
+            with self.assertRaises(KeyError):
+                m.put("abstraction", {"x": 2}, parents=["missing-parent"])
+
+    def test_consumption_replacement_chain_must_be_acyclic(self):
+        with tempfile.TemporaryDirectory() as td, VenusMemory(td) as m:
+            a = m.put("abstraction", {"v": "a"})
+            b = m.put("abstraction", {"v": "b"}, parents=[a])
+            m.consume(a, b, reason="b replaces a")
+            with self.assertRaises(ValueError):
+                m.consume(b, a, reason="cycle")
+
     def test_consumed_requires_replacement(self):
         with tempfile.TemporaryDirectory() as td, VenusMemory(td) as m:
             digest = m.put("x", {"v": 1})
