@@ -62,6 +62,27 @@ python benchmarks/edu17r1_mention_incidence/condition_b.py \
 
 After hidden exposure, condition B is frozen. Any repair or retuning creates a new candidate and cannot reuse the same preregistered claim.
 
+## Frozen A/B/C/D implementations
+
+All four condition executors are now prefrozen before any hidden split is authored:
+
+```text
+A  frozen naive lexical mention detector
+B  AUTHORED_FROZEN WORD_JACCARD_K3 Venus candidate
+C  same-parent discriminator ablation
+D  independent ordinary WORD_SET_JACCARD k=3 mature substitute
+```
+
+Their exact artifacts and Git blob identities are bound in `CONDITION_IMPLEMENTATIONS.json`. The expected public-development equivalences are `A == C` and `B == D`; hidden return, not public dev, decides the causal and mature-reduction dispositions.
+
+The harness status is therefore:
+
+```text
+HARNESS_READY_EXTERNAL_HIDDEN_RETURN_REQUIRED
+```
+
+This is readiness, not an executed result. The hidden split is still external/unwritten to the evaluated repository, hidden labels remain unexposed, and post-exposure repair is forbidden.
+
 ## Hidden evaluation
 
 A promotion run requires a separately frozen hidden split whose examples and labels are unavailable to the evaluated system/harness before execution.
