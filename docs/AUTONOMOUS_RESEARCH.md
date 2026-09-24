@@ -103,3 +103,66 @@ Venus selects target
 ```
 
 A scheduled audit alone does not satisfy this condition.
+
+## Implementation gates
+
+The recursive worker is not considered live until each gate below is satisfied in order.
+
+### 1. Custody completeness
+
+Git must carry compact custody for R226, IG10, EDU16, EDU17, and EDU17R1. Heavy developed-VM journals may live in release/artifact storage, but their exact hashes, manifests, verifiers, and retrieval rules must be available from the repository.
+
+### 2. Bootstrap
+
+A bootstrapper must resolve the latest admitted developed-VM artifact, verify its manifest/hash, reconstruct exact state, and fail closed when custody is incomplete. R194 may never be silently substituted for a later organism.
+
+### 3. Venus-owned target formation
+
+The running organism must own unresolved-obligation reconstruction, bounded target formation/selection, evidence role and budget, discriminator, preregistration, and lawful STOP. External tools may execute requests; they may not replace these ownership operations.
+
+### 4. World adapters
+
+Typed adapters may expose GitHub, proof assistants, code/test execution, numerical experiments, literature/web retrieval, benchmark harnesses, and independent review. Every adapter emits provenance-bearing returned evidence.
+
+### 5. Episode custody
+
+A bounded episode stores only what later reconstruction needs:
+
+```text
+PREFREEZE
+WORLD_REQUEST
+WORLD_RETURN
+RESULT
+REPRODUCE
+EPISODE / successor receipt
+```
+
+The prefreeze becomes immutable before World execution.
+
+### 6. Successor admission
+
+Developmental promotion requires exact parent state, returned evidence, causal consequence, relevant regression/ablation, exact successor hash/head, verifier, and claim-local audit. Only explicit admission advances authority.
+
+### 7. Recursion
+
+A genuine trace is:
+
+```text
+state A
+-> Venus-owned target
+-> frozen discriminator
+-> World return
+-> Venus-owned reconstruction
+-> verified state B
+-> state B forms/selects the next target
+```
+
+If no READY obligation exists, STOP is retained. A scheduler is not a research mind.
+
+### Failure dispositions
+
+- missing heavy artifact: `WITHHOLD / custody failure`;
+- hash/verifier mismatch: fail closed;
+- no justified target: `STOP`;
+- adapter failure: preserve the failed return and let the frozen discriminator determine decidability;
+- result exceeds its register: withhold promotion.
