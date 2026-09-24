@@ -29,6 +29,7 @@ That preserved failure has now been turned into a sealed prospective evaluation 
 | What should be tested next? | [ISSUE_ROADMAP.md](ISSUE_ROADMAP.md) |
 | How should results be evaluated? | [EVALUATION_CONSTITUTION.md](EVALUATION_CONSTITUTION.md) |
 | What tests/evaluations cover the live issues? | [TESTS.md](TESTS.md) → [TEST_COVERAGE_MATRIX.md](TEST_COVERAGE_MATRIX.md) |
+| What is being retired from Canonical, and what historical material still matters? | [CANONICAL_RETIREMENT_LEDGER.md](../provenance/CANONICAL_RETIREMENT_LEDGER.md) |
 | What are the strongest external comparators? | [SOTA_WATCH.md](SOTA_WATCH.md) |
 
 ## What did the machine actually do?
