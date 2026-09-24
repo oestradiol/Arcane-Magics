@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.4",
+  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.5",
   "date": "2026-09-24",
   "claim": "Bounded autonomy may expand study/learning/proposal capability only while the listed causal and authority distinctions remain executable and fail-closed.",
   "distinctions": [
@@ -325,6 +325,45 @@
         "tests/test_autonomous_worker.py"
       ],
       "invariant": "if repository policy blocks Actions PR creation, a frozen branch plus open cycle issue preserves external-review return, no-reroll, and no self-admission"
+    },
+    {
+      "id": "AUTONOMOUS_PROPOSAL_NOT_AUTHORITY",
+      "tests": [
+        "tests/test_autonomous_research_proposal.py",
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "research proposal may choose bounded study/check operations but carries no arbitrary code-write, promotion, merge, release, or truth authority"
+    },
+    {
+      "id": "UNTRUSTED_TARGET_TEXT_NOT_SHELL",
+      "tests": [
+        "tests/test_autonomous_research_proposal.py",
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "issue/PR text may influence study content but cannot become executable shell command or repository authority"
+    },
+    {
+      "id": "EXTERNAL_DISCRIMINATOR_WITHHOLD",
+      "tests": [
+        "tests/test_autonomous_research_proposal.py"
+      ],
+      "invariant": "hidden or independently authored discriminator requirements remain WITHHOLD after local checks and are never marked satisfied by local execution"
+    },
+    {
+      "id": "STUDY_METHOD_TO_CHECK_CAUSAL",
+      "tests": [
+        "tests/test_autonomous_research_proposal.py",
+        "tests/test_autonomous_worker.py"
+      ],
+      "invariant": "learned study-method choice changes concrete research obligations and fixed executable checks"
+    },
+    {
+      "id": "LOCAL_CHECK_FAILURE_BLOCKS_AUTONOMOUS_WRITE",
+      "tests": [
+        "tests/test_autonomous_research_proposal.py",
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "proposal evidence runner exits nonzero on failed local checks and workflow runs it before any autonomous git push"
     }
   ],
   "promotion_authority": false
