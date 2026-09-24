@@ -77,14 +77,28 @@ def roadmap_issue_order(text: str) -> tuple[int, ...]:
     return tuple(out)
 
 
-def _rank(item: WorkItem, issue_order: tuple[int, ...]) -> tuple[int, int, int]:
+def _rank(
+    item: WorkItem,
+    issue_order: tuple[int, ...],
+    kind_utility: Mapping[str, float],
+) -> tuple[float, float, float, int]:
     if item.kind == "PR" and item.merge_state in {"DIRTY", "BLOCKED", "CONFLICTING"}:
-        return (0, 0, item.number)
+        return (0.0, 0.0, -kind_utility.get(item.kind, 0.0), item.number)
     if item.kind == "ISSUE" and item.number in issue_order:
-        return (1, issue_order.index(item.number), item.number)
+        return (
+            1.0,
+            float(issue_order.index(item.number)),
+            -kind_utility.get(item.kind, 0.0),
+            item.number,
+        )
     if item.kind == "PR":
-        return (2, 0 if item.draft else 1, item.number)
-    return (3, 0, item.number)
+        return (
+            2.0,
+            0.0 if item.draft else 1.0,
+            -kind_utility.get(item.kind, 0.0),
+            item.number,
+        )
+    return (3.0, 0.0, -kind_utility.get(item.kind, 0.0), item.number)
 
 
 def choose_target(
@@ -92,6 +106,7 @@ def choose_target(
     *,
     roadmap_text: str,
     recent_targets: Iterable[tuple[str, int]] = (),
+    kind_utility: Mapping[str, float] | None = None,
 ) -> WorkItem | None:
     recent = set(recent_targets)
     open_items = tuple(
@@ -103,7 +118,8 @@ def choose_target(
     if not open_items:
         return None
     order = roadmap_issue_order(roadmap_text)
-    return sorted(open_items, key=lambda item: _rank(item, order))[0]
+    utility = kind_utility or {}
+    return sorted(open_items, key=lambda item: _rank(item, order, utility))[0]
 
 
 def make_cycle(
@@ -113,13 +129,20 @@ def make_cycle(
     roadmap_text: str,
     internal_policy: Mapping[str, Any],
     recent_targets: Iterable[tuple[str, int]] = (),
+    kind_utility: Mapping[str, float] | None = None,
 ) -> AutonomousCycleReceipt:
     items = tuple(issues) + tuple(prs)
-    target = choose_target(items, roadmap_text=roadmap_text, recent_targets=recent_targets)
+    target = choose_target(
+        items,
+        roadmap_text=roadmap_text,
+        recent_targets=recent_targets,
+        kind_utility=kind_utility,
+    )
     source = {
         "items": [asdict(item) for item in items],
         "roadmap_digest": digest(roadmap_text),
         "recent_targets": tuple(recent_targets),
+        "kind_utility": dict(kind_utility or {}),
     }
 
     if target is None:
@@ -146,6 +169,7 @@ def make_cycle(
         rationale = (
             "one bounded target selected from current external GitHub snapshot",
             "internalized learner-side policy is upstream of work disposition",
+            "externally reviewed prior cycle outcomes may alter later target ranking",
             "draft proposal only; admission remains external",
         )
 
