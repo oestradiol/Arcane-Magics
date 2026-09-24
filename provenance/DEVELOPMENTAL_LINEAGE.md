@@ -145,6 +145,20 @@ later admitted infrastructure      generic search + correction guards
 
 This prevents both status-fossil directions: newer infrastructure is not hidden, and infrastructure is not mislabeled as developmental promotion.
 
+## Prospective EDU17R1 repair candidate below the head
+
+After the preserved EDU17R1 WITHHOLD, a later prospective cycle froze:
+
+```text
+candidate   EDU17R1-RC1-WORD-JACCARD-K3-v1
+status      AUTHORED_FROZEN
+parent      EDU16-RC1
+hidden      unexposed
+promotion   false
+```
+
+This artifact is causally downstream of the WITHHOLD but does not rewrite it. It establishes bounded repair authorship/freeze and routes the next returned consequence to sealed #31 evaluation. EDU16 remains the current positive developmental authority until stronger returned evidence licenses a successor promotion.
+
 ## Read order
 
 1. `kernel/CURRENT_STATE.md`
