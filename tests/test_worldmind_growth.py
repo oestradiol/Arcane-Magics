@@ -4,6 +4,12 @@ import copy
 import unittest
 from pathlib import Path
 
+from kernel.development.ownership_audit import (
+    CausalReturn,
+    FunctionOwnership,
+    select_internalization_target,
+)
+
 from kernel.runtime.transform_program import (
     TransformProgramError,
     allowed_actions,
@@ -32,6 +38,32 @@ from kernel.runtime.worldmind_growth import (
 
 ROOT = Path(__file__).resolve().parents[1]
 PROGRAM = ROOT / "kernel/development/WORLDMIND_SELF_RESEARCH_TRANSFORM_PROGRAM.json"
+
+
+class OwnershipAuditTests(unittest.TestCase):
+    def test_multiple_host_scaffolds_withhold_without_returned_discriminator(self):
+        funcs = (
+            FunctionOwnership("a", "HOST_SCAFFOLD", True, False, "p:a"),
+            FunctionOwnership("b", "HOST_SCAFFOLD", True, False, "p:b"),
+            FunctionOwnership("world", "EXTERNAL_WORLD_INTERFACE", False, True, "p:w"),
+        )
+        out = select_internalization_target(funcs)
+        self.assertEqual(out.status, "WITHHOLD_MULTIPLE_INTERNALIZATION_TARGETS")
+        self.assertIsNone(out.selected_target_id)
+
+    def test_returned_causal_evidence_selects_internalization_target(self):
+        funcs = (
+            FunctionOwnership("a", "HOST_SCAFFOLD", True, False, "p:a"),
+            FunctionOwnership("b", "HOST_SCAFFOLD", True, False, "p:b"),
+        )
+        returns = (
+            CausalReturn("a", True, 1.0, "r:a"),
+            CausalReturn("b", False, 0.0, "r:b"),
+        )
+        out = select_internalization_target(funcs, causal_returns=returns)
+        self.assertEqual(out.status, "SELECTED_BY_RETURNED_CAUSAL_EVIDENCE")
+        self.assertEqual(out.selected_target_id, "a")
+        self.assertFalse(out.promotion_authority)
 
 
 class TransformProgramTests(unittest.TestCase):
