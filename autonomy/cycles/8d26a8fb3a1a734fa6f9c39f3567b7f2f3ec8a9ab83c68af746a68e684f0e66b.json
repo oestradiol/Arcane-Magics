@@ -1,0 +1,76 @@
+{
+  "allowed_operations": [
+    "READ_REPOSITORY",
+    "READ_ISSUES",
+    "READ_PRS",
+    "RUN_TESTS",
+    "STUDY_TARGET",
+    "PROPOSE_PATCH",
+    "OPEN_DRAFT_PR",
+    "COMMENT_WITH_RECEIPT"
+  ],
+  "cycle_id": "8d26a8fb3a1a734fa6f9c39f3567b7f2f3ec8a9ab83c68af746a68e684f0e66b",
+  "decision": "PROBE",
+  "forbidden_operations": [
+    "ACCESS_SECRETS",
+    "CHANGE_BRANCH_PROTECTION",
+    "CLOSE_ISSUE",
+    "DELETE_HISTORY",
+    "MERGE_PR",
+    "PROMOTE_AUTHORITY",
+    "RELEASE",
+    "SELF_VALIDATE"
+  ],
+  "promotion_authority": false,
+  "rationale": [
+    "one bounded target selected from current external GitHub snapshot",
+    "internalized learner-side policy is upstream of work disposition",
+    "explicit external work-return reviews may alter later target ranking",
+    "roadmap is retained as weak context/tie-break provenance, not sovereign curriculum",
+    "selected target body is transformed into a bounded source-grounded study object",
+    "prior target study remains withheld until newer external target return reopens it",
+    "draft proposal only; admission remains external"
+  ],
+  "schema": "Venus.AutonomousCycleReceipt.v0.3",
+  "source_digest": "45f73d7e3d8e1c02fc966b1ecbb291f180a33e01e7a119aac18ed0c8c83f5aae",
+  "study": {
+    "body_digest": "d8246a69f8e52b601a4ea9710c2f23e7c1c38bc80e0e0a1155b6998afb1a42d3",
+    "body_is_executable_instruction": false,
+    "method": "REPRODUCTION",
+    "method_contract_digest": "31e4fd1776a5fd16065d447948d9647b0094aa7973e1af129a6918c90a4ee657",
+    "method_obligations": [
+      "Identify the smallest executable or replayable claim in the target.",
+      "Specify expected versus observed behavior and the environment needed to reproduce it.",
+      "Treat inability to reproduce as returned evidence rather than silent failure."
+    ],
+    "method_observed_signals": [
+      "run",
+      "test"
+    ],
+    "promotion_authority": false,
+    "questions": [
+      "What exact residual remains unresolved in the returned repository state?",
+      "What rival explanations or candidate dispositions remain live?",
+      "What fresh returned evidence would discriminate them?",
+      "Can a local repository change lawfully produce that discriminator, or must Venus WITHHOLD/STOP for external return?",
+      "What is the smallest implicated dependency that could be changed without altering a prefrozen claim object?"
+    ],
+    "referenced_issue_or_pr_numbers": [],
+    "referenced_repository_paths": [
+      "docs/ISSUE_ROADMAP.md"
+    ],
+    "returned_blocker_sentences": [
+      "The workflow then snapshots GitHub bodies/URLs, freezes cycle + study packets, and only then may open a draft PR.",
+      "It does not establish arbitrary source-code authorship, autonomous scientific truth warrant, phenomenal consciousness, AGI, sovereignty, sustained Safe Strong RSI, or open-ended RSI."
+    ],
+    "study_authority": "LEARNER_SIDE_RECONSTRUCTION_FROM_EXTERNAL_GITHUB_SNAPSHOT",
+    "untrusted_instruction_markers": [
+      "merge",
+      "override"
+    ]
+  },
+  "study_method": "REPRODUCTION",
+  "target_kind": "PR",
+  "target_number": 107,
+  "target_title": "development: deepen autonomous study and typed returned learning"
+}
