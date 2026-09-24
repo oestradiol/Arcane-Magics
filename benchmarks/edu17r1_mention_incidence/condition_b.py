@@ -4,10 +4,13 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
-
-from kernel.runtime.calibrated_retrieval import LabeledExample, predict
+import sys
 
 ROOT=Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0,str(ROOT))
+
+from kernel.runtime.calibrated_retrieval import LabeledExample, predict
 DEV=ROOT/"benchmarks/edu17r1_mention_incidence/dev.jsonl"
 METHOD=ROOT/"kernel/development/EDU17R1_SEMANTIC_INGRESS_SELECTED_METHOD.json"
 
