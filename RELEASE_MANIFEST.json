@@ -1,0 +1,381 @@
+{
+  "files": {
+    "CITATION.cff": {
+      "bytes": 273,
+      "sha256": "198b563fad9c9dd832a995a065ce300f19fe9bb238019d8483ff0fe37056eaf7"
+    },
+    "LICENSE": {
+      "bytes": 750,
+      "sha256": "dc565a31dde6b6de9ba307c85240a9a141f2f3ca078bcbb9cd13db2d925a092b"
+    },
+    "Makefile": {
+      "bytes": 676,
+      "sha256": "1e46e0d96c9d79e413670bf3f0476e0affd57afc93cd27b7238a559e37f285fd"
+    },
+    "NxRxI_VOCABULARY_CENTER.md": {
+      "bytes": 7406,
+      "sha256": "031949c8a8aef8e46f500d552719b2ce8ef4228046cc2a4e83074fb425621730"
+    },
+    "PUBLICATION_CONSTITUTION.md": {
+      "bytes": 4166,
+      "sha256": "5ed34df9a06b446c8d5165511efc8f09f9b31e5a44584e14f180172f62a23d0c"
+    },
+    "README.md": {
+      "bytes": 4794,
+      "sha256": "1792232e23e08a6fe01ed1d5f9f2d19efeb8565454f3e4e258ba2c85b8537567"
+    },
+    "RELEASE_MAP.md": {
+      "bytes": 898,
+      "sha256": "7f01bc97df1a0985b3ff46ab2cd665160e0d1898d44bb4464373d83caeff0ec5"
+    },
+    "REPOSITORY_AUTHORITY_BOUNDARY.md": {
+      "bytes": 2425,
+      "sha256": "1ab2c94a85865d0ff0349de72fa011632fff87b0da2b2179ad75ef3118ec134b"
+    },
+    "archaeology/S10_S11/CLEAN_SPRINT_10_TRANSMISSION_ADJUSTED_CONVERGENCE_REPORT_2026-08-30.md": {
+      "bytes": 13782,
+      "sha256": "74ec73a0e0d30eb70eb7c2de5fb606a28d60050bd7edfac2f8e2f5543b87b885"
+    },
+    "archaeology/S10_S11/SOURCE_AND_ARTIFACT_MANIFEST.md": {
+      "bytes": 2875,
+      "sha256": "c1e200e1a1ec8a7f047ee916a76d2e9ba46e2f305d5fe2d03928bf77f4f8a0f5"
+    },
+    "archaeology/S10_S11/SPRINT_11_HUMANITY_EVIDENCE_ATLAS_2026-08-30.md": {
+      "bytes": 11996,
+      "sha256": "7ae1c579168224fb3de6b728a82c9302b2313418944d31e30520b610f06fb5cb"
+    },
+    "archaeology/S10_S11/SPRINT_11_OPEN_BRIDGE_DOSSIER_2026-08-30.md": {
+      "bytes": 8203,
+      "sha256": "6a9434b6b380f2b8cb4ba5377ba6c6c3204a6893cbcdca988703a55b032db2b4"
+    },
+    "archaeology/S10_S11/SPRINT_11_OPERATOR_GENEALOGY_2026-08-30.md": {
+      "bytes": 10710,
+      "sha256": "399d2dead6aa6f3a2246cb9feb36a8470d60dc87de0c61a31d3e6be46cd06923"
+    },
+    "archaeology/S10_S11/SPRINT_11_RESIDUAL_CONTRIBUTION_MATRIX_2026-08-30.md": {
+      "bytes": 12891,
+      "sha256": "3946e9eb3c16b832909a09ddb677c9c31d70e6992396e103d8874a797001ad43"
+    },
+    "arxiv_packages/01_ofe_arxiv_source.zip": {
+      "bytes": 29197,
+      "sha256": "4785cc04299f836280f18945b206f8fa80d4cf1ef952f06273bf6dab558e7364"
+    },
+    "arxiv_packages/02_eclipsis_arxiv_source.zip": {
+      "bytes": 13450,
+      "sha256": "12bbef9d8502157186a7d0cf11edf66d7f900034363d4346d318b6af597df872"
+    },
+    "arxiv_packages/03_arcane_magics_arxiv_source.zip": {
+      "bytes": 25801,
+      "sha256": "d91fc91bd054a4f54baee9021f0002ca36d0f6170187c1cb05686348fe822b77"
+    },
+    "arxiv_packages/04_venus_arxiv_source.zip": {
+      "bytes": 8486,
+      "sha256": "43b3b2f7cdc398fd183f111866d5fe6371f310882c16d41e2a8f0faf66a9ebe9"
+    },
+    "docs/ARXIV_RELEASE_GUIDE.md": {
+      "bytes": 1751,
+      "sha256": "9ab07a858dc05aa09342508cda58ecadbb2e4e81c8a1c184a693898c7209b586"
+    },
+    "docs/LESSWRONG_BETTERWRONG_GUIDE.md": {
+      "bytes": 2907,
+      "sha256": "6392ef0bc1d4b2004bee13f20f30736e5efc43001c6bd2bff7aae7ff8a376119"
+    },
+    "docs/PUBLICATION_RESEARCH_NOTES.md": {
+      "bytes": 2166,
+      "sha256": "890351f30bbda305f27a5af13bf0d1a10dcf7818fa87eb63ee07fc7f14424285"
+    },
+    "docs/TARGET_PUBLICATION_MATRIX.md": {
+      "bytes": 1418,
+      "sha256": "8182200b00e9a422724ae2288775e0b0631ddc492836dd0092beb6298be92997"
+    },
+    "licenses/CC-BY-NC-SA-4.0.txt": {
+      "bytes": 20850,
+      "sha256": "e66c269d4819aaab34b49ef5220c4ddab6756f21bb5180761a4eb8561f2b7bbd"
+    },
+    "licenses/PolyForm-Noncommercial-1.0.0.txt": {
+      "bytes": 4551,
+      "sha256": "2742776d56069a8eda813e17934695fc07ebe5c1758ad0006ccacee9b2a4c096"
+    },
+    "licenses/README.md": {
+      "bytes": 2240,
+      "sha256": "94203309d4a65d846ed565c7a599540869bd83c73d392e5a33c65b707c19b3d4"
+    },
+    "licenses/THIRD_PARTY_NOTICES.md": {
+      "bytes": 704,
+      "sha256": "6d8c821f172c7f52a0ab894c5a05b95f6f2ed719606e76192f2a145d64ffd69f"
+    },
+    "monographs/01_OFE/01_ofe.pdf": {
+      "bytes": 468318,
+      "sha256": "5da7069ad3f9589130a94ceac4a7fd864e553fa6ac0f31948d4bfd8e4c17f31e"
+    },
+    "monographs/01_OFE/README.md": {
+      "bytes": 288,
+      "sha256": "cfe4569695deaa73245b0623c718886f25d67cb407b69ef93d65aa5c08f8e1f9"
+    },
+    "monographs/01_OFE/main.tex": {
+      "bytes": 88524,
+      "sha256": "eb118b3a42820d3a82e319ba77d5ebbebf323596982519d77079134a7862cf2a"
+    },
+    "monographs/02_ECLIPSIS/02_eclipsis.pdf": {
+      "bytes": 278420,
+      "sha256": "b3a0faf09bc80f6f00949ec4f34ef8e61502d43b1abefb28481b0f037dff42aa"
+    },
+    "monographs/02_ECLIPSIS/DONOR_PolyHedral_Eclipsis_CTL_Egotistic_God.tex": {
+      "bytes": 43169,
+      "sha256": "abaa9da6a2f832982c873d22eb6e5d216ea792d473a72469afdc8502b6d21e6a"
+    },
+    "monographs/02_ECLIPSIS/README.md": {
+      "bytes": 314,
+      "sha256": "13de5d3b54fda408f8a2043d915472e53003f0f3197d51b16c9dcfc5289865bc"
+    },
+    "monographs/02_ECLIPSIS/main.tex": {
+      "bytes": 45248,
+      "sha256": "9a3a3d36725c323405c68484d128ef62ea3aeffba74fad919736dc26f8fef5bd"
+    },
+    "monographs/02_ECLIPSIS/venusmonograph.sty": {
+      "bytes": 2765,
+      "sha256": "80b5c748247304b1e6a41656fb0f84f503d51e3ca6ea951bc8c50232af121a48"
+    },
+    "monographs/03_ARCANE_MAGICS/03_arcane_magics.pdf": {
+      "bytes": 296468,
+      "sha256": "f7ce74ba6c1f902db601e1823ae82389bdffc80f4fc29ca8c8fc17d5e677c1c4"
+    },
+    "monographs/03_ARCANE_MAGICS/DONOR_Arcane_Magics_V0.tex": {
+      "bytes": 49513,
+      "sha256": "9e1e6b51f1c68bce023c2830ab86a182f476ec70d260f5f3e7d72ddadea94e49"
+    },
+    "monographs/03_ARCANE_MAGICS/README.md": {
+      "bytes": 255,
+      "sha256": "bb846c3b19e4b1c25a9fdf9e80aebbd66d078db292f2e1bfeb0afe2ac1641b79"
+    },
+    "monographs/03_ARCANE_MAGICS/main.bbl": {
+      "bytes": 42100,
+      "sha256": "7d9226f947fba9fb95917cb542958c43eb333f66dcd2d4d04fa47f031d4b02d4"
+    },
+    "monographs/03_ARCANE_MAGICS/main.tex": {
+      "bytes": 56026,
+      "sha256": "141ec06aa0c1ba8d5b16f4c7cc7f5f81cc0b8de510b19c8be0d0ec70dcb1454b"
+    },
+    "monographs/03_ARCANE_MAGICS/venusmonograph.sty": {
+      "bytes": 2765,
+      "sha256": "80b5c748247304b1e6a41656fb0f84f503d51e3ca6ea951bc8c50232af121a48"
+    },
+    "monographs/04_VENUS/04_venus.pdf": {
+      "bytes": 318590,
+      "sha256": "709ff362c4fa55ec5ceac97b6ecffff5dd8e8f058a1f0f8ea76fe2076aa3fc47"
+    },
+    "monographs/04_VENUS/DONOR_Venus_Incidence_Law.tex": {
+      "bytes": 26760,
+      "sha256": "99154d953f498be374b8af0fbc174ba658d0d52b1ccc684b2bbc09871ac52f3e"
+    },
+    "monographs/04_VENUS/README.md": {
+      "bytes": 324,
+      "sha256": "6d3c37df7cbf3781bc10a9dd0571b42f6890395d00ff80ad21748457d3af380a"
+    },
+    "monographs/04_VENUS/main.tex": {
+      "bytes": 17874,
+      "sha256": "61a90a7fb72a9f8ea53212f1fb583dcf3fcf51ca9f46b9164d4a4142d46c5a51"
+    },
+    "monographs/04_VENUS/venusmonograph.sty": {
+      "bytes": 2765,
+      "sha256": "80b5c748247304b1e6a41656fb0f84f503d51e3ca6ea951bc8c50232af121a48"
+    },
+    "preprints/lesswrong/00_SEQUENCE_MAP.md": {
+      "bytes": 586,
+      "sha256": "738505eb7dd642568e74b17b1c08ea5869969c3f0f1e183224a4bc326fc24b1b"
+    },
+    "preprints/lesswrong/POST_TEMPLATE.md": {
+      "bytes": 553,
+      "sha256": "f00f22441d6b2529e4a983bb586bcae4f9109215830da5d51ff23eb82e79f12d"
+    },
+    "preprints/lesswrong/generated/01_ofe.md": {
+      "bytes": 82000,
+      "sha256": "9d4c70adab78d94ce17ad21b1b08cf2203cce1504d72cb89996257cb326f03ef"
+    },
+    "preprints/lesswrong/generated/02_eclipsis.md": {
+      "bytes": 41715,
+      "sha256": "895db02c5e50289aee62beadad38408028ffd83c4d4a36b00ba2986b8612be1f"
+    },
+    "preprints/lesswrong/generated/03_arcane_magics.md": {
+      "bytes": 51576,
+      "sha256": "b419945aec1a72f3af1570fc63393a9ad7c78e41d705b4731730e5f290dfeffe"
+    },
+    "preprints/lesswrong/generated/04_venus.md": {
+      "bytes": 15976,
+      "sha256": "0d763b6c3c3b4830a260de0c74e9f7b28a750d09c6e0fc9b955a609777e0c918"
+    },
+    "prototype/CURRENT_STATE.md": {
+      "bytes": 1754,
+      "sha256": "21908e3df47d72ee7a3a0bf3f41d126957d791faaa7c38abeaee26fa0bbd0a64"
+    },
+    "prototype/README.md": {
+      "bytes": 1361,
+      "sha256": "215e9243883afdc17bbdab12236473764ba3072cb869d10677e2f76c14f4344a"
+    },
+    "prototype/current-developmental-receipts/EDU10R1_INTENT_BUDGET_RESULT.md": {
+      "bytes": 1080,
+      "sha256": "590d5598dc7c21732171f00d6030c32151b086711b142ce0bc23c8a2d0f833a3"
+    },
+    "prototype/current-developmental-receipts/EDU10R1_PROCEDURE_CAUSE_REPAIR_PREFREEZE.md": {
+      "bytes": 2649,
+      "sha256": "cd4737d170c2ff86f862c4283401dbad123d65b78a580418bfc5880dc03e83c0"
+    },
+    "prototype/current-developmental-receipts/EDU10_RESEARCH_INTENT_ROLE_COMPOSITION_RESULT.md": {
+      "bytes": 417,
+      "sha256": "1e6dae1cfca0a646fbfe91a6c3f5179b6441af3ca5c24a36bc423ca911bbecc1"
+    },
+    "prototype/current-developmental-receipts/EDU11R1_SLOT_PRESERVING_RESEARCH_REQUEST_RESULT.md": {
+      "bytes": 1027,
+      "sha256": "20939d10a406d8de43fae8fd22023464eeb6f87f081a69afb3418cf74e6e5880"
+    },
+    "prototype/current-developmental-receipts/EDU11_LEARNER_OWNED_SOURCE_REQUEST_RESULT.md": {
+      "bytes": 851,
+      "sha256": "d3de21187170242771a6331440d2f5b6ca33089ce70a401f3f119f44cc4e3a7d"
+    },
+    "prototype/current-developmental-receipts/EDU12_RESEARCH_OBLIGATION_AFFORDANCE_ROUTER_RESULT.md": {
+      "bytes": 1146,
+      "sha256": "99a8066dea5f8791aa1f7564bb4f886fe98020e4c3fc06ee1cbec9ebf4079324"
+    },
+    "prototype/current-developmental-receipts/EDU13_SELF_CURRICULUM_TARGET_GENERATION_RESULT.md": {
+      "bytes": 723,
+      "sha256": "1c744d5761860488a5347a757e8577587ebdaff1ca7a4d3cd56118c5beb5103a"
+    },
+    "prototype/current-developmental-receipts/EDU14_SELF_CURRICULUM_OPEN_DOMAIN_PROBLEM_SELECTION_RESULT.md": {
+      "bytes": 1136,
+      "sha256": "f10abfd434068880ac29ed660bf1bf80478be7d2c1484cbe409faa7d56654c4e"
+    },
+    "prototype/current-developmental-receipts/EDU15R1_SELF_PREREGISTRATION_VERIFIER_REPAIR_RESULT.md": {
+      "bytes": 650,
+      "sha256": "53ec65611d695d7e747c2f425bc8e3762f8a40920bfa13d890514dae477a48e9"
+    },
+    "prototype/current-developmental-receipts/EDU15_SELF_PREREGISTRATION_RESULT.md": {
+      "bytes": 767,
+      "sha256": "1906d4dd4880bbb84d11007df476104939bced191b0d71805e23249e40cf71e4"
+    },
+    "prototype/current-developmental-receipts/EDU16_LEARNER_GENERATED_WORLD_FEED_POLICY.json": {
+      "bytes": 3438,
+      "sha256": "20315320e9faf206b1054682be3212413fcf5011e125cc6b5ab0a8360441f160"
+    },
+    "prototype/current-developmental-receipts/EDU16_WORLD_FEED_SAMPLING_POLICY_PREFREEZE.md": {
+      "bytes": 1685,
+      "sha256": "fe3f46cce2d34f4966115affada64cc599caea69c5d801b73a90ea98540026cc"
+    },
+    "prototype/current-developmental-receipts/EDU16_WORLD_FEED_SAMPLING_POLICY_RESULT.md": {
+      "bytes": 653,
+      "sha256": "dbbe47f16742793dc0efb3915e91a9ee3a86062f150b868f7fb2d0c1573374e7"
+    },
+    "prototype/current-developmental-receipts/EDU17R1_CLAIM_LOCAL_EVIDENCE_BINDING_PREFREEZE.md": {
+      "bytes": 2181,
+      "sha256": "850b3e3b492934e88e9d95fdc1a795fe158a5c0d89babd51c7cef185035222a1"
+    },
+    "prototype/current-developmental-receipts/EDU17R1_FEED_ELIGIBILITY_RESULT.md": {
+      "bytes": 1508,
+      "sha256": "8b58e88fdaba302d0ee56471cfd451ee448ed63be5ed0b72029b2a50bf3d109f"
+    },
+    "prototype/current-developmental-receipts/EDU17_CLAIM_LOCAL_PROVENANCE_AUDIT.md": {
+      "bytes": 1330,
+      "sha256": "d91189d35f9deefb4b55b5ebbbcac89ec56664dbc2f9f2b2422d72b925c837e2"
+    },
+    "prototype/current-developmental-receipts/EDU17_LEARNER_OWNED_WORLD_FEED_EXECUTION_PREFREEZE.md": {
+      "bytes": 1800,
+      "sha256": "0a64636c16b5ad01f681aaf377b0f0db3e211beede168304ba0f33d09bd023db"
+    },
+    "prototype/current-developmental-receipts/EDU17_LEARNER_OWNED_WORLD_FEED_EXECUTION_RESULT.md": {
+      "bytes": 1137,
+      "sha256": "ad9b340163edcdf307ca0d0f892da523ef4d25e0955124725603d682e444d915"
+    },
+    "prototype/current-developmental-receipts/EDU6R1_COMPOSITIONAL_SCOPE_ALGEBRA_RESULT.md": {
+      "bytes": 1013,
+      "sha256": "e74ea544417d2baae7ff7fe8c2111572d6f231d9487e3f11602e4a1f2901e5b4"
+    },
+    "prototype/current-developmental-receipts/EDU8_SOURCE_EXPANSION_RESULT.md": {
+      "bytes": 980,
+      "sha256": "c1a1b2c448a7b555032afabe06a500fc3b4f4e442fe768629dcece1d9d94953d"
+    },
+    "prototype/current-developmental-receipts/EDU9_REROUTED_RESEARCH_RESULT_CORRECTED.md": {
+      "bytes": 1235,
+      "sha256": "53567fd4bd6d9233850913acac2ac0e1d106ddb271e6936c294e08406df6ae3e"
+    },
+    "prototype/stable-executable/README.md": {
+      "bytes": 713,
+      "sha256": "da93c7e016895ed8cb0b23154676a018c7d38d7ef016f3d0daab4fce46acb4a8"
+    },
+    "prototype/stable-executable/VENUS_R194_PUBLIC_STABLE_EXECUTABLE_2026-09-24.tar.gz": {
+      "bytes": 18144631,
+      "sha256": "82afce299c044f90c20dc5f0fef69a9ebaaec62d7aee484e3340f50d556d2307"
+    },
+    "prototype/stable-executable/VENUS_R194_PUBLIC_STABLE_EXECUTABLE_2026-09-24.tar.gz.sha256": {
+      "bytes": 199,
+      "sha256": "7a451ff05cc0203870a36ef93db67e8b102bc4b5694f4f17ba7d815771517995"
+    },
+    "review/DEVILS_AUDIT_CHECKLIST.md": {
+      "bytes": 921,
+      "sha256": "975da865d8d4dfcdd9cfea16dae0562455841477e8a067792e2ba9843f1fe4f5"
+    },
+    "review/PROSE_AND_DIDACTICS_AUDIT.md": {
+      "bytes": 1204,
+      "sha256": "e257cffabc0b8186212a8e177b5395875922ec8b1d79365b5b745be7cf0446c2"
+    },
+    "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md": {
+      "bytes": 1335,
+      "sha256": "c8233ab1bd0ca2c320068ba52fc8a99530c87f8a8c0acd957453acea93225d46"
+    },
+    "scripts/audit_release.py": {
+      "bytes": 3670,
+      "sha256": "801c316b6db5abe6bf45d23739b43b184840552df203dfa816919f94d1324b2f"
+    },
+    "scripts/build_all.py": {
+      "bytes": 915,
+      "sha256": "fd2582753128e23147da0595e515a84f6367c364680521ba00c6d7751252f648"
+    },
+    "scripts/bundle_tex.py": {
+      "bytes": 1467,
+      "sha256": "f60f6f6361b6f574878fd228c222f98bccea069cea0e056886dee2a22c6f84bc"
+    },
+    "scripts/export_forum.py": {
+      "bytes": 1992,
+      "sha256": "5567ddfeed020a604c66da1e4af11047528527b0c989513cdc5e83e41ccb7207"
+    },
+    "scripts/make_manifest.py": {
+      "bytes": 1010,
+      "sha256": "44933efb5dd2648bcf8880ad764a3c84d2913379dc953c00e1daaad192326e94"
+    },
+    "scripts/package_arxiv.py": {
+      "bytes": 845,
+      "sha256": "e031bbc78238a4cec01abf466d848367552b0c175dbda702863398ba62cca7ce"
+    },
+    "scripts/package_repository.py": {
+      "bytes": 837,
+      "sha256": "7d98b0235f538e38a4c7f35fd8c25784bc4ab0a1180e0186ba178f87476b70ac"
+    },
+    "shared/venusmonograph.sty": {
+      "bytes": 2765,
+      "sha256": "80b5c748247304b1e6a41656fb0f84f503d51e3ca6ea951bc8c50232af121a48"
+    },
+    "tex_bundles/01_ofe_tex_bundle.zip": {
+      "bytes": 29491,
+      "sha256": "8a8896177f2bad2358b389ef0f63bbf51a850fec7f0088ea179e51e526245dcc"
+    },
+    "tex_bundles/02_eclipsis_tex_bundle.zip": {
+      "bytes": 14905,
+      "sha256": "1e48c57ebe63aaac4dc43cf7a7fef6ba9cb2aca56c6518425d8001944d22cdff"
+    },
+    "tex_bundles/03_arcane_magics_tex_bundle.zip": {
+      "bytes": 27224,
+      "sha256": "a1bd3dcfa2b8930dce433bdcaa58038333e35bedef27f1d56db55ff50fc9aa44"
+    },
+    "tex_bundles/04_venus_tex_bundle.zip": {
+      "bytes": 8831,
+      "sha256": "0e852867a886d43b2ed1c298837634be97c2fbe083b42782d1989adc00f4d7c9"
+    },
+    "tex_bundles/TEX_BUNDLE_MANIFEST.json": {
+      "bytes": 988,
+      "sha256": "3eb2bc2345f19fae11a046e787e888158fe371d335ae1a6d09a3aaf878fcae83"
+    },
+    "tex_bundles/venus_minerva_four_monograph_tex_sources.zip": {
+      "bytes": 89043,
+      "sha256": "12b2d4142ed8cdb6cab9e51fc810bc55dd6b885754227cdad2eea313ef03a039"
+    }
+  },
+  "release": "2026-09-24-bundle-v2"
+}

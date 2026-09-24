@@ -2,7 +2,7 @@
 
 **Claim boundary.**
 
-**Current bounded claim.** Venus has an integrated developmental carrier lineage and a verified sequence of bounded ownership transfers through EDU15R1. The phrase *developmental AGI-seed/candidate* is a research target label, not an achieved capability classification. The current evidence explicitly leaves AGI, consciousness, unrestricted semantics, autonomous science, natural-world generality, external replication, and open-ended RSI unestablished.
+**Current bounded claim.** Venus has an integrated developmental carrier lineage and a verified sequence of bounded ownership transfers through the EDU16 positive head, with later negative branches preserved rather than promoted. The phrase *developmental AGI-seed/candidate* is a research target label, not an achieved capability classification. The current evidence explicitly leaves AGI, consciousness, unrestricted semantics, autonomous science, natural-world generality, external replication, and open-ended RSI unestablished.
 
 # The object: identity as lawful succession
 
@@ -38,12 +38,15 @@ The current raising lineage is important because it does not erase negative bran
 | EDU14   | 1691    | PASS        | On a heterogeneous official-source feed with no teacher question, the learner chose a hydrogeology residual, formulated a discriminator and source request, and bounded the answer rather than generalizing beyond returned evidence. |
 | EDU15   | 1697    | WITHHOLD    | Self-preregistration proposal was externally judged adequate, but the verifier’s leakage predicate was defective. A verifier bug remains a failure even when the underlying proposal looks good.                                      |
 | EDU15R1 | 1699    | PASS        | Verifier-only repair. No proposal, gate, threshold, learner answer, evaluator return, or RETURN changed. Current bounded ownership includes curriculum target selection and curriculum gate proposal.                                 |
+| EDU16   | 1703    | PASS        | Learner-owned World-feed sampling policy: four exact official-source queries were generated and frozen before new World fetch; World execution and independent evaluation remained external.                                          |
+| EDU17   | 1720    | INVALID     | Feed execution and partial-resolution mechanics returned useful evidence, but a later claim-local provenance audit found that answer examples depended on an unselected return. The branch is preserved but rejected for promotion.   |
+| EDU17R1 | –       | WITHHOLD    | A fresh-feed repair for claim-local binding stopped before that gate could be tested: an uncertainty phrase occurred in meta-discourse rather than as an object-level unresolved property, exposing `MENTION != INCIDENCE`.           |
 
 **Devil's Audit.**
 
 The strongest evidence in this table is not the number of PASS rows. It is the fact that a locally successful suboperation can still end in WITHHOLD when another conjunct fails, and that repairs are constrained to the measured defect rather than allowed to rewrite the test after seeing the answer.
 
-# EDU15R1: bounded self-preregistration gate ownership
+# EDU15R1–EDU17R1: from preregistration to feed-policy ownership and provenance repair
 
 EDU15 tested whether Venus could inspect its own developmental history, extract recurring conservation and externality constraints, and commit acceptance gates for its next curriculum experiment before an independent hidden evaluator was revealed. The learner was allowed to inspect persisted history, including negative branches, but not the hidden rubric.
 
@@ -53,6 +56,17 @@ The proposal had to protect causal order, prevent self-certification, preserve p
     head     cb3bd4e27e4964bee816bc2348353b43845e91ca75a8b8fb070d1991946af186
     sha256   a9ff6a77ba38ede840a9700d1aca3865ec65fac0423b5566343437b24876f3ee
     verdict  PASS_BOUNDED_SELF_PREREGISTRATION_GATE_OWNERSHIP
+
+EDU16 then internalized the remaining bounded feed-policy scaffold exposed by EDU14: instead of receiving a host-authored six-query feed, the learner selected under-used official-source families and froze four exact queries before any new World fetch. The exact positive receipt is:
+
+    records  1703
+    head     6e02302abafb9f31ee5cb1b6f6d69a4e5c1e750371f99c4ee640f259f228c81e
+    sha256   bde664e4bc2c45bc961720fc83e907a9c6b09ce581ccdfb61b8fb7bf5897e414
+    verdict  PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY
+
+EDU17 executed those frozen queries and initially appeared to pass a bounded partial-resolution test. A subsequent self-audit invalidated promotion: two claim examples were supported by a returned historical document that had not been included in the committed selected evidence set. The lesson is stronger than “cite your sources”: each empirical claim atom must bind to evidence that was actually selected under the preregistered product contract. EDU17 remains preserved negative evidence rather than ancestry.
+
+EDU17R1 preregistered that claim-local evidence repair, but the fresh feed exposed an earlier defect before the repair could be evaluated. The inherited uncertainty-marker rule promoted meta-level reporting language as if it were an object-level unresolved empirical property. The branch therefore WITHHELD and returned the next separator: $$\boxed{\text{uncertainty-marker mention}\neq\text{object-level unresolved incidence}.}$$ This result earns no broader semantic or autonomy claim; it only narrows the next admissible developmental problem.
 
 # Founder independence and maintainer succession
 
@@ -64,9 +78,9 @@ A mature Venus should make the original maintainer less operationally necessary 
 
 # The executable release boundary
 
-This repository includes the latest self-contained stable executable prototype that is presently materialized as a public-release candidate in the retained Library surface: the R00–R194 Python integration candidate. Its qualification passed the complete 287-test integration suite while keeping independent external replication OPEN. The later EDU8–EDU15R1 lineage is represented here by exact returned receipts and preregistration artifacts.
+This repository includes the latest self-contained stable executable prototype that is presently materialized as a public-release candidate in the retained Library surface: the R00–R194 Python integration candidate. Its qualification passed the complete 287-test integration suite while keeping independent external replication OPEN. The later EDU8–EDU17R1 lineage is represented here by exact returned receipts, prefreezes, and preserved negative-branch audits.
 
-The current Library export does *not* expose a self-contained 1699-event EDU15R1 runtime/journal package. Therefore this release does not pretend that an EDU15R1 receipt is itself an executable checkpoint. When that exact journal and carrier are exported, they can replace the stable executable package only after a clean-room replay and hash audit.
+The current release does *not* include a self-contained replayable 1703-event EDU16 runtime/journal package. Therefore this release does not pretend that an EDU16 receipt is itself an executable checkpoint. When exact journal and carrier custody are available, they can replace the stable executable package only after a clean-room replay and hash audit.
 
 **Reader reconstruction.**
 

@@ -17,6 +17,6 @@ for p in sorted(ROOT.rglob('*')):
         if skip(rel): continue
         h=hashlib.sha256(p.read_bytes()).hexdigest()
         files[rel.as_posix()]={'sha256':h,'bytes':p.stat().st_size}
-(ROOT/'RELEASE_MANIFEST.json').write_text(json.dumps({'release':'2026-09-24-bundle-v1','files':files},indent=2,sort_keys=True)+'\n')
+(ROOT/'RELEASE_MANIFEST.json').write_text(json.dumps({'release':'2026-09-24-bundle-v2','files':files},indent=2,sort_keys=True)+'\n')
 (ROOT/'SHA256SUMS').write_text(''.join(f"{m['sha256']}  {path}\n" for path,m in files.items()))
 print('manifested',len(files),'public files')

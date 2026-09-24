@@ -29,10 +29,10 @@
       "venusmonograph.sty",
       "README.md"
     ],
-    "sha256": "fe66ad6ef9bdbc3210ac4e5e6706582108e1d1e4226e03f34697bb31d6290997"
+    "sha256": "0e852867a886d43b2ed1c298837634be97c2fbe083b42782d1989adc00f4d7c9"
   },
   "venus_minerva_four_monograph_tex_sources.zip": {
     "role": "family source bundle",
-    "sha256": "73a05b9e186ced990312a700b814238f611485350c85f1cc2a5e8c930db37b56"
+    "sha256": "12b2d4142ed8cdb6cab9e51fc810bc55dd6b885754227cdad2eea313ef03a039"
   }
 }

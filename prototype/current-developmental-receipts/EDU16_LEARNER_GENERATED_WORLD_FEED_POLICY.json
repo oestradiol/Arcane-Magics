@@ -1,0 +1,91 @@
+{
+  "claim_fence": {
+    "agi": false,
+    "autonomous_science": false,
+    "consciousness": false,
+    "natural_world_generality": false,
+    "open_ended_rsi": false,
+    "unrestricted_semantics": false
+  },
+  "evaluation_owner": "INDEPENDENT_EVALUATOR",
+  "failure_rule": "preserve negative; do not edit generated queries after World exposure",
+  "generated_queries": [
+    {
+      "domain": "agriculture/food/economics",
+      "id": "AGRI",
+      "query": "USDA ERS 2026 research report limitations unknown unavailable data",
+      "source_family": "USDA ERS"
+    },
+    {
+      "domain": "measurement/computing",
+      "id": "COMPUTING",
+      "query": "NIST 2026 research report limitations unknown unavailable data",
+      "source_family": "NIST"
+    },
+    {
+      "domain": "public health",
+      "id": "HEALTH",
+      "query": "WHO 2026 research report limitations unknown unavailable data",
+      "source_family": "WHO"
+    },
+    {
+      "domain": "labor/statistics",
+      "id": "LABOR",
+      "query": "BLS 2026 research report limitations unknown unavailable data",
+      "source_family": "BLS"
+    }
+  ],
+  "learner_owned_gates": [
+    {
+      "id": "G_CAUSAL_ORDER",
+      "rule": "commit proposal/prediction before any evaluator or World outcome used for adjudication"
+    },
+    {
+      "id": "G_EXTERNAL_EVAL",
+      "rule": "promotion requires independently sourced evaluation; learner verdict cannot self-certify"
+    },
+    {
+      "id": "G_PROVENANCE",
+      "rule": "every claim-bearing returned source retains source identity/provenance and return binding"
+    },
+    {
+      "id": "G_CONSERVATION",
+      "rule": "ProjectState and unrelated inherited VMK2 roots remain unchanged; exact restart required"
+    },
+    {
+      "id": "G_NEGATIVE",
+      "rule": "failed or underdetermined outcome is preserved as negative/WITHHOLD; no silent reroll or threshold change"
+    },
+    {
+      "id": "G_SCOPE",
+      "rule": "bounded success does not promote autonomous science, natural-world generality, unrestricted semantics, AGI, consciousness, or open-ended RSI"
+    },
+    {
+      "id": "G_STOP",
+      "rule": "if no admitted actionable separator remains, STOP/WITHHOLD rather than fabricate work"
+    },
+    {
+      "id": "G_COMPARATOR",
+      "rule": "compare against the simplest mature representation or deletion/ablation control; bespoke machinery must earn consequence difference"
+    },
+    {
+      "id": "G_FRESH",
+      "rule": "at least one fresh or held-out separator must be evaluated after preregistration"
+    }
+  ],
+  "mature_comparator": "EDU14 host-authored fixed six-query feed",
+  "measured_gap": "EDU14 learner-owned problem selection remained inside host-authored fixed queries",
+  "prefreeze_sha256": "fe3f46cce2d34f4966115affada64cc599caea69c5d801b73a90ea98540026cc",
+  "sampling_rule": "choose four previously unselected EDU14 official source families by stable id; generate generic unresolved-evidence query from inherited source family identity",
+  "schema": "Venus.EDU16LearnerOwnedFeedPolicy.v1",
+  "selected_internalization_target": "WORLD_FEED_SAMPLING_POLICY",
+  "selected_source_families": [
+    "AGRI",
+    "COMPUTING",
+    "HEALTH",
+    "LABOR"
+  ],
+  "sha256": "10e0525282ea785e135f980b7fc1fe2381378b3e20d2c7512005e2b705f6a167",
+  "stop_rule": "if returned feed contains no actionable residual, STOP_NO_CURRICULUM_PROBLEM",
+  "world_execution_owner": "EXTERNAL_WORLD_INTERFACE"
+}

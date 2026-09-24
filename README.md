@@ -21,13 +21,15 @@ Read `PUBLICATION_CONSTITUTION.md` and `NxRxI_VOCABULARY_CENTER.md` before cross
 
 ## Current Venus developmental boundary
 
-Latest verified return represented here:
+Latest positive developmental head represented here:
 
-`EDU15R1 -> PASS_BOUNDED_SELF_PREREGISTRATION_GATE_OWNERSHIP -> 1699 records`
+`EDU16 -> PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY -> 1703 records`
 
-Current bounded ownership includes curriculum target selection and curriculum gate proposal. World execution and independent evaluation remain external. AGI, consciousness, open-ended RSI, unrestricted semantics, natural-world generality, autonomous science, and independent external replication are **not established**.
+The subsequent EDU17 branch is preserved but invalid for promotion after a claim-local provenance audit. EDU17R1 then WITHHELD before claim-binding evaluation because the fresh feed exposed the prior separator `MENTION != INCIDENCE`. World execution and independent evaluation remain external. AGI, consciousness, open-ended RSI, unrestricted semantics, natural-world generality, autonomous science, and independent external replication are **not established**.
 
-The GitHub tree carries the audited R00-R194 Python source snapshot plus exact later developmental receipts. The full self-contained R194 release archive is generated/distributed as a release artifact rather than committed as an 18 MB binary blob. A receipt is not silently promoted into an executable checkpoint.
+`REPOSITORY_AUTHORITY_BOUNDARY.md` defines the new source-of-truth split: Venus-Minerva owns implementation/release-bearing developmental state; Canonical remains the external research-mapping, planning, and non-release provenance layer.
+
+The repo also contains the latest self-contained stable executable Python package currently materialized for release (R00-R194) plus exact later developmental receipts. A receipt is not silently promoted into an executable checkpoint.
 
 ## Build
 

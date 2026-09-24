@@ -7,7 +7,7 @@ for needed in [
     'README.md','PUBLICATION_CONSTITUTION.md','NxRxI_VOCABULARY_CENTER.md','LICENSE',
     'licenses/CC-BY-NC-SA-4.0.txt','licenses/PolyForm-Noncommercial-1.0.0.txt',
     'review/DEVILS_AUDIT_CHECKLIST.md','review/PROSE_AND_DIDACTICS_AUDIT.md',
-    'review/REVIEWER_AND_RESEARCHER_PROTOCOL.md']:
+    'review/REVIEWER_AND_RESEARCHER_PROTOCOL.md','REPOSITORY_AUTHORITY_BOUNDARY.md','prototype/CURRENT_STATE.md']:
     if not (ROOT/needed).exists(): errors.append('missing '+needed)
 for name in ['01_OFE','02_ECLIPSIS','03_ARCANE_MAGICS','04_VENUS']:
     tex=ROOT/'monographs'/name/'main.tex'
@@ -18,13 +18,19 @@ for name in ['01_OFE','02_ECLIPSIS','03_ARCANE_MAGICS','04_VENUS']:
     if 'SPDX-License-Identifier: CC-BY-NC-SA-4.0' not in t: errors.append(f'{name}: missing SPDX')
     if name=='04_VENUS' and 'AGI' in t and 'not establish' not in t.lower(): errors.append('Venus: AGI vocabulary without fence')
     if name=='03_ARCANE_MAGICS' and 'License: CC BY 4.0' in t: errors.append('Arcane successor: stale CC BY 4.0 body notice')
-# current receipt assertion
-r=ROOT/'prototype/current-developmental-receipts/EDU15R1_SELF_PREREGISTRATION_VERIFIER_REPAIR_RESULT.md'
-if not r.exists() or '1699' not in r.read_text() or 'PASS_BOUNDED_SELF_PREREGISTRATION_GATE_OWNERSHIP' not in r.read_text():
-    errors.append('EDU15R1 current receipt mismatch')
+# current developmental authority assertions
+r=ROOT/'prototype/current-developmental-receipts/EDU16_WORLD_FEED_SAMPLING_POLICY_RESULT.md'
+if not r.exists() or '1703' not in r.read_text() or 'PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY' not in r.read_text():
+    errors.append('EDU16 current positive receipt mismatch')
+neg=ROOT/'prototype/current-developmental-receipts/EDU17_CLAIM_LOCAL_PROVENANCE_AUDIT.md'
+if not neg.exists() or 'INVALID_FOR_PROMOTION / PRESERVED_NEGATIVE' not in neg.read_text():
+    errors.append('EDU17 preserved-negative audit mismatch')
+wr=ROOT/'prototype/current-developmental-receipts/EDU17R1_FEED_ELIGIBILITY_RESULT.md'
+if not wr.exists() or 'WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION' not in wr.read_text() or 'MENTION != INCIDENCE' not in wr.read_text():
+    errors.append('EDU17R1 current repair receipt mismatch')
 # exact stable-vs-current separation
 pr=(ROOT/'prototype/README.md').read_text(errors='replace') if (ROOT/'prototype/README.md').exists() else ''
-if 'R00' not in pr or 'R194' not in pr or 'EDU15R1' not in pr: errors.append('prototype README does not distinguish stable executable and current receipt')
+if 'R00' not in pr or 'R194' not in pr or 'EDU16' not in pr or 'EDU17R1' not in pr: errors.append('prototype README does not distinguish stable executable and current developmental authority')
 # License semantic check
 lic=(ROOT/'licenses/README.md').read_text(errors='replace')
 if 'PolyForm Noncommercial' not in lic: errors.append('software license map missing')
