@@ -246,10 +246,9 @@ def make_cycle(
     recent_targets: Iterable[tuple[str, int]] = (),
     kind_utility: Mapping[str, float] | None = None,
     method_utility: Mapping[str, float] | None = None,
-    active_cycle_pending: bool = False,
 ) -> AutonomousCycleReceipt:
     items = tuple(issues) + tuple(prs)
-    target = None if active_cycle_pending else choose_target(
+    target = choose_target(
         items,
         roadmap_text=roadmap_text,
         target_barriers=target_barriers,
@@ -265,18 +264,9 @@ def make_cycle(
         "recent_targets": tuple(recent_targets),
         "kind_utility": dict(kind_utility or {}),
         "method_utility": dict(method_utility or {}),
-        "active_cycle_pending": active_cycle_pending,
     }
 
-    if active_cycle_pending:
-        decision = "STOP"
-        rationale = (
-            "an autonomous draft remains open awaiting external review/return",
-            "bounded autonomy may not route around a pending returned consequence",
-        )
-        study_method = None
-        study = None
-    elif target is None:
+    if target is None:
         decision = "STOP"
         rationale = (
             "no unconsumed OPEN work item is justified, an autonomous cycle is already awaiting external return, or retained reopening barriers remain closed",
