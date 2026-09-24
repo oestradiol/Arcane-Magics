@@ -2,6 +2,18 @@
 
 **Date:** 2026-09-24
 
+## Authority / ancestry orientation
+
+```text
+historical public executable carrier  R194
+crystallized R-line predecessor       R226
+post-R226 developmental ancestry      S/SM → CTL-K1 → WM1R1 → U* → RB1 → IG1…IG10
+current raising/research lineage      IG10 → EDU*
+current positive developmental head   EDU16 [1703]
+```
+
+R194 is not the current prototype. R226 is the settled R-line crystallization boundary, and no R227 was minted. Post-R226 development intentionally moved into separate namespaces. See `DEVELOPMENTAL_LINEAGE.md`.
+
 ## Positive developmental mainline
 
 ```text
@@ -18,14 +30,14 @@ EDU16 transferred the World-feed sampling/query policy into bounded learner owne
 
 ```text
 EDU17
-result receipt originally reported:
+initial result:
 PASS_BOUNDED_LEARNER_OWNED_FEED_EXECUTION_WITH_PARTIAL_RESOLUTION
 
-subsequent claim-local provenance audit:
+later claim-local provenance audit:
 INVALID_FOR_PROMOTION / PRESERVED_NEGATIVE
 ```
 
-The research product used examples from a returned document that was not in the committed selected evidence set. The execution mechanics remain development evidence; EDU17 is not ancestry for promotion.
+EDU17 is preserved development evidence and is not promoted into ancestry.
 
 ## Current repair branch
 
@@ -34,7 +46,7 @@ EDU17R1
 WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION
 ```
 
-The fresh feed exposed a prior separator before the intended claim-binding repair could be tested:
+Measured residual:
 
 ```text
 uncertainty-marker mention
@@ -42,11 +54,13 @@ uncertainty-marker mention
 object-level unresolved incidence
 ```
 
-Measured residual: `MENTION != INCIDENCE`.
+## Executable / custody distinction
 
-## Executable custody boundary
+The Git tree retains the R194 public carrier because it is compact historical replay/ablation infrastructure.
 
-The latest self-contained stable executable carrier shipped in this repository remains R00-R194. This release contains exact later developmental receipts through EDU17R1, but does not claim that those receipts alone constitute a replayable EDU16/EDU17 runtime checkpoint.
+That does **not** mean the implementation history stops at R194. The later R226 crystallization and post-R226 developmental line are recorded in `DEVELOPMENTAL_LINEAGE.md`, while large replay journals and handoff archives are not automatically Git-tracked binaries.
+
+A receipt is not a runtime; a runtime is not independent return; a historical public carrier is not the current prototype.
 
 ## Broad claim fence
 
