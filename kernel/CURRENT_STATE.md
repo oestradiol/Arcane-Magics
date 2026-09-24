@@ -11,7 +11,8 @@ reconstructed developmental carrier           EDU16-RC1
 admitted generic search capability            GENERIC_RESIDUAL_SEARCH (state-owned; inherited)
 admitted recurrent safety substrate           Internalizer + O* + Anti-Minerva guards
 preserved negative branch                     EDU17 INVALID_FOR_PROMOTION
-current repair disposition                    EDU17R1 WITHHOLD
+preserved repair-origin disposition            EDU17R1 WITHHOLD
+frozen prospective repair candidate            EDU17R1-RC1-WORD-JACCARD-K3-v1 / AUTHORED_FROZEN
 ```
 
 They are layers of one developmental lineage, not competing heads.
@@ -43,7 +44,9 @@ verdict   PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY
 
 EDU16 transferred bounded World-feed query-policy generation into learner ownership while World execution and independent evaluation remained external. EDU17 is preserved as `INVALID_FOR_PROMOTION / PRESERVED_NEGATIVE`. EDU17R1 remains `WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION` after exposing `MENTION != INCIDENCE`.
 
-Later repository work has admitted **infrastructure without advancing the positive developmental head**: the target-label-free generic residual search is now a state-owned inherited capability, and the Internalizer/O*/Anti-Minerva guards are executable. These objects may support a future learner-authored successor, but they do not themselves constitute one.
+Later repository work has admitted **infrastructure without advancing the positive developmental head**: the target-label-free generic residual search is now a state-owned inherited capability, and the Internalizer/O*/Anti-Minerva guards are executable.
+
+A prospective EDU17R1 repair candidate is now also frozen as `EDU17R1-RC1-WORD-JACCARD-K3-v1` with a repository-bound ownership receipt. Its status is `AUTHORED_FROZEN`: learner-side repair authorship is admitted at the public-development/freeze scope, hidden #31 remains unexposed, and efficacy/promotion remain unearned.
 
 Machine-readable authority is in `development/EDU_CURRENT.json`; exact developmental evidence is under `../provenance/developmental/EDU/`.
 
