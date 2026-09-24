@@ -12,6 +12,8 @@ Corrigibility  = recursive composition(N_C, R_C, I_C), not a fourth peer coordin
 
 These are project-local constitutional coordinates, not claims of identity with metaphysical naturalism, historical rationalism, or one historical movement called Illuminism. Their names are removable; the obligations must survive name-removal.
 
+N x R x I is **post-differentiation governance**, not the Root primitive. It applies only once enough distinction exists for representation, returned consequence, reconstruction, criticism, and correction to be typed. It adds no ontological substance and does not solve the first-differentiation question.
+
 This file also tracks the separate editorial tuple `(name/notation, register, index/scope)`. That tuple specifies how a project term is addressed and translated. It is **not** the expansion of N x R x I.
 
 The LessWrong/BetterWrong column gives an approximate bridge into common rationalist discourse. It is a translation aid, not a synonym table. BetterWrong-specific documentation was not independently retrievable during this release audit, so the compatibility target is the shared LessWrong/GreaterWrong-style Markdown/MathJax and rationalist vocabulary subset rather than unverified BetterWrong-only features.
