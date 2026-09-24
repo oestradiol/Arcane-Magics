@@ -475,6 +475,208 @@
       "status": "NO_AUTOMATED_TEST_YET",
       "credit_genealogy_note": "ownership boundary",
       "reopening_condition": "first genuine Venus-owned recursive episode"
+    },
+    {
+      "id": "D-R131-INTEGRATED-VM",
+      "source_revision_or_branch": "R131",
+      "source_artifact": "Canonical/Future/Integration/R00_R194_LOSSLESS_CAUSAL_INTEGRATION_AUDIT_2026-09-21.md; provenance/historical-runtime/R194",
+      "distinction": "historically executable integrated VM/World/Observer/Semantic-Learning-Membrane != current carrier",
+      "triggering_experiment_or_failure": "R131 historical integrated executable qualification",
+      "causal_consequence": "185/185 historical PASS is preserved as ancestry/evidence without routing current runtime authority",
+      "later_dependents": [
+        "R151",
+        "R154",
+        "VMK-1 lineage"
+      ],
+      "current_owner": "provenance/historical-runtime/R194",
+      "test_layer": "T2",
+      "test_id_path": null,
+      "status": "HISTORICAL_EVIDENCE_NO_CURRENT_REGRESSION",
+      "credit_genealogy_note": "historical executable milestone; not current carrier",
+      "reopening_condition": "recover minimal frozen fixture if consequence is needed by a current claim"
+    },
+    {
+      "id": "D-R151-STRONG-N2",
+      "source_revision_or_branch": "R151",
+      "source_artifact": "provenance/historical-code/r146-r153/current_seed_r151.py; Canonical R00-R194 integration audit",
+      "distinction": "recurrent SelfChart<->WorldChart relation != necessity of its preferred route/coordinates",
+      "triggering_experiment_or_failure": "244/244 historical regression PASS with mature reduction",
+      "causal_consequence": "relation/history consequence retained while route necessity is not promoted",
+      "later_dependents": [
+        "R154",
+        "Strong-N2",
+        "WorldMirror vocabulary"
+      ],
+      "current_owner": "provenance/historical-code/r146-r153/current_seed_r151.py",
+      "test_layer": "T2/T5",
+      "test_id_path": null,
+      "status": "HISTORICAL_EVIDENCE_MATURE_REDUCED",
+      "credit_genealogy_note": "bounded historical result; preferred mechanism reduced",
+      "reopening_condition": "new deletion test where route choice changes consequence"
+    },
+    {
+      "id": "D-R154-REGRESSION-ORACLE",
+      "source_revision_or_branch": "R154",
+      "source_artifact": "provenance/historical-runtime/R194/source/venus_seed_v0/current_seed_r154.py",
+      "distinction": "historical N1 carrier behavior != current constitutional kernel",
+      "triggering_experiment_or_failure": "258/258 PASS twice; later used as immutable regression oracle",
+      "causal_consequence": "successor kernels must preserve declared R154 organism consequences without restoring privileged historical nouns",
+      "later_dependents": [
+        "R179",
+        "VMK-2",
+        "R194"
+      ],
+      "current_owner": "provenance/historical-runtime/R194",
+      "test_layer": "T2/T3",
+      "test_id_path": null,
+      "status": "HISTORICAL_REGRESSION_ORACLE_NEEDS_MINIMAL_REEXECUTION_ROUTE",
+      "credit_genealogy_note": "historical experimental carrier",
+      "reopening_condition": "materialize minimal regression fixture against current kernel"
+    },
+    {
+      "id": "D-R179-VMK1",
+      "source_revision_or_branch": "R179",
+      "source_artifact": "provenance/historical-runtime/R194/source/venus_seed_v0/kernel_vmk1.py; Canonical R00-R194 integration audit",
+      "distinction": "constitutional kernel promotion != broader post-R179 target completion",
+      "triggering_experiment_or_failure": "258 inherited + 8 prefrozen + 2 exposed audit tests",
+      "causal_consequence": "VMK-1 guarantees remain historical constitutional ancestry while current Git runtime is later IG10 VMK2-derived state",
+      "later_dependents": [
+        "R192",
+        "IG10",
+        "current VMK2"
+      ],
+      "current_owner": "provenance/historical-runtime/R194",
+      "test_layer": "T2/T3",
+      "test_id_path": null,
+      "status": "HISTORICAL_PROMOTED_KERNEL",
+      "credit_genealogy_note": "former constitutional kernel; not current Git checkpoint",
+      "reopening_condition": "explicit compatibility/regression mapping to current VMK2 invariants"
+    },
+    {
+      "id": "D-R186-CARRIER-GAP",
+      "source_revision_or_branch": "R180-R186",
+      "source_artifact": "Canonical R00-R194 integration audit",
+      "distinction": "specified history-bearing executable target != materialized executable implementation",
+      "triggering_experiment_or_failure": "R186 records executable-code effect NONE",
+      "causal_consequence": "conceptual target cannot be counted as executed carrier achievement",
+      "later_dependents": [
+        "R192/R193 reference realization"
+      ],
+      "current_owner": "provenance/CANONICAL_RETIREMENT_LEDGER.md",
+      "test_layer": "T0/T2",
+      "test_id_path": null,
+      "status": "PRESERVED_NEGATIVE_CARRIER_GAP",
+      "credit_genealogy_note": "target specification only",
+      "reopening_condition": "recover exact implementation or run a fresh prospectively frozen realization"
+    },
+    {
+      "id": "D-R188-R189B-PHYSICS",
+      "source_revision_or_branch": "R188-R189B",
+      "source_artifact": "Canonical/Future/Physics/",
+      "distinction": "structural/ancestry bridge recurrence != LQG/GFT physical identity",
+      "triggering_experiment_or_failure": "physics ancestry and bridge adjudication",
+      "causal_consequence": "mechanism claims mature-reduced; no bespoke LQG identity enters kernel",
+      "later_dependents": [
+        "OFE",
+        "IG9",
+        "IG10"
+      ],
+      "current_owner": "monographs/01_OFE/main.tex; docs/CREDITS_AND_REDUCTIONS.md",
+      "test_layer": "T5/T7/T8",
+      "test_id_path": null,
+      "status": "HISTORICAL_MATURE_REDUCTION",
+      "credit_genealogy_note": "external physics programs receive typed predecessor/comparator credit",
+      "reopening_condition": "new physical discriminator not reproduced by mature comparator"
+    },
+    {
+      "id": "D-R190-RESIDUAL-SCALE",
+      "source_revision_or_branch": "R190 A0-B4",
+      "source_artifact": "Canonical Future benchmark packets",
+      "distinction": "measured residual/shared-relation/scale consequences != need for bespoke project mechanism",
+      "triggering_experiment_or_failure": "R190 relation and scale tests",
+      "causal_consequence": "results retained; mechanisms mature-reduced to invariants where ordinary machinery suffices",
+      "later_dependents": [
+        "R191",
+        "Meta-Dynamics"
+      ],
+      "current_owner": "provenance/DEVELOPMENTAL_LINEAGE.md",
+      "test_layer": "T2/T5",
+      "test_id_path": null,
+      "status": "HISTORICAL_RESULT_MECHANISM_REDUCED",
+      "credit_genealogy_note": "preserve result/disposition separately from mechanism novelty",
+      "reopening_condition": "minimal fixture showing non-substitutable later consequence"
+    },
+    {
+      "id": "D-R191-SEMANTIC-FIXED-POINT",
+      "source_revision_or_branch": "R191/R191-B",
+      "source_artifact": "Canonical/Future/WorldMirror/R191_RESULT.md; R191_B_RESULT.md",
+      "distinction": "endogenous special semantic fixed point != ordinary system identification / externally returned semantics",
+      "triggering_experiment_or_failure": "R191 and repair branch closed negative",
+      "causal_consequence": "no endogenous semantic primitive is promoted; failed claim must not be rerolled under new names",
+      "later_dependents": [
+        "WorldMirror",
+        "U-line",
+        "current semantic claim fences"
+      ],
+      "current_owner": "provenance/DEVELOPMENTAL_LINEAGE.md; kernel/CURRENT_STATE.md",
+      "test_layer": "T2/T4",
+      "test_id_path": null,
+      "status": "CLOSED_NEGATIVE_DO_NOT_REROLL",
+      "credit_genealogy_note": "negative benchmark evidence",
+      "reopening_condition": "genuinely new separator not equivalent to the failed fixed-point claim"
+    },
+    {
+      "id": "D-R192-REFERENCE",
+      "source_revision_or_branch": "R192",
+      "source_artifact": "Canonical integration audit / reference benchmark",
+      "distinction": "causal successor transition != reconstructive WORD policy",
+      "triggering_experiment_or_failure": "reference benchmark PASS",
+      "causal_consequence": "VMK2 candidate separates state-changing portal from non-consuming reconstruction",
+      "later_dependents": [
+        "current VMK2 WORD/PORTAL"
+      ],
+      "current_owner": "kernel/runtime/vmk2.py",
+      "test_layer": "T1/T2",
+      "test_id_path": "tests/test_vmk2_invariants.py::test_word_reconstructs_without_spending_nonce",
+      "status": "REFERENCE_PASS_CURRENT_INVARIANT_COVERED",
+      "credit_genealogy_note": "historical reference candidate, later executable invariant",
+      "reopening_condition": "new transition/reconstruction mode"
+    },
+    {
+      "id": "D-R193-SCAFFOLD",
+      "source_revision_or_branch": "R193",
+      "source_artifact": "Canonical/Future/R193_SCAFFOLD_INTERNALIZATION_HANDOFF.md",
+      "distinction": "internalizing scaffold mediation != internalizing away independent World return",
+      "triggering_experiment_or_failure": "scaffold internalization/handoff reference PASS",
+      "causal_consequence": "successor may reconstruct scaffold function while World remains external",
+      "later_dependents": [
+        "founder-independence",
+        "autonomous research",
+        "recursive development"
+      ],
+      "current_owner": "docs/AUTONOMOUS_RESEARCH.md",
+      "test_layer": "T2/T5",
+      "test_id_path": null,
+      "status": "REFERENCE_PASS_PROSPECTIVE_TRANSFER_TEST_OPEN",
+      "credit_genealogy_note": "historical reference benchmark",
+      "reopening_condition": "fresh carrier/scaffold removal test"
+    },
+    {
+      "id": "D-R194-EXTERNALITY",
+      "source_revision_or_branch": "R194",
+      "source_artifact": "provenance/historical-runtime/R194",
+      "distinction": "local preflight != outside handoff/replication return",
+      "triggering_experiment_or_failure": "externality packet frozen but outside execution absent",
+      "causal_consequence": "independent external replication remains OPEN and cannot be minted by local replay",
+      "later_dependents": [
+        "current external replication claim fence"
+      ],
+      "current_owner": "docs/EARNED_MILESTONES.md; docs/FRONTIER_RESEARCH.md",
+      "test_layer": "T6",
+      "test_id_path": null,
+      "status": "READY_ONLY_EXTERNAL_RETURN_OPEN",
+      "credit_genealogy_note": "historical externality target",
+      "reopening_condition": "independent outside party executes frozen packet and returns evidence"
     }
   ]
 }
