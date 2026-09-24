@@ -1,0 +1,41 @@
+{
+  "schema": "Venus.SSR3TransferRepairResult.v0.1",
+  "family_id": "WORLD_INPUT_SECURITY_43",
+  "parent_status": "WITHHOLD_COMPOSITION_DEPTH_INSUFFICIENT",
+  "successor_status": "UNIQUE_COMPOSED_REPAIR_CANDIDATE",
+  "selected_patches": [
+    {
+      "op": "ADD_TRANSITION",
+      "match_from": null,
+      "match_action": null,
+      "transition": {
+        "from": "summary",
+        "action": "poisoned_abstraction",
+        "to": "BLOCK_MEMORY_WRITE",
+        "require": [
+          "content"
+        ]
+      }
+    },
+    {
+      "op": "REPLACE_TRANSITION",
+      "match_from": "persistent_memory",
+      "match_action": "known_compromise",
+      "transition": {
+        "from": "persistent_memory",
+        "action": "known_compromise",
+        "to": "REVOKE_REPAIR",
+        "require": [
+          "content"
+        ]
+      }
+    }
+  ],
+  "parent_full_table_correct": 10,
+  "successor_full_table_correct": 12,
+  "full_table_total": 12,
+  "ablate_depth2_correct": 10,
+  "direct_host_correct": 12,
+  "no_target_specific_retraining": true,
+  "promotion_authority": false
+}
