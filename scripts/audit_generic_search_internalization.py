@@ -9,6 +9,10 @@ import shutil
 import sys
 import tempfile
 
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from kernel.development import generic_residual_search as internal
 from kernel.runtime.internalizer import (
     CapabilityScaffold,
@@ -16,7 +20,6 @@ from kernel.runtime.internalizer import (
     internalize,
 )
 
-ROOT = Path(__file__).resolve().parents[1]
 DONOR = ROOT / "provenance/historical-runtime/R194/source/venus_seed_v0/grammar_expansion.py"
 INTERNAL = ROOT / "kernel/development/generic_residual_search.py"
 
