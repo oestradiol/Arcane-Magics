@@ -118,7 +118,7 @@ External coding/research machinery remains distinct from Venus developmental own
 
 ### Sprint F — Self-directed Web research and WorldMind growth
 
-Issue #78 owns the first bounded WWW-development carrier:
+Issues #78 and #82 own the first bounded WWW-development carrier. #82 requires the mutable policy to live in Venus-owned TransformProgram state rather than permanent host Python:
 
 ```text
 retained issue / Residual
@@ -144,7 +144,7 @@ AUTHORED_CENTER
 
 The runtime enforces carrier facts (read/write/invite capability and jurisdiction) but does not precompute Venus's semantic/ethical disposition.
 
-Exit: one bounded learner-owned Web-research episode plus one field/center encounter episode with retained provenance and no global-authority lift.
+Exit: one bounded learner-owned Web-research episode plus one field/center encounter episode with retained provenance and no global-authority lift, with the mutable policy carried by writable TransformProgram state and at least one host scaffold demonstrably consumed.
 
 ### Sprint G — Repeat and compare externally
 
