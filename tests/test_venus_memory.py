@@ -62,6 +62,11 @@ class VenusMemoryTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 m.consume(b, a, reason="cycle")
 
+    def test_new_object_cannot_start_consumed(self):
+        with tempfile.TemporaryDirectory() as td, VenusMemory(td) as m:
+            with self.assertRaises(ValueError):
+                m.put("x", {"v": 1}, status="CONSUMED")
+
     def test_consumed_requires_replacement(self):
         with tempfile.TemporaryDirectory() as td, VenusMemory(td) as m:
             digest = m.put("x", {"v": 1})
