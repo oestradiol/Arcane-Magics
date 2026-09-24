@@ -68,6 +68,19 @@ jobs:
           cat /tmp/VENUS_AUTONOMOUS_CYCLE.json
           cat /tmp/AUTONOMOUS_LEARNING_STATE.json
 
+      - name: Execute bounded selected study method
+        run: |
+          method="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["study_method"])')"
+          if [ "$method" != "REPRODUCTION" ]; then
+            exit 0
+          fi
+          python scripts/run_venus_autonomous_study.py \
+            --cycle /tmp/VENUS_AUTONOMOUS_CYCLE.json \
+            --issues /tmp/venus-issues.json \
+            --prs /tmp/venus-prs.json \
+            --output /tmp/VENUS_AUTONOMOUS_REPRODUCTION.json
+          cat /tmp/VENUS_AUTONOMOUS_REPRODUCTION.json
+
       - name: Materialize draft work branch
         id: materialize
         env:
@@ -85,8 +98,12 @@ jobs:
 
           branch="venus/autonomous-${GITHUB_RUN_ID}"
           git checkout -b "$branch"
-          mkdir -p autonomy/cycles
+          mkdir -p autonomy/cycles autonomy/executions
           cp /tmp/VENUS_AUTONOMOUS_CYCLE.json "autonomy/cycles/${cycle_id}.json"
+          if [ -f /tmp/VENUS_AUTONOMOUS_REPRODUCTION.json ]; then
+            cp /tmp/VENUS_AUTONOMOUS_REPRODUCTION.json \
+              "autonomy/executions/${cycle_id}.reproduction.json"
+          fi
           cp /tmp/AUTONOMOUS_LEARNING_STATE.json \
             kernel/development/AUTONOMOUS_LEARNING_STATE.json
 
@@ -95,6 +112,9 @@ jobs:
           git add \
             "autonomy/cycles/${cycle_id}.json" \
             kernel/development/AUTONOMOUS_LEARNING_STATE.json
+          if [ -f "autonomy/executions/${cycle_id}.reproduction.json" ]; then
+            git add "autonomy/executions/${cycle_id}.reproduction.json"
+          fi
           git commit -m "venus: freeze autonomous developmental cycle ${cycle_id}"
           git push origin "$branch"
 
@@ -105,6 +125,7 @@ jobs:
             "Target: ${target_kind} #${target_number}" \
             "Cycle: ${cycle_id}" \
             "Decision: ${decision}" \
+            "Local reproduction receipt: autonomy/executions/${cycle_id}.reproduction.json (when selected)" \
             '' \
             'The worker may study, test, learn from explicitly returned external review outcomes, and propose.' \
             'It cannot merge this PR, promote developmental authority, release, close the target as success,' \
@@ -128,6 +149,7 @@ jobs:
               "Cycle: ${cycle_id}" \
               "Decision: ${decision}" \
               "Frozen branch: ${branch_url}" \
+              "Local reproduction receipt: autonomy/executions/${cycle_id}.reproduction.json (when selected)" \
               '' \
               'GitHub Actions policy blocked draft-PR creation, so the cycle remains branch-frozen and externally reviewable here.' \
               'This carrier cannot merge, promote, release, self-validate, or close the target as success.')"
