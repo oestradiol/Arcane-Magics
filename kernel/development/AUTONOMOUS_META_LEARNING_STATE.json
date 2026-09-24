@@ -1,0 +1,18 @@
+{
+  "schema": "Venus.AutonomousMetaLearningState.v0.1",
+  "seen_return_ids": [],
+  "strategy_success": {
+    "RETURN_UTILITY_FIRST": 0,
+    "TARGET_SIGNAL_FIRST": 0
+  },
+  "strategy_failure": {
+    "RETURN_UTILITY_FIRST": 0,
+    "TARGET_SIGNAL_FIRST": 0
+  },
+  "promotion_authority": false,
+  "merge_authority": false,
+  "truth_authority": false,
+  "safety_floor_authority": false,
+  "strategy_family_mutation_authority": false,
+  "return_authority_mutation_authority": false
+}
