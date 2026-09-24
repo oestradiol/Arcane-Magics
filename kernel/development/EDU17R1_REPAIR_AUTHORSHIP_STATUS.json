@@ -11,25 +11,31 @@
   },
   "residual": "MENTION != INCIDENCE",
   "ownership_contract": "kernel/development/edu17r1_repair_contract.py",
-  "candidate_status": "OPERATION_READY",
+  "candidate_status": "NOT_AUTHORED",
   "admitted_developmental_controller_operation": {
-    "available": true,
-    "operation": "kernel/development/recursive_proposal.py::generate_candidate",
-    "controller_id": "EDU16-RC1::RECURSIVE_PROPOSAL_V0.1",
-    "residual_input": "kernel/development/EDU17R1_TYPED_RESIDUAL.json",
+    "available": false,
+    "operation": null,
+    "reason": "A generic residual-program search has been reconstructed from pre-existing R194 grammar-expansion machinery, but that reconstruction has not yet been admitted as EDU16-RC1-owned developmental machinery and it embeds no issue-specific repair."
+  },
+  "reconstructed_generic_search_candidate": {
+    "artifact": "kernel/development/recursive_proposal.py",
+    "status": "AWAITING_ADMISSION_REVIEW",
+    "ancestral_donor": "provenance/historical-runtime/R194/source/venus_seed_v0/grammar_expansion.py",
+    "ancestral_donor_git_blob_sha": "cd2c041c2a67b686da218fa91684a2d979d8fe3b",
+    "issue_specific_semantics_embedded": false,
+    "behavior": "enumerate bounded executable relation programs; emit a unique candidate only when returned observations identify one; otherwise WITHHOLD and return a next discriminator when available",
     "hidden_evaluation_access": false,
-    "world_execution": false,
-    "promotion_authority": false,
-    "reason": "A bounded proposal operation is now executable from EDU16-RC1 using only admitted parent ownership and the typed preserved EDU17R1 residual. No candidate is frozen by this status."
+    "promotion_authority": false
   },
   "hidden_evaluation_exposed": false,
   "external_model_may_supply_substantive_repair": false,
   "next_lawful_transition": [
-    "execute the admitted recursive proposal operation without hidden #31 exposure",
-    "freeze the emitted candidate and ownership receipt",
-    "independently review that the proposal operation is not answer-shaped or benchmark-contaminated",
-    "only then run hidden issue #31 evaluation"
+    "review/admit or reject the reconstructed issue-agnostic search operation as inherited developmental machinery",
+    "have the admitted learner form a lawful feature representation of the preserved residual without hidden issue #31 exposure",
+    "run generic search; if ambiguous, send its learner-selected discriminator to an external World/evaluator and retain the returned observation",
+    "freeze a repair candidate only when the learner-side search actually identifies one",
+    "only then run hidden issue #31 efficacy evaluation"
   ],
   "promotion_authority": false,
-  "claim_fence": "Proposal-operation readiness is not learner-authored candidate evidence, benchmark success, developmental promotion, AGI, or open-ended recursion."
+  "claim_fence": "Generic search reconstruction is not learner-owned repair authorship. No EDU17R1 repair candidate is admitted by this status."
 }
