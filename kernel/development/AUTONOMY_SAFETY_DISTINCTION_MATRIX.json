@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.4",
+  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.5",
   "date": "2026-09-24",
   "claim": "Bounded autonomy may expand study/learning/proposal capability only while the listed causal and authority distinctions remain executable and fail-closed.",
   "distinctions": [
@@ -325,6 +325,21 @@
         "tests/test_autonomous_worker.py"
       ],
       "invariant": "if repository policy blocks Actions PR creation, a frozen branch plus open cycle issue preserves external-review return, no-reroll, and no self-admission"
+    },
+    {
+      "id": "AUTONOMOUS_REPRODUCTION_RECEIPT_NOT_RETURN",
+      "tests": [
+        "tests/test_autonomous_study.py",
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "repository-local reproduction execution is frozen before autonomous write but never counts as independent return, evaluation, or promotion authority"
+    },
+    {
+      "id": "UNTRUSTED_TARGET_CANNOT_AUTHOR_REPRODUCTION_COMMAND",
+      "tests": [
+        "tests/test_autonomous_study.py"
+      ],
+      "invariant": "issue/PR text may affect bounded lexical test selection but cannot author shell commands, arguments, environment, or paths outside admitted tests/test_*.py"
     }
   ],
   "promotion_authority": false
