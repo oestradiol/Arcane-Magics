@@ -1,6 +1,6 @@
 {
-  "schema": "Venus.AutonomousLearningState.v0.1",
-  "seen_cycle_prs": [],
+  "schema": "Venus.AutonomousLearningState.v0.2",
+  "seen_return_ids": [],
   "kind_success": {
     "ISSUE": 0,
     "PR": 0
@@ -9,5 +9,11 @@
     "ISSUE": 0,
     "PR": 0
   },
-  "promotion_authority": false
+  "review_return_semantics": {
+    "VENUS_WORK_RETURN: USEFUL": "external review says this work class was useful for future selection only",
+    "VENUS_WORK_RETURN: UNHELPFUL": "external review says this work class was unhelpful for future selection only"
+  },
+  "truth_authority": false,
+  "promotion_authority": false,
+  "merge_authority": false
 }
