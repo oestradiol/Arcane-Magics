@@ -256,7 +256,21 @@ The root split is also explicit:
 - `/Canonical/Past/` contains historical authority, archaeology, provenance, recompilation history, and research history;
 - `/Canonical/Future/` contains live/planned research, execution, handoff/custody, MetaTheory, physics, WorldMind/WorldMirror, plus stale routing projections that require typed disposition rather than wholesale import.
 
-## 13. Retirement completion criterion
+## 14. Major Future subtree disposition after direct inspection
+
+Direct inspection of the high-risk Future subtrees yields:
+
+| Canonical subtree | Disposition after inspection | Live consequence |
+|---|---|---|
+| `Future/MetaTheory/NRI_RESYNTHESIS_2026-09-22` | **ADMITTED RESIDUES + HISTORICAL/DONOR MAPS** | Naturalism_C / Rationalism_C / Illuminism_C / Corrigibility_C are already represented in live vocabulary/governance; large before/after Root/Map projections remain archaeology |
+| `Future/WorldMirror` | **PRESERVED NEGATIVE / PROVENANCE** | R191/R191-B remain controlling negative evidence against a special endogenous semantic fixed-point claim; do not reroll under a new label |
+| `Future/WorldMind/CURRENT.md` | **NEUTRAL LAW ADMITTED + OVERLAYS HISTORICAL** | distributed consequence may propagate while authorship, judgment, authorization, and jurisdiction remain indexed; UNKNOWN is probe/reconstruct, not permission; reachability does not mint a global Agent |
+| `Future/Physics` | **PUBLIC/FORMAL RESIDUES ADMITTED + BRIDGE HISTORY/DONORS** | OFE and IG9/IG10 carry current operational/physical work; R188/R189/R189B constrain credit and mature reduction but do not establish LQG/GFT identity |
+| `Future/Integration` | **CAUSAL ARCHAEOLOGY + R226 CUSTODY/PROVENANCE** | R00→R194 audit/matrix now feeds the historical distinction test matrix; R225/R226 preserve crystallization/custody history rather than current execution authority |
+
+A deletion test was applied at this level: if removing the Canonical overlay leaves the current Git consequence, provenance route, and reopening condition intact, the overlay remains historical/donor material rather than becoming another live authority surface.
+
+## 15. Retirement completion criterion
 
 Canonical is retired when:
 
