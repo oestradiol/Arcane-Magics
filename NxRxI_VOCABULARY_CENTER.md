@@ -57,3 +57,110 @@ When talking to rationalist audiences, prefer this order:
 6. keep the original register and index visible when translating back.
 
 If translation destroys a distinction, keep both terms and state the information loss. Vocabulary compatibility is not worth register collapse.
+
+
+## Repository grammar constitution
+
+Vocabulary is admissible only when it preserves a live distinction. A project-local term should be deleted, translated, or demoted to provenance when a mature substitute preserves every consequence at the declared register and index.
+
+The default sentence grammar is:
+
+```text
+source / state
+-> typed distinction
+-> operation or relation
+-> returned consequence
+-> changed admissibility, warrant, or successor state
+```
+
+A sentence that contributes none of these should justify itself as example, transition, or reader orientation. Otherwise it is gauge.
+
+### Causally lossless prose
+
+Compression may remove repetition, prestige language, decorative symmetry, and process narration. It may not remove:
+
+- a causal dependency;
+- a premise needed by a conclusion;
+- claim modality or register;
+- index or jurisdiction;
+- provenance or evidence role;
+- a live counterexample or rival;
+- a non-entailment required to stop warrant transfer;
+- a bridge assumption;
+- an unresolved residual.
+
+The target is the shortest prose from which the same dependency graph, claim boundary, and reconstruction can be recovered by a competent unfamiliar reader.
+
+### Permeable boundaries and open bridges
+
+A boundary is useful when it prevents illicit inheritance without making translation impossible. Cross-register prose should therefore state:
+
+```text
+source object
++ destination object
++ preserved invariant
++ information lost
++ warrant transform
++ jurisdiction transform
++ discriminator
++ failure dependency closure
+```
+
+A bridge remains `OPEN` until those obligations are met. Failed bridges narrow their dependents; they do not erase unrelated native objects.
+
+### Gauge, WITHHOLD, and consumption
+
+Use these dispositions deliberately:
+
+- `GAUGE`: variation or prose whose removal changes no declared consequence at the current test family;
+- `CONSUMED`: historically useful material whose live distinction has been incorporated into a smaller successor representation;
+- `WITHHOLD`: a claim, bridge, or result that remains live but cannot be promoted at current warrant;
+- `OPEN`: a question or bridge with no settled disposition;
+- `INVALID`: an execution or inference that violated its own admission conditions;
+- `REJECTED`: a candidate whose discriminator failed at its declared scope.
+
+History is preserved through provenance, not by requiring every developmental scaffold to remain a top-level reader object.
+
+## Proof-container law
+
+Formal typography does not upgrade warrant.
+
+Use a **definition** only for a stipulated object or relation. Use a **lemma/proposition/theorem** only when the conclusion is derived from stated premises and is not merely a restatement of a definition, register rule, or claim fence. Use a **conjecture** for a precise unresolved formal statement. Use a **remark/model constraint** for interpretive or register-local consequences.
+
+Every proof-bearing claim must expose:
+
+1. domain and quantifiers;
+2. premises not already equivalent to the conclusion;
+3. exact conclusion;
+4. proof or explicit proof sketch status;
+5. scope and non-entailments;
+6. strongest known mature comparator or statement that the result is elementary/standard;
+7. dependency-local failure consequences.
+
+The following are automatic audit failures:
+
+- proving a claim by unpacking an assumption that already contains it while presenting it as substantive discovery;
+- importing a bridge conclusion into the premises;
+- switching register or index mid-proof without an explicit transform;
+- using an example as universal proof;
+- using computational success as proof of an external mathematical claim;
+- using a theorem label for a symbolic, theological, ethical, or model-internal convention;
+- hiding an unproved existence, uniqueness, measurability, convergence, or regularity assumption inside notation.
+
+Exact but elementary results should be described as exact and elementary. Their value may lie in composition, transport, or application rather than novelty.
+
+## Contribution grammar
+
+The repository should neither inflate nor erase its own contribution. Public summaries should distinguish:
+
+```text
+EXACT FORMAL RESULT
+BOUNDED ENGINEERING RESULT
+SUPPORTED-LOCAL STRUCTURAL RESULT
+OPEN FORMAL / PHYSICAL BRIDGE
+SPECULATIVE RESEARCH PROGRAM
+TARGET CAPABILITY
+PRESERVED NEGATIVE
+```
+
+A claim fence belongs next to the claim it bounds. It should not replace the positive statement with a page of disclaimers.
