@@ -29,6 +29,27 @@ class ForumNormalizationTests(unittest.TestCase):
         out = normalize_forum_markdown("See [sec:foo] and \\ref{prop:x}.")
         self.assertEqual(out, "See the referenced result and the referenced result.\n")
 
+    def test_plainifies_raw_tex_outside_math_but_preserves_math(self):
+        src = (
+            r"Outside: \\mathcal{F} \\rightarrow \\text{future family}. "
+            r"Escaped: \\\\mathrm{rank}. "
+            r"Math: $\\mathcal{F} \\rightarrow Q$."
+        )
+        out = normalize_forum_markdown(src)
+        self.assertNotIn(r"\\mathcal{F}", out.split("Math:", 1)[0])
+        self.assertNotIn(r"\\rightarrow", out.split("Math:", 1)[0])
+        self.assertNotIn(r"\\text", out.split("Math:", 1)[0])
+        self.assertNotIn(r"\\mathrm", out.split("Math:", 1)[0])
+        self.assertIn("→", out)
+        self.assertIn(r"$\\mathcal{F} \\rightarrow Q$", out)
+
+    def test_plainifies_nested_text_wrapper_command_token(self):
+        out = normalize_forum_markdown(
+            r"Outside \\text{a \\mathcal{nested} object} remains readable."
+        )
+        self.assertNotIn(r"\\text", out)
+        self.assertNotIn(r"\\mathcal", out)
+
 
 if __name__ == "__main__":
     unittest.main()
