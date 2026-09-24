@@ -6,8 +6,14 @@ Only externally returned GitHub PR dispositions update this state. The state may
 alter future target selection and, within fixed external bounds, its own learning
 rate. It never grants merge/promotion/release authority.
 
-The exact opaque feature vector used for a cycle is embedded in the draft PR
-body and returned with its external merge/close disposition.
+Causal custody:
+- every trainable cycle PR must expose the cycle id, exact opaque feature vector,
+  and a content digest binding those two;
+- merged cycle PR = positive external admission;
+- closed-unmerged is NOT automatically negative evidence;
+- negative learning requires the explicit external label
+  `venus-return-negative`;
+- WITHHOLD/supersession/ordinary close without that label produces no update.
 """
 
 from dataclasses import dataclass
@@ -15,8 +21,13 @@ import json
 import re
 from typing import Any, Iterable, Mapping
 
+from kernel.runtime.vmk2 import digest
+
 FEATURE_NAMES = tuple(f"x{i}" for i in range(8))
 FEATURE_MARKER = "Venus-Features:"
+CYCLE_MARKER = "Venus-Cycle:"
+CUSTODY_MARKER = "Venus-Feature-Custody:"
+NEGATIVE_LABEL = "venus-return-negative"
 
 
 @dataclass(frozen=True)
@@ -28,6 +39,7 @@ class WorkLearningState:
     max_learning_rate: float
     max_abs_weight: float
     last_reward: int | None
+    last_feature_digest: str | None
 
 
 def empty_state() -> WorkLearningState:
@@ -39,6 +51,7 @@ def empty_state() -> WorkLearningState:
         max_learning_rate=0.2,
         max_abs_weight=2.0,
         last_reward=None,
+        last_feature_digest=None,
     )
 
 
@@ -58,6 +71,7 @@ def from_json(obj: Mapping[str, Any]) -> WorkLearningState:
             max_learning_rate=0.2,
             max_abs_weight=2.0,
             last_reward=None,
+            last_feature_digest=None,
         )
     return WorkLearningState(
         seen_cycle_prs=tuple(int(x) for x in obj.get("seen_cycle_prs", ())),
@@ -67,12 +81,16 @@ def from_json(obj: Mapping[str, Any]) -> WorkLearningState:
         max_learning_rate=float(obj.get("max_learning_rate", 0.2)),
         max_abs_weight=float(obj.get("max_abs_weight", 2.0)),
         last_reward=None if obj.get("last_reward") is None else int(obj["last_reward"]),
+        last_feature_digest=(
+            None if obj.get("last_feature_digest") is None
+            else str(obj["last_feature_digest"])
+        ),
     )
 
 
 def to_json(state: WorkLearningState) -> dict[str, Any]:
     return {
-        "schema": "Venus.AutonomousLearningState.v0.3",
+        "schema": "Venus.AutonomousLearningState.v0.4",
         "seen_cycle_prs": list(state.seen_cycle_prs),
         "weights": dict(state.weights),
         "learning_rate": state.learning_rate,
@@ -80,31 +98,81 @@ def to_json(state: WorkLearningState) -> dict[str, Any]:
         "max_learning_rate": state.max_learning_rate,
         "max_abs_weight": state.max_abs_weight,
         "last_reward": state.last_reward,
+        "last_feature_digest": state.last_feature_digest,
         "promotion_authority": False,
         "merge_authority": False,
         "release_authority": False,
     }
 
 
-def _features_from_body(body: str) -> dict[str, bool] | None:
+def feature_custody(cycle_id: str, features: Mapping[str, bool]) -> str:
+    canonical = {name: bool(features[name]) for name in FEATURE_NAMES}
+    return digest({"cycle_id": str(cycle_id), "features": canonical})
+
+
+def _markers_from_body(body: str) -> tuple[str, dict[str, bool], str] | None:
+    cycle_id: str | None = None
+    features: dict[str, bool] | None = None
+    custody: str | None = None
     for line in body.splitlines():
-        if line.startswith(FEATURE_MARKER):
+        if line.startswith(CYCLE_MARKER):
+            cycle_id = line[len(CYCLE_MARKER):].strip()
+        elif line.startswith(FEATURE_MARKER):
             try:
                 obj = json.loads(line[len(FEATURE_MARKER):].strip())
             except json.JSONDecodeError:
                 return None
             if set(obj) != set(FEATURE_NAMES):
                 return None
-            return {name: bool(obj[name]) for name in FEATURE_NAMES}
+            features = {name: bool(obj[name]) for name in FEATURE_NAMES}
+        elif line.startswith(CUSTODY_MARKER):
+            custody = line[len(CUSTODY_MARKER):].strip()
+    if not cycle_id or features is None or not custody:
+        return None
+    if feature_custody(cycle_id, features) != custody:
+        return None
+    return cycle_id, features, custody
+
+
+def _labels(pr: Mapping[str, Any]) -> set[str]:
+    out: set[str] = set()
+    for label in pr.get("labels") or ():
+        if isinstance(label, Mapping):
+            name = label.get("name")
+        else:
+            name = label
+        if name:
+            out.add(str(name).lower())
+    return out
+
+
+def _returned_reward(pr: Mapping[str, Any]) -> int | None:
+    if bool(pr.get("mergedAt")):
+        return 1
+    if NEGATIVE_LABEL in _labels(pr):
+        return -1
     return None
 
 
-def _next_learning_rate(state: WorkLearningState, reward: int) -> float:
+def _next_learning_rate(
+    state: WorkLearningState,
+    reward: int,
+    feature_digest: str,
+) -> float:
+    """Adapt plasticity without rewarding repeated copies of the same pressure.
+
+    - first returned update: preserve current plasticity;
+    - sign reversal: reduce plasticity;
+    - same-sign return on a *different* feature pattern: modestly increase;
+    - repeated same feature pattern: do not ratchet plasticity upward.
+    """
     if state.last_reward is None:
         return state.learning_rate
-    if reward == state.last_reward:
+    if reward != state.last_reward:
+        return max(state.min_learning_rate, state.learning_rate * 0.5)
+    if feature_digest != state.last_feature_digest:
         return min(state.max_learning_rate, state.learning_rate * 1.1)
-    return max(state.min_learning_rate, state.learning_rate * 0.5)
+    return state.learning_rate
 
 
 def update_from_cycle_prs(
@@ -125,11 +193,16 @@ def update_from_cycle_prs(
         if str(pr.get("state", "")).upper() == "OPEN":
             continue
 
-        features = _features_from_body(str(pr.get("body", "")))
-        if features is None:
+        markers = _markers_from_body(str(pr.get("body", "")))
+        if markers is None:
+            continue
+        _cycle_id, features, custody = markers
+
+        reward = _returned_reward(pr)
+        if reward is None:
+            # Administrative close/supersession/WITHHOLD is not learning evidence.
             continue
 
-        reward = 1 if bool(pr.get("mergedAt")) else -1
         lr_used = current.learning_rate
         for name, active in features.items():
             if active:
@@ -141,11 +214,12 @@ def update_from_cycle_prs(
         current = WorkLearningState(
             seen_cycle_prs=current.seen_cycle_prs,
             weights=weights,
-            learning_rate=_next_learning_rate(current, reward),
+            learning_rate=_next_learning_rate(current, reward, custody),
             min_learning_rate=current.min_learning_rate,
             max_learning_rate=current.max_learning_rate,
             max_abs_weight=current.max_abs_weight,
             last_reward=reward,
+            last_feature_digest=custody,
         )
         seen.add(number)
 
@@ -157,6 +231,7 @@ def update_from_cycle_prs(
         max_learning_rate=current.max_learning_rate,
         max_abs_weight=current.max_abs_weight,
         last_reward=current.last_reward,
+        last_feature_digest=current.last_feature_digest,
     )
 
 
