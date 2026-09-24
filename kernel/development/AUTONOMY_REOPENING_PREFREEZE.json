@@ -1,0 +1,23 @@
+{
+  "schema": "Venus.AutonomyReopeningPrefreeze.v0.1",
+  "date": "2026-09-24",
+  "parent_main_merge": "d68de18923f0929a344f3b87b238e4113d26be09",
+  "purpose": "Retain target-level STOP/WITHHOLD across autonomous cycles and reopen only after newer external target change.",
+  "barrier_rule": {
+    "open_cycle_blocks_target": true,
+    "resolved_cycle_blocks_target_until_target_updated_after_outcome": true,
+    "missing_target_timestamp_fails_closed": true,
+    "worker_comment_before_cycle_outcome_does_not_reopen": true
+  },
+  "reopening_rule": "target.updatedAt > prior autonomous cycle mergedAt/closedAt",
+  "nonclaims": [
+    "target update proves issue solved",
+    "cycle merge proves target truth",
+    "self-generated activity counts as fresh World return"
+  ],
+  "required_tests": [
+    "tests/test_autonomous_worker.py",
+    "tests/test_autonomous_governance.py"
+  ],
+  "promotion_authority": false
+}

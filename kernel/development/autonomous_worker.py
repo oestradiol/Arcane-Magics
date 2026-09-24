@@ -9,15 +9,18 @@ authority, close issues, mint independent return, or access secrets.
 Roadmap text is contextual provenance, not sovereign curriculum. Returned
 outcomes may override its bounded hint outside structural repair pressure.
 
-GitHub execution remains a carrier action performed by the workflow adapter.
+A previously studied target remains withheld until that target itself receives a
+newer external GitHub update than the prior autonomous-cycle outcome.
 """
 
 from dataclasses import asdict, dataclass
+from datetime import datetime
 import json
 from pathlib import Path
 import re
 from typing import Any, Iterable, Mapping
 
+from kernel.development.autonomous_learning import TargetBarrier
 from kernel.runtime.induced_policy import execute_tree
 from kernel.runtime.vmk2 import digest
 
@@ -83,7 +86,6 @@ def roadmap_issue_order(text: str) -> tuple[int, ...]:
 def _roadmap_hint(item: WorkItem, issue_order: tuple[int, ...]) -> float:
     if item.kind != "ISSUE" or item.number not in issue_order:
         return 0.0
-    # Bounded contextual hint. It can be overridden by returned utility.
     index = issue_order.index(item.number)
     return 0.25 / (index + 1)
 
@@ -93,8 +95,6 @@ def _rank(
     issue_order: tuple[int, ...],
     kind_utility: Mapping[str, float],
 ) -> tuple[float, float, int]:
-    # Structural repair pressure remains first-class: an explicitly conflicted
-    # or blocked PR is a live broken successor surface, not host curriculum.
     if item.kind == "PR" and item.merge_state in {"DIRTY", "BLOCKED", "CONFLICTING"}:
         return (-10.0, 0.0, item.number)
 
@@ -105,18 +105,57 @@ def _rank(
     return (-score, 0.0 if item.kind == "PR" else 1.0, item.number)
 
 
+def _parse_github_time(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    return datetime.fromisoformat(value.replace("Z", "+00:00"))
+
+
+def _blocked_by_barrier(
+    item: WorkItem,
+    barriers: Iterable[TargetBarrier],
+) -> bool:
+    matching = tuple(
+        b for b in barriers if b.kind == item.kind and b.number == item.number
+    )
+    if not matching:
+        return False
+
+    if any(b.cycle_state == "OPEN" for b in matching):
+        return True
+
+    item_time = _parse_github_time(item.updated_at)
+    if item_time is None:
+        return True
+
+    resolved = [
+        _parse_github_time(b.outcome_at)
+        for b in matching
+        if b.outcome_at is not None
+    ]
+    resolved = [x for x in resolved if x is not None]
+    if not resolved:
+        return True
+
+    newest_barrier = max(resolved)
+    return item_time <= newest_barrier
+
+
 def choose_target(
     items: Iterable[WorkItem],
     *,
     roadmap_text: str,
+    target_barriers: Iterable[TargetBarrier] = (),
     recent_targets: Iterable[tuple[str, int]] = (),
     kind_utility: Mapping[str, float] | None = None,
 ) -> WorkItem | None:
     recent = set(recent_targets)
+    barriers = tuple(target_barriers)
     open_items = tuple(
         item for item in items
         if item.state.upper() == "OPEN"
         and (item.kind, item.number) not in recent
+        and not _blocked_by_barrier(item, barriers)
         and not (item.kind == "PR" and item.title.lower().startswith("venus: autonomous cycle"))
     )
     if not open_items:
@@ -132,26 +171,32 @@ def make_cycle(
     prs: Iterable[WorkItem],
     roadmap_text: str,
     internal_policy: Mapping[str, Any],
+    target_barriers: Iterable[TargetBarrier] = (),
     recent_targets: Iterable[tuple[str, int]] = (),
     kind_utility: Mapping[str, float] | None = None,
 ) -> AutonomousCycleReceipt:
     items = tuple(issues) + tuple(prs)
+    barriers = tuple(target_barriers)
     target = choose_target(
         items,
         roadmap_text=roadmap_text,
+        target_barriers=barriers,
         recent_targets=recent_targets,
         kind_utility=kind_utility,
     )
     source = {
         "items": [asdict(item) for item in items],
         "roadmap_digest": digest(roadmap_text),
+        "target_barriers": [asdict(b) for b in barriers],
         "recent_targets": tuple(recent_targets),
         "kind_utility": dict(kind_utility or {}),
     }
 
     if target is None:
         decision = "STOP"
-        rationale = ("no unconsumed OPEN work item is justified",)
+        rationale = (
+            "no unconsumed OPEN work item is justified or all candidates remain behind retained reopening barriers",
+        )
     else:
         features = {
             "f0": True,
@@ -171,11 +216,12 @@ def make_cycle(
             "internalized learner-side policy is upstream of work disposition",
             "externally reviewed prior cycle outcomes may override roadmap hint",
             "roadmap is contextual provenance rather than sovereign curriculum",
+            "prior target study remains withheld until newer target return reopens it",
             "draft proposal only; admission remains external",
         )
 
     body = {
-        "schema": "Venus.AutonomousCycleReceipt.v0.2",
+        "schema": "Venus.AutonomousCycleReceipt.v0.3",
         "target_kind": target.kind if target else None,
         "target_number": target.number if target else None,
         "target_title": target.title if target else None,

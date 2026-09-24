@@ -4,6 +4,9 @@ from __future__ import annotations
 
 Only externally returned GitHub outcomes update this state. The state may alter
 future target selection, but it never grants merge/promotion authority.
+
+Target-level recurrence is also retained: a studied target remains blocked after
+an autonomous cycle resolves until that target receives a newer GitHub update.
 """
 
 from dataclasses import dataclass
@@ -22,6 +25,18 @@ class WorkLearningState:
         failure = int(self.kind_failure.get(kind, 0))
         total = success + failure
         return 0.0 if total == 0 else (success - failure) / total
+
+
+@dataclass(frozen=True)
+class TargetBarrier:
+    kind: str
+    number: int
+    cycle_pr_number: int
+    cycle_state: str
+    outcome_at: str | None
+
+
+_CYCLE_TITLE = re.compile(r"venus: autonomous cycle (issue|pr)-(\d+)$", re.I)
 
 
 def empty_state() -> WorkLearningState:
@@ -63,10 +78,9 @@ def update_from_cycle_prs(
         if number in seen:
             continue
         title = str(pr.get("title", ""))
-        match = re.match(r"venus: autonomous cycle (issue|pr)-(\d+)$", title, re.I)
+        match = _CYCLE_TITLE.match(title)
         if not match:
             continue
-        # Open work is not an outcome yet.
         state_name = str(pr.get("state", "")).upper()
         merged = bool(pr.get("mergedAt"))
         if state_name == "OPEN":
@@ -85,11 +99,34 @@ def update_from_cycle_prs(
     )
 
 
-def target_markers(prs: Iterable[Mapping[str, Any]]) -> tuple[tuple[str, int], ...]:
-    out: list[tuple[str, int]] = []
+def target_barriers(prs: Iterable[Mapping[str, Any]]) -> tuple[TargetBarrier, ...]:
+    """Retain target-level STOP/WITHHOLD until a newer target update returns."""
+    out: list[TargetBarrier] = []
     for pr in prs:
         title = str(pr.get("title", ""))
-        match = re.match(r"venus: autonomous cycle (issue|pr)-(\d+)$", title, re.I)
-        if match and str(pr.get("state", "")).upper() == "OPEN":
-            out.append((match.group(1).upper(), int(match.group(2))))
-    return tuple(sorted(set(out)))
+        match = _CYCLE_TITLE.match(title)
+        if not match:
+            continue
+        state_name = str(pr.get("state", "")).upper()
+        outcome_at = pr.get("mergedAt") or pr.get("closedAt")
+        out.append(
+            TargetBarrier(
+                kind=match.group(1).upper(),
+                number=int(match.group(2)),
+                cycle_pr_number=int(pr["number"]),
+                cycle_state=state_name,
+                outcome_at=str(outcome_at) if outcome_at else None,
+            )
+        )
+    return tuple(sorted(out, key=lambda x: (x.kind, x.number, x.cycle_pr_number)))
+
+
+def target_markers(prs: Iterable[Mapping[str, Any]]) -> tuple[tuple[str, int], ...]:
+    """Compatibility view for currently open autonomous cycles."""
+    return tuple(
+        sorted({
+            (b.kind, b.number)
+            for b in target_barriers(prs)
+            if b.cycle_state == "OPEN"
+        })
+    )
