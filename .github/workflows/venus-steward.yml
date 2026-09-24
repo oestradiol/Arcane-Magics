@@ -98,7 +98,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh issue list --state open --limit 200 --json number > /tmp/venus-open-issues.json
+          gh issue list --state open --limit 200 --json number,title > /tmp/venus-open-issues.json
           python scripts/audit_open_issue_coverage.py /tmp/venus-open-issues.json
 
       - name: Source-tree release audit
