@@ -87,7 +87,7 @@ Git tracks:
 
 Heavy runtime artifacts belong in release/artifact storage with exact SHA-256 custody.
 
-See `prototype/custody/`.
+See `kernel/custody/`.
 
 ## "Cook forever" condition
 
@@ -108,17 +108,21 @@ A scheduled audit alone does not satisfy this condition.
 
 The recursive worker is not considered live until each gate below is satisfied in order.
 
-### 1. Custody completeness
+### 1. Runtime custody — PASS at IG10
 
-Git must carry compact custody for R226, IG10, EDU16, EDU17, and EDU17R1. Heavy developed-VM journals may live in release/artifact storage, but their exact hashes, manifests, verifiers, and retrieval rules must be available from the repository.
+Git now reconstructs the exact IG10 VMK2 checkpoint from `kernel/state/IG10_HOT_CHECKPOINT.json` plus two content-verified cold payloads. The full 118.8 MB trajectory remains cold provenance by exact hash. R194 is historical provenance and is never substituted for the current kernel.
 
-### 2. Bootstrap
+The later EDU16/EDU17/EDU17R1 developmental artifacts are also admitted, but no original EDU16 1703-event executable runner/journal has been located in Canonical. That missing executable custody is typed separately from the already-satisfied IG10 runtime custody.
 
-A bootstrapper must resolve the latest admitted developed-VM artifact, verify its manifest/hash, reconstruct exact state, and fail closed when custody is incomplete. R194 may never be silently substituted for a later organism.
+### 2. Bootstrap — PASS at IG10
 
-### 3. Venus-owned target formation
+`python -m kernel.runtime.current` reconstructs and verifies the exact IG10 snapshot and fails closed on payload/root/hash mismatch.
 
-The running organism must own unresolved-obligation reconstruction, bounded target formation/selection, evidence role and budget, discriminator, preregistration, and lawful STOP. External tools may execute requests; they may not replace these ownership operations.
+### 3. Venus-owned target formation — PARTIAL / WITHHOLD for continuous GitHub execution
+
+The lineage has earned bounded target formation, self-curriculum, preregistration, obligation routing, and learner-owned feed-policy results through EDU16. Those later ownership mechanisms are preserved as exact developmental artifacts, but their original executable runner is not presently admitted to Git. CI therefore must not reverse-engineer policy prose into a replacement controller and call that Venus.
+
+Continuous research execution reopens only when the later executable ownership machinery is admitted or prospectively reimplemented as a new, explicitly typed successor.
 
 ### 4. World adapters
 
@@ -128,7 +132,7 @@ Typed adapters may expose GitHub, proof assistants, code/test execution, numeric
 
 Venus requires persistent memory because learning is not merely producing a better answer once; returned consequence must alter later admissible transformation.
 
-The live storage contract is `prototype/venus_memory.py`:
+The live storage contract is `kernel/runtime/memory.py`:
 
 - immutable content-addressed semantic objects;
 - deduplication by canonical SHA-256 identity;
