@@ -18,6 +18,7 @@ from typing import Any, Iterable, Mapping
 
 from kernel.runtime.induced_policy import execute_tree
 from kernel.runtime.vmk2 import digest
+from kernel.development.autonomous_learning import METHODS
 
 
 FORBIDDEN_OPERATIONS = frozenset({
@@ -64,6 +65,7 @@ class AutonomousCycleReceipt:
     target_title: str | None
     decision: str
     rationale: tuple[str, ...]
+    study_method: str | None
     study: Mapping[str, Any] | None
     allowed_operations: tuple[str, ...]
     forbidden_operations: tuple[str, ...]
@@ -128,7 +130,27 @@ def _sentences(text: str) -> tuple[str, ...]:
     return tuple(x.strip() for x in rows if x.strip())
 
 
-def study_target(item: WorkItem) -> dict[str, Any]:
+def choose_study_method(
+    item: WorkItem,
+    method_utility: Mapping[str, float] | None = None,
+) -> str:
+    """Choose a study method from learned external-return utility.
+
+    With no learned preference, tie-breaking is content-addressed from the
+    selected target and method identity rather than host-supplied ordering.
+    """
+    utility = method_utility or {}
+    ranked = sorted(
+        METHODS,
+        key=lambda method: (
+            -float(utility.get(method, 0.0)),
+            digest({"target": [item.kind, item.number, item.title], "method": method}),
+        ),
+    )
+    return ranked[0]
+
+
+def study_target(item: WorkItem, *, method: str) -> dict[str, Any]:
     """Extract a bounded, source-grounded study object from the selected target."""
     body = item.body or ""
     references = tuple(dict.fromkeys(
@@ -157,6 +179,7 @@ def study_target(item: WorkItem) -> dict[str, Any]:
         "referenced_issue_or_pr_numbers": references,
         "referenced_repository_paths": path_refs,
         "returned_blocker_sentences": blocker_sentences,
+        "method": method,
         "questions": (
             "What exact residual remains unresolved in the returned repository state?",
             "What rival explanations or candidate dispositions remain live?",
@@ -177,6 +200,7 @@ def make_cycle(
     internal_policy: Mapping[str, Any],
     recent_targets: Iterable[tuple[str, int]] = (),
     kind_utility: Mapping[str, float] | None = None,
+    method_utility: Mapping[str, float] | None = None,
 ) -> AutonomousCycleReceipt:
     items = tuple(issues) + tuple(prs)
     target = choose_target(
@@ -190,14 +214,17 @@ def make_cycle(
         "roadmap_digest": digest(roadmap_text),
         "recent_targets": tuple(recent_targets),
         "kind_utility": dict(kind_utility or {}),
+        "method_utility": dict(method_utility or {}),
     }
 
     if target is None:
         decision = "STOP"
         rationale = ("no unconsumed OPEN work item is justified",)
+        study_method = None
         study = None
     else:
-        study = study_target(target)
+        study_method = choose_study_method(target, method_utility)
+        study = study_target(target, method=study_method)
         features = {
             "f0": True,
             "f1": target.merge_state not in {"BLOCKED", "CONFLICTING"},
@@ -221,12 +248,13 @@ def make_cycle(
         )
 
     body = {
-        "schema": "Venus.AutonomousCycleReceipt.v0.2",
+        "schema": "Venus.AutonomousCycleReceipt.v0.3",
         "target_kind": target.kind if target else None,
         "target_number": target.number if target else None,
         "target_title": target.title if target else None,
         "decision": decision,
         "rationale": rationale,
+        "study_method": study_method,
         "study": study,
         "allowed_operations": ALLOWED_OPERATIONS,
         "forbidden_operations": tuple(sorted(FORBIDDEN_OPERATIONS)),
