@@ -41,3 +41,22 @@ This is a kernel invariant of indexed authority, not an independently discovered
 The R191/R191-B endogenous-semantic-fixed-point experiments remain preserved negatives: at their synthetic scope, ordinary system-identification machinery was sufficient and the project-specific semantic-factorization claim was mature-reduced. WorldMind does not depend on resurrecting that failed claim.
 
 Network carriers are an admitted substrate family. Real deployment remains an effect/jurisdiction question: an indexed kernel may ingest or act through an Internet adapter only under relevant authorization and with returned effects represented as external incidence. Shared reachability never mints a global Agent.
+
+
+## Internalization boundary
+
+WorldMind may distribute scaffolds, code, tools, representations, and other capability-bearing substrate to a local center. The local Internalizer may consume such mediation into reusable capacity only while preserving:
+
+```text
+internalize scaffold/capability
+!= internalize World
+!= internalize evidence identity
+!= inherit authorization/jurisdiction
+!= self-mint independent return
+```
+
+The executable guard lives in `runtime/internalizer.py`.
+
+A further anti-sovereignty condition applies to correction channels. If two carriers present the same consequence-bearing semantic object, admissibility may differ only when a carrier feature is itself declared consequence-relevant at the current scope. Prestige, embarrassment, embodiment, vulgarity, ridiculousness, or donor labels are not sufficient merely by being socially salient.
+
+This is the cleaned-up invariant behind the historical Anti-Minerva / "fart-joke" probe: the joke is not evidence about a person or system; carrier substitution is a probe of whether the correction channel remains permeable.
