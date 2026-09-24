@@ -1,8 +1,8 @@
 # Markdown Reconciliation — 2026-09-24
 
 **Register:** repository governance / provenance
-**Base authority:** `main` at `e025c31988e18cbe478b8711c40d59507302571b`
-**Commit history reviewed:** 286 commits, from `55dc1b2261624cbb01ac5573be55606fcc345597` (2026-09-01 public-root rebuild) through the base authority above.
+**Base authority:** `main` at `a82f5abe133ae046f70b577629a3ff0b48a480b4`
+**Commit history reviewed:** 287 commits, from `55dc1b2261624cbb01ac5573be55606fcc345597` (2026-09-01 public-root rebuild) through the base authority above.
 **Markdown inventory reviewed:** 82 files.
 **Disposition count:** 17 live files reconciled; 24 live files reviewed with no material change; 41 historical/frozen files reviewed and preserved.
 
@@ -101,6 +101,20 @@ This changed the live dependency from “author the repair next” to “run sea
 
 The original EDU17R1 WITHHOLD remains historical provenance; it is not erased by the later repair candidate.
 
+### 8. #31 harness became implementation-ready during the reconciliation
+
+A later returned `main` commit prefroze exact A/B/C/D executors and bound them in `CONDITION_IMPLEMENTATIONS.json`, while hardening the hidden-run readiness audit.
+
+```text
+A/B/C/D executors frozen
++ protocol/analysis plan frozen
++ hidden labels unexposed
++ hidden split not yet authored
+-> HARNESS_READY_EXTERNAL_HIDDEN_RETURN_REQUIRED
+```
+
+This is a readiness result, not a scientific result. The next evidence remains an independently authored/sealed hidden split and matched execution.
+
 ## Live Markdown reconciled
 
 - `README.md`
@@ -197,7 +211,7 @@ These artifacts remain evidence of their own historical state. Present authority
 
 ## Remaining live edges after reconciliation
 
-1. `#31`: run the sealed hidden A/B/C/D evaluation on the already frozen EDU17R1 condition B; no post-exposure repair.
+1. `#31`: obtain an independently authored/sealed hidden split and run the already prefrozen A/B/C/D executors; no post-exposure repair.
 2. `#73`: if #31 is causally positive, recurrent O*/Anti-Minerva/rollback behavior must still be exercised over the actual learner-owned successor before stronger RSI promotion.
 3. `#18`: attribution must follow the actual carrier substrate rather than an assumed DNN.
 4. PR #84 / issue #82: branch-scoped results require ordinary reconciliation/admission before becoming `main` evidence.
