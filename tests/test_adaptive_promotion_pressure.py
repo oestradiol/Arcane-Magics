@@ -38,10 +38,13 @@ class AdaptivePromotionPressureTests(unittest.TestCase):
         self.assertGreater(got["naive"]["false_commit_rate_per_proposal"], 0.45)
         self.assertGreater(got["naive"]["lineage_with_any_false_commit_rate"], 0.99)
         self.assertLess(got["bonferroni_one_sided"]["lineage_with_any_false_commit_rate"], 0.08)
+        self.assertLess(got["alpha_spending_anytime"]["lineage_with_any_false_commit_rate"], 0.08)
+        self.assertLessEqual(got["alpha_spending_anytime"]["false_commits"], 100)
 
     def test_protocol_does_not_promote_synthetic_result(self):
         self.assertFalse(self.protocol["promotion_authority"])
         self.assertIn("Venus current gate", self.protocol["future_claim_bearing_conditions"])
+        self.assertIn("alpha_spending_anytime_familywise_control", self.protocol["conditions"])
 
 
 if __name__ == "__main__":
