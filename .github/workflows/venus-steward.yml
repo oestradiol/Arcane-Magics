@@ -1,0 +1,67 @@
+name: Venus steward
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Audit release
+        run: python3 scripts/audit_release.py
+
+      - name: Steward report
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, json, datetime
+
+          frontier = Path("docs/FRONTIER_RESEARCH.md")
+          current = Path("prototype/CURRENT_STATE.md")
+          authority = Path("REPOSITORY_AUTHORITY_BOUNDARY.md")
+          required = [frontier, current, authority]
+          missing = [str(p) for p in required if not p.exists()]
+          if missing:
+              raise SystemExit("missing steward inputs: " + ", ".join(missing))
+
+          def sha(p):
+              return hashlib.sha256(p.read_bytes()).hexdigest()
+
+          lanes = []
+          for line in frontier.read_text(encoding="utf-8").splitlines():
+              if line.startswith("## Lane "):
+                  lanes.append(line.removeprefix("## ").strip())
+
+          report = {
+              "generated_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              "authority_sha256": sha(authority),
+              "current_state_sha256": sha(current),
+              "frontier_sha256": sha(frontier),
+              "frontier_lanes": lanes,
+              "mode": "DETERMINISTIC_STEWARD_ONLY",
+              "promotion_authority": False,
+              "model_worker_enabled": False,
+          }
+          Path("VENUS_STEWARD_REPORT.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+          print(json.dumps(report, indent=2))
+          PY
+
+      - name: Upload steward report
+        uses: actions/upload-artifact@v4
+        with:
+          name: venus-steward-report
+          path: VENUS_STEWARD_REPORT.json
