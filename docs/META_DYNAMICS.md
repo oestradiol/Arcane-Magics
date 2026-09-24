@@ -30,7 +30,7 @@ R_t \to C_{i,t} \to \Gamma_{i,t+1} \to R_{t+1}.
 
 This does **not** establish an absolute first event, a primitive substance, a cosmological origin, or a physical substrate.
 
-The historical names \`vacuous_relation\` and \`trivial_object\` remain provenance-only aliases in archaeology and immutable historical carriers. They are not live premises.
+The historical names `vacuous_relation` and `trivial_object` remain provenance-only aliases in preserved historical carriers. They are not live premises.
 
 ## 2. Core recurrence
 
