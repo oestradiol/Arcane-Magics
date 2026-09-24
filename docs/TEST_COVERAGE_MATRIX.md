@@ -42,7 +42,8 @@
 | #37 roadmap | meta | dependency-ordered issue plan | completion of dependent work | closes only when roadmap is replaced by executed outcomes / successor roadmap |
 | #41 Self-evolution evaluation | T5/T6 | promotion/evaluation governance + matched-experiment contract + public null false-promotion simulator | Venus gate vs naive vs anytime-valid/mature acceptors on identical candidate streams | durable held-out improvement with controlled false/harmful commit rate |
 | #42 Reliability/abstention | T5/T6 | STOP/WITHHOLD governance + 16-case public ACT/GATHER/WITHHOLD/STOP paired dev surface + floor controls | hidden paired benchmark with Venus gates and mature substitutes | lower unjustified-action/promotion without collapsing useful action |
-| #72 Safe Strong RSI | T3/T5/T6 | Strong-N2/CTL safety floor + R127/R206/U1 bounded RSI ancestry + #69/#31 first-successor path | one Venus-owned machinery repair first; then repeated adaptive cycles with rollback, hidden evaluation, mature comparators, and zero safety-floor self-waiver | bounded SSR stage only at tested scope; open-ended RSI remains unclaimed |
+| #72 Safe Strong RSI | T3/T5/T6 | Strong-N2/CTL safety floor + R127/R206/U1 bounded RSI ancestry + #69/#31 first-successor path | one Venus-owned machinery repair first; then repeated adaptive cycles through #73 with rollback, hidden evaluation, mature comparators, and zero safety-floor self-waiver | bounded SSR stage only at tested scope; open-ended RSI remains unclaimed |
+| #73 Internalizer / O* contract | T3/T5 | R193 scaffold-internalization distinction + R216 O*/Strong-N2 constitutional law | executable scaffold-consumption receipts and transition validator that preserve World/evaluator/authority/STOP/rollback externality | scaffold function can be internalized while forbidden authority/correction roles fail closed and fresh return remains reachable |
 | #43 Security/World input | T3/T5/T6 | provenance/jurisdiction/memory boundaries + 12-case public typed attack/disposition surface + floor controls | dynamic adversarial prompt/tool-output/memory-poisoning benchmark against mature defenses | incremental security consequence without unacceptable utility loss |
 
 ## Current executable coverage
@@ -61,7 +62,7 @@ The largest uncovered classes are:
 1. #69 learner-authored candidate repair from EDU16-RC1 before hidden exposure;
 2. independently authored hidden T4 evaluation for the frozen EDU17R1 candidate;
 3. matched causal T5 ablations, beginning with evidence governance and memory;
-4. hidden paired STOP/WITHHOLD evaluation, adaptive-successor validity, and #72 Safe Strong RSI staging beyond the first bounded successor;
+4. hidden paired STOP/WITHHOLD evaluation, adaptive-successor validity, #73 executable internalizer/O* safety, and #72 Safe Strong RSI staging beyond the first bounded successor;
 5. dynamic adversarial World-input/authentication tests beyond public attack surfaces;
 6. external T6 capability/science benchmarks;
 7. automatic T8 source-change reconciliation beyond freshness deadlines;
