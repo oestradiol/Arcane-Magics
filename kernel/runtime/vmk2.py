@@ -287,17 +287,30 @@ class VMK2Reference:
         return ret
 
     # D5-D8: typed governance, jurisdiction, pacing/turn, legitimacy
+    @staticmethod
+    def _register_immutable(registry: Dict[str, Any], key: str, value: Any, kind: str) -> None:
+        existing = registry.get(key)
+        if existing is not None and existing != value:
+            raise VMK2Error(f'{kind} id already bound to different content')
+        registry[key] = value
+
     def register_jurisdiction(self, receipt: JurisdictionReceipt) -> None:
-        self.jurisdictions[receipt.receipt_id] = receipt
+        self._register_immutable(
+            self.jurisdictions, receipt.receipt_id, receipt, 'jurisdiction receipt'
+        )
 
     def register_legitimacy(self, receipt: LegitimacyReceipt) -> None:
-        self.legitimacy[receipt.receipt_id] = receipt
+        self._register_immutable(
+            self.legitimacy, receipt.receipt_id, receipt, 'legitimacy receipt'
+        )
 
     def register_turn_lease(self, lease: TurnLease) -> None:
-        self.turn_leases[lease.lease_id] = lease
+        self._register_immutable(self.turn_leases, lease.lease_id, lease, 'turn lease')
 
     def register_policy(self, policy: TransitionPolicy) -> None:
-        self.policies[policy.policy_id] = policy
+        self._register_immutable(
+            self.policies, policy.policy_id, policy, 'transition policy'
+        )
 
     def _verify_policy(self, policy_id: str, *, actor_id: str, target_id: str, epoch: int, lease_id: Optional[str]) -> TransitionPolicy:
         p = self.policies.get(policy_id)
