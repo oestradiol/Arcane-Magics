@@ -4,7 +4,9 @@ import unittest
 
 from kernel.development.autonomous_problem_formation import (
     bind_problem_to_carriers,
+    exhaustive_problem_scan,
     form_problem,
+    resolve_problem,
     snapshot_to_incidence,
 )
 from kernel.development.autonomous_worker import WorkItem
@@ -190,6 +192,81 @@ class RecompiledU2ProblemFormationTests(unittest.TestCase):
             ),
         )
         self.assertEqual(bind_problem_to_carriers(problem, unrelated), ())
+
+
+    def test_no_return_ablation_preserves_rivals_and_withholds(self):
+        problem = form_problem(snapshot_to_incidence((
+            WorkItem(
+                "ISSUE", 500, "opaque",
+                body="see #999",
+                updated_at="2026-09-24T23:00:00Z",
+            ),
+        )))
+        resolution = resolve_problem(problem)
+        self.assertEqual(resolution.disposition, "WITHHOLD_EXTERNAL_RETURN")
+        self.assertEqual(len(resolution.remaining_rival_ids), 2)
+        self.assertFalse(resolution.external_return_consumed)
+
+    def test_independent_return_reduces_prefrozen_rivals(self):
+        problem = form_problem(snapshot_to_incidence((
+            WorkItem(
+                "ISSUE", 500, "opaque",
+                body="see #999",
+                updated_at="2026-09-24T23:00:00Z",
+            ),
+        )))
+        resolution = resolve_problem(problem, returned_rival_id="r0")
+        self.assertEqual(resolution.disposition, "RETURN_REDUCED_RIVALS")
+        self.assertEqual(resolution.remaining_rival_ids, ("r0",))
+        self.assertTrue(resolution.external_return_consumed)
+        self.assertFalse(resolution.promotion_authority)
+
+    def test_no_history_grammar_blocks_ordering_dependent_problem(self):
+        problem = form_problem(
+            snapshot_to_incidence((
+                WorkItem(
+                    "ISSUE", 500, "opaque",
+                    updated_at=None,
+                ),
+            )),
+            history_grammar_available=False,
+        )
+        self.assertEqual(problem.disposition, "WITHHOLD_NO_HISTORY_GRAMMAR")
+        self.assertEqual(problem.rivals, ())
+
+    def test_no_reference_closure_blocks_missing_incidence_problem(self):
+        problem = form_problem(
+            snapshot_to_incidence((
+                WorkItem(
+                    "ISSUE", 500, "opaque",
+                    body="requires #999",
+                    updated_at="2026-09-24T23:00:00Z",
+                ),
+            )),
+            reference_closure_available=False,
+        )
+        self.assertEqual(problem.disposition, "WITHHOLD_NO_REFERENCE_CLOSURE")
+        self.assertEqual(problem.rivals, ())
+
+    def test_mature_exhaustive_comparator_matches_problem_partition(self):
+        rows = snapshot_to_incidence((
+            WorkItem(
+                "PR", 401, "opaque",
+                merge_state="DIRTY",
+                updated_at="2026-09-24T23:00:00Z",
+            ),
+            WorkItem(
+                "ISSUE", 500, "opaque",
+                body="requires #999",
+                updated_at="2026-09-24T23:00:00Z",
+            ),
+        ))
+        problem = form_problem(rows)
+        comparator = exhaustive_problem_scan(rows)
+        self.assertIsNotNone(comparator)
+        stream_id, residuals = comparator
+        self.assertEqual(problem.source_stream_ids, (stream_id,))
+        self.assertEqual(problem.residual_coordinates, residuals)
 
 
 if __name__ == "__main__":
