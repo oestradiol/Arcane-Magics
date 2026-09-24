@@ -62,9 +62,21 @@
   "hidden_labels_exposed": false,
   "post_exposure_repair_allowed": false,
   "promotion_authority": false,
-  "execution_custody_wrapper": {
-    "path": "benchmarks/edu17r1_mention_incidence/run_sealed_conditions.py",
-    "git_blob_sha": "0de1d4226cc727682f42a1e8ca7d8a54d8a2298b",
-    "semantics": "execution-side custody verifier; no gold access, scoring, or promotion authority"
+  "custody_tools": {
+    "seal_hidden": {
+      "path": "benchmarks/edu17r1_mention_incidence/seal_hidden.py",
+      "git_blob_sha": "ee52d3e648e3df27999a5a9d8e8258c88ed62e5b",
+      "semantics": "evaluator-side hidden-byte validation and hash seal bound to this condition freeze"
+    },
+    "prepare_blind": {
+      "path": "benchmarks/edu17r1_mention_incidence/prepare_blind.py",
+      "git_blob_sha": "4cf40daf873ee34f358e0246cc8c77f3c131fc3b",
+      "semantics": "evaluator-side label stripping preserving hidden and condition-freeze bindings"
+    },
+    "run_sealed_conditions": {
+      "path": "benchmarks/edu17r1_mention_incidence/run_sealed_conditions.py",
+      "git_blob_sha": "8f903f6c1c7ee07a9e76e69bf34a526a7f761926",
+      "semantics": "execution-side prefrozen A/B/C/D custody; no gold, scoring, or promotion authority"
+    }
   }
 }
