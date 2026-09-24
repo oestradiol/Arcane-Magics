@@ -1,0 +1,40 @@
+{
+  "schema": "Venus.EDU17R1PublicDevelopmentSearchResult.v0.1",
+  "date": "2026-09-24",
+  "issue": 69,
+  "residual": "MENTION != INCIDENCE",
+  "evaluation_surface": "PUBLIC_DEV_ONLY_NONPROMOTIONAL",
+  "hidden_evaluation_exposed": false,
+  "parent": "EDU16-RC1",
+  "operations": [
+    {
+      "family": "R194_GENERIC_BOOLEAN_PROGRAM_SEARCH",
+      "representation": "six anonymous binary coordinates selected from generic R134-style hashed surface features by returned public-dev class-separation only",
+      "target_specific_dictionary": false,
+      "result": "WITHHOLD_NO_EXPRESSIBLE_CANDIDATE",
+      "exact_candidate_count": 0,
+      "note": "No RAW/AND/OR/XOR candidate in the bounded inherited grammar fit all public returned observations."
+    },
+    {
+      "family": "R134_GENERIC_SURFACE_PROTOTYPE",
+      "representation": "generic word/unigram-bigram-trigram hashed lexical surface",
+      "target_specific_dictionary": false,
+      "result": "INADEQUATE_PUBLIC_DEV_GENERALIZATION",
+      "leave_one_out_correct": 8,
+      "leave_one_out_total": 16,
+      "note": "The inherited generic lexical prototype family does not isolate the residual reliably."
+    }
+  ],
+  "disposition": "WITHHOLD_REPRESENTATION_INSUFFICIENT",
+  "localized_residual": "compositional claim-local semantic representation is not supplied by U4 explicit-symbol extraction, bounded generic boolean surface search, or R134 lexical prototype machinery",
+  "next_lawful_work": [
+    "preserve generic search admission",
+    "do not import R146 task-specific T10 prose reconstruction wholesale",
+    "develop or recover a target-blind compositional semantic representation operation",
+    "rerun public development search",
+    "freeze a candidate only after learner-side machinery actually identifies one",
+    "only then expose hidden issue #31"
+  ],
+  "promotion_authority": false,
+  "claim_fence": "This is a development negative. It does not establish repair authorship, repair efficacy, EDU17R1 promotion, or failure of semantic repair in general."
+}
