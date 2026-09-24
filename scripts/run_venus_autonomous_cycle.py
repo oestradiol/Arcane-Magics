@@ -44,6 +44,10 @@ def main() -> int:
         "ISSUE": updated_learning.utility("ISSUE"),
         "PR": updated_learning.utility("PR"),
     }
+    method_utility = {
+        method: updated_learning.method_utility(method)
+        for method in updated_learning.method_success
+    }
     recent = target_markers(history_prs)
 
     cycle = make_cycle(
@@ -53,6 +57,7 @@ def main() -> int:
         internal_policy=policy,
         recent_targets=recent,
         kind_utility=utility,
+        method_utility=method_utility,
     )
     Path(args.output).write_text(
         json.dumps(asdict(cycle), indent=2, sort_keys=True) + "\n",
