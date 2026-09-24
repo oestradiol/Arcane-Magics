@@ -112,6 +112,9 @@ jobs:
             lmodern \
             pandoc
 
+      - name: Build live kernel formal companion
+        run: make kernel-doc-check
+
       - name: Rebuild all publication projections
         run: |
           make papers
