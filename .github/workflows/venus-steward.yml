@@ -111,9 +111,22 @@ jobs:
           name: venus-steward-${{ github.sha }}
           path: VENUS_STEWARD_REPORT.json
 
+  formal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pinned Lean toolchain
+        run: |
+          curl https://elan.lean-lang.org/elan-init.sh -sSf | sh -s -- -y --default-toolchain leanprover/lean4:v4.34.0
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Machine-check OFE formal core
+        run: make formal-check
+
   publication:
     if: github.event_name != 'schedule'
-    needs: integrity
+    needs: [integrity, formal]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -163,7 +176,7 @@ jobs:
 
   release:
     if: startsWith(github.ref, 'refs/tags/')
-    needs: [integrity, publication]
+    needs: [integrity, formal, publication]
     permissions:
       contents: write
     runs-on: ubuntu-latest
