@@ -105,9 +105,20 @@ Allowed owner labels:
 
 An ownership percentage may be shown as a visualization, but authority remains dependency-level rather than scalar.
 
-## 6. Cost surface
+## 6. Execution condition and cost surface
 
-Record at minimum:
+A model-assisted result is not reproducible without its execution condition. Record when available:
+
+- model/provider and dated snapshot or product version;
+- reasoning/effort setting;
+- system prompt / harness / agent scaffold;
+- enabled tools, permissions, and network/external interfaces;
+- benchmark/evaluator version;
+- retries, branches, and human interventions.
+
+These are experimental coordinates because capability, persistence, evaluator gaming, and failure modes can vary materially with model snapshot, reasoning effort, and scaffold.
+
+Record cost at minimum:
 
 - wall-clock time;
 - model tokens;
