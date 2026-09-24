@@ -272,9 +272,13 @@ def audit() -> dict:
             "kernel/development/cross_layer_relation_binding.py::make_binding_proposal"
             if admitted_cross_layer_binder else None
         ),
-        "missing_operation": (
+        "missing_operation": None if admitted_cross_layer_binder else (
             "bind raw/source carrier relation occurrence to a typed object/source-level "
             "relation instance under source coordinates, provenance, and independent return"
+        ),
+        "missing_learner_action": (
+            "author endpoint/relation/discriminator choices through the admitted binder and freeze the proposal"
+            if admitted_cross_layer_binder and not learner_authored_binding_candidate else None
         ),
         "status": status,
         "reason": (
@@ -293,9 +297,9 @@ def audit() -> dict:
             "executable authority. Historical R194 also preserves "
             "target-label-free grammar expansion and semantic relation storage, but the semantic "
             "slots and constructed executable are still supplied by callers. The live gap is "
-            "therefore narrower than generic construction: no admitted current operation authors "
-            "the carrier-to-empirical-relation binding itself. Encoding the EDU17R1 answer as "
-            "that binding would be external substantive authorship."
+            "therefore no longer operation availability: the admitted learner has not yet authored "
+            "a concrete endpoint/relation/discriminator binding through that operation. Encoding "
+            "the EDU17R1 answer as that learner choice would be external substantive authorship."
         ),
         "lowest_local_residual": (
             "learner-side construction of typed relation endpoints/binding from raw source "
