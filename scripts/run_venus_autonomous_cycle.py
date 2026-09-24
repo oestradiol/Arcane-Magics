@@ -66,7 +66,6 @@ def main() -> int:
         active_cycle=active_cycle,
         kind_utility=utility,
         method_utility=method_utility,
-        active_cycle_pending=bool(recent),
     )
     Path(args.output).write_text(
         json.dumps(asdict(cycle), indent=2, sort_keys=True) + "\n",
