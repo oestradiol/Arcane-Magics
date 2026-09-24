@@ -37,11 +37,36 @@ jobs:
       - name: Reader-surface audit
         run: python scripts/lint_github_markdown.py
 
-      - name: Proof-container audit
+      - name: Theorem-structure / proof-container audit
         run: python scripts/audit_proof_containers.py
 
       - name: Custody/state audit
         run: python scripts/audit_custody.py
+
+      - name: EDU16 evidence/runtime custody boundary
+        run: python scripts/audit_edu16_custody.py
+
+      - name: Historical causal-distinction / issue coverage audit
+        run: python scripts/audit_causal_distinctions.py
+
+      - name: Navigation contract audit
+        run: python scripts/audit_navigation_contract.py
+
+      - name: SOTA freshness audit
+        run: python scripts/audit_sota_freshness.py
+
+      - name: Matched experiment contract audit
+        run: python scripts/validate_experiment_manifest.py evaluation/MATCHED_EXPERIMENT_TEMPLATE.json
+
+      - name: Construct disposition audit
+        run: python scripts/audit_construct_dispositions.py
+
+      - name: Live open-issue coverage audit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue list --state open --limit 200 --json number > /tmp/venus-open-issues.json
+          python scripts/audit_open_issue_coverage.py /tmp/venus-open-issues.json
 
       - name: Source-tree release audit
         env:
@@ -108,6 +133,7 @@ jobs:
             texlive-bibtex-extra \
             texlive-pictures \
             texlive-fonts-recommended \
+            cm-super \
             lmodern \
             pandoc
 
@@ -161,6 +187,7 @@ jobs:
             texlive-bibtex-extra \
             texlive-pictures \
             texlive-fonts-recommended \
+            cm-super \
             lmodern \
             pandoc
 

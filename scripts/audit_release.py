@@ -37,6 +37,15 @@ required = [
     "docs/EVALUATION_CONSTITUTION.md",
     "docs/SOTA_WATCH.md",
     "docs/EVALUATION_REGISTRY.json",
+    "kernel/TRUST_BOUNDARY.md",
+    "kernel/custody/EDU16_CUSTODY_STATUS.json",
+    "docs/START_HERE.md",
+    "docs/TESTS.md",
+    "docs/REPRODUCE.md",
+    "docs/ISSUE_ROADMAP.md",
+    "docs/SOTA_WATCH_STATE.json",
+    "docs/CONSTRUCT_DISPOSITIONS.json",
+    "evaluation/MATCHED_EXPERIMENT_TEMPLATE.json",
     "shared/venusmonograph.sty",
 ]
 for rel in required:
