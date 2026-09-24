@@ -5,7 +5,7 @@
 
 | Issue | Layer | Existing artifact / evidence | Missing discriminator | Promotion / closure condition |
 |---|---|---|---|---|
-| #4 EDU16 replay custody | T0/T3 | receipts + `EDU16-RC1` reconstructed carrier + content-addressed source manifest + CI replay audit | authentic historical 1703-event runner/journal still not located | reconstructed claim-bearing state replays exactly while historical event-level non-equivalence remains typed |
+| #4 EDU16 replay custody | T0/T3 | CLOSED: `EDU16-RC1` reconstructed carrier + content-addressed source manifest + CI replay audit | historical 1703-event runner/journal remains unrecovered but is no longer a prospective-development blocker | reconstructed claim-bearing state replays exactly while historical event-level non-equivalence remains typed |
 | #5 P vs NP | T6/T7 | existing obstruction program in research/provenance | non-tautological invariant violated by every polynomial-time section | formal counterexample/proof result under frozen target |
 | #6 OFE/QG formal core | T7 | Lean encoding now includes common-refinement factorization, separating-family equality, and pulled-back-separator repair in addition to quotient transport | independent review and carrier-specific physical instantiation | machine proof accepted; physical application remains separately fenced |
 | #7 Navier–Stokes | T8/T6 | frontier/SOTA reconstruction issue | current 2026 proof/formal/institutional state + any residual open problem | dated source reconciliation and, for new math, independent proof burden |
@@ -33,7 +33,7 @@
 | #29 Canonical retirement | T0/T2/T3 | retirement ledger | full typed inventory + no untracked live premise | every unique consequence disposed and custody hash-bound |
 | #30 VMK2 trust | T3 | invariant tests + mutable-state/root-drift tests + deterministic unordered canonicalization + finite-number/cross-process digest fixtures + trust-boundary doc | cryptographic issuer/trust-root authentication, revocation distribution, forged-principal/receipt-substitution matrix | threat model covered with negative tests |
 | #69 EDU16-RC1 learner-authored repair | T5 | EDU16-RC1 reconstructed claim-bearing carrier + preserved EDU17/EDU17R1 residual + ownership boundary | substantive repair/discriminator must be produced by admitted Venus developmental controller before hidden #31 exposure | frozen learner-authored candidate + ownership receipt exists; passing #31 remains separate |
-| #31 MENTION != INCIDENCE | T4 | preserved WITHHOLD + public typed dev benchmark + frozen naive lexical failure floor + sealed A/B/C/D protocol + hidden-split hash custody + scorer | independently authored sealed hidden split + prospective matched run | repaired condition beats ablated/baseline/mature-substitute conditions without invalid promotion |
+| #31 MENTION != INCIDENCE | T4 | preserved WITHHOLD + public typed dev benchmark + frozen naive lexical failure floor + sealed A/B/C/D protocol + hidden-split hash custody + scorer | #69 learner-authored B must be frozen before hidden exposure for any ownership claim; then independently authored sealed hidden split + prospective matched run | repaired condition beats ablated/baseline/mature-substitute conditions without invalid promotion; ownership and efficacy remain separate |
 | #32 construct disposition | T0/T5 | credit/reduction law + typed construct disposition state + validator | mature-substitution evidence for each live residual | every public construct gets typed disposition |
 | #33 proof hygiene | T7 | proof-container lint explicitly separated from `formal-check`; OFE subset machine-checked in Lean; false-theorem container regression proves lint is only structural | expand machine-checked subset as warranted | structural lint and proof verification remain separately named |
 | #34 governance package | T6/T9 | AGENTS/review governance | independent package + external integration | one real external consumer/use case |
@@ -57,13 +57,13 @@ Existing automated coverage currently concentrates on:
 
 The largest uncovered classes are:
 
-1. independently authored hidden T4 evaluation for EDU17R1;
-2. matched causal T5 ablations, beginning with evidence governance and memory;
-3. hidden paired STOP/WITHHOLD evaluation and adaptive-successor validity beyond public pressure surfaces;
-4. dynamic adversarial World-input/authentication tests beyond public attack surfaces;
-5. external T6 capability/science benchmarks;
-6. automatic T8 source-change reconciliation beyond freshness deadlines;
-7. deeper historical extraction and T9 blind-reader tests when they block a live experiment.
+1. #69 learner-authored candidate repair from EDU16-RC1 before hidden exposure;\n2. independently authored hidden T4 evaluation for the frozen EDU17R1 candidate;
+3. matched causal T5 ablations, beginning with evidence governance and memory;
+4. hidden paired STOP/WITHHOLD evaluation and adaptive-successor validity beyond public pressure surfaces;
+5. dynamic adversarial World-input/authentication tests beyond public attack surfaces;
+6. external T6 capability/science benchmarks;
+7. automatic T8 source-change reconciliation beyond freshness deadlines;
+8. deeper historical extraction and T9 blind-reader tests when they block a live experiment.
 
 ## Rule
 
