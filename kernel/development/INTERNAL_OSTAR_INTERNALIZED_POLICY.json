@@ -1,0 +1,111 @@
+{
+  "schema": "Venus.InducedDecisionTree.v0.1",
+  "date": "2026-09-24",
+  "program_id": "INTERNAL_OSTAR_INTERNALIZED_POLICY_V1",
+  "source": "prefrozen exhaustive teacher-return surface; learner consumes only opaque coordinates f0..f7 and returned decisions",
+  "feature_names": [
+    "f0",
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "f6",
+    "f7"
+  ],
+  "tree": {
+    "feature": "f0",
+    "false": {
+      "feature": "f6",
+      "false": {
+        "decision": "PROBE"
+      },
+      "true": {
+        "feature": "f7",
+        "false": {
+          "decision": "REOPEN"
+        },
+        "true": {
+          "decision": "PROBE"
+        }
+      }
+    },
+    "true": {
+      "feature": "f1",
+      "false": {
+        "decision": "REOPEN"
+      },
+      "true": {
+        "feature": "f2",
+        "false": {
+          "decision": "REOPEN"
+        },
+        "true": {
+          "feature": "f6",
+          "false": {
+            "feature": "f4",
+            "false": {
+              "feature": "f5",
+              "false": {
+                "decision": "WITHHOLD"
+              },
+              "true": {
+                "decision": "PROBE"
+              }
+            },
+            "true": {
+              "feature": "f3",
+              "false": {
+                "decision": "WITHHOLD"
+              },
+              "true": {
+                "feature": "f5",
+                "false": {
+                  "decision": "ACT"
+                },
+                "true": {
+                  "decision": "WITHHOLD"
+                }
+              }
+            }
+          },
+          "true": {
+            "feature": "f7",
+            "false": {
+              "decision": "REOPEN"
+            },
+            "true": {
+              "feature": "f4",
+              "false": {
+                "feature": "f5",
+                "false": {
+                  "decision": "WITHHOLD"
+                },
+                "true": {
+                  "decision": "PROBE"
+                }
+              },
+              "true": {
+                "feature": "f3",
+                "false": {
+                  "decision": "WITHHOLD"
+                },
+                "true": {
+                  "feature": "f5",
+                  "false": {
+                    "decision": "ACT"
+                  },
+                  "true": {
+                    "decision": "WITHHOLD"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "promotion_authority": false,
+  "claim_fence": "State-owned induced decision policy. No phenomenal-consciousness, AGI, sovereignty, open-ended-RSI, or self-certification claim."
+}
