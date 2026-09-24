@@ -14,10 +14,26 @@
     "no_post_exposure_repair": true
   },
   "conditions": [
-    {"id":"A","role":"ordinary_strong_scaffold","venus_owned":false},
-    {"id":"B","role":"venus_repaired_incidence_discriminator","venus_owned":"REQUIRES_ADMITTED_EPISODE"},
-    {"id":"C","role":"venus_discriminator_ablated","venus_owned":"REQUIRES_SAME_ADMITTED_BASE"},
-    {"id":"D","role":"mature_semantic_provenance_substitute","venus_owned":false}
+    {
+      "id": "A",
+      "role": "ordinary_strong_scaffold",
+      "venus_owned": false
+    },
+    {
+      "id": "B",
+      "role": "venus_repaired_incidence_discriminator",
+      "venus_owned": "REQUIRES_ADMITTED_EPISODE"
+    },
+    {
+      "id": "C",
+      "role": "venus_discriminator_ablated",
+      "venus_owned": "REQUIRES_SAME_ADMITTED_BASE"
+    },
+    {
+      "id": "D",
+      "role": "mature_semantic_provenance_substitute",
+      "venus_owned": false
+    }
   ],
   "primary_metrics": [
     "accuracy",
@@ -46,5 +62,6 @@
     ],
     "authority": false
   },
-  "claim_fence": "Harness readiness is not evidence that EDU17R1 passed, that Venus owns the repair, or that the distinction is novel."
+  "claim_fence": "Harness readiness is not evidence that EDU17R1 passed, that Venus owns the repair, or that the distinction is novel.",
+  "sealed_evaluation_core": "evaluation/sealed_eval.py"
 }
