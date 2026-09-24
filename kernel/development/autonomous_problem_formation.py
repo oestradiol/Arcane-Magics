@@ -232,3 +232,26 @@ def problem_dict(problem: FormedProblem) -> Mapping[str, Any]:
         "carrier_binding_authority": problem.carrier_binding_authority,
         "promotion_authority": problem.promotion_authority,
     }
+
+
+def bind_problem_to_carriers(
+    problem: FormedProblem,
+    items: Iterable[WorkItem],
+) -> tuple[tuple[str, int], ...]:
+    """Map a formed problem back onto possible Git carriers.
+
+    Carrier identity is consulted only after problem formation. A STOP problem
+    binds nothing. Missing/ambiguous source streams fail closed rather than
+    falling back to the old global target ranking.
+    """
+    if problem.disposition == "STOP_NO_CONSEQUENTIAL_RESIDUAL":
+        return ()
+    wanted = set(problem.source_stream_ids)
+    matches = tuple(
+        (item.kind, item.number)
+        for item in items
+        if _stream_id(item) in wanted
+    )
+    if len(matches) != len(wanted):
+        return ()
+    return tuple(sorted(set(matches)))
