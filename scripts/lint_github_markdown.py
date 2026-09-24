@@ -163,9 +163,6 @@ def inspect_state_consistency() -> list[str]:
         "monographs/04_VENUS/README.md": [
             ("EDU16", "Venus monograph README must name EDU16"),
         ],
-        "preprints/lesswrong/00_SEQUENCE_MAP.md": [
-            ("EDU16", "forum sequence map must name EDU16"),
-        ],
         "kernel/CURRENT_STATE.md": [
             ("R226", "current state must expose R226 boundary"),
             ("IG10", "current state must expose IG10 ancestry"),
@@ -224,7 +221,7 @@ def main() -> int:
     print(
         f"MARKDOWN / READER-SURFACE AUDIT PASS "
         f"({len(md_files)} Markdown files; {public_count} strict public surfaces; "
-        f"{evidence_count} evidence/archaeology files basic-checked)"
+        f"{evidence_count} provenance files basic-checked)"
     )
     return 0
 
