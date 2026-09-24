@@ -1,4 +1,4 @@
-.PHONY: test lint proof custody causal-coverage audit kernel-doc-check papers arxiv texbundle forum manifest bundle release clean
+.PHONY: test lint proof proof-containers custody causal-coverage navigation audit kernel-doc-check papers arxiv texbundle forum manifest bundle release clean
 
 test:
 	python3 -m unittest discover -s tests -p 'test_*.py'
@@ -6,8 +6,11 @@ test:
 lint:
 	python3 scripts/lint_github_markdown.py
 
-proof:
+proof-containers:
 	python3 scripts/audit_proof_containers.py
+
+proof: proof-containers
+	@echo "NOTE: proof means proof-container/theorem-structure audit only; see issue #33 for formal verification."
 
 custody:
 	python3 scripts/audit_custody.py
@@ -15,7 +18,10 @@ custody:
 causal-coverage:
 	python3 scripts/audit_causal_distinctions.py
 
-audit: test lint proof custody causal-coverage
+navigation:
+	python3 scripts/audit_navigation_contract.py
+
+audit: test lint proof-containers custody causal-coverage navigation
 	SOURCE_TREE_ONLY=1 python3 scripts/audit_release.py
 
 kernel-doc-check:
