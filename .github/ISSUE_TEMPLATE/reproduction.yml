@@ -1,0 +1,24 @@
+name: Reproduction failure or counterexample
+description: Report a failed reproduction, counterexample, or claim/provenance defect
+title: "[Repro/Counterexample] "
+labels: []
+body:
+  - type: textarea
+    id: target
+    attributes:
+      label: Target
+      description: File, commit, theorem, experiment, or claim.
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: What failed or contradicts the claim?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps / evidence
+    validations:
+      required: true
