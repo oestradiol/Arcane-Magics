@@ -80,7 +80,7 @@ def normalize_tex_outside_math_and_code(body: str) -> str:
     for piece in pieces:
         if not piece:
             continue
-        if piece.startswith("```") or piece.startswith("`") or piece.startswith("$") or piece.startswith("$"):
+        if piece.startswith("```") or piece.startswith("`") or piece.startswith("$"):
             out.append(piece)
         else:
             out.append(_plainify_raw_tex(piece))
@@ -114,6 +114,7 @@ def normalize_forum_markdown(body: str) -> str:
     body = re.sub(r"</?figure[^>]*>", "", body)
     body = re.sub(r"<figcaption>(.*?)</figcaption>", r"*\1*", body, flags=re.DOTALL)
     body = re.sub(r"(^|\n)99(\n|$)", r"\1\2", body)
+    body = normalize_tex_outside_math_and_code(body)
     body = re.sub(r"\n{3,}", "\n\n", body).strip() + "\n"
     return body
 
