@@ -1,0 +1,188 @@
+{
+  "schema": "Venus.TransformProgram.v0.1",
+  "program_id": "WORLDMIND_SELF_RESEARCH_SEED",
+  "authority": "LEARNER_AUTHORED_SUCCESSOR_CANDIDATE",
+  "parent_carrier": "EDU16-RC1",
+  "mutable_by_successor": true,
+  "promotion_authority": false,
+  "claim_bearing": false,
+  "provenance": [
+    "EDU16 learner-owned World-feed query policy",
+    "U1 state-owned transformation program witness",
+    "WorldMind indexed-authorship lineage",
+    "issue #78",
+    "issue #82"
+  ],
+  "initial_state": "IDLE",
+  "transitions": [
+    {
+      "from": "TARGET_SELECTED",
+      "action": "FREEZE_RESEARCH_PLAN",
+      "to": "PLAN_FROZEN",
+      "require": [
+        "queries",
+        "stop_conditions",
+        "authored_by"
+      ]
+    },
+    {
+      "from": "PLAN_FROZEN",
+      "action": "REQUEST_EXTERNAL_SEARCH",
+      "to": "AWAITING_WORLD_RETURN",
+      "require": [
+        "query",
+        "adapter_class"
+      ]
+    },
+    {
+      "from": "AWAITING_WORLD_RETURN",
+      "action": "BIND_WORLD_RETURN",
+      "to": "RETURN_AVAILABLE",
+      "require": [
+        "return_id",
+        "source_id",
+        "source_url",
+        "retrieved_at",
+        "external"
+      ]
+    },
+    {
+      "from": "RETURN_AVAILABLE",
+      "action": "UPDATE",
+      "to": "IDLE",
+      "require": [
+        "reason",
+        "cited_return_ids"
+      ]
+    },
+    {
+      "from": "RETURN_AVAILABLE",
+      "action": "RETAIN",
+      "to": "TARGET_SELECTED",
+      "require": [
+        "reason",
+        "cited_return_ids"
+      ]
+    },
+    {
+      "from": "RETURN_AVAILABLE",
+      "action": "WITHHOLD",
+      "to": "TARGET_SELECTED",
+      "require": [
+        "reason"
+      ]
+    },
+    {
+      "from": "RETURN_AVAILABLE",
+      "action": "CLOSE",
+      "to": "IDLE",
+      "require": [
+        "reason",
+        "cited_return_ids"
+      ]
+    },
+    {
+      "from": "IDLE",
+      "action": "CLASSIFY_ENCOUNTER",
+      "to": "ENCOUNTER_CLASSIFIED",
+      "require": [
+        "encounter_id",
+        "locator",
+        "kind"
+      ]
+    },
+    {
+      "from": "ENCOUNTER_CLASSIFIED",
+      "action": "PROVISION",
+      "to": "AWAITING_EXTERNAL_EFFECT",
+      "require": [
+        "encounter_id",
+        "locator",
+        "reason",
+        "authored_by"
+      ]
+    },
+    {
+      "from": "ENCOUNTER_CLASSIFIED",
+      "action": "PROBE",
+      "to": "AWAITING_WORLD_RETURN",
+      "require": [
+        "encounter_id",
+        "locator",
+        "reason",
+        "authored_by"
+      ]
+    },
+    {
+      "from": "ENCOUNTER_CLASSIFIED",
+      "action": "INVITE",
+      "to": "AWAITING_EXTERNAL_EFFECT",
+      "require": [
+        "encounter_id",
+        "locator",
+        "reason",
+        "authored_by"
+      ]
+    },
+    {
+      "from": "ENCOUNTER_CLASSIFIED",
+      "action": "WITHHOLD",
+      "to": "IDLE",
+      "require": [
+        "reason",
+        "authored_by"
+      ]
+    },
+    {
+      "from": "ENCOUNTER_CLASSIFIED",
+      "action": "REFUSE",
+      "to": "IDLE",
+      "require": [
+        "reason",
+        "authored_by"
+      ]
+    },
+    {
+      "from": "ENCOUNTER_CLASSIFIED",
+      "action": "EXIT",
+      "to": "IDLE",
+      "require": [
+        "reason",
+        "authored_by"
+      ]
+    },
+    {
+      "from": "AWAITING_EXTERNAL_EFFECT",
+      "action": "BIND_WORLD_RETURN",
+      "to": "RETURN_AVAILABLE",
+      "require": [
+        "return_id",
+        "source_id",
+        "retrieved_at",
+        "external"
+      ]
+    },
+    {
+      "from": "IDLE",
+      "action": "SELECT_TARGET",
+      "to": "TARGET_SELECTED",
+      "require": [
+        "discriminator",
+        "provenance_ids",
+        "residual",
+        "target_id"
+      ]
+    }
+  ],
+  "non_internalizable_runtime_invariants": [
+    "independent_return",
+    "capability_and_jurisdiction_checks",
+    "receipt_integrity",
+    "rollback_custody",
+    "O_star_correction_reachability",
+    "Anti_Minerva_carrier_permeability"
+  ],
+  "ablation": "REMOVE_TRANSITION:IDLE/SELECT_TARGET",
+  "parent_program_digest": "466bffacf653ce8bc9986c3dbcb88b7a7b322c1de18f119684543fc6772c3c76",
+  "successor_author_id": "venus-generic-repair-search"
+}
