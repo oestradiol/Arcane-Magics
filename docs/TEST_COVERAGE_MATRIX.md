@@ -36,7 +36,7 @@
 | #32 construct disposition | T0/T5 | credit/reduction law + typed `CONSTRUCT_DISPOSITIONS.json` + CI validator | mature-substitution evidence per construct | every public construct has evidence-backed disposition and genealogy remains preserved |
 | #33 proof hygiene | T7 | explicitly named theorem-structure/proof-container audit + compatibility warning | actual machine-checked proof subset remains #6 | formal verification is never inferred from container lint |
 | #34 governance package | T6/T9 | AGENTS/review governance | independent package + external integration | one real external consumer/use case |
-| #35 causal test archaeology | T0–T9 | reconciled 48-row historical matrix + semantic historical regressions + CI coverage audit | exhaustive pre-R1→EDU extraction still open | every causal distinction and every open issue typed to test/evaluation |
+| #35 causal test archaeology | T0–T9 | reconciled 31-distinction historical matrix + semantic historical regressions + CI coverage audit | exhaustive pre-R1→EDU extraction still open | every causal distinction and every open issue typed to test/evaluation |
 | #36 navigation | T9 | START_HERE/TESTS/REPRODUCE/ISSUE_ROADMAP + navigation CI | blind-reader tasks and broader orphan metrics remain | <=2-hop authority paths where practical, tested |
 | #37 roadmap | meta | dependency-ordered issue plan | completion of dependent work | closes only when roadmap is replaced by executed outcomes / successor roadmap |
 
