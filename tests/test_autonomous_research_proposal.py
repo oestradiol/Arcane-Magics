@@ -9,6 +9,8 @@ from kernel.development.autonomous_proposal import (
     make_research_proposal,
     proposal_dict,
 )
+from kernel.development.autonomous_learning import METHODS, empty_state, update_from_cycle_prs
+from kernel.development.autonomous_worker import WorkItem, make_cycle
 from kernel.development.autonomous_evidence import run_proposal_checks
 
 
@@ -94,6 +96,54 @@ class AutonomousResearchProposalTests(unittest.TestCase):
         proposal["check_ids"] = ["echo malicious-body"]
         with self.assertRaisesRegex(ValueError, "unrecognized check id"):
             run_proposal_checks(proposal)
+
+
+    def test_external_method_return_changes_later_executable_research(self):
+        review_lines = []
+        for method in METHODS:
+            disposition = "USEFUL" if method == "COMPARATOR_AUDIT" else "UNHELPFUL"
+            review_lines.append(f"VENUS_METHOD_RETURN: {method}: {disposition}")
+        learned = update_from_cycle_prs(
+            empty_state(),
+            [{
+                "number": 777,
+                "title": "venus: autonomous cycle issue-72",
+                "state": "CLOSED",
+                "_carrier_kind": "PR",
+                "reviews": [{
+                    "id": 1,
+                    "body": "\n".join(review_lines),
+                    "author": {"login": "external-reviewer"},
+                    "submittedAt": "2026-09-24T21:00:00Z",
+                }],
+            }],
+        )
+        method_utility = {m: learned.method_utility(m) for m in METHODS}
+        policy = {
+            "schema": "Venus.InducedDecisionTree.v0.1",
+            "feature_names": [f"f{i}" for i in range(8)],
+            "tree": {"decision": "PROBE"},
+        }
+        work_cycle = make_cycle(
+            issues=(WorkItem("ISSUE", 72, "Safe Strong RSI", body="Compare mature baseline."),),
+            prs=(),
+            roadmap_text="",
+            internal_policy=policy,
+            method_utility=method_utility,
+        )
+        self.assertEqual(work_cycle.study_method, "COMPARATOR_AUDIT")
+        proposal = make_research_proposal({
+            "cycle_id": work_cycle.cycle_id,
+            "target_kind": work_cycle.target_kind,
+            "target_number": work_cycle.target_number,
+            "decision": work_cycle.decision,
+            "study_method": work_cycle.study_method,
+            "study": work_cycle.study,
+        })
+        self.assertEqual(
+            proposal.check_ids,
+            ("UNIT_AUTONOMY", "UNIT_INTERNAL_OSTAR"),
+        )
 
     def test_proposal_cannot_escalate_write_or_promotion_authority(self):
         proposal = proposal_dict(make_research_proposal(cycle("DEPENDENCY_TRACE")))
