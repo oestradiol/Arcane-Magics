@@ -133,6 +133,18 @@ EDU16
 
 The exact EDU receipts live in `provenance/developmental/EDU/`; current authority is projected in `kernel/CURRENT_STATE.md` and `kernel/development/EDU_CURRENT.json`.
 
+## Post-EDU16 admitted infrastructure is not a new EDU head
+
+Later repository admissions internalized the inherited generic residual-search scaffold into state-owned capability and made Internalizer/O*/Anti-Minerva correction guards executable. These objects are current infrastructure, but no new learner-owned EDU successor was thereby created.
+
+```text
+positive developmental authority   EDU16
+repair disposition                 EDU17R1 WITHHOLD
+later admitted infrastructure      generic search + correction guards
+```
+
+This prevents both status-fossil directions: newer infrastructure is not hidden, and infrastructure is not mislabeled as developmental promotion.
+
 ## Read order
 
 1. `kernel/CURRENT_STATE.md`
