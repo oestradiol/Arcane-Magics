@@ -65,7 +65,7 @@ for token in ("vacuous_relation", "Polyhedral", "meta-qualia", "Qualia", "Quantu
         errors.append(f"Meta-Dynamics missing live object: {token}")
 
 vocab = (ROOT / "NxRxI_VOCABULARY_CENTER.md").read_text(encoding="utf-8", errors="replace")
-for token in ("Repository grammar constitution", "Proof-container law", "Causally lossless prose"):
+for token in ("Naturalism_C", "Rationalism_C", "Illuminism_C", "Repository grammar constitution", "Proof-container law", "Causally lossless prose"):
     if token not in vocab:
         errors.append(f"Vocabulary/grammar center missing {token}")
 

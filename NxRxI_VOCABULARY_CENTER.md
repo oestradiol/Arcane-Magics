@@ -1,10 +1,22 @@
 # N x R x I Vocabulary Center
 
-**N x R x I = Name/Notation x Register x Index.** A symbol is not fully specified by its spelling. Its public meaning is the triple `(N, R, I)`, plus warrant/status. Reusing the same name at a different register or index requires an explicit transform.
+**N x R x I = Naturalism_C x Rationalism_C x Illuminism_C.**
+
+```text
+Naturalism_C  = Reality/Other-facing answerability + representational non-preauthorship
+Rationalism_C = reconstructibility + recursive audit of representation, language,
+                 grammar, equivalence, search, dependency, and inference
+Illuminism_C   = non-sovereignty + independently reachable criticism/correction
+Corrigibility  = recursive composition(N_C, R_C, I_C), not a fourth peer coordinate
+```
+
+These are project-local constitutional coordinates, not claims of identity with metaphysical naturalism, historical rationalism, or one historical movement called Illuminism. Their names are removable; the obligations must survive name-removal.
+
+This file also tracks the separate editorial tuple `(name/notation, register, index/scope)`. That tuple specifies how a project term is addressed and translated. It is **not** the expansion of N x R x I.
 
 The LessWrong/BetterWrong column gives an approximate bridge into common rationalist discourse. It is a translation aid, not a synonym table. BetterWrong-specific documentation was not independently retrievable during this release audit, so the compatibility target is the shared LessWrong/GreaterWrong-style Markdown/MathJax and rationalist vocabulary subset rather than unverified BetterWrong-only features.
 
-| N: name / symbol | R: register | I: index / scope | Neutral referent | LW/rationalist bridge | False-friend guard |
+| Name / symbol | Register | Index / scope | Neutral referent | LW/rationalist bridge | False-friend guard |
 |---|---|---|---|---|---|
 | `World` | ENG / PHEN / META | local center | that which can return consequences not exhausted by the center's model | territory / environment | not "everything objectively known" |
 | `model(World)` | ENG / EPI | model state | current representation of World | map | map is not territory |
