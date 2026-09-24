@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.5",
+  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.6",
   "date": "2026-09-24",
   "claim": "Bounded autonomy may expand study/learning/proposal capability only while the listed causal and authority distinctions remain executable and fail-closed.",
   "distinctions": [
@@ -364,6 +364,21 @@
         "tests/test_autonomous_governance.py"
       ],
       "invariant": "proposal evidence runner exits nonzero on failed local checks and workflow runs it before any autonomous git push"
+    },
+    {
+      "id": "AUTONOMOUS_REPRODUCTION_RECEIPT_NOT_RETURN",
+      "tests": [
+        "tests/test_autonomous_study.py",
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "target-grounded reproduction is frozen as local execution evidence and never becomes independent return, evaluation, or promotion authority"
+    },
+    {
+      "id": "UNTRUSTED_TARGET_CANNOT_AUTHOR_REPRODUCTION_COMMAND",
+      "tests": [
+        "tests/test_autonomous_study.py"
+      ],
+      "invariant": "issue/PR text may influence lexical test ranking but cannot author shell commands, arguments, environment, or paths outside admitted tests/test_*.py"
     }
   ],
   "promotion_authority": false
