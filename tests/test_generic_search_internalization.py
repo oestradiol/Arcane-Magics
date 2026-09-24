@@ -7,6 +7,7 @@ from pathlib import Path
 
 from kernel.runtime.internalized_search import Observation, search
 from kernel.runtime.internalizer import SubstrateRole, internalize, make_artifact
+from scripts.audit_generic_search_internalization import audit
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -121,6 +122,16 @@ class GenericSearchConsumptionTests(unittest.TestCase):
                 ),
                 hidden_evaluation_exposed=True,
             )
+
+    def test_independent_removal_audit_binds_equivalence_receipt(self):
+        out = audit()
+        self.assertTrue(all(out["semantic_equivalence_by_width"].values()))
+        self.assertTrue(out["isolated_without_scaffold"])
+        self.assertFalse(out["source_runtime_dependency"])
+        self.assertEqual(out["receipt"]["status"], "PASS_BOUNDED_SCAFFOLD_INTERNALIZATION")
+        self.assertFalse(out["receipt"]["promotion_authority"])
+        self.assertFalse(out["repair_candidate_authored"])
+        self.assertFalse(out["hidden_evaluation_exposed"])
 
 
 if __name__ == "__main__":
