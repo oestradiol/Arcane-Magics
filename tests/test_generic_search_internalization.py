@@ -17,6 +17,50 @@ class GenericSearchConsumptionTests(unittest.TestCase):
     def setUp(self):
         self.state = json.loads(STATE.read_text(encoding="utf-8"))
 
+    def test_replacement_matches_scaffold_on_neutral_probe_suite(self):
+        from kernel.development.recursive_proposal import (
+            ResidualObservation as ScaffoldObservation,
+            search as scaffold_search,
+        )
+
+        suites = (
+            (
+                ((0, 0), 0),
+                ((0, 1), 1),
+                ((1, 0), 1),
+                ((1, 1), 0),
+            ),
+            (
+                ((0, 0), 0),
+                ((0, 1), 1),
+            ),
+            (
+                ((0, 0), 1),
+                ((0, 1), 0),
+                ((1, 0), 0),
+                ((1, 1), 1),
+            ),
+        )
+        for idx, suite in enumerate(suites):
+            scaffold = scaffold_search(
+                tuple(
+                    ScaffoldObservation(features, action, f"probe-{idx}-{j}")
+                    for j, (features, action) in enumerate(suite)
+                )
+            )
+            replacement = search(
+                self.state["program"],
+                tuple(
+                    Observation(features, action, f"probe-{idx}-{j}")
+                    for j, (features, action) in enumerate(suite)
+                ),
+            )
+            self.assertEqual(replacement.status, scaffold.status)
+            self.assertEqual(
+                replacement.next_discriminator,
+                scaffold.next_discriminator,
+            )
+
     def test_post_consumption_executor_has_no_donor_or_scaffold_dependency(self):
         import kernel.runtime.internalized_search as mod
         src = inspect.getsource(mod)
