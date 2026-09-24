@@ -17,7 +17,7 @@ S/SM → CTL-K1 → WM1R1 → U* → RB1 → IG* → EDU*
 
 ### 1. R194 is historical executable infrastructure
 
-The Git-tracked `prototype/stable-executable/` source is the old R00–R194 public-stable carrier.
+The old R00–R194 public carrier is preserved under `provenance/historical-runtime/R194/`.
 
 It remains useful for replay/regression, ablation, historical comparison, outside-handoff work, and preserving a small self-contained public executable baseline.
 
@@ -140,7 +140,7 @@ The exact current EDU receipts live in `prototype/current-developmental-receipts
 3. `prototype/current-developmental-receipts/`
 4. `docs/FRONTIER_RESEARCH.md`
 
-Use `prototype/stable-executable/` only when you specifically need the historical R194 public carrier, regression baseline, or ablation/replay substrate.
+Use `provenance/historical-runtime/R194/` only for historical R194 replay, regression, ablation, or code genealogy.
 
 ## Claim fence
 
