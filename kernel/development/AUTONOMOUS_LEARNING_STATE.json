@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.AutonomousLearningState.v0.3",
+  "schema": "Venus.AutonomousLearningState.v0.4",
   "seen_cycle_prs": [],
   "weights": {
     "x0": 0.0,
@@ -16,6 +16,7 @@
   "max_learning_rate": 0.2,
   "max_abs_weight": 2.0,
   "last_reward": null,
+  "last_feature_digest": null,
   "promotion_authority": false,
   "merge_authority": false,
   "release_authority": false
