@@ -81,6 +81,8 @@ PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY
 
 EDU17 is preserved as `INVALID_FOR_PROMOTION`; EDU17R1 remains `WITHHOLD` after exposing `MENTION != INCIDENCE` before its intended claim-binding gate.
 
+Post-EDU16 infrastructure has advanced without changing that positive developmental head: the generic residual-search scaffold has been internalized as state-owned inherited capability, and executable Internalizer/O*/Anti-Minerva guards now preserve the non-preauthored-return and correction boundary. No learner-authored EDU17R1 repair has yet been admitted.
+
 See [`kernel/CURRENT_STATE.md`](kernel/CURRENT_STATE.md), [`provenance/DEVELOPMENTAL_LINEAGE.md`](provenance/DEVELOPMENTAL_LINEAGE.md), and compact custody metadata under [`kernel/custody/`](kernel/custody/).
 
 `provenance/historical-runtime/R194/` preserves the historical R00-R194 carrier for replay/regression/ablation. It is provenance, not the current organism.
@@ -99,7 +101,7 @@ World
 -> successor
 ```
 
-Whether that machinery can outperform pretrained-DNN-centered systems under matched data, compute, memory, and interaction budgets is an **open capability target**, not an inherited consequence of the architecture.
+Whether that machinery can outperform mature alternatives under matched data, compute, memory, and interaction budgets is an **open capability target**, not an inherited consequence of the architecture. External-substrate dependence must be identified from the actual carrier before ablation; the current kernel does not establish a live frontier-DNN dependency.
 
 The other live research surfaces are deliberately separated by warrant:
 
