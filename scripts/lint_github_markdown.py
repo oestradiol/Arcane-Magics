@@ -3,242 +3,227 @@ from __future__ import annotations
 
 from pathlib import Path
 import re
+from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 
-SKIP_DIRS = {
-    '.git',
-    'arxiv_packages',
-    'tex_bundles',
-    'archaeology',
-    'current-developmental-receipts',
-}
+EVIDENCE_DIRS = {"archaeology", "current-developmental-receipts"}
+GENERATED_FORUM = ("preprints", "lesswrong", "generated")
 
-MATH_COMMAND = re.compile(
-    r'\\(boxed|mathcal|operatorname|begin|end|leftrightarrow|rightarrow|nrightarrow|Gamma|Delta|delta|rho|Sigma|Phi|neq|sim|quad|land)\b'
+# Full LaTeX remains legal in monograph .tex sources. These checks apply to
+# reader-facing Markdown rendered by GitHub/forum surfaces.
+UNSUPPORTED_PUBLIC_MATH = re.compile(
+    r"\\operatorname\b|\\label\s*\{|\\eqref\s*\{|\\ref\s*\{"
 )
-LINK = re.compile(r'\[[^\]]+\]\(([^)]+)\)')
+PANDOC_RESIDUE = re.compile(
+    r'data-reference-type=|data-reference=|<div\b|</div>|<figure\b|</figure>|<figcaption\b|</figcaption>',
+    re.I,
+)
+ORPHAN_THEOREM_LABEL = re.compile(
+    r"^\*\*(Definition|Proposition|Theorem|Corollary|Example|Remark|Hypothesis|Criterion)\.\*\*\s*$"
+)
+TEX_OUTSIDE_MATH = re.compile(
+    r"\\(boxed|mathcal|mathrm|mathsf|text|begin|end|leftrightarrow|rightarrow|Rightarrow|Gamma|Delta|rho|Sigma|Phi|neq|sim|quad|land)\b"
+)
+LINK = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 
 
-def skipped(path: Path) -> bool:
-    return any(part in SKIP_DIRS for part in path.parts)
+def rel(path: Path) -> str:
+    return path.relative_to(ROOT).as_posix()
 
 
-def normalize_target(md: Path, raw: str) -> Path:
-    raw = raw.split('#', 1)[0].split('?', 1)[0]
-    if raw.startswith('/'):
-        return ROOT / raw.lstrip('/')
-    return (md.parent / raw).resolve()
+def is_evidence(path: Path) -> bool:
+    parts = set(path.relative_to(ROOT).parts)
+    return bool(parts & EVIDENCE_DIRS)
 
 
-def inspect(md: Path) -> list[str]:
-    errors: list[str] = []
-    text = md.read_text(encoding='utf-8', errors='replace')
-    lines = text.splitlines()
-    in_fence = False
-    fence_lang = ''
-    display_math_open = False
-
-    for i, line in enumerate(lines, 1):
-        stripped = line.strip()
-
-        fence = re.match(r'^\s*```([A-Za-z0-9_-]*)\s*
-
-        double_dollars = line.count('$$')
-        in_display_here = display_math_open or double_dollars > 0
-        if double_dollars % 2 == 1:
-            display_math_open = not display_math_open
-
-        if stripped == '[' and i < len(lines):
-            nxt = lines[i].strip()
-            if MATH_COMMAND.search(nxt) or re.search(r'\b(mathcal|operatorname|Gamma|Delta)\b', nxt):
-                errors.append(
-                    f'{md.relative_to(ROOT)}:{i}: malformed pseudo-math block; use ```math or $$'
-                )
-
-        if stripped in {'\\[', '\\]'}:
-            errors.append(
-                f'{md.relative_to(ROOT)}:{i}: use ```math or $$, not \\[ / \\]'
-            )
-
-        scrubbed = re.sub(r'`[^`]*`', '', line)
-        scrubbed = re.sub(r'\$`.*?`\$', '', scrubbed)
-        scrubbed = re.sub(r'\$[^$]+\$', '', scrubbed)
-
-        if in_display_here and UNSUPPORTED_GITHUB_MATH.search(line):
-            errors.append(
-                f'{md.relative_to(ROOT)}:{i}: unsupported GitHub math macro'
-            )
-
-        if PANDOC_EQREF_HTML.search(line):
-            errors.append(
-                f'{md.relative_to(ROOT)}:{i}: raw pandoc equation-reference HTML remains'
-            )
-
-        if not in_display_here and MATH_COMMAND.search(scrubbed):
-            errors.append(
-                f'{md.relative_to(ROOT)}:{i}: TeX command appears outside GitHub math/code'
-            )
-
-    if in_fence:
-        errors.append(f'{md.relative_to(ROOT)}: unclosed fenced code block')
-    if display_math_open:
-        errors.append(f'{md.relative_to(ROOT)}: unclosed $$ display-math block')
-
-    for match in LINK.finditer(text):
-        raw = match.group(1).strip().strip('<>')
-        if not raw or raw.startswith(('http://', 'https://', 'mailto:', '#')):
-            continue
-        target = normalize_target(md, raw)
-        if not target.exists():
-            errors.append(f'{md.relative_to(ROOT)}: broken relative link {raw!r}')
-
-    return errors
-
-
-def public_surface(path: Path) -> bool:
-    rel = path.relative_to(ROOT)
-    parts = rel.parts
-
-    if len(parts) == 1:
+def is_public_surface(path: Path) -> bool:
+    r = path.relative_to(ROOT)
+    p = r.parts
+    if len(p) == 1:
         return True
-    if parts[0] in {'docs', 'review', 'licenses'}:
+    if p[0] in {"docs", "review", "licenses"}:
         return True
-    if parts[0] == 'monographs' and path.name == 'README.md':
+    if p[0] == "monographs" and path.name == "README.md":
         return True
-    if parts[0] == 'preprints' and len(parts) > 1 and parts[1] == 'lesswrong':
+    if p[:3] == GENERATED_FORUM:
         return True
-    if rel.as_posix() in {
-        'prototype/README.md',
-        'prototype/CURRENT_STATE.md',
-        'prototype/stable-executable/README.md',
-        'prototype/DEVELOPMENTAL_LINEAGE.md',
+    if p[:2] == ("preprints", "lesswrong"):
+        return True
+    if r.as_posix() in {
+        "prototype/README.md",
+        "prototype/CURRENT_STATE.md",
+        "prototype/DEVELOPMENTAL_LINEAGE.md",
+        "prototype/stable-executable/README.md",
+        "prototype/stable-executable/source/PUBLIC_RELEASE_BOUNDARY.md",
+        "prototype/stable-executable/source/PYTHON_R00_R194_PROTOTYPE_README.md",
     }:
         return True
     return False
 
 
-def main() -> int:
-    files = [
-        p for p in ROOT.rglob('*.md')
-        if not skipped(p) and public_surface(p)
-    ]
+def normalize_target(md: Path, raw: str) -> Path:
+    raw = unquote(raw.strip().strip("<>"))
+    raw = raw.split("#", 1)[0].split("?", 1)[0]
+    if raw.startswith("/"):
+        return ROOT / raw.lstrip("/")
+    return (md.parent / raw).resolve()
 
+
+def inspect_basic(md: Path) -> list[str]:
     errors: list[str] = []
-    for md in files:
-        errors.extend(inspect(md))
+    text = md.read_text(encoding="utf-8", errors="replace")
+    lines = text.splitlines()
+    fence_open = False
+    fence_start = 0
 
-    if errors:
-        print('GITHUB MARKDOWN LINT FAIL')
-        for error in errors:
-            print('- ' + error)
-        return 1
+    for i, line in enumerate(lines, 1):
+        if re.match(r"^\s*```", line):
+            fence_open = not fence_open
+            if fence_open:
+                fence_start = i
 
-    print(f'GITHUB MARKDOWN LINT PASS ({len(files)} Markdown files)')
-    return 0
+    if fence_open:
+        errors.append(f"{rel(md)}:{fence_start}: unclosed fenced block")
+
+    for match in LINK.finditer(text):
+        raw = match.group(1)
+        if not raw or raw.startswith(("http://", "https://", "mailto:", "#")):
+            continue
+        target = normalize_target(md, raw)
+        if not target.exists():
+            errors.append(f"{rel(md)}: broken relative link {raw!r}")
+
+    return errors
 
 
-if __name__ == '__main__':
-    raise SystemExit(main())
-, line)
+def inspect_public(md: Path) -> list[str]:
+    errors: list[str] = []
+    text = md.read_text(encoding="utf-8", errors="replace")
+    lines = text.splitlines()
+
+    in_fence = False
+    fence_lang = ""
+    display_math = False
+
+    for i, line in enumerate(lines, 1):
+        fence = re.match(r"^\s*```([A-Za-z0-9_-]*)\s*$", line)
         if fence:
             if in_fence:
                 in_fence = False
-                fence_lang = ''
+                fence_lang = ""
             else:
                 in_fence = True
                 fence_lang = fence.group(1).lower()
             continue
 
         if in_fence:
-            if fence_lang == 'math' and UNSUPPORTED_GITHUB_MATH.search(line):
-                errors.append(
-                    f'{md.relative_to(ROOT)}:{i}: unsupported GitHub math macro in math fence'
-                )
+            if fence_lang == "math" and UNSUPPORTED_PUBLIC_MATH.search(line):
+                errors.append(f"{rel(md)}:{i}: unsupported public math macro in math fence")
             continue
 
-        double_dollars = line.count('$$')
-        in_display_here = display_math_open or double_dollars > 0
-        if double_dollars % 2 == 1:
-            display_math_open = not display_math_open
+        if PANDOC_RESIDUE.search(line):
+            errors.append(f"{rel(md)}:{i}: raw Pandoc/HTML residue on public surface")
 
-        if stripped == '[' and i < len(lines):
-            nxt = lines[i].strip()
-            if MATH_COMMAND.search(nxt) or re.search(r'\b(mathcal|operatorname|Gamma|Delta)\b', nxt):
-                errors.append(
-                    f'{md.relative_to(ROOT)}:{i}: malformed pseudo-math block; use ```math or $$'
-                )
+        if ORPHAN_THEOREM_LABEL.match(line.strip()):
+            errors.append(f"{rel(md)}:{i}: orphan theorem-environment label")
 
-        if stripped in {'\\[', '\\]'}:
-            errors.append(
-                f'{md.relative_to(ROOT)}:{i}: use ```math or $$, not \\[ / \\]'
-            )
+        n_display = line.count("$$")
+        active_math = display_math or n_display > 0
+        if active_math and UNSUPPORTED_PUBLIC_MATH.search(line):
+            errors.append(f"{rel(md)}:{i}: unsupported public math macro")
+        if n_display % 2:
+            display_math = not display_math
 
-        scrubbed = re.sub(r'`[^`]*`', '', line)
-        scrubbed = re.sub(r'\$`.*?`\$', '', scrubbed)
-        scrubbed = re.sub(r'\$[^$]+\$', '', scrubbed)
+        if line.strip() in {r"\[", r"\]"}:
+            errors.append(f"{rel(md)}:{i}: use $$ or a math fence, not \\[ / \\]")
 
-        if not in_display_here and MATH_COMMAND.search(scrubbed):
-            errors.append(
-                f'{md.relative_to(ROOT)}:{i}: TeX command appears outside GitHub math/code'
-            )
+        scrubbed = re.sub(r"`[^`]*`", "", line)
+        scrubbed = re.sub(r"\$\$.*?\$\$", "", scrubbed)
+        scrubbed = re.sub(r"\$[^$]+\$", "", scrubbed)
+        if not display_math and TEX_OUTSIDE_MATH.search(scrubbed):
+            errors.append(f"{rel(md)}:{i}: TeX command appears outside math/code")
 
-    if in_fence:
-        errors.append(f'{md.relative_to(ROOT)}: unclosed fenced code block')
-    if display_math_open:
-        errors.append(f'{md.relative_to(ROOT)}: unclosed $$ display-math block')
+    if display_math:
+        errors.append(f"{rel(md)}: unclosed $$ display math")
 
-    for match in LINK.finditer(text):
-        raw = match.group(1).strip().strip('<>')
-        if not raw or raw.startswith(('http://', 'https://', 'mailto:', '#')):
-            continue
-        target = normalize_target(md, raw)
-        if not target.exists():
-            errors.append(f'{md.relative_to(ROOT)}: broken relative link {raw!r}')
+    if md.relative_to(ROOT).parts[:3] == GENERATED_FORUM:
+        if re.search(r"\[(?:eq|sec|prop|fig|tab):[^\]]+\]", text):
+            errors.append(f"{rel(md)}: unresolved LaTeX cross-reference token remains")
+        if re.search(r"(^|\n)99(\n|$)", text):
+            errors.append(f"{rel(md)}: stray bibliography counter residue")
 
     return errors
 
 
-def public_surface(path: Path) -> bool:
-    rel = path.relative_to(ROOT)
-    parts = rel.parts
+def inspect_state_consistency() -> list[str]:
+    errors: list[str] = []
 
-    if len(parts) == 1:
-        return True
-    if parts[0] in {'docs', 'review', 'licenses'}:
-        return True
-    if parts[0] == 'monographs' and path.name == 'README.md':
-        return True
-    if parts[0] == 'preprints' and len(parts) > 1 and parts[1] == 'lesswrong':
-        return True
-    if rel.as_posix() in {
-        'prototype/README.md',
-        'prototype/CURRENT_STATE.md',
-        'prototype/stable-executable/README.md',
-    }:
-        return True
-    return False
+    checks = {
+        "monographs/04_VENUS/README.md": [
+            ("EDU16", "Venus monograph README must name EDU16"),
+        ],
+        "preprints/lesswrong/00_SEQUENCE_MAP.md": [
+            ("EDU16", "forum sequence map must name EDU16"),
+        ],
+        "prototype/CURRENT_STATE.md": [
+            ("R226", "current state must expose R226 boundary"),
+            ("IG10", "current state must expose IG10 ancestry"),
+            ("EDU16", "current state must expose EDU16 head"),
+        ],
+        "prototype/DEVELOPMENTAL_LINEAGE.md": [
+            ("R226", "lineage must expose R226"),
+            ("IG10", "lineage must expose IG10"),
+            ("EDU16", "lineage must expose EDU16"),
+        ],
+    }
+
+    for path, required in checks.items():
+        p = ROOT / path
+        if not p.exists():
+            errors.append(f"missing state surface {path}")
+            continue
+        text = p.read_text(encoding="utf-8", errors="replace")
+        for token, message in required:
+            if token not in text:
+                errors.append(f"{path}: {message}")
+
+    for p in ROOT.rglob("*.md"):
+        if not is_public_surface(p):
+            continue
+        text = p.read_text(encoding="utf-8", errors="replace")
+        if "GitHub Models as the default reasoning carrier" in text or "openai/gpt-4.1" in text:
+            errors.append(f"{rel(p)}: abandoned external-model controller language remains")
+
+    return errors
 
 
 def main() -> int:
-    files = [
-        p for p in ROOT.rglob('*.md')
-        if not skipped(p) and public_surface(p)
-    ]
-
+    md_files = sorted(ROOT.rglob("*.md"))
     errors: list[str] = []
-    for md in files:
-        errors.extend(inspect(md))
+
+    for md in md_files:
+        errors.extend(inspect_basic(md))
+        if is_public_surface(md):
+            errors.extend(inspect_public(md))
+
+    errors.extend(inspect_state_consistency())
 
     if errors:
-        print('GITHUB MARKDOWN LINT FAIL')
+        print("MARKDOWN / READER-SURFACE AUDIT FAIL")
         for error in errors:
-            print('- ' + error)
+            print("- " + error)
         return 1
 
-    print(f'GITHUB MARKDOWN LINT PASS ({len(files)} Markdown files)')
+    public_count = sum(1 for p in md_files if is_public_surface(p))
+    evidence_count = sum(1 for p in md_files if is_evidence(p))
+    print(
+        f"MARKDOWN / READER-SURFACE AUDIT PASS "
+        f"({len(md_files)} Markdown files; {public_count} strict public surfaces; "
+        f"{evidence_count} evidence/archaeology files basic-checked)"
+    )
     return 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     raise SystemExit(main())
