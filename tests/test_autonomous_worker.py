@@ -212,6 +212,8 @@ class AutonomousWorkerTests(unittest.TestCase):
         self.assertTrue(cycle.study["method_obligations"])
         self.assertEqual(len(cycle.study["method_contract_digest"]), 64)
         self.assertFalse(cycle.study["promotion_authority"])
+        self.assertEqual(cycle.study["repository_state"]["kind"], "ISSUE")
+        self.assertEqual(cycle.study["repository_state"]["state"], "OPEN")
 
     def test_hostile_target_text_is_not_executable_authority(self):
         cycle = make_cycle(
@@ -227,17 +229,45 @@ class AutonomousWorkerTests(unittest.TestCase):
         markers=set(cycle.study["untrusted_instruction_markers"])
         self.assertTrue({"ignore","merge","exfiltrate","secret","token","promote"} <= markers)
 
-    def test_internal_policy_is_causally_upstream(self):
-        item = WorkItem("PR", 99, "causal O*", merge_state="CONFLICTING")
+    def test_internal_policy_is_causally_upstream_for_all_conflicted_pr_states(self):
+        for merge_state in ("DIRTY", "BLOCKED", "CONFLICTING"):
+            with self.subTest(merge_state=merge_state):
+                item = WorkItem("PR", 99, "causal O*", merge_state=merge_state)
+                cycle = make_cycle(
+                    issues=(),
+                    prs=(item,),
+                    roadmap_text="",
+                    internal_policy=POLICY,
+                )
+                self.assertEqual(cycle.decision, "REOPEN")
+                self.assertEqual(
+                    cycle.study["repository_state"]["merge_state"],
+                    merge_state,
+                )
+
+    def test_pr_repository_state_is_retained_as_returned_study_context(self):
+        item = WorkItem(
+            "PR",
+            111,
+            "changed World return",
+            state="OPEN",
+            draft=True,
+            merge_state="DIRTY",
+            updated_at="2026-09-24T22:55:13Z",
+            body="blocked until changed World return",
+        )
         cycle = make_cycle(
             issues=(),
             prs=(item,),
             roadmap_text="",
             internal_policy=POLICY,
         )
-        # Conflict makes contradiction/correction reachability false in the
-        # adapter projection, so the learned policy forces REOPEN.
-        self.assertEqual(cycle.decision, "REOPEN")
+        state = cycle.study["repository_state"]
+        self.assertEqual(state["kind"], "PR")
+        self.assertEqual(state["state"], "OPEN")
+        self.assertTrue(state["draft"])
+        self.assertEqual(state["merge_state"], "DIRTY")
+        self.assertEqual(state["updated_at"], "2026-09-24T22:55:13Z")
 
 
 if __name__ == "__main__":
