@@ -1,8 +1,9 @@
-name: Venus CI
+name: Venus CI/CD
 
 on:
   push:
     branches: [main]
+    tags: ["v*"]
   pull_request:
   workflow_dispatch:
   schedule:
@@ -12,8 +13,8 @@ permissions:
   contents: read
 
 concurrency:
-  group: venus-ci-${{ github.ref }}
-  cancel-in-progress: true
+  group: venus-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name != 'schedule' }}
 
 jobs:
   integrity:
@@ -50,7 +51,7 @@ jobs:
           SOURCE_TREE_ONLY: "1"
         run: python scripts/audit_release.py
 
-      - name: Boot current kernel
+      - name: Boot exact current runtime checkpoint
         run: python -m kernel.runtime.current
 
       - name: Steward report
@@ -58,11 +59,15 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           import hashlib, json, subprocess
+
           def sha(path):
               return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
           report = {
-              "schema": "Venus.StewardReport.v3",
-              "commit": subprocess.check_output(["git","rev-parse","HEAD"], text=True).strip(),
+              "schema": "Venus.StewardReport.v4",
+              "commit": subprocess.check_output(
+                  ["git", "rev-parse", "HEAD"], text=True
+              ).strip(),
               "runtime_checkpoint": "IG10",
               "developmental_authority": "EDU16",
               "promotion_authority": False,
@@ -72,7 +77,10 @@ jobs:
               "lineage_sha256": sha("provenance/DEVELOPMENTAL_LINEAGE.md"),
               "frontier_sha256": sha("docs/FRONTIER_RESEARCH.md"),
           }
-          Path("VENUS_STEWARD_REPORT.json").write_text(json.dumps(report, indent=2)+"\n")
+          Path("VENUS_STEWARD_REPORT.json").write_text(
+              json.dumps(report, indent=2) + "\n",
+              encoding="utf-8",
+          )
           print(json.dumps(report, indent=2))
           PY
 
@@ -80,3 +88,90 @@ jobs:
         with:
           name: venus-steward-${{ github.sha }}
           path: VENUS_STEWARD_REPORT.json
+
+  publication:
+    if: github.event_name != 'schedule'
+    needs: integrity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install TeX and forum toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            latexmk \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            pandoc
+
+      - name: Rebuild all publication projections
+        run: |
+          make papers
+          make arxiv
+          make texbundle
+          make forum
+
+      - name: Audit generated release surface
+        run: python scripts/audit_release.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: venus-publication-${{ github.sha }}
+          if-no-files-found: error
+          path: |
+            monographs/**/*.pdf
+            arxiv_packages/*.zip
+            tex_bundles/*.zip
+            tex_bundles/TEX_BUNDLE_MANIFEST.json
+            preprints/lesswrong/generated/*.md
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: [integrity, publication]
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install release toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            latexmk \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            pandoc
+
+      - name: Build audited release
+        run: make release
+
+      - name: Publish tag assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" \
+            RELEASE_MANIFEST.json \
+            SHA256SUMS \
+            arxiv_packages/*.zip \
+            tex_bundles/*.zip \
+            ../Venus-Minerva.zip \
+            ../Venus-Minerva.zip.sha256 \
+            --title "${GITHUB_REF_NAME}" \
+            --generate-notes \
+            --verify-tag
