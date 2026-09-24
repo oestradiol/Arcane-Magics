@@ -1,18 +1,24 @@
 {
-  "schema": "Venus.AutonomyStudyGatePrefreeze.v0.2",
+  "schema": "Venus.AutonomyStudyGatePrefreeze.v0.3",
   "date": "2026-09-24",
   "base_main_sha": "d68de18923f0929a344f3b87b238e4113d26be09",
-  "purpose": "Require learner-owned consequence-sensitive curriculum plus substantive repository/returned-state study before each autonomous draft.",
+  "purpose": "Require learner-owned consequence-sensitive curriculum, causal feature custody, non-amplifying bounded meta-learning, and substantive repository/returned-state study before each autonomous draft.",
   "curriculum_rule": {
     "roadmap_role": "CONTEXT_AND_PROVENANCE_ONLY_ZERO_SELECTION_WEIGHT",
     "returned_outcome_learning_may_change_target_class": true,
-    "exact_feature_custody_required_for_learning": true,
+    "cycle_id_feature_vector_and_custody_digest_required_for_learning": true,
+    "generic_closed_pr_is_not_negative_evidence": true,
+    "negative_learning_requires_external_label": "venus-return-negative",
+    "merged_cycle_is_positive_external_admission": true,
     "content_addressed_tie_break_when_preferences_equal": true,
     "one_open_autonomous_cycle_forces_global_stop": true
   },
   "meta_learning_rule": {
     "learning_rate_is_learner_state": true,
     "learning_rate_changes_only_from_external_cycle_disposition": true,
+    "same_sign_same_feature_pattern_may_increase_learning_rate": false,
+    "same_sign_distinct_feature_pattern_may_increase_learning_rate": true,
+    "return_sign_reversal_reduces_learning_rate": true,
     "min_learning_rate": 0.025,
     "max_learning_rate": 0.2,
     "weight_abs_bound": 2.0,
@@ -49,6 +55,6 @@
     "tests/test_autonomous_governance.py",
     "tests/test_autonomous_study.py"
   ],
-  "claim_fence": "This supports bounded learner-owned curriculum selection, target study, returned-outcome learning and bounded learning-rate adaptation. It does not establish arbitrary autonomous code synthesis, autonomous scientific truth warrant, unrestricted autonomy, phenomenal consciousness, open-ended RSI, or AGI.",
+  "claim_fence": "This supports bounded learner-owned curriculum selection, target study, causally custodied returned-outcome learning and bounded diversity-sensitive learning-rate adaptation. It does not establish arbitrary autonomous code synthesis, autonomous scientific truth warrant, unrestricted autonomy, phenomenal consciousness, open-ended RSI, or AGI.",
   "promotion_authority": false
 }
