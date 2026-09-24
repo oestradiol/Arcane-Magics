@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import re, sys
+import os, re, sys
 ROOT=Path(__file__).resolve().parents[1]
+SOURCE_TREE_ONLY = os.environ.get('SOURCE_TREE_ONLY') == '1'
 errors=[]
 for needed in [
     'README.md','PUBLICATION_CONSTITUTION.md','NxRxI_VOCABULARY_CENTER.md','LICENSE',
@@ -13,7 +14,7 @@ for name in ['01_OFE','02_ECLIPSIS','03_ARCANE_MAGICS','04_VENUS']:
     tex=ROOT/'monographs'/name/'main.tex'
     pdf=ROOT/'monographs'/name/(name.lower()+'.pdf')
     if not tex.exists(): errors.append('missing '+str(tex)); continue
-    if not pdf.exists(): errors.append('missing built PDF '+str(pdf))
+    if not SOURCE_TREE_ONLY and not pdf.exists(): errors.append('missing built PDF '+str(pdf))
     t=tex.read_text(errors='replace')
     if 'SPDX-License-Identifier: CC-BY-NC-SA-4.0' not in t: errors.append(f'{name}: missing SPDX')
     if name=='04_VENUS' and 'AGI' in t and 'not establish' not in t.lower(): errors.append('Venus: AGI vocabulary without fence')
@@ -36,8 +37,9 @@ lic=(ROOT/'licenses/README.md').read_text(errors='replace')
 if 'PolyForm Noncommercial' not in lic: errors.append('software license map missing')
 if 'not OSI Open Source' not in lic: errors.append('software source-available/Open-Source distinction missing')
 # arXiv packages
-for name in ['01_ofe','02_eclipsis','03_arcane_magics','04_venus']:
-    if not (ROOT/'arxiv_packages'/f'{name}_arxiv_source.zip').exists(): errors.append(f'missing arXiv source package {name}')
+if not SOURCE_TREE_ONLY:
+    for name in ['01_ofe','02_eclipsis','03_arcane_magics','04_venus']:
+        if not (ROOT/'arxiv_packages'/f'{name}_arxiv_source.zip').exists(): errors.append(f'missing arXiv source package {name}')
 # Forum exports must be real outputs, not failed placeholders or escaped-newline preambles.
 for expected in ['01_ofe.md','02_eclipsis.md','03_arcane_magics.md','04_venus.md']:
     f=ROOT/'preprints/lesswrong/generated'/expected
