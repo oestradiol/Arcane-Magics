@@ -56,6 +56,21 @@ class HistoricalCausalRegressionTests(unittest.TestCase):
         self.assertIn("Authorization_i  -/-> Authorization_j", worldmind)
         self.assertIn("Jurisdiction_i   -/-> Jurisdiction_j", worldmind)
 
+    def test_negative_branch_failure_does_not_globalize_to_parent_lineage(self):
+        lineage = self.read("provenance/DEVELOPMENTAL_LINEAGE.md")
+        # SM2 fails locally while the repaired sibling continues.
+        self.assertIn("SM2 INVALID / non-parent", lineage)
+        self.assertIn("SM2R1", lineage)
+        self.assertIn("SM3 PASS", lineage)
+        # U6 fails locally while the parent line continues through RB1.
+        self.assertIn("U6 FAIL / non-parent", lineage)
+        self.assertIn("RB1", lineage)
+        self.assertIn("IG1 PASS", lineage)
+        # IG5/IG6 fail locally while IG7 becomes the continuing branch.
+        self.assertIn("IG5 FAIL / non-parent", lineage)
+        self.assertIn("IG6 FAIL / non-parent", lineage)
+        self.assertIn("IG7 PASS", lineage)
+
     def test_failure_locality_and_corruption_classes_remain_live(self):
         method = self.read("review/REVIEWER_AND_RESEARCHER_PROTOCOL.md")
         for token in (
