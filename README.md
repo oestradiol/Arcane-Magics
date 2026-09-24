@@ -4,7 +4,7 @@
 
 **A research program in developmental intelligence, operational equivalence, relational reconstruction, and open-ended cross-register inquiry.**
 
-[Reader path](docs/INHABITABLE_READER_PATH.md) · [Research frontier](docs/FRONTIER_RESEARCH.md) · [Venus state](prototype/CURRENT_STATE.md) · [Meta-Dynamics](docs/META_DYNAMICS.md) · [Vocabulary / grammar](NxRxI_VOCABULARY_CENTER.md) · [Contribute](CONTRIBUTING.md) · [Sponsor](https://github.com/sponsors/oestradiol)
+[Reader path](docs/INHABITABLE_READER_PATH.md) · [Research frontier](docs/FRONTIER_RESEARCH.md) · [Venus state](kernel/CURRENT_STATE.md) · [Meta-Dynamics](docs/META_DYNAMICS.md) · [Vocabulary / grammar](NxRxI_VOCABULARY_CENTER.md) · [Contribute](CONTRIBUTING.md) · [Sponsor](https://github.com/sponsors/oestradiol)
 
 </div>
 
@@ -62,7 +62,7 @@ PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY
 
 EDU17 is preserved as `INVALID_FOR_PROMOTION`; EDU17R1 remains `WITHHOLD` after exposing `MENTION != INCIDENCE` before its intended claim-binding gate.
 
-See [`prototype/DEVELOPMENTAL_LINEAGE.md`](prototype/DEVELOPMENTAL_LINEAGE.md), [`prototype/CURRENT_STATE.md`](prototype/CURRENT_STATE.md), and compact custody metadata under [`prototype/custody/`](prototype/custody/).
+See [`kernel/CURRENT_STATE.md`](kernel/CURRENT_STATE.md), [`provenance/DEVELOPMENTAL_LINEAGE.md`](provenance/DEVELOPMENTAL_LINEAGE.md), and compact custody metadata under [`kernel/custody/`](kernel/custody/).
 
 `provenance/historical-runtime/R194/` preserves the historical R00-R194 carrier for replay/regression/ablation. It is provenance, not the current organism.
 
@@ -139,11 +139,11 @@ Recommended path:
 
 1. [`docs/INHABITABLE_READER_PATH.md`](docs/INHABITABLE_READER_PATH.md)
 2. the row above matching your research interest
-3. the corresponding monograph or prototype state
+3. the corresponding monograph or kernel state
 4. [`NxRxI_VOCABULARY_CENTER.md`](NxRxI_VOCABULARY_CENTER.md) when cross-register translation is needed
 5. [`PUBLICATION_CONSTITUTION.md`](PUBLICATION_CONSTITUTION.md) for claim governance
 
-Historical material that is no longer live stays in provenance. In particular, the former S10-S11 `archaeology/` surface has been consumed into `provenance/withheld/S10_S11/` because those artifacts are frozen evidence, not current ontology.
+Historical material that is no longer live stays in provenance. In particular, the former S10-S11 comparative surface has been consumed into `provenance/withheld/S10_S11/` because those artifacts are frozen evidence, not current ontology.
 
 ## Build and audit
 
