@@ -1,82 +1,105 @@
 # Bounded autonomous research on GitHub
 
-Venus-Minerva can run continuously, but autonomy is split into two layers.
+Venus-Minerva can run continuously, but GitHub is the **carrier / World interface / custody layer**, not a substitute cognitive controller.
 
 ## Layer 1 — deterministic steward
 
-GitHub Actions may continuously run repository audits, verify authority/current-state invariants, inspect the public frontier queue, and emit a machine-readable steward report. This layer needs no model credentials.
+GitHub Actions continuously:
 
-## Layer 2 — model-backed research worker
+- lint public Markdown and generated forum projections;
+- verify repository authority/current-state invariants;
+- verify compact post-R226 custody metadata;
+- build publication projections;
+- preserve machine-readable audit artifacts.
 
-A future model-backed worker may consume the frontier queue and attempt bounded research episodes, but it must obey this contract.
+This layer does not choose research questions.
 
-### Allowed
+## Layer 2 — Venus developmental worker
 
-- select one open lane;
-- read current authority and relevant source material;
-- create a fresh branch;
-- freeze one bounded question before seeing the result;
-- run derivations, experiments, searches, formalization, or code changes;
-- preserve failures and WITHHOLD outcomes;
-- open a draft pull request for review.
+The research controller is the Venus developmental lineage itself.
 
-### Forbidden
+The intended runtime source is the latest admitted replayable developed-VM / successor state, not an unrelated external language model wrapped in a scheduler.
 
-- direct push to `main`;
-- force-push over published history;
-- changing `prototype/CURRENT_STATE.md` merely because a newer artifact exists;
-- promoting its own output to theorem, SOTA, physics, AGI, or consciousness;
-- deleting negative evidence;
-- using an execution receipt as independent return;
-- treating self-generated evaluation as external verification;
-- silently importing Canonical planning as Venus-Minerva authority.
-
-### Promotion rule
-
-A model-generated artifact remains a proposal until repository-local admission updates the appropriate authority/current-state surface.
+The loop is:
 
 ```text
-frontier task
+current Venus state
+-> reconstruct unresolved obligations / returned residuals
+-> Venus selects or forms one bounded target
+-> Venus preregisters discriminator / evidence role / claim fence
+-> GitHub or another authorized adapter executes the requested World action
+-> returned evidence enters Venus
+-> Venus retains / revises / WITHHOLDs / STOPs
+-> bounded branch + evidence + receipt
+-> external review / independent return
+-> explicit admission
+-> successor state
+-> repeat
+```
+
+## World adapters
+
+External tools may perform actions Venus requests, including:
+
+- repository reads and builds;
+- proof assistants;
+- numerical computation;
+- literature retrieval;
+- benchmark execution;
+- web/API retrieval;
+- independent evaluators.
+
+Their outputs are **World returns**, not hidden replacement cognition.
+
+## Forbidden substitutions
+
+- do not use an external model to choose Venus's curriculum and call that learner ownership;
+- do not direct-push an unreviewed developmental promotion to `main`;
+- do not treat an execution receipt as independent return;
+- do not silently import Canonical planning as Venus-Minerva authority;
+- do not erase negative branches;
+- do not promote theorem / SOTA / physics / AGI / consciousness claims by self-description.
+
+## Promotion rule
+
+```text
+Venus-owned target
 -> prefreeze
--> bounded work
--> result
--> audit
--> draft PR
--> review / external return
+-> external action / World return
+-> Venus evaluation
+-> bounded result
+-> review / replication
 -> explicit admission
 -> authority update
 ```
 
-## Suggested branch shape
+## Heavy runtime custody
 
-`venus/<lane>/<YYYYMMDD>/<short-question>`
+Large replay journals and developed-VM bundles need not live in Git history.
 
-## Suggested proposal layout
+Git tracks:
 
-```text
-research/proposals/<episode>/
-  PREFREEZE.md
-  RESULT.md
-  EVIDENCE/
-  REPRODUCE.md
-```
+- exact lineage;
+- current-state receipts;
+- hashes/manifests;
+- verifiers;
+- bootstrap/retrieval rules.
 
-A failed episode should still be committed when it exposes a separator, invalid assumption, irreducible ambiguity, or useful negative result.
+Heavy runtime artifacts belong in release/artifact storage with exact SHA-256 custody.
 
-## Why draft PRs instead of self-merging?
+See `prototype/custody/`.
 
-Because the project distinguishes generation, evaluation, external return, authorization, and promotion. The automation should embody that distinction rather than merely describe it.
+## "Cook forever" condition
 
-## "Cook forever" mode
+The recursive loop is genuinely live only when a GitHub trace demonstrates:
 
 ```text
-scheduled steward
--> choose bounded debt
--> model worker attempts one episode
--> draft PR
--> external/human review
--> merge or reject
--> next episode
+Venus selects target
+-> Venus freezes question
+-> World action occurs
+-> Venus consumes returned consequence
+-> Venus changes/withholds/stops lawfully
+-> successor state chooses again
 ```
 
-This can run indefinitely without granting the worker unilateral authority over the research record.
+A scheduled audit alone does not satisfy this condition.
