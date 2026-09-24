@@ -51,31 +51,38 @@ _SIMPLE_TEX = {
 
 
 def _plainify_raw_tex(segment: str) -> str:
-    """Remove renderer-fragile TeX only where Pandoc left it outside math/code."""
+    """Degrade any surviving non-math TeX to renderer-safe plain text."""
     previous = None
     while previous != segment:
         previous = segment
-        for command in ("boxed", "mathcal", "mathrm", "mathsf", "text"):
+        for command in ("boxed", "mathcal", "mathrm", "mathsf", "text", "operatorname", "mathbf", "bm"):
             segment = re.sub(
-                rf"\\+{command}\{{([^{{}}]*)\}}",
+                rf"\\{command}\{{([^{{}}]*)\}}",
                 r"\1",
                 segment,
             )
-            # Pandoc can leave nested/raw wrappers that the simple balanced-brace
-            # pattern cannot consume in one pass. Outside math/code, the command
-            # itself carries no forum-rendering value, so remove the command token
-            # and preserve its brace-delimited content for later passes.
-            segment = re.sub(rf"\\+{command}\b", "", segment)
-    for source, target in _SIMPLE_TEX.items():
-        name = source.lstrip("\\")
-        segment = re.sub(rf"\\+{re.escape(name)}\b", target, segment)
+    replacements = {
+        r"\leftrightarrow": "↔", r"\rightarrow": "→", r"\Rightarrow": "⇒",
+        r"\twoheadrightarrow": "↠", r"\mapsto": "↦", r"\to": "→",
+        r"\neq": "≠", r"\leq": "≤", r"\geq": "≥", r"\sim": "∼",
+        r"\land": "∧", r"\lor": "∨", r"\in": "∈", r"\notin": "∉",
+        r"\subseteq": "⊆", r"\supseteq": "⊇", r"\quad": " ",
+        r"\Gamma": "Γ", r"\Delta": "Δ", r"\rho": "ρ", r"\Sigma": "Σ",
+        r"\Phi": "Φ", r"\pi": "π", r"\epsilon": "ε", r"\varepsilon": "ε",
+    }
+    for source, target in replacements.items():
+        segment = segment.replace(source, target)
     segment = re.sub(
-        r"\\+(?:begin|end)\{(?:aligned|alignedat|array|cases|split|gathered|matrix|pmatrix|bmatrix)\}",
+        r"\\(?:begin|end)\{[^{}]+\}",
         "",
         segment,
     )
+    # Fail closed: a forum export must not retain unknown TeX commands outside
+    # actual math/code. Keep the command name as prose rather than pretending
+    # that the renderer will interpret it.
+    segment = re.sub(r"\\([A-Za-z]+)\b", r"\1", segment)
+    segment = segment.replace(r'\{', '{').replace(r'\}', '}')
     return segment
-
 
 def normalize_tex_outside_math_and_code(body: str) -> str:
     protected = re.compile(
@@ -90,6 +97,20 @@ def normalize_tex_outside_math_and_code(body: str) -> str:
             out.append(piece)
         else:
             out.append(_plainify_raw_tex(piece))
+    return "".join(out)
+
+def _sanitize_forum_line(line: str) -> str:
+    """Mirror the public-surface linter and plainify only unsafe leftovers."""
+    token = re.compile(r"(`[^`]*`|\$\$.*?\$\$|\$[^$]+\$)")
+    parts = token.split(line)
+    out: list[str] = []
+    for part in parts:
+        if not part:
+            continue
+        if part.startswith("`") or (part.startswith("$") and part.endswith("$")):
+            out.append(part)
+        else:
+            out.append(_plainify_raw_tex(part))
     return "".join(out)
 
 def normalize_forum_markdown(body: str) -> str:
@@ -121,6 +142,7 @@ def normalize_forum_markdown(body: str) -> str:
     body = re.sub(r"<figcaption>(.*?)</figcaption>", r"*\1*", body, flags=re.DOTALL)
     body = re.sub(r"(^|\n)99(\n|$)", r"\1\2", body)
     body = normalize_tex_outside_math_and_code(body)
+    body = "\n".join(_sanitize_forum_line(line) for line in body.splitlines())
     body = re.sub(r"\n{3,}", "\n\n", body).strip() + "\n"
     return body
 
