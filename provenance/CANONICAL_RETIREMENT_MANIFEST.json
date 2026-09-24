@@ -109,8 +109,9 @@
   "open_obligations": [
     {
       "id": "CANON-EDU16-EXEC-CUSTODY",
-      "status": "OPEN",
-      "description": "Determine whether exact EDU16 1703-event executable/journal custody exists outside admitted prefreeze/policy/result artifacts; never synthesize from prose."
+      "status": "OPEN_EXTERNAL_CUSTODY_ONLY",
+      "description": "Bounded Git/current-history recovery attempt returned NOT_LOCATED; reopen only on authentic external/heavy custody bytes with hash/replay verification.",
+      "evidence": "provenance/developmental/EDU/EDU16_GIT_RECOVERY_ATTEMPT_2026-09-24.md"
     },
     {
       "id": "CANON-UNIQUE-SOURCE-INVENTORY",
@@ -129,18 +130,21 @@
     },
     {
       "id": "CANON-STALE-CURRENT-QUARANTINE",
-      "status": "PARTIAL",
-      "description": "Ensure stale CURRENT labels cannot route authority after retirement."
+      "status": "DONE",
+      "description": "Stale CURRENT labels cannot route live authority; regression binds current authority to admitted Git state rather than filename recency.",
+      "evidence": "tests/test_historical_regressions.py::test_stale_current_filename_cannot_route_live_authority"
     },
     {
       "id": "CANON-OUTSIDER-REPRO",
-      "status": "OPEN",
-      "description": "Verify an outside reader can reconstruct current Git authority without Canonical."
+      "status": "READY_EXTERNAL_TEST",
+      "description": "Automated two-hop navigation contract and frozen ten-task blind-reader protocol exist; actual unfamiliar-reader execution remains external.",
+      "evidence": "docs/UX_BLIND_READER_PROTOCOL.json"
     },
     {
       "id": "CANON-ARCHAEOLOGY-TRACE",
-      "status": "PARTIAL",
-      "description": "Ensure admitted Git objects can be traced to controlling Canonical/history sources where material."
+      "status": "PARTIAL_42_DISTINCTIONS",
+      "description": "42 typed causal distinctions are currently tracked with live owners/tests/dispositions; remaining OPEN_EXTRACTION and historical replay gaps stay explicit.",
+      "evidence": "provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json"
     }
   ]
 }
