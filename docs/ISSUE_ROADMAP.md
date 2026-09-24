@@ -2,6 +2,12 @@
 
 This is a reader-facing projection of the live execution plan. GitHub issues remain the authoritative work items.
 
+## Recently discharged infrastructure
+
+- **#6 closed:** bounded OFE core is machine-checked in Lean; physical/QG selection remains separate.
+- **#33 closed:** theorem-structure lint is explicitly separated from formal proof verification.
+- **#30 advanced:** deterministic canonical hashing/non-finite-number handling landed; authenticated issuer/trust-root work remains open.
+
 ## Now: foundations that improve every later experiment
 
 | Issue | Work |
@@ -12,7 +18,6 @@ This is a reader-facing projection of the live execution plan. GitHub issues rem
 | #4 | EDU16 exact replay custody |
 | #30 | VMK2 trust/custody hardening |
 | #43 | adversarial World input, prompt injection, and memory contamination |
-| #33 | proof-container vs proof-verification hygiene |
 
 ## Next: turn preserved failures into prospective evidence
 
@@ -30,7 +35,6 @@ This is a reader-facing projection of the live execution plan. GitHub issues rem
 | Issue | Work |
 |---|---|
 | #16 | OFE mature substitution |
-| #6 | machine-check surviving OFE core |
 | #8 | RegisterBridge reduction |
 | #9 | Meta-Dynamics invariant test |
 | #24 | epistemic-governance reduction |

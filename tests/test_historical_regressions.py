@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from pathlib import Path
+import importlib.util
+import sys
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -94,6 +96,38 @@ class HistoricalCausalRegressionTests(unittest.TestCase):
         self.assertIn("current positive developmental authority      EDU16 [1703]", current)
         self.assertIn("preserved negative branch", current)
         self.assertIn("current repair disposition", current)
+
+
+    def test_historical_representation_expands_only_after_certified_insufficiency(self):
+        path = ROOT / "provenance/historical-runtime/R194/source/venus_seed_v0/representation_plasticity.py"
+        spec = importlib.util.spec_from_file_location("historical_representation_plasticity", path)
+        self.assertIsNotNone(spec)
+        self.assertIsNotNone(spec.loader)
+        module = importlib.util.module_from_spec(spec)
+        sys.modules[spec.name] = module
+        spec.loader.exec_module(module)
+
+        linear = module.PolynomialGrammar(max_degree=1)
+        linear_data = [(0, 1), (1, 3), (2, 5)]
+        with self.assertRaises(ValueError):
+            module.expand_after_certified_insufficiency(linear, linear_data)
+
+        quadratic_data = [(0, 0), (1, 1), (2, 4)]
+        expanded = module.expand_after_certified_insufficiency(linear, quadratic_data)
+        self.assertEqual(expanded.max_degree, 2)
+
+    def test_r191_closed_negative_cannot_silently_reenter_worldmind(self):
+        worldmind = self.read("kernel/WORLDMIND.md")
+        retirement = self.read("provenance/CANONICAL_RETIREMENT_LEDGER.md")
+        self.assertIn("R191/R191-B endogenous-semantic-fixed-point experiments remain preserved negatives", worldmind)
+        self.assertIn("does not depend on resurrecting that failed claim", worldmind)
+        self.assertIn("do not reroll under a new label", retirement)
+
+    def test_r194_local_replay_is_not_external_replication(self):
+        readme = self.read("provenance/historical-runtime/R194/source/PYTHON_R00_R194_PROTOTYPE_README.md")
+        self.assertIn("externality claimed                               false", readme)
+        self.assertIn("Not R194 external replication", readme)
+        self.assertIn("fail-closed externality/replication gate", readme)
 
 
 if __name__ == "__main__":
