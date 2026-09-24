@@ -11,7 +11,7 @@
   },
   "residual": "MENTION != INCIDENCE",
   "ownership_contract": "kernel/development/edu17r1_repair_contract.py",
-  "candidate_status": "FROZEN_LEARNER_SIDE_BINDER_CANDIDATE_AWAITING_EFFICACY_RETURN",
+  "candidate_status": "WITHHOLD_STRUCTURAL_CANDIDATE_NOT_END_TO_END_EXECUTABLE",
   "admitted_developmental_controller_operation": {
     "available": true,
     "operation": "kernel/development/recursive_proposal.py::search",
@@ -24,14 +24,14 @@
   "hidden_evaluation_exposed": false,
   "external_model_may_supply_substantive_repair": false,
   "next_lawful_transition": [
-    "implement the frozen composition without changing its substantive path",
-    "freeze implementation identity/hash",
-    "run public regression only for implementation sanity",
-    "expose the unchanged frozen candidate to the sealed hidden issue #31 A/B/C/D evaluator",
-    "retain PASS / FAIL / WITHHOLD / SUBSUMED without post-exposure repair"
+    "retain the frozen structural composition candidate",
+    "do not expose hidden issue #31 data",
+    "earn or externally return a target-blind raw-text semantic ingress capable of instantiating the relation-occurrence input without answer-table leakage",
+    "only then freeze end-to-end implementation identity",
+    "run sealed hidden issue #31 A/B/C/D without post-exposure repair"
   ],
   "promotion_authority": false,
-  "claim_fence": "A target-blind capability-composition search has frozen one learner-side repair candidate. This establishes candidate authorship only; efficacy and promotion remain unearned until sealed hidden issue #31 return.",
+  "claim_fence": "A structural composition candidate exists, but end-to-end learner-owned repair authorship is still WITHHOLD because blind raw text cannot yet lawfully instantiate its relation-occurrence input. No efficacy or promotion claim is earned.",
   "ancestral_incidence_donor": {
     "artifact": "Venus_Incidence_Law.tex",
     "sha256": "99154d953f498be374b8af0fbc174ba658d0d52b1ccc684b2bbc09871ac52f3e",
