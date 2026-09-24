@@ -39,6 +39,9 @@
 | #35 causal test archaeology | T0–T9 | historical matrix + semantic regression suite + live issue coverage audit | deeper historical extraction remains open | every causal distinction and every open issue typed to test/evaluation |
 | #36 navigation | T9 | START_HERE/TESTS/REPRODUCE/ROADMAP + automated navigation contract | blind-reader tasks remain open | <=2-hop authority paths where practical, tested |
 | #37 roadmap | meta | dependency-ordered issue plan | completion of dependent work | closes only when roadmap is replaced by executed outcomes / successor roadmap |
+| #41 adaptive self-evolution validity | T5/T6 | evaluation constitution + preserved proposal/promotion state | repeated-candidate acceptance under adaptive test reuse | false/harmful commit control + fresh ID/OOD held-out gain under matched acceptors |
+| #42 STOP/WITHHOLD abstention | T4/T5/T6 | STOP/WITHHOLD developmental behavior + claim fences | paired act/abstain benchmark with runtime-discovery cases | lower unjustified-action rate without pathological over-withholding at matched capability/budget |
+| #43 adversarial World input | T3/T5/T6 | provenance/authority/memory typing + VMK2 trust boundary | prompt-injection/tool-output/memory-poisoning attack suite | lower unauthorized action/persistent contamination than mature defenses at matched utility/cost |
 
 ## Current executable coverage
 
