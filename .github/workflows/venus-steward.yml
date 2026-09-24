@@ -109,6 +109,7 @@ jobs:
             texlive-latex-recommended \
             texlive-latex-extra \
             texlive-fonts-recommended \
+            lmodern \
             pandoc
 
       - name: Rebuild all publication projections
@@ -156,6 +157,7 @@ jobs:
             texlive-latex-recommended \
             texlive-latex-extra \
             texlive-fonts-recommended \
+            lmodern \
             pandoc
 
       - name: Build audited release
