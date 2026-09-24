@@ -78,7 +78,19 @@ def make_agency_receipt(
             "study_method_selection",
             AgencyRole.VENUS_LEARNED_STATE,
             True,
-            "Selected from the admitted method family using state-owned returned-review utility; external review can change later method preference.",
+            "Selected from the admitted method family using state-owned returned-review utility and the currently learned selector strategy.",
+        ),
+        AgencyComponent(
+            "learning_strategy_selection",
+            AgencyRole.VENUS_LEARNED_STATE,
+            True,
+            "Selected from the admitted selector-strategy family using explicit authorized external meta-learning returns.",
+        ),
+        AgencyComponent(
+            "learning_strategy_family",
+            AgencyRole.HOST_SCAFFOLD,
+            True,
+            "The available selector strategies are externally admitted; current bounded meta-learning may choose among them but may not invent or authorize a new strategy implementation.",
         ),
         AgencyComponent(
             "internal_ostar_routing",
@@ -143,7 +155,7 @@ def make_agency_receipt(
     )
 
     limits = (
-        "current live autonomy selects and studies within an externally admitted action/method/check grammar",
+        "current live autonomy selects and studies within externally admitted action, method, selector-strategy, and check grammars",
         "current main does not establish autonomous invention of new safe executors or evaluators",
         "current main does not establish recurrent self-modification of the autonomous worker itself under independent returned causal evaluation",
         "bounded Strong-RSI evidence from development branches must not be silently promoted into live autonomous-agent credit",
