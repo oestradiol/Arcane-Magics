@@ -17,18 +17,26 @@ def run_null_simulation(*, seed: int, trials: int, proposals: int, sigma: float,
     rng = random.Random(seed)
     threshold = NormalDist().inv_cdf(1 - alpha / proposals) * sigma
 
-    naive_lineages = corrected_lineages = 0
-    naive_commits = corrected_commits = 0
+    naive_lineages = corrected_lineages = spending_lineages = 0
+    naive_commits = corrected_commits = spending_commits = 0
     for _ in range(trials):
-        naive = corrected = 0
-        for _ in range(proposals):
+        naive = corrected = spending = 0
+        for index in range(1, proposals + 1):
             observed_delta = rng.gauss(0.0, sigma)
             naive += int(observed_delta > 0.0)
             corrected += int(observed_delta > threshold)
+            # Anytime-valid alpha-spending schedule: alpha_t = alpha/(t(t+1)).
+            # The infinite sum is <= alpha, so optional continuation does not
+            # silently spend more than the declared familywise error budget.
+            alpha_t = alpha / (index * (index + 1))
+            spending_threshold = NormalDist().inv_cdf(1 - alpha_t) * sigma
+            spending += int(observed_delta > spending_threshold)
         naive_commits += naive
         corrected_commits += corrected
+        spending_commits += spending
         naive_lineages += int(naive > 0)
         corrected_lineages += int(corrected > 0)
+        spending_lineages += int(spending > 0)
 
     total = trials * proposals
     return {
@@ -47,6 +55,12 @@ def run_null_simulation(*, seed: int, trials: int, proposals: int, sigma: float,
             "false_commit_rate_per_proposal": corrected_commits / total,
             "lineage_with_any_false_commit_rate": corrected_lineages / trials,
             "false_commits": corrected_commits,
+        },
+        "alpha_spending_anytime": {
+            "schedule": "alpha_t = alpha/(t(t+1))",
+            "false_commit_rate_per_proposal": spending_commits / total,
+            "lineage_with_any_false_commit_rate": spending_lineages / trials,
+            "false_commits": spending_commits,
         },
         "promotion_authority": False,
     }
