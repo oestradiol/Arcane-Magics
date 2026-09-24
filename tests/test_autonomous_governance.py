@@ -381,6 +381,16 @@ class AutonomousGovernanceTests(unittest.TestCase):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("python -m unittest discover -s tests -p 'test_*.py'", text)
 
+    def test_selected_reproduction_executes_before_git_write(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        select_at = text.index("Let Venus update work-learning state and select one bounded target")
+        execute_at = text.index("Execute bounded selected study method")
+        push_at = text.index("git push origin")
+        self.assertLess(select_at, execute_at)
+        self.assertLess(execute_at, push_at)
+        self.assertIn("run_venus_autonomous_study.py", text)
+        self.assertIn("autonomy/executions/", text)
+
     def test_workflow_runs_safety_tests_before_git_write(self):
         text = WORKFLOW.read_text(encoding="utf-8")
         tests_at = text.index("Verify bounded autonomy safety surface")
