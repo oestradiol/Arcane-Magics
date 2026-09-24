@@ -7,6 +7,9 @@ Merge/close status, CI success, execution receipts, and Venus's own comments
 are not rewards. Learned preference may alter what Venus studies and how she
 studies it; it never grants merge, promotion, truth, or scientific-warrant
 authority.
+
+Target recurrence is separately retained: a studied target stays blocked until
+its own GitHub state changes after the prior autonomous-cycle outcome.
 """
 
 from dataclasses import dataclass
@@ -32,6 +35,7 @@ SELF_REVIEW_LOGINS = frozenset({
     "venus-developmental-worker",
     "venus-autonomous-steward",
 })
+_CYCLE_TITLE = re.compile(r"venus: autonomous cycle (issue|pr)-(\d+)$", re.I)
 
 
 @dataclass(frozen=True)
@@ -41,9 +45,6 @@ class TargetBarrier:
     cycle_pr_number: int
     cycle_state: str
     outcome_at: str | None
-
-
-_CYCLE_TITLE = re.compile(r"venus: autonomous cycle (issue|pr)-(\\d+)$", re.I)
 
 
 @dataclass(frozen=True)
@@ -129,7 +130,7 @@ def extract_explicit_returns(
     out: list[tuple[str, str, str, bool]] = []
     for pr in prs:
         title = str(pr.get("title", ""))
-        match = re.match(r"venus: autonomous cycle (issue|pr)-(\d+)$", title, re.I)
+        match = _CYCLE_TITLE.match(title)
         if not match:
             continue
         kind = match.group(1).upper()
@@ -151,8 +152,7 @@ def extract_explicit_returns(
                     useful,
                 ))
 
-            method_matches = list(METHOD_RE.finditer(body))
-            for mindex, mm in enumerate(method_matches):
+            for mindex, mm in enumerate(METHOD_RE.finditer(body)):
                 method = mm.group(1).upper()
                 disposition = mm.group(2).upper()
                 out.append((
@@ -195,11 +195,36 @@ def update_from_cycle_prs(
     )
 
 
-def target_markers(prs: Iterable[Mapping[str, Any]]) -> tuple[tuple[str, int], ...]:
-    out: list[tuple[str, int]] = []
+def target_barriers(prs: Iterable[Mapping[str, Any]]) -> tuple[TargetBarrier, ...]:
+    out: list[TargetBarrier] = []
     for pr in prs:
         title = str(pr.get("title", ""))
-        match = re.match(r"venus: autonomous cycle (issue|pr)-(\d+)$", title, re.I)
-        if match and str(pr.get("state", "")).upper() == "OPEN":
-            out.append((match.group(1).upper(), int(match.group(2))))
-    return tuple(sorted(set(out)))
+        match = _CYCLE_TITLE.match(title)
+        if not match:
+            continue
+        state_name = str(pr.get("state", "")).upper()
+        outcome_at = pr.get("mergedAt") or pr.get("closedAt")
+        out.append(TargetBarrier(
+            kind=match.group(1).upper(),
+            number=int(match.group(2)),
+            cycle_pr_number=int(pr["number"]),
+            cycle_state=state_name,
+            outcome_at=str(outcome_at) if outcome_at else None,
+        ))
+    return tuple(sorted(out, key=lambda x: (x.kind, x.number, x.cycle_pr_number)))
+
+
+def target_markers(prs: Iterable[Mapping[str, Any]]) -> tuple[tuple[str, int], ...]:
+    """Compatibility view for currently open autonomous cycles."""
+    return tuple(sorted({
+        (barrier.kind, barrier.number)
+        for barrier in target_barriers(prs)
+        if barrier.cycle_state == "OPEN"
+    }))
+
+
+def active_autonomous_cycle(prs: Iterable[Mapping[str, Any]]) -> bool:
+    return any(
+        barrier.cycle_state == "OPEN"
+        for barrier in target_barriers(prs)
+    )
