@@ -31,26 +31,26 @@ def main() -> int:
     prs = load_work_items(args.prs, "PR")
     roadmap_text = Path(args.roadmap).read_text(encoding="utf-8")
     policy = json.loads(Path(args.policy).read_text(encoding="utf-8"))
+    history = json.loads(Path(args.history_prs).read_text(encoding="utf-8"))
 
-    history_prs = json.loads(Path(args.history_prs).read_text(encoding="utf-8"))
-    learning_state = from_json(
-        json.loads(Path(args.learning_state).read_text(encoding="utf-8"))
-    )
-    updated_learning = update_from_cycle_prs(learning_state, history_prs)
+    prior = from_json(json.loads(Path(args.learning_state).read_text(encoding="utf-8")))
+    learned = update_from_cycle_prs(prior, history)
+    serialized = to_json(learned)
     Path(args.learning_output).write_text(
-        json.dumps(to_json(updated_learning), indent=2, sort_keys=True) + "\n",
+        json.dumps(serialized, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
-    utility = {
-        "ISSUE": updated_learning.utility("ISSUE"),
-        "PR": updated_learning.utility("PR"),
+
+    kind_utility = {
+        "ISSUE": learned.utility("ISSUE"),
+        "PR": learned.utility("PR"),
     }
     method_utility = {
-        method: updated_learning.method_utility(method)
-        for method in updated_learning.method_success
+        method: learned.method_utility(method)
+        for method in learned.method_success
     }
-    barriers = target_barriers(history_prs)
-    active_cycle = active_autonomous_cycle(history_prs)
+    barriers = target_barriers(history)
+    active = active_autonomous_cycle(history)
 
     cycle = make_cycle(
         issues=issues,
@@ -58,10 +58,12 @@ def main() -> int:
         roadmap_text=roadmap_text,
         internal_policy=policy,
         target_barriers=barriers,
-        active_cycle=active_cycle,
-        kind_utility=utility,
+        active_cycle=active,
+        kind_utility=kind_utility,
+        feature_weights=learned.feature_weights,
+        learner_state_id=json.dumps(serialized, sort_keys=True, separators=(",", ":")),
         method_utility=method_utility,
-        active_cycle_pending=bool(recent),
+        active_cycle_pending=active,
     )
     Path(args.output).write_text(
         json.dumps(asdict(cycle), indent=2, sort_keys=True) + "\n",
