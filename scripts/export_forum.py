@@ -34,7 +34,60 @@ BOX = {
 }
 
 
+_SIMPLE_TEX = {
+    r"\\leftrightarrow": "↔",
+    r"\\rightarrow": "→",
+    r"\\Rightarrow": "⇒",
+    r"\\neq": "≠",
+    r"\\sim": "∼",
+    r"\\land": "∧",
+    r"\\Gamma": "Γ",
+    r"\\Delta": "Δ",
+    r"\\rho": "ρ",
+    r"\\Sigma": "Σ",
+    r"\\Phi": "Φ",
+    r"\\quad": " ",
+}
+
+
+def _plainify_raw_tex(segment: str) -> str:
+    """Remove renderer-fragile TeX only where Pandoc left it outside math/code."""
+    previous = None
+    while previous != segment:
+        previous = segment
+        for command in ("boxed", "mathcal", "mathrm", "mathsf", "text"):
+            segment = re.sub(
+                rf"\\\\{command}\{{([^{{}}]*)\}}",
+                r"\1",
+                segment,
+            )
+    for source, target in _SIMPLE_TEX.items():
+        segment = segment.replace(source, target)
+    segment = re.sub(
+        r"\\\\(?:begin|end)\{(?:aligned|alignedat|array|cases|split|gathered|matrix|pmatrix|bmatrix)\}",
+        "",
+        segment,
+    )
+    return segment
+
+
+def normalize_tex_outside_math_and_code(body: str) -> str:
+    protected = re.compile(
+        r"(```[\\s\\S]*?```|`[^`\\n]*`|\\$\\$[\\s\\S]*?\\$\\$|\\$[^$\\n]*\\$)"
+    )
+    pieces = protected.split(body)
+    out: list[str] = []
+    for piece in pieces:
+        if not piece:
+            continue
+        if piece.startswith("```") or piece.startswith("`") or piece.startswith("$") or piece.startswith("$"):
+            out.append(piece)
+        else:
+            out.append(_plainify_raw_tex(piece))
+    return "".join(out)
+
 def normalize_forum_markdown(body: str) -> str:
+    body = normalize_tex_outside_math_and_code(body)
     for cls, title in BOX.items():
         body = re.sub(
             rf'<div class="{re.escape(cls)}">\s*',
