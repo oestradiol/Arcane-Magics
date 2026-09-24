@@ -41,3 +41,10 @@ This is a kernel invariant of indexed authority, not an independently discovered
 The R191/R191-B endogenous-semantic-fixed-point experiments remain preserved negatives: at their synthetic scope, ordinary system-identification machinery was sufficient and the project-specific semantic-factorization claim was mature-reduced. WorldMind does not depend on resurrecting that failed claim.
 
 Network carriers are an admitted substrate family. Real deployment remains an effect/jurisdiction question: an indexed kernel may ingest or act through an Internet adapter only under relevant authorization and with returned effects represented as external incidence. Shared reachability never mints a global Agent.
+
+
+## Carrier permeability
+
+WorldMind inherits the Anti-Minerva constraint. For the same consequence-bearing semantic object, prestige, embarrassment, embodiment, ridiculousness, vulgarity, taboo status, or donor labels do not by themselves justify making a correction unreachable. A carrier-dependent decision must point to a carrier property that is consequence-relevant at the declared scope, such as authentication, source integrity, jurisdiction, or executable capability.
+
+This protects distributed correction without erasing legitimate trust and security boundaries.
