@@ -23,7 +23,9 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Audit release
+      - name: Audit source tree
+        env:
+          SOURCE_TREE_ONLY: "1"
         run: python3 scripts/audit_release.py
 
       - name: Steward report
