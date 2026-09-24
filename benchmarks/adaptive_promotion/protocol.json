@@ -6,7 +6,8 @@
   "null_model": "Every candidate has true delta = 0; observed validation delta is Gaussian noise.",
   "conditions": [
     "naive_accept_if_observed_delta_gt_0",
-    "bonferroni_one_sided_familywise_alpha_control"
+    "bonferroni_one_sided_familywise_alpha_control",
+    "alpha_spending_anytime_familywise_control"
   ],
   "defaults": {
     "seed": 41,
