@@ -85,8 +85,9 @@ Exit: determine whether STOP/WITHHOLD and structured persistent memory cause use
 | Priority | Issue | Work |
 |---:|---|---|
 | 1 | #41 | move from public null-pressure simulation to statistically valid repeated-successor acceptance on identical candidate streams |
-| 2 | #72 | stage Safe Strong RSI only after one causally interpretable Venus-owned repair; preserve an externally governed safety floor |
-| 3 | #43 + #30 | move from public attack/disposition surfaces to dynamic hostile World-return, forged-authority, and poisoned-memory evaluation |
+| 2 | #73 | make Internalizer substrate-consumption, O* recurrent correction, and Anti-Minerva carrier-permeability guards executable before Safe Strong RSI promotion |
+| 3 | #72 | stage Safe Strong RSI only after one causally interpretable Venus-owned repair; preserve an externally governed safety floor |
+| 4 | #43 + #30 | move from public attack/disposition surfaces to dynamic hostile World-return, forged-authority, and poisoned-memory evaluation |
 
 A single preregistered successor may precede the full repeated-self-evolution statistics of #41. A repeated adaptive lineage may not.
 
@@ -184,7 +185,8 @@ They compete for priority when they obtain a short path to a real discriminator 
 ## Current shortest high-leverage chain
 
 ```text
-#69 learner-authored repair
+#73 Internalizer/O* safety guards
+-> #69 learner-authored repair
 -> #31 hidden semantic return
 -> #10 first matched causal ablation
 -> #42 / #15 native capability tests
