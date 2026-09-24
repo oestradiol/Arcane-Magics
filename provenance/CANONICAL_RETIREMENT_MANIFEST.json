@@ -104,14 +104,20 @@
       "class": "CONSUMED_GENERATED_PROJECTION",
       "git_owner": "Git source/publication tooling",
       "note": "do not retain duplicate generated authority"
+    },
+    {
+      "surface": "Git/EDU16-RC1",
+      "class": "RECONSTRUCTED_CLAIM_BEARING_CARRIER",
+      "git_owner": "kernel/development/EDU16_RECONSTRUCTED_CARRIER_MANIFEST.json; kernel/development/replay_edu16_reconstructed.py",
+      "note": "Deterministic reconstruction of admitted EDU16 claim-bearing state over IG10; not recovery of original 1703-event runner/journal."
     }
   ],
   "open_obligations": [
     {
       "id": "CANON-EDU16-EXEC-CUSTODY",
-      "status": "OPEN_EXTERNAL_CUSTODY_ONLY",
-      "description": "Bounded Git/current-history recovery attempt returned NOT_LOCATED; reopen only on authentic external/heavy custody bytes with hash/replay verification.",
-      "evidence": "provenance/developmental/EDU/EDU16_GIT_RECOVERY_ATTEMPT_2026-09-24.md"
+      "status": "HISTORICAL_EVENT_REPLAY_OPEN_RC1_AVAILABLE",
+      "description": "EDU16-RC1 now gives Git-replayable claim-bearing state from authentic Canonical-derived inputs over IG10. Original 1703-event runner/journal remains not located; historical event replay reopens only on authentic hash-verified bytes.",
+      "evidence": "kernel/custody/EDU16_CUSTODY_STATUS.json"
     },
     {
       "id": "CANON-UNIQUE-SOURCE-INVENTORY",
