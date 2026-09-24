@@ -58,6 +58,9 @@ jobs:
       - name: Matched experiment contract audit
         run: python scripts/validate_experiment_manifest.py evaluation/MATCHED_EXPERIMENT_TEMPLATE.json
 
+      - name: Construct disposition audit
+        run: python scripts/audit_construct_dispositions.py
+
       - name: Live open-issue coverage audit
         env:
           GH_TOKEN: ${{ github.token }}
