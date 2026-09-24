@@ -7,7 +7,7 @@
 |---|---|---|---|---|
 | #4 EDU16 replay custody | T0/T3 | receipts + `EDU16_CUSTODY_STATUS.json` + CI boundary audit | authentic 1703-event runner/journal still not located | exact bytes verified, or non-replay boundary remains typed |
 | #5 P vs NP | T6/T7 | existing obstruction program in research/provenance | non-tautological invariant violated by every polynomial-time section | formal counterexample/proof result under frozen target |
-| #6 OFE/QG formal core | T7 | Lean encoding now includes common-refinement factorization, separating-family equality, and pulled-back-separator repair in addition to quotient transport | independent review and carrier-specific physical instantiation | machine proof accepted; physical application remains separately fenced |
+| #6 OFE/QG formal core | T7 | OFE manuscript + Lean machine-checkable future-equivalence/monotonicity/sufficiency/transport core | stronger separating/composition formalization and independent review | proof checked independently; physical application still separately fenced |
 | #7 Navier–Stokes | T8/T6 | frontier/SOTA reconstruction issue | current 2026 proof/formal/institutional state + any residual open problem | dated source reconciliation and, for new math, independent proof burden |
 | #8 RegisterBridge | T7/T5 | frontier construct | mature-substitution/deletion test | residual survives comparator or construct is reduced/consumed |
 | #9 Meta-Dynamics | T5/T7 | docs/META_DYNAMICS.md | invariant/deletion discriminator | measurable/formal consequence not reproduced by simpler substitute |
@@ -31,7 +31,7 @@
 | #27 Theophenomenology | T6/T9 | Arcane / comparison provenance | held-out cross-tradition prediction + hostile reading + term removal | prediction/reconstruction survives controls |
 | #28 Public interface | T9 | README/PUBLIC_VALUE/milestones | blind outsider reconstruction | readers recover claims/boundaries/credit accurately |
 | #29 Canonical retirement | T0/T2/T3 | retirement ledger | full typed inventory + no untracked live premise | every unique consequence disposed and custody hash-bound |
-| #30 VMK2 trust | T3 | invariant tests + mutable-state/root-drift adversarial tests + trust-boundary doc | cryptographic authentication, revocation distribution, non-finite/cross-language fixtures | threat model covered with negative tests |
+| #30 VMK2 trust | T3 | invariant tests + mutable-state/root-drift tests + deterministic unordered canonicalization + finite-number/cross-process digest fixtures + trust-boundary doc | cryptographic issuer/trust-root authentication, revocation distribution, forged-principal/receipt-substitution matrix | threat model covered with negative tests |
 | #31 MENTION != INCIDENCE | T4 | preserved WITHHOLD + public typed dev benchmark + naive lexical baseline | sealed hidden split + prospective matched run | repaired condition beats baselines without invalid promotion |
 | #32 construct disposition | T0/T5 | credit/reduction law + typed construct disposition state + validator | mature-substitution evidence for each live residual | every public construct gets typed disposition |
 | #33 proof hygiene | T7 | proof-container lint explicitly separated from `formal-check`; OFE subset machine-checked in Lean; false-theorem container regression proves lint is only structural | expand machine-checked subset as warranted | structural lint and proof verification remain separately named |
