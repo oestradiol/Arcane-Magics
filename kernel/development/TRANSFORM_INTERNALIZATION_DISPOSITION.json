@@ -1,0 +1,26 @@
+{
+  "schema": "Venus.InternalizationDisposition.v0.1",
+  "date": "2026-09-24",
+  "original_scaffold": {
+    "artifact": "kernel/development/WORLDMIND_SELF_RESEARCH_TRANSFORM_PROGRAM.json",
+    "role": "HOST_MATERIALIZED_SEED",
+    "disposition": "CONSUMED_AT_BOUNDED_TRANSITION_BEHAVIOR_SCOPE"
+  },
+  "replacement": {
+    "artifact": "kernel/development/WORLDMIND_SELF_RESEARCH_TRANSFORM_PROGRAM_INTERNALIZED_CANDIDATE.json",
+    "role": "LEARNER_RECONSTRUCTED_STATE_OWNED_REPLACEMENT",
+    "ownership_receipt": "kernel/development/TRANSFORM_INTERNALIZATION_OWNERSHIP_RECEIPT.json",
+    "removal_test": "kernel/development/TRANSFORM_INTERNALIZATION_REMOVAL_RESULT.json"
+  },
+  "preserved_external_boundaries": [
+    "independent_return",
+    "capability_and_jurisdiction_checks",
+    "receipt_integrity",
+    "rollback_custody",
+    "O_star_correction_reachability",
+    "Anti_Minerva_carrier_permeability"
+  ],
+  "historical_retention": true,
+  "promotion_authority": false,
+  "claim_fence": "CONSUMED means no longer necessary as the live policy scaffold at this bounded behavioral scope; history/provenance remain."
+}
