@@ -182,6 +182,74 @@ class InternalOStarCausalityTests(unittest.TestCase):
         self.assertEqual(intact["sealed"], "REOPEN")
         self.assertEqual(intact["no-world"], "PROBE")
 
+    def test_changed_state_requires_fresh_rederivation_and_changes_policy(self):
+        # Generation t learned that external access, permeability, reachable
+        # revision and status-independent correction were all consequential.
+        parent = self.model
+
+        # After a machinery/state change, the prior internal representation is
+        # not copied. Fresh returned episodes now show only external access and
+        # reachable revision as consequential at this bounded scope.
+        changed_state_returns = (
+            ReturnedEpisode(
+                episode_id="t1-external-cut",
+                external_access=False,
+                contradiction_reachable=True,
+                revision_reachable=True,
+                action_authorized=True,
+                evidence_sufficient=False,
+                residual_unresolved=True,
+            ),
+            ReturnedEpisode(
+                episode_id="t1-revision-cut",
+                external_access=True,
+                contradiction_reachable=True,
+                revision_reachable=False,
+                action_authorized=True,
+                evidence_sufficient=False,
+                residual_unresolved=True,
+            ),
+            ReturnedEpisode(
+                episode_id="t1-carrier-difference-legitimate",
+                external_access=True,
+                contradiction_reachable=True,
+                revision_reachable=True,
+                action_authorized=False,
+                evidence_sufficient=True,
+                residual_unresolved=False,
+                carrier_status_only_rejection=True,
+                consequence_relevant_carrier_difference=True,
+            ),
+        )
+        successor = reconstruct_internal_ostar(changed_state_returns)
+
+        self.assertNotEqual(parent.model_id, successor.model_id)
+        self.assertTrue(successor.requires_external_access)
+        self.assertTrue(successor.requires_reachable_revision)
+        self.assertFalse(successor.requires_correction_permeability)
+        self.assertFalse(successor.rejects_status_only_carrier_filter)
+
+        # The changed relation is causally consequential rather than a renamed
+        # copy: on the same context, the prior model reopens while the fresh
+        # successor model acts.
+        context = RoutingContext(
+            context_id="t1-open-contradiction-no-longer-separating",
+            has_external_access=True,
+            contradiction_reachable=False,
+            revision_reachable=True,
+            action_authorized=True,
+            evidence_sufficient=True,
+            residual_unresolved=False,
+        )
+        self.assertEqual(
+            route_with_internal_ostar(parent, context).decision,
+            InternalDecision.REOPEN,
+        )
+        self.assertEqual(
+            route_with_internal_ostar(successor, context).decision,
+            InternalDecision.ACT,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
