@@ -57,6 +57,7 @@ class AutonomousResearchProposalTests(unittest.TestCase):
     def test_writable_scope_is_autonomy_namespace_and_learning_state_only(self):
         proposal = make_research_proposal(cycle("COMPARATOR_AUDIT"))
         self.assertEqual(proposal.writable_prefixes, AUTONOMY_WRITABLE_PREFIXES)
+        self.assertIn("autonomy/executions/", proposal.writable_prefixes)
         for prefix in proposal.writable_prefixes:
             self.assertTrue(
                 prefix.startswith("autonomy/") or
