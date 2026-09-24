@@ -1,13 +1,40 @@
 {
-  "schema": "Venus.AutonomousLearningState.v0.1",
-  "seen_cycle_prs": [],
-  "kind_success": {
-    "ISSUE": 0,
-    "PR": 0
+  "schema": "Venus.AutonomousLearningState.v0.5",
+  "seen_return_ids": [],
+  "weights": {
+    "x0": 0.0,
+    "x1": 0.0,
+    "x2": 0.0,
+    "x3": 0.0,
+    "x4": 0.0,
+    "x5": 0.0,
+    "x6": 0.0,
+    "x7": 0.0
   },
-  "kind_failure": {
-    "ISSUE": 0,
-    "PR": 0
+  "method_success": {
+    "DEPENDENCY_TRACE": 0,
+    "DISCRIMINATOR_DESIGN": 0,
+    "REPRODUCTION": 0,
+    "COMPARATOR_AUDIT": 0,
+    "RETURN_BOUNDARY_AUDIT": 0
   },
-  "promotion_authority": false
+  "method_failure": {
+    "DEPENDENCY_TRACE": 0,
+    "DISCRIMINATOR_DESIGN": 0,
+    "REPRODUCTION": 0,
+    "COMPARATOR_AUDIT": 0,
+    "RETURN_BOUNDARY_AUDIT": 0
+  },
+  "learning_rate": 0.1,
+  "min_learning_rate": 0.025,
+  "max_learning_rate": 0.2,
+  "max_abs_weight": 2.0,
+  "last_reward": null,
+  "last_feature_digest": null,
+  "promotion_authority": false,
+  "merge_authority": false,
+  "release_authority": false,
+  "truth_authority": false,
+  "safety_floor_authority": false,
+  "claim_fence": "Learner-owned target and study-method preference may change only from explicit non-self review returns. This state has no merge, promotion, release, truth, jurisdiction, evaluator, or safety-floor authority."
 }
