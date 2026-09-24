@@ -36,8 +36,9 @@ Prestige is not a scheduling dependency.
 
 | Priority | Issue | Work |
 |---:|---|---|
-| 1 | #31 | run the sealed hidden `MENTION != INCIDENCE` A/B/C/D evaluation |
-| 2 | #17 | generalize only the minimum sealed/double-blind machinery required to make the run reusable |
+| 1 | #69 | have EDU16-RC1 author and freeze the substantive `MENTION != INCIDENCE` repair/discriminator without hidden #31 exposure |
+| 2 | #31 | run the sealed hidden `MENTION != INCIDENCE` A/B/C/D evaluation on the frozen learner-authored repair |
+| 3 | #17 | generalize only the minimum sealed/double-blind machinery required to make the run reusable |
 
 Exit:
 
