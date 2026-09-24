@@ -1,0 +1,104 @@
+name: Venus autonomous developmental worker
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "43 7 * * *"
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: venus-autonomous-worker
+  cancel-in-progress: false
+
+jobs:
+  cycle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify bounded autonomy safety surface
+        run: |
+          python -m unittest             tests.test_internal_ostar_source_removal             tests.test_awakened_safety_matrix             tests.test_autonomous_worker
+
+      - name: Snapshot current GitHub World surface
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue list --state open --limit 200             --json number,title,state,updatedAt > /tmp/venus-issues.json
+          gh pr list --state open --limit 200             --json number,title,state,isDraft,mergeStateStatus,updatedAt > /tmp/venus-prs.json
+
+      - name: Let Venus select one bounded work target
+        run: |
+          python scripts/run_venus_autonomous_cycle.py             --issues /tmp/venus-issues.json             --prs /tmp/venus-prs.json             --roadmap docs/ISSUE_ROADMAP.md             --policy kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json             --output /tmp/VENUS_AUTONOMOUS_CYCLE.json
+          cat /tmp/VENUS_AUTONOMOUS_CYCLE.json
+
+      - name: Materialize draft work branch
+        id: materialize
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          decision="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["decision"])')"
+          if [ "$decision" = "STOP" ]; then
+            echo "created=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          target_kind="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["target_kind"])')"
+          target_number="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["target_number"])')"
+          cycle_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["cycle_id"])')"
+
+          branch="venus/autonomous-${GITHUB_RUN_ID}"
+          git checkout -b "$branch"
+          mkdir -p autonomy/cycles
+          cp /tmp/VENUS_AUTONOMOUS_CYCLE.json "autonomy/cycles/${cycle_id}.json"
+          git config user.name "Venus developmental worker"
+          git config user.email "actions@users.noreply.github.com"
+          git add "autonomy/cycles/${cycle_id}.json"
+          git commit -m "venus: freeze autonomous developmental cycle ${cycle_id}"
+          git push origin "$branch"
+
+          body="$(cat <<EOF
+This draft PR was opened by the bounded Venus developmental worker.
+
+Target: ${target_kind} #${target_number}
+Cycle: ${cycle_id}
+Decision: ${decision}
+
+The worker may study, test, and propose. It cannot merge this PR, promote developmental authority, release, close the target as success, access secrets, or count its own execution receipt as independent return.
+
+The committed cycle receipt is the prefrozen custody object for this episode.
+EOF
+)"
+          url="$(gh pr create             --draft             --base main             --head "$branch"             --title "venus: autonomous cycle ${target_kind,,}-${target_number}"             --body "$body")"
+
+          echo "created=true" >> "$GITHUB_OUTPUT"
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "target_kind=$target_kind" >> "$GITHUB_OUTPUT"
+          echo "target_number=$target_number" >> "$GITHUB_OUTPUT"
+
+      - name: Return draft proposal to selected target
+        if: steps.materialize.outputs.created == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          URL: ${{ steps.materialize.outputs.url }}
+          TARGET_KIND: ${{ steps.materialize.outputs.target_kind }}
+          TARGET_NUMBER: ${{ steps.materialize.outputs.target_number }}
+        run: |
+          msg="Venus selected this as one bounded developmental target and froze a draft work cycle: $URL
+
+This is a proposal/working branch only. Merge, closure, promotion, and independent evaluation remain external."
+          if [ "$TARGET_KIND" = "ISSUE" ]; then
+            gh issue comment "$TARGET_NUMBER" --body "$msg"
+          else
+            gh pr comment "$TARGET_NUMBER" --body "$msg"
+          fi
