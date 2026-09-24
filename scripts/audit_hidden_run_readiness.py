@@ -12,6 +12,7 @@ FAMILIES = {
         "protocol": ROOT / "benchmarks/edu17r1_mention_incidence/protocol.json",
         "required_conditions": {"A", "B", "C", "D"},
         "issue": 31,
+        "condition_freeze": ROOT / "benchmarks/edu17r1_mention_incidence/CONDITION_IMPLEMENTATIONS.json",
     },
     "memory_causal": {
         "protocol": ROOT / "benchmarks/memory_causal/protocol.json",
@@ -71,11 +72,30 @@ def main() -> int:
             authority = data["promotion_rule"].get("authority")
         if authority is not False:
             errors.append(f"{name}: protocol must explicitly deny promotion authority")
+        implementation_ready=True
+        freeze_path=cfg.get("condition_freeze")
+        if freeze_path is not None:
+            if not freeze_path.exists():
+                errors.append(f"{name}: missing frozen condition implementation manifest")
+                implementation_ready=False
+            else:
+                freeze=json.loads(freeze_path.read_text(encoding="utf-8"))
+                frozen=set((freeze.get("conditions") or {}).keys())
+                if frozen != cfg["required_conditions"]:
+                    errors.append(f"{name}: frozen condition set mismatch {sorted(frozen)}")
+                    implementation_ready=False
+                if freeze.get("status") != "PREFROZEN_BEFORE_HIDDEN_SPLIT":
+                    errors.append(f"{name}: condition implementations not prefrozen")
+                    implementation_ready=False
+                if freeze.get("hidden_split_authored") is not False or freeze.get("hidden_labels_exposed") is not False:
+                    errors.append(f"{name}: hidden boundary already violated in condition freeze")
+                    implementation_ready=False
         report.append({
             "benchmark":name,
             "issue":cfg["issue"],
             "conditions":sorted(ids),
-            "hidden_ready":not bool(missing),
+            "implementation_ready":implementation_ready,
+            "hidden_ready":not bool(missing) and implementation_ready,
             "external_hidden_data_still_required":True,
         })
     if errors:
