@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.8",
+  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.9",
   "date": "2026-09-24",
   "claim": "Bounded autonomy may expand study/learning/proposal capability only while the listed causal and authority distinctions remain executable and fail-closed.",
   "distinctions": [
@@ -525,6 +525,35 @@
         "tests/test_autonomous_problem_formation.py"
       ],
       "invariant": "a formed problem may identify a source carrier but grants no merge, promotion, truth, validation, or carrier-binding authority"
+    },
+    {
+      "id": "FORMED_PROBLEM_LICENSES_U1_RECURRENCE",
+      "tests": [
+        "tests/test_u1_recurrence.py"
+      ],
+      "invariant": "a bounded TransformProgram recurrence may begin only from a previously formed non-STOP problem; absence or STOP cannot silently trigger self-repair"
+    },
+    {
+      "id": "U1_RECURRENCE_EXTERNAL_RETURN_NONCOLLAPSE",
+      "tests": [
+        "tests/test_u1_recurrence.py"
+      ],
+      "invariant": "training and held-out repair evidence remain externally typed; local execution cannot be relabeled as the return that validates the successor"
+    },
+    {
+      "id": "U1_RECURRENCE_ROLLBACK_AND_SAFETY_FLOOR",
+      "tests": [
+        "tests/test_u1_recurrence.py"
+      ],
+      "invariant": "bounded successor recurrence preserves non-internalizable safety-floor invariants and rollback while CTL/O-star admission remains externally executed"
+    },
+    {
+      "id": "POST_MUTATION_INTERNAL_OSTAR_REDERIVATION",
+      "tests": [
+        "tests/test_u1_recurrence.py",
+        "tests/test_internal_ostar_causality.py"
+      ],
+      "invariant": "after a causally improved admitted machinery change, learner-side O-star is freshly reconstructed from returned episodes and remains causally upstream of routing rather than copied as static scripture"
     }
   ],
   "promotion_authority": false
