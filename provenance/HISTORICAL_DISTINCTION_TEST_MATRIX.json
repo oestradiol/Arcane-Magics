@@ -385,9 +385,9 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2/T8",
-      "test_id_path": "tests/test_historical_regressions.py::test_current_status_repair_does_not_rewrite_historical_audit",
+      "test_id_path": "tests/test_historical_regressions.py::test_r224_r225_repair_does_not_rewrite_triggering_history",
       "status": "COVERED_PARTIAL",
-      "credit_genealogy_note": "historical status fossil now has an executable repository example and non-rewriting repair",
+      "credit_genealogy_note": "R224/R225 historical drift is preserved while current projections are repaired forward.",
       "reopening_condition": "status dependency validator"
     },
     {
