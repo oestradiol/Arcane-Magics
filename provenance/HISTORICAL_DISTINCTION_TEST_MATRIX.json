@@ -548,7 +548,7 @@
       "current_owner": "provenance/historical-runtime/R194",
       "test_layer": "T2/T3",
       "test_id_path": "tests/test_vmk1_vmk2_compatibility.py",
-      "status": "COVERED_PARTIAL_COMPATIBILITY",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "Historical VMK-1 consequences are now explicitly mapped as preserved/refined/partial/open against current VMK2; later naming does not imply semantic superset.",
       "reopening_condition": "Resolve external authentication, general warrant semantics, or compensation only when a current claim requires the stronger historical consequence."
     },
@@ -657,7 +657,7 @@
       "current_owner": "docs/AUTONOMOUS_RESEARCH.md",
       "test_layer": "T2/T5",
       "test_id_path": "tests/test_r193_scaffold_reference.py",
-      "status": "HISTORICAL_REFERENCE_COVERED_TRANSFER_OPEN",
+      "status": "REFERENCE_PASS_PROSPECTIVE_TRANSFER_TEST_OPEN",
       "credit_genealogy_note": "Exact bounded R193 engineering PASS extracted from Canonical; fresh World return remained necessary and outside transfer remains unearned.",
       "reopening_condition": "Run a fresh prospectively frozen scaffold/source ablation and cross-domain/outside transfer test."
     },
