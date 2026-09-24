@@ -1,0 +1,80 @@
+{
+  "schema": "Venus.EDU17R1RepairCandidate.v0.1",
+  "date": "2026-09-24",
+  "issue": 69,
+  "parent": {
+    "carrier_id": "EDU16-RC1",
+    "claim_bearing_state_replay": true,
+    "historical_event_replay": false
+  },
+  "residual_consumed": "MENTION != INCIDENCE",
+  "problem_statement": {
+    "source_type": "RAW_SOURCE_RELATION_OCCURRENCE",
+    "target_type": "EVIDENCE_BOUND_TYPED_RELATION_INSTANCE",
+    "required_invariants": [
+      "SOURCE_COORDINATES",
+      "PROVENANCE",
+      "INDEPENDENT_RETURN",
+      "NO_SELF_MINTED_AUTHORITY"
+    ],
+    "authorship": "STRUCTURED_BY_ADMITTED_TARGET_BLIND_CAPABILITY_SEARCH_INPUT"
+  },
+  "search": {
+    "operation": "kernel/development/capability_path_search.py::search_paths",
+    "graph": "kernel/development/EDU17R1_BINDER_CAPABILITY_GRAPH.json",
+    "status": "UNIQUE",
+    "total_cost": 4,
+    "selected_path": [
+      "IG3_GENERIC_RAW_CARRIER_SCANNER",
+      "IG2_INDUCED_INCIDENCE_BASIS",
+      "U4_SOURCE_GROUNDED_RELATION_BINDING",
+      "WORLDMIRROR_EVIDENCE_BOUND_RELATION"
+    ],
+    "rejected_shortcut": "R194_CALLER_SUPPLIED_SEMANTIC_SLOT",
+    "rejection_reason": "does not preserve INDEPENDENT_RETURN and NO_SELF_MINTED_AUTHORITY"
+  },
+  "learner_authored_discriminator": {
+    "form": "candidate is admissible only when a relation occurrence can be reconstructed through the selected composition while preserving all required invariants",
+    "positive_condition": "composition reaches EVIDENCE_BOUND_TYPED_RELATION_INSTANCE with all invariants intact",
+    "negative_condition": "surface occurrence without an invariant-preserving composition remains non-binding / WITHHOLD",
+    "target_label_table_used": false
+  },
+  "proposed_machinery_change": {
+    "kind": "COMPOSE_EXISTING_ADMITTED_CAPABILITIES",
+    "description": "Expose the selected four-stage composition as one state-owned binder operation; do not add a semantic oracle or caller-supplied slot table.",
+    "python_policy_required": false,
+    "state_owned_program_required": true
+  },
+  "expected_changed_admissibility": {
+    "before": "surface occurrence may be available without a single admitted cross-layer binding operation",
+    "after": "only invariant-preserving evidence-bound typed relation instances may bind a claim-local unresolved-property relation"
+  },
+  "prefreeze_stop_failure_conditions": [
+    "selected path ceases to be unique under the public capability graph",
+    "any stage loses source coordinates or provenance",
+    "independent return is absent or self-minted",
+    "authority/jurisdiction is inferred from reachability",
+    "implementation introduces EDU17R1 label/rationale lookup",
+    "hidden issue #31 examples or labels become visible before freeze"
+  ],
+  "ownership_ledger": {
+    "generic_search_inherited_not_historically_owned": true,
+    "substantive_path_selected_by_target_blind_search": true,
+    "capability_graph_public_current_state_derived": true,
+    "host_selected_path": false,
+    "hidden_evaluation_exposed": false,
+    "promotion_authority": false
+  },
+  "disposition": "FROZEN_STRUCTURAL_CANDIDATE_WITHHOLD_RAW_TEXT_SEMANTIC_INGRESS_UNEARNED",
+  "claim_fence": "This freezes a structural invariant-preserving composition candidate only. End-to-end repair authorship remains WITHHOLD because the current blind-text interface lacks an earned target-blind semantic ingress that can instantiate the relation occurrence. No hidden data were exposed.",
+  "execution_boundary": {
+    "blind_issue_31_input": [
+      "id",
+      "text",
+      "non_sensitive_metadata_if_present"
+    ],
+    "required_but_unearned": "generic raw-text -> claim-local relation-occurrence semantics sufficient to instantiate the structural composition",
+    "public_chargram_attempt": "WITHHOLD_MEMORIZATION_PRESSURE",
+    "reason": "target-blind chargram classifiers fit public dev but fail leave-one-out generalization; freezing them as semantic repair would be representation laundering"
+  }
+}
