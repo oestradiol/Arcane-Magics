@@ -82,9 +82,11 @@ def quotientTransport
     (U : S → T)
     (preserves : ∀ {x y}, FutureEq F x y → FutureEq G (U x) (U y)) :
     Quotient (futureSetoid F) → Quotient (futureSetoid G) :=
-  Quotient.map U (by
-    intro x y hxy
-    exact preserves hxy)
+  Quotient.lift
+    (fun x => Quotient.mk (futureSetoid G) (U x))
+    (by
+      intro x y hxy
+      exact Quotient.sound (preserves hxy))
 
 @[simp] theorem quotientTransport_mk
     {S : Type uS} {T : Type uT}
