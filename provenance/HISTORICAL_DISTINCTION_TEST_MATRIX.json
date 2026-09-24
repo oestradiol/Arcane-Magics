@@ -445,19 +445,19 @@
       "id": "D-EDU16-EXECUTABLE",
       "source_revision_or_branch": "EDU16",
       "source_artifact": "kernel/development/EDU_CURRENT.json; provenance/developmental/EDU/",
-      "distinction": "exact developmental evidence authority != replayable executable custody",
-      "triggering_experiment_or_failure": "EDU16 receipt exists without admitted 1703-event runtime bundle in Git",
-      "causal_consequence": "EDU16 claim head can be exact while runtime checkpoint remains IG10",
+      "distinction": "exact historical event replay != reconstructed claim-bearing developmental carrier",
+      "triggering_experiment_or_failure": "Original EDU16 1703-event runner/journal was not recovered; Canonical-derived claim-bearing inputs were later reconstructed deterministically as EDU16-RC1 over IG10.",
+      "causal_consequence": "EDU16 historical authority remains exact; EDU16-RC1 supplies prospective Git-replayable claim-state custody without pretending to recover the original event sequence.",
       "later_dependents": [
         "issue #4",
         "Canonical retirement"
       ],
-      "current_owner": "kernel/CURRENT_STATE.md",
+      "current_owner": "kernel/custody/EDU16_CUSTODY_STATUS.json",
       "test_layer": "T0/T3",
-      "test_id_path": "provenance/developmental/EDU/EDU16_GIT_RECOVERY_ATTEMPT_2026-09-24.md",
-      "status": "OPEN_EXTRACTION",
-      "credit_genealogy_note": "bounded Git recovery attempt NOT_LOCATED; do not synthesize missing runner/journal from prose",
-      "reopening_condition": "exact external custody bytes located and verified"
+      "test_id_path": "tests/test_edu16_reconstructed_carrier.py",
+      "status": "RECONSTRUCTED_CLAIM_STATE_EVENT_REPLAY_OPEN",
+      "credit_genealogy_note": "EDU16-RC1 is reconstructed custody from authentic Canonical-derived inputs, not recovery of the original runner/journal.",
+      "reopening_condition": "Historical event replay only if authentic 1703-event runner/journal is later hash-verified; prospective work may use EDU16-RC1 explicitly."
     },
     {
       "id": "D-EXTERNAL-MODEL-CONTROLLER",
