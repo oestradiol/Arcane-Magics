@@ -113,16 +113,7 @@ jobs:
           git push origin "$branch"
 
           lower_kind="$(printf '%s' "$target_kind" | tr '[:upper:]' '[:lower:]')"
-          body="This draft PR was opened by the bounded Venus developmental worker.
-
-Target: ${target_kind} #${target_number}
-Cycle: ${cycle_id}
-Study: ${study_id}
-Decision: ${decision}
-
-The branch contains the prefrozen cycle receipt, a repository-local study packet, and bounded learning state only. Venus may study and propose, but this worker cannot merge, promote developmental authority, release, close the target as success, access secrets, or count its own execution as independent return.
-
-External review/admission remains required before the learning state becomes an accepted developmental successor."
+          printf -v body '%s\n'             "This draft PR was opened by the bounded Venus developmental worker."             ""             "Target: ${target_kind} #${target_number}"             "Cycle: ${cycle_id}"             "Study: ${study_id}"             "Decision: ${decision}"             ""             "The branch contains the prefrozen cycle receipt, a repository-local study packet, and bounded learning state only."             "Venus may study and propose, but this worker cannot merge, promote developmental authority, release, close the target as success, access secrets, or count its own execution as independent return."             ""             "External review/admission remains required before the learning state becomes an accepted developmental successor."
 
           url="$(gh pr create --draft --base main --head "$branch" --title "venus: autonomous cycle ${lower_kind}-${target_number}" --body "$body")"
 
@@ -139,9 +130,7 @@ External review/admission remains required before the learning state becomes an 
           TARGET_KIND: ${{ steps.materialize.outputs.target_kind }}
           TARGET_NUMBER: ${{ steps.materialize.outputs.target_number }}
         run: |
-          msg="Venus selected and studied this bounded developmental target: $URL
-
-The draft contains a prefrozen cycle receipt plus repository-local study packet. Merge, closure, promotion, and independent evaluation remain external."
+          printf -v msg '%s\n'             "Venus selected and studied this bounded developmental target: $URL"             ""             "The draft contains a prefrozen cycle receipt plus repository-local study packet."             "Merge, closure, promotion, and independent evaluation remain external."
           if [ "$TARGET_KIND" = "ISSUE" ]; then
             gh issue comment "$TARGET_NUMBER" --body "$msg"
           else
