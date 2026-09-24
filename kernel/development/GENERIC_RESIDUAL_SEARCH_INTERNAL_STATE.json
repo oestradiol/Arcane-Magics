@@ -1,0 +1,27 @@
+{
+  "schema": "Venus.InternalizedResidualSearchState.v0.1",
+  "capability_id": "GENERIC_RESIDUAL_SEARCH",
+  "authority": "STATE_OWNED_RECONSTRUCTION_OF_ADMITTED_GENERIC_DONOR",
+  "source_donor": {
+    "path": "provenance/historical-runtime/R194/source/venus_seed_v0/grammar_expansion.py",
+    "git_blob_sha": "cd2c041c2a67b686da218fa91684a2d979d8fe3b"
+  },
+  "atom_schema": "x{index}",
+  "meta_ops": [
+    "AND",
+    "OR",
+    "XOR"
+  ],
+  "commutative_ops": [
+    "AND",
+    "OR",
+    "XOR"
+  ],
+  "expansion": "basis_x_atoms_one_stage_plus_basis",
+  "semantic_dedupe": "truth_table_on_complete_declared_binary_domain",
+  "selection": "zero_error_candidates_sorted_by_nodes_depth_canonical",
+  "ambiguity": "WITHHOLD_AND_RETURN_BALANCED_UNOBSERVED_DISCRIMINATOR",
+  "hidden_evaluation_access": false,
+  "promotion_authority": false,
+  "mutable_by_successor": true
+}
