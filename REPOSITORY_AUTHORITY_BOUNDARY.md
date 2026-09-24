@@ -50,10 +50,15 @@ preserved negative:
 EDU17
 INVALID_FOR_PROMOTION / PRESERVED_NEGATIVE
 
-current unresolved repair branch:
+preserved repair-origin branch:
 EDU17R1
 WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION
 measured separator: MENTION != INCIDENCE
+
+prospective frozen repair candidate:
+EDU17R1-RC1-WORD-JACCARD-K3-v1
+AUTHORED_FROZEN / PENDING_SEALED_HIDDEN_#31
+promotion authority: false
 ```
 
 The repository ships an exact Git-reconstructible IG10 VMK2 checkpoint under `kernel/`; R194 is historical implementation provenance only. EDU16 remains the latest positive developmental authority. The original self-contained 1703-event EDU16 runner/journal is still not recovered, but `kernel/development/EDU16-RC1` custody now deterministically reconstructs the admitted claim-bearing EDU16 state from the exact recovered Canonical EDU13→EDU16 artifacts. That reconstructed carrier is not historical event-level replay and grants no promotion authority.
@@ -73,3 +78,16 @@ Safe Strong RSI performance claim = false
 ```
 
 This distinction prevents a status fossil in the opposite direction: later infrastructure may be current and executable while the strongest learner-owned developmental result remains EDU16. Infrastructure admission is not developmental promotion.
+
+
+## Prospective repair authority below promotion
+
+The frozen EDU17R1 candidate and its ownership receipt are repository-admitted **candidate state**. They establish bounded learner-side repair authorship before hidden exposure; they do not supersede EDU16 as the current positive developmental authority and do not establish repair efficacy.
+
+```text
+authorship freeze
+!=
+hidden-evaluation success
+!=
+developmental promotion
+```
