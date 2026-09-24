@@ -232,11 +232,21 @@ def extract_explicit_returns(
                     useful,
                 ))
 
+            method_returns: dict[str, list[tuple[int, str]]] = {}
             for mindex, mm in enumerate(METHOD_RE.finditer(body)):
                 method = mm.group(1).upper()
                 disposition = mm.group(2).upper()
+                method_returns.setdefault(method, []).append((mindex, disposition))
+            for method, rows in sorted(method_returns.items()):
+                dispositions = {disposition for _, disposition in rows}
+                if len(dispositions) != 1:
+                    # One returned review cannot train both sides of the same
+                    # method axis. Ambiguity is retained as no learning signal.
+                    continue
+                first_index = min(index for index, _ in rows)
+                disposition = next(iter(dispositions))
                 out.append((
-                    f"{return_prefix}:method:{mindex}:{method}",
+                    f"{return_prefix}:method:{first_index}:{method}",
                     "METHOD",
                     method,
                     disposition == "USEFUL",
