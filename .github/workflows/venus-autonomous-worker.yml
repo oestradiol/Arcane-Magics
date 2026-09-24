@@ -107,6 +107,19 @@ jobs:
             --output /tmp/VENUS_PATCH_PLAN.json
           cat /tmp/VENUS_PATCH_PLAN.json
 
+      - name: Freeze agency and authorship accounting
+        id: agency
+        if: steps.research.outputs.generated == 'true'
+        run: |
+          python scripts/run_venus_agency_receipt.py \
+            --cycle /tmp/VENUS_AUTONOMOUS_CYCLE.json \
+            --proposal /tmp/VENUS_RESEARCH_PROPOSAL.json \
+            --evidence /tmp/VENUS_RESEARCH_EVIDENCE.json \
+            --change /tmp/VENUS_CHANGE_CANDIDATE.json \
+            --patch-plan /tmp/VENUS_PATCH_PLAN.json \
+            --output /tmp/VENUS_AGENCY_RECEIPT.json
+          cat /tmp/VENUS_AGENCY_RECEIPT.json
+
       - name: Materialize draft work branch
         id: materialize
         env:
@@ -124,7 +137,7 @@ jobs:
 
           branch="venus/autonomous-${GITHUB_RUN_ID}"
           git checkout -b "$branch"
-          mkdir -p autonomy/cycles autonomy/proposals autonomy/evidence autonomy/changes autonomy/patches
+          mkdir -p autonomy/cycles autonomy/proposals autonomy/evidence autonomy/changes autonomy/patches autonomy/agency
           cp /tmp/VENUS_AUTONOMOUS_CYCLE.json "autonomy/cycles/${cycle_id}.json"
           proposal_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_RESEARCH_PROPOSAL.json"))["proposal_id"])')"
           evidence_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_RESEARCH_EVIDENCE.json"))["evidence_id"])')"
@@ -135,6 +148,8 @@ jobs:
           cp /tmp/VENUS_CHANGE_CANDIDATE.json "autonomy/changes/${change_id}.json"
           patch_plan_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_PATCH_PLAN.json"))["plan_id"])')"
           cp /tmp/VENUS_PATCH_PLAN.json "autonomy/patches/${patch_plan_id}.json"
+          agency_receipt_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AGENCY_RECEIPT.json"))["receipt_id"])')"
+          cp /tmp/VENUS_AGENCY_RECEIPT.json "autonomy/agency/${agency_receipt_id}.json"
           cp /tmp/AUTONOMOUS_LEARNING_STATE.json \
             kernel/development/AUTONOMOUS_LEARNING_STATE.json
 
@@ -162,6 +177,7 @@ jobs:
             "Change candidate: ${change_id}" \
             "Change disposition: ${change_disposition}" \
             "Patch plan: ${patch_plan_id}" \
+            "Agency receipt: ${agency_receipt_id}" \
             '' \
             'The worker may study, run fixed repository-owned checks, learn from explicitly returned external review outcomes, and propose.' \
             'It cannot merge this PR, promote developmental authority, release, close the target as success,' \
