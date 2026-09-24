@@ -28,7 +28,7 @@ Symbolic language is allowed. It must be bounded by explicit operational, struct
 
 Before release, a hostile-but-fair reviewer asks:
 
-1. What is the strongest ordinary comparator or prior art?
+1. What is the strongest ordinary comparator, historical predecessor, or mature substitute, and which relation is actually being claimed: genealogy, precedence, recurrence, technical inheritance, or consequential reduction?
 2. Which attractive noun can be deleted without losing the operation?
 3. Is a local success being promoted to a universal claim?
 4. Is correlation, recurrence, or analogy being promoted to causation or identity?
@@ -48,6 +48,8 @@ The intended trajectory is:
 A strong paper progressively removes author dependence. Tests include vocabulary-free reconstruction, source-wording removal, counterexample generation, novel transfer, terminology replacement, OPEN/WITHHOLD localization, founder-rescue requests, and the ability to reject or mutate the framework while preserving useful distinctions.
 
 Founder independence means functional succession, not erasure of provenance or credit.
+
+Historical priority and project causal genealogy are separate. A mature comparator may narrow or reduce a mechanism claim at a declared index without becoming the retroactive cause of the project's documented developmental trajectory. Reduction is consequential and indexed: it applies only where substitution preserves the declared action, prediction, warrant, reconstruction, transport, later admissibility, correction route, and failure localization. See `docs/CREDITS_AND_REDUCTIONS.md`.
 
 ## 6. Reader-interface law
 
@@ -73,12 +75,26 @@ See `docs/INHABITABLE_READER_PATH.md`.
 
 Research artifacts distinguish proposal, source acquisition, evaluation, and adjudication. A researcher may generate a model or query; an independent or prefrozen evaluator owns hidden scoring where the claim requires non-preauthored return. Reviewer repairs may fix verifier defects only if they do not alter the proposal, threshold, target, or returned evidence.
 
-## 9. Forum and arXiv projections
+## 9. Positive-claim / milestone law
+
+Public-facing material should state the strongest earned positive contribution before its nearest claim fence.
+
+The authoritative public achievement surface is `docs/EARNED_MILESTONES.md`. A claim may be advertised strongly when that ledger records:
+- the exact milestone or result;
+- register and scope;
+- warrant;
+- nearest stronger unearned promotion.
+
+Claim fences prevent unsupported promotion; they do not require burying the positive result.
+
+SOTA comparison is maintained separately in `docs/SOTA_WATCH.md`, and evaluation rules live in `docs/EVALUATION_CONSTITUTION.md`. A moving comparator may reopen an evaluation burden without rewriting project genealogy.
+
+## 10. Forum and arXiv projections
 
 The arXiv version optimizes self-contained scholarly communication and source portability. The LessWrong/BetterWrong preprint projection optimizes inferential distance: TL;DR, epistemic status, ordinary-language problem, neutral model, strongest comparator, cruxes, what-would-change-my-mind, then optional project vocabulary. These are different presentations of the same typed claim, not different truth standards.
 
 
-## 10. Carrier-specific release rules
+## 11. Carrier-specific release rules
 
 Publication carriers change presentation and packaging, not truth status.
 
