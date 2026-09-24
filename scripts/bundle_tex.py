@@ -8,22 +8,30 @@ manifest={}
 for name in PAPERS:
     d=ROOT/'monographs'/name
     keep=[]
-    for fn in ['main.tex','main.bbl','venusmonograph.sty','README.md']:
+    for fn in ['main.tex','main.bbl','README.md']:
         p=d/fn
         if p.exists(): keep.append(p)
+    tex=(d/'main.tex').read_text(errors='replace')
+    style=(ROOT/'shared'/'venusmonograph.sty') if 'venusmonograph' in tex else None
     z=OUT/f'{name.lower()}_tex_bundle.zip'
     with zipfile.ZipFile(z,'w',zipfile.ZIP_DEFLATED) as q:
         for p in keep:
             q.write(p,p.name)
-    manifest[z.name]={'sha256':hashlib.sha256(z.read_bytes()).hexdigest(),'files':[p.name for p in keep]}
+        if style is not None:
+            q.write(style,'venusmonograph.sty')
+    packaged=[p.name for p in keep] + (['venusmonograph.sty'] if style is not None else [])
+    manifest[z.name]={'sha256':hashlib.sha256(z.read_bytes()).hexdigest(),'files':packaged}
 # family source bundle contains the four paper source bundles plus shared constitution/vocabulary.
 fam=OUT/'venus_minerva_four_monograph_tex_sources.zip'
 with zipfile.ZipFile(fam,'w',zipfile.ZIP_DEFLATED) as q:
     for name in PAPERS:
         d=ROOT/'monographs'/name
-        for fn in ['main.tex','main.bbl','venusmonograph.sty','README.md']:
+        for fn in ['main.tex','main.bbl','README.md']:
             p=d/fn
             if p.exists(): q.write(p,f'monographs/{name}/{fn}')
+        tex=(d/'main.tex').read_text(errors='replace')
+        if 'venusmonograph' in tex:
+            q.write(ROOT/'shared'/'venusmonograph.sty',f'monographs/{name}/venusmonograph.sty')
     for fn in ['PUBLICATION_CONSTITUTION.md','NxRxI_VOCABULARY_CENTER.md','README.md']:
         q.write(ROOT/fn,fn)
 manifest[fam.name]={'sha256':hashlib.sha256(fam.read_bytes()).hexdigest(),'role':'family source bundle'}
