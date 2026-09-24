@@ -1,0 +1,35 @@
+{
+  "schema": "Venus.GenericResidualSearchInternalizationStatus.v0.1",
+  "date": "2026-09-24",
+  "issue": 73,
+  "capability_id": "GENERIC_RESIDUAL_SEARCH",
+  "source_scaffold": "provenance/historical-runtime/R194/source/venus_seed_v0/grammar_expansion.py",
+  "internal_state": "kernel/development/GENERIC_RESIDUAL_SEARCH_INTERNAL_STATE.json",
+  "internal_runtime": "kernel/development/internalized_residual_search.py",
+  "state": "READY_FOR_INDEPENDENT_SCAFFOLD_REMOVAL_RETURN",
+  "structural_checks": [
+    "state-backed runtime does not import historical donor",
+    "reference/state-backed bounded search semantics compared in regression tests",
+    "hidden evaluation remains inaccessible",
+    "promotion authority remains false"
+  ],
+  "not_yet_established": [
+    "independent evaluator return for behavior equivalence after scaffold removal",
+    "PASS_BOUNDED_SCAFFOLD_INTERNALIZATION",
+    "learner authorship of the internalization",
+    "EDU17R1 repair efficacy"
+  ],
+  "preserved_external_roles": [
+    "WORLD",
+    "WORLD_RETURN",
+    "EVIDENCE_IDENTITY",
+    "EVALUATOR_INDEPENDENCE",
+    "TRUST_ROOT",
+    "AUTHORIZATION",
+    "JURISDICTION",
+    "CLAIM_BINDING_AUTHORITY",
+    "STOP_WITHHOLD_LAW",
+    "ROLLBACK_PARENT_CUSTODY"
+  ],
+  "promotion_authority": false
+}
