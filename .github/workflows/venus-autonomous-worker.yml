@@ -65,6 +65,8 @@ jobs:
             --policy kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json \
             --learning-state kernel/development/AUTONOMOUS_LEARNING_STATE.json \
             --learning-output /tmp/AUTONOMOUS_LEARNING_STATE.json \
+            --developmental-parent-state kernel/development/EDU16_RECONSTRUCTED_STATE.json \
+            --current-state-receipt kernel/custody/R226_CURRENT_STATE_RECEIPT.json \
             --output /tmp/VENUS_AUTONOMOUS_CYCLE.json
           cat /tmp/VENUS_AUTONOMOUS_CYCLE.json
           cat /tmp/AUTONOMOUS_LEARNING_STATE.json
