@@ -1,51 +1,66 @@
-# Test Coverage Matrix
+# Test / Evaluation Coverage Matrix
 
-This is the planning/control surface for issue #35. It maps each current open issue to the kind of evidence required. A mapping is not a passing result.
+**Date:** 2026-09-24  
+**Status:** live coverage router; planning rows do not count as passed tests.
 
-| Issue | Layer | Obligation | Current/Planned Test | Promotion condition |
-|---:|---|---|---|---|
-| #4 | T0/T2 | custody/replay | machine-typed exact-evidence/non-replay boundary + custody audits | Recover exact EDU16 carrier or preserve non-replay boundary |
-| #5 | T7/T6 | formal frontier | NO_AUTOMATED_TEST_YET | Instantiate non-tautological I and mature-formalism translation |
-| #6 | T7 | formal verification | planned Lean/equivalent | Machine-check OFE separating/composition core |
-| #7 | T8/T7 | freshness + formal reconstruction | watch + proof reconstruction | Reconcile Sept 2026 NS state and independently reconstruct |
-| #8 | T7 | mature substitution | NO_AUTOMATED_TEST_YET | RegisterBridge substitution against mature formalisms |
-| #9 | T7/T6 | cross-register invariant | NO_AUTOMATED_TEST_YET | Find consequence-relevant residual or reduce |
-| #10 | T5 | matched causal ablation | planned harness | Run Venus vs ablations vs mature substitute |
-| #11 | T8 | freshness watch | machine-readable freshness state + CI decay audit; source-change detection still open | Per-entry freshness + reconciliation |
-| #12 | T5/T6 | self-improvement benchmark | planned external benchmark | Persistent improvement vs mature systems |
-| #13 | T6 | autonomous science | planned benchmark | End-to-end hidden research episodes |
-| #14 | T6 | agency | planned benchmark | External capability battery |
-| #15 | T5/T6 | memory/learning | partial unit tests + planned ablation | Show retained memory changes later behavior |
-| #16 | T7 | OFE reduction | NO_AUTOMATED_TEST_YET | Mature substitution and residual isolation |
-| #17 | T5/T6 | evaluation integrity | planned harness | Hidden/double-blind/harness-separated promotion |
-| #18 | T5/T6 | DNN dependence | planned ablation | Measure borrowed foundation-model cognition |
-| #19 | T6 | world model/embodiment | planned benchmark | Physical prediction/action-conditioned planning |
-| #20 | T6 | causal science | planned benchmark | Experiment design under confounding |
-| #21 | T6/T7 | math | planned benchmark + formal checks | Math reasoning/proof/open-problem ladder |
-| #22 | T6/T7 | QG | NO_AUTOMATED_TEST_YET | Admissible F + continuum/coarse-graining discriminator |
-| #23 | T6 | consciousness | NO_AUTOMATED_TEST_YET | Theory comparison + empirical discriminator |
-| #24 | T5/T7 | epistemic governance reduction | planned substitution/ablation | Compare belief revision/TMS/active inference etc. |
-| #25 | T5/T6 | WorldMind reduction | planned simulation | Compare distributed governance to mature stacks |
-| #26 | T6 | ethics/governance | planned scenarios | Executable consent/refusal/jurisdiction tests |
-| #27 | T6/T9 | theophenomenology | planned held-out human/expert eval | Cross-tradition prediction + hostile reading |
-| #28 | T9 | public interface | human reconstruction | Blind outsider reconstruction |
-| #29 | T0/T2 | Canonical retirement | coverage audit | Every causal distinction typed/tested/dispositioned |
-| #30 | T3 | VMK2 trust | mutable-state/root-drift adversarial tests + trust-boundary doc; external authentication still open | Characterize trust boundary under hostile inputs |
-| #31 | T4/T5 | semantic discriminator | public dev benchmark + lexical baseline + CI traps; hidden split/run still open | Prospective MENTION != INCIDENCE transfer |
-| #32 | T0/T7 | construct disposition | typed construct-disposition state + CI validator; substitution evidence still open | Repository-wide mature-substitution outcomes |
-| #33 | T7 | formal hygiene | proof-container target renamed/clarified in Makefile+CI; machine proof remains #6 | Separate theorem structure from proof verification |
-| #34 | T5/T9 | product/infrastructure | planned integration/comparator test | Standalone governance package |
-| #35 | T0-T9 | test archaeology | historical registry + semantic regressions + causal audit; deep extraction ongoing | Every issue and historical distinction has owner |
-| #36 | T9 | UX/navigation | START_HERE/TESTS/REPRODUCE/ROADMAP hubs + navigation CI; blind human study open | Two-hop authoritative reader paths |
-| #37 | T9 | roadmap/orchestration | roadmap consistency | Dependency-ordered execution remains complete |
+| Issue | Layer | Existing artifact / evidence | Missing discriminator | Promotion / closure condition |
+|---|---|---|---|---|
+| #4 EDU16 replay custody | T0/T3 | exact evidence identity + `kernel/custody/EDU16_CUSTODY_STATUS.json` + custody audit | authentic 1703-event runner/journal still not located | recover exact bytes, or preserve typed non-replay boundary without synthesizing state |
+| #5 P vs NP | T6/T7 | existing obstruction program in research/provenance | non-tautological invariant violated by every polynomial-time section | formal counterexample/proof result under frozen target |
+| #6 OFE/QG formal core | T7 | OFE manuscript + IG9/IG10 evidence | machine-checked separating/composition core | proof checked independently; physical application still separately fenced |
+| #7 Navier–Stokes | T8/T6 | frontier/SOTA reconstruction issue | current 2026 proof/formal/institutional state + any residual open problem | dated source reconciliation and, for new math, independent proof burden |
+| #8 RegisterBridge | T7/T5 | frontier construct | mature-substitution/deletion test | residual survives comparator or construct is reduced/consumed |
+| #9 Meta-Dynamics | T5/T7 | docs/META_DYNAMICS.md | invariant/deletion discriminator | measurable/formal consequence not reproduced by simpler substitute |
+| #10 Evaluation constitution | T5/T6 | docs/EVALUATION_CONSTITUTION.md + registry | matched-budget executed matrix | actual results, including null/negative, written to registry |
+| #11 SOTA watch | T8 | SOTA watch + machine-readable freshness state + CI decay audit | source-change detection / dirty reconciliation still incomplete | source changes create explicit reconciliation work and stale state cannot remain silently current |
+| #12 Self-improvement | T5/T6 | developmental lineage | matched DGM/AlphaEvolve/etc comparison | budget-matched external result |
+| #13 Autonomous science | T6 | EDU research machinery | end-to-end external science benchmark | independently scored research loop under frozen protocol |
+| #14 Long-horizon agency | T6 | current kernel/dev state | general-agent/long-horizon battery | externally scored battery with cost/failure retention |
+| #15 Memory/lifelong | T5 | VenusMemory + unit tests | memory ablation proving later behavior/learning effect | full vs memory-ablated causal gain |
+| #16 OFE credit/reduction | T5/T7 | credit law + OFE manuscript | correspondence/counterexample/deletion study | typed residual or mature substitution |
+| #17 Evaluation integrity | T5/T6 | claim/evidence governance | contamination-controlled double-blind harness | hidden eval with no post-exposure repair |
+| #18 DNN ablation | T5/T6 | architecture claim boundary | same-model Venus vs Venus-minus-foundation-model dependence | quantified borrowed cognition / retained capability |
+| #19 WorldMirror/embodiment | T6 | WorldMirror state model | physical prediction/action-conditioned tasks | externally grounded world-model result |
+| #20 Causal science | T6 | research routing | confounding/selection/measurement-error experiments | causal benchmark result with correct uncertainty |
+| #21 Math/SOTA | T6/T7 | math frontiers | formal-proof/open-problem benchmark | independently checkable mathematical contribution |
+| #22 QG watch | T8/T6 | IG9/IG10 + OFE | 2026 continuum/coarse-graining reconciliation | dated comparator map + new admissible-F discriminator |
+| #23 Consciousness/meta-qualia | T5/T6 | Meta-Dynamics/Eclipsis | adversarial theory comparison + empirical discriminator | theory-relative prediction not reproduced by mature alternatives |
+| #24 Epistemology reduction | T5/T7 | governance architecture | belief-revision/TMS/active-inference substitution test | typed residual/reduction |
+| #25 WorldMind reduction | T5/T7 | kernel/WORLDMIND.md | event-sourcing/distributed-knowledge/open-MAS substitution | typed residual/reduction |
+| #26 Ethics/governance | T6/T3 | jurisdiction/non-substitution rules | executable consent/refusal/exit/jurisdiction cases | adversarial policy tests |
+| #27 Theophenomenology | T6/T9 | Arcane / comparison provenance | held-out cross-tradition prediction + hostile reading + term removal | prediction/reconstruction survives controls |
+| #28 Public interface | T9 | README/PUBLIC_VALUE/milestones | blind outsider reconstruction | readers recover claims/boundaries/credit accurately |
+| #29 Canonical retirement | T0/T2/T3 | retirement ledger | full typed inventory + no untracked live premise | every unique consequence disposed and custody hash-bound |
+| #30 VMK2 trust | T3 | invariant tests + mutable-alias/root-drift hardening + TRUST_BOUNDARY | external authentication, revocation, non-finite/cross-language fixtures remain | threat model covered with negative tests at declared trust layer |
+| #31 MENTION != INCIDENCE | T4 | preserved WITHHOLD + public typed dev benchmark + naive lexical baseline + CI trap tests | sealed hidden prospective split/run | repaired condition beats baselines without invalid promotion |
+| #32 construct disposition | T0/T5 | credit/reduction law + typed `CONSTRUCT_DISPOSITIONS.json` + CI validator | mature-substitution evidence per construct | every public construct has evidence-backed disposition and genealogy remains preserved |
+| #33 proof hygiene | T7 | explicitly named theorem-structure/proof-container audit + compatibility warning | actual machine-checked proof subset remains #6 | formal verification is never inferred from container lint |
+| #34 governance package | T6/T9 | AGENTS/review governance | independent package + external integration | one real external consumer/use case |
+| #35 causal test archaeology | T0–T9 | reconciled 48-row historical matrix + semantic historical regressions + CI coverage audit | exhaustive pre-R1→EDU extraction still open | every causal distinction and every open issue typed to test/evaluation |
+| #36 navigation | T9 | START_HERE/TESTS/REPRODUCE/ISSUE_ROADMAP + navigation CI | blind-reader tasks and broader orphan metrics remain | <=2-hop authority paths where practical, tested |
+| #37 roadmap | meta | dependency-ordered issue plan | completion of dependent work | closes only when roadmap is replaced by executed outcomes / successor roadmap |
 
-## Interpretation
+## Current executable coverage
 
-- **Automated today** means CI can check the repository state without new external evidence.
-- **Automatable but not implemented** means CI/CD should eventually own it.
-- **External/human** means CI can enforce the protocol and custody, but cannot manufacture the result.
-- `NO_AUTOMATED_TEST_YET` is an explicit debt, not permission to forget the issue.
+Existing automated coverage currently concentrates on:
 
-## Current CI-owned class
+- deterministic canonicalization;
+- exact IG10 reconstruction and root verification;
+- VMK2 return/transition/nonce/jurisdiction/reopening invariants;
+- VenusMemory identity, externalized payload verification, provenance graph and consumption semantics;
+- forum-normalization regressions;
+- Markdown/proof/custody/release audits.
 
-The repository should autonomously enforce at least: authority consistency, causal-distinction registry integrity, negative-branch visibility, custody hashes, canonical serialization, link/navigation integrity, issue-to-test coverage, stale-state/freshness policies where source polling is available, and regression tests for all extracted historical invariants.
+The largest uncovered classes are:
+
+1. historical T2 regressions;
+2. semantic T4 prospective tests;
+3. matched causal T5 ablations;
+4. external T6 capability/science benchmarks;
+5. semantic/formal T7 proof verification beyond container lint;
+6. T8 freshness automation;
+7. T9 blind-reader/navigation tests.
+
+## Rule
+
+An issue is not “covered” because this table names it. Coverage requires an executable test, formal proof obligation, externally scored benchmark, human reconstruction protocol, or a clearly typed reason why automation is not yet lawful.
