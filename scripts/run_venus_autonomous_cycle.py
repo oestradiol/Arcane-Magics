@@ -53,6 +53,7 @@ def main() -> int:
         internal_policy=policy,
         recent_targets=recent,
         kind_utility=utility,
+        active_cycle_pending=bool(recent),
     )
     Path(args.output).write_text(
         json.dumps(asdict(cycle), indent=2, sort_keys=True) + "\n",
