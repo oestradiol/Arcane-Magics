@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 import importlib.util
+import sys
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -103,6 +104,7 @@ class HistoricalCausalRegressionTests(unittest.TestCase):
         self.assertIsNotNone(spec)
         self.assertIsNotNone(spec.loader)
         module = importlib.util.module_from_spec(spec)
+        sys.modules[spec.name] = module
         spec.loader.exec_module(module)
 
         linear = module.PolynomialGrammar(max_degree=1)
@@ -124,7 +126,7 @@ class HistoricalCausalRegressionTests(unittest.TestCase):
     def test_r194_local_replay_is_not_external_replication(self):
         readme = self.read("provenance/historical-runtime/R194/source/PYTHON_R00_R194_PROTOTYPE_README.md")
         self.assertIn("externality claimed                               false", readme)
-        self.assertIn("not R194 external replication", readme)
+        self.assertIn("Not R194 external replication", readme)
         self.assertIn("fail-closed externality/replication gate", readme)
 
 
