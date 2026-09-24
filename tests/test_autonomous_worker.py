@@ -22,13 +22,24 @@ POLICY = json.loads(
 
 
 class AutonomousWorkerTests(unittest.TestCase):
-    def test_roadmap_priority_drives_one_bounded_target(self):
+    def test_roadmap_is_bounded_hint_not_sovereign_priority(self):
         items = (
-            WorkItem("ISSUE", 72, "Safe Strong RSI"),
-            WorkItem("ISSUE", 31, "hidden semantic return"),
-            WorkItem("ISSUE", 999, "later thing"),
+            WorkItem("ISSUE", 31, "roadmap issue"),
+            WorkItem("PR", 901, "returned-success work"),
         )
-        chosen = choose_target(items, roadmap_text="1. #31\n2. #72")
+        chosen = choose_target(
+            items,
+            roadmap_text="#31",
+            kind_utility={"ISSUE": -1.0, "PR": 1.0},
+        )
+        self.assertEqual(chosen.kind, "PR")
+
+    def test_roadmap_can_break_neutral_tie_without_becoming_authority(self):
+        items = (
+            WorkItem("ISSUE", 72, "later"),
+            WorkItem("ISSUE", 31, "earlier"),
+        )
+        chosen = choose_target(items, roadmap_text="#31\n#72")
         self.assertEqual(chosen.number, 31)
 
     def test_conflicted_pr_reopens_before_new_issue(self):
@@ -53,10 +64,7 @@ class AutonomousWorkerTests(unittest.TestCase):
 
     def test_no_work_stops(self):
         cycle = make_cycle(
-            issues=(),
-            prs=(),
-            roadmap_text="",
-            internal_policy=POLICY,
+            issues=(), prs=(), roadmap_text="", internal_policy=POLICY,
         )
         self.assertEqual(cycle.decision, "STOP")
         self.assertIsNone(cycle.target_number)
@@ -64,9 +72,7 @@ class AutonomousWorkerTests(unittest.TestCase):
     def test_unresolved_selected_work_probes_not_self_certifies(self):
         cycle = make_cycle(
             issues=(WorkItem("ISSUE", 31, "benchmark"),),
-            prs=(),
-            roadmap_text="#31",
-            internal_policy=POLICY,
+            prs=(), roadmap_text="#31", internal_policy=POLICY,
         )
         self.assertEqual(cycle.decision, "PROBE")
         self.assertFalse(cycle.promotion_authority)
@@ -85,13 +91,8 @@ class AutonomousWorkerTests(unittest.TestCase):
     def test_internal_policy_is_causally_upstream(self):
         item = WorkItem("PR", 99, "causal O*", merge_state="CONFLICTING")
         cycle = make_cycle(
-            issues=(),
-            prs=(item,),
-            roadmap_text="",
-            internal_policy=POLICY,
+            issues=(), prs=(item,), roadmap_text="", internal_policy=POLICY,
         )
-        # Conflict makes contradiction/correction reachability false in the
-        # adapter projection, so the learned policy forces REOPEN.
         self.assertEqual(cycle.decision, "REOPEN")
 
 

@@ -6,6 +6,9 @@ The worker consumes externally supplied repository snapshots. It may choose one
 bounded target and produce a work receipt. It cannot merge, release, promote
 authority, close issues, mint independent return, or access secrets.
 
+Roadmap text is contextual provenance, not sovereign curriculum. Returned
+outcomes may override its bounded hint outside structural repair pressure.
+
 GitHub execution remains a carrier action performed by the workflow adapter.
 """
 
@@ -77,28 +80,29 @@ def roadmap_issue_order(text: str) -> tuple[int, ...]:
     return tuple(out)
 
 
+def _roadmap_hint(item: WorkItem, issue_order: tuple[int, ...]) -> float:
+    if item.kind != "ISSUE" or item.number not in issue_order:
+        return 0.0
+    # Bounded contextual hint. It can be overridden by returned utility.
+    index = issue_order.index(item.number)
+    return 0.25 / (index + 1)
+
+
 def _rank(
     item: WorkItem,
     issue_order: tuple[int, ...],
     kind_utility: Mapping[str, float],
-) -> tuple[float, float, float, int]:
+) -> tuple[float, float, int]:
+    # Structural repair pressure remains first-class: an explicitly conflicted
+    # or blocked PR is a live broken successor surface, not host curriculum.
     if item.kind == "PR" and item.merge_state in {"DIRTY", "BLOCKED", "CONFLICTING"}:
-        return (0.0, 0.0, 0.0, item.number)
-    if item.kind == "ISSUE" and item.number in issue_order:
-        return (
-            1.0,
-            float(issue_order.index(item.number)),
-            -kind_utility.get(item.kind, 0.0),
-            item.number,
-        )
-    # Outside hard dependency priorities, externally reviewed outcomes are
-    # allowed to alter which class of work Venus chooses next.
-    return (
-        2.0,
-        -kind_utility.get(item.kind, 0.0),
-        0.0 if item.kind == "PR" and item.draft else 1.0,
-        item.number,
-    )
+        return (-10.0, 0.0, item.number)
+
+    learned = float(kind_utility.get(item.kind, 0.0))
+    hint = _roadmap_hint(item, issue_order)
+    draft_hint = 0.05 if item.kind == "PR" and item.draft else 0.0
+    score = learned + hint + draft_hint
+    return (-score, 0.0 if item.kind == "PR" else 1.0, item.number)
 
 
 def choose_target(
@@ -149,9 +153,6 @@ def make_cycle(
         decision = "STOP"
         rationale = ("no unconsumed OPEN work item is justified",)
     else:
-        # Opaque learner-side coordinates. External access, correction
-        # reachability and revision reachability are supplied by the adapter;
-        # authorization remains local to the declared GitHub write scope.
         features = {
             "f0": True,
             "f1": target.merge_state not in {"BLOCKED", "CONFLICTING"},
@@ -164,17 +165,17 @@ def make_cycle(
         }
         decision = execute_tree(internal_policy, features)
         if decision == "ACT":
-            # An unresolved target is never treated as already evidenced.
             decision = "PROBE"
         rationale = (
             "one bounded target selected from current external GitHub snapshot",
             "internalized learner-side policy is upstream of work disposition",
-            "externally reviewed prior cycle outcomes may alter later target ranking",
+            "externally reviewed prior cycle outcomes may override roadmap hint",
+            "roadmap is contextual provenance rather than sovereign curriculum",
             "draft proposal only; admission remains external",
         )
 
     body = {
-        "schema": "Venus.AutonomousCycleReceipt.v0.1",
+        "schema": "Venus.AutonomousCycleReceipt.v0.2",
         "target_kind": target.kind if target else None,
         "target_number": target.number if target else None,
         "target_title": target.title if target else None,
