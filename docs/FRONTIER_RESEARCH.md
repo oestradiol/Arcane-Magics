@@ -70,12 +70,16 @@ Mandatory controls include SAT self-reduction, encoding robustness, easy-P witne
 
 ### B2. Navier-Stokes
 
-Two lanes remain non-collapsed.
+The September 2026 external state changed materially. OpenAI publicly released a claimed solution with a Lean formalization on 2026-09-08, and the Clay Mathematics Institute stated on 2026-09-11 that the problem has apparently been settled while its evaluation/credit process remains ongoing.
+
+The live lanes are therefore:
 
 - **Carrier science:** distributed forcing, observability, returned consequence, local intervention, and reconstruction in incompressible Navier-Stokes.
-- **Millennium PDE:** actual 3D regularity/blow-up mathematics using the standard solution spaces, estimates, continuation criteria, and current PDE literature.
+- **Resolution reconstruction:** independently reconstruct the claimed proof architecture, localize hard lemmas, reproduce/check the formal development where accessible, and separate mathematical validity from formal checker acceptance.
+- **Post-resolution mathematics:** simplification, consequences, nearby unresolved PDE questions, and any genuinely new theorem obligation.
+- **Institutional/credit tracking:** CMI/prize/credit disposition remains distinct from proof validity and formal verification.
 
-Carrier results cannot be promoted into Millennium progress. A true PDE episode must state the exact theorem obligation and where it improves on known estimates or criteria.
+Carrier results cannot be promoted into Millennium proof credit. Reconstruction also does not mint original authorship. See `docs/NAVIER_STOKES_STATUS_2026-09-24.md` for the dated reconciliation artifact.
 
 ### B3. Other prize/high-value mathematics
 
