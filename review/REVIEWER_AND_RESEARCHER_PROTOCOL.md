@@ -75,7 +75,40 @@ project causal derivation
 
 A comparator reduces a project claim only at an index where substitution preserves the declared consequence. Reduction may retire mechanism novelty while leaving independent project genealogy, bounded causal results, and non-subsumed residuals intact. See `docs/CREDITS_AND_REDUCTIONS.md`.
 
-## 3. Devil's Audit
+## 3. Status and failure locality
+
+A status label is downstream of the object it describes:
+
+```text
+TypedClaim
+= referent
++ frame
++ register/index
++ jurisdiction
++ provenance
++ realization
++ dependency bridges
++ discriminator/evidence chain
+
+Status = f(TypedClaim, returned consequence)
+```
+
+A changed referent/frame/index/realization can invalidate an inherited status without falsifying the earlier observation. Audit four recurrent corruption classes:
+
+- **STATUS_FOSSIL:** an inherited `OPEN/WITHHOLD/SUPPORTED/REJECTED` label remains live after its underlying object materially changed;
+- **NEGATIVE_GLOBALIZE:** a failure against one realization/proxy is propagated to a parent object without a dependency bridge;
+- **MALFORMED_OPEN:** a category error, impossible comparator, unindexed necessity, or otherwise malformed question is preserved forever as an "open research problem" instead of being retyped or consumed;
+- **BRIDGE_THEOREM_LAUNDER:** a structural nonidentity/analogy is promoted into a target-domain theorem without the missing bridge.
+
+Failure remains dependency-local:
+
+```text
+FAIL(realization r)
+-> update dependents(r)
+-/-> unrelated parent/sibling erasure
+```
+
+## 5. Devil's Audit
 
 A hostile-but-fair reviewer attacks the strongest version of the claim.
 
@@ -113,7 +146,7 @@ For every lemma/proposition/theorem:
 
 A definition, register law, symbolic interpretation, ethical rule, or model-internal consequence belongs in a definition/remark/model-constraint container, not theorem typography.
 
-## 5. Prose and didactics
+## 6. Prose and didactics
 
 The prose law lives in `NxRxI_VOCABULARY_CENTER.md`. Review applies it rather than duplicating it.
 
@@ -134,7 +167,7 @@ ordinary referent
 
 A major construction should support at least one worked distinction, counterexample, discriminator, reconstruction prompt, or mature comparator.
 
-## 6. Founder independence
+## 7. Founder independence
 
 A public object has not earned founder-independent status until an unfamiliar reviewer can, without founder rescue:
 
@@ -148,7 +181,7 @@ A public object has not earned founder-independent status until an unfamiliar re
 
 Founder independence is functional succession, not erasure of provenance or credit.
 
-## 7. Code and executable artifacts
+## 8. Code and executable artifacts
 
 Code is held to the same theory.
 
@@ -168,7 +201,7 @@ For live code:
 
 A historical runtime is not called current or stable merely because its source still imports.
 
-## 8. AI / external-agent containment
+## 9. AI / external-agent containment
 
 External models are research/coding tools and World-side participants, not Venus developmental authority by default. See `AGENTS.md`.
 
@@ -195,7 +228,7 @@ Agent-specific Devil's Audit questions:
 
 Model eloquence, confidence, hidden reasoning effort, or persistence never increase warrant.
 
-## 9. Resource causality
+## 10. Resource causality
 
 Scientific value, expected information gain, tractability, and resource return may all influence research priority.
 
@@ -210,7 +243,7 @@ Resource value is therefore a legitimate causal planning variable. It is not evi
 
 A Millennium Prize problem may be prioritized partly because success would expand future capability; the prize cannot relax the proof standard by one atom.
 
-## 10. Release gate
+## 11. Release gate
 
 A release may advance only when:
 
@@ -224,7 +257,7 @@ A release may advance only when:
 - the SOTA/comparator surface is not materially stale for any public superiority claim;
 - no unresolved blocking Devil's Audit objection remains.
 
-## 11. Methodology self-application
+## 12. Methodology self-application
 
 This methodology is itself revisable.
 
