@@ -49,7 +49,7 @@
         "meta-procedure generation",
         "term/name-free corrigible organization O*"
       ],
-      "persistence": "historical developmental engineering sequence; not current standing Git state",
+      "persistence": "post-R139 developmental evidence; R140 records no packaged executable effect and R139 remained the latest frozen packaged executable at that boundary",
       "host_dependencies": [
         "lower-level process primitives",
         "resources",
@@ -117,7 +117,14 @@
         "autonomous worker"
       ],
       "disposition": "STATE_RECOMPILATION_REQUIRED",
-      "recovery": "compile functional state into current carrier rather than copying journal identity; require restart, source-removal, ablation, fresh return"
+      "recovery": "compile functional state into current carrier rather than copying journal identity; require restart, source-removal, ablation, fresh return",
+      "canonical_custody": {
+        "path": "/Canonical/Future/Handoff/U1CurrentDevelopedVM/",
+        "records": 991,
+        "head": "4e397fdd0d2f81833084fca91bb9fc0c408f7711c981ed2c047a7ec43dbfce88",
+        "sha256": "22f97338d0e1c4214441ad7650c75620db691e469712a70820621e8b452ea6d0",
+        "state_root": "0a1cbb14936466b7b4f20b8bc90911fd5a968fe70d93ac2ed4bda2c4c8218888"
+      }
     },
     {
       "id": "U1_SELF_DIRECTED_REEVALUATION",
@@ -164,7 +171,14 @@
         "autonomous target study/proposal"
       ],
       "disposition": "NEXT_STATE_RECOMPILATION_TARGET",
-      "recovery": "build current-Git problem-field layer before issue/PR target selection; require no target labels, rival/discriminator causality, external-return narrowing, STOP control, mature comparator"
+      "recovery": "build current-Git problem-field layer before issue/PR target selection; require no target labels, rival/discriminator causality, external-return narrowing, STOP control, mature comparator",
+      "canonical_custody": {
+        "path": "/Canonical/Future/Handoff/U2CurrentDevelopedVM/",
+        "records": 1011,
+        "head": "6e263f7decd1ba23078e17d05fc207639e5ede07d0e2a8003ec2b666023c0671",
+        "sha256": "70ac985e38170288d49cffffed56caf22a31f9ab491d947e7848f86701e09468",
+        "state_root": "ec5ac212e6dbdf2c9622f9e251f2d66274eaf24f466ff709732886327328d65f"
+      }
     },
     {
       "id": "U3R2_RAW_TEXT_INGRESS",
