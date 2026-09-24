@@ -46,6 +46,9 @@ jobs:
       - name: Custody/state audit
         run: python scripts/audit_custody.py
 
+      - name: EDU16 evidence/runtime custody boundary
+        run: python scripts/audit_edu16_custody.py
+
       - name: Historical causal-distinction / issue coverage audit
         run: python scripts/audit_causal_distinctions.py
 
