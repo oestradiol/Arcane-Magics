@@ -56,9 +56,11 @@ object-level unresolved incidence
 
 ## Executable / custody distinction
 
-The Git tree retains the R194 public carrier because it is compact historical replay/ablation infrastructure.
+The old R194 carrier is preserved under `provenance/historical-runtime/R194/` for historical replay/ablation. It is no longer part of the live prototype surface.
 
-That does **not** mean the implementation history stops at R194. The later R226 crystallization and post-R226 developmental line are recorded in `DEVELOPMENTAL_LINEAGE.md`, while large replay journals and handoff archives are not automatically Git-tracked binaries.
+The later R226 crystallization and post-R226 developmental line are recorded in `DEVELOPMENTAL_LINEAGE.md`, while large replay journals and handoff archives are hash-addressed custody rather than ordinary Git-tracked binaries.
+
+Live infrastructure now also includes `venus_memory.py`, a content-addressed persistent store for learned abstractions, residuals, provenance, dependency edges, dispositions, and deterministic checkpoints.
 
 A receipt is not a runtime; a runtime is not independent return; a historical public carrier is not the current prototype.
 
