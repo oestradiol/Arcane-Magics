@@ -131,6 +131,25 @@ class AutonomousWriteScopeTests(unittest.TestCase):
             if prior is not None:
                 sys.modules["kernel.development.internal_ostar_teacher"] = prior
 
+    def test_workflow_records_patch_plan_before_git_push(self):
+        text = (ROOT / ".github/workflows/venus-autonomous-worker.yml").read_text(
+            encoding="utf-8"
+        )
+        plan_at = text.index("Let Venus classify bounded patch/write jurisdiction")
+        push_at = text.index("git push origin")
+        self.assertLess(plan_at, push_at)
+        self.assertIn("autonomy/patches/", text)
+        self.assertIn("AUTONOMOUS_WRITE_POLICY.json", text)
+
+    def test_workflow_does_not_copy_target_source_into_direct_write_set(self):
+        text = (ROOT / ".github/workflows/venus-autonomous-worker.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertNotIn("git add kernel/runtime/", text)
+        self.assertNotIn("git add scripts/", text)
+        self.assertNotIn("git add tests/", text)
+        self.assertNotIn("git add .github/", text)
+
     def test_runtime_autonomy_modules_do_not_import_teacher(self):
         for rel in (
             "kernel/development/autonomous_worker.py",
