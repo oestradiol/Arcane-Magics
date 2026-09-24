@@ -39,10 +39,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh issue list --state open --limit 200 \
-            --json number,title,state,updatedAt \
+            --json number,title,body,state,updatedAt \
             > /tmp/venus-issues.json
           gh pr list --state open --limit 200 \
-            --json number,title,state,isDraft,mergeStateStatus,updatedAt \
+            --json number,title,body,state,isDraft,mergeStateStatus,updatedAt \
             > /tmp/venus-prs.json
           gh pr list --state all --limit 200 \
             --json number,title,state,mergedAt,closedAt,reviews \
