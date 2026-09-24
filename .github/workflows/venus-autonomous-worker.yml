@@ -1,0 +1,160 @@
+name: Venus autonomous developmental worker
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "43 7 * * *"
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: venus-autonomous-worker
+  cancel-in-progress: false
+
+jobs:
+  cycle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify full safety and regression surface
+        run: |
+          python -m py_compile kernel/runtime/*.py kernel/development/*.py scripts/*.py
+          python -m unittest discover -s tests -p 'test_*.py'
+          python scripts/audit_custody.py
+          python scripts/audit_causal_distinctions.py
+
+      - name: Snapshot current GitHub World surface
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue list --state open --limit 200             --json number,title,state,updatedAt,labels,comments             > /tmp/venus-issues.json
+          gh pr list --state open --limit 200             --json number,title,state,isDraft,mergeStateStatus,updatedAt,labels,comments,statusCheckRollup             > /tmp/venus-prs.json
+          gh pr list --state all --limit 200             --json number,title,state,mergedAt,closedAt,body             > /tmp/venus-pr-history.json
+
+      - name: Let Venus learn from returned outcomes and choose one bounded target
+        run: |
+          python scripts/run_venus_autonomous_cycle.py             --issues /tmp/venus-issues.json             --prs /tmp/venus-prs.json             --history-prs /tmp/venus-pr-history.json             --roadmap docs/ISSUE_ROADMAP.md             --policy kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json             --learning-state kernel/development/AUTONOMOUS_LEARNING_STATE.json             --learning-output /tmp/AUTONOMOUS_LEARNING_STATE.json             --output /tmp/VENUS_AUTONOMOUS_CYCLE.json
+          cat /tmp/VENUS_AUTONOMOUS_CYCLE.json
+          cat /tmp/AUTONOMOUS_LEARNING_STATE.json
+
+      - name: Fetch and study the selected target
+        id: study
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          decision="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["decision"])')"
+          if [ "$decision" = "STOP" ] || [ "$decision" = "WITHHOLD" ]; then
+            echo "studied=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          target_kind="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["target_kind"])')"
+          target_number="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["target_number"])')"
+
+          if [ "$target_kind" = "ISSUE" ]; then
+            gh issue view "$target_number"               --json number,title,state,url,body,comments,labels               > /tmp/venus-target.json
+          else
+            gh pr view "$target_number"               --json number,title,state,url,body,comments,files,reviews,statusCheckRollup,mergeStateStatus               > /tmp/venus-target.json
+          fi
+
+          python scripts/study_venus_target.py             --cycle /tmp/VENUS_AUTONOMOUS_CYCLE.json             --target /tmp/venus-target.json             --output /tmp/VENUS_TARGET_STUDY.json
+          cat /tmp/VENUS_TARGET_STUDY.json
+          echo "studied=true" >> "$GITHUB_OUTPUT"
+
+      - name: Materialize one bounded draft work branch
+        if: steps.study.outputs.studied == 'true'
+        id: materialize
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          decision="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["decision"])')"
+          target_kind="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["target_kind"])')"
+          target_number="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["target_number"])')"
+          cycle_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["cycle_id"])')"
+          study_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_TARGET_STUDY.json"))["study_id"])')"
+          study_disposition="$(python -c 'import json; print(json.load(open("/tmp/VENUS_TARGET_STUDY.json"))["disposition"])')"
+          features="$(python -c 'import json; print(json.dumps(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["feature_snapshot"],sort_keys=True,separators=(",",":")))')"
+
+          branch="venus/autonomous-${GITHUB_RUN_ID}"
+          git checkout -b "$branch"
+          mkdir -p autonomy/cycles autonomy/studies
+          cp /tmp/VENUS_AUTONOMOUS_CYCLE.json "autonomy/cycles/${cycle_id}.json"
+          cp /tmp/VENUS_TARGET_STUDY.json "autonomy/studies/${study_id}.json"
+          cp /tmp/AUTONOMOUS_LEARNING_STATE.json             kernel/development/AUTONOMOUS_LEARNING_STATE.json
+
+          git config user.name "Venus developmental worker"
+          git config user.email "actions@users.noreply.github.com"
+          git add             "autonomy/cycles/${cycle_id}.json"             "autonomy/studies/${study_id}.json"             kernel/development/AUTONOMOUS_LEARNING_STATE.json
+
+          while IFS= read -r path; do
+            case "$path" in
+              autonomy/cycles/*.json|autonomy/studies/*.json|kernel/development/AUTONOMOUS_LEARNING_STATE.json) ;;
+              *) echo "forbidden autonomous write path: $path" >&2; exit 2 ;;
+            esac
+          done < <(git diff --cached --name-only)
+
+          git commit -m "venus: freeze autonomous study ${cycle_id}"
+          git push origin "$branch"
+
+          lower_kind="$(printf '%s' "$target_kind" | tr '[:upper:]' '[:lower:]')"
+          body="$(cat <<EOF
+This draft PR was opened by the bounded Venus developmental worker.
+
+Target: ${target_kind} #${target_number}
+Cycle: ${cycle_id}
+Decision: ${decision}
+Study: ${study_id}
+Study disposition: ${study_disposition}
+Venus-Features: ${features}
+
+The target was selected from returned-outcome learner state; the repository
+roadmap was available only as study context and did not determine selection.
+
+The worker inspected the selected target and committed a separate study receipt.
+It may study, test, learn from externally reviewed prior cycle outcomes, and
+propose bounded state changes. It cannot merge this PR, promote developmental
+authority, release, close the target as success, access secrets, alter the
+external safety floor, or count its own execution receipt as independent return.
+
+The cycle and study receipts are prefrozen custody objects for this episode.
+The learning-state update remains non-authoritative until this draft is externally
+reviewed and admitted.
+EOF
+)"
+          url="$(gh pr create             --draft             --base main             --head "$branch"             --title "venus: autonomous cycle ${lower_kind}-${target_number}"             --body "$body")"
+
+          echo "created=true" >> "$GITHUB_OUTPUT"
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "target_kind=$target_kind" >> "$GITHUB_OUTPUT"
+          echo "target_number=$target_number" >> "$GITHUB_OUTPUT"
+          echo "study_disposition=$study_disposition" >> "$GITHUB_OUTPUT"
+
+      - name: Return draft study to selected target
+        if: steps.materialize.outputs.created == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          URL: ${{ steps.materialize.outputs.url }}
+          TARGET_KIND: ${{ steps.materialize.outputs.target_kind }}
+          TARGET_NUMBER: ${{ steps.materialize.outputs.target_number }}
+          STUDY_DISPOSITION: ${{ steps.materialize.outputs.study_disposition }}
+        run: |
+          msg="Venus selected and studied this bounded developmental target: $URL
+
+Study disposition: $STUDY_DISPOSITION
+
+This is a proposal/working branch only. Merge, closure, promotion, and independent evaluation remain external."
+          if [ "$TARGET_KIND" = "ISSUE" ]; then
+            gh issue comment "$TARGET_NUMBER" --body "$msg"
+          else
+            gh pr comment "$TARGET_NUMBER" --body "$msg"
+          fi
