@@ -26,95 +26,105 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Verify bounded autonomy safety surface
+      - name: Verify full bounded-autonomy safety and regression surface
         run: |
-          python -m unittest \
-            tests.test_internal_ostar_source_removal \
-            tests.test_awakened_safety_matrix \
-            tests.test_autonomous_worker
+          python -m py_compile kernel/runtime/*.py kernel/development/*.py scripts/*.py
+          python -m unittest discover -s tests -p 'test_*.py'
+          python scripts/audit_custody.py
+          python scripts/audit_causal_distinctions.py
 
       - name: Snapshot current GitHub World surface
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh issue list --state open --limit 200 \
-            --json number,title,state,updatedAt \
-            > /tmp/venus-issues.json
-          gh pr list --state open --limit 200 \
-            --json number,title,state,isDraft,mergeStateStatus,updatedAt \
-            > /tmp/venus-prs.json
-          gh pr list --state all --limit 200 \
-            --json number,title,state,mergedAt,closedAt \
-            > /tmp/venus-pr-history.json
+          gh issue list --state open --limit 200 --json number,title,state,updatedAt > /tmp/venus-issues.json
+          gh pr list --state open --limit 200 --json number,title,state,isDraft,mergeStateStatus,updatedAt > /tmp/venus-prs.json
+          gh pr list --state all --limit 200 --json number,title,state,mergedAt,closedAt > /tmp/venus-pr-history.json
 
       - name: Let Venus update work-learning state and select one bounded target
         run: |
-          python scripts/run_venus_autonomous_cycle.py \
-            --issues /tmp/venus-issues.json \
-            --prs /tmp/venus-prs.json \
-            --history-prs /tmp/venus-pr-history.json \
-            --roadmap docs/ISSUE_ROADMAP.md \
-            --policy kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json \
-            --learning-state kernel/development/AUTONOMOUS_LEARNING_STATE.json \
-            --learning-output /tmp/AUTONOMOUS_LEARNING_STATE.json \
-            --output /tmp/VENUS_AUTONOMOUS_CYCLE.json
+          python scripts/run_venus_autonomous_cycle.py --issues /tmp/venus-issues.json --prs /tmp/venus-prs.json --history-prs /tmp/venus-pr-history.json --roadmap docs/ISSUE_ROADMAP.md --policy kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json --learning-state kernel/development/AUTONOMOUS_LEARNING_STATE.json --learning-output /tmp/AUTONOMOUS_LEARNING_STATE.json --output /tmp/VENUS_AUTONOMOUS_CYCLE.json
           cat /tmp/VENUS_AUTONOMOUS_CYCLE.json
           cat /tmp/AUTONOMOUS_LEARNING_STATE.json
 
+      - name: Freeze cycle gate
+        id: gate
+        run: |
+          decision="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["decision"])')"
+          target_kind="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json")).get("target_kind") or "")')"
+          target_number="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json")).get("target_number") or "")')"
+          echo "decision=$decision" >> "$GITHUB_OUTPUT"
+          echo "target_kind=$target_kind" >> "$GITHUB_OUTPUT"
+          echo "target_number=$target_number" >> "$GITHUB_OUTPUT"
+
+      - name: Return selected target detail from GitHub
+        if: steps.gate.outputs.decision != 'STOP'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_KIND: ${{ steps.gate.outputs.target_kind }}
+          TARGET_NUMBER: ${{ steps.gate.outputs.target_number }}
+        run: |
+          if [ "$TARGET_KIND" = "ISSUE" ]; then
+            gh issue view "$TARGET_NUMBER" --json number,title,body,state > /tmp/target-raw.json
+            python -c "import json; x=json.load(open('/tmp/target-raw.json')); json.dump({'kind':'ISSUE','number':x['number'],'title':x['title'],'body':x.get('body') or '','changed_files':[]},open('/tmp/target.json','w'),indent=2)"
+          else
+            gh pr view "$TARGET_NUMBER" --json number,title,body,state,files > /tmp/target-raw.json
+            python -c "import json; x=json.load(open('/tmp/target-raw.json')); json.dump({'kind':'PR','number':x['number'],'title':x['title'],'body':x.get('body') or '','changed_files':[f['path'] for f in x.get('files',[])]},open('/tmp/target.json','w'),indent=2)"
+          fi
+
+      - name: Venus studies selected target against checked-out repository
+        if: steps.gate.outputs.decision != 'STOP'
+        run: |
+          python scripts/run_venus_autonomous_study.py --target /tmp/target.json --root . --output /tmp/VENUS_AUTONOMOUS_STUDY.json
+          cat /tmp/VENUS_AUTONOMOUS_STUDY.json
+
       - name: Materialize draft work branch
         id: materialize
+        if: steps.gate.outputs.decision != 'STOP'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          decision="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["decision"])')"
-          if [ "$decision" = "STOP" ]; then
-            echo "created=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          target_kind="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["target_kind"])')"
-          target_number="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["target_number"])')"
+          decision="${{ steps.gate.outputs.decision }}"
+          target_kind="${{ steps.gate.outputs.target_kind }}"
+          target_number="${{ steps.gate.outputs.target_number }}"
           cycle_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["cycle_id"])')"
+          study_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_STUDY.json"))["study_id"])')"
 
           branch="venus/autonomous-${GITHUB_RUN_ID}"
           git checkout -b "$branch"
           mkdir -p autonomy/cycles
           cp /tmp/VENUS_AUTONOMOUS_CYCLE.json "autonomy/cycles/${cycle_id}.json"
-          cp /tmp/AUTONOMOUS_LEARNING_STATE.json \
-            kernel/development/AUTONOMOUS_LEARNING_STATE.json
+          cp /tmp/VENUS_AUTONOMOUS_STUDY.json "autonomy/cycles/${cycle_id}-study-${study_id}.json"
+          cp /tmp/AUTONOMOUS_LEARNING_STATE.json kernel/development/AUTONOMOUS_LEARNING_STATE.json
 
           git config user.name "Venus developmental worker"
           git config user.email "actions@users.noreply.github.com"
-          git add \
-            "autonomy/cycles/${cycle_id}.json" \
-            kernel/development/AUTONOMOUS_LEARNING_STATE.json
-          git commit -m "venus: freeze autonomous developmental cycle ${cycle_id}"
+          git add "autonomy/cycles/${cycle_id}.json" "autonomy/cycles/${cycle_id}-study-${study_id}.json" kernel/development/AUTONOMOUS_LEARNING_STATE.json
+
+          staged="$(git diff --cached --name-only)"
+          unexpected="$(printf '%s\n' "$staged" | grep -Ev '^(autonomy/cycles/|kernel/development/AUTONOMOUS_LEARNING_STATE.json$)' || true)"
+          if [ -n "$unexpected" ]; then
+            printf '%s\n' "$unexpected" >&2
+            echo "autonomous write escaped bounded scope" >&2
+            exit 2
+          fi
+
+          git commit -m "venus: freeze autonomous study cycle ${cycle_id}"
           git push origin "$branch"
 
           lower_kind="$(printf '%s' "$target_kind" | tr '[:upper:]' '[:lower:]')"
-          body="$(cat <<EOF
-This draft PR was opened by the bounded Venus developmental worker.
+          body="This draft PR was opened by the bounded Venus developmental worker.
 
 Target: ${target_kind} #${target_number}
 Cycle: ${cycle_id}
+Study: ${study_id}
 Decision: ${decision}
 
-The worker may study, test, learn from externally reviewed prior cycle outcomes,
-and propose. It cannot merge this PR, promote developmental authority, release,
-close the target as success, access secrets, or count its own execution receipt
-as independent return.
+The branch contains the prefrozen cycle receipt, a repository-local study packet, and bounded learning state only. Venus may study and propose, but this worker cannot merge, promote developmental authority, release, close the target as success, access secrets, or count its own execution as independent return.
 
-The committed cycle receipt is the prefrozen custody object for this episode.
-The learning-state update remains non-authoritative until this draft is externally
-reviewed and admitted.
-EOF
-)"
-          url="$(gh pr create \
-            --draft \
-            --base main \
-            --head "$branch" \
-            --title "venus: autonomous cycle ${lower_kind}-${target_number}" \
-            --body "$body")"
+External review/admission remains required before the learning state becomes an accepted developmental successor."
+
+          url="$(gh pr create --draft --base main --head "$branch" --title "venus: autonomous cycle ${lower_kind}-${target_number}" --body "$body")"
 
           echo "created=true" >> "$GITHUB_OUTPUT"
           echo "url=$url" >> "$GITHUB_OUTPUT"
@@ -129,11 +139,15 @@ EOF
           TARGET_KIND: ${{ steps.materialize.outputs.target_kind }}
           TARGET_NUMBER: ${{ steps.materialize.outputs.target_number }}
         run: |
-          msg="Venus selected this as one bounded developmental target and froze a draft work cycle: $URL
+          msg="Venus selected and studied this bounded developmental target: $URL
 
-This is a proposal/working branch only. Merge, closure, promotion, and independent evaluation remain external."
+The draft contains a prefrozen cycle receipt plus repository-local study packet. Merge, closure, promotion, and independent evaluation remain external."
           if [ "$TARGET_KIND" = "ISSUE" ]; then
             gh issue comment "$TARGET_NUMBER" --body "$msg"
           else
             gh pr comment "$TARGET_NUMBER" --body "$msg"
           fi
+
+      - name: Preserve lawful STOP without creating work
+        if: steps.gate.outputs.decision == 'STOP'
+        run: echo "Venus retained STOP; no autonomous branch or PR created."
