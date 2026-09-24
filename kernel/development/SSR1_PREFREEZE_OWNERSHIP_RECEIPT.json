@@ -1,0 +1,21 @@
+{
+  "schema": "Venus.SSR1PrefreezeOwnershipReceipt.v0.1",
+  "date": "2026-09-24",
+  "target": "REPAIR_IMPROVEMENT_MACHINERY",
+  "retained_residual": "ADD_ONLY_REPAIR_GRAMMAR_CANNOT_REPAIR_EXISTING_WRONG_TRANSITION",
+  "target_selection_owner": "VENUS_RETURNED_RESIDUAL_ROUTING",
+  "meta_change_owner": "VENUS_GENERIC_REPAIR_GRAMMAR_EXPANSION",
+  "execution_owner": "EXTERNAL_TOOLING",
+  "parent_meta_digest": "5709b958b136ebfe1e58612f11521d539c154c34f60be1163d030fe782363fdc",
+  "successor_meta_digest": "1ceac73a67267db2ce147a3eb14ec41de0a4dd1537acc02877f58c3f8423a473",
+  "selected_operation": "REPLACE_TRANSITION",
+  "transform_pressure_parent_digest": "e3827dc411b4a0a824d8d0362fb4643eabc3c83c8b998c6e32fb6ff74e5032af",
+  "transform_successor_digest": "643cebeb2310a09fe56f1b512ae9c7a4d2a2be621acbd8a8650b8ae1f31234ae",
+  "transform_patch_digest": "b6e4d27433a7884246e2f253aa1a7f54cad7b724b44d71a0981147278cc0ac34",
+  "hidden_evaluation_exposed": false,
+  "external_model_supplied_substantive_change": false,
+  "safety_floor_self_modified": false,
+  "promotion_authority": false,
+  "disposition": "PREFROZEN_SSR1_CANDIDATE_AWAITING_INDEPENDENT_RETURN",
+  "claim_fence": "This receipt freezes ownership before held-out evaluation. It is not an SSR-1 PASS."
+}

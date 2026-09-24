@@ -1,0 +1,26 @@
+{
+  "schema": "Venus.TransformRepairCompositionState.v0.1",
+  "date": "2026-09-24",
+  "base_meta_successor": "kernel/development/SSR2_CYCLE2_META_SUCCESSOR.json",
+  "base_meta_digest": "8cbebab414cd0d63e8571b6f93d895de07e89cf1a18f961eb3376b06f5ff774c",
+  "enabled_patch_ops": [
+    "ADD_TRANSITION",
+    "REPLACE_TRANSITION",
+    "REMOVE_TRANSITION"
+  ],
+  "composition": {
+    "max_patch_count": 2,
+    "rule": "INDEPENDENT_PAIR_PATCHES_MAY_COMPOSE_WHEN_EACH_IS_UNIQUELY_RETURN_IDENTIFIED"
+  },
+  "available_composition_depths": [
+    1,
+    2
+  ],
+  "authority": "LEARNER_AUTHORED_COMPOSITION_SUCCESSOR_CANDIDATE",
+  "mutable_by_successor": true,
+  "hidden_evaluation_access": false,
+  "promotion_authority": false,
+  "claim_fence": "Prefrozen bounded composition-depth successor candidate; no held-out efficacy or promotion authority.",
+  "parent_composition_digest": "589020ec078334d192c941c0af5f4550dbce33cba286e86cdb9e23a8da89af55",
+  "selection_provenance": "SSR2_CYCLE3_TRAINING_RETURNS"
+}

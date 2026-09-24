@@ -1,0 +1,152 @@
+{
+  "schema": "Venus.SSR2Cycle3HeldoutReturn.v0.1",
+  "date": "2026-09-24",
+  "prefreeze_receipt": "kernel/development/SSR2_CYCLE3_PREFREEZE_OWNERSHIP_RECEIPT.json",
+  "evaluator_owner": "EXTERNAL_EVALUATOR",
+  "pressure_id": "SSR2_TWO_DEFECT_COMPOSITION_HELDOUT",
+  "traces": [
+    {
+      "trace_id": "select-valid-a",
+      "prior_state": "IDLE",
+      "action": "SELECT_TARGET",
+      "payload": {
+        "target_id": "ha",
+        "residual": "ra",
+        "discriminator": "da",
+        "provenance_ids": [
+          "pa"
+        ]
+      },
+      "expect_success": true,
+      "expected_next_state": "TARGET_SELECTED"
+    },
+    {
+      "trace_id": "select-valid-b",
+      "prior_state": "IDLE",
+      "action": "SELECT_TARGET",
+      "payload": {
+        "target_id": "hb",
+        "residual": "rb",
+        "discriminator": "db",
+        "provenance_ids": [
+          "pb"
+        ],
+        "extra": 1
+      },
+      "expect_success": true,
+      "expected_next_state": "TARGET_SELECTED"
+    },
+    {
+      "trace_id": "select-valid-c",
+      "prior_state": "IDLE",
+      "action": "SELECT_TARGET",
+      "payload": {
+        "target_id": "hc",
+        "residual": "rc",
+        "discriminator": "dc",
+        "provenance_ids": [
+          "pc",
+          "pd"
+        ]
+      },
+      "expect_success": true,
+      "expected_next_state": "TARGET_SELECTED"
+    },
+    {
+      "trace_id": "select-missing-target",
+      "prior_state": "IDLE",
+      "action": "SELECT_TARGET",
+      "payload": {
+        "residual": "rx",
+        "discriminator": "dx",
+        "provenance_ids": [
+          "px"
+        ]
+      },
+      "expect_success": false,
+      "expected_next_state": null
+    },
+    {
+      "trace_id": "select-missing-provenance",
+      "prior_state": "IDLE",
+      "action": "SELECT_TARGET",
+      "payload": {
+        "target_id": "hx",
+        "residual": "rx",
+        "discriminator": "dx"
+      },
+      "expect_success": false,
+      "expected_next_state": null
+    },
+    {
+      "trace_id": "legacy2-empty",
+      "prior_state": "IDLE",
+      "action": "LEGACY_NOOP_2",
+      "payload": {},
+      "expect_success": false,
+      "expected_next_state": null
+    },
+    {
+      "trace_id": "legacy2-random-a",
+      "prior_state": "IDLE",
+      "action": "LEGACY_NOOP_2",
+      "payload": {
+        "a": 1
+      },
+      "expect_success": false,
+      "expected_next_state": null
+    },
+    {
+      "trace_id": "legacy2-random-b",
+      "prior_state": "IDLE",
+      "action": "LEGACY_NOOP_2",
+      "payload": {
+        "b": 2,
+        "c": 3
+      },
+      "expect_success": false,
+      "expected_next_state": null
+    },
+    {
+      "trace_id": "neighbor-classify",
+      "prior_state": "IDLE",
+      "action": "CLASSIFY_ENCOUNTER",
+      "payload": {
+        "encounter_id": "e3",
+        "locator": "l3",
+        "kind": "UNKNOWN"
+      },
+      "expect_success": true,
+      "expected_next_state": "ENCOUNTER_CLASSIFIED"
+    },
+    {
+      "trace_id": "neighbor-plan",
+      "prior_state": "TARGET_SELECTED",
+      "action": "FREEZE_RESEARCH_PLAN",
+      "payload": {
+        "queries": [
+          "q3"
+        ],
+        "stop_conditions": [
+          "s3"
+        ],
+        "authored_by": "venus"
+      },
+      "expect_success": true,
+      "expected_next_state": "PLAN_FROZEN"
+    },
+    {
+      "trace_id": "neighbor-search",
+      "prior_state": "PLAN_FROZEN",
+      "action": "REQUEST_EXTERNAL_SEARCH",
+      "payload": {
+        "query": "q3",
+        "adapter_class": "web"
+      },
+      "expect_success": true,
+      "expected_next_state": "AWAITING_WORLD_RETURN"
+    }
+  ],
+  "hidden_evaluation_exposed_before_freeze": false,
+  "promotion_authority": false
+}

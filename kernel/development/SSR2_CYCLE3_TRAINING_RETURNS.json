@@ -1,0 +1,61 @@
+{
+  "schema": "Venus.SSR2Cycle3TrainingReturns.v0.1",
+  "date": "2026-09-24",
+  "pressure_id": "opaque-repair-d",
+  "selected_by": "kernel/development/SSR2_CYCLE3_TARGET_SELECTION_RESULT.json",
+  "traces": [
+    {
+      "trace_id": "select-valid",
+      "prior_state": "IDLE",
+      "action": "SELECT_TARGET",
+      "payload": {
+        "target_id": "c3",
+        "residual": "r3",
+        "discriminator": "d3",
+        "provenance_ids": [
+          "p3"
+        ]
+      },
+      "expect_success": true,
+      "expected_next_state": "TARGET_SELECTED",
+      "provenance_id": "cycle3-train:select"
+    },
+    {
+      "trace_id": "select-missing-target",
+      "prior_state": "IDLE",
+      "action": "SELECT_TARGET",
+      "payload": {
+        "residual": "r3",
+        "discriminator": "d3",
+        "provenance_ids": [
+          "p3"
+        ]
+      },
+      "expect_success": false,
+      "expected_next_state": null,
+      "provenance_id": "cycle3-train:select-missing"
+    },
+    {
+      "trace_id": "legacy2-must-fail",
+      "prior_state": "IDLE",
+      "action": "LEGACY_NOOP_2",
+      "payload": {},
+      "expect_success": false,
+      "expected_next_state": null,
+      "provenance_id": "cycle3-train:legacy"
+    },
+    {
+      "trace_id": "legacy2-payload-must-fail",
+      "prior_state": "IDLE",
+      "action": "LEGACY_NOOP_2",
+      "payload": {
+        "opaque": 1
+      },
+      "expect_success": false,
+      "expected_next_state": null,
+      "provenance_id": "cycle3-train:legacy-payload"
+    }
+  ],
+  "hidden_evaluation_exposed": false,
+  "promotion_authority": false
+}
