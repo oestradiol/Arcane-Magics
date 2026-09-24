@@ -40,6 +40,8 @@ PASS_MODEL_SPECIFIC_PHYSICAL_F_WITNESS
 
 These are different layers of one lineage.
 
+The repository also contains newer **admitted infrastructure** that does not advance the developmental head: a state-owned inherited generic residual-search capability and executable Internalizer/O*/Anti-Minerva guards. They make the next repair path more self-contained while preserving World return, evaluator independence, authority, jurisdiction, STOP/WITHHOLD, and parent custody outside the capability.
+
 ## The failure that best explains the architecture
 
 EDU17 initially looked like a successful research episode.
@@ -152,7 +154,7 @@ The repository does not currently establish:
 
 - AGI;
 - capability-SOTA;
-- DNN replacement;
+- substrate independence or hosted-model replacement where such a substrate is actually present;
 - open-ended RSI;
 - autonomous science;
 - unrestricted semantic understanding;
