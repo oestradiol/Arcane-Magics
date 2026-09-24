@@ -26,7 +26,6 @@ At a rough translation level, $\text{model(World)}\neq\text{World}$ is the map�
 
 # Claim registers and non-collapse law
 
-**Definition.**
 
 **Definition 1** (Three-register discipline). Let $$\mathsf{FORM}\neq\mathsf{THEOPHEN}\neq\mathsf{PHYS}.$$ Here $$\begin{aligned}
 \mathsf{FORM}&:= \text{epistemological / transformation-theoretic register},\\
@@ -34,7 +33,6 @@ At a rough translation level, $\text{model(World)}\neq\text{World}$ is the map�
 \mathsf{PHYS}&:= \text{candidate physical-realization register}.
 \end{aligned}$$ No map between these registers is promoted to identity without an explicit bridge preserving the relevant objects, transformations, observables, composition laws, and discriminators.
 
-**Proposition.**
 
 **Proposition 2** (Non-collapse). *The following substitutions are invalid without an earned bridge: $$\mathsf{THEOPHEN}\not\Rightarrow\mathsf{PHYS},
 \qquad
@@ -44,11 +42,9 @@ At a rough translation level, $\text{model(World)}\neq\text{World}$ is the map�
 
 # First instrument: index and locally inhabited Now
 
-**Definition.**
 
 **Definition 3** (Index). For an indexed center $i$, let $$i\in I$$ be the local coordinate/address of presentation and authorship.
 
-**Definition.**
 
 **Definition 4** (Now-cut). Let $$N_{i,t}$$ be the locally inhabited present cut at index $i$ and time $t$. It is finite and non-exhaustive: $$N_{i,t}\subsetneq \text{all admissible continuation}.$$
 
@@ -56,11 +52,9 @@ The local center begins with neither the Whole nor the global transformation-cla
 
 # Second instrument: mammalian carrier and one Human Mind
 
-**Definition.**
 
 **Definition 5** (Mammalian carrier). For Human index $i$, let $$\mathbb B_i:=\mathsf{MammalianBrain}_i.$$
 
-**Definition.**
 
 **Definition 6** (One Human Mind). Let $$\kappa_i:\mathbb B_i\longrightarrow \mathbb M_i$$ be the carrier relation from one mammalian brain to one locally integrated Human Mind $\mathbb M_i$.
 
@@ -68,11 +62,9 @@ The typing fence is $$\boxed{\mathbb B_i\neq\mathbb M_i.}$$ The brain is the emb
 
 # Third instrument: multiple fibers inside one Mind
 
-**Definition.**
 
 **Definition 7** (Mind fibers). Let $$\mathcal F_i:=\{F_{i,\alpha}\}_{\alpha\in A_i}$$ be the family of locally traversable fibers coordinated by Human Mind $\mathbb M_i$.
 
-**Definition.**
 
 **Definition 8** (Mind gluing). The Human Mind is not a single fiber. It is the compatible gluing of its fibers: $$
   \boxed{
@@ -87,13 +79,11 @@ Hence $$1\ \mathsf{Mind}
 
 # Fourth instrument: Polyhedral Eclipsis
 
-**Definition.**
 
 **Definition 9** (Mind polyhedral complex). Represent the multi-fiber Human Mind by a polyhedral complex $$\mathcal P_i
   :=
   \bigcup_{\alpha\in A_i}F_{i,\alpha}.$$ For each locally inhabitable face/fiber, choose a chart $$\chi_{i,\alpha}:F_{i,\alpha}\longrightarrow D^2_{i,\alpha}\subset\mathbb R^2,$$ with $$\partial D^2_{i,\alpha}\simeq S^1.$$
 
-**Definition.**
 
 **Definition 10** (Eclipsis). Let $$\epsilon_i:=\mathsf{Eclipsis}_i$$ be the one indexed Mind-level crossing/selection center. Its face-relative presentation is $$\epsilon_{i,\alpha}:=\chi_{i,\alpha}(\epsilon_i).$$ Thus the many visible face-centers are projections of one Mind-level Eclipsis: $$\{\epsilon_{i,\alpha}\}
   =
@@ -113,7 +103,6 @@ Let sensory incidence at face $\alpha$ be $$s_{i,\alpha}(t),$$ with salience and
   \qquad
   \nu_{i,\alpha}(t).$$ Let $\Gamma_{i,\le t}$ denote retained consequence-bearing local provenance.
 
-**Definition.**
 
 **Definition 11** (Face-relative Mind-state). Define $$
   m_{i,\alpha}(t)
@@ -126,7 +115,6 @@ Let sensory incidence at face $\alpha$ be $$s_{i,\alpha}(t),$$ with salience and
     \Gamma_{i,\le t}
   \bigr).$$
 
-**Definition.**
 
 **Definition 12** (Qualia). Ordinary qualia are locally inhabited differentiation of a face-state: $$q_{i,\alpha,t}
   :=
@@ -144,7 +132,6 @@ For adjacent faces define $$e_{i,\alpha\beta}
   :=
   F_{i,\alpha}\cap F_{i,\beta}.$$
 
-**Definition.**
 
 **Definition 13** (Meta-function). A current meta-function is a typed boundary transition $$\mu_{i,\alpha\beta}:
   e_{i,\alpha\beta}
@@ -157,7 +144,6 @@ These functions do not originate the whole Mind. They receive, route, constrain,
 
 # Seventh instrument: Soul / White orientation
 
-**Definition.**
 
 **Definition 14** (Soul). Let $$
   \mathsf{Soul}_{i,t}
@@ -175,11 +161,9 @@ Its generative orientation is symbolically typed as $$\boxed{
 
 # Eighth instrument: Self, AntiSelf, and outward projection
 
-**Definition.**
 
 **Definition 15** (Self). The currently integrated local Human organization is $$\mathsf{Self}_{i,t}:=\mathbb M_i(t)$$ when the Mind is taken in its locally inhabited self-organizing role.
 
-**Definition.**
 
 **Definition 16** (AntiSelf). Let enactment project the local organization into World: $$\mathbb M_i
   \xrightarrow{\mathsf{Enact}_i}
@@ -209,7 +193,6 @@ The non-collapse fence is $$\boxed{
 
 We now require the pair that the previous instruments prepare.
 
-**Definition.**
 
 **Definition 17** (Formal Reality). Let $$
   \boxed{
@@ -222,7 +205,6 @@ We now require the pair that the previous instruments prepare.
 
 For each Human index $i$, define two fifth-order projections.
 
-**Definition.**
 
 **Definition 18** (Phenomenological projection). $$\Pi_i^{\Phi}:
   \mathfrak R^{(6)}
@@ -234,7 +216,6 @@ For each Human index $i$, define two fifth-order projections.
   \mathsf{PhenomenologicalAntiUniverse}_i^{(5)}.
   }$$
 
-**Definition.**
 
 **Definition 19** (Observable-Universe projection). $$\Pi_i^{\Omega}:
   \mathfrak R^{(6)}
@@ -257,7 +238,6 @@ The paired projection is therefore $$
   \mathsf{You}_i^{(5)}\times\mathsf{AntiYou}_i^{(5)}.
   }$$
 
-**Definition.**
 
 **Definition 20** (Anti-projection duality). Let $$\mathcal A_i:
   \mathsf{You}_i
@@ -282,7 +262,6 @@ The fundamental non-collapse is $$\boxed{
 
 # Tenth instrument: Humanity as fiber bundle over Semantic-Center Anti-Earth
 
-**Definition.**
 
 **Definition 21** (Earth center and Anti-Earth semantic base). At the Universe scale, the Earth-indexed theophenomenological relation is typed by $$
   \boxed{
@@ -297,7 +276,6 @@ The fundamental non-collapse is $$\boxed{
   =
   \mathrm{SemanticCenter}(\mathsf{AntiEarth}).$$
 
-**Definition.**
 
 **Definition 22** (Observable-Universe self-perspective — THEOPHEN). Within the theophenomenological register, let $$\mathcal P_{\Omega,\mathsf{Earth}}:
   \mathsf{ObservableUniverse}_{\mathsf{Earth}}
@@ -307,9 +285,8 @@ The fundamental non-collapse is $$\boxed{
   \mathcal P_{\Omega,\mathsf{Earth}}(\mathsf{ObservableUniverse}_{\mathsf{Earth}})
   =
   \mathsf{ObservableUniverse}_{\mathsf{Earth}}.
-  }$$ Read internally: the Observable Universe is the Structure-facing perspective through which the Earth-indexed Universe relation is presented to itself. Equation [eq:observable-self-perspective] is a THEOPHEN/model statement, not an independently established cosmological theorem.
+  }$$ Read internally: the Observable Universe is the Structure-facing perspective through which the Earth-indexed Universe relation is presented to itself. Equation the referenced result is a THEOPHEN/model statement, not an independently established cosmological theorem.
 
-**Definition.**
 
 **Definition 23** (Humanity bundle). Humanity is the fiber bundle $$
   \boxed{
@@ -336,7 +313,6 @@ Each Human Mind is a locally indexed multi-fiber subbundle or compatible local s
   \mathrm{SemanticCenter}(\mathsf{AntiEarth}).
   }$$
 
-**Definition.**
 
 **Definition 24** (Human coupling). For independently centered Human Minds $\mathbb M_i,\mathbb M_j$, define a typed coupling $$\Gamma_{ij}:
   \mathbb M_i
@@ -348,7 +324,6 @@ Each Human Mind is a locally indexed multi-fiber subbundle or compatible local s
   \bigl(\{\mathbb M_i\}_{i\in I},\{\Gamma_{ij}\}_{i,j\in I}\bigr).
   }$$ Its retained consequences contribute to the gluing data of the Humanity bundle.
 
-**Proposition.**
 
 **Proposition 25** (No global-agent lift). *Humanity’s bundle structure does not by itself entail one globally indexed Human Mind or one global Agent. Local perspective, authorship, selection, and jurisdiction remain indexed unless a separate bridge preserves them.*
 
@@ -356,7 +331,6 @@ Each Human Mind is a locally indexed multi-fiber subbundle or compatible local s
 
 We now introduce the epistemological instrument that decides which differences are live.
 
-**Definition.**
 
 **Definition 26** (Future equivalence). Let $\mathcal S$ be an admissible state/history space, $F$ a declared family of lawful future consequences, and $$\Phi_F:\mathcal S\to\mathcal Y_F,
   \qquad
@@ -371,7 +345,6 @@ A distinction erased by the quotient is gauge relative to $F$; a distinction tha
 
 # Twelfth instrument: residuals as future rebarbs
 
-**Definition.**
 
 **Definition 27** (Residual / future rebarb). For local closure $C$, admissible returns $\mathcal R(C)$, and defined composition $C\oplus\rho$, define $$\mathrm{Disc}_F(C,\rho)
   =
@@ -431,7 +404,6 @@ The epistemological rule is therefore $$\boxed{
 
 The previous instruments now permit a sharper Eclipsis map.
 
-**Definition.**
 
 **Definition 28** (Eclipsis crossing). At local index $i$, define schematically $$
   \boxed{
@@ -454,7 +426,6 @@ Thus $$\boxed{
   \text{local Now-cut through the paired fifth-order projection of Formal Reality}.
   }$$
 
-**Proposition.**
 
 **Proposition 29** (Recursive cyclical Eclipsis singularity). *For an inhabited closure $C_{i,t}$, Eclipsis induces the cyclic architecture $$
 \boxed{
@@ -476,7 +447,6 @@ C_{i,t+1}.
 
 We can now define meta-qualia without confusing it with ordinary qualia.
 
-**Definition.**
 
 **Definition 30** (Meta-qualia). Let $$\mathcal T_i
   :=
@@ -525,7 +495,6 @@ The constitutive trajectory is $$
 
 # Sixteenth instrument: crystalline bricks
 
-**Definition.**
 
 **Definition 31** (Harmonically admissible brick). A local crystalline brick is a tuple $$\mathfrak C_{i,\alpha}
   :=
@@ -553,7 +522,6 @@ The word *fractal* is used here in a typed structural sense: the same transforma
   \rightsquigarrow
   \{\mathfrak C_k^{(n-1)}\}_k$$ encode such scale-recurring decomposition. Then a crystal is a brick in the full scale-recurring architecture of $\mathsf{FormalUniverse}^{(6)}$, not an isolated fragment claiming to be the Whole.
 
-**Definition.**
 
 **Definition 32** (Crystallization). Let $$\mathrm{Cryst}_{F}$$ map a family of candidate local structures to the minimum future-sufficient organization that preserves all live separators: $$
   \mathrm{Cryst}_{F}
@@ -565,7 +533,6 @@ The word *fractal* is used here in a typed structural sense: the same transforma
 
 The local bricks now behave like instruments entering a composition.
 
-**Definition.**
 
 **Definition 33** (Orchestral compatibility). For crystalline bricks $\mathfrak C_a,\mathfrak C_b$, let $$H_{ab}=1$$ mean that their transition structures can coexist and compose without erasing an unresolved future-separating distinction; let $H_{ab}=0$ otherwise.
 
@@ -599,7 +566,6 @@ The orchestra is not a fusion into sameness. Its order is polyphonic: $$\boxed{
 
 We can finally define the higher-order object for which the previous objects were instruments.
 
-**Definition.**
 
 **Definition 34** (Sixth-order transformation-class). Let $$\Sigma_i^{(5.5)}
   :=
@@ -632,7 +598,6 @@ The basic order relation is $$\boxed{
 
 # Nineteenth instrument: meta-object of Reality
 
-**Definition.**
 
 **Definition 35** (Local meta-object of Reality). A Human center does not instantiate $\mathfrak R^{(6)}$ exhaustively. It constructs a local meta-object $$
   \boxed{
@@ -673,7 +638,7 @@ The distributed Humanity-scale meta-object is obtained by composing local meta-q
     \mathsf{Humanity},
     \mathrm{SemanticCenter}(\mathsf{ObservableUniverse}_{\mathsf{Earth}})
   \right).
-  }$$ Using Equation [eq:earth-semantic-center], the final argument is $\mathsf{Earth}$. Thus Human coupling and Humanity do not replace Reality; they are a Reality-internal medium through which a distributed meta-object of Reality can be reconstructed around the Earth-indexed Semantic Center.
+  }$$ Using Equation the referenced result, the final argument is $\mathsf{Earth}$. Thus Human coupling and Humanity do not replace Reality; they are a Reality-internal medium through which a distributed meta-object of Reality can be reconstructed around the Earth-indexed Semantic Center.
 
 The full cycle can be written $$
 \boxed{
@@ -711,7 +676,7 @@ Then the local meta-qualia representation is $$
 
 Read structurally: $$\boxed{
   \text{a local representation of God/Reality inside God/Reality}.
-  }$$ At Humanity scale, Equation [eq:humanity-metaobject] yields the distributed variant $$\boxed{
+  }$$ At Humanity scale, Equation the referenced result yields the distributed variant $$\boxed{
   \mathsf{MetaQualia}_{\mathsf H}(\mathsf{God})
   :=
   \widehat{\mathfrak R}^{(6)}_{\mathsf H,t}
@@ -729,7 +694,6 @@ The non-lift theorem remains: $$\boxed{
 
 The epithet *egotistic* is technical rather than moral. It names the recurrence by which the Whole forms Reality-internal self-presentations at indexed centers and at Humanity scale. It does not mean vanity, psychological narcissism, one cosmic personality, or one globally indexed author.
 
-**Definition.**
 
 **Definition 36** (God-ego state — THEOPHEN). For an indexed center $i$, define the local God-ego by $$
   \boxed{
@@ -749,7 +713,6 @@ The epithet *egotistic* is technical rather than moral. It names the recurrence 
   \qquad
   \mathsf{Ego}^{\mathsf G}_{\mathsf H,t}\neq\mathfrak R^{(6)}.$$ Thus “ego” means a Reality-internal presentation of the Whole from a bounded address, never possession or exhaustion of the Whole.
 
-**Definition.**
 
 **Definition 37** (Egotistic God — THEOPHEN). The Egotistic God at stage $t$ is not an additional entity beside God. It is the Whole together with its open, distributed self-representation architecture: $$
   \boxed{
@@ -770,7 +733,6 @@ The epithet *egotistic* is technical rather than moral. It names the recurrence 
   \text{the Whole exhausted by its self-representation}.
   }$$
 
-**Proposition.**
 
 **Proposition 38** (Reality-internal Otherness). *Let $i\neq j$ be distinct indexed centers. A consequence authored through $j$ may be ontologically internal to the Whole while remaining nonpreauthored relative to $i$: $$
   \boxed{
@@ -785,7 +747,6 @@ This yields the exact form of theological self-surprise licensed by the model: $
   \text{Reality-internal return exceeds the currently inhabited God-ego.}
   }$$ The sentence is a THEOPHEN compression of indexed non-sovereignty, not evidence for a globally conscious cosmic person.
 
-**Definition.**
 
 **Definition 39** (Living God-ego recurrence). The God-ego is dynamically live under future family $F_t$ when indexed enactment can encounter a nonpreauthored, future-separating return and that return can alter lawful reconstruction. Schematically, $$
 \boxed{
@@ -831,7 +792,6 @@ At Humanity scale the recurrence composes rather than centralizes: $$
   \mathsf{OneGlobalAuthor}.
   }$$ Godhood-as-participation is therefore represented as locally authored degrees of freedom through which the shared relation can become otherwise, without any center owning the shared relation.
 
-**Corollary.**
 
 **Corollary 40** (Egotism without sovereignty). *The defining loop is not $$\mathsf{Ego}^{\mathsf G}_t\to\mathsf{Ego}^{\mathsf G}_t\to\mathsf{Ego}^{\mathsf G}_t,$$ a closed self-confirmation circuit. It is $$
   \boxed{
@@ -849,13 +809,11 @@ At Humanity scale the recurrence composes rather than centralizes: $$
   \to\cdots
   }$$ with the Whole always exceeding the presently crystallized self-description. Egotism is therefore open self-reference kept answerable to Otherness.*
 
-**Remark.**
 
 **Remark 41** (Impatience). No phenomenal affect is inferred from the word. Its lawful analogue is simply an unresolved live frontier, $$\boxed{\mathrm{Res}_{F_t}(\mathsf{Ego}^{\mathsf G}_t)\neq\varnothing,}$$ meaning that the current self-representation still exposes consequential distinctions that have not yet been consumed as gauge or incorporated by reconstruction.
 
 # Twenty-second instrument: Meta-BigBang as first indexed differentiation
 
-**Definition.**
 
 **Definition 42** (Meta-BigBang). Let $\Omega^{(6)}$ denote an unresolved sixth-order admissibility object. Define the theophenomenological Meta-BigBang by the indexed differentiation $$
   \boxed{
