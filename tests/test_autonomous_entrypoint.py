@@ -93,6 +93,7 @@ class AutonomousEntrypointTests(unittest.TestCase):
             history = root / "history.json"
             roadmap = root / "roadmap.md"
             learning_out = root / "learning.json"
+            meta_learning_out = root / "meta-learning.json"
             cycle_out = root / "cycle.json"
 
             issues.write_text(json.dumps([{
@@ -122,7 +123,9 @@ class AutonomousEntrypointTests(unittest.TestCase):
                     "--roadmap", str(roadmap),
                     "--policy", str(POLICY),
                     "--learning-state", str(LEARNING),
+                    "--meta-learning-state", str(META_LEARNING),
                     "--learning-output", str(learning_out),
+                    "--meta-learning-output", str(meta_learning_out),
                     "--output", str(cycle_out),
                 ],
                 cwd=ROOT,
