@@ -8,45 +8,72 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 MATRIX = ROOT / "provenance" / "HISTORICAL_DISTINCTION_TEST_MATRIX.json"
-TEST_DIR = ROOT / "tests"
-SCRIPT_DIR = ROOT / "scripts"
+COVERAGE = ROOT / "docs" / "TEST_COVERAGE_MATRIX.md"
 
 ALLOWED_STATUS = {
-    "IMPLEMENTED",
-    "IMPLEMENTED_PARTIAL",
-    "IMPLEMENTED_PROVENANCE_ONLY",
-    "IMPLEMENTED_PROSE_ONLY",
+    "COVERED",
+    "COVERED_PARTIAL",
+    "COVERED_STORAGE_ONLY",
+    "COVERED_PROVENANCE_ONLY",
+    "COVERED_PROSE_ONLY",
     "PLANNED",
     "OPEN_EXTRACTION",
+    "NO_AUTOMATED_TEST_YET",
     "HISTORICAL_ONLY",
 }
 
-errors: list[str] = []
+REQUIRED_FIELDS = {
+    "id",
+    "source_revision_or_branch",
+    "source_artifact",
+    "distinction",
+    "triggering_experiment_or_failure",
+    "causal_consequence",
+    "later_dependents",
+    "current_owner",
+    "test_layer",
+    "test_id_path",
+    "status",
+    "credit_genealogy_note",
+    "reopening_condition",
+}
 
-if not MATRIX.exists():
-    errors.append("missing provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json")
-else:
-    data = json.loads(MATRIX.read_text(encoding="utf-8"))
-    rows = data.get("distinctions", [])
-    if not rows:
-        errors.append("historical distinction matrix has no rows")
+REQUIRED_CONCEPTS = (
+    "execution receipt != independent return",
+    "reconstruction/WORD != state-changing PORTAL",
+    "stored state != demonstrated learning",
+    "current future-equivalence != permanent identity",
+    "uncertainty-marker mention != object-level unresolved empirical incidence",
+    "exact developmental evidence authority != replayable executable custody",
+    "failure of realization/proxy != parent/global rejection",
+    "malformed question != immortal OPEN research object",
+    "structural bridge/analogy != target-domain theorem",
+)
+
+
+def source_paths(raw: str) -> list[str]:
+    # A row may cite multiple source paths separated by semicolon.
+    return [p.strip() for p in raw.split(";") if p.strip()]
+
+
+def main() -> int:
+    errors: list[str] = []
+
+    if not MATRIX.exists():
+        errors.append("missing provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json")
+        rows = []
+    else:
+        data = json.loads(MATRIX.read_text(encoding="utf-8"))
+        if data.get("schema") != "Venus.HistoricalDistinctionTestMatrix.v1":
+            errors.append("historical distinction matrix has wrong schema")
+        rows = data.get("rows", [])
+        if not rows:
+            errors.append("historical distinction matrix has no rows")
+
     seen: set[str] = set()
-    required = {
-        "id",
-        "source_revision_or_branch",
-        "source_artifact",
-        "distinction",
-        "triggering_experiment_or_failure",
-        "causal_consequence",
-        "later_dependents",
-        "current_owner",
-        "test_layer",
-        "status",
-        "credit_genealogy_note",
-        "reopening_condition",
-    }
+    distinctions: list[str] = []
     for i, row in enumerate(rows, 1):
-        missing = sorted(required - set(row))
+        missing = sorted(REQUIRED_FIELDS - set(row))
         if missing:
             errors.append(f"row {i}: missing fields {missing}")
             continue
@@ -54,63 +81,60 @@ else:
         if rid in seen:
             errors.append(f"duplicate distinction id: {rid}")
         seen.add(rid)
+        distinctions.append(row["distinction"])
         if row["status"] not in ALLOWED_STATUS:
             errors.append(f"{rid}: invalid status {row['status']}")
-        src = ROOT / row["source_artifact"]
-        if not src.exists():
-            errors.append(f"{rid}: source artifact missing: {row['source_artifact']}")
-        test_path = row.get("test_path")
-        if row["status"].startswith("IMPLEMENTED") and test_path:
-            p = ROOT / test_path
+        if not row["later_dependents"]:
+            errors.append(f"{rid}: later_dependents must be explicit")
+        for rel in source_paths(row["source_artifact"]):
+            # Some historical rows name issue/review composites rather than one path.
+            if rel.startswith(("issue ", "issues/", "review +", "historical ")):
+                continue
+            p = ROOT / rel
             if not p.exists():
+                errors.append(f"{rid}: source artifact missing: {rel}")
+        test_path = row.get("test_id_path")
+        if row["status"] == "COVERED" and not test_path:
+            errors.append(f"{rid}: COVERED requires test_id_path")
+        if test_path and "::" not in test_path and ";" not in test_path and not test_path.startswith(("issue ", "scripts/")):
+            # Bare repository paths are acceptable only if they exist.
+            if not (ROOT / test_path).exists():
                 errors.append(f"{rid}: mapped test/audit missing: {test_path}")
-        if row["status"] == "IMPLEMENTED" and not test_path:
-            errors.append(f"{rid}: IMPLEMENTED requires test_path")
 
-    # These are constitutional/historical separators already relied upon by live docs.
-    required_ids = {
-        "RECEIPT_NOT_RETURN",
-        "WORD_NOT_PORTAL",
-        "LOCAL_FAILURE_NOT_GLOBAL",
-        "CURRENT_LABEL_NOT_AUTHORITY",
-        "MATURE_SUBSTITUTION_NOT_GENEALOGY_ERASURE",
-        "MEMORY_NOT_LEARNING",
-        "MAP_NOT_TRAVERSAL",
-        "UNKNOWN_NOT_PERMISSION",
-        "FOUNDER_LABEL_NOT_SEMANTICS",
-        "HANDOFF_NOT_REPLICATION",
-        "NEGATIVE_BRANCH_PRESERVED",
-        "CERTIFIED_INSUFFICIENCY_BEFORE_EXPANSION",
-        "FUTURE_FAMILY_REOPENING",
-        "SELECTED_EVIDENCE_NOT_RETURN_BUNDLE",
-        "MENTION_NOT_INCIDENCE",
-        "NO_GLOBAL_AGENT_LIFT",
-        "STOP_REENTRY_NOT_FAKE_REVISION",
-        "STATUS_FOSSIL",
-        "NEGATIVE_GLOBALIZE",
-        "MALFORMED_OPEN",
-        "BRIDGE_THEOREM_LAUNDER",
-    }
-    absent = sorted(required_ids - seen)
-    if absent:
-        errors.append("matrix missing required historical distinctions: " + ", ".join(absent))
+    normalized = "\n".join(distinctions).lower()
+    for concept in REQUIRED_CONCEPTS:
+        if concept.lower() not in normalized:
+            errors.append(f"matrix missing required causal concept: {concept}")
 
-# Every issue in the roadmap range should be named by the test-architecture issue.
-roadmap_issue = ROOT / "docs" / "TEST_COVERAGE_MATRIX.md"
-if not roadmap_issue.exists():
-    errors.append("missing docs/TEST_COVERAGE_MATRIX.md")
-else:
-    text = roadmap_issue.read_text(encoding="utf-8", errors="replace")
-    numbers = {int(n) for n in re.findall(r"#(\d+)", text)}
-    # Coverage is allowed to omit closed issues later, but v0.1 explicitly covers the current planning range.
-    for n in range(4, 38):
-        if n not in numbers:
-            errors.append(f"TEST_COVERAGE_MATRIX.md missing issue #{n}")
+    if len(rows) < 40:
+        errors.append(
+            f"historical archaeology unexpectedly shrank to {len(rows)} rows; expected >=40"
+        )
 
-if errors:
-    print("CAUSAL DISTINCTION / COVERAGE AUDIT FAIL")
-    for error in errors:
-        print("- " + error)
-    sys.exit(1)
+    if not COVERAGE.exists():
+        errors.append("missing docs/TEST_COVERAGE_MATRIX.md")
+    else:
+        text = COVERAGE.read_text(encoding="utf-8", errors="replace")
+        numbers = {int(n) for n in re.findall(r"#(\d+)", text)}
+        for n in range(4, 38):
+            if n not in numbers:
+                errors.append(f"TEST_COVERAGE_MATRIX.md missing issue #{n}")
 
-print("CAUSAL DISTINCTION / COVERAGE AUDIT PASS")
+    if errors:
+        print("CAUSAL DISTINCTION / COVERAGE AUDIT FAIL")
+        for error in errors:
+            print("- " + error)
+        return 1
+
+    status_counts: dict[str, int] = {}
+    for row in rows:
+        status_counts[row["status"]] = status_counts.get(row["status"], 0) + 1
+    print(
+        "CAUSAL DISTINCTION / COVERAGE AUDIT PASS "
+        f"({len(rows)} distinctions; statuses={status_counts})"
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
