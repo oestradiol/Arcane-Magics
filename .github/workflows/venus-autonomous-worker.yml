@@ -33,6 +33,7 @@ jobs:
             tests.test_awakened_safety_matrix \
             tests.test_autonomous_worker \
             tests.test_autonomous_governance
+          python scripts/audit_autonomy_safety_matrix.py
 
       - name: Snapshot current GitHub World surface
         env:
