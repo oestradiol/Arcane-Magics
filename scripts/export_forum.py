@@ -52,6 +52,8 @@ _SIMPLE_TEX = {
 
 def _plainify_raw_tex(segment: str) -> str:
     """Degrade any surviving non-math TeX to renderer-safe plain text."""
+    segment = re.sub(r"\\(?:eqref|ref)\{[^{}]+\}", "the referenced result", segment)
+    segment = re.sub(r"\\label\{[^{}]+\}", "", segment)
     previous = None
     while previous != segment:
         previous = segment
