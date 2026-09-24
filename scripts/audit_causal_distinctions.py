@@ -97,7 +97,9 @@ else:
 
 # Every issue in the roadmap range should be named by the test-architecture issue.
 roadmap_issue = ROOT / "docs" / "TEST_COVERAGE_MATRIX.md"
-if roadmap_issue.exists():
+if not roadmap_issue.exists():
+    errors.append("missing docs/TEST_COVERAGE_MATRIX.md")
+else:
     text = roadmap_issue.read_text(encoding="utf-8", errors="replace")
     numbers = {int(n) for n in re.findall(r"#(\d+)", text)}
     # Coverage is allowed to omit closed issues later, but v0.1 explicitly covers the current planning range.
