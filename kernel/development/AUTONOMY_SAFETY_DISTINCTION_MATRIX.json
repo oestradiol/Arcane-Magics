@@ -261,6 +261,29 @@
         "scripts/audit_hidden_run_readiness.py"
       ],
       "invariant": "autonomy cannot tune or score hidden #31 evidence from execution side"
+    },
+    {
+      "id": "AUTONOMOUS_NO_REROLL_PENDING_RETURN",
+      "tests": [
+        "tests/test_autonomous_worker.py",
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "any open autonomous cycle blocks all new autonomous target selection until external return resolves the cycle"
+    },
+    {
+      "id": "TARGET_REOPEN_REQUIRES_CHANGED_WORLD_RETURN",
+      "tests": [
+        "tests/test_autonomous_worker.py",
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "resolved target remains withheld until that target has a newer external GitHub update than the prior cycle outcome"
+    },
+    {
+      "id": "REOPENING_MEMORY_NOT_LEARNING_REWARD",
+      "tests": [
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "merge/close timestamp may maintain reopening custody while still carrying zero work-utility reward without explicit external review return"
     }
   ],
   "promotion_authority": false
