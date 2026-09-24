@@ -60,6 +60,8 @@ Retirement must use claim/dependency custody, not filename recency or recursive 
 | EDU17 provenance failure | `provenance/developmental/EDU/` | **ADMITTED_PROVENANCE / PRESERVED_NEGATIVE** | blocks promotion; must remain queryable |
 | EDU17R1 eligibility result | `provenance/developmental/EDU/` | **ADMITTED_PROVENANCE / WITHHOLD** | intended repair not tested; `MENTION != INCIDENCE` is the live measured separator |
 | persistent semantic memory law | `kernel/runtime/memory.py` + tests | **ADMITTED_LIVE** | retained state can persist without conflating storage with learning |
+| temporal inhabitation / map != traversal | `docs/META_DYNAMICS.md` | **ADMITTED_LIVE / MODEL-PHEN** | unique global-representation vs locally traversed temporal-presentation distinction survives deletion test; LT-24 label itself remains historical |
+| status-fossil / negative-globalize / malformed-open / bridge-theorem-launder failure classes | `review/REVIEWER_AND_RESEARCHER_PROTOCOL.md` | **ADMITTED_LIVE / GOVERNANCE** | directly prevents stale status, over-propagated failure, immortal malformed questions, and theorem laundering |
 
 ## 4. Historical/developmental strata
 
@@ -161,7 +163,17 @@ Canonical research sources for OFE, Eclipsis, Arcane Magics, QG, NRI, and relate
 
 Formal or symbolic donors do not become executable authority by migration.
 
-## 9. Open extraction obligations
+## 9. Archaeology results already consumed
+
+Several Canonical structures were inspected and **not** promoted as new Git objects because their live consequence is already present:
+
+- CPC `REGISTER -> GENERATE -> ENACT -> RETURN -> COMPENSATE` is a readable projection of the current Meta-Dynamics / kernel action-return-reconstruction cycle; the CPC label is not required as another live layer.
+- participant non-substitution is already represented in Meta-Dynamics, frontier ethics/governance, WorldMind, and the preserved S10-S11 genealogy;
+- recursive sufficiency is already represented in Strong-N2/kernel/frontier vocabulary;
+- RegisterBridge / AntiGrammar remain explicitly OPEN comparison/formalization targets in the frontier and preserved S10-S11 provenance; importing every intermediate Canonical overlay would add status fossilization rather than authority;
+- symbolic late aliases such as Soul/Oracle/Spirit remain removable register-local renderings unless a separate admitted consequence requires them.
+
+## 10. Open extraction obligations
 
 Before Canonical can be considered fully retired:
 
@@ -173,7 +185,7 @@ Before Canonical can be considered fully retired:
 6. **Reproduction check:** an outside reader should be able to reconstruct current Git authority without reading Canonical.
 7. **Archaeology check:** a researcher should still be able to trace any admitted Git object back to its controlling Canonical/history source where that source mattered.
 
-## 10. Retirement completion criterion
+## 11. Retirement completion criterion
 
 Canonical is retired when:
 
