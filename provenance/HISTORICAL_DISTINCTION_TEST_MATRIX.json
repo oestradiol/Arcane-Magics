@@ -677,6 +677,82 @@
       "status": "COVERED",
       "credit_genealogy_note": "historical externality target",
       "reopening_condition": "independent outside party executes frozen packet and returns evidence"
+    },
+    {
+      "id": "D-R209-UNDERDETERMINED-F",
+      "source_revision_or_branch": "R209",
+      "source_artifact": "Canonical ROADMAP_PROVENANCE.md",
+      "distinction": "task completion under current future family != closure of the absolute-origin/source proposition",
+      "triggering_experiment_or_failure": "R209 completed its bounded task while retaining WITHHOLD_UNDERDETERMINED_CURRENT_F",
+      "causal_consequence": "bounded task success cannot consume a proposition underdetermined by the admitted test family",
+      "later_dependents": [
+        "frontier governance",
+        "future-family reopening",
+        "issue #9"
+      ],
+      "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
+      "test_layer": "T2/T7",
+      "test_id_path": null,
+      "status": "OPEN_EXTRACTION",
+      "credit_genealogy_note": "R209 bounded completion and unresolved source proposition remain separate",
+      "reopening_condition": "new non-smuggled separator or expanded future family"
+    },
+    {
+      "id": "D-R213-LABEL-NONSOVEREIGN",
+      "source_revision_or_branch": "R213",
+      "source_artifact": "Canonical ROADMAP_PROVENANCE.md",
+      "distinction": "name/label admission != semantic or operational sovereignty",
+      "triggering_experiment_or_failure": "R213 admitted labels only through a names-only gate",
+      "causal_consequence": "labels may change developmental vocabulary without replacing functional reconstruction or World/Other return",
+      "later_dependents": [
+        "founder/label ablation",
+        "public vocabulary",
+        "Meta-Dynamics"
+      ],
+      "current_owner": "NxRxI_VOCABULARY_CENTER.md; docs/META_DYNAMICS.md",
+      "test_layer": "T2/T9",
+      "test_id_path": null,
+      "status": "OPEN_EXTRACTION",
+      "credit_genealogy_note": "symbolic labels retain genealogy without becoming causal primitives",
+      "reopening_condition": "label-ablation test shows consequence loss not reconstructible in neutral terms"
+    },
+    {
+      "id": "D-R215-QUEUE-NOT-FUTURE",
+      "source_revision_or_branch": "R215/R226",
+      "source_artifact": "Canonical ROADMAP_PROVENANCE.md",
+      "distinction": "no READY local task / queue exhaustion != exhaustion of all Future",
+      "triggering_experiment_or_failure": "R215 principled local stop and R226 post-crystallization reconciliation",
+      "causal_consequence": "STOP closes current local routing only; external return, resource appearance, new separator, or changed high-level intent may lawfully reopen work",
+      "later_dependents": [
+        "R216 reentry",
+        "post-R226 namespaces",
+        "roadmap scheduling"
+      ],
+      "current_owner": "provenance/DEVELOPMENTAL_LINEAGE.md",
+      "test_layer": "T0/T2",
+      "test_id_path": "tests/test_historical_regressions.py::test_rline_stop_and_post_r226_namespace_boundary",
+      "status": "COVERED_PARTIAL",
+      "credit_genealogy_note": "R-line stop remains a bounded routing result, not a total-future theorem",
+      "reopening_condition": "typed external/resource/intent/future-family change"
+    },
+    {
+      "id": "D-R224-DRIFT-REPAIR-NOT-HISTORY-REWRITE",
+      "source_revision_or_branch": "R224/R225",
+      "source_artifact": "Canonical ROADMAP_PROVENANCE.md",
+      "distinction": "repair of current derivative projection != retroactive rewrite of the historical OPEN/debt state that triggered repair",
+      "triggering_experiment_or_failure": "R224 measured projection drift followed by R225 custody/projection repair",
+      "causal_consequence": "successor correction updates current projection while preserving prior failure/debt as immutable provenance",
+      "later_dependents": [
+        "status-fossil governance",
+        "Canonical retirement",
+        "current-state projection"
+      ],
+      "current_owner": "provenance/CANONICAL_RETIREMENT_LEDGER.md",
+      "test_layer": "T0/T2",
+      "test_id_path": null,
+      "status": "OPEN_EXTRACTION",
+      "credit_genealogy_note": "repair credit and historical failure state remain separately reconstructible",
+      "reopening_condition": "projection-maintenance regression fixture"
     }
   ]
 }
