@@ -96,7 +96,9 @@ def choose_target(
     recent = set(recent_targets)
     open_items = tuple(
         item for item in items
-        if item.state.upper() == "OPEN" and (item.kind, item.number) not in recent
+        if item.state.upper() == "OPEN"
+        and (item.kind, item.number) not in recent
+        and not (item.kind == "PR" and item.title.lower().startswith("venus: autonomous cycle"))
     )
     if not open_items:
         return None
