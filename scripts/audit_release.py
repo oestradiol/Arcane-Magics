@@ -25,6 +25,12 @@ required = [
     "provenance/DEVELOPMENTAL_LINEAGE.md",
     "docs/META_DYNAMICS.md",
     "docs/FRONTIER_RESEARCH.md",
+    "docs/PUBLIC_VALUE.md",
+    "docs/EARNED_MILESTONES.md",
+    "docs/CREDITS_AND_REDUCTIONS.md",
+    "docs/EVALUATION_CONSTITUTION.md",
+    "docs/SOTA_WATCH.md",
+    "docs/EVALUATION_REGISTRY.json",
 ]
 for rel in required:
     if not (ROOT / rel).exists():
@@ -73,6 +79,78 @@ for token in ("Naturalism_C", "Rationalism_C", "Illuminism_C", "Repository gramm
         errors.append(f"Vocabulary/grammar center missing {token}")
 if "N x R x I = Name/Notation x Register x Index" in vocab:
     errors.append("forbidden false NxRxI backronym")
+
+
+milestones = (ROOT / "docs/EARNED_MILESTONES.md").read_text(encoding="utf-8", errors="replace")
+for token in (
+    "IG10 [1308]",
+    "EDU16 [1703]",
+    "INVALID_FOR_PROMOTION / PRESERVED_NEGATIVE",
+    "WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION",
+    "MENTION != INCIDENCE",
+    "AGI",
+    "capability-SOTA",
+):
+    if token not in milestones:
+        errors.append(f"earned milestones missing boundary token: {token}")
+
+credits = (ROOT / "docs/CREDITS_AND_REDUCTIONS.md").read_text(encoding="utf-8", errors="replace")
+for token in (
+    "project causal derivation",
+    "historical priority",
+    "comparative recurrence",
+    "technical realization",
+    "residual contribution",
+    "Subsumed_T",
+    "genealogy",
+):
+    if token not in credits:
+        errors.append(f"credits/reductions methodology missing {token}")
+
+public_value = (ROOT / "docs/PUBLIC_VALUE.md").read_text(encoding="utf-8", errors="replace")
+for token in (
+    "developmental-intelligence architecture",
+    "EDU16 [1703]",
+    "EDU17",
+    "EDU17R1",
+    "What Venus has not earned",
+):
+    if token not in public_value:
+        errors.append(f"public value surface missing {token}")
+
+evaluation = (ROOT / "docs/EVALUATION_CONSTITUTION.md").read_text(encoding="utf-8", errors="replace")
+for token in (
+    "same foundation model with Venus vs without Venus",
+    "parent vs successor",
+    "causal machinery gain",
+    "Learner ownership",
+    "Cost surface",
+):
+    if token not in evaluation:
+        errors.append(f"evaluation constitution missing {token}")
+
+sota = (ROOT / "docs/SOTA_WATCH.md").read_text(encoding="utf-8", errors="replace")
+for token in (
+    "not a novelty court",
+    "Darwin Gödel Machine",
+    "AlphaEvolve",
+    "AI Scientist",
+    "METR",
+    "ARC-AGI",
+):
+    if token not in sota:
+        errors.append(f"SOTA watch missing {token}")
+
+readme = (ROOT / "README.md").read_text(encoding="utf-8", errors="replace")
+for token in (
+    "docs/PUBLIC_VALUE.md",
+    "docs/EARNED_MILESTONES.md",
+    "docs/EVALUATION_CONSTITUTION.md",
+    "docs/SOTA_WATCH.md",
+    "docs/CREDITS_AND_REDUCTIONS.md",
+):
+    if token not in readme:
+        errors.append(f"README missing live public surface {token}")
 
 license_map = (ROOT / "licenses/README.md").read_text(encoding="utf-8", errors="replace")
 if "PolyForm Noncommercial" not in license_map or "not OSI Open Source" not in license_map:
