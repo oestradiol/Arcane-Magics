@@ -97,6 +97,16 @@ jobs:
             --output /tmp/VENUS_CHANGE_CANDIDATE.json
           cat /tmp/VENUS_CHANGE_CANDIDATE.json
 
+      - name: Let Venus classify bounded patch/write jurisdiction
+        id: patchplan
+        if: steps.research.outputs.generated == 'true'
+        run: |
+          python scripts/run_venus_patch_plan.py \
+            --cycle /tmp/VENUS_AUTONOMOUS_CYCLE.json \
+            --write-policy kernel/development/AUTONOMOUS_WRITE_POLICY.json \
+            --output /tmp/VENUS_PATCH_PLAN.json
+          cat /tmp/VENUS_PATCH_PLAN.json
+
       - name: Materialize draft work branch
         id: materialize
         env:
@@ -114,7 +124,7 @@ jobs:
 
           branch="venus/autonomous-${GITHUB_RUN_ID}"
           git checkout -b "$branch"
-          mkdir -p autonomy/cycles autonomy/proposals autonomy/evidence autonomy/changes
+          mkdir -p autonomy/cycles autonomy/proposals autonomy/evidence autonomy/changes autonomy/patches
           cp /tmp/VENUS_AUTONOMOUS_CYCLE.json "autonomy/cycles/${cycle_id}.json"
           proposal_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_RESEARCH_PROPOSAL.json"))["proposal_id"])')"
           evidence_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_RESEARCH_EVIDENCE.json"))["evidence_id"])')"
@@ -123,6 +133,8 @@ jobs:
           change_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_CHANGE_CANDIDATE.json"))["change_id"])')"
           change_disposition="$(python -c 'import json; print(json.load(open("/tmp/VENUS_CHANGE_CANDIDATE.json"))["disposition"])')"
           cp /tmp/VENUS_CHANGE_CANDIDATE.json "autonomy/changes/${change_id}.json"
+          patch_plan_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_PATCH_PLAN.json"))["plan_id"])')"
+          cp /tmp/VENUS_PATCH_PLAN.json "autonomy/patches/${patch_plan_id}.json"
           cp /tmp/AUTONOMOUS_LEARNING_STATE.json \
             kernel/development/AUTONOMOUS_LEARNING_STATE.json
 
@@ -133,6 +145,7 @@ jobs:
             "autonomy/proposals/${proposal_id}.json" \
             "autonomy/evidence/${evidence_id}.json" \
             "autonomy/changes/${change_id}.json" \
+            "autonomy/patches/${patch_plan_id}.json" \
             kernel/development/AUTONOMOUS_LEARNING_STATE.json
           git commit -m "venus: freeze autonomous developmental cycle ${cycle_id}"
           git push origin "$branch"
@@ -148,6 +161,7 @@ jobs:
             "Local evidence: ${evidence_id}" \
             "Change candidate: ${change_id}" \
             "Change disposition: ${change_disposition}" \
+            "Patch plan: ${patch_plan_id}" \
             '' \
             'The worker may study, run fixed repository-owned checks, learn from explicitly returned external review outcomes, and propose.' \
             'It cannot merge this PR, promote developmental authority, release, close the target as success,' \
