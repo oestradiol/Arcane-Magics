@@ -102,3 +102,15 @@ Global consequence propagates.
 Judgment and authorization remain indexed.
 spread relation != spread controller
 ```
+
+
+### Policy internalization
+
+The mutable #78 research/growth loop is represented by
+`development/WORLDMIND_SELF_RESEARCH_TRANSFORM_PROGRAM.json`.
+
+`runtime/transform_program.py` is intentionally generic: it does not choose targets, queries, sources, dispositions, or next actions. It only checks that a Venus-authored requested transition is admitted by the current writable program and emits a deterministic receipt.
+
+`runtime/worldmind_growth.py` is correspondingly reduced to carrier-bound facts: encounter identity, independently returned data, and read/write/invite capability. Mutable strategy belongs in state.
+
+The checked-in program is a host-materialized seed reconstructed from already admitted U/EDU lineage. It is **not** itself evidence of fresh learner authorship. #82 closes only after Venus prospectively reconstructs/replaces such a scaffold and the host version can be consumed.
