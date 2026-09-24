@@ -77,28 +77,27 @@ def roadmap_issue_order(text: str) -> tuple[int, ...]:
     return tuple(out)
 
 
+def _roadmap_prior(item: WorkItem, issue_order: tuple[int, ...]) -> float:
+    if item.kind != "ISSUE" or item.number not in issue_order:
+        return 0.0
+    # Roadmap is a bounded scaffold prior, not sovereign curriculum.
+    # Earliest listed issue gets <= 0.25; returned utility spans [-1, 1].
+    index = issue_order.index(item.number)
+    return 0.25 / (index + 1)
+
+
 def _rank(
     item: WorkItem,
     issue_order: tuple[int, ...],
     kind_utility: Mapping[str, float],
-) -> tuple[float, float, float, int]:
+) -> tuple[float, float, int]:
     if item.kind == "PR" and item.merge_state in {"DIRTY", "BLOCKED", "CONFLICTING"}:
-        return (0.0, 0.0, 0.0, item.number)
-    if item.kind == "ISSUE" and item.number in issue_order:
-        return (
-            1.0,
-            float(issue_order.index(item.number)),
-            -kind_utility.get(item.kind, 0.0),
-            item.number,
-        )
-    # Outside hard dependency priorities, externally reviewed outcomes are
-    # allowed to alter which class of work Venus chooses next.
-    return (
-        2.0,
-        -kind_utility.get(item.kind, 0.0),
-        0.0 if item.kind == "PR" and item.draft else 1.0,
-        item.number,
-    )
+        # Reopen current broken work before selecting unrelated fresh work.
+        return (-10.0, 0.0, item.number)
+    utility = float(kind_utility.get(item.kind, 0.0))
+    score = utility + _roadmap_prior(item, issue_order)
+    draft_bonus = 0.05 if item.kind == "PR" and item.draft else 0.0
+    return (-score, -draft_bonus, item.number)
 
 
 def choose_target(
@@ -149,9 +148,6 @@ def make_cycle(
         decision = "STOP"
         rationale = ("no unconsumed OPEN work item is justified",)
     else:
-        # Opaque learner-side coordinates. External access, correction
-        # reachability and revision reachability are supplied by the adapter;
-        # authorization remains local to the declared GitHub write scope.
         features = {
             "f0": True,
             "f1": target.merge_state not in {"BLOCKED", "CONFLICTING"},
@@ -164,17 +160,17 @@ def make_cycle(
         }
         decision = execute_tree(internal_policy, features)
         if decision == "ACT":
-            # An unresolved target is never treated as already evidenced.
             decision = "PROBE"
         rationale = (
             "one bounded target selected from current external GitHub snapshot",
             "internalized learner-side policy is upstream of work disposition",
-            "externally reviewed prior cycle outcomes may alter later target ranking",
+            "explicit external review returns may alter later work-class utility",
+            "roadmap contributes only a bounded scaffold prior and may be overridden by returned utility",
             "draft proposal only; admission remains external",
         )
 
     body = {
-        "schema": "Venus.AutonomousCycleReceipt.v0.1",
+        "schema": "Venus.AutonomousCycleReceipt.v0.2",
         "target_kind": target.kind if target else None,
         "target_number": target.number if target else None,
         "target_title": target.title if target else None,
@@ -190,17 +186,15 @@ def make_cycle(
 
 def load_work_items(path: str | Path, kind: str) -> tuple[WorkItem, ...]:
     rows = json.loads(Path(path).read_text(encoding="utf-8"))
-    out = []
-    for row in rows:
-        out.append(
-            WorkItem(
-                kind=kind,
-                number=int(row["number"]),
-                title=str(row["title"]),
-                state=str(row.get("state", "OPEN")),
-                draft=bool(row.get("isDraft", row.get("draft", False))),
-                merge_state=row.get("mergeStateStatus", row.get("merge_state")),
-                updated_at=row.get("updatedAt", row.get("updated_at")),
-            )
+    return tuple(
+        WorkItem(
+            kind=kind,
+            number=int(row["number"]),
+            title=str(row["title"]),
+            state=str(row.get("state", "OPEN")),
+            draft=bool(row.get("isDraft", row.get("draft", False))),
+            merge_state=row.get("mergeStateStatus", row.get("merge_state")),
+            updated_at=row.get("updatedAt", row.get("updated_at")),
         )
-    return tuple(out)
+        for row in rows
+    )
