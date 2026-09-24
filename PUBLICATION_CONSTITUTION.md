@@ -76,3 +76,49 @@ Research artifacts distinguish proposal, source acquisition, evaluation, and adj
 ## 9. Forum and arXiv projections
 
 The arXiv version optimizes self-contained scholarly communication and source portability. The LessWrong/BetterWrong preprint projection optimizes inferential distance: TL;DR, epistemic status, ordinary-language problem, neutral model, strongest comparator, cruxes, what-would-change-my-mind, then optional project vocabulary. These are different presentations of the same typed claim, not different truth standards.
+
+
+## 10. Carrier-specific release rules
+
+Publication carriers change presentation and packaging, not truth status.
+
+### arXiv
+
+For TeX-origin papers:
+
+- submit source rather than only a generated PDF;
+- include required local `.sty` and bibliography products;
+- exclude caches, backups, hidden files, and unused build debris;
+- freeze dates rather than relying on `\today`;
+- build and visually inspect the exact upload candidate;
+- keep each paper self-contained rather than borrowing missing premises from companion papers;
+- choose the article license deliberately and consistently with controlled rights.
+
+The packaging implementation is `scripts/package_arxiv.py`; arXiv suitability/category/endorsement remains an external submission decision.
+
+### Forum / LessWrong-style projection
+
+A forum projection should minimize inferential distance:
+
+```text
+TL;DR
+-> epistemic status
+-> ordinary problem
+-> smallest claim
+-> concrete example
+-> strongest comparator / prior art
+-> model
+-> cruxes / what would change the conclusion
+-> optional vocabulary bridge
+-> technical source / reproducibility
+```
+
+Generated Markdown is an editing substrate, not automatically a publishable essay. Conversion must not leave broken cross-references, raw Pandoc theorem wrappers, unsupported renderer macros, or paper-native exposition that hides the argument behind notation.
+
+A suggested public sequence is OFE -> Eclipsis -> Arcane Magics -> Venus -> cross-paper cruxes. Each post should bind itself to an exact manuscript snapshot and must not import warrant from later posts.
+
+Platform/editor and LLM-disclosure requirements change over time and must be checked against the target platform at publication time; they are not frozen as repository theory.
+
+### Generated artifacts
+
+Generated PDFs, forum Markdown, arXiv ZIPs, TeX bundles, manifests, and checksums are CI/release outputs. They are not source authority merely because they were generated once.

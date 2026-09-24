@@ -19,6 +19,6 @@ If an earlier artifact was actually distributed under a prior license (for examp
 
 ## arXiv
 
-As of 2026-09-24, arXiv explicitly offers **CC BY-NC-SA 4.0** as a selectable article license, alongside CC BY, CC BY-SA, CC BY-NC-ND, the arXiv perpetual non-exclusive license, and CC0. arXiv licenses are irrevocable for the posted version. The project can therefore select CC BY-NC-SA 4.0 for an arXiv version when the submitter controls the necessary rights. See `docs/ARXIV_RELEASE_GUIDE.md`.
+As of 2026-09-24, arXiv explicitly offers **CC BY-NC-SA 4.0** as a selectable article license, alongside CC BY, CC BY-SA, CC BY-NC-ND, the arXiv perpetual non-exclusive license, and CC0. arXiv licenses are irrevocable for the posted version. The project can therefore select CC BY-NC-SA 4.0 for an arXiv version when the submitter controls the necessary rights.
 
 This file states project policy and release engineering, not jurisdiction-specific legal advice.
