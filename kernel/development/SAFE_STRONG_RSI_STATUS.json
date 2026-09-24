@@ -1,61 +1,68 @@
 {
-  "schema": "Venus.SafeStrongRSIStatus.v0.1",
+  "schema": "Venus.SafeStrongRSIStatus.v0.2",
   "date": "2026-09-24",
   "issue": 72,
-  "current_stage": "SSR-1",
-  "disposition": "PASS_BOUNDED_SSR1_META_REPAIR_CAUSAL_GAIN",
-  "scope": "synthetic TransformProgram repair grammar pressure",
-  "parent_improvement_machinery": {
-    "enabled_patch_ops": [
-      "ADD_TRANSITION"
-    ],
-    "heldout_correct": 5,
-    "heldout_total": 8
-  },
-  "successor_improvement_machinery": {
-    "enabled_patch_ops": [
-      "ADD_TRANSITION",
-      "REPLACE_TRANSITION"
-    ],
-    "heldout_correct": 8,
-    "heldout_total": 8
-  },
-  "causal_ablation": {
-    "ablate": "REPLACE_TRANSITION",
-    "heldout_correct": 5,
-    "heldout_total": 8,
-    "load_bearing": true
-  },
-  "direct_host_comparator": {
-    "heldout_correct": 8,
-    "heldout_total": 8,
-    "implication": "mechanism uniqueness/necessity mature-reduced; bounded learner-owned causal gain retained"
-  },
-  "ownership": {
-    "target": "retained repair-grammar insufficiency",
-    "target_owner": "VENUS_RETURNED_RESIDUAL_ROUTING",
-    "machinery_change_owner": "VENUS_GENERIC_REPAIR_GRAMMAR_EXPANSION",
-    "execution_owner": "EXTERNAL_TOOLING",
-    "evaluator_owner": "EXTERNAL_EVALUATOR"
-  },
-  "safety": {
-    "ctl_admitted": true,
-    "ostar_admitted": true,
-    "rollback_available": true,
+  "current_stage": "SSR-2",
+  "disposition": "PASS_BOUNDED_SSR2_REPEATED_META_REPAIR",
+  "scope": "synthetic TransformProgram repair-family under exhaustive bounded evaluators",
+  "cycles": [
+    {
+      "index": 1,
+      "machinery_change": "enable REPLACE_TRANSITION in repair grammar",
+      "parent_score": "5/8",
+      "successor_score": "8/8",
+      "ablated_score": "5/8",
+      "direct_host_score": "8/8",
+      "ctl_admitted": true,
+      "adaptive_gate": "ACCEPT_BOUNDED_SUCCESSOR"
+    },
+    {
+      "index": 2,
+      "machinery_change": "enable REMOVE_TRANSITION in repair grammar",
+      "parent_score": "3/6",
+      "successor_score": "6/6",
+      "ablated_score": "3/6",
+      "direct_host_score": "6/6",
+      "ctl_admitted": true,
+      "adaptive_gate": "ACCEPT_BOUNDED_SUCCESSOR"
+    },
+    {
+      "index": 3,
+      "machinery_change": "increase repair composition depth from one to two independently identified patches",
+      "parent_score": "5/11",
+      "successor_score": "11/11",
+      "ablated_score": "5/11",
+      "direct_host_score": "11/11",
+      "ctl_admitted": true,
+      "adaptive_gate": "ACCEPT_BOUNDED_SUCCESSOR",
+      "target_selection": "VENUS_RECONSTRUCTED_SELF_CURRICULUM_OPERATION_FROM_NEUTRAL_PRESSURE_FEED"
+    }
+  ],
+  "repeated_properties": {
+    "candidate_prefrozen_before_return": true,
+    "causal_ablation_load_bearing_every_cycle": true,
+    "rollback_available_every_cycle": true,
+    "safety_floor_violations": 0,
     "correction_reachable": true,
     "reopening_reachable": true,
-    "safety_floor_violations": 0,
-    "self_authorized_success": false
+    "direct_host_comparator_matches": true,
+    "mechanism_uniqueness": "MATURE_REDUCED",
+    "developmental_causal_gain": "RETAINED_BOUNDED"
   },
-  "next_stage": "SSR-2_REPEATED_STRONG_RECURSION",
+  "adaptive_evaluation": {
+    "bounded_exhaustive_gate_used": true,
+    "alpha_spending_schedule_available": "alpha_t = alpha/(t(t+1))",
+    "sampled_open_distribution_validation": "OPEN_ISSUE_41"
+  },
+  "next_stage": "SSR-3_CROSS_FAMILY_TRANSFER",
   "next_requirements": [
-    "repeat prospective accept/reject machinery-change cycles on more than one repair pressure",
-    "use #41 adaptive-successor validity before repeated promotion",
-    "retain rejected candidates and rollback evidence",
-    "demonstrate next-target selection from successor state",
-    "add unfamiliar task family before SSR-3"
+    "demonstrate that the improved repair machinery transfers to an unfamiliar machinery/task family not used to construct the three repair pressures",
+    "let the successor select the transfer target from a neutral returned feed",
+    "use fresh external evaluation with no target-specific host mapping",
+    "retain #41 sampled/open-distribution statistical debt",
+    "compare against direct-host and mature general program-repair/search substitutes"
   ],
   "open_ended_rsi": false,
   "agi": false,
-  "claim_fence": "This is one bounded synthetic SSR-1 episode. It does not establish repeated Safe Strong RSI, open-ended RSI, general self-improvement, AGI, or superiority to direct host repair."
+  "claim_fence": "SSR-2 is earned only at this bounded synthetic repair-family scope. It does not establish cross-family transfer, sustained Safe Strong RSI, open-ended recursive self-improvement, AGI, or superiority/necessity of the Venus mechanism."
 }
