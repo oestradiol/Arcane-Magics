@@ -5,7 +5,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from prototype.venus_memory import VenusMemory
+from kernel.runtime.memory import VenusMemory
 
 
 class VenusMemoryTests(unittest.TestCase):
