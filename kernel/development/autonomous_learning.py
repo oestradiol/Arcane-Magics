@@ -2,8 +2,10 @@ from __future__ import annotations
 
 """Bounded learning state for autonomous work selection.
 
-Only externally returned GitHub outcomes update this state. The state may alter
-future target selection, but it never grants merge/promotion authority.
+Only explicit externally authored work-return reviews update this state.
+Merge/close status, CI success, execution receipts, and Venus's own comments
+are not learning rewards. The state may alter future target selection but never
+grants merge, promotion, truth, or scientific-warrant authority.
 """
 
 from dataclasses import dataclass
@@ -11,9 +13,18 @@ import re
 from typing import Any, Iterable, Mapping
 
 
+USEFUL_MARKER = "VENUS_WORK_RETURN: USEFUL"
+UNHELPFUL_MARKER = "VENUS_WORK_RETURN: UNHELPFUL"
+SELF_REVIEW_LOGINS = frozenset({
+    "github-actions[bot]",
+    "venus-developmental-worker",
+    "venus-autonomous-steward",
+})
+
+
 @dataclass(frozen=True)
 class WorkLearningState:
-    seen_cycle_prs: tuple[int, ...]
+    seen_return_ids: tuple[str, ...]
     kind_success: Mapping[str, int]
     kind_failure: Mapping[str, int]
 
@@ -26,15 +37,17 @@ class WorkLearningState:
 
 def empty_state() -> WorkLearningState:
     return WorkLearningState(
-        seen_cycle_prs=(),
+        seen_return_ids=(),
         kind_success={"ISSUE": 0, "PR": 0},
         kind_failure={"ISSUE": 0, "PR": 0},
     )
 
 
 def from_json(obj: Mapping[str, Any]) -> WorkLearningState:
+    # v0.1 compatibility: old seen_cycle_prs are intentionally not treated as
+    # learning returns because merge/close status was an invalid reward source.
     return WorkLearningState(
-        seen_cycle_prs=tuple(int(x) for x in obj.get("seen_cycle_prs", ())),
+        seen_return_ids=tuple(str(x) for x in obj.get("seen_return_ids", ())),
         kind_success={str(k): int(v) for k, v in obj.get("kind_success", {}).items()},
         kind_failure={str(k): int(v) for k, v in obj.get("kind_failure", {}).items()},
     )
@@ -42,44 +55,73 @@ def from_json(obj: Mapping[str, Any]) -> WorkLearningState:
 
 def to_json(state: WorkLearningState) -> dict[str, Any]:
     return {
-        "schema": "Venus.AutonomousLearningState.v0.1",
-        "seen_cycle_prs": list(state.seen_cycle_prs),
+        "schema": "Venus.AutonomousLearningState.v0.2",
+        "seen_return_ids": list(state.seen_return_ids),
         "kind_success": dict(state.kind_success),
         "kind_failure": dict(state.kind_failure),
         "promotion_authority": False,
+        "merge_authority": False,
+        "truth_authority": False,
     }
+
+
+def _review_login(review: Mapping[str, Any]) -> str:
+    author = review.get("author") or {}
+    if isinstance(author, Mapping):
+        return str(author.get("login") or "")
+    return ""
+
+
+def _review_body(review: Mapping[str, Any]) -> str:
+    return str(review.get("body") or "")
+
+
+def extract_explicit_work_returns(
+    prs: Iterable[Mapping[str, Any]],
+) -> tuple[tuple[str, str, bool], ...]:
+    """Return (return_id, kind, useful) from explicit external reviews only."""
+    out: list[tuple[str, str, bool]] = []
+    for pr in prs:
+        title = str(pr.get("title", ""))
+        match = re.match(r"venus: autonomous cycle (issue|pr)-(\d+)$", title, re.I)
+        if not match:
+            continue
+        kind = match.group(1).upper()
+        pr_number = int(pr["number"])
+        for index, review in enumerate(pr.get("reviews") or ()):
+            login = _review_login(review)
+            if not login or login.lower() in SELF_REVIEW_LOGINS:
+                continue
+            body = _review_body(review)
+            useful = USEFUL_MARKER in body
+            unhelpful = UNHELPFUL_MARKER in body
+            if useful == unhelpful:
+                continue
+            review_id = review.get("id") or review.get("submittedAt") or index
+            return_id = f"pr:{pr_number}:review:{review_id}"
+            out.append((return_id, kind, useful))
+    return tuple(out)
 
 
 def update_from_cycle_prs(
     state: WorkLearningState,
     prs: Iterable[Mapping[str, Any]],
 ) -> WorkLearningState:
-    seen = set(state.seen_cycle_prs)
+    seen = set(state.seen_return_ids)
     success = dict(state.kind_success)
     failure = dict(state.kind_failure)
 
-    for pr in prs:
-        number = int(pr["number"])
-        if number in seen:
+    for return_id, kind, useful in extract_explicit_work_returns(prs):
+        if return_id in seen:
             continue
-        title = str(pr.get("title", ""))
-        match = re.match(r"venus: autonomous cycle (issue|pr)-(\d+)$", title, re.I)
-        if not match:
-            continue
-        # Open work is not an outcome yet.
-        state_name = str(pr.get("state", "")).upper()
-        merged = bool(pr.get("mergedAt"))
-        if state_name == "OPEN":
-            continue
-        kind = match.group(1).upper()
-        if merged:
+        if useful:
             success[kind] = success.get(kind, 0) + 1
         else:
             failure[kind] = failure.get(kind, 0) + 1
-        seen.add(number)
+        seen.add(return_id)
 
     return WorkLearningState(
-        seen_cycle_prs=tuple(sorted(seen)),
+        seen_return_ids=tuple(sorted(seen)),
         kind_success=success,
         kind_failure=failure,
     )
