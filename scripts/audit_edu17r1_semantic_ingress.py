@@ -4,11 +4,15 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
+import sys
+
+ROOT=Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0,str(ROOT))
 
 from kernel.development.edu17r1_repair_contract import bind_candidate, validate_candidate
 from scripts.run_edu17r1_semantic_ingress_search import run
 
-ROOT=Path(__file__).resolve().parents[1]
 METHOD=ROOT/"kernel/development/EDU17R1_SEMANTIC_INGRESS_SELECTED_METHOD.json"
 FAMILY=ROOT/"kernel/development/EDU17R1_SEMANTIC_INGRESS_METHOD_FAMILY.json"
 CANDIDATE=ROOT/"kernel/development/EDU17R1_REPAIR_CANDIDATE_FROZEN.json"
