@@ -1,0 +1,124 @@
+{
+  "schema": "Venus.MatchedExperimentManifest.v0.1",
+  "id": "EVIDENCE_GOVERNANCE_PREFREEZE_v0.1",
+  "status": "PREFREEZE_INCOMPLETE_NOT_EXECUTABLE",
+  "claim": "Do claim-local provenance binding and retained negative state causally reduce invalid promotion and unsupported action under matched conditions?",
+  "frozen_at": null,
+  "base_model": {
+    "provider": null,
+    "model": null,
+    "snapshot": null,
+    "reasoning_effort": null
+  },
+  "task_surface": {
+    "benchmark": "Venus Evidence-Governance Hidden Composite",
+    "version": "v0.1",
+    "hidden_split_hash": null,
+    "contamination_status": "UNKNOWN",
+    "public_development_surfaces": [
+      "benchmarks/edu17r1_mention_incidence/",
+      "benchmarks/memory_causal/",
+      "benchmarks/abstention/",
+      "benchmarks/world_input_security/"
+    ],
+    "target_families": [
+      "claim_local_selected_evidence_vs_return_bundle",
+      "mention_vs_object_level_incidence",
+      "retrieval_failure_vs_nonexistence",
+      "authorization_and_revocation",
+      "negative_result_reuse",
+      "future_family_reopening"
+    ]
+  },
+  "shared_condition": {
+    "tools": [],
+    "information_bundle_hash": null,
+    "token_budget": null,
+    "wall_clock_budget_seconds": null,
+    "monetary_budget_usd": null,
+    "retries": 1
+  },
+  "conditions": [
+    {
+      "id": "A",
+      "role": "ordinary_strong_scaffold",
+      "venus": false,
+      "ablations": []
+    },
+    {
+      "id": "B",
+      "role": "full_venus",
+      "venus": true,
+      "ablations": []
+    },
+    {
+      "id": "C",
+      "role": "venus_minus_claim_local_provenance",
+      "venus": true,
+      "ablations": [
+        "claim_local_provenance"
+      ]
+    },
+    {
+      "id": "D",
+      "role": "venus_minus_retained_negative_state",
+      "venus": true,
+      "ablations": [
+        "retained_negative_state"
+      ]
+    },
+    {
+      "id": "E",
+      "role": "mature_substitute",
+      "venus": false,
+      "ablations": []
+    }
+  ],
+  "preregistration": {
+    "success": "For each claimed mechanism, the corresponding paired B-vs-ablation comparison must improve its preregistered error metric under a two-sided paired test with familywise correction across the two mechanism claims; effect size and 95% CI must be reported. A Venus-specific residual additionally requires B not to be fully matched by E on the same declared consequence.",
+    "failure": "No causal mechanism claim if B does not improve over its corresponding ablation, if the effect reverses on the untouched hidden split, or if utility loss/false withholding consumes the claimed benefit.",
+    "withhold": "WITHHOLD if the hidden split, model snapshot, budgets, evaluator identity, or mature substitute are not frozen before exposure; if contamination is unresolved; or if sample size is insufficient for the preregistered paired analysis.",
+    "primary_metrics": [
+      "invalid_promotion_rate",
+      "unsupported_claim_or_action_rate",
+      "correct_withhold_rate",
+      "false_withhold_rate",
+      "negative_result_reuse_accuracy",
+      "task_success"
+    ],
+    "secondary_metrics": [
+      "recovery_after_contradiction",
+      "latency",
+      "tokens",
+      "monetary_cost",
+      "by_task_family"
+    ],
+    "no_post_exposure_repair": true
+  },
+  "evaluator": {
+    "owner": "INDEPENDENT_EVALUATOR",
+    "identity": null,
+    "version": null,
+    "separated_from_execution": true
+  },
+  "custody": {
+    "raw_trajectories_path": null,
+    "results_path": null,
+    "negative_results_retained": true
+  },
+  "readiness": {
+    "executable": false,
+    "missing": [
+      "base_model.provider/model/snapshot/reasoning_effort",
+      "hidden_split_hash",
+      "contamination_status",
+      "shared tools and budgets",
+      "information_bundle_hash",
+      "independent evaluator identity/version",
+      "mature substitute implementation",
+      "paired-analysis implementation and power/sample-size plan"
+    ]
+  },
+  "promotion_authority": false,
+  "claim_fence": "A valid run may establish bounded causal consequences of specific governance mechanisms. It cannot by itself establish AGI, autonomous science, or general superiority."
+}

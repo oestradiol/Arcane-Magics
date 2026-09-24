@@ -58,7 +58,10 @@ jobs:
         run: python scripts/audit_sota_freshness.py
 
       - name: Matched experiment contract audit
-        run: python scripts/validate_experiment_manifest.py evaluation/MATCHED_EXPERIMENT_TEMPLATE.json
+        run: |
+          python scripts/validate_experiment_manifest.py evaluation/MATCHED_EXPERIMENT_TEMPLATE.json
+          python scripts/validate_experiment_manifest.py evaluation/EVIDENCE_GOVERNANCE_PREFREEZE.json
+          python scripts/audit_experiment_readiness.py evaluation/EVIDENCE_GOVERNANCE_PREFREEZE.json
 
       - name: Construct disposition audit
         run: python scripts/audit_construct_dispositions.py
