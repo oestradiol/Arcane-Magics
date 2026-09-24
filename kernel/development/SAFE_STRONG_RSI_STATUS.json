@@ -1,10 +1,10 @@
 {
-  "schema": "Venus.SafeStrongRSIStatus.v0.2",
+  "schema": "Venus.SafeStrongRSIStatus.v0.3",
   "date": "2026-09-24",
   "issue": 72,
-  "current_stage": "SSR-2",
-  "disposition": "PASS_BOUNDED_SSR2_REPEATED_META_REPAIR",
-  "scope": "synthetic TransformProgram repair-family under exhaustive bounded evaluators",
+  "current_stage": "SSR-3",
+  "disposition": "PASS_BOUNDED_SSR3_CROSS_FAMILY_REPAIR_TRANSFER",
+  "scope": "synthetic repair-family recursion plus post-freeze transfer to public-derived #42/#43 declarative policy carriers",
   "cycles": [
     {
       "index": 1,
@@ -54,15 +54,30 @@
     "alpha_spending_schedule_available": "alpha_t = alpha/(t(t+1))",
     "sampled_open_distribution_validation": "OPEN_ISSUE_41"
   },
-  "next_stage": "SSR-3_CROSS_FAMILY_TRANSFER",
+  "next_stage": "SSR-4_META_IMPROVEMENT_DURABILITY_AND_COMPARATOR",
   "next_requirements": [
-    "demonstrate that the improved repair machinery transfers to an unfamiliar machinery/task family not used to construct the three repair pressures",
-    "let the successor select the transfer target from a neutral returned feed",
-    "use fresh external evaluation with no target-specific host mapping",
-    "retain #41 sampled/open-distribution statistical debt",
-    "compare against direct-host and mature general program-repair/search substitutes"
+    "freeze the distinction between meta-improvement existence and Venus-specific uniqueness/superiority",
+    "compare the learned repair machinery against a simple exhaustive bounded repair substitute on the same frozen pressures",
+    "replay the admitted successor across earlier repair pressures and cross-family carriers without regression",
+    "demonstrate that the successor's improvement-generating machinery remains causally load-bearing after transfer",
+    "retain mature-reduction if the substitute matches"
   ],
   "open_ended_rsi": false,
   "agi": false,
-  "claim_fence": "SSR-2 is earned only at this bounded synthetic repair-family scope. It does not establish cross-family transfer, sustained Safe Strong RSI, open-ended recursive self-improvement, AGI, or superiority/necessity of the Venus mechanism."
+  "claim_fence": "SSR-3 is earned only as bounded transfer of frozen generic repair machinery into two public-derived declarative policy carriers. It does not establish hidden #42/#43 benchmark performance, semantic security/abstention competence, natural-world generality, sustained Safe Strong RSI, open-ended RSI, or AGI.",
+  "cross_family_transfer": {
+    "artifact": "kernel/development/SSR3_CROSS_FAMILY_TRANSFER_EVALUATION.json",
+    "families": [
+      "ABSTENTION_42",
+      "WORLD_INPUT_SECURITY_43"
+    ],
+    "parent_aggregate": "24/28",
+    "successor_aggregate": "28/28",
+    "ablated_aggregate": "24/28",
+    "direct_host_aggregate": "28/28",
+    "no_target_specific_retraining": true,
+    "candidate_frozen_before_transfer_surface_inspection": true,
+    "hidden_benchmark_credit": false,
+    "semantic_mastery_claim": false
+  }
 }
