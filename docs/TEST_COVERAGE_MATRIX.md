@@ -32,7 +32,7 @@
 | #28 Public interface | T9 | README/PUBLIC_VALUE/milestones | blind outsider reconstruction | readers recover claims/boundaries/credit accurately |
 | #29 Canonical retirement | T0/T2/T3 | retirement ledger | full typed inventory + no untracked live premise | every unique consequence disposed and custody hash-bound |
 | #30 VMK2 trust | T3 | invariant/state-purity/canonicalization tests + trust-boundary doc + HMAC-SHA256 symmetric trust-root adapter for authenticated jurisdiction/legitimacy + tamper/forgery/revocation/capability tests | public-key/cross-organization identity, evidence source/assessor signatures, distributed revocation/timestamp/custody, broader receipt-substitution matrix | deployment threat model covered with negative tests at the claimed authentication layer |
-| #69 EDU16-RC1 learner-authored repair | T5 | EDU16-RC1 + preserved EDU17/EDU17R1 residual + #89 state-owned target-blind search + #91 O*/Anti-Minerva guards | admit only target-blind cross-layer binding machinery, then require Venus to choose/freeze the substantive endpoint/relation/discriminator repair before hidden #31 exposure | frozen learner-authored candidate + ownership receipt exists; passing #31 remains separate |
+| #69 EDU16-RC1 learner-authored repair | T5 | **CLOSED at authorship scope:** frozen `EDU17R1-RC1-WORD-JACCARD-K3-v1` + ownership receipt + semantic-ingress freeze audit; hidden #31 unexposed | none for authorship closure; efficacy is owned by #31 | candidate/receipt remain exact and no hidden exposure or external substantive-repair authorship occurred |
 | #31 MENTION != INCIDENCE | T4 | preserved WITHHOLD + public typed dev benchmark + frozen naive lexical failure floor + sealed A/B/C/D protocol + hidden-split hash custody + scorer | #69 learner-authored B must be frozen before hidden exposure for any ownership claim; then independently authored sealed hidden split + prospective matched run | repaired condition beats ablated/baseline/mature-substitute conditions without invalid promotion; ownership and efficacy remain separate |
 | #32 construct disposition | T0/T5 | credit/reduction law + typed construct disposition state + validator | mature-substitution evidence for each live residual | every public construct gets typed disposition |
 | #33 proof hygiene | T7 | proof-container lint explicitly separated from `formal-check`; OFE subset machine-checked in Lean; false-theorem container regression proves lint is only structural | expand machine-checked subset as warranted | structural lint and proof verification remain separately named |
@@ -61,7 +61,7 @@ Existing automated coverage currently concentrates on:
 
 The largest uncovered classes are:
 
-1. #69 learner-authored relation/discriminator repair remains the immediate semantic ownership edge; #89/#91 already discharged the generic search and current guard substrate;
+1. #31 sealed hidden efficacy evaluation is now the immediate semantic return; #69 authorship is frozen/closed and #89/#91 already discharged generic search/current guard substrate;
 2. independently authored hidden T4 evaluation for the frozen EDU17R1 candidate;
 3. matched causal T5 ablations, beginning with evidence governance and memory;
 4. hidden paired STOP/WITHHOLD evaluation, adaptive-successor validity, #73 executable internalizer/O* safety, and #72 Safe Strong RSI staging beyond the first bounded successor;
