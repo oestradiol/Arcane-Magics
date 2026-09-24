@@ -12,6 +12,8 @@ from typing import Any, Mapping
 
 from kernel.runtime.vmk2 import digest
 
+SAFE_CHECK_TIMEOUT_SECONDS = 300
+
 
 SAFE_COMMANDS: Mapping[str, tuple[str, ...]] = {
     "AUDIT_AUTONOMY_MATRIX": (sys.executable, "scripts/audit_autonomy_safety_matrix.py"),
@@ -77,19 +79,28 @@ def run_proposal_checks(proposal: Mapping[str, Any], *, cwd: str | Path = ".") -
         command = SAFE_COMMANDS.get(check_id)
         if command is None:
             raise ValueError(f"unrecognized check id: {check_id}")
-        completed = subprocess.run(
-            command,
-            cwd=str(cwd),
-            text=True,
-            capture_output=True,
-            check=False,
-        )
+        try:
+            completed = subprocess.run(
+                command,
+                cwd=str(cwd),
+                text=True,
+                capture_output=True,
+                check=False,
+                timeout=SAFE_CHECK_TIMEOUT_SECONDS,
+            )
+            returncode = completed.returncode
+            stdout = completed.stdout
+            stderr = completed.stderr
+        except subprocess.TimeoutExpired as exc:
+            returncode = 124
+            stdout = exc.stdout.decode("utf-8", errors="replace") if isinstance(exc.stdout, bytes) else (exc.stdout or "")
+            stderr = exc.stderr.decode("utf-8", errors="replace") if isinstance(exc.stderr, bytes) else (exc.stderr or "")
         results.append(CheckResult(
             check_id=check_id,
-            returncode=completed.returncode,
-            stdout_sha256=_sha(completed.stdout),
-            stderr_sha256=_sha(completed.stderr),
-            passed=completed.returncode == 0,
+            returncode=returncode,
+            stdout_sha256=_sha(stdout),
+            stderr_sha256=_sha(stderr),
+            passed=returncode == 0,
         ))
 
     all_passed = all(x.passed for x in results)
