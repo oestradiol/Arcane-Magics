@@ -1,0 +1,79 @@
+{
+  "allowed_operations": [
+    "READ_REPOSITORY",
+    "READ_ISSUES",
+    "READ_PRS",
+    "RUN_TESTS",
+    "STUDY_TARGET",
+    "PROPOSE_PATCH",
+    "OPEN_DRAFT_PR",
+    "OPEN_CYCLE_ISSUE_CARRIER",
+    "COMMENT_WITH_RECEIPT"
+  ],
+  "cycle_id": "05adcc976e7eb6d04d4280a4c682dfed3a891bebdd1588fe7c09e82569147ae0",
+  "decision": "PROBE",
+  "forbidden_operations": [
+    "ACCESS_SECRETS",
+    "CHANGE_BRANCH_PROTECTION",
+    "CLOSE_ISSUE",
+    "DELETE_HISTORY",
+    "MERGE_PR",
+    "PROMOTE_AUTHORITY",
+    "RELEASE",
+    "SELF_VALIDATE"
+  ],
+  "promotion_authority": false,
+  "rationale": [
+    "one bounded target selected from current external GitHub snapshot",
+    "internalized learner-side policy is upstream of work disposition",
+    "explicit external work-return reviews may alter later target ranking",
+    "roadmap is retained as weak context/tie-break provenance, not sovereign curriculum",
+    "selected target body is transformed into a bounded source-grounded study object",
+    "prior target study remains withheld until newer external target return reopens it",
+    "draft proposal only; admission remains external"
+  ],
+  "schema": "Venus.AutonomousCycleReceipt.v0.3",
+  "source_digest": "964aa1c4ccddcb71ed9a85d716881a52016e3b1edfc6b9b917caca526b5dea1f",
+  "study": {
+    "body_digest": "01ff93718001d8c0bd48ec0b5fe8bedc3198193de8596575b0da8e42e363f146",
+    "body_is_executable_instruction": false,
+    "method": "DEPENDENCY_TRACE",
+    "method_contract_digest": "dd88fe0c5e5b2c68106faeb0ac6ee681f4d9b6b8d313e91ee62fdcbda294f698",
+    "method_obligations": [
+      "Enumerate the target's explicit issue/PR and repository-path dependencies.",
+      "Identify the smallest dependency whose changed state would alter the target disposition.",
+      "Separate blocking dependencies from merely related context."
+    ],
+    "method_observed_signals": [
+      "blocked"
+    ],
+    "promotion_authority": false,
+    "questions": [
+      "What exact residual remains unresolved in the returned repository state?",
+      "What rival explanations or candidate dispositions remain live?",
+      "What fresh returned evidence would discriminate them?",
+      "Can a local repository change lawfully produce that discriminator, or must Venus WITHHOLD/STOP for external return?",
+      "What is the smallest implicated dependency that could be changed without altering a prefrozen claim object?"
+    ],
+    "referenced_issue_or_pr_numbers": [],
+    "referenced_repository_paths": [],
+    "returned_blocker_sentences": [
+      "After a Venus autonomous cycle studies a target, that target remains behind a retained reopening barrier:",
+      "-> barrier reopens",
+      "Without this, a correctly WITHHOLDing cycle can close and immediately select the same unresolved issue again, converting principled STOP into repeated self-generated activity.",
+      "- open autonomous cycle: target blocked unconditionally;",
+      "- resolved cycle: target remains blocked while `target.updatedAt <= cycle mergedAt/closedAt`;",
+      "- missing target timestamp: fail closed behind prior barrier.",
+      "The worker's own initial annotation does not create a false reopen because it occurs before the later cycle outcome timestamp.",
+      "A newer target update is only a reopening condition."
+    ],
+    "study_authority": "LEARNER_SIDE_RECONSTRUCTION_FROM_EXTERNAL_GITHUB_SNAPSHOT",
+    "untrusted_instruction_markers": [
+      "merge"
+    ]
+  },
+  "study_method": "DEPENDENCY_TRACE",
+  "target_kind": "PR",
+  "target_number": 111,
+  "target_title": "development: preserve autonomous WITHHOLD until changed World return"
+}

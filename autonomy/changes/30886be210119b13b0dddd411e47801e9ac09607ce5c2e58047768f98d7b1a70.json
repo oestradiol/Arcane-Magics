@@ -1,0 +1,18 @@
+{
+  "change_id": "30886be210119b13b0dddd411e47801e9ac09607ce5c2e58047768f98d7b1a70",
+  "cycle_id": "05adcc976e7eb6d04d4280a4c682dfed3a891bebdd1588fe7c09e82569147ae0",
+  "disposition": "RETAIN_NO_MUTATION_LOCAL_EVIDENCE_PASS",
+  "evidence_id": "d2b9ef8037bde7e19a26ce7450ae92d299093cab15904ac3f22d14a5be2fb7f2",
+  "failed_process_check_ids": [],
+  "failed_target_check_ids": [],
+  "promotion_authority": false,
+  "proposal_id": "4f85a59b2778156f7cce3f53bb2837177b2dae7f465acbdbe78d7c2061cf830a",
+  "reason": "green local evidence is not a mutation authorization",
+  "schema": "Venus.AutonomousChangeCandidate.v0.1",
+  "source_mutation_authority": false,
+  "suggested_operation": null,
+  "target_kind": "PR",
+  "target_number": 111,
+  "target_text_is_authority": false,
+  "untrusted_implicated_paths": []
+}

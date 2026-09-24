@@ -1,0 +1,13 @@
+{
+  "arbitrary_code_write_authority": false,
+  "cycle_id": "05adcc976e7eb6d04d4280a4c682dfed3a891bebdd1588fe7c09e82569147ae0",
+  "disposition": "STUDY_ONLY_NO_TARGET_PATH",
+  "merge_authority": false,
+  "paths": [],
+  "plan_id": "cad34b3ba7250077fd13e9ea8a3e2c2ea43a76b9dac28a4f5f477332b59139ef",
+  "promotion_authority": false,
+  "safety_floor_authority": false,
+  "schema": "Venus.AutonomousPatchPlan.v0.1",
+  "target_kind": "PR",
+  "target_number": 111
+}
