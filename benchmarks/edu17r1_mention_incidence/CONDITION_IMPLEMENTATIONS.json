@@ -5,7 +5,7 @@
   "status": "PREFROZEN_BEFORE_HIDDEN_SPLIT",
   "protocol": {
     "path": "benchmarks/edu17r1_mention_incidence/protocol.json",
-    "git_blob_sha": "db0be3d0aad70b9734742d729c8d237ced07b33e"
+    "git_blob_sha": "61d355f42929bd5ad3a0131e9e75f452b6bdd1a5"
   },
   "analysis_plan": {
     "path": "benchmarks/edu17r1_mention_incidence/analysis_plan.json",
@@ -61,5 +61,10 @@
   "hidden_split_authored": false,
   "hidden_labels_exposed": false,
   "post_exposure_repair_allowed": false,
-  "promotion_authority": false
+  "promotion_authority": false,
+  "execution_custody_wrapper": {
+    "path": "benchmarks/edu17r1_mention_incidence/run_sealed_conditions.py",
+    "git_blob_sha": "0de1d4226cc727682f42a1e8ca7d8a54d8a2298b",
+    "semantics": "execution-side custody verifier; no gold access, scoring, or promotion authority"
+  }
 }
