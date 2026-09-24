@@ -99,12 +99,11 @@ class AutonomousWorkerTests(unittest.TestCase):
             prs=(),
             roadmap_text="#31\n#72",
             internal_policy=POLICY,
-            recent_targets=(("ISSUE", 31),),
-            active_cycle_pending=True,
+            active_cycle=True,
         )
         self.assertEqual(cycle.decision, "STOP")
         self.assertIsNone(cycle.target_number)
-        self.assertTrue(any("awaiting external review" in x for x in cycle.rationale))
+        self.assertTrue(any("already awaiting external return" in x for x in cycle.rationale))
 
     def test_no_work_stops(self):
         cycle = make_cycle(
