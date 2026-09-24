@@ -63,7 +63,7 @@ A candidate residual is not a novelty certificate. It becomes a stronger contrib
 
 The comparison index should include, where relevant: task, register, source, temporal/index scope, jurisdiction, future-use behavior, correction topology, provenance, authorization, and verification route.
 
-## 4. Reduction is indexed
+## 3. Reduction is indexed
 
 For task/index `T`, comparator set `C`, and project relation `r`:
 
@@ -94,7 +94,7 @@ A reduction therefore retires only the claim that was actually substituted. It d
 - neighboring registers that have independent warrant;
 - stronger residuals not covered by the substitution.
 
-## 3. What mature comparison may change
+## 4. What mature comparison may change
 
 A mature comparison may lawfully:
 
