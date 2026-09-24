@@ -11,6 +11,12 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from kernel.development.autonomous_worker import load_work_items, make_cycle
+from kernel.development.autonomous_meta_learning import (
+    choose_strategy,
+    from_json as meta_from_json,
+    to_json as meta_to_json,
+    update_from_cycle_carriers,
+)
 from kernel.development.autonomous_learning import (
     active_autonomous_cycle,
     from_json,
@@ -29,7 +35,9 @@ def main() -> int:
     parser.add_argument("--history-prs", required=True)
     parser.add_argument("--history-issues")
     parser.add_argument("--learning-state", required=True)
+    parser.add_argument("--meta-learning-state", required=True)
     parser.add_argument("--learning-output", required=True)
+    parser.add_argument("--meta-learning-output", required=True)
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
 
@@ -47,9 +55,19 @@ def main() -> int:
     learning_state = from_json(
         json.loads(Path(args.learning_state).read_text(encoding="utf-8"))
     )
+    meta_learning_state = meta_from_json(
+        json.loads(Path(args.meta_learning_state).read_text(encoding="utf-8"))
+    )
     updated_learning = update_from_cycle_prs(learning_state, history_carriers)
+    updated_meta_learning = update_from_cycle_carriers(
+        meta_learning_state, history_carriers
+    )
     Path(args.learning_output).write_text(
         json.dumps(to_json(updated_learning), indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    Path(args.meta_learning_output).write_text(
+        json.dumps(meta_to_json(updated_meta_learning), indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
     utility = {
@@ -60,6 +78,7 @@ def main() -> int:
         method: updated_learning.method_utility(method)
         for method in updated_learning.method_success
     }
+    learning_strategy = choose_strategy(updated_meta_learning)
     barriers = target_barriers(history_carriers)
     active_cycle = active_autonomous_cycle(history_carriers)
 
@@ -72,6 +91,7 @@ def main() -> int:
         active_cycle=active_cycle,
         kind_utility=utility,
         method_utility=method_utility,
+        learning_strategy=learning_strategy,
     )
     Path(args.output).write_text(
         json.dumps(asdict(cycle), indent=2, sort_keys=True) + "\n",
