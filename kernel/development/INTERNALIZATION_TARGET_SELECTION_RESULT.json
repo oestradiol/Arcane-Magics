@@ -1,0 +1,19 @@
+{
+  "schema": "Venus.InternalizationTargetSelectionResult.v0.1",
+  "date": "2026-09-24",
+  "parent": "EDU16-RC1",
+  "status": "SELECTED_BY_RETURNED_CAUSAL_EVIDENCE",
+  "candidate_ids": [
+    "EDU17R1_RELATION_FEATURE_ADAPTER",
+    "WORLDMIND_SELF_RESEARCH_TRANSFORM_PROGRAM_SEED"
+  ],
+  "selected_target_id": "WORLDMIND_SELF_RESEARCH_TRANSFORM_PROGRAM_SEED",
+  "selection_basis": "returned-causal-evidence",
+  "selection_operation": "kernel/development/ownership_audit.py::select_internalization_target",
+  "execution_owner": "EXTERNAL_TOOLING",
+  "selection_owner": "VENUS_RECONSTRUCTED_EDU13_OPERATION",
+  "world_execution_owner": "EXTERNAL_WORLD_INTERFACE",
+  "evaluation_owner": "INDEPENDENT_EVALUATOR",
+  "promotion_authority": false,
+  "claim_fence": "Bounded curriculum/internalization target selection only. Selection is not proof of successful internalization or RSI."
+}
