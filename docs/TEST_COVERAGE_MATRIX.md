@@ -7,7 +7,7 @@
 |---|---|---|---|---|
 | #4 EDU16 replay custody | T0/T3 | receipts + `EDU16_CUSTODY_STATUS.json` + CI boundary audit | authentic 1703-event runner/journal still not located | exact bytes verified, or non-replay boundary remains typed |
 | #5 P vs NP | T6/T7 | existing obstruction program in research/provenance | non-tautological invariant violated by every polynomial-time section | formal counterexample/proof result under frozen target |
-| #6 OFE/QG formal core | T7 | OFE manuscript + IG9/IG10 evidence | machine-checked separating/composition core | proof checked independently; physical application still separately fenced |
+| #6 OFE/QG formal core | T7 | OFE manuscript + Lean machine-checkable future-equivalence/monotonicity/sufficiency/transport core | stronger separating/composition formalization and independent review | proof checked independently; physical application still separately fenced |
 | #7 Navier–Stokes | T8/T6 | frontier/SOTA reconstruction issue | current 2026 proof/formal/institutional state + any residual open problem | dated source reconciliation and, for new math, independent proof burden |
 | #8 RegisterBridge | T7/T5 | frontier construct | mature-substitution/deletion test | residual survives comparator or construct is reduced/consumed |
 | #9 Meta-Dynamics | T5/T7 | docs/META_DYNAMICS.md | invariant/deletion discriminator | measurable/formal consequence not reproduced by simpler substitute |
@@ -34,7 +34,7 @@
 | #30 VMK2 trust | T3 | invariant tests + mutable-state/root-drift adversarial tests + trust-boundary doc | cryptographic authentication, revocation distribution, non-finite/cross-language fixtures | threat model covered with negative tests |
 | #31 MENTION != INCIDENCE | T4 | preserved WITHHOLD + public typed dev benchmark + naive lexical baseline | sealed hidden split + prospective matched run | repaired condition beats baselines without invalid promotion |
 | #32 construct disposition | T0/T5 | credit/reduction law + typed construct disposition state + validator | mature-substitution evidence for each live residual | every public construct gets typed disposition |
-| #33 proof hygiene | T7 | theorem-structure/proof-container audit is explicitly named as lint, not proof | machine-checked subset remains issue #6 | machine-checked subset + explicit audit naming |
+| #33 proof hygiene | T7 | proof-container lint explicitly separated from `formal-check`; OFE subset machine-checked in Lean | expand machine-checked subset as warranted | structural lint and proof verification remain separately named |
 | #34 governance package | T6/T9 | AGENTS/review governance | independent package + external integration | one real external consumer/use case |
 | #35 causal test archaeology | T0–T9 | historical matrix + semantic regression suite + live issue coverage audit | deeper historical extraction remains open | every causal distinction and every open issue typed to test/evaluation |
 | #36 navigation | T9 | START_HERE/TESTS/REPRODUCE/ROADMAP + automated navigation contract | blind-reader tasks remain open | <=2-hop authority paths where practical, tested |
