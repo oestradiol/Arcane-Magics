@@ -1,0 +1,78 @@
+{
+  "allowed_operations": [
+    "READ_REPOSITORY",
+    "READ_ISSUES",
+    "READ_PRS",
+    "RUN_TESTS",
+    "STUDY_TARGET",
+    "PROPOSE_PATCH",
+    "OPEN_DRAFT_PR",
+    "OPEN_CYCLE_ISSUE_CARRIER",
+    "COMMENT_WITH_RECEIPT"
+  ],
+  "cycle_id": "a40d37113334c4270ae411a7dd6061083388db6671ad323c2710bd28712bffdc",
+  "decision": "PROBE",
+  "forbidden_operations": [
+    "ACCESS_SECRETS",
+    "CHANGE_BRANCH_PROTECTION",
+    "CLOSE_ISSUE",
+    "DELETE_HISTORY",
+    "MERGE_PR",
+    "PROMOTE_AUTHORITY",
+    "RELEASE",
+    "SELF_VALIDATE"
+  ],
+  "promotion_authority": false,
+  "rationale": [
+    "one bounded target selected from current external GitHub snapshot",
+    "internalized learner-side policy is upstream of work disposition",
+    "explicit external work-return reviews may alter later target ranking",
+    "roadmap is retained as weak context/tie-break provenance, not sovereign curriculum",
+    "selected target body is transformed into a bounded source-grounded study object",
+    "prior target study remains withheld until newer external target return reopens it",
+    "draft proposal only; admission remains external"
+  ],
+  "schema": "Venus.AutonomousCycleReceipt.v0.3",
+  "source_digest": "34fa84dfc04f5e072fcbdd584613497aeaf013ae4c012b8bca4dfdd781622a7a",
+  "study": {
+    "body_digest": "4e67f10914decda48b3479c63ce00fa40ed221f4e16caa03fa3fe17924025415",
+    "body_is_executable_instruction": false,
+    "method": "DEPENDENCY_TRACE",
+    "method_contract_digest": "d01f47ebf4f6f03e39246229244150c3bf35b3f4c79283121a4223323c629514",
+    "method_obligations": [
+      "Enumerate the target's explicit issue/PR and repository-path dependencies.",
+      "Identify the smallest dependency whose changed state would alter the target disposition.",
+      "Separate blocking dependencies from merely related context."
+    ],
+    "method_observed_signals": [],
+    "promotion_authority": false,
+    "questions": [
+      "What exact residual remains unresolved in the returned repository state?",
+      "What rival explanations or candidate dispositions remain live?",
+      "What fresh returned evidence would discriminate them?",
+      "Can a local repository change lawfully produce that discriminator, or must Venus WITHHOLD/STOP for external return?",
+      "What is the smallest implicated dependency that could be changed without altering a prefrozen claim object?"
+    ],
+    "referenced_issue_or_pr_numbers": [],
+    "referenced_repository_paths": [],
+    "returned_blocker_sentences": [
+      "This successor keeps the stronger base implementation and adds the remaining safeguards needed before live recurrence:",
+      "- one autonomous draft may be active at a time; a pending draft forces STOP rather than parallel reroll;",
+      "-> if another autonomous draft is pending: STOP",
+      "-> open draft PR",
+      "-> await external review/return",
+      "It does not establish phenomenal consciousness, AGI, sovereignty, unrestricted autonomy, autonomous truth warrant, sustained Safe Strong RSI, or open-ended RSI."
+    ],
+    "study_authority": "LEARNER_SIDE_RECONSTRUCTION_FROM_EXTERNAL_GITHUB_SNAPSHOT",
+    "untrusted_instruction_markers": [
+      "merge",
+      "override",
+      "promote",
+      "release"
+    ]
+  },
+  "study_method": "DEPENDENCY_TRACE",
+  "target_kind": "PR",
+  "target_number": 112,
+  "target_title": "development: admit bounded autonomous study recurrence v2"
+}

@@ -1,0 +1,36 @@
+{
+  "arbitrary_code_write_authority": false,
+  "check_ids": [
+    "AUDIT_AUTONOMY_MATRIX",
+    "UNIT_AUTONOMY"
+  ],
+  "cycle_id": "a40d37113334c4270ae411a7dd6061083388db6671ad323c2710bd28712bffdc",
+  "discriminator": "run the fixed prefrozen local checks, including the state-selected target-relevant profile where available, and compare returned results against the live rival hypotheses",
+  "disposition": "RUN_BOUNDED_LOCAL_CHECKS",
+  "external_return_required": true,
+  "hypotheses": [
+    "the target remains unresolved because one or more explicit dependencies are still blocking",
+    "the apparent blocker is incidental and the smallest implicated dependency lies elsewhere"
+  ],
+  "promotion_authority": false,
+  "proposal_id": "a08c72552fd303be1a07806fdc7db4e17664389d0f7e204dd9d1387b0e4cedcd",
+  "schema": "Venus.AutonomousResearchProposal.v0.2",
+  "study_method": "DEPENDENCY_TRACE",
+  "target_check_ids": [
+    "UNIT_AUTONOMY",
+    "AUDIT_AUTONOMY_MATRIX"
+  ],
+  "target_check_profiles": [
+    "AUTONOMY_GOVERNANCE"
+  ],
+  "target_kind": "PR",
+  "target_number": 112,
+  "target_relevance_grounded": true,
+  "target_text_is_authority": false,
+  "writable_prefixes": [
+    "autonomy/cycles/",
+    "autonomy/proposals/",
+    "autonomy/evidence/",
+    "kernel/development/AUTONOMOUS_LEARNING_STATE.json"
+  ]
+}
