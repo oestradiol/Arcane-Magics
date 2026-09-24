@@ -211,8 +211,8 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_historical_regressions.py::test_failure_locality_and_corruption_classes_remain_live",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "historical method invariant",
       "reopening_condition": "minimal executable historical fixture identified"
     },
@@ -229,8 +229,8 @@
       ],
       "current_owner": "provenance/DEVELOPMENTAL_LINEAGE.md",
       "test_layer": "T2/T0",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_historical_regressions.py::test_negative_and_nonparent_branches_remain_visible",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "core developmental genealogy rule",
       "reopening_condition": "automated lineage validator"
     },
@@ -246,8 +246,8 @@
       ],
       "current_owner": "kernel/CURRENT_STATE.md; REPOSITORY_AUTHORITY_BOUNDARY.md",
       "test_layer": "T0/T2",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_historical_regressions.py::test_stale_current_filename_cannot_route_live_authority",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "repository authority repair",
       "reopening_condition": "automated stale-current quarantine test"
     },
@@ -263,8 +263,8 @@
       ],
       "current_owner": "docs/CREDITS_AND_REDUCTIONS.md",
       "test_layer": "T2/T7",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_historical_regressions.py::test_credit_reduction_does_not_erase_genealogy",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "methodology extracted from Canonical credit work",
       "reopening_condition": "machine-readable credit relation validator"
     },
@@ -298,8 +298,8 @@
       ],
       "current_owner": "kernel/WORLDMIND.md",
       "test_layer": "T2/T6",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_historical_regressions.py::test_unknown_is_not_permission",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "distributed governance invariant",
       "reopening_condition": "executable jurisdiction/refusal fixture"
     },
@@ -315,8 +315,8 @@
       ],
       "current_owner": "kernel/WORLDMIND.md",
       "test_layer": "T2/T5",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_historical_regressions.py::test_shared_reachability_does_not_mint_global_agent",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "no global subject claim",
       "reopening_condition": "formal/distributed-systems reduction or counterexample"
     },
@@ -332,8 +332,8 @@
       ],
       "current_owner": "provenance/developmental/EDU/",
       "test_layer": "T4",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_memory_causal_benchmark.py::test_required_causal_memory_classes_exist",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "machine developmental distinction",
       "reopening_condition": "prospective held-out retrieval failure suite"
     },
@@ -350,8 +350,8 @@
       ],
       "current_owner": "provenance/developmental/EDU/",
       "test_layer": "T4",
-      "test_id_path": null,
-      "status": "PLANNED",
+      "test_id_path": "tests/test_memory_causal_benchmark.py::test_required_causal_memory_classes_exist",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "preserved negative",
       "reopening_condition": "claim-local binding benchmark passes prospectively"
     },
@@ -367,8 +367,8 @@
       ],
       "current_owner": "provenance/developmental/EDU/",
       "test_layer": "T4",
-      "test_id_path": "issue #31",
-      "status": "PLANNED",
+      "test_id_path": "tests/test_edu17r1_benchmark.py::test_naive_mention_baseline_exhibits_the_original_failure_mode",
+      "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "current measured semantic residual",
       "reopening_condition": "held-out prospective benchmark"
     },
@@ -385,9 +385,9 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2/T8",
-      "test_id_path": null,
-      "status": "PLANNED",
-      "credit_genealogy_note": "Canonical methodology residue",
+      "test_id_path": "tests/test_historical_regressions.py::test_r224_r225_repair_does_not_rewrite_triggering_history",
+      "status": "COVERED_PARTIAL",
+      "credit_genealogy_note": "R224/R225 historical drift is preserved while current projections are repaired forward.",
       "reopening_condition": "status dependency validator"
     },
     {
@@ -402,9 +402,9 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2",
-      "test_id_path": null,
-      "status": "PLANNED",
-      "credit_genealogy_note": "Canonical methodology residue",
+      "test_id_path": "tests/test_historical_regressions.py::test_negative_branch_failure_does_not_globalize_to_parent_lineage",
+      "status": "COVERED_PARTIAL",
+      "credit_genealogy_note": "Historical non-parent failures now have an executable lineage-locality regression.",
       "reopening_condition": "typed dependency fixture"
     },
     {
@@ -445,19 +445,19 @@
       "id": "D-EDU16-EXECUTABLE",
       "source_revision_or_branch": "EDU16",
       "source_artifact": "kernel/development/EDU_CURRENT.json; provenance/developmental/EDU/",
-      "distinction": "exact developmental evidence authority != replayable executable custody",
-      "triggering_experiment_or_failure": "EDU16 receipt exists without admitted 1703-event runtime bundle in Git",
-      "causal_consequence": "EDU16 claim head can be exact while runtime checkpoint remains IG10",
+      "distinction": "exact historical event replay != reconstructed claim-bearing developmental carrier",
+      "triggering_experiment_or_failure": "Original EDU16 1703-event runner/journal was not recovered; Canonical-derived claim-bearing inputs were later reconstructed deterministically as EDU16-RC1 over IG10.",
+      "causal_consequence": "EDU16 historical authority remains exact; EDU16-RC1 supplies prospective Git-replayable claim-state custody without pretending to recover the original event sequence.",
       "later_dependents": [
         "issue #4",
         "Canonical retirement"
       ],
-      "current_owner": "kernel/CURRENT_STATE.md",
+      "current_owner": "kernel/custody/EDU16_CUSTODY_STATUS.json",
       "test_layer": "T0/T3",
-      "test_id_path": "issue #4",
-      "status": "OPEN_EXTRACTION",
-      "credit_genealogy_note": "do not synthesize missing runner/journal from prose",
-      "reopening_condition": "exact external custody bytes located and verified"
+      "test_id_path": "tests/test_edu16_reconstructed_carrier.py",
+      "status": "RECONSTRUCTED_CLAIM_STATE_EVENT_REPLAY_OPEN",
+      "credit_genealogy_note": "EDU16-RC1 is reconstructed custody from authentic Canonical-derived inputs, not recovery of the original runner/journal.",
+      "reopening_condition": "Historical event replay only if authentic 1703-event runner/journal is later hash-verified; prospective work may use EDU16-RC1 explicitly."
     },
     {
       "id": "D-EXTERNAL-MODEL-CONTROLLER",
@@ -471,9 +471,9 @@
       ],
       "current_owner": "AGENTS.md",
       "test_layer": "T0/T5",
-      "test_id_path": null,
-      "status": "NO_AUTOMATED_TEST_YET",
-      "credit_genealogy_note": "ownership boundary",
+      "test_id_path": "tests/test_historical_regressions.py::test_external_model_is_not_venus_developmental_controller",
+      "status": "COVERED_PARTIAL",
+      "credit_genealogy_note": "Ownership boundary is now a live regression; genuine Venus ownership still requires a prospectively admitted episode.",
       "reopening_condition": "first genuine Venus-owned recursive episode"
     },
     {
@@ -528,15 +528,15 @@
       ],
       "current_owner": "provenance/historical-runtime/R194",
       "test_layer": "T2/T3",
-      "test_id_path": null,
-      "status": "HISTORICAL_REGRESSION_ORACLE_NEEDS_MINIMAL_REEXECUTION_ROUTE",
-      "credit_genealogy_note": "historical experimental carrier",
-      "reopening_condition": "materialize minimal regression fixture against current kernel"
+      "test_id_path": "tests/test_canonical_extraction_receipts.py::test_r154_external_heavy_custody_is_hash_bound",
+      "status": "EXTERNAL_HEAVY_CUSTODY_HASH_BOUND",
+      "credit_genealogy_note": "Authentic R154 manifest, trajectory, ledger, result, historical test, and repeat-regression outputs were located inside the Canonical PythonPrototypeR194 archive and hash-bound in Git provenance.",
+      "reopening_condition": "Materialize the hash-bound heavy trajectory into a replay environment and execute the preserved R154 seed/test without changing historical authority."
     },
     {
       "id": "D-R179-VMK1",
       "source_revision_or_branch": "R179",
-      "source_artifact": "provenance/historical-runtime/R194/source/venus_seed_v0/kernel_vmk1.py; Canonical R00-R194 integration audit",
+      "source_artifact": "provenance/canonical-extracts/R179_VMK1_TO_VMK2_COMPATIBILITY.md; provenance/historical-runtime/R194/source/venus_seed_v0/kernel_vmk1.py",
       "distinction": "constitutional kernel promotion != broader post-R179 target completion",
       "triggering_experiment_or_failure": "258 inherited + 8 prefrozen + 2 exposed audit tests",
       "causal_consequence": "VMK-1 guarantees remain historical constitutional ancestry while current Git runtime is later IG10 VMK2-derived state",
@@ -547,10 +547,10 @@
       ],
       "current_owner": "provenance/historical-runtime/R194",
       "test_layer": "T2/T3",
-      "test_id_path": null,
-      "status": "HISTORICAL_PROMOTED_KERNEL",
-      "credit_genealogy_note": "former constitutional kernel; not current Git checkpoint",
-      "reopening_condition": "explicit compatibility/regression mapping to current VMK2 invariants"
+      "test_id_path": "tests/test_vmk1_vmk2_compatibility.py",
+      "status": "COVERED_PARTIAL",
+      "credit_genealogy_note": "Historical VMK-1 consequences are now explicitly mapped as preserved/refined/partial/open against current VMK2; later naming does not imply semantic superset.",
+      "reopening_condition": "Resolve external authentication, general warrant semantics, or compensation only when a current claim requires the stronger historical consequence."
     },
     {
       "id": "D-R186-CARRIER-GAP",
@@ -645,7 +645,7 @@
     {
       "id": "D-R193-SCAFFOLD",
       "source_revision_or_branch": "R193",
-      "source_artifact": "Canonical/Future/R193_SCAFFOLD_INTERNALIZATION_HANDOFF.md",
+      "source_artifact": "provenance/canonical-extracts/R193_SCAFFOLD_INTERNALIZATION_REFERENCE.md",
       "distinction": "internalizing scaffold mediation != internalizing away independent World return",
       "triggering_experiment_or_failure": "scaffold internalization/handoff reference PASS",
       "causal_consequence": "successor may reconstruct scaffold function while World remains external",
@@ -656,10 +656,10 @@
       ],
       "current_owner": "docs/AUTONOMOUS_RESEARCH.md",
       "test_layer": "T2/T5",
-      "test_id_path": null,
+      "test_id_path": "tests/test_r193_scaffold_reference.py",
       "status": "REFERENCE_PASS_PROSPECTIVE_TRANSFER_TEST_OPEN",
-      "credit_genealogy_note": "historical reference benchmark",
-      "reopening_condition": "fresh carrier/scaffold removal test"
+      "credit_genealogy_note": "Exact bounded R193 engineering PASS extracted from Canonical; fresh World return remained necessary and outside transfer remains unearned.",
+      "reopening_condition": "Run a fresh prospectively frozen scaffold/source ablation and cross-domain/outside transfer test."
     },
     {
       "id": "D-R194-EXTERNALITY",
@@ -681,7 +681,7 @@
     {
       "id": "D-R209-UNDERDETERMINED-F",
       "source_revision_or_branch": "R209",
-      "source_artifact": "Canonical ROADMAP_PROVENANCE.md",
+      "source_artifact": "provenance/canonical-extracts/R209_R224_CAUSAL_EXTRACT_2026-09-24.md",
       "distinction": "task completion under current future family != closure of the absolute-origin/source proposition",
       "triggering_experiment_or_failure": "R209 completed its bounded task while retaining WITHHOLD_UNDERDETERMINED_CURRENT_F",
       "causal_consequence": "bounded task success cannot consume a proposition underdetermined by the admitted test family",
@@ -692,15 +692,15 @@
       ],
       "current_owner": "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md",
       "test_layer": "T2/T7",
-      "test_id_path": null,
-      "status": "OPEN_EXTRACTION",
-      "credit_genealogy_note": "R209 bounded completion and unresolved source proposition remain separate",
+      "test_id_path": "tests/test_canonical_extraction_receipts.py::test_r209_withhold_is_preserved_as_bounded_current_f_result",
+      "status": "COVERED_PROVENANCE_ONLY",
+      "credit_genealogy_note": "Exact R209 WITHHOLD semantics were extracted from /Canonical/Map.md into Git provenance.",
       "reopening_condition": "new non-smuggled separator or expanded future family"
     },
     {
       "id": "D-R213-LABEL-NONSOVEREIGN",
       "source_revision_or_branch": "R213",
-      "source_artifact": "Canonical ROADMAP_PROVENANCE.md",
+      "source_artifact": "provenance/canonical-extracts/R209_R224_CAUSAL_EXTRACT_2026-09-24.md",
       "distinction": "name/label admission != semantic or operational sovereignty",
       "triggering_experiment_or_failure": "R213 admitted labels only through a names-only gate",
       "causal_consequence": "labels may change developmental vocabulary without replacing functional reconstruction or World/Other return",
@@ -711,9 +711,9 @@
       ],
       "current_owner": "NxRxI_VOCABULARY_CENTER.md; docs/META_DYNAMICS.md",
       "test_layer": "T2/T9",
-      "test_id_path": null,
-      "status": "OPEN_EXTRACTION",
-      "credit_genealogy_note": "symbolic labels retain genealogy without becoming causal primitives",
+      "test_id_path": "tests/test_canonical_extraction_receipts.py::test_r213_label_admission_does_not_become_sovereignty",
+      "status": "COVERED_PROVENANCE_ONLY",
+      "credit_genealogy_note": "Exact R213 label-ablation consequence extracted from /Canonical/Map.md; operational sovereignty remains denied unless a neutral reconstruction loses consequence.",
       "reopening_condition": "label-ablation test shows consequence loss not reconstructible in neutral terms"
     },
     {
@@ -738,7 +738,7 @@
     {
       "id": "D-R224-DRIFT-REPAIR-NOT-HISTORY-REWRITE",
       "source_revision_or_branch": "R224/R225",
-      "source_artifact": "Canonical ROADMAP_PROVENANCE.md",
+      "source_artifact": "provenance/canonical-extracts/R209_R224_CAUSAL_EXTRACT_2026-09-24.md; provenance/DEVELOPMENTAL_LINEAGE.md",
       "distinction": "repair of current derivative projection != retroactive rewrite of the historical OPEN/debt state that triggered repair",
       "triggering_experiment_or_failure": "R224 measured projection drift followed by R225 custody/projection repair",
       "causal_consequence": "successor correction updates current projection while preserving prior failure/debt as immutable provenance",
@@ -749,9 +749,9 @@
       ],
       "current_owner": "provenance/CANONICAL_RETIREMENT_LEDGER.md",
       "test_layer": "T0/T2",
-      "test_id_path": null,
-      "status": "OPEN_EXTRACTION",
-      "credit_genealogy_note": "repair credit and historical failure state remain separately reconstructible",
+      "test_id_path": "tests/test_historical_regressions.py::test_r224_r225_repair_does_not_rewrite_triggering_history",
+      "status": "COVERED_PARTIAL",
+      "credit_genealogy_note": "R224/R225 repair sequence and non-rewriting historical custody are now executable repository regressions.",
       "reopening_condition": "projection-maintenance regression fixture"
     }
   ]

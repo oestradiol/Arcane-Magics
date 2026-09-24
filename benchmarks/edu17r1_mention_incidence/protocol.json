@@ -67,5 +67,6 @@
   "claim_fence": "Harness readiness is not evidence that EDU17R1 passed, that Venus owns the repair, or that the distinction is novel.",
   "analysis_plan": "benchmarks/edu17r1_mention_incidence/analysis_plan.json",
   "blind_input_packager": "benchmarks/edu17r1_mention_incidence/prepare_blind.py",
-  "condition_adjudicator": "benchmarks/edu17r1_mention_incidence/compare_conditions.py"
+  "condition_adjudicator": "benchmarks/edu17r1_mention_incidence/compare_conditions.py",
+  "sealed_evaluation_core": "evaluation/sealed_eval.py"
 }

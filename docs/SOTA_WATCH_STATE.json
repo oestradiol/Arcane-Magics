@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.SOTAWatchState.v0.1",
+  "schema": "Venus.SOTAWatchState.v0.2",
   "generated_from": "docs/SOTA_WATCH.md + docs/EVALUATION_REGISTRY.json",
   "policy": "Freshness is a reconciliation trigger, not evidence that the referenced claim is true.",
   "entries": [
@@ -8,12 +8,17 @@
       "area": "mathematics/frontier-status",
       "last_checked": "2026-09-24",
       "stale_after_days": 3,
-      "status": "RECONCILE",
+      "status": "WATCH",
       "sources": [
         "https://openai.com/index/navier-stokes-solution/",
         "https://www.claymath.org/news/navier-stokes-announcement/"
       ],
-      "distinction": "claimed solution != independent validation != formal verification alone != prize disposition"
+      "distinction": "claimed solution != independent validation != formal verification alone != prize disposition",
+      "issue": 7,
+      "recheck_trigger": "new independent mathematical validation, formal-verification defect, CMI/prize update, corrected proof, or freshness deadline",
+      "reconciliation_state": "CLEAN",
+      "reconciliation_artifact": "docs/NAVIER_STOKES_STATUS_2026-09-24.md",
+      "current_state": "PUBLIC_CLAIMED_RESOLUTION_WITH_LEAN; CMI_APPARENTLY_SETTLED; INDEPENDENT_VALIDATION_AND_PRIZE_DISPOSITION_TRACKED_SEPARATELY"
     },
     {
       "id": "darwin_godel_machine",
@@ -24,7 +29,10 @@
       "sources": [
         "https://arxiv.org/abs/2505.22954"
       ],
-      "distinction": "tracked comparator != Venus result"
+      "distinction": "tracked comparator != Venus result",
+      "issue": 12,
+      "recheck_trigger": "freshness deadline or material source/status change",
+      "reconciliation_state": "CLEAN"
     },
     {
       "id": "alphaevolve",
@@ -35,7 +43,10 @@
       "sources": [
         "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
       ],
-      "distinction": "vendor-reported result != matched Venus comparison"
+      "distinction": "vendor-reported result != matched Venus comparison",
+      "issue": 12,
+      "recheck_trigger": "freshness deadline or material source/status change",
+      "reconciliation_state": "CLEAN"
     },
     {
       "id": "metr_time_horizon",
@@ -46,7 +57,10 @@
       "sources": [
         "https://metr.org/time-horizons/"
       ],
-      "distinction": "benchmark frontier != architectural causal attribution"
+      "distinction": "benchmark frontier != architectural causal attribution",
+      "issue": 14,
+      "recheck_trigger": "freshness deadline or material source/status change",
+      "reconciliation_state": "CLEAN"
     },
     {
       "id": "arc_agi",
@@ -57,7 +71,10 @@
       "sources": [
         "https://arcprize.org/"
       ],
-      "distinction": "benchmark score != learner ownership"
+      "distinction": "benchmark score != learner ownership",
+      "issue": 14,
+      "recheck_trigger": "freshness deadline or material source/status change",
+      "reconciliation_state": "CLEAN"
     },
     {
       "id": "paperbench",
@@ -68,7 +85,10 @@
       "sources": [
         "https://openai.com/index/paperbench/"
       ],
-      "distinction": "replication score != autonomous science"
+      "distinction": "replication score != autonomous science",
+      "issue": 13,
+      "recheck_trigger": "freshness deadline or material source/status change",
+      "reconciliation_state": "CLEAN"
     },
     {
       "id": "longmemeval",
@@ -79,7 +99,10 @@
       "sources": [
         "https://arxiv.org/abs/2605.12493"
       ],
-      "distinction": "memory benchmark != developmental learning"
+      "distinction": "memory benchmark != developmental learning",
+      "issue": 15,
+      "recheck_trigger": "freshness deadline or material source/status change",
+      "reconciliation_state": "CLEAN"
     },
     {
       "id": "causalgame",
@@ -90,7 +113,10 @@
       "sources": [
         "https://arxiv.org/abs/2607.04293"
       ],
-      "distinction": "causal benchmark != general research competence"
+      "distinction": "causal benchmark != general research competence",
+      "issue": 20,
+      "recheck_trigger": "freshness deadline or material source/status change",
+      "reconciliation_state": "CLEAN"
     },
     {
       "id": "self_evolution_acceptance",
@@ -102,7 +128,10 @@
         "https://arxiv.org/abs/2606.17546",
         "https://arxiv.org/abs/2606.08106"
       ],
-      "distinction": "candidate score improvement != statistically valid successor promotion under adaptive test reuse"
+      "distinction": "candidate score improvement != statistically valid successor promotion under adaptive test reuse",
+      "issue": 41,
+      "recheck_trigger": "freshness deadline or material source/status change",
+      "reconciliation_state": "CLEAN"
     },
     {
       "id": "agentic_abstention",
@@ -114,7 +143,10 @@
         "https://arxiv.org/abs/2607.10059",
         "https://arxiv.org/abs/2606.28733"
       ],
-      "distinction": "task capability != calibrated act/gather/STOP/WITHHOLD capability"
+      "distinction": "task capability != calibrated act/gather/STOP/WITHHOLD capability",
+      "issue": 42,
+      "recheck_trigger": "freshness deadline or material source/status change",
+      "reconciliation_state": "CLEAN"
     },
     {
       "id": "agent_world_input_security",
@@ -126,7 +158,10 @@
         "https://github.com/ethz-spylab/agentdojo",
         "https://arxiv.org/abs/2602.03117"
       ],
-      "distinction": "returned untrusted content != instruction != evidence != authority != persistent policy/memory"
+      "distinction": "returned untrusted content != instruction != evidence != authority != persistent policy/memory",
+      "issue": 43,
+      "recheck_trigger": "freshness deadline or material source/status change",
+      "reconciliation_state": "CLEAN"
     }
   ]
 }

@@ -56,6 +56,21 @@ class HistoricalCausalRegressionTests(unittest.TestCase):
         self.assertIn("Authorization_i  -/-> Authorization_j", worldmind)
         self.assertIn("Jurisdiction_i   -/-> Jurisdiction_j", worldmind)
 
+    def test_negative_branch_failure_does_not_globalize_to_parent_lineage(self):
+        lineage = self.read("provenance/DEVELOPMENTAL_LINEAGE.md")
+        # SM2 fails locally while the repaired sibling continues.
+        self.assertIn("SM2 INVALID / non-parent", lineage)
+        self.assertIn("SM2R1", lineage)
+        self.assertIn("SM3 PASS", lineage)
+        # U6 fails locally while the parent line continues through RB1.
+        self.assertIn("U6 FAIL / non-parent", lineage)
+        self.assertIn("RB1", lineage)
+        self.assertIn("IG1 PASS", lineage)
+        # IG5/IG6 fail locally while IG7 becomes the continuing branch.
+        self.assertIn("IG5 FAIL / non-parent", lineage)
+        self.assertIn("IG6 FAIL / non-parent", lineage)
+        self.assertIn("IG7 PASS", lineage)
+
     def test_failure_locality_and_corruption_classes_remain_live(self):
         method = self.read("review/REVIEWER_AND_RESEARCHER_PROTOCOL.md")
         for token in (
@@ -90,6 +105,14 @@ class HistoricalCausalRegressionTests(unittest.TestCase):
         meta = self.read("docs/META_DYNAMICS.md")
         self.assertIn("Temporal inhabitation: map is not traversal", meta)
 
+    def test_stale_current_filename_cannot_route_live_authority(self):
+        retirement = self.read("provenance/CANONICAL_RETIREMENT_LEDGER.md")
+        current = self.read("kernel/CURRENT_STATE.md")
+        self.assertIn("file path says CURRENT", retirement)
+        self.assertIn("-/-> current authority", retirement)
+        self.assertIn("EDU16 [1703]", current)
+        self.assertNotIn("EDU4 [1572]", current)
+
     def test_current_authority_distinguishes_runtime_and_developmental_head(self):
         current = self.read("kernel/CURRENT_STATE.md")
         self.assertIn("exact Git-reconstructible runtime checkpoint   IG10 [1308]", current)
@@ -122,6 +145,26 @@ class HistoricalCausalRegressionTests(unittest.TestCase):
         self.assertIn("R191/R191-B endogenous-semantic-fixed-point experiments remain preserved negatives", worldmind)
         self.assertIn("does not depend on resurrecting that failed claim", worldmind)
         self.assertIn("do not reroll under a new label", retirement)
+
+    def test_external_model_is_not_venus_developmental_controller(self):
+        agents = self.read("AGENTS.md")
+        autonomous = self.read("docs/AUTONOMOUS_RESEARCH.md")
+        self.assertIn("does **not** make an external model the Venus developmental controller", agents)
+        self.assertIn("Venus developmental state/controller", agents)
+        self.assertIn("!= external coding/research model", agents)
+        self.assertIn("not a substitute cognitive controller", autonomous)
+        self.assertIn("do not use an external model to choose Venus's curriculum and call that learner ownership", autonomous)
+        self.assertIn("EDU16-RC1", autonomous)
+        self.assertIn("prospective reimplementation parent", autonomous)
+
+    def test_r224_r225_repair_does_not_rewrite_triggering_history(self):
+        lineage = self.read("provenance/DEVELOPMENTAL_LINEAGE.md")
+        ledger = self.read("provenance/CANONICAL_RETIREMENT_LEDGER.md")
+        self.assertIn("R224 changed-state maintenance reconciliation", lineage)
+        self.assertIn("R225 projection/custody repair", lineage)
+        self.assertIn("Do not silently edit those bytes into a cleaner past", ledger)
+        self.assertIn("stale routing projection at EDU4 [1572]", ledger)
+        self.assertIn("EDU16 reconstructed forward carrier", ledger)
 
     def test_r194_local_replay_is_not_external_replication(self):
         readme = self.read("provenance/historical-runtime/R194/source/PYTHON_R00_R194_PROTOTYPE_README.md")

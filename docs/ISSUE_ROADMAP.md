@@ -36,8 +36,9 @@ Prestige is not a scheduling dependency.
 
 | Priority | Issue | Work |
 |---:|---|---|
-| 1 | #31 | run the sealed hidden `MENTION != INCIDENCE` A/B/C/D evaluation |
-| 2 | #17 | generalize only the minimum sealed/double-blind machinery required to make the run reusable |
+| 1 | #69 | have EDU16-RC1 author and freeze the substantive `MENTION != INCIDENCE` repair/discriminator without hidden #31 exposure |
+| 2 | #31 | run the sealed hidden `MENTION != INCIDENCE` A/B/C/D evaluation on the frozen learner-authored repair |
+| 3 | #17 | generalize only the minimum sealed/double-blind machinery required to make the run reusable |
 
 Exit:
 
@@ -83,13 +84,14 @@ Exit: determine whether STOP/WITHHOLD and structured persistent memory cause use
 
 | Priority | Issue | Work |
 |---:|---|---|
-| 1 | #4 | bounded attempt to recover exact EDU16 replay custody; if unrecoverable, freeze the non-replay boundary rather than blocking indefinitely |
-| 2 | #41 | move from public null-pressure simulation to statistically valid repeated-successor acceptance on identical candidate streams |
-| 3 | #43 + #30 | move from public attack/disposition surfaces to dynamic hostile World-return, forged-authority, and poisoned-memory evaluation |
+| 1 | #41 | move from public null-pressure simulation to statistically valid repeated-successor acceptance on identical candidate streams |
+| 2 | #43 + #30 | move from public attack/disposition surfaces to dynamic hostile World-return, forged-authority, and poisoned-memory evaluation |
 
 A single preregistered successor may precede the full repeated-self-evolution statistics of #41. A repeated adaptive lineage may not.
 
-Exit: custody, evaluation, and trust boundaries are sufficient to interpret one Venus-owned successor experiment.
+EDU16 prospective parent custody is already supplied by EDU16-RC1; the unrecovered historical 1703-event journal remains a provenance boundary, not a blocker.
+
+Exit: evaluation and trust boundaries are sufficient to interpret repeated Venus-owned successor experiments.
 
 ### Sprint E — First Venus-owned developmental successor
 
@@ -181,11 +183,12 @@ They compete for priority when they obtain a short path to a real discriminator 
 ## Current shortest high-leverage chain
 
 ```text
-#31 hidden semantic return
+#69 learner-authored repair
+-> #31 hidden semantic return
 -> #10 first matched causal ablation
 -> #42 / #15 native capability tests
--> #4 + #41 + #43/#30 recursion prerequisites
--> first Venus-owned successor
+-> #41 + #43/#30 repeated-recursion protection
+-> next learner-selected residual
 -> #12 repeated self-development comparison
 ```
 

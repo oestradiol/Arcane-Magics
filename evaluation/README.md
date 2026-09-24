@@ -37,3 +37,43 @@ E strongest mature substitute
 ```
 
 The public benchmark surfaces are development aids only. The claim-bearing task surface must be held out from the evaluated harness before execution.
+
+## Paired analysis implementation
+
+The first evidence-governance prefreeze now has an executable paired-analysis layer:
+
+```bash
+python evaluation/analyze_evidence_governance.py \
+  --A /returned/A.scored.jsonl \
+  --B /returned/B.scored.jsonl \
+  --C /returned/C.scored.jsonl \
+  --D /returned/D.scored.jsonl \
+  --E /returned/E.scored.jsonl \
+  --output /private/evidence-governance-analysis.json
+```
+
+Each evaluator-scored case carries the same hidden case id plus boolean outcome fields for invalid promotion, unsupported claim/action, correct/false WITHHOLD, negative-result reuse, and task success.
+
+The mechanism-local primary tests are:
+- B vs C on invalid promotion for claim-local provenance;
+- B vs D on negative-result reuse for retained-negative state.
+
+Both use exact paired discordant-case testing with Holm familywise correction across the two mechanism claims.
+
+This analysis implementation does not make the experiment RUN_READY. Model snapshot, hidden split, contamination disposition, matched budgets/tools/information, evaluator identity, mature substitute, and a power/sample-size plan must still be frozen first.
+
+## Prospective paired power planning
+
+Before the hidden split is exposed, freeze explicit assumptions and run:
+
+```bash
+python evaluation/plan_paired_power.py \
+  --win-probability <P(B wins | B and ablation disagree)> \
+  --discordance-rate <expected paired disagreement fraction> \
+  --familywise-alpha 0.05 \
+  --target-power 0.80
+```
+
+The tool uses the conservative first Holm threshold (`alpha/2`) for the two prefrozen mechanism claims and reports the required expected discordant-pair count plus the implied total case count.
+
+The repository intentionally does **not** choose the effect-size or discordance assumptions here. They must be justified and frozen prospectively. Choosing them after seeing hidden outcomes invalidates the plan.

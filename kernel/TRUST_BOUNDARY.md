@@ -31,10 +31,35 @@ The reference kernel can correctly reject a transition that violates a registere
 - state-root consistency at transition time;
 - defensive isolation of backend input from prior state values.
 
+## Bounded authenticated deployment adapter
+
+`kernel/runtime/auth.py` now provides a stronger optional authority-ingress path using HMAC-SHA256 under explicitly configured symmetric trust roots.
+
+It authenticates:
+- issuer + key identity within the configured trust store;
+- payload digest and type;
+- per-root authority-type capability;
+- revocation before signing/verification;
+- fail-closed registration of jurisdiction and legitimacy receipts;
+- preservation of VMK2's existing immutable receipt-ID binding after authentication.
+
+Adversarial tests cover payload tampering, forged issuer/key, signature tampering, revoked roots, capability/type violations, and conflicting authenticated receipt registration.
+
+This earns only:
+
+```text
+registered authority
++ configured shared-secret trust root
++ successful cryptographic verification
+-> authenticated authority under that bounded deployment trust domain
+```
+
+It does **not** establish PKI, independent identity attestation, or cross-organization trust.
+
 ## What remains outside the current authenticated boundary
 
-- cryptographic issuer identity;
-- trust-root/capability-chain verification;
+- public-key issuer identity / PKI or equivalent independently distributable trust;
+- chained/delegated capability verification beyond a directly configured symmetric root;
 - source/assessor signature verification;
 - independent timestamping;
 - external immutable storage/custody proof;

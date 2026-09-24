@@ -104,13 +104,20 @@
       "class": "CONSUMED_GENERATED_PROJECTION",
       "git_owner": "Git source/publication tooling",
       "note": "do not retain duplicate generated authority"
+    },
+    {
+      "surface": "Git/EDU16-RC1",
+      "class": "RECONSTRUCTED_CLAIM_BEARING_CARRIER",
+      "git_owner": "kernel/development/EDU16_RECONSTRUCTED_CARRIER_MANIFEST.json; kernel/development/replay_edu16_reconstructed.py",
+      "note": "Deterministic reconstruction of admitted EDU16 claim-bearing state over IG10; not recovery of original 1703-event runner/journal."
     }
   ],
   "open_obligations": [
     {
       "id": "CANON-EDU16-EXEC-CUSTODY",
-      "status": "OPEN",
-      "description": "Determine whether exact EDU16 1703-event executable/journal custody exists outside admitted prefreeze/policy/result artifacts; never synthesize from prose."
+      "status": "HISTORICAL_EVENT_REPLAY_OPEN_RC1_AVAILABLE",
+      "description": "EDU16-RC1 now gives Git-replayable claim-bearing state from authentic Canonical-derived inputs over IG10. Original 1703-event runner/journal remains not located; historical event replay reopens only on authentic hash-verified bytes.",
+      "evidence": "kernel/custody/EDU16_CUSTODY_STATUS.json"
     },
     {
       "id": "CANON-UNIQUE-SOURCE-INVENTORY",
@@ -129,18 +136,21 @@
     },
     {
       "id": "CANON-STALE-CURRENT-QUARANTINE",
-      "status": "PARTIAL",
-      "description": "Ensure stale CURRENT labels cannot route authority after retirement."
+      "status": "DONE",
+      "description": "Stale CURRENT labels cannot route live authority; regression binds current authority to admitted Git state rather than filename recency.",
+      "evidence": "tests/test_historical_regressions.py::test_stale_current_filename_cannot_route_live_authority"
     },
     {
       "id": "CANON-OUTSIDER-REPRO",
-      "status": "OPEN",
-      "description": "Verify an outside reader can reconstruct current Git authority without Canonical."
+      "status": "READY_EXTERNAL_TEST",
+      "description": "Automated two-hop navigation contract and frozen ten-task blind-reader protocol exist; actual unfamiliar-reader execution remains external.",
+      "evidence": "docs/UX_BLIND_READER_PROTOCOL.json"
     },
     {
       "id": "CANON-ARCHAEOLOGY-TRACE",
-      "status": "PARTIAL",
-      "description": "Ensure admitted Git objects can be traced to controlling Canonical/history sources where material."
+      "status": "PARTIAL_42_DISTINCTIONS",
+      "description": "42 typed causal distinctions are currently tracked with live owners/tests/dispositions; remaining OPEN_EXTRACTION and historical replay gaps stay explicit.",
+      "evidence": "provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json"
     }
   ]
 }

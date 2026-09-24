@@ -26,6 +26,7 @@ new SOTA
 | causal science | CausalGame and successors | active experiment design under confounding, selection bias, and measurement error | can Venus distinguish "external return" from genuine causal identification? |
 | world models | V-JEPA 2 and successors | physical prediction plus action-conditioned planning/robot control | can WorldMirror predict/control external dynamics and reopen representations when new interventions separate prior equivalence classes? |
 | mathematical research | FrontierMath / FrontierMath Open Problems plus proof-evaluation/formalization suites | expert/research-level problem solving and externally verifiable mathematical progress | can Venus contribute verified new mathematics, not merely internal analogies? |
+| Navier–Stokes resolution status | OpenAI Sep 8 claimed solution + Lean formalization; CMI Sep 11 says problem apparently settled while evaluation/credit process continues | fast-moving theorem-status transition with separate proof, formalization, validation, and prize/credit layers | can Venus independently reconstruct/check/extend the result without conflating those layers or claiming original credit? |
 | evaluation integrity | private/semi-private sets, harness comparisons, contamination and reward-hacking audits | resistance to benchmark gaming and scaffold confounds | can Venus's preregistration/provenance machinery materially improve evaluation reliability? |
 | adaptive self-evolution | SEAGym / PACE-style acceptance protocols | separates candidate generation from statistically valid successor acceptance under repeated adaptive evaluation | can Venus reduce false/harmful commits while preserving real held-out ID/OOD improvement across lineage depth? |
 | agentic abstention | AgentAbstain / sequential abstention benchmarks | paired act-vs-abstain competence, including ambiguity, missing capability, tool failure, and emergent risk | does Venus STOP/WITHHOLD improve justified abstention without merely suppressing useful action? |
@@ -45,6 +46,8 @@ new SOTA
 - **CausalGame**: https://arxiv.org/abs/2607.04293
 - Meta, **V-JEPA 2**: https://ai.meta.com/research/vjepa/
 - Epoch AI, **FrontierMath Open Problems**: https://epoch.ai/frontiermath/open-problems
+- OpenAI, **Navier–Stokes claimed solution** (2026-09-08): https://openai.com/index/navier-stokes-solution/
+- Clay Mathematics Institute, **Navier-Stokes Announcement** (2026-09-11): https://www.claymath.org/news/navier-stokes-announcement/
 - **SEAGym** (self-evolving agent-harness evaluation): https://arxiv.org/abs/2606.17546
 - **PACE** (statistically valid self-evolution acceptance): https://arxiv.org/abs/2606.08106
 - **AgentAbstain** (agentic abstention): https://arxiv.org/abs/2607.10059
