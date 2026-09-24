@@ -1,49 +1,114 @@
 # Tests and evidence
 
-This is the shortest map from a Venus-Minerva claim to the kind of test that can support it.
+This page answers a simple question:
 
-## Run the current automated suite
+> For a given Venus-Minerva claim, what kind of evidence could actually support or refute it?
 
-```bash
+Repository tests, formal proofs, hidden benchmarks, external experiments, and independent replication are different evidence types. Passing one does not silently promote a claim into another.
+
+## Run the automated integrity suite
+
+~~~bash
 make audit
-```
+~~~
 
-That currently covers:
-- live Python/unit invariants;
-- reader-surface Markdown/link integrity;
-- theorem/proof-container structure lint;
-- custody/current-state checks;
+This currently checks:
+
+- live Python/runtime invariants;
+- current authority and custody consistency;
+- Markdown/navigation integrity;
+- theorem/proof-container structure;
 - historical causal-distinction registry integrity;
+- open-issue → test/evaluation ownership;
+- experiment-manifest constraints;
 - source-tree release boundaries.
 
-CI additionally checks the live GitHub issue set and fails when an open issue has no row in the test-coverage matrix.
+For the admitted Lean subset:
+
+~~~bash
+make formal-check
+~~~
 
 ## Test layers
 
 | Layer | Question |
 |---|---|
-| T0 | Is repository/current authority internally consistent? |
-| T1 | Do deterministic kernel invariants hold? |
-| T2 | Have historically learned causal distinctions regressed? |
-| T3 | Does the trust/custody boundary survive hostile inputs? |
-| T4 | Do semantic discriminators distinguish the right referents? |
-| T5 | Does a Venus mechanism causally matter under matched ablation? |
-| T6 | Does Venus produce externally scored capability/science consequences? |
-| T7 | Are formal claims verified/reduced against mature alternatives? |
-| T8 | Does live external state reopen stale repository state? |
-| T9 | Can an unfamiliar reader reconstruct and navigate the system? |
+| **T0** | Is repository/current authority internally consistent? |
+| **T1** | Do deterministic kernel invariants hold? |
+| **T2** | Have historically learned causal distinctions regressed? |
+| **T3** | Does the trust/custody boundary survive hostile inputs? |
+| **T4** | Do semantic discriminators bind the right referents? |
+| **T5** | Does a Venus mechanism causally change behavior under matched ablation? |
+| **T6** | Does Venus produce externally scored capability/science consequences? |
+| **T7** | Are formal claims machine-checked and reduced against mature alternatives where relevant? |
+| **T8** | Does changing external state reopen stale repository state? |
+| **T9** | Can an unfamiliar reader reconstruct and navigate the system? |
 
-Passing one layer never promotes a claim into another.
+The most important current gap is between T0–T4/T7 infrastructure and actual T5/T6 external results.
 
-## Control surfaces
+## Current high-value experimental surfaces
 
-- [Historical distinction registry](../provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json)
-- [Open-issue test coverage](TEST_COVERAGE_MATRIX.md)
-- [Current authority](../kernel/CURRENT_STATE.md)
-- [Developmental lineage](../provenance/DEVELOPMENTAL_LINEAGE.md)
-- [Evaluation constitution](EVALUATION_CONSTITUTION.md)
-- [Earned milestones](EARNED_MILESTONES.md)
-- [Reviewer methodology](../review/REVIEWER_AND_RESEARCHER_PROTOCOL.md)
+### EDU17R1 semantic discriminator
+
+`benchmarks/edu17r1_mention_incidence/` contains:
+
+- public development cases;
+- the deliberately weak lexical mention baseline;
+- A/B/C/D experiment conditions;
+- a hidden-split sealing helper;
+- deterministic scoring;
+- regression tests for evaluator separation and hash binding.
+
+The missing evidence is the sealed hidden matched run.
+
+### Causal memory
+
+`benchmarks/memory_causal/` tests whether retained dispositions, provenance, negative branches, and replacement relations change later admissible action.
+
+The public split is development infrastructure. Promotion requires hidden matched ablations against raw history, equal-size context, summaries, retrieval/RAG, and no-memory controls.
+
+### First matched Venus causal ablation
+
+Issue #10 asks for:
+
+~~~text
+same model
+same tools
+same information
+same budget
+
+ordinary strong scaffold
+vs
+full Venus
+vs
+claimed mechanism ablated
+vs
+strong mature substitute
+~~~
+
+This is the central experiment for separating architectural consequence from additional scaffolding.
+
+### STOP/WITHHOLD and adversarial World input
+
+Issues #42 and #43 test two distinct boundaries:
+
+~~~text
+good abstention
+!=
+doing nothing
+
+returned content
+!=
+instruction
+!=
+evidence
+!=
+authority
+!=
+persistent policy/memory
+~~~
+
+Both must be evaluated against mature substitutes and utility loss.
 
 ## Historical regression law
 
@@ -51,41 +116,61 @@ A historical distinction becomes a regression obligation when an experiment, fai
 
 The intended compression is:
 
-```text
+~~~text
 large developmental history
 -> extracted causal distinctions
 -> compact falsifier/regression suite
 -> simpler live implementation
 -> provenance and reopening routes preserved
-```
+~~~
 
 Historical artifacts do not become current authority merely because they are tested.
 
-## External evidence
-
-CI can enforce:
-- preregistration shape;
-- budget/harness metadata;
-- test-set custody;
-- no-reroll rules;
-- ablation configuration;
-- result retention;
-- promotion gates.
-
-CI cannot honestly manufacture:
-- independent replication;
-- expert judgment;
-- new physical evidence;
-- mathematical novelty;
-- benchmark superiority;
-- institutional/prize credit.
-
-Those require World-side return and remain separate from automated integrity.
-
-## Memory causal learning benchmark
-
-`benchmarks/memory_causal/` is a public development benchmark for issue #15. It tests whether retained dispositions, provenance, negative branches, and replacement relations change later admissible action. Public dev accuracy is not promotion evidence; the protocol requires hidden matched ablations.
-
 ## Machine-checked formal subset
 
-`formal/lean/` machine-checks a bounded OFE core: future-equivalence as a setoid, test-family monotonicity, sufficient-representation refinement, quotient transport under equivalence preservation, pullback closure as a sufficient condition, common-refinement factorization implying future-equivalence, separating-family equality, and reopening by adjoining an explicit pulled-back separator. `tests/test_proof_container_semantics.py` separately locks the fact that theorem-container lint is only structural. These checks do not establish OFE novelty, physical correctness, or mature-substitution residual.
+`formal/lean/` machine-checks a bounded OFE core including:
+
+- future-equivalence as a setoid;
+- test-family monotonicity;
+- sufficient-representation refinement;
+- quotient transport;
+- pullback closure as a sufficient preservation condition;
+- common-refinement factorization implying future-equivalence;
+- separating-family equality;
+- reopening by adjoining an explicit pulled-back separator.
+
+Theorem-container lint is separately tested as structural hygiene. Machine-checked correctness does not establish OFE novelty, physical correctness, or residual value after mature substitution.
+
+## What CI can and cannot establish
+
+CI can enforce:
+
+- preregistration shape;
+- custody/hash integrity;
+- model/harness metadata requirements;
+- no-reroll conditions;
+- ablation configuration;
+- negative-result retention;
+- formal checker success;
+- promotion-gate structure.
+
+CI cannot honestly manufacture:
+
+- independent replication;
+- expert consensus;
+- new physical evidence;
+- mathematical novelty;
+- capability superiority;
+- a Venus-owned developmental episode.
+
+Those require external return.
+
+## Control surfaces
+
+- [Current authority](../kernel/CURRENT_STATE.md)
+- [Evaluation Constitution](EVALUATION_CONSTITUTION.md)
+- [Test Coverage Matrix](TEST_COVERAGE_MATRIX.md)
+- [Historical distinction registry](../provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json)
+- [Issue Roadmap](ISSUE_ROADMAP.md)
+- [Earned Milestones](EARNED_MILESTONES.md)
+- [Reviewer methodology](../review/REVIEWER_AND_RESEARCHER_PROTOCOL.md)
