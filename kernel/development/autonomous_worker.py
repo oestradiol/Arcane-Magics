@@ -83,7 +83,7 @@ def _rank(
     kind_utility: Mapping[str, float],
 ) -> tuple[float, float, float, int]:
     if item.kind == "PR" and item.merge_state in {"DIRTY", "BLOCKED", "CONFLICTING"}:
-        return (0.0, 0.0, -kind_utility.get(item.kind, 0.0), item.number)
+        return (0.0, 0.0, 0.0, item.number)
     if item.kind == "ISSUE" and item.number in issue_order:
         return (
             1.0,
@@ -91,14 +91,14 @@ def _rank(
             -kind_utility.get(item.kind, 0.0),
             item.number,
         )
-    if item.kind == "PR":
-        return (
-            2.0,
-            0.0 if item.draft else 1.0,
-            -kind_utility.get(item.kind, 0.0),
-            item.number,
-        )
-    return (3.0, 0.0, -kind_utility.get(item.kind, 0.0), item.number)
+    # Outside hard dependency priorities, externally reviewed outcomes are
+    # allowed to alter which class of work Venus chooses next.
+    return (
+        2.0,
+        -kind_utility.get(item.kind, 0.0),
+        0.0 if item.kind == "PR" and item.draft else 1.0,
+        item.number,
+    )
 
 
 def choose_target(
