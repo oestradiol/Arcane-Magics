@@ -65,6 +65,16 @@
     "hidden_evaluation_exposed": false,
     "promotion_authority": false
   },
-  "disposition": "FROZEN_LEARNER_SIDE_REPAIR_CANDIDATE_AWAITING_IMPLEMENTATION_AND_HIDDEN_EFFICACY_RETURN",
-  "claim_fence": "This establishes at most bounded candidate authorship from an admitted target-blind capability-composition search. It does not establish efficacy, EDU17R1 promotion, novelty, general semantics, Strong RSI, AGI, or open-ended RSI."
+  "disposition": "FROZEN_STRUCTURAL_CANDIDATE_WITHHOLD_RAW_TEXT_SEMANTIC_INGRESS_UNEARNED",
+  "claim_fence": "This freezes a structural invariant-preserving composition candidate only. End-to-end repair authorship remains WITHHOLD because the current blind-text interface lacks an earned target-blind semantic ingress that can instantiate the relation occurrence. No hidden data were exposed.",
+  "execution_boundary": {
+    "blind_issue_31_input": [
+      "id",
+      "text",
+      "non_sensitive_metadata_if_present"
+    ],
+    "required_but_unearned": "generic raw-text -> claim-local relation-occurrence semantics sufficient to instantiate the structural composition",
+    "public_chargram_attempt": "WITHHOLD_MEMORIZATION_PRESSURE",
+    "reason": "target-blind chargram classifiers fit public dev but fail leave-one-out generalization; freezing them as semantic repair would be representation laundering"
+  }
 }
