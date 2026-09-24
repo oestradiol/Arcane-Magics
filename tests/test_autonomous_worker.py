@@ -150,6 +150,40 @@ class AutonomousWorkerTests(unittest.TestCase):
         self.assertEqual(favored, "COMPARATOR_AUDIT")
         self.assertNotEqual(baseline, favored)
 
+    def test_study_method_changes_actual_obligations(self):
+        item = WorkItem(
+            "PR",
+            106,
+            "curriculum study gate",
+            body="Compare a mature baseline and keep external return separate.",
+        )
+        comparator = make_cycle(
+            issues=(),
+            prs=(item,),
+            roadmap_text="",
+            internal_policy=POLICY,
+            method_utility={"COMPARATOR_AUDIT": 1.0},
+        )
+        boundary = make_cycle(
+            issues=(),
+            prs=(item,),
+            roadmap_text="",
+            internal_policy=POLICY,
+            method_utility={"RETURN_BOUNDARY_AUDIT": 1.0},
+        )
+        self.assertEqual(comparator.study_method, "COMPARATOR_AUDIT")
+        self.assertEqual(boundary.study_method, "RETURN_BOUNDARY_AUDIT")
+        self.assertNotEqual(
+            comparator.study["method_obligations"],
+            boundary.study["method_obligations"],
+        )
+        self.assertNotEqual(
+            comparator.study["method_contract_digest"],
+            boundary.study["method_contract_digest"],
+        )
+        self.assertIn("baseline", comparator.study["method_observed_signals"])
+        self.assertIn("return", boundary.study["method_observed_signals"])
+
     def test_selected_target_materializes_source_grounded_study(self):
         cycle = make_cycle(
             issues=(WorkItem(
@@ -167,6 +201,8 @@ class AutonomousWorkerTests(unittest.TestCase):
         self.assertIn("kernel/runtime/ctl.py", cycle.study["referenced_repository_paths"])
         self.assertTrue(cycle.study["returned_blocker_sentences"])
         self.assertEqual(cycle.study["method"], cycle.study_method)
+        self.assertTrue(cycle.study["method_obligations"])
+        self.assertEqual(len(cycle.study["method_contract_digest"]), 64)
         self.assertFalse(cycle.study["promotion_authority"])
 
     def test_hostile_target_text_is_not_executable_authority(self):
