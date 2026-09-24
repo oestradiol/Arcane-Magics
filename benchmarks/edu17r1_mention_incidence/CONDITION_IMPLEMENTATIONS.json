@@ -1,0 +1,65 @@
+{
+  "schema": "Venus.EDU17R1ConditionImplementationFreeze.v0.1",
+  "date": "2026-09-24",
+  "issue": 31,
+  "status": "PREFROZEN_BEFORE_HIDDEN_SPLIT",
+  "protocol": {
+    "path": "benchmarks/edu17r1_mention_incidence/protocol.json",
+    "git_blob_sha": "db0be3d0aad70b9734742d729c8d237ced07b33e"
+  },
+  "analysis_plan": {
+    "path": "benchmarks/edu17r1_mention_incidence/analysis_plan.json",
+    "git_blob_sha": "b35f802a2734e9b495f93f7c1217e51999b47679"
+  },
+  "frozen_candidate": {
+    "path": "kernel/development/EDU17R1_REPAIR_CANDIDATE_FROZEN.json",
+    "git_blob_sha": "94998251e0e2003d4b5535b4b11a18405b5280b9",
+    "candidate_id": "EDU17R1-RC1-WORD-JACCARD-K3-v1"
+  },
+  "ownership_receipt": {
+    "path": "kernel/development/EDU17R1_REPAIR_OWNERSHIP_RECEIPT.json",
+    "git_blob_sha": "75581c41aabba0dc19b10a3d3cd31d9a2c03a5ac"
+  },
+  "conditions": {
+    "A": {
+      "role": "ordinary_strong_scaffold_context",
+      "artifact": "benchmarks/edu17r1_mention_incidence/condition_a.py",
+      "git_blob_sha": "d1e4ec7a298bf9b715daee18045e1fd8b494e4a9",
+      "semantics": "frozen naive lexical mention detector",
+      "venus_owned": false
+    },
+    "B": {
+      "role": "venus_repaired_incidence_discriminator",
+      "artifact": "benchmarks/edu17r1_mention_incidence/condition_b.py",
+      "git_blob_sha": "8bdf5e9b6d94b7a81a75d45fc7c941f22a3a221c",
+      "semantics": "AUTHORED_FROZEN WORD_JACCARD_K3 over public returned calibration",
+      "venus_owned": true
+    },
+    "C": {
+      "role": "venus_discriminator_ablated",
+      "artifact": "benchmarks/edu17r1_mention_incidence/condition_c.py",
+      "git_blob_sha": "d332573c495e9d8576328433605d71049529f8fc",
+      "semantics": "same pre-repair inherited lexical mention detector after semantic-ingress discriminator removal",
+      "venus_owned": "SAME_PARENT_ABLATION"
+    },
+    "D": {
+      "role": "mature_semantic_provenance_substitute",
+      "artifact": "benchmarks/edu17r1_mention_incidence/condition_d.py",
+      "git_blob_sha": "35f1dfafc75beafad289fe209ad4d26357df12a1",
+      "semantics": "independent ordinary WORD_SET_JACCARD k=3 implementation over the same public calibration, with no Venus runtime/ownership machinery",
+      "venus_owned": false
+    }
+  },
+  "expected_public_equivalences": [
+    "A == C on the public development surface",
+    "B == D on the public development surface"
+  ],
+  "interpretation": {
+    "B_vs_C": "causal effect of the frozen learned discriminator relative to the inherited failure state",
+    "B_vs_D": "mature-reduction check; equality/noninferiority of D can subsume the semantic mechanism without erasing learner-owned repair authorship"
+  },
+  "hidden_split_authored": false,
+  "hidden_labels_exposed": false,
+  "post_exposure_repair_allowed": false,
+  "promotion_authority": false
+}
