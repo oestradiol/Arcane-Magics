@@ -1,0 +1,31 @@
+{
+  "schema": "Venus.SSR2Cycle2RepairGrammarCandidate.v0.1",
+  "date": "2026-09-24",
+  "parent_meta_program": "kernel/development/SSR1_TRANSFORM_REPAIR_META_SUCCESSOR.json",
+  "parent_meta_digest": "1ceac73a67267db2ce147a3eb14ec41de0a4dd1537acc02877f58c3f8423a473",
+  "pressure_parent": "kernel/development/SSR2_CYCLE2_PRESSURE_PARENT.json",
+  "returned_pressure": "kernel/development/SSR2_CYCLE2_TRAINING_RETURNS.json",
+  "search_operation": "kernel/runtime/transform_repair_meta_search.py::search_repair_grammar_expansion",
+  "parent_enabled_patch_ops": [
+    "ADD_TRANSITION",
+    "REPLACE_TRANSITION"
+  ],
+  "parent_search_status": "WITHHOLD_NO_EXPRESSIBLE_PATCH",
+  "status": "UNIQUE_META_IMPROVEMENT_CANDIDATE",
+  "selected_operation": "REMOVE_TRANSITION",
+  "enabled_patch_ops_after": [
+    "ADD_TRANSITION",
+    "REPLACE_TRANSITION",
+    "REMOVE_TRANSITION"
+  ],
+  "successor_meta_digest": "8cbebab414cd0d63e8571b6f93d895de07e89cf1a18f961eb3376b06f5ff774c",
+  "selected_transform_patch": {
+    "op": "REMOVE_TRANSITION",
+    "match_from": "IDLE",
+    "match_action": "LEGACY_NOOP",
+    "transition": null
+  },
+  "hidden_evaluation_exposed": false,
+  "promotion_authority": false,
+  "claim_bearing": false
+}
