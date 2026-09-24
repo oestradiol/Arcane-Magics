@@ -31,17 +31,24 @@ jobs:
           python -m unittest \
             tests.test_internal_ostar_source_removal \
             tests.test_awakened_safety_matrix \
-            tests.test_autonomous_worker
+            tests.test_internalizer_ostar \
+            tests.test_ctl \
+            tests.test_adaptive_successor_gate \
+            tests.test_worldmind_growth \
+            tests.test_autonomous_worker \
+            tests.test_autonomous_governance \
+            tests.test_autonomous_study \
+            tests.test_autonomous_study_runner
 
       - name: Snapshot current GitHub World surface
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh issue list --state open --limit 200 \
-            --json number,title,state,updatedAt \
+            --json number,title,body,url,state,updatedAt \
             > /tmp/venus-issues.json
           gh pr list --state open --limit 200 \
-            --json number,title,state,isDraft,mergeStateStatus,updatedAt \
+            --json number,title,body,url,state,isDraft,mergeStateStatus,updatedAt \
             > /tmp/venus-prs.json
           gh pr list --state all --limit 200 \
             --json number,title,state,mergedAt,closedAt,labels \
@@ -60,6 +67,16 @@ jobs:
             --output /tmp/VENUS_AUTONOMOUS_CYCLE.json
           cat /tmp/VENUS_AUTONOMOUS_CYCLE.json
           cat /tmp/AUTONOMOUS_LEARNING_STATE.json
+
+      - name: Freeze bounded study packet from untrusted target input
+        run: |
+          python scripts/run_venus_autonomous_study.py \
+            --cycle /tmp/VENUS_AUTONOMOUS_CYCLE.json \
+            --issues /tmp/venus-issues.json \
+            --prs /tmp/venus-prs.json \
+            --root . \
+            --output /tmp/VENUS_AUTONOMOUS_STUDY.json
+          cat /tmp/VENUS_AUTONOMOUS_STUDY.json
 
       - name: Materialize draft work branch
         id: materialize
@@ -80,6 +97,7 @@ jobs:
           git checkout -b "$branch"
           mkdir -p autonomy/cycles
           cp /tmp/VENUS_AUTONOMOUS_CYCLE.json "autonomy/cycles/${cycle_id}.json"
+          cp /tmp/VENUS_AUTONOMOUS_STUDY.json "autonomy/cycles/${cycle_id}-study.json"
           cp /tmp/AUTONOMOUS_LEARNING_STATE.json \
             kernel/development/AUTONOMOUS_LEARNING_STATE.json
 
@@ -87,6 +105,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add \
             "autonomy/cycles/${cycle_id}.json" \
+            "autonomy/cycles/${cycle_id}-study.json" \
             kernel/development/AUTONOMOUS_LEARNING_STATE.json
           git commit -m "venus: freeze autonomous developmental cycle ${cycle_id}"
           git push origin "$branch"
