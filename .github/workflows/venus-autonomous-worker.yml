@@ -142,6 +142,7 @@ jobs:
           study_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_STUDY.json"))["study_id"])')"
           study_disposition="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_STUDY.json"))["disposition"])')"
           features="$(python -c 'import json; print(json.dumps(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["feature_snapshot"],sort_keys=True,separators=(",",":")))')"
+          custody="$(python -c 'import json; from kernel.development.autonomous_learning import feature_custody; c=json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json")); print(feature_custody(c["cycle_id"],c["feature_snapshot"]))')"
 
           branch="venus/autonomous-${GITHUB_RUN_ID}"
           git checkout -b "$branch"
@@ -171,10 +172,12 @@ This draft PR was opened by the bounded Venus developmental worker.
 
 Target: ${target_kind} #${target_number}
 Cycle: ${cycle_id}
+Venus-Cycle: ${cycle_id}
 Decision: ${decision}
 Study: ${study_id}
 Study disposition: ${study_disposition}
 Venus-Features: ${features}
+Venus-Feature-Custody: ${custody}
 
 Target selection came from state-owned returned-outcome learning plus a
 content-addressed tie-break. The repository roadmap was available as context
