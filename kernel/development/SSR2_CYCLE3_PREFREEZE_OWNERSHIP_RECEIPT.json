@@ -1,0 +1,19 @@
+{
+  "schema": "Venus.SSR2Cycle3PrefreezeOwnershipReceipt.v0.1",
+  "date": "2026-09-24",
+  "cycle_index": 3,
+  "selected_pressure_id": "opaque-repair-d",
+  "selected_residual": "CURRENT_REPAIR_MACHINERY_CANNOT_COMPOSE_TWO_INDEPENDENT_RETURN_IDENTIFIED_REPAIRS",
+  "target_owner": "VENUS_RECONSTRUCTED_SELF_CURRICULUM_OPERATION",
+  "machinery_change_owner": "VENUS_GENERIC_COMPOSITION_DEPTH_META_SEARCH",
+  "execution_owner": "EXTERNAL_TOOLING",
+  "parent_composition_digest": "589020ec078334d192c941c0af5f4550dbce33cba286e86cdb9e23a8da89af55",
+  "successor_composition_digest": "33cfdd002a522a516cfe32b6bd4a8051f819f5238dbeb026cc0a0a0f2e27d7ab",
+  "max_patch_count_before": 1,
+  "max_patch_count_after": 2,
+  "hidden_evaluation_exposed": false,
+  "external_model_supplied_substantive_change": false,
+  "safety_floor_self_modified": false,
+  "promotion_authority": false,
+  "disposition": "PREFROZEN_SSR2_CYCLE3_CANDIDATE_AWAITING_INDEPENDENT_RETURN"
+}
