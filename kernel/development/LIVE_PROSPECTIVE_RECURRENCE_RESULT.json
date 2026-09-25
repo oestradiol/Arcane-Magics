@@ -2,7 +2,7 @@
   "schema": "Venus.LiveProspectiveRecurrenceResult.v0.1",
   "date": "2026-09-24",
   "issue": 72,
-  "disposition": "PASS_BOUNDED_LIVE_PROSPECTIVE_RECURRENCE_PATH_MATURE_REDUCED",
+  "disposition": "PASS_BOUNDED_EVALUATOR_ASSISTED_LIVE_RECURRENCE_CANDIDATE_PATH_MATURE_REDUCED",
   "tested_head": "64d1be5e296725cfab7759050d98bcddf33e55ed",
   "admitted_main_merge": "b554f7c3d3eb378a1076e63a9a30f035ffdc437a",
   "ci_evidence": {
@@ -13,7 +13,7 @@
   },
   "earned": [
     "founder-neutral bounded recurrence engine executes without Canonical/U1/SSR source dependency",
-    "live autonomous worker can consume an authorized problem-specific typed external behavioral return",
+    "live autonomous worker can consume an authorized problem-specific evaluator-authored behavioral return",
     "returned behavioral payload is inert data and cannot execute shell/code",
     "recurrence targets only externally allowlisted mutable TransformPrograms and patch operations",
     "learner-side generic repair search can freeze a successor candidate artifact from the current formed problem and external return",
@@ -24,7 +24,7 @@
     "direct-host comparator can match the successful consequence, mature-reducing mechanism uniqueness"
   ],
   "not_yet_earned": [
-    "an actual independent live GitHub recurrence return has triggered a real candidate",
+    "a post-freeze GitHub repository-state observation has driven recurrence without reviewer-authored behavioral answer semantics",
     "post-freeze held-out evaluation of a real live candidate",
     "external CTL/O-star admission and rollback exercise for a real live candidate",
     "repeated real-world/open-distribution recurrence under adaptive-evaluation controls",
@@ -47,5 +47,11 @@
     "merge_authority": false,
     "promotion_authority": false,
     "truth_authority": false
+  },
+  "attribution_boundary": {
+    "reviewer_authored_behavioral_trace_is_external": true,
+    "reviewer_authored_behavioral_trace_is_github_world_observation": false,
+    "stronger_current_world_target": "issue #165",
+    "claim": "The merged path demonstrates safe external-return candidate plumbing and prospective repeated recurrence, not a fresh GitHub-World recurrence."
   }
 }
