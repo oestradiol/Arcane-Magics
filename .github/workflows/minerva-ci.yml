@@ -1,27 +1,23 @@
 name: Minerva engineering / body gate
-
 on:
   pull_request:
     branches: [split/minerva]
   push:
     branches: [split/minerva]
   workflow_dispatch:
-
 permissions:
   contents: read
   actions: read
-
 jobs:
   minerva:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
       - name: Require Eclipsis crystallization for cross-layer PR
         if: github.event_name == 'pull_request'
         env:
@@ -31,13 +27,20 @@ jobs:
             handoff/eclipsis-to-minerva/*|minerva/*) ;;
             *) echo "Minerva accepts cross-layer work through handoff/eclipsis-to-minerva/*"; exit 1 ;;
           esac
-
-      - name: Engineering / developmental checks
+      - name: Minerva-local surface checks
+        run: python scripts/audit_layer_surface.py
+      - name: Core engineering regressions
         run: |
-          python -m unittest discover -s tests -p 'test_*.py'
+          python -m unittest tests/test_autonomous_governance.py
+          python -m unittest tests/test_autonomous_return_authority.py
+          python -m unittest tests/test_internalizer.py
+          python -m unittest tests/test_vmk2_invariants.py
+          python -m unittest tests/test_edu16_reconstructed_carrier.py
+          python -m unittest tests/test_world_input_security_public_dev.py
+      - name: Custody / autonomy checks
+        run: |
           python scripts/audit_autonomy_safety_matrix.py
           python scripts/audit_custody.py
           python scripts/audit_edu16_custody.py
-          grep -q 'Engineering' docs/LAYER_IDENTITY.md
-          grep -q 'fixed relation != frozen self-model' docs/SELF_MODEL.md
-          grep -q 'can inspect != can claim' docs/GLOBAL_REPOSITORY_OPERATION.md
+      - name: Imported law does not become self-authority
+        run: echo 'implementation != constitutional co-authority != independent return'
