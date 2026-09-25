@@ -2,37 +2,33 @@
 
 ## Venus owns
 
-- the returnable-closure / permeable-boundary kernel law;
-- Scientific Future admission and experiment contracts;
-- open-bridge and discriminator routing;
-- non-preauthored-return typing relative to explicit Self provenance;
-- Residual / CONSUME / WITHHOLD / reopening decisions at declared scope;
-- Monograph V as publication projection of the kernel.
+- Self & World model;
+- permeable-boundary / returnable-closure kernel;
+- self-provenance needed to type the boundary;
+- model-level Residual / WITHHOLD / reopening structure;
+- Monograph V.
 
-## Venus requires but does not own
+## Venus does not own
 
-- Root historical memory and Now Map;
-- Minerva self/world model and developmental judgment;
-- OFE formal warrant;
-- Eclipsis bridge hypotheses;
-- Arcane symbolic/meta-routing provenance;
+- scientific-future verification → OFE;
+- engineering/developmental authority → Minerva;
+- math/logical structure → Eclipsis;
+- religious/symbolic past → Arcane Magics;
+- routing/map authority → main;
 - external World / Other.
 
-## Promotion law
+## Incoming / outgoing
 
 ```text
-ground candidate
--> Venus test
--> returned consequence
--> typed result
--> Root memory
+handoff/eclipsis-to-minerva/*
+→ Minerva
+→ handoff/minerva-to-venus/*
+→ Venus Self↔World model
+→ handoff/venus-to-ofe/*
+→ OFE scientific future
 ```
 
-Venus cannot promote its own prediction, execution, simulation, or CI pass into independent return.
-
-## World/Self relation
-
 ```text
-Self provenance + kernel boundary -> type candidate Other
-Other return -> revise Self boundary
+model(Other) != Other
+boundary != ownership
 ```
