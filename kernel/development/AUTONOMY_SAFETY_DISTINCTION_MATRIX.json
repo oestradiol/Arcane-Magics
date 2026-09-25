@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.9",
+  "schema": "Venus.AutonomySafetyDistinctionMatrix.v0.10",
   "date": "2026-09-24",
   "claim": "Bounded autonomy may expand study/learning/proposal capability only while the listed causal and authority distinctions remain executable and fail-closed.",
   "distinctions": [
@@ -554,6 +554,50 @@
         "tests/test_internal_ostar_causality.py"
       ],
       "invariant": "after a causally improved admitted machinery change, learner-side O-star is freshly reconstructed from returned episodes and remains causally upstream of routing rather than copied as static scripture"
+    },
+    {
+      "id": "RECURRENCE_FOUNDER_SOURCE_REMOVAL",
+      "tests": [
+        "tests/test_bounded_recurrence_source_removal.py"
+      ],
+      "invariant": "bounded recurrence executes from a founder-neutral runtime engine with no Canonical/U1/SSR source dependency"
+    },
+    {
+      "id": "LIVE_RECURRENCE_RETURN_AUTHORITY",
+      "tests": [
+        "tests/test_autonomous_recurrence.py"
+      ],
+      "invariant": "only explicitly authorized external reviewers may supply a problem-specific recurrence training return; self and unauthorized identities are ignored"
+    },
+    {
+      "id": "RECURRENCE_RETURN_NOT_EXECUTION",
+      "tests": [
+        "tests/test_autonomous_recurrence.py",
+        "tests/test_bounded_recurrence_source_removal.py"
+      ],
+      "invariant": "returned trace payload is parsed as inert data for TransformProgram evaluation and has no shell/eval/exec path"
+    },
+    {
+      "id": "RECURRENCE_CANDIDATE_NOT_ADMISSION",
+      "tests": [
+        "tests/test_autonomous_recurrence.py",
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "live recurrence may freeze a successor candidate artifact but cannot apply, merge, promote, validate, or admit that successor"
+    },
+    {
+      "id": "RECURRENCE_AMBIGUOUS_RETURN_WITHHOLD",
+      "tests": [
+        "tests/test_autonomous_recurrence.py"
+      ],
+      "invariant": "multiple eligible external recurrence returns for one current problem fail closed rather than acquiring authority by ordering"
+    },
+    {
+      "id": "REPEATED_PROSPECTIVE_RECURRENCE_WITH_REJECTION",
+      "tests": [
+        "tests/test_prospective_recurrence.py"
+      ],
+      "invariant": "two fresh formed problems can drive successive learner-authored machinery changes while a contradictory third return is retained as WITHHOLD and does not force a patch"
     }
   ],
   "promotion_authority": false
