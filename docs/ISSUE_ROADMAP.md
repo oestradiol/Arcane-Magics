@@ -198,7 +198,7 @@ EDU16-RC1
 -> frozen learner-authored successor candidate
 ```
 
-The remaining burden is not another recovery implementation. It is a genuinely independent live event:
+The evaluator-assisted candidate plumbing is admitted. The next recovery burden is #165: a genuinely post-freeze GitHub World event, without reviewer-authored behavioral answer labels:
 
 ```text
 actual external problem-specific return
