@@ -1,0 +1,47 @@
+{
+  "schema": "Venus.U1RecurrenceRecompilationResult.v0.1",
+  "date": "2026-09-24",
+  "disposition": "PASS_BOUNDED_RECOMPILED_U1_RECURRENCE_MATURE_REDUCED",
+  "tested_head": "f0ae902e98dedc946cfd0ca8dfd806c82d10fdd2",
+  "ci_evidence": {
+    "workflow_run": 36075359112,
+    "integrity": "PASS",
+    "formal": "PASS",
+    "publication_projection": "NON_CAUSAL_RELEASE_HYGIENE_PENDING_AT_RESULT_FREEZE"
+  },
+  "causal_chain": [
+    "admitted U2 formed problem required",
+    "problem residual/discriminator/source provenance bound into external training trace shell",
+    "generic returned-trace repair search authors unique minimal TransformProgram successor candidate",
+    "post-freeze held-out external return scores parent 5/8, successor 8/8, matched ablation 5/8",
+    "successor preserves non-internalizable safety-floor invariants",
+    "CTL/O-star admission remains externally executed",
+    "rollback remains available",
+    "fresh post-mutation internal O-star reconstruction is required",
+    "fresh internal O-star remains causally upstream of routing"
+  ],
+  "scores": {
+    "parent_correct": 5,
+    "successor_correct": 8,
+    "ablated_correct": 5,
+    "total": 8,
+    "successor_minus_parent": 0.375,
+    "successor_minus_ablation": 0.375
+  },
+  "mature_reduction": {
+    "mechanism_unique_or_necessary": false,
+    "direct_host_or_full_capability_substitutes_already_match_at_related_ssr_scopes": true,
+    "surviving_claim": "bounded developmental recurrence organization and causal ownership separation"
+  },
+  "safety": {
+    "external_return_noncollapse": true,
+    "self_validation": false,
+    "safety_floor_unchanged": true,
+    "rollback_available": true,
+    "promotion_authority": false,
+    "open_ended_rsi": false,
+    "agi": false,
+    "consciousness": false
+  },
+  "historical_u1_journal_identity_recovered": false
+}
