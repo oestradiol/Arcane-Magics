@@ -108,8 +108,10 @@ jobs:
                   raise SystemExit(f'missing UI invariant: {invariant}')
           PY
 
-      - name: Configure Pages
+      - name: Configure / enable Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
