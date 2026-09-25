@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "Cite the specific monograph or release artifact actually used."
-title: "Venus-Minerva Research Family"
+message: "Cite the specific branch, monograph, or release artifact actually used."
+title: "Operational Future Equivalence (OFE)"
 type: collection
-version: "2026-09-24-bundle-v1"
+version: "2026-09-25-split-ofe"
 authors:
   - family-names: "Amaral"
     given-names: "Elaina Lynn"
