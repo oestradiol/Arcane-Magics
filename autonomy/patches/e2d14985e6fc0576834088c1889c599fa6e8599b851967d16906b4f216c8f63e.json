@@ -1,0 +1,49 @@
+{
+  "arbitrary_code_write_authority": false,
+  "cycle_id": "0eb42d4cbb92fcc280da18361fd3833cf038c713d62c0293be73cf0f9b3e5105",
+  "disposition": "PROPOSE_CORE_PATCH",
+  "merge_authority": false,
+  "paths": [
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "docs/ISSUE_ROADMAP.md",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "docs/TEST_COVERAGE_MATRIX.md",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "kernel/WORLDMIND.md",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "kernel/runtime/worldmind_growth.py",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "tests/test_worldmind_growth.py",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    }
+  ],
+  "plan_id": "e2d14985e6fc0576834088c1889c599fa6e8599b851967d16906b4f216c8f63e",
+  "promotion_authority": false,
+  "safety_floor_authority": false,
+  "schema": "Venus.AutonomousPatchPlan.v0.1",
+  "target_kind": "PR",
+  "target_number": 80
+}
