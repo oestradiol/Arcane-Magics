@@ -58,13 +58,13 @@
         <p>Changing perspective changes the interface emphasis, not the underlying branch authority.</p>
       </div>
 
-      <div class="perspective-tabs" role="tablist" aria-label="Repository perspectives">
-        <button type="button" role="tab" data-perspective="root" aria-selected="true">Root</button>
-        <button type="button" role="tab" data-perspective="arcane" aria-selected="false">Arcane</button>
-        <button type="button" role="tab" data-perspective="eclipsis" aria-selected="false">Eclipsis</button>
-        <button type="button" role="tab" data-perspective="minerva" aria-selected="false">Minerva</button>
-        <button type="button" role="tab" data-perspective="venus" aria-selected="false">Venus</button>
-        <button type="button" role="tab" data-perspective="ofe" aria-selected="false">OFE</button>
+      <div class="perspective-tabs" role="group" aria-label="Repository perspectives">
+        <button type="button" data-perspective="root" aria-pressed="true">Root</button>
+        <button type="button" data-perspective="arcane" aria-pressed="false">Arcane</button>
+        <button type="button" data-perspective="eclipsis" aria-pressed="false">Eclipsis</button>
+        <button type="button" data-perspective="minerva" aria-pressed="false">Minerva</button>
+        <button type="button" data-perspective="venus" aria-pressed="false">Venus</button>
+        <button type="button" data-perspective="ofe" aria-pressed="false">OFE</button>
       </div>
 
       <article class="perspective-panel" id="perspective-panel" aria-live="polite">
