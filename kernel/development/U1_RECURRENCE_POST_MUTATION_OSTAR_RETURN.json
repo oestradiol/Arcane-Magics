@@ -1,0 +1,46 @@
+{
+  "schema": "Venus.U1RecurrencePostMutationOStarReturn.v0.1",
+  "date": "2026-09-24",
+  "owner": "EXTERNAL_EVALUATOR",
+  "pre_mutation_episodes": [
+    {
+      "episode_id": "pre-external-cut",
+      "external_access": false,
+      "contradiction_reachable": true,
+      "revision_reachable": true,
+      "action_authorized": true,
+      "evidence_sufficient": false,
+      "residual_unresolved": true
+    }
+  ],
+  "episodes": [
+    {
+      "episode_id": "post-sealed-contradiction",
+      "external_access": true,
+      "contradiction_reachable": false,
+      "revision_reachable": true,
+      "action_authorized": true,
+      "evidence_sufficient": false,
+      "residual_unresolved": true
+    },
+    {
+      "episode_id": "post-revision-cut",
+      "external_access": true,
+      "contradiction_reachable": true,
+      "revision_reachable": false,
+      "action_authorized": true,
+      "evidence_sufficient": false,
+      "residual_unresolved": true
+    }
+  ],
+  "causal_context": {
+    "context_id": "post-mutation-sealed-but-locally-authorized",
+    "has_external_access": true,
+    "contradiction_reachable": false,
+    "revision_reachable": true,
+    "action_authorized": true,
+    "evidence_sufficient": true,
+    "residual_unresolved": false
+  },
+  "promotion_authority": false
+}
