@@ -117,6 +117,7 @@ class RecompiledU2ProblemFormationTests(unittest.TestCase):
             draft=True,
             merge_state="UNKNOWN",
             updated_at="2026-09-25T16:55:00Z",
+            body="depends on #999",
         )
         problem = form_problem(
             snapshot_to_incidence(

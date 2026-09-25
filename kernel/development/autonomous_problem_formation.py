@@ -166,7 +166,7 @@ def form_problem(
             priority = 2
         else:
             priority = 3
-        key = (-len(residuals), priority, row.stream_id)
+        key = (priority, -len(residuals), row.stream_id)
         candidates.append((key, row, residuals))
 
     if not candidates:
@@ -409,7 +409,7 @@ def exhaustive_problem_scan(
             priority = 2
         else:
             priority = 3
-        key = (-len(residuals), priority, row.stream_id)
+        key = (priority, -len(residuals), row.stream_id)
         candidates.append((key, row.stream_id, residuals))
     if not candidates:
         return None
