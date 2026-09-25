@@ -29,8 +29,6 @@ SHA256SUMS
 __pycache__/
 .pytest_cache/
 
-# Sibling-layer historical/import caches.
-provenance/sibling-archives/
-provenance/imported-ofe/
-provenance/imported-eclipsis/
-provenance/imported-arcane/
+# IMPORTANT:
+# sibling branch memory is NOT ignored.
+# Cross-register history belongs in Git ancestry and provenance/historical/.
