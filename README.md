@@ -2,7 +2,7 @@
 
 # ✦ ARCANE MAGICS ✦
 
-### inhabited relation · symbolic intervention · returned consequence
+### religious branch · past · inhabited symbolic memory
 
 [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) · [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · **Arcane Magics**
 
