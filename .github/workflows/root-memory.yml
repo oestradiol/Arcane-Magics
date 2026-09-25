@@ -29,9 +29,9 @@ jobs:
           HEAD_REF: ${{ github.head_ref }}
         run: |
           case "$HEAD_REF" in
-            handoff/venus-to-root/*|root/*) ;;
+            handoff/ofe-to-root/*|root/*) ;;
             *)
-              echo "Root normally accepts memory-bearing integration only from handoff/venus-to-root/* (or root/* maintenance)."
+              echo "Root normally accepts memory-bearing integration only from handoff/ofe-to-root/* (or root/* maintenance)."
               echo "Observed head: $HEAD_REF"
               exit 1
               ;;
