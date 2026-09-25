@@ -753,6 +753,61 @@
       "status": "COVERED_PARTIAL",
       "credit_genealogy_note": "R224/R225 repair sequence and non-rewriting historical custody are now executable repository regressions.",
       "reopening_condition": "projection-maintenance regression fixture"
+    },
+    {
+      "id": "D-RETURNABLE-CLOSURE",
+      "source_revision_or_branch": "2026-09-25 Canonical reconciliation",
+      "source_artifact": "docs/META_DYNAMICS.md; kernel/VENUS_INCIDENCE_LAW.tex",
+      "distinction": "locally sufficient closure != globally exhaustive closure",
+      "triggering_experiment_or_failure": "reconciliation of return/reopening thread",
+      "causal_consequence": "correction boundary must preserve local identity while keeping non-preauthored return reachable",
+      "later_dependents": [
+        "WorldMind",
+        "Venus engineering",
+        "issue #9"
+      ],
+      "current_owner": "docs/META_DYNAMICS.md; kernel/VENUS_INCIDENCE_LAW.tex",
+      "test_layer": "T2/T5",
+      "test_id_path": null,
+      "status": "PLANNED",
+      "credit_genealogy_note": "carrier-neutral structural extraction from Canonical",
+      "reopening_condition": "mature-substitution test consumes or refines the residual"
+    },
+    {
+      "id": "D-WITHHOLD-RESIDUAL-PHYS",
+      "source_revision_or_branch": "2026-09-25 QG bridge",
+      "source_artifact": "docs/FRONTIER_RESEARCH.md; monographs/02_ECLIPSIS/main.tex",
+      "distinction": "future-equivalent candidate states != still-future-separating states",
+      "triggering_experiment_or_failure": "physical interpretation of WITHHOLD and Residual",
+      "causal_consequence": "do not quotient a candidate physical distinction while an admitted future channel/observable still separates it",
+      "later_dependents": [
+        "issue #22",
+        "PPD-Crystal horizon-rebarb branch"
+      ],
+      "current_owner": "docs/FRONTIER_RESEARCH.md",
+      "test_layer": "T5/T6",
+      "test_id_path": null,
+      "status": "PLANNED",
+      "credit_genealogy_note": "project physical bridge; future-equivalence mathematics compared against mature formalisms",
+      "reopening_condition": "explicit LQG state variables and observable separator derived"
+    },
+    {
+      "id": "D-QG-META-PROJECTION",
+      "source_revision_or_branch": "2026-09-25 QG bridge",
+      "source_artifact": "docs/META_DYNAMICS.md; docs/FRONTIER_RESEARCH.md",
+      "distinction": "common meta-object hypothesis != established unification or downstream projection identity",
+      "triggering_experiment_or_failure": "LQG/general-quantum/crystalline-vacuum/PPD synthesis",
+      "causal_consequence": "candidate descendants remain open bridges until explicit maps and discriminators are earned",
+      "later_dependents": [
+        "issue #22",
+        "Eclipsis"
+      ],
+      "current_owner": "docs/FRONTIER_RESEARCH.md",
+      "test_layer": "T2/T6",
+      "test_id_path": null,
+      "status": "PLANNED",
+      "credit_genealogy_note": "THEO/MODEL project factorization with PHYS OPEN",
+      "reopening_condition": "derive nontrivial common-parent map or mature reduction"
     }
   ]
 }
