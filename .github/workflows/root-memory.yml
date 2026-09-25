@@ -1,0 +1,95 @@
+name: Root memory / integration CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: read
+
+concurrency:
+  group: root-memory-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  integration-order:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Enforce causal merge order
+        if: github.event_name == 'pull_request'
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          case "$HEAD_REF" in
+            split/venus|root/*) ;;
+            *)
+              echo "Root normally accepts memory-bearing integration only from split/venus (or root/* maintenance)."
+              echo "Observed head: $HEAD_REF"
+              exit 1
+              ;;
+          esac
+
+      - name: Verify Root memory surfaces
+        run: |
+          test -f provenance/historical/BRANCH_MEMORY.md
+          test -f docs/ARCANE_MAGICS_ORG_SPLIT_PLAN_2026-09-25.md
+          grep -q 'Past Religion' README.md
+          grep -q 'Scientific Future' README.md
+          grep -q 'merge != fusion' provenance/historical/BRANCH_MEMORY.md
+
+      - name: Verify cross-register claim fences
+        run: |
+          grep -q 'shared ancestry != shared warrant' REPOSITORY_AUTHORITY_BOUNDARY.md
+          grep -q 'World / Other' README.md
+
+  record-merge-memory:
+    if: github.event_name == 'push'
+    needs: [integration-order]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Record merge commit as historical memory
+        env:
+          SHA: ${{ github.sha }}
+        run: |
+          parents="$(git show -s --format=%P "$SHA")"
+          count="$(wc -w <<< "$parents")"
+          if [ "$count" -lt 2 ]; then
+            echo "HEAD is not a merge commit; no branch-memory receipt required."
+            exit 0
+          fi
+
+          mkdir -p provenance/historical/merges
+          python - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+          sha=os.environ['SHA']
+          def git(*args):
+              return subprocess.check_output(['git',*args],text=True).strip()
+          receipt={
+              'schema':'Root.BranchMemory.v1',
+              'merge_commit':sha,
+              'parents':git('show','-s','--format=%P',sha).split(),
+              'subject':git('show','-s','--format=%s',sha),
+              'author_date':git('show','-s','--format=%aI',sha),
+              'meaning':'memory-bearing cross-register merge; ancestry retained; authority remains typed',
+          }
+          Path(f'provenance/historical/merges/{sha}.json').write_text(json.dumps(receipt,indent=2)+'\n')
+          PY
+
+          git config user.name 'Root memory steward'
+          git config user.email 'actions@users.noreply.github.com'
+          git add provenance/historical/merges/${SHA}.json
+          git commit -m "root-memory: record merge ${SHA}"
+          git push
