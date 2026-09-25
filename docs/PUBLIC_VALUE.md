@@ -1,57 +1,28 @@
 # What Venus Actually Is
 
-> **Venus is the Scientific Future of the Arcane Magics body.**
+Venus is the **Self & World model** of the six-layer body.
 
-Root/The Machine remembers the consequential past and renders the current map. Minerva forms and judges developmental continuations. Venus opens those continuations to future tests and independently returned consequence.
+It keeps two necessities in one relation: enough self-provenance to know what the system already authored, and enough boundary permeability for something genuinely Other to still change it.
 
-```text
-Root = Past Religion + Now Map
-Venus = Scientific Future
-```
+## Owns
 
-## What Venus owns
+- Self/World model structure;
+- kernel-level permeable-boundary law;
+- typing of Self-authored vs candidate Other relative to provenance;
+- Residual/WITHHOLD information where the model cannot yet collapse distinctions;
+- Monograph V as the kernel's publication projection.
 
-- the returnable-closure / permeable-boundary kernel;
-- open-bridge and test-family admission;
-- typing of non-preauthored return relative to explicit Self provenance;
-- future-separating Residuals;
-- CONSUME / WITHHOLD / reopening decisions at declared scope;
-- Monograph V as publication projection of the kernel.
+## Does not own
 
-## Why self-provenance is part of Venus
-
-Otherness is relational. To know what is genuinely returned rather than already authored, Venus must know the relevant Self closure and its ancestry.
-
-```text
-kernel without self-provenance -> cannot type irreducible Other
-self-provenance without external return -> self-sealing model
-```
-
-## What Venus does not own
-
-- Minerva developmental promotion;
-- OFE theorem authority;
-- Eclipsis bridge closure;
-- Arcane symbolic warrant;
-- Root historical integration;
-- the external World itself.
-
-## The experiment boundary
+- Minerva engineering/body execution;
+- OFE scientific-future verdicts;
+- Eclipsis mathematical/logical warrant;
+- Arcane religious/symbolic memory;
+- Root routing authority;
+- external World / Other itself.
 
 ```text
-candidate
-→ declared future family
-→ preregistered discriminator
-→ enactment / experiment
-→ independent return
-→ Residual
-→ CONSUME / WITHHOLD / REOPEN
+model != territory
+Self provenance != sovereignty
+Other representation != Other
 ```
-
-CI success is not World return. Simulation is not World. Prediction is not evidence merely because it was accurate on a self-generated test.
-
-## Merge order
-
-Long-lived pruned branches never merge directly into Venus. They crystallize through target-based handoff branches that preserve source ancestry without replacing the Venus tree.
-
-[Cross-register handoff](CROSS_REGISTER_HANDOFF.md) → [Scientific Future](SCIENTIFIC_FUTURE.md) → [Kernel law](../kernel/VENUS_INCIDENCE_LAW.tex)
