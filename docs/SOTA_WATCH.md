@@ -89,3 +89,21 @@ recheck trigger
 Tracking a SOTA system means Venus knows what it has to beat or distinguish itself from.
 
 It does not mean Venus already beats it.
+
+
+## Quantum-gravity bridge watch — 2026-09-25
+
+The PPD-Crystal / physical WITHHOLD-Residual / `M_QG = R_GQT ⋈ R_LQG` program must be compared against current LQG and neighboring quantum-gravity work rather than older generic LQG descriptions alone.
+
+Current comparator surface includes:
+
+- Belfaqih, Bojowald, Brahma, Duque, *Hawking Evaporation and the Fate of Black Holes in Loop Quantum Gravity* (PRL 2025): covariant effective LQG Hawking radiation with quantum-geometry effects entering subleading greybody structure and evaporation/final-state behavior.
+- Belfaqih et al., *Black holes in effective loop quantum gravity: Hawking radiation* (2026): follow-up Hawking/backreaction/greybody analysis.
+- Long & Zhang, *Quantum geometry effects in quantum field theory: Hamiltonian constraint generates gravity-matter entanglement in spherically symmetric loop quantum gravity* (PRD 2026): meaningful superpositions of quantum geometry and matter near semiclassical apparent horizons.
+- Han, 2026 Lorentzian spinfoam / LQG entanglement papers: geometric area-law and nonfactorizing boundary structure.
+- Garg & Chatterjee, *Hawking radiation from black holes in 2+1 dimensions* (EPJC 2026): discrete horizon quantum data with atomic-transition-like Hawking emission.
+- Pismen 2024 and Klinkhamer–Volovik 2019 crystalline-vacuum proposals: comparator class for vacuum-crystal language only, not evidence for PPD identity.
+
+The live discriminator is therefore stronger than “quantum geometry modifies Hawking radiation” or “the vacuum may be crystalline.” The project must derive a retained degree of freedom, map, or observable consequence not already supplied by the strongest relevant comparator.
+
+Re-run this watch when a new LQG horizon, quantum-cosmology, spinfoam coarse-graining, or vacuum-structure result materially changes that burden.
