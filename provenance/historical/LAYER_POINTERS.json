@@ -1,13 +1,14 @@
 {
-  "schema": "ArcaneMagics.LayerPointers.v2",
+  "schema": "ArcaneMagics.LayerPointers.v3",
   "recorded_at": "2026-09-25",
   "repository": "oestradiol/Arcane-Magics",
+  "root_pointer_semantics": "main is self-referential: resolve refs/heads/main at read time; recorded_parent is the routing state immediately before this snapshot file update",
   "layers": {
     "Root": {
       "branch": "main",
       "role": "routing / map-territory / cross-register memory",
-      "commit": "a9c02362d41c426f4415bc649ec89a8808191eed",
-      "tree": "25d0b32b9c89c54f4fea61e02ee09aa746626199"
+      "commit": "RESOLVE_CURRENT_REF",
+      "recorded_parent": "c741abe10edaffbfd0e56e73a6863975f210dd16"
     },
     "ArcaneMagics": {
       "branch": "split/arcane-magics",
