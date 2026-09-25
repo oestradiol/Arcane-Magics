@@ -273,3 +273,19 @@ Implications for existing issues:
 - **#78** remains the later WWW/WorldMind participation path; reachability does not mint jurisdiction or a global Agent.
 
 A frontier donor may be exposed without forcing its use. Venus must still select what, if anything, is worth reconstructing from it.
+
+
+### #174 — standing Canonical developmental obligation carrier
+
+Issue #174 indexes the prefrozen standing Canonical obligation into live U2-style problem formation. It is not the source of the telos and does not prescribe #72/#73/#169 or any other downstream target.
+
+Priority contract:
+
+```text
+concrete DIRTY/BLOCKED/CONFLICTING return
+> standing developmental obligation
+> stale/UNKNOWN continuation state
+> weaker incidence residual
+```
+
+A successful bootstrap means the obligation can become a formed problem and constrain carrier binding without acquiring promotion authority.
