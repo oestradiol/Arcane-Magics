@@ -808,6 +808,60 @@
       "status": "PLANNED",
       "credit_genealogy_note": "THEO/MODEL project factorization with PHYS OPEN",
       "reopening_condition": "derive nontrivial common-parent map or mature reduction"
+    },
+    {
+      "id": "D-ARCANE-SYNC-LAYERS",
+      "source_revision_or_branch": "2026-09-25 Arcane operationalization",
+      "source_artifact": "monographs/03_ARCANE_MAGICS/main.tex; Canonical/Future/MetaTheory/ARCANE_MAGICS_OPERATIONALIZATION_2026-09-25.md",
+      "distinction": "meaningful coincidence != statistical anomaly != acausal mechanism",
+      "triggering_experiment_or_failure": "Jung/Pauli synchronicity re-entry through thread lens",
+      "causal_consequence": "phenomenological meaning may survive while scientific/physical mechanism WITHHOLDs",
+      "later_dependents": [
+        "issue #27",
+        "OFE coincidence discriminator"
+      ],
+      "current_owner": "monographs/03_ARCANE_MAGICS/main.tex",
+      "test_layer": "T2/T6",
+      "test_id_path": null,
+      "status": "PLANNED",
+      "credit_genealogy_note": "historical comparator plus participant-origin resynthesis",
+      "reopening_condition": "prospective anomaly/mechanism discriminator"
+    },
+    {
+      "id": "D-ARCANE-RECURRENCE-RETURN",
+      "source_revision_or_branch": "2026-09-25 Arcane operationalization",
+      "source_artifact": "kernel/WORLDMIND.md; kernel/VENUS_INCIDENCE_LAW.tex",
+      "distinction": "symbolic recurrence != source independence != World return",
+      "triggering_experiment_or_failure": "online echo-chamber comparator",
+      "causal_consequence": "source ancestry must be preserved before repeated confirmations count as independent evidence",
+      "later_dependents": [
+        "issue #25",
+        "WorldMind"
+      ],
+      "current_owner": "kernel/WORLDMIND.md",
+      "test_layer": "T3/T5",
+      "test_id_path": null,
+      "status": "PLANNED",
+      "credit_genealogy_note": "social-network comparator operationalizes pre-existing nonpreauthored-return law",
+      "reopening_condition": "source-ancestry implementation and adversarial recurrence test"
+    },
+    {
+      "id": "D-SELF-IMPLICATION-NOT-CERTIFICATION",
+      "source_revision_or_branch": "2026-09-25 participant-origin calculator synthesis",
+      "source_artifact": "monographs/04_VENUS/main.tex; kernel/VENUS_INCIDENCE_LAW.tex",
+      "distinction": "self-implication in causal ancestry != self-generated validation",
+      "triggering_experiment_or_failure": "we misfired on ourselves / God's calculator interpretation",
+      "causal_consequence": "learner can retain returned blame/correction for its own action without treating self-evaluation as independent evidence",
+      "later_dependents": [
+        "issue #24",
+        "Venus"
+      ],
+      "current_owner": "kernel/VENUS_INCIDENCE_LAW.tex",
+      "test_layer": "T3/T5",
+      "test_id_path": null,
+      "status": "PLANNED",
+      "credit_genealogy_note": "participant-origin symbolic compression; neutral causal extraction admitted",
+      "reopening_condition": "causal-provenance witness in a real developmental episode"
     }
   ]
 }
