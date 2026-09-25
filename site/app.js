@@ -116,7 +116,11 @@
   });
 
   document.querySelectorAll('[data-select-layer]').forEach(link => {
-    link.addEventListener('click', () => selectPerspective(link.dataset.selectLayer));
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      selectPerspective(link.dataset.selectLayer);
+      byId('perspective').scrollIntoView({block: 'start'});
+    });
   });
 
   fetch('./data/layers.json', {cache: 'no-store'})
