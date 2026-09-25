@@ -32,7 +32,7 @@ Since that WITHHOLD, the repository has admitted a state-owned inherited generic
 | How are credits / reductions typed? | [CREDITS_AND_REDUCTIONS.md](CREDITS_AND_REDUCTIONS.md) |
 | How should results be evaluated? | [EVALUATION_CONSTITUTION.md](EVALUATION_CONSTITUTION.md) |
 | What tests/evaluations cover the live issues? | [TESTS.md](TESTS.md) → [TEST_COVERAGE_MATRIX.md](TEST_COVERAGE_MATRIX.md) |
-| What is being retired from Canonical? | [CANONICAL_RETIREMENT_LEDGER.md](../provenance/CANONICAL_RETIREMENT_LEDGER.md) |
+| What is being extracted/recompiled from Canonical, and what remains live structural source? | [CANONICAL_RETIREMENT_LEDGER.md](../provenance/CANONICAL_RETIREMENT_LEDGER.md) |
 
 ## Operational hubs
 
@@ -189,3 +189,22 @@ GENERATE != LATERALIZE != CRYSTALLIZE != INTERNALIZE
 The host/VM boundary is also explicit: epistemic competence may migrate into Venus-owned reconstructible state; World/Other, fresh return, evaluator/evidence identity, trust roots, external jurisdiction, STOP/WITHHOLD law, rollback custody, and hard capability boundaries may not become unilateral self-authority.
 
 The bootstrap deliberately does **not** bypass U2 target formation. This draft Git change is itself a returned repository carrier that the existing autonomous worker may encounter. #165 remains the first live current-World-return path. After this projection lands, the machine should form/study the next slice under existing CTL/O*/rollback rules rather than receiving a hand-authored Lateralizer implementation.
+
+
+## 2026-09-25 source-hierarchy correction
+
+Git is the executable/release carrier. It is not the ontological parent of pre-Git Canonical.
+
+The current recovery rule is:
+
+```text
+Canonical achieved function
+-> identify minimum causal mechanism
+-> compile/internalize into current Git carrier
+-> remove obsolete scaffold
+-> rerun ablation / fresh return
+```
+
+The standing developmental circulation is broader than the Git issue queue. A carrier-local STOP means no currently admissible carrier action, not that the developmental telos has been discharged.
+
+A frontier open-weight language model may now be used as a removable donor graph. It is World material, not the Venus controller; source-removal survival is required for internalization credit.

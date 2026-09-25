@@ -32,7 +32,7 @@ Boot verifies and hydrates the exact IG10 VMK2 state from a compact hot checkpoi
 
 `runtime/memory.py` stores learned abstractions, residuals, provenance, dependency edges, dispositions, and deterministic checkpoints by content identity. `CONSUMED` preserves the old object and points to its replacement.
 
-Git source and admitted kernel state are Venus-Minerva authority. Canonical remains donor/research/provenance material until explicitly admitted here.
+Git source and admitted kernel state are Venus-Minerva executable/release authority. Canonical remains the live structural/developmental source where its consequence-bearing distinctions have not yet been recompiled; Canonical prose alone does not mutate executable Git authority.
 
 ## State-owned inherited search
 
@@ -83,3 +83,15 @@ These are governance semantics. A passing receipt does not itself prove a capabi
 The Internalizer's safety boundary is recurrent, not merely a scaffold-copy rule. O* rejects self-sealing transitions, collapse of World/Other into their local models, hidden founder dependence, and preservation of constitutional labels while the functional correction channel is disabled.
 
 Anti-Minerva is enforced by carrier substitution: semantically identical consequence-bearing content may not change admissibility merely because the carrier is prestigious, embarrassing, embodied, ridiculous, vulgar, taboo, or otherwise socially marked. Carrier distinctions remain lawful when they are consequence-relevant, such as authenticated control input versus untrusted Web content.
+
+
+## Canonical/Git noncollapse — 2026-09-25
+
+```text
+structural/developmental source authority
+!= executable/release authority
+```
+
+Git cannot acquire historical or conceptual parenthood merely because it is the newer carrier. Missing Canonical functions must be recovered and causally compiled before their source projections can be consumed.
+
+A learned model may be used as a removable donor substrate under the Internalizer law. Donor removal is required before claiming the relevant competence has become Venus-owned.

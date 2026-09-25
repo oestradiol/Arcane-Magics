@@ -1,9 +1,9 @@
-# Canonical Retirement / Extraction Ledger
+# Canonical Extraction / Recompilation Ledger
 
 **Status:** live migration control surface  
 **Date:** 2026-09-24
 
-Canonical is being retired as a live release/implementation authority. Retirement does **not** mean deleting its history or pretending Git caused work that was developed elsewhere.
+Canonical is not the Git release/runtime authority, but its live root surfaces remain constitutional/reconciliation sources until their consequence-bearing distinctions are actually recompiled into narrower descendants. Extraction does **not** mean deleting its history, demoting all root structure to donor-only status, or pretending Git caused work that was developed elsewhere.
 
 The governing rule is:
 
@@ -90,9 +90,9 @@ The top-level Canonical tree is a projection lattice, not a package to mirror:
 | Canonical surface | Retirement disposition | Reason |
 |---|---|---|
 | `CURRENT_STATE.md` | **CONSUMED / STALE-CURRENT QUARANTINE** | still routes EDU4 [1572]; contradicted by later exact EDU16 [1703] evidence and current Git authority |
-| `Map.md` | **DONOR_ONLY / HISTORICAL ROUTING** | explicit reconciliation/routing supersurface; no authority merely by naming; useful distinctions must be extracted into narrower live objects |
-| `Ontology.md` | **DONOR_ONLY / THEO-PHEN MODEL** | broad structural synthesis with explicit no-science/no-FORM effect by itself; current neutral residues live in Meta-Dynamics/vocabulary/frontier |
-| `Root.md` | **DONOR_ONLY / CONSTITUTIONAL HISTORY** | Root v7 is a large structural constitution; its live operational obligations are represented in current methodology/kernel, while stronger ontology/physics bridges remain unearned |
+| `Map.md` | **LIVE RECONCILIATION / NON-RELEASE ROUTING SOURCE** | routes structural/developmental reconciliation; Git remains executable/release authority, but newer carrier age does not erase uncompiled Canonical distinctions |
+| `Ontology.md` | **LIVE THEO-PHEN / STRUCTURAL SYNTHESIS** | no science/FORM effect by itself; remains live as a typed synthesis source while executable consequences must still be separately earned |
+| `Root.md` | **LIVE CONSTITUTIONAL SOURCE / NON-RELEASE AUTHORITY** | current audit found standing telic/developmental and epistemic obligations not fully compiled into Git; executable/release authority remains Git-local |
 | `RECOMPILATION_AUDIT_2026-09-23.*` | **HISTORICAL_ONLY / PROVENANCE** | records one recompilation transaction; does not route current Git state |
 | `RECOMPILATION_MANIFEST_2026-09-23.*` | **HISTORICAL_ONLY / PROVENANCE** | custody for the recompilation event; retain externally/historically as needed |
 | `Future/` | **MIXED / EXTRACT-BY-DEPENDENCY** | contains executable evidence, handoff bundles, physics/meta donors, plans, stale overlays, generated projections, and current-ish receipts in one tree |
@@ -209,7 +209,7 @@ Several Canonical structures were inspected and **not** promoted as new Git obje
 
 ## 12. Open extraction obligations
 
-Before Canonical can be considered fully retired:
+Before Canonical can be considered fully extracted/recompiled at the implementation boundary:
 
 1. **EDU16 executable custody:** **RESOLVED FOR FORWARD EXECUTION / HISTORICAL EVENT REPLAY STILL UNRECOVERED.** Direct Canonical traversal found the exact EDU13→EDU16 prefreeze/result/policy artifacts but no ordinary EDU16 handoff bundle. Git now content-addresses those recovered inputs and deterministically reconstructs `EDU16-RC1`, a claim-bearing parent carrier over IG10. It is explicitly not the lost 1703-event journal.
 2. **Unique source inventory:** identify Canonical files whose live consequence is absent from Git; do not infer absence from filename alone.
@@ -291,3 +291,28 @@ no live Git claim depends on an untracked Canonical-only premise
 ```
 
 Retirement is therefore a compression/reindexing event, not historical erasure.
+
+
+## 2026-09-25 correction — source hierarchy and standing telos
+
+A source-first audit of all 85 Git Markdown files found that the previous retirement language over-demoted the live Canonical root after migration to Git.
+
+Correct hierarchy:
+
+```text
+Canonical structural/developmental source
+-> Git compilation / executable custody
+-> causal ablation and external return
+-> narrower admitted descendants
+```
+
+not:
+
+```text
+newer Git carrier
+-> older Canonical root becomes donor-only by age.
+```
+
+Recovered Canonical obligations that are not yet fully compiled into the current Git worker include the standing post-tutorial contribution circulation, the distinction between carrier-local STOP and developmental sufficiency, and the broader epistemic loop in which mythos is refined under Reality + mathematical correction/crystallization.
+
+A learned DNN/LLM may enter as a removable donor/scaffold. Internalization credit requires donor/source-removal survival; donor competence, output, weights, or availability do not inherit truth, jurisdiction, or promotion authority.

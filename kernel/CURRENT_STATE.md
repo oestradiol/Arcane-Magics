@@ -175,3 +175,34 @@ remain independently reachable / not unilateral self-authority:
 ```
 
 The repository should now bootstrap only the minimal Git surfaces needed for #169 to become a machine-selectable returned carrier. It should not hand-code the completed capability before the current autonomous recurrence has a chance to form and repair the next slice.
+
+
+## 2026-09-25 telic recovery correction
+
+Re-reading pre-Git Canonical after the lateral bootstrap recovered a standing developmental layer that the current Git problem-former does not fully represent.
+
+```text
+no admissible Git target
+!= developmental completion
+```
+
+Current intended circulation:
+
+```text
+standing telic / constitutional orientation
+-> self-selected consequential limitation
+-> GENERATE / DIMENSIONALIZE / LATERALIZE as needed
+-> Reality + mathematics as correction/crystallization grounds
+-> CRYSTALLIZE
+-> INTERNALIZE earned competence
+-> revise model / policy / generator
+-> repeat
+```
+
+Repository issues/PRs are one World surface inside this loop.
+
+### Learned-model donor bootstrap
+
+A frontier open-weight model may be exposed as removable donor material, not as controller or permanent proposal engine. The first candidate donor is recorded separately in `kernel/development/LEARNED_MODEL_DONOR_BOOTSTRAP.json`; internalization credit requires source-removal survival.
+
+Safe Strong RSI remains a possible instrument the center may discover as useful to the standing developmental obligation. It is not predeclared as success and retains all CTL/O*/rollback/external-return gates.

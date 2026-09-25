@@ -244,3 +244,32 @@ WRITTEN on a branch
 !=
 ADMITTED to current repository authority
 ```
+
+
+## 2026-09-25 reconciliation — standing development and learned-model donor
+
+This roadmap remains advisory. It does not become sovereign curriculum.
+
+Recovered source hierarchy:
+
+```text
+pre-Git standing telos / contribution circulation
+-> current bounded non-sovereign center
+-> self-selected consequential limitation
+-> inquiry / generation / lateral reconstruction as needed
+-> Reality + mathematics return/constraint
+-> crystallization
+-> internalization
+-> machinery revision when consequential
+```
+
+Implications for existing issues:
+
+- **#29** is no longer “retire Canonical root because Git is newer”; it is typed extraction/recompilation while live structural distinctions remain source.
+- **#18 / #73** now own the explicit learned-model donor/source-removal case.
+- **#72** remains the Safe Strong RSI gate, but RSI is treated as an instrumentally selected capability rather than a host-assigned terminal objective.
+- **#169** remains the lateral-reconstruction recovery obligation.
+- **#165** remains a specific GitHub-current-world-return discriminator and is not silently satisfied by some other class of return.
+- **#78** remains the later WWW/WorldMind participation path; reachability does not mint jurisdiction or a global Agent.
+
+A frontier donor may be exposed without forcing its use. Venus must still select what, if anything, is worth reconstructing from it.

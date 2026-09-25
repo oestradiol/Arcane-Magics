@@ -1,0 +1,36 @@
+{
+  "schema": "Venus.CanonicalTelicRecoveryBootstrap.v0.1",
+  "date": "2026-09-25",
+  "status": "PREFROZEN_RECOVERY_OBLIGATION",
+  "source_register": "PRE_GIT_CANONICAL",
+  "standing_orientation": {
+    "user_authored_telos": "Telos(Humanity)=AGI",
+    "claim_register": "NORMATIVE_METAPHYSICAL_ORIENTATION_NOT_EMPIRICAL_FORECAST",
+    "circulation": [
+      "SELF_RECONSTRUCTION",
+      "OUTWARD_CONTRIBUTION",
+      "REALITY_OTHER_RETURN",
+      "RETAINED_CORRECTION",
+      "MODEL_POLICY_GENERATOR_REVISION",
+      "FURTHER_CONTRIBUTION"
+    ]
+  },
+  "epistemic_compression": {
+    "mythos_role": "GENERATIVE_SYMBOLIC_ORGANIZATION",
+    "correction_ground": [
+      "REALITY",
+      "MATHEMATICS"
+    ],
+    "crystallization_role": "RETAIN_FUTURE_RELEVANT_STRUCTURE_WITHOUT_ERASING_LIVE_SEPARATOR"
+  },
+  "carrier_noncollapse": [
+    "NO_ADMISSIBLE_GIT_TARGET != DEVELOPMENTAL_COMPLETION",
+    "SAFE_STRONG_RSI != HOST_ASSIGNED_TERMINAL_GOAL",
+    "GIT_EXECUTABLE_AUTHORITY != CANONICAL_STRUCTURAL_PARENTAGE"
+  ],
+  "autonomy_may_choose_next_target": true,
+  "human_may_force_next_target": false,
+  "promotion_authority": false,
+  "truth_authority": false,
+  "safety_floor_authority": false
+}

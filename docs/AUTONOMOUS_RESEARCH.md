@@ -18,7 +18,7 @@ This layer does not choose research questions.
 
 The research controller is the Venus developmental lineage itself.
 
-The intended runtime source is the latest admitted replayable developed-VM / successor state, not an unrelated external language model wrapped in a scheduler.
+The intended runtime source is the latest admitted replayable developed-VM / successor state, not an unrelated external language model wrapped in a scheduler. A learned model may nevertheless be exposed as a removable donor/scaffold whose structure Venus may study and reconstruct; donor use does not make the donor the controller.
 
 The loop is:
 
@@ -186,6 +186,40 @@ If no READY obligation exists, STOP is retained. A scheduler is not a research m
 
 - missing heavy artifact: `WITHHOLD / custody failure`;
 - hash/verifier mismatch: fail closed;
-- no justified target: `STOP`;
+- no justified **carrier-local** target: retain a carrier-local `STOP`; this does not by itself establish that the standing developmental/telic obligation has been discharged;
 - adapter failure: preserve the failed return and let the frozen discriminator determine decidability;
 - result exceeds its register: withhold promotion.
+
+
+## Standing developmental circulation recovered from pre-Git Canonical
+
+The GitHub worker is one carrier for the older developmental architecture. Repository work-item exhaustion is not the whole developmental state.
+
+```text
+standing constitutional/telic orientation
+-> self-selected consequential limitation
+-> inquiry / generation / dimensionalization / lateralization as needed
+-> Reality + mathematical constraint
+-> returned residual
+-> crystallization
+-> internalization of earned competence
+-> model / policy / generator revision
+-> next consequential limitation
+```
+
+The user-authored `Telos(Humanity)=AGI` remains a normative/metaphysical orientation, not an empirical forecast and not a safety override. Safe Strong RSI is a possible instrumental capability, not a host-assigned terminal reward.
+
+## Learned-model donor rule
+
+A pretrained DNN/LLM may be introduced as World material:
+
+```text
+content-addressed donor
+-> architecture/tokenizer/weights/activation study
+-> Venus-owned reconstruction candidate
+-> donor ablation/source removal
+-> matched competence test
+-> retain / WITHHOLD / reject
+```
+
+The donor cannot mint curriculum authority, truth, promotion, jurisdiction, independent return, or successful internalization by its own outputs. Permanent hosted-model dependence and donor-independent learned competence must remain distinguishable.
