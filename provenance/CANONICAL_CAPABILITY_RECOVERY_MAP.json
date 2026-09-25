@@ -304,8 +304,8 @@
     "U2 unlabeled problem formation before carrier selection — admitted",
     "U1 bounded TransformProgram recurrence — admitted",
     "U1 founder/source ablation — admitted",
-    "live authorized problem-specific recurrence return intake — admitted path",
-    "first actually independent live recurrence event — external evidence required",
+    "evaluator-assisted problem-specific recurrence return intake — admitted path; not GitHub World return",
+    "issue #165 post-freeze GitHub repository-state World return — external evidence required",
     "post-freeze held-out evaluation and external CTL/O* admission/rejection — external evidence required",
     "repeated real-world/open-distribution recurrence under adaptive controls — open"
   ],
@@ -317,11 +317,13 @@
     "consciousness": false
   },
   "current_live_recurrence": {
-    "status": "PASS_BOUNDED_LIVE_PROSPECTIVE_RECURRENCE_PATH_MATURE_REDUCED",
+    "status": "PASS_BOUNDED_EVALUATOR_ASSISTED_LIVE_RECURRENCE_CANDIDATE_PATH_MATURE_REDUCED",
     "result": "kernel/development/LIVE_PROSPECTIVE_RECURRENCE_RESULT.json",
     "admitted_main_merge": "b554f7c3d3eb378a1076e63a9a30f035ffdc437a",
     "actual_independent_live_episode_observed": false,
     "promotion_authority": false,
-    "open_ended_rsi": false
+    "open_ended_rsi": false,
+    "reviewer_authored_trace_is_github_world_return": false,
+    "next_stronger_target": "issue #165 post-freeze GitHub repository-state World return"
   }
 }
