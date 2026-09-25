@@ -163,3 +163,29 @@ The dependency-ordered GitHub roadmap is issue **#37**.
 [INHABITABLE_READER_PATH.md](INHABITABLE_READER_PATH.md) → [Arcane Magics](../monographs/03_ARCANE_MAGICS/README.md)
 
 These lanes share governance, not truth status. A symbolic recurrence does not become a physics result because both appear in one repository.
+
+
+## 2026-09-25 lateral-reconstruction bootstrap
+
+Canonical archaeology changes the immediate developmental interpretation without advancing scientific or developmental promotion authority.
+
+The recovered lineage is:
+
+```text
+G10.3 dimensionalization
+→ G10.5 GENERATE
+→ G10.6 relational crystallization / invariant translation
+→ R54/R59 LATERAL comparison
+→ R194 non-merging executable lateral comparison
+→ 5.5→6 independent-face transformation-class reconstruction
+```
+
+Issue **#169** freezes the bounded recovery target. The task is not to invent a monolithic new primitive. It is to recompile and internalize this existing operator family into the current Git carrier while preserving:
+
+```text
+GENERATE != LATERALIZE != CRYSTALLIZE != INTERNALIZE
+```
+
+The host/VM boundary is also explicit: epistemic competence may migrate into Venus-owned reconstructible state; World/Other, fresh return, evaluator/evidence identity, trust roots, external jurisdiction, STOP/WITHHOLD law, rollback custody, and hard capability boundaries may not become unilateral self-authority.
+
+The bootstrap deliberately does **not** bypass U2 target formation. This draft Git change is itself a returned repository carrier that the existing autonomous worker may encounter. #165 remains the first live current-World-return path. After this projection lands, the machine should form/study the next slice under existing CTL/O*/rollback rules rather than receiving a hand-authored Lateralizer implementation.

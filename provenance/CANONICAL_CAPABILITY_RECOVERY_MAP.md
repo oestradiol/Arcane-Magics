@@ -144,3 +144,53 @@ repeated prospective recurrence on fresh current-world problems
 ## Claim fence
 
 This map does not claim recovery of historical U1/U2 journal identity, open-ended RSI, AGI, or consciousness.
+
+
+## Lateral epistemic reconstruction — recovered 2026-09-25
+
+The earlier recovery map overfocused on vertical developmental recurrence. A deeper archaeology recovers a separate breadth/basis-expansion lineage:
+
+```text
+G10.3  diachronic dimensionalization
+→ G10.5 GENERATE as a first-class upstream operator
+→ G10.6 relational crystallization / invariant translation
+→ R54/R59 Lambda_F lateral comparison over provenance-bearing trajectories
+→ R194 lateral.compare(shared,left_only,right_only,unresolved, merged=False)
+→ 2026-09-22 5.5→6 independent-face / projection / return / invariant-class reconstruction
+```
+
+Disposition:
+
+```text
+theory/provenance ancestry     RETAINED
+R194 pairwise comparison       MATURE-REDUCIBLE IMPLEMENTATION DONOR
+full lateral recurrence        NOT YET LIVE AS ONE STATE-OWNED CAUSAL CAPABILITY
+recovery target                #169
+```
+
+The missing capability is not merely pairwise diff and not a new proprietary primitive. The live obligation is:
+
+```text
+current representational residual
+→ derive missing distinction / dimension
+→ construct independently answerable non-merged faces
+→ precommit projections
+→ obtain independent return
+→ preserve cross-face mismatch / noncommutation
+→ consume gauge, WITHHOLD separators
+→ reconstruct minimum future-sufficient invariant
+→ GENERATE a withheld/new face from that invariant
+→ return again
+→ internalize the earned competence under source/founder ablation
+```
+
+Ownership fence:
+
+```text
+internalize competence
+!= internalize World/Other
+!= self-mint evidence identity
+!= inherit evaluator/jurisdiction/trust-root/rollback authority
+```
+
+The current Git bootstrap must stop before hand-authoring the finished mechanism. A draft projection carrier is sufficient to let the existing U2/U1 autonomous machinery form/study the next slice.

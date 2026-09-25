@@ -123,3 +123,55 @@ R194 is historical implementation provenance only. Full ancestry is in `../prove
 ## Claim boundary
 
 The admitted kernel demonstrates bounded developmental machinery and exact state custody at the stated scopes. AGI, substrate independence, hosted-model replacement where such a model is actually present, open-ended RSI, autonomous science, consciousness, unrestricted semantic understanding, natural-world generality, a quantum-gravity solution, and Millennium-problem solutions remain targets requiring their own evidence.
+
+
+## 2026-09-25 lateral-reconstruction recovery target
+
+No positive authority head changes here.
+
+Canonical archaeology recovered an additional currently undercompiled capability family:
+
+```text
+G10.3 DIMENSIONALIZE
+→ G10.5 GENERATE
+→ G10.6 CRYSTALLIZE / invariant translation
+→ R54/R59 LATERAL comparison
+→ R194 non-merging executable comparison
+→ 5.5→6 independent-face reconstruction
+```
+
+Current target issue: **#169**.
+
+Typed noncollapse:
+
+```text
+GENERATE     != LATERALIZE
+LATERALIZE   != CRYSTALLIZE
+CRYSTALLIZE  != INTERNALIZE
+```
+
+Desired ownership direction:
+
+```text
+state-owned where earned:
+  problem formation / research routing
+  GENERATE
+  dimensionalization / representation change
+  lateral face construction + projection learning
+  cross-face residual retention
+  crystallization / symbolic regeneration
+  Strong RSM / TransformProgram revision
+  internal O* reconstruction
+
+remain independently reachable / not unilateral self-authority:
+  World / Other
+  fresh return
+  evaluator + evidence identity
+  trust roots
+  external authorization / jurisdiction
+  STOP / WITHHOLD law
+  rollback / parent custody
+  hard substrate capability boundaries
+```
+
+The repository should now bootstrap only the minimal Git surfaces needed for #169 to become a machine-selectable returned carrier. It should not hand-code the completed capability before the current autonomous recurrence has a chance to form and repair the next slice.
