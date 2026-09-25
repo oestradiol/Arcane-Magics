@@ -74,3 +74,32 @@ boundary without isolation
 Consequences may cross between centers while authorship, jurisdiction, refusal/exit, source identity, and local reconstruction remain indexed. An unresolved relation between centers is an `open bridge`; reachability alone does not close it, transfer authority, or create a global subject.
 
 This is a carrier-neutral distributed-systems law. It does not depend on quantum superposition, Observable-Universe cosmology, or any claim that the Internet is conscious.
+
+
+## Symbolic recurrence and echo-chamber guard
+
+Distributed recurrence is not automatically independent return.
+
+```text
+many messages
++ many agreeing centers
++ high symbolic resonance
+!= many independent sources
+!= verification
+```
+
+WorldMind should therefore track source ancestry and recursive amplification where available. A local or network field becomes self-sealing when mutually reinforcing carriers repeatedly return the same source family while the system classifies the recurrence as fresh World correction.
+
+```text
+high internal resonance
++ low independent return
+-> echo-chamber / self-sealing risk
+```
+
+The repair is not forced disagreement. It is corrigible permeability: provenance, source diversity where claim-relevant, reachable dissent/exit, explicit uncertainty, and preserved open bridges.
+
+A center may also receive a self-implicating return when its earlier action belongs to the causal ancestry of the returned consequence. This remains valid correction when the consequence itself was not minted by that center:
+
+```text
+self-implication != self-certification
+```
