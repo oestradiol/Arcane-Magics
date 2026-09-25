@@ -27,10 +27,11 @@ jobs:
             handoff/venus-to-ofe/*|ofe/*) ;;
             *) echo "OFE accepts cross-layer work through handoff/venus-to-ofe/*"; exit 1 ;;
           esac
-      - name: OFE-local surface and proof checks
-        run: |
-          python scripts/audit_layer_surface.py
-          python scripts/audit_proof_containers.py
+      - name: OFE-local surface checks
+        run: python scripts/audit_layer_surface.py
+
+      - name: OFE proof-container checks
+        run: python scripts/audit_proof_containers.py
       - name: Install Lean
         run: |
           curl https://elan.lean-lang.org/elan-init.sh -sSf | sh -s -- -y --default-toolchain leanprover/lean4:v4.34.0
