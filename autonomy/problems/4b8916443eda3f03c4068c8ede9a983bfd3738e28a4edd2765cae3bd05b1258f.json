@@ -1,0 +1,26 @@
+{
+  "carrier_binding_authority": false,
+  "discriminator": "REPRODUCE_OR_REFRESH_CONTINUATION_STATE",
+  "disposition": "FORMED_BOUNDED_PROBLEM",
+  "external_return_required": true,
+  "problem_id": "4b8916443eda3f03c4068c8ede9a983bfd3738e28a4edd2765cae3bd05b1258f",
+  "promotion_authority": false,
+  "residual_coordinates": [
+    "continuation_state_unresolved",
+    "referenced_incidence_missing"
+  ],
+  "rivals": [
+    {
+      "rival_id": "r0",
+      "statement": "the returned continuation state reflects a locally reproducible repository incompatibility"
+    },
+    {
+      "rival_id": "r1",
+      "statement": "the returned continuation state is incomplete/stale and requires a fresh repository return"
+    }
+  ],
+  "schema": "Venus.RecompiledProblemFormation.v0.1",
+  "source_stream_ids": [
+    "bfc9e37657a012e685870e2b819ff6a4353abfa7823f398385588bb864be98d6"
+  ]
+}

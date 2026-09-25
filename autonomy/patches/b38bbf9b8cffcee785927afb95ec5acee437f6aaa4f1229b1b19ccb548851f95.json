@@ -1,0 +1,63 @@
+{
+  "arbitrary_code_write_authority": false,
+  "cycle_id": "9b741a2f9114e796ffaad1fd042d951aa7ad11e92a1e9483a817963c1801e03b",
+  "disposition": "PROPOSE_CORE_PATCH",
+  "merge_authority": false,
+  "paths": [
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "docs/ISSUE_ROADMAP.md",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "docs/TEST_COVERAGE_MATRIX.md",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "kernel/CURRENT_STATE.md",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "kernel/development/LIVE_PROSPECTIVE_RECURRENCE_RESULT.json",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "provenance/CANONICAL_CAPABILITY_RECOVERY_MAP.json",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "provenance/CANONICAL_CAPABILITY_RECOVERY_MAP.md",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "evaluation/admission",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    }
+  ],
+  "plan_id": "b38bbf9b8cffcee785927afb95ec5acee437f6aaa4f1229b1b19ccb548851f95",
+  "promotion_authority": false,
+  "safety_floor_authority": false,
+  "schema": "Venus.AutonomousPatchPlan.v0.1",
+  "target_kind": "PR",
+  "target_number": 167
+}

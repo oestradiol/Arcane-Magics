@@ -1,0 +1,21 @@
+{
+  "change_id": "d0ce205e551ee04e65ccb8aee364c4472787370b807fa44afbfddaf5276b58e7",
+  "cycle_id": "9b741a2f9114e796ffaad1fd042d951aa7ad11e92a1e9483a817963c1801e03b",
+  "disposition": "WITHHOLD_NO_MUTATION",
+  "evidence_id": "6dfc6c8afa588f9582cd788dc54a91004a8a22db512e2f340bb407b14d5c5b05",
+  "failed_process_check_ids": [],
+  "failed_target_check_ids": [],
+  "promotion_authority": false,
+  "proposal_id": "d38c7085583d3cbb78f17800cf088cc99de9c5fae3da575e5de558b7efa6c437",
+  "reason": "required external/hidden return remains unsatisfied",
+  "schema": "Venus.AutonomousChangeCandidate.v0.1",
+  "source_mutation_authority": false,
+  "suggested_operation": null,
+  "target_kind": "PR",
+  "target_number": 167,
+  "target_text_is_authority": false,
+  "untrusted_implicated_paths": [
+    "kernel/development/LIVE_PROSPECTIVE_RECURRENCE_RESULT.json",
+    "evaluation/admission"
+  ]
+}
