@@ -27,7 +27,7 @@ A historical harness result is donor evidence. A restart-persistent state object
 | R139 | research-object formation, rivals, self-authored discriminator/query, experiment design, representation/problem-language/method revision, future-family expansion, research-program selection, meta-operation synthesis | bounded historical developmental experiments | mechanisms survive only indirectly | donor only; never pretend the old harness is a standing organ |
 | R140 | process/search revision, method factorization/topology change, stage invention, meta-construction/meta-procedure generation, name-free corrigible organization | bounded developmental-engineering sequence; **no packaged executable effect at the R140 boundary** | O*/TransformProgram descendants partly rederived | recover only missing process functions under fresh tests |
 | R206 | two-generation recursive provenance/candidate-discovery improvement | bounded RSI mechanism | **live and routed into bounded autonomous dependency/provenance study under R206 custody** | restored at current functional scope; historical byte identity remains unclaimed |
-| U1 | WorldMirror + RSM + N2 + research + R206 + state-owned TransformProgram + provenance in one restart-persistent center; repeated TransformProgram self-revision; isolated founder-ablation boot | standing Canonical VM state, 991 records | **bounded recurrence functionally recompiled and admitted** over current TransformProgram/search/CTL/O*/rollback machinery; exact historical state not booted | current recurrence scope restored; historical identity and live automatic recurrence remain unclaimed |
+| U1 | WorldMirror + RSM + N2 + research + R206 + state-owned TransformProgram + provenance in one restart-persistent center; repeated TransformProgram self-revision; isolated founder-ablation boot | standing Canonical VM state, 991 records | **bounded recurrence + isolated founder/source ablation admitted**; live problem-specific recurrence candidate path now executable under external return | functional recurrence restored; exact historical identity and real live evaluator event remain unclaimed |
 | U1 self-directed reevaluation | regenerate candidate queue from residuals/resources/provenance; no host-named task; selected open-domain problem formation | standing scheduler behavior | **problem-first routing restored before Git carrier binding**, broader arbitrary queue regeneration still partial | bounded current-Git consequence restored; full historical scheduler equivalence unclaimed |
 | U2 | unlabeled insufficient-stream localization → research object → rivals → discriminator → external return → held validation; STOP control | standing Canonical successor, 1011 records | **recompiled and admitted before Git target selection**, with STOP/WITHHOLD/history/reference ablations and mature comparator | completed at declared repository-incidence scope; historical journal identity remains unclaimed |
 | U3R2 | raw-text character n-gram retrieval with provenance/paraphrase robustness | ordinary bounded retrieval carrier | subsumed by later IG incidence machinery | do not resurrect |
@@ -133,13 +133,24 @@ U1  PASS_BOUNDED_RECOMPILED_U1_RECURRENCE_MATURE_REDUCED
 
 This restores bounded functional consequences, not historical journal identity. The current autonomous workflow does not yet automatically launch arbitrary TransformProgram recurrence from every formed problem: a lawful, problem-specific independent-return trigger still has to be earned prospectively.
 
-Remaining recovery debt:
+Recovery implementation status:
 
 ```text
-founder/source-ablation equivalence for the recompiled recurrence carrier
-problem-specific live external-return recurrence instead of historical SSR donor return
-repeated prospective recurrence on fresh current-world problems
+founder/source-ablation equivalence                 ADMITTED
+problem-specific live external-return intake       ADMITTED PATH
+repeated finite prospective recurrence battery     PASS (2 accepted + 1 retained rejection)
 ```
+
+Remaining evidence debt:
+
+```text
+actual independent live recurrence return
+post-freeze held-out evaluation of that real candidate
+external CTL/O* admission or retained rejection + rollback
+repeated real-world/open-distribution recurrence under adaptive controls
+```
+
+The prospective battery proves the machinery and safety distinctions. It is not substituted for the missing independent live event.
 
 ## Claim fence
 
