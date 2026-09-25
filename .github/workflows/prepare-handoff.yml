@@ -4,15 +4,15 @@ on:
   workflow_dispatch:
     inputs:
       source_ref:
-        description: 'Source long-lived branch (e.g. split/ofe)'
+        description: 'Source long-lived branch'
         required: true
         type: string
       target_ref:
-        description: 'Target branch: split/venus or main'
+        description: 'Target branch'
         required: true
         type: string
       source_layer:
-        description: 'OFE | Eclipsis | Arcane | Minerva | Venus'
+        description: 'Arcane | Eclipsis | Minerva | Venus | OFE'
         required: true
         type: string
 
@@ -38,7 +38,7 @@ jobs:
         run: |
           edge="${SOURCE_REF}->${TARGET_REF}"
           case "$edge" in
-            "split/ofe->split/venus"|"split/eclipsis->split/venus"|"split/arcane-magics->split/venus"|"split/minerva->split/venus"|"split/venus->main") ;;
+            "split/arcane-magics->split/eclipsis"|"split/eclipsis->split/minerva"|"split/minerva->split/venus"|"split/venus->split/ofe"|"split/ofe->main") ;;
             *)
               echo "Illegal cross-register edge: $edge"
               exit 1
@@ -54,35 +54,26 @@ jobs:
         run: |
           source_sha="$(git rev-parse "origin/${SOURCE_REF}")"
           target_sha="$(git rev-parse "origin/${TARGET_REF}")"
-
-          if [ "$TARGET_REF" = "main" ]; then
-            target_layer="Root"
-            slug="venus-to-root"
-          else
-            target_layer="Venus"
-            case "$SOURCE_REF" in
-              split/ofe) slug="ofe-to-venus" ;;
-              split/eclipsis) slug="eclipsis-to-venus" ;;
-              split/arcane-magics) slug="arcane-to-venus" ;;
-              split/minerva) slug="minerva-to-venus" ;;
-            esac
-          fi
-
+          case "${SOURCE_REF}->${TARGET_REF}" in
+            "split/arcane-magics->split/eclipsis") slug="arcane-to-eclipsis" ; target_layer="Eclipsis" ;;
+            "split/eclipsis->split/minerva") slug="eclipsis-to-minerva" ; target_layer="Minerva" ;;
+            "split/minerva->split/venus") slug="minerva-to-venus" ; target_layer="Venus" ;;
+            "split/venus->split/ofe") slug="venus-to-ofe" ; target_layer="OFE" ;;
+            "split/ofe->main") slug="ofe-to-root" ; target_layer="Root" ;;
+          esac
           branch="handoff/${slug}/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           git checkout -b "$branch" "origin/${TARGET_REF}"
           git config user.name 'Arcane Magics crystallization steward'
           git config user.email 'actions@users.noreply.github.com'
-
           git merge --no-ff -s ours --no-commit "$source_sha"
-
           mkdir -p provenance/historical/handoffs
-          export SOURCE_SHA="$source_sha" TARGET_SHA="$target_sha" TARGET_LAYER="$target_layer" BRANCH="$branch"
+          export SOURCE_SHA="$source_sha" TARGET_SHA="$target_sha" TARGET_LAYER="$target_layer" BRANCH="$branch" SOURCE_REF TARGET_REF SOURCE_LAYER
           python - <<'PY'
           import json, os
           from pathlib import Path
           rid=os.environ['BRANCH'].split('/')[-1]
           receipt={
-            'schema':'ArcaneMagics.CrossRegisterHandoff.v1',
+            'schema':'ArcaneMagics.CrossRegisterHandoff.v2',
             'source_layer':os.environ['SOURCE_LAYER'],
             'target_layer':os.environ['TARGET_LAYER'],
             'source_ref':os.environ['SOURCE_REF'],
@@ -91,15 +82,13 @@ jobs:
             'target_parent':os.environ['TARGET_SHA'],
             'handoff_branch':os.environ['BRANCH'],
             'content_admission':'NONE_AT_BOOTSTRAP; add explicit admitted residue in later commits',
-            'ancestry_semantics':'second parent retained without source-tree replacement',
+            'ancestry_semantics':'second parent retained without source-tree replacement'
           }
           Path(f'provenance/historical/handoffs/{rid}.json').write_text(json.dumps(receipt,indent=2)+'\n')
           PY
-
           git add provenance/historical/handoffs
           git commit -m "handoff(${SOURCE_LAYER}->${target_layer}): preserve source trajectory"
           git push origin "$branch"
-
           gh pr create --draft --base "$TARGET_REF" --head "$branch" \
             --title "handoff: ${SOURCE_LAYER} → ${target_layer}" \
-            --body $'Target-based crystallization handoff.\n\nThe first commit records the source branch as a second parent while preserving the target tree. No source content is promoted merely by ancestry. Add only explicitly admitted residue before review.'
+            --body $'Target-based crystallization handoff. The source branch is retained as a second parent; only explicit residue should be admitted before review.'
