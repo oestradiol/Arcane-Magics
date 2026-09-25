@@ -600,3 +600,29 @@ common meta-object hypothesis
 != LQG solution
 != quantum-vacuum-crystal identity
 ```
+
+
+### Physical projection of WITHHOLD and Residual
+
+The neutral project law says that a distinction should not be consumed as gauge while it can still separate admissible futures. A physics-facing projection can express that without personifying Nature as performing an epistemic decision.
+
+For quantum states `rho, sigma` and future family `F`:
+
+```math
+rho ~_F sigma
+iff
+for all admitted future channels Phi and observables O,
+Tr[O Phi(rho)] = Tr[O Phi(sigma)].
+```
+
+Then:
+
+```text
+Residual
+= physically retained future-separating distinction
+
+WITHHOLD
+= project-side instruction not to quotient that distinction before its physical equivalence is established
+```
+
+If a candidate horizon degree of freedom changes a later Hawking/greybody observable, it is a physical residual relative to that future-test family. If every admissible continuation erases it with no observable difference, it is gauge at that family. Whether actual LQG supplies the proposed residual dynamics remains OPEN.
