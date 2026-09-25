@@ -23,6 +23,7 @@ UNRESOLVED_MERGE_STATES = frozenset({
     "BLOCKED",
     "CONFLICTING",
     "UNKNOWN",
+    "UNSTABLE",
 })
 
 
