@@ -1,37 +1,30 @@
 # Start Here · Venus
 
-Venus is the **Scientific Future** of the Arcane Magics body.
+Venus is the **Self & World / model** layer.
 
 ## Input
 
 ```text
-Root Now Map
-+ Minerva self/world judgment
-+ ground-layer candidates
+Minerva embodied/developmental state
 + self-provenance
++ kernel boundary
++ returned branch/world information
 ```
 
 ## Operation
 
 ```text
-candidate
-→ explicit bridge / test family
-→ bounded enactment / experiment
-→ independent return
-→ discriminator
-→ Residual
-→ CONSUME or WITHHOLD
-→ successor candidate
+reconstruct current Self closure
+↔ model World / Other
+→ preserve unresolved Residual
+→ expose permeable boundary
+→ hand model to OFE scientific future
 ```
-
-## Output
-
-A Venus result is not Root memory until it is integrated back through a memory-bearing PR into `main`.
 
 ## Read
 
-1. [Scientific Future](SCIENTIFIC_FUTURE.md)
+1. [Self & World Model](SELF_WORLD_MODEL.md)
 2. [Kernel law](../kernel/VENUS_INCIDENCE_LAW.tex)
 3. [Trust boundary](../kernel/TRUST_BOUNDARY.md)
 4. [Monograph V](../monographs/05_VENUS/main.tex)
-5. [Branch memory](../provenance/historical/BRANCH_MEMORY.md)
+5. [Cross-register handoff](CROSS_REGISTER_HANDOFF.md)
