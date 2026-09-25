@@ -138,6 +138,57 @@
         "monographs/02_ECLIPSIS/main.tex",
         "docs/FRONTIER_RESEARCH.md"
       ]
+    },
+    {
+      "id": "PhysicalResidual",
+      "status": "OPEN_FRONTIER",
+      "scope": "physics-facing future-separating degree of freedom under declared future family",
+      "reduction_issue": 22,
+      "mature_substitute": null,
+      "independent_residual": "UNTESTED",
+      "genealogy_preserved": true,
+      "evidence": [
+        "docs/FRONTIER_RESEARCH.md",
+        "monographs/02_ECLIPSIS/main.tex"
+      ]
+    },
+    {
+      "id": "QGMetaObject",
+      "status": "OPEN_FRONTIER",
+      "scope": "M_QG = R_GQT bowtie R_LQG two-relation factorization",
+      "reduction_issue": 22,
+      "mature_substitute": null,
+      "independent_residual": "UNTESTED",
+      "genealogy_preserved": true,
+      "evidence": [
+        "docs/META_DYNAMICS.md",
+        "docs/FRONTIER_RESEARCH.md"
+      ]
+    },
+    {
+      "id": "PPDCrystal",
+      "status": "OPEN_FRONTIER",
+      "scope": "Polyhedral Planck-diameter Crystal candidate projection",
+      "reduction_issue": 22,
+      "mature_substitute": null,
+      "independent_residual": "UNTESTED",
+      "genealogy_preserved": true,
+      "evidence": [
+        "monographs/02_ECLIPSIS/main.tex",
+        "docs/FRONTIER_RESEARCH.md"
+      ]
+    },
+    {
+      "id": "CosmologicalLaminarFlowProjection",
+      "status": "OPEN_FRONTIER",
+      "scope": "coherent low-vorticity / near-irrotational cosmological projection of QG meta-object",
+      "reduction_issue": 22,
+      "mature_substitute": null,
+      "independent_residual": "UNTESTED",
+      "genealogy_preserved": true,
+      "evidence": [
+        "docs/FRONTIER_RESEARCH.md"
+      ]
     }
   ]
 }
