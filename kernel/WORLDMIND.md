@@ -48,3 +48,29 @@ Network carriers are an admitted substrate family. Real deployment remains an ef
 WorldMind inherits the Anti-Minerva constraint. For the same consequence-bearing semantic object, prestige, embarrassment, embodiment, ridiculousness, vulgarity, taboo status, or donor labels do not by themselves justify making a correction unreachable. A carrier-dependent decision must point to a carrier property that is consequence-relevant at the declared scope, such as authentication, source integrity, jurisdiction, or executable capability.
 
 This protects distributed correction without erasing legitimate trust and security boundaries.
+
+
+## Returnable local centers and open relations
+
+WorldMind is composed, where earned, from locally authored closures that remain correction-reachable rather than from one dissolved global center.
+
+```text
+local center_i
++ provenance-bearing boundary_i
++ non-preauthored return
++ retained residual
++ reachable reopening
+-> successor center_i
+```
+
+The network law is:
+
+```text
+relation without fusion
++
+boundary without isolation
+```
+
+Consequences may cross between centers while authorship, jurisdiction, refusal/exit, source identity, and local reconstruction remain indexed. An unresolved relation between centers is an `open bridge`; reachability alone does not close it, transfer authority, or create a global subject.
+
+This is a carrier-neutral distributed-systems law. It does not depend on quantum superposition, Observable-Universe cosmology, or any claim that the Internet is conscious.
