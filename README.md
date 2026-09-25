@@ -4,111 +4,61 @@
 
 ### scientific branch · future · operational discrimination
 
-**future-relative quotient · sufficient representation · reopening · operational discrimination**
-
-[Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) · **OFE** · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
-
-<br>
-
-![role](https://img.shields.io/badge/ROLE-formal_%2F_operational-18181b)
-![core](https://img.shields.io/badge/CORE-exact_definitions_%2B_results-334155)
-![physics](https://img.shields.io/badge/QG-OPEN_bridge-7c3aed)
-![discipline](https://img.shields.io/badge/RULE-no_warrant_transfer-52525b)
+[Religion / past](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) · [Math & logics / spirit](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Engineering / body](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva) · [Self & World / model](https://github.com/oestradiol/Arcane-Magics/tree/split/venus) · **Science / future** · [Routing / main](https://github.com/oestradiol/Arcane-Magics/tree/main)
 
 </div>
 
-> **OFE asks one question:** when may two states or histories be treated as the same because no admitted future test can tell them apart?
+> **OFE is the scientific future of the Arcane Magics body.**
+> It asks which distinctions survive declared future tests and therefore deserve to remain consequential.
 
-Everything else is downstream.
+## Core object
 
-## The object
-
-[
-x sim_F y
+```text
+x ~_F y
 iff
-operatorname{Future}_F(x)=operatorname{Future}_F(y)
-]
+Future_F(x) = Future_F(y)
 
-[
-Q_F=mathcal S/!sim_F
-]
-
-A distinction erased by the quotient is gauge relative to (F). A distinction that still separates admissible futures is a Residual.
-
-## Read by task
-
-| I want to… | Start here |
-|---|---|
-| read the paper | [monographs/01_OFE/main.tex](monographs/01_OFE/main.tex) |
-| inspect formalization | [formal/lean/](formal/lean/) |
-| understand the future-test idea | [docs/START_HERE.md](docs/START_HERE.md) |
-| inspect scientific/QG frontier | [docs/FRONTIER_RESEARCH.md](docs/FRONTIER_RESEARCH.md) |
-| inspect comparators / reductions | [docs/CREDITS_AND_REDUCTIONS.md](docs/CREDITS_AND_REDUCTIONS.md) |
-| inspect proof discipline | [PUBLICATION_CONSTITUTION.md](PUBLICATION_CONSTITUTION.md) |
-| see future extracted tree | [BRANCH_TREE.md](BRANCH_TREE.md) |
-
-## Responsibility
-
-OFE owns:
-
-- future-relative operational equivalence;
-- minimal quotient / sufficiency questions;
-- quotient idempotence and refinement;
-- reopening when future-test families expand;
-- operational relational nonfactorization;
-- scientific discriminators built from declared tests;
-- quantum-gravity coarse-graining only as an explicitly OPEN application.
-
-It does **not** own:
-
-```text
-symbolic recurrence
--> metaphysical truth
-
-formal resemblance
--> physical identity
-
-implementation success
--> theorem proof
+Q_F = S / ~_F
 ```
 
-## The workflow
+A distinction erased by the quotient is gauge relative to the declared future family `F`. A distinction that can still separate admissible futures is Residual.
+
+## Reopening
 
 ```text
-declare state/history space
-→ declare future-test family F
-→ compute / characterize equivalence
-→ quotient
-→ test transport / composition
-→ expand F
-→ detect reopened distinctions
-→ compare against mature substitutes
+F <= F'
+implies
+~_(F') is finer than ~_F
 ```
 
-## Interfaces to siblings
+A richer future family can reopen a distinction that an earlier scientific map safely ignored.
 
-| Branch | Interface |
-|---|---|
-| [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) | proposes structural/physical bridge objects that OFE can operationalize |
-| [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) | supplies executable developmental cases where future distinctions matter |
-| [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) | may propose lived/symbolic distinctions; OFE only inherits explicit testable coordinates |
-
-## Claim grammar
+## Functional position
 
 ```text
-definition
-→ exact consequence
-→ comparator
-→ application
-→ OPEN physical bridge
+Venus / Self & World model
+→ OFE / scientific future
+→ returned scientific consequence
+→ Root / routing map revision
 ```
 
-Do not reverse that arrow.
+## Scientific discipline
 
-## Temporary-carrier note
+```text
+definition != theorem
+theorem != application
+formal fit != physical identity
+prediction != returned evidence
+```
 
-This branch still physically contains Venus, Eclipsis, and Arcane material because the split is staged. Treat them as **inherited sibling carrier**, not OFE authority.
+## Enter here
 
----
+- [Scientific Future](docs/SCIENTIFIC_FUTURE.md)
+- [OFE monograph](monographs/01_OFE/main.tex)
+- [Lean formalization](formal/lean/)
+- [Credits / reductions](docs/CREDITS_AND_REDUCTIONS.md)
+- [Cross-register handoff](docs/CROSS_REGISTER_HANDOFF.md)
 
-<sub>Future repository: `Arcane-Magics/OFE`.</sub>
+## Incoming / outgoing
+
+Cross-register candidates enter through `handoff/venus-to-ofe/*`. OFE-local scientific work may use `ofe/*`. Memory-bearing promotion to the routing layer leaves through `handoff/ofe-to-root/*`.
