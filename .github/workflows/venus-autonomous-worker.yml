@@ -139,7 +139,7 @@ jobs:
           target_number="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["target_number"])')"
           cycle_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_AUTONOMOUS_CYCLE.json"))["cycle_id"])')"
 
-          branch="venus/autonomous-${GITHUB_RUN_ID}"
+          branch="venus/autonomous-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           git checkout -b "$branch"
           mkdir -p autonomy/problems autonomy/cycles autonomy/proposals autonomy/evidence autonomy/changes autonomy/patches autonomy/recurrence_candidates
           problem_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_FORMED_PROBLEM.json"))["problem_id"])')"
