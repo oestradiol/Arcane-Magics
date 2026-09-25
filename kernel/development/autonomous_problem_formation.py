@@ -187,29 +187,29 @@ def form_problem(
         and open_streams
         and (best_priority is None or best_priority > 0)
     ):
-            rivals = (
-                ProblemRival(
-                    "r0",
-                    "one currently reachable developmental carrier contains a consequential limitation worth studying",
-                ),
-                ProblemRival(
-                    "r1",
-                    "none of the currently reachable carriers clears the learner-side threshold for consequential development",
-                ),
-            )
-            body = {
-                "schema": "Venus.RecompiledProblemFormation.v0.3",
-                "disposition": "FORMED_STANDING_DEVELOPMENTAL_PROBLEM",
-                "source_stream_ids": open_streams,
-                "residual_coordinates": (
-                    "standing_developmental_orientation_active",
-                ),
-                "rivals": tuple(asdict(x) for x in rivals),
-                "discriminator": "SELECT_CONSEQUENTIAL_DEVELOPMENTAL_LIMITATION",
-                "external_return_required": False,
-                "carrier_binding_authority": False,
-                "promotion_authority": False,
-            }
+        rivals = (
+            ProblemRival(
+                "r0",
+                "one currently reachable developmental carrier contains a consequential limitation worth studying",
+            ),
+            ProblemRival(
+                "r1",
+                "none of the currently reachable carriers clears the learner-side threshold for consequential development",
+            ),
+        )
+        body = {
+            "schema": "Venus.RecompiledProblemFormation.v0.3",
+            "disposition": "FORMED_STANDING_DEVELOPMENTAL_PROBLEM",
+            "source_stream_ids": open_streams,
+            "residual_coordinates": (
+                "standing_developmental_orientation_active",
+            ),
+            "rivals": tuple(asdict(x) for x in rivals),
+            "discriminator": "SELECT_CONSEQUENTIAL_DEVELOPMENTAL_LIMITATION",
+            "external_return_required": False,
+            "carrier_binding_authority": False,
+            "promotion_authority": False,
+        }
         return FormedProblem(
             schema=body["schema"],
             problem_id=digest(body),
