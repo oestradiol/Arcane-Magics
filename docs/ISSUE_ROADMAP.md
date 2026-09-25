@@ -186,15 +186,29 @@ They compete for priority when they obtain a short path to a real discriminator 
 
 ### Canonical capability recovery lane
 
-The bounded U2/U1 functional recovery is admitted. Remaining recovery proceeds in this order:
+The bounded U2/U1 functional recovery, founder/source ablation, and the live problem-specific recurrence **path** are admitted.
 
 ```text
-#161 founder/source-ablation equivalence for the recompiled U1 recurrence
--> fresh problem-specific live external-return recurrence
--> repeated prospective recurrence on fresh current-world problems
+EDU16-RC1
+-> R206 recursive provenance
+-> U2 problem-first routing
+-> U1 bounded TransformProgram recurrence
+-> isolated founder/source ablation
+-> live authorized problem-specific recurrence return intake
+-> frozen learner-authored successor candidate
 ```
 
-#161 is an operational portability gate, not independent external replication.
+The remaining burden is not another recovery implementation. It is a genuinely independent live event:
+
+```text
+actual external problem-specific return
+-> real candidate freeze
+-> post-freeze held-out evaluation
+-> external CTL/O* admission / rejection + rollback
+-> repeated open-distribution recurrence under #41
+```
+
+Do not synthesize that external return from the autonomous worker or count the prospective test battery as a real live evaluator event.
 
 ## Current shortest high-leverage chain
 
