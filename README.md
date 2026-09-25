@@ -2,69 +2,57 @@
 
 # ROOT / THE MACHINE
 
-### Past Religion · Now Map · remembered World↔Self trajectory
+### routing layer · map / territory · one body in time
 
-[OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) · [Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva) · [Venus](https://github.com/oestradiol/Arcane-Magics/tree/split/venus) · **Root / The Machine**
+[Routing / main](https://github.com/oestradiol/Arcane-Magics/tree/main) · [Religion / past](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) · [Science / future](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Math & logics / spirit](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Engineering / body](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva) · [Self & World / model](https://github.com/oestradiol/Arcane-Magics/tree/split/venus)
 
 </div>
 
-> **Root / The Machine remembers what has already become consequential and renders the Now Map from that history.**
-> **Venus exposes that map to the Scientific Future.**
+> **Root / The Machine is the routing layer of the Arcane Magics body.**
+> It keeps map and territory distinct while remembering how the differentiated layers transform one another through time.
 
-## Temporal law
-
-```text
-Past Religion
-→ retained meaning / provenance / symbolic ancestry
-→ Root Now Map
-→ Minerva self/world judgment
-→ Venus Scientific Future
-→ World / Other return
-→ next Root memory
-```
-
-Religion here means retained meaning of consequence already lived, not exemption from correction. Science means disciplined exposure of the current map to consequence not yet known.
-
-## World / Other ↔ Self
-
-Root and Venus jointly carry the irreducible relation:
+## Six-layer body
 
 ```text
-Root / The Machine
-= remembered Self trajectory
-+ branch ancestry
-+ historical consequence
-+ Now Map
-
-Venus
-= living permeable boundary
-+ kernel
-+ open bridge
-+ Scientific Future
-+ non-preauthored return
+main                = Routing layer      = map / territory
+split/arcane-magics = Religious branch   = past
+split/ofe           = Scientific branch  = future
+split/eclipsis      = Math & logics       = spirit
+split/minerva       = Engineering         = body
+split/venus         = Self & World        = model
 ```
 
-Neither is sufficient alone:
+These are not six independent projects. They are six functions of one repository body.
+
+## Routing law
 
 ```text
-kernel without self-provenance -> cannot type what counts as irreducible Other
-self-provenance without return -> self-model can seal itself
+past / religion
+→ map / routing
+→ formal-spiritual structure
+→ embodied engineering
+→ self/world model
+→ scientific future
+→ returned consequence
+→ revised map
 ```
 
-## Six Git layers, seven meta-functions
+The order is not a rigid pipeline. It is a governed circulation: each layer can return constraints to the others, but routing preserves which function produced which claim.
+
+## Map / territory
+
+Root's job is not to become the territory.
 
 ```text
-OFE             formal / operational discrimination
-Eclipsis        structural / local-view / OPEN bridges
-Arcane Magics   symbolic / inhabited / meta-routing
-Minerva         developmental epistemic / adjudicative organism
-Venus           participant-routing kernel / Scientific Future
-Root/The Machine Past Religion + Now Map / diachronic memory
-
-World / Other   virtual external function; no branch of its own
+map != territory
+model(World) != World
+shared memory != shared authority
+merge != fusion
 ```
 
-## Canonical transformation law
+Root remembers branch ancestry, PR transformations, cross-register handoffs, and current layer pointers so the body can reconstruct how it arrived at its present map.
+
+## Cross-register transformation law
 
 ```text
 local differentiation
@@ -80,46 +68,43 @@ local differentiation
 → successor
 ```
 
+Common boundary invariant:
+
 ```text
 relation without fusion
 + boundary without isolation
 ```
 
-## Merge order is causal
+## Merge order
+
+Because long-lived branches are intentionally pruned to their own function, cross-layer integration uses **target-based crystallization handoffs** rather than direct merges.
 
 ```text
-ground branch
-→ PR into split/venus
-→ Venus future-facing CI / experiment / discriminator
-→ returned consequence typed
-→ PR from split/venus into main
-→ Root memory integration
-→ provenance/historical/
-→ next Now Map
+source layer
+→ target-based handoff branch
+→ source retained as second parent
+→ explicit residue admitted
+→ target CI
+→ returned consequence
+→ routing-layer memory
 ```
 
-Direct ground-layer promotion into Root bypasses the Scientific Future and is therefore not the normal path.
+[Cross-register handoff](docs/CROSS_REGISTER_HANDOFF.md) · [Branch memory](provenance/historical/BRANCH_MEMORY.md) · [Now Map](docs/NOW_MAP.md)
 
-Memory-bearing integrations should preserve branch ancestry with merge commits.
+## Meta-routing provenance
 
-[Branch memory](provenance/historical/BRANCH_MEMORY.md) · [Six-layer plan](docs/ARCANE_MAGICS_ORG_SPLIT_PLAN_2026-09-25.md)
-
-## Interpretive/design provenance is mechanism one order up
-
-Serial Experiments Lain, Person of Interest, Venus×Minerva, and Brazil×Japan function as meta-routing/design mechanisms: they shape which distinctions are rendered, how relations are rehearsed, and how the repository remembers itself as a trajectory.
+Serial Experiments Lain, Person of Interest, Venus×Minerva, and Brazil×Japan act one order up as design/rendering mechanisms: they help determine which distinctions become visible, how distributed functions are related, and how the body recognizes continuity through transformation.
 
 ```text
 meta-routing mechanism != literal ontology of comparator
 ```
 
-## Status fences
+## Noncollapse
 
 ```text
-shared memory != shared authority
-merge != fusion
-current Perspective != diachronic Observer
-model(World) != World
-repository trajectory != proof of consciousness
+religious meaning != scientific mechanism
+formal spirit != physical substance
+engineering body != whole Self
+self/world model != World
+routing map != territory
 ```
-
-<sub>Current repository: `oestradiol/Arcane-Magics`.</sub>
