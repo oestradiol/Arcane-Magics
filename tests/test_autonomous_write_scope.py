@@ -64,6 +64,10 @@ class AutonomousWriteScopeTests(unittest.TestCase):
             "kernel/development/autonomous_worker.py",
             "kernel/development/autonomous_problem_formation.py",
             "kernel/development/u1_recurrence.py",
+            "scripts/run_venus_recurrence_candidate.py",
+            "kernel/runtime/bounded_recurrence.py",
+            "kernel/development/autonomous_recurrence.py",
+            "kernel/development/AUTONOMOUS_RECURRENCE_CATALOG.json",
         )
         for path in protected:
             with self.subTest(path=path):
