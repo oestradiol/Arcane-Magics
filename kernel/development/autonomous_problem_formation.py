@@ -37,6 +37,7 @@ class RepositoryIncidenceRow:
     changed_path_count: int
     reference_count: int
     unresolved_reference_count: int
+    standing_developmental_obligation: bool = False
 
 
 @dataclass(frozen=True)
@@ -74,7 +75,11 @@ def _stream_id(item: WorkItem) -> str:
     return digest({"carrier_kind": item.kind, "number": item.number})
 
 
-def snapshot_to_incidence(items: Iterable[WorkItem]) -> tuple[RepositoryIncidenceRow, ...]:
+def snapshot_to_incidence(
+    items: Iterable[WorkItem],
+    *,
+    standing_carrier_key: tuple[str, int] | None = None,
+) -> tuple[RepositoryIncidenceRow, ...]:
     rows = tuple(items)
     known_numbers = {item.number for item in rows}
     out: list[RepositoryIncidenceRow] = []
@@ -96,12 +101,22 @@ def snapshot_to_incidence(items: Iterable[WorkItem]) -> tuple[RepositoryIncidenc
             changed_path_count=len(tuple(item.changed_paths)),
             reference_count=len(refs),
             unresolved_reference_count=len(unresolved),
+            standing_developmental_obligation=(
+                standing_carrier_key is not None
+                and (item.kind, item.number) == standing_carrier_key
+            ),
         ))
     return tuple(out)
 
 
 def _row_residuals(row: RepositoryIncidenceRow) -> tuple[str, ...]:
     residuals: list[str] = []
+
+    # A standing developmental obligation recovered from pre-Git Canonical is
+    # a real developmental residual even when the Git carrier itself is clean.
+    # The carrier only indexes the obligation; it does not author its content.
+    if row.standing_developmental_obligation:
+        residuals.append("standing_developmental_obligation_uncompiled")
 
     # Returned PR state says the present local repository model cannot yet be
     # treated as a clean enactable continuation. This is a structural separator,
@@ -140,11 +155,18 @@ def form_problem(
 
         # Prefer rows with more independent separating coordinates. Tie-break
         # content-addressedly rather than by issue/PR number or title.
-        key = (
-            -len(residuals),
-            0 if "continuation_state_unresolved" in residuals else 1,
-            row.stream_id,
-        )
+        if (
+            row.carrier_kind == "PR"
+            and row.merge_state in {"DIRTY", "BLOCKED", "CONFLICTING"}
+        ):
+            priority = 0
+        elif "standing_developmental_obligation_uncompiled" in residuals:
+            priority = 1
+        elif "continuation_state_unresolved" in residuals:
+            priority = 2
+        else:
+            priority = 3
+        key = (-len(residuals), priority, row.stream_id)
         candidates.append((key, row, residuals))
 
     if not candidates:
@@ -201,7 +223,20 @@ def form_problem(
     discriminator: str
     external_required: bool
 
-    if "continuation_state_unresolved" in residuals:
+    if "standing_developmental_obligation_uncompiled" in residuals:
+        rivals = (
+            ProblemRival(
+                "r0",
+                "the current carrier already represents the standing developmental obligation sufficiently for lawful continuation",
+            ),
+            ProblemRival(
+                "r1",
+                "a standing pre-Git developmental function remains uncompiled and must become causally reachable before carrier-local STOP can imply anything broader",
+            ),
+        )
+        discriminator = "RECOVER_OR_REDUCE_STANDING_DEVELOPMENTAL_OBLIGATION"
+        external_required = False
+    elif "continuation_state_unresolved" in residuals:
         rivals = (
             ProblemRival(
                 "r0",
@@ -363,11 +398,18 @@ def exhaustive_problem_scan(
         residuals = _row_residuals(row)
         if not residuals:
             continue
-        key = (
-            -len(residuals),
-            0 if "continuation_state_unresolved" in residuals else 1,
-            row.stream_id,
-        )
+        if (
+            row.carrier_kind == "PR"
+            and row.merge_state in {"DIRTY", "BLOCKED", "CONFLICTING"}
+        ):
+            priority = 0
+        elif "standing_developmental_obligation_uncompiled" in residuals:
+            priority = 1
+        elif "continuation_state_unresolved" in residuals:
+            priority = 2
+        else:
+            priority = 3
+        key = (-len(residuals), priority, row.stream_id)
         candidates.append((key, row.stream_id, residuals))
     if not candidates:
         return None

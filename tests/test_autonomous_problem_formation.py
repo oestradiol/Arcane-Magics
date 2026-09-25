@@ -77,6 +77,75 @@ class RecompiledU2ProblemFormationTests(unittest.TestCase):
         self.assertEqual(problem.discriminator, "RESOLVE_REFERENCED_INCIDENCE")
         self.assertTrue(problem.external_return_required)
 
+
+    def test_standing_developmental_obligation_is_a_real_residual(self):
+        rows = snapshot_to_incidence(
+            (
+                WorkItem(
+                    "ISSUE", 174, "carrier title is not the problem label",
+                    updated_at="2026-09-25T16:55:00Z",
+                ),
+            ),
+            standing_carrier_key=("ISSUE", 174),
+        )
+        problem = form_problem(rows)
+        self.assertEqual(problem.disposition, "FORMED_BOUNDED_PROBLEM")
+        self.assertIn(
+            "standing_developmental_obligation_uncompiled",
+            problem.residual_coordinates,
+        )
+        self.assertEqual(
+            problem.discriminator,
+            "RECOVER_OR_REDUCE_STANDING_DEVELOPMENTAL_OBLIGATION",
+        )
+        self.assertFalse(problem.external_return_required)
+        self.assertEqual(
+            bind_problem_to_carriers(
+                problem,
+                (WorkItem("ISSUE", 174, "renamed carrier"),),
+            ),
+            (("ISSUE", 174),),
+        )
+
+    def test_standing_obligation_outranks_unknown_draft_but_not_concrete_conflict(self):
+        standing = WorkItem(
+            "ISSUE", 174, "standing carrier",
+            updated_at="2026-09-25T16:55:00Z",
+        )
+        unknown = WorkItem(
+            "PR", 132, "stale draft",
+            draft=True,
+            merge_state="UNKNOWN",
+            updated_at="2026-09-25T16:55:00Z",
+        )
+        problem = form_problem(
+            snapshot_to_incidence(
+                (unknown, standing),
+                standing_carrier_key=("ISSUE", 174),
+            )
+        )
+        self.assertIn(
+            "standing_developmental_obligation_uncompiled",
+            problem.residual_coordinates,
+        )
+
+        dirty = WorkItem(
+            "PR", 999, "concrete conflict",
+            merge_state="DIRTY",
+            updated_at="2026-09-25T16:55:00Z",
+        )
+        problem2 = form_problem(
+            snapshot_to_incidence(
+                (dirty, standing),
+                standing_carrier_key=("ISSUE", 174),
+            )
+        )
+        self.assertIn("continuation_state_unresolved", problem2.residual_coordinates)
+        self.assertNotIn(
+            "standing_developmental_obligation_uncompiled",
+            problem2.residual_coordinates,
+        )
+
     def test_no_defect_field_stops(self):
         rows = snapshot_to_incidence((
             WorkItem(

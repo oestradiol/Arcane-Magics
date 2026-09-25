@@ -32,5 +32,10 @@
   "human_may_force_next_target": false,
   "promotion_authority": false,
   "truth_authority": false,
-  "safety_floor_authority": false
+  "safety_floor_authority": false,
+  "carrier": {
+    "kind": "ISSUE",
+    "number": 174,
+    "role": "INDEX_ONLY_NOT_SOURCE_OF_TELOS"
+  }
 }
