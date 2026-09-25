@@ -34,6 +34,7 @@
     "kernel/development/autonomous_proposal.py",
     "kernel/development/autonomous_recurrence.py",
     "kernel/development/autonomous_worker.py",
+    "kernel/development/git_world_return.py",
     "kernel/development/u1_recurrence.py",
     "kernel/runtime/bounded_recurrence.py",
     "kernel/runtime/ctl.py",
