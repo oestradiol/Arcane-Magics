@@ -4,7 +4,7 @@
 
 ### religious branch · past · inhabited symbolic memory
 
-[Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) · [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · **Arcane Magics**
+[Routing / main](https://github.com/oestradiol/Arcane-Magics/tree/main) · [Religion / past](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) · [Math & logics / spirit](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Engineering / body](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva) · [Self & World / model](https://github.com/oestradiol/Arcane-Magics/tree/split/venus) · [Science / future](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe)
 
 <br>
 
@@ -114,7 +114,7 @@ An indefinite self-authorizing “servitor” is not magical success. It is just
 |---|---|
 | exact future-equivalence / statistical discriminator | [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) |
 | structural polyhedral / consciousness / QG bridge | [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) |
-| executable developmental implementation | [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) |
+| executable developmental implementation | [Minerva / engineering](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva) |
 
 Arcane may inspire them. It may not borrow their warrant.
 
@@ -137,4 +137,4 @@ If the reader can only repeat the vocabulary, Arcane has become scripture withou
 
 ---
 
-<sub>Future repository and Git organization identity: `Arcane-Magics/Arcane-Magics`.</sub>
+<sub>Current function: religion / past.</sub>
