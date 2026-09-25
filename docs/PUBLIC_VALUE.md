@@ -1,39 +1,29 @@
 # What Root / The Machine Actually Is
 
-Root is the diachronic memory and current map of the Arcane Magics repository body.
+Root is the **routing and memory layer** of the Arcane Magics repository body.
 
-It preserves how differentiated functions changed under consequence so that the next state can reconstruct both **Self** and the independence of what corrected it.
+It solves a mundane but nasty problem: how do multiple specialized functions remain one historical organism without collapsing their different standards of truth, meaning, evidence, and action into one giant soup?
 
-## Temporal division
+## It owns
+
+- the current layer map;
+- branch ancestry and cross-register merge memory;
+- handoff protocol;
+- current pointers to differentiated branch state;
+- common transformation-law routing;
+- provenance needed to reconstruct how the map changed.
+
+## It does not own
+
+- religion merely because it remembers the past;
+- science merely because it routes the future;
+- mathematics merely because it sees formal structure;
+- engineering merely because it observes CI;
+- Self merely because it stores provenance;
+- World merely because it models branches.
 
 ```text
-Root  = Past Religion + Now Map
-Venus = Scientific Future
+map != territory
+routing != authority
+memory != proof
 ```
-
-Religion here is the retained meaning/provenance of already-lived consequence. It is revisable memory, not dogma.
-
-Venus takes the current map and exposes it to tests, open bridges, experiments, and non-preauthored return.
-
-## Why Git matters
-
-```text
-same files != same trajectory
-```
-
-The Git DAG, PR ancestry, review history, and `provenance/historical/` are therefore part of the modeled diachronic Self.
-
-## Why Root needs Venus
-
-Without Venus, Root could only reinterpret its own memory. Venus preserves permeability to future consequence.
-
-## Why Venus needs Root
-
-Without Root/self-provenance, Venus cannot distinguish genuinely external correction from its own already-authored structure.
-
-## What Root does not prove
-
-- repository-level consciousness;
-- literal Lain/PoI ontology;
-- physical World identity;
-- scientific truth by historical recurrence.
