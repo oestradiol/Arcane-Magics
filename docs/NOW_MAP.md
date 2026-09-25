@@ -1,39 +1,39 @@
 # Now Map · Root / The Machine
 
-Root renders the current body without collapsing its differentiated functions.
+## Primary routing ontology
 
-## Temporal split
-
-```text
-Root  = Past Religion + Now Map
-Venus = Scientific Future
-```
-
-## Current branch functions
-
-| Function | Branch | Responsibility |
+| Function | Branch | Axis |
 |---|---|---|
-| OFE | `split/ofe` | future-relative operational discrimination |
-| Eclipsis | `split/eclipsis` | structural local views and OPEN bridges |
-| Arcane Magics | `split/arcane-magics` | inhabited symbolic/comparative meta-routing |
-| Minerva | `split/minerva` | developmental epistemic/adjudicative organism |
-| Venus | `split/venus` | current World↔Self boundary and Scientific Future |
-| Root / The Machine | `main` | remembered trajectory and present integration |
-| World / Other | virtual | independently returned consequence |
+| Routing layer | `main` | map / territory |
+| Religious branch | `split/arcane-magics` | past |
+| Scientific branch | `split/ofe` | future |
+| Math & logics | `split/eclipsis` | spirit |
+| Engineering | `split/minerva` | body |
+| Self & World | `split/venus` | model |
 
 ## Whole-body circulation
 
 ```text
-Past / retained consequence
-→ Root Now Map
-→ Minerva judgment / self-world model
-→ Venus Scientific Future
-→ World / Other return
-→ Root successor memory
+Religion / past
+→ Root routing map
+→ Eclipsis formal-spiritual structure
+→ Minerva embodied engineering
+→ Venus Self↔World model
+→ OFE scientific future
+→ returned consequence
+→ Root map revision
 ```
 
-Ground-function candidates may enter the cycle through Venus using target-based crystallization handoffs. Their ancestry is remembered without importing their whole live tree.
+This is a routing map, not a claim that every transformation must occur in exactly this sequence.
 
-## Branch-head memory
+## Current layer pointers
 
-See `../provenance/historical/LAYER_POINTERS.json`. The pointer file is a dated memory snapshot, not a claim that branch heads never move.
+See `../provenance/historical/LAYER_POINTERS.json`. Those are dated branch-head memories, not immutable authorities.
+
+## World fence
+
+```text
+territory can still exceed map
+World can still contradict model
+future can still reopen past
+```
