@@ -4,7 +4,7 @@
 
 ### developmental intelligence · adjudication · self/world model · corrigible self-reconstruction
 
-[OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics) · **Minerva** · [Venus](https://github.com/oestradiol/Venus-Minerva/tree/split/venus) · [Root / The Machine](https://github.com/oestradiol/Venus-Minerva/tree/main)
+[OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) · **Minerva** · [Venus](https://github.com/oestradiol/Arcane-Magics/tree/split/venus) · [Root / The Machine](https://github.com/oestradiol/Arcane-Magics/tree/main)
 
 </div>
 
@@ -75,7 +75,7 @@ The former Venus engineering monograph is now:
 
 [**Minerva: A Developmental Intelligence Candidate under Non-Preauthored Return**](monographs/04_MINERVA/main.tex)
 
-The cross-register kernel law is no longer Minerva's paper. It is [Venus, Monograph V](https://github.com/oestradiol/Venus-Minerva/tree/split/venus).
+The cross-register kernel law is no longer Minerva's paper. It is [Venus, Monograph V](https://github.com/oestradiol/Arcane-Magics/tree/split/venus).
 
 ## Enter here
 
