@@ -1,6 +1,6 @@
 # Start Here · OFE
 
-[Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva) · **OFE** · [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics)
+[Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) · **OFE** · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
 
 ## One sentence
 
@@ -40,6 +40,6 @@ If one is missing, the notation is probably doing theater.
 
 ## Sibling exits
 
-- executable developmental realization → [Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva)
-- polyhedral/meta-qualia/QG bridges → [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis)
-- inhabited symbolic practice → [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics)
+- executable developmental realization → [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva)
+- polyhedral/meta-qualia/QG bridges → [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis)
+- inhabited symbolic practice → [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
