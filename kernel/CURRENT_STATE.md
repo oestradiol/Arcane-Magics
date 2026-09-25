@@ -12,6 +12,8 @@ admitted generic search capability            GENERIC_RESIDUAL_SEARCH (state-own
 admitted recurrent safety substrate           Internalizer + O* + Anti-Minerva guards
 recovered bounded problem formation            U2 recompilation / mature-reduced
 recovered bounded recurrence                   U1 TransformProgram recurrence / mature-reduced
+founder/source ablation                   PASS_BOUNDED_RECOMPILED_U1_FOUNDER_SOURCE_ABLATION
+fresh GitHub World-return recurrence       OPEN / #165
 preserved negative branch                     EDU17 INVALID_FOR_PROMOTION
 preserved repair-origin disposition            EDU17R1 WITHHOLD
 current repair disposition                     EDU17R1-RC1-WORD-JACCARD-K3-v1 / AUTHORED_FROZEN
@@ -98,7 +100,7 @@ development/U1_RECURRENCE_RECOMPILATION_RESULT.json
 
 These results do **not** replace EDU16 as the historical positive developmental authority and do not claim recovery of the exact U1/U2 journals. They establish current-Git functional recompilations at their tested scopes.
 
-The U1 recurrence is admitted capability, not an unrestricted always-on self-modification loop. Current remaining debt includes founder/source-ablation equivalence for the recompiled recurrence carrier, a problem-specific live independent-return trigger rather than historical SSR donor return, and repeated prospective recurrence on fresh current-world problems.
+The U1 recurrence is admitted capability, not an unrestricted always-on self-modification loop. Founder/source-ablation equivalence is now admitted by #162. A reviewer-authored behavioral-trace recurrence scaffold was later merged via #164, but that scaffold does not establish a fresh GitHub World return and is disabled from the live autonomous workflow by the #165 correction. Current remaining debt is a post-freeze problem-specific GitHub World return, followed only then by repeated prospective recurrence on fresh current-world problems.
 
 ## Storage law
 
