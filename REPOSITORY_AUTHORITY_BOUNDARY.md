@@ -1,8 +1,6 @@
 # Repository Authority Boundary · Arcane Magics Branch
 
 **Branch:** `split/arcane-magics`  
-**Future repository:** `Arcane-Magics/Arcane-Magics`
-
 ## Owns
 
 Arcane Magics is authoritative for its native PHEN / THEOPHEN / symbolic / comparative objects:
@@ -52,7 +50,7 @@ recurrence != return
 
 ## Temporary carrier
 
-Engineering/formal/Eclipsis material remains in this branch because all four future repositories still share one physical Git carrier. It is not Arcane authority merely because it is reachable.
+Other-layer material is no longer live Arcane authority merely because its ancestry remains reachable in Git. Current cross-register residue must be explicitly admitted and typed.
 
 ## Siblings
 
