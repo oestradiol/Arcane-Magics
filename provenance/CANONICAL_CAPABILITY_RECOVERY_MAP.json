@@ -1,8 +1,8 @@
 {
   "schema": "Venus.CanonicalCapabilityRecoveryMap.v0.1",
-  "date": "2026-09-24",
+  "date": "2026-09-25",
   "rule": "Do not reimplement an earned capability until its Canonical realization is shown non-transplantable into the current Git carrier. Historical harness results remain donors unless current state/custody proves standing realization.",
-  "current_git_head": "b11690d134a25475490365a14d5945c78d383a54",
+  "current_git_head": "e8e1cb11840ca79a990c7618c288e5de65a7bdce",
   "occurrences": [
     {
       "id": "R139_RESEARCH_AGENCY",
@@ -74,7 +74,7 @@
         "generation-1 improver retention",
         "fresh nested generation-2 improved candidate discovery"
       ],
-      "persistence": "explicitly retained in current Git custody receipt as active_improver revision R206; open_ended_rsi=false",
+      "persistence": "explicitly retained in current Git custody and now routed into autonomous dependency/provenance study under R206-active custody",
       "host_dependencies": [
         "candidate source universe",
         "external evaluation",
@@ -85,8 +85,8 @@
         "generic residual search state",
         "TransformProgram repair search"
       ],
-      "disposition": "LIVE_BUT_NOT_ROUTED_IN_GIT_AUTONOMOUS_STUDY",
-      "recovery": "quick restore: bind recursive dependency/provenance traversal into current autonomous study path under current R206 custody; do not claim historical algorithm identity"
+      "disposition": "LIVE_ROUTED_BOUNDED",
+      "recovery": "completed at current functional scope: bounded recursive reference/provenance traversal is causal in autonomous study; historical byte identity remains unclaimed"
     },
     {
       "id": "U1_UNIFIED_CENTER",
@@ -102,7 +102,7 @@
         "three consequential TransformProgram self-revisions",
         "founder-ablatable isolated boot"
       ],
-      "persistence": "exact Canonical U1 standing state is not present as a named current Git checkpoint; functional descendants are distributed across current Git runtime/development artifacts",
+      "persistence": "exact Canonical U1 state is not booted, but current Git now contains an admitted bounded recurrence recompilation over state-owned TransformProgram machinery, external return, CTL/O-star admission, rollback, and fresh internal O-star rederivation",
       "host_dependencies": [
         "neutral interpreter substrate",
         "external World return",
@@ -116,8 +116,8 @@
         "EDU16-RC1",
         "autonomous worker"
       ],
-      "disposition": "STATE_RECOMPILATION_REQUIRED",
-      "recovery": "compile functional state into current carrier rather than copying journal identity; require restart, source-removal, ablation, fresh return",
+      "disposition": "RECOMPILED_BOUNDED_RECURRENCE_MATURE_REDUCED",
+      "recovery": "functional recurrence restored at bounded tested scope; exact historical journal/state identity remains unclaimed and live automatic recurrence is not yet enabled",
       "canonical_custody": {
         "path": "/Canonical/Future/Handoff/U1CurrentDevelopedVM/",
         "records": 991,
@@ -134,7 +134,7 @@
         "highest-leverage lawful candidate selection",
         "selected OPEN-DOMAIN-PROBLEM-FORMATION"
       ],
-      "persistence": "current Git autonomous worker selects from pre-existing GitHub issues/PRs rather than forming candidate problems from raw residual field",
+      "persistence": "current Git now forms bounded problems from returned repository incidence before Git carrier binding; full historical U1 queue regeneration over arbitrary residual/resource fields remains only partially recompiled",
       "host_dependencies": [
         "resource/jurisdiction boundaries",
         "World surface"
@@ -143,8 +143,8 @@
         "autonomous_worker choose_target",
         "EDU16 open-domain problem selection"
       ],
-      "disposition": "PARTIAL_REGRESSION",
-      "recovery": "next nontrivial target: restore unlabeled problem formation before target selection"
+      "disposition": "PARTIALLY_RECOMPILED_PROBLEM_FIRST_ROUTING",
+      "recovery": "problem-first routing restored through admitted U2 recompilation; broader U1 scheduler equivalence remains unclaimed"
     },
     {
       "id": "U2_UNLABELED_PROBLEM_FORMATION",
@@ -159,7 +159,7 @@
         "renamed-field transfer",
         "STOP on no-defect world"
       ],
-      "persistence": "law/provenance retained in Git; exact U2 standing state not booted by current Git autonomy",
+      "persistence": "functionally recompiled and admitted on current Git: neutral returned repository incidence can form a bounded problem before issue/PR carrier binding, preserve STOP/WITHHOLD/external-return distinctions, and pass history/reference ablations with mature comparator reduction",
       "host_dependencies": [
         "opaque stream interface",
         "relational/history grammar",
@@ -170,8 +170,8 @@
         "EDU16 research-question formation",
         "autonomous target study/proposal"
       ],
-      "disposition": "NEXT_STATE_RECOMPILATION_TARGET",
-      "recovery": "build current-Git problem-field layer before issue/PR target selection; require no target labels, rival/discriminator causality, external-return narrowing, STOP control, mature comparator",
+      "disposition": "RECOMPILED_BOUNDED_MATURE_REDUCED",
+      "recovery": "completed at declared Git-repository incidence scope; historical U2 journal identity and general heterogeneous-stream equivalence remain unclaimed",
       "canonical_custody": {
         "path": "/Canonical/Future/Handoff/U2CurrentDevelopedVM/",
         "records": 1011,
@@ -253,7 +253,7 @@
         "research-obligation routing",
         "World-feed sampling/query policy"
       ],
-      "persistence": "EDU16-RC1 current reconstructed parent, not original event-level replay",
+      "persistence": "EDU16-RC1 remains the reconstructed parent and autonomous cycles now bind its exact carrier/digest and admitted owned capability set before claiming continuity",
       "host_dependencies": [
         "World interface execution",
         "independent evaluation",
@@ -263,22 +263,25 @@
         "autonomous worker target selection/study",
         "autonomous proposal/evidence"
       ],
-      "disposition": "LIVE_CLAIM_STATE_BUT_AUTONOMY_PROVENANCE_UNBOUND",
-      "recovery": "quick restore: bind every autonomous cycle to exact EDU16-RC1 reconstructed parent/capability set"
+      "disposition": "LIVE_BOUND_TO_AUTONOMY",
+      "recovery": "completed at current custody scope"
     },
     {
       "id": "CURRENT_GIT_AUTONOMY",
       "canonical_realization": "new GitHub carrier, not identical to Canonical U1/U2",
       "earned": [
         "live issue/PR snapshot",
-        "bounded target selection",
+        "bounded pre-target problem formation from neutral repository incidence",
+        "post-formation carrier binding",
+        "R206-gated recursive dependency/provenance study",
         "teacher-free internal O* routing",
         "method learning from authorized external return",
         "fixed local evidence checks",
         "change disposition",
-        "draft-only carrier"
+        "draft-only carrier",
+        "admitted bounded U1-style TransformProgram recurrence capability under external return and governance"
       ],
-      "persistence": "live GitHub Actions worker",
+      "persistence": "live GitHub worker plus admitted bounded recurrence capability; recurrence is not automatically invoked without a lawful formed problem/external-return episode",
       "host_dependencies": [
         "GitHub Actions",
         "safe check catalog",
@@ -287,16 +290,19 @@
         "issue/PR target field"
       ],
       "current_git_descendants": [],
-      "disposition": "LIVE_BOUNDED_AUTONOMY",
-      "recovery": "use as carrier into which earlier earned functions are recompiled; do not call it historical U1/U2"
+      "disposition": "LIVE_BOUNDED_AUTONOMY_PLUS_ADMITTED_RECURRENCE_CAPABILITY",
+      "recovery": "current carrier now contains the recovered bounded functions through U1-style recurrence while keeping external return/admission/promotion non-self"
     }
   ],
   "recovery_order": [
-    "bind EDU16-RC1 parent/capability custody into autonomous cycle",
-    "restore R206-style recursive dependency/provenance traversal in study",
-    "recompile U2 unlabeled problem formation before Git issue/PR target selection",
-    "recompile U1 state-owned research/TransformProgram recurrence around that problem field",
-    "retest founder/source ablation and recurrent O* after machinery change"
+    "COMPLETED: bind EDU16-RC1 parent/capability custody into autonomous cycle",
+    "COMPLETED: restore R206-style recursive dependency/provenance traversal in study",
+    "COMPLETED: recompile U2 unlabeled problem formation before Git issue/PR target selection",
+    "COMPLETED: recompile bounded U1 state-owned TransformProgram recurrence around a formed problem",
+    "COMPLETED: require fresh internal O-star rederivation after the machinery change",
+    "REMAINING: founder/source-ablation equivalence for the recompiled U1 recurrence carrier",
+    "REMAINING: lawful live recurrence trigger from problem-specific independent return rather than historical SSR donor return",
+    "REMAINING: repeated prospective recurrence on fresh current-world problems before any stronger Strong-RSI claim"
   ],
   "claim_fence": {
     "historical_identity_recovered": false,
