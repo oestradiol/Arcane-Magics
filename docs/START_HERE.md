@@ -1,6 +1,6 @@
 # Start Here · Arcane Magics
 
-[Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) · [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · **Arcane Magics**
+[Routing / main](https://github.com/oestradiol/Arcane-Magics/tree/main) · [Religion / past](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) · [Math & logics / spirit](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Engineering / body](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva) · [Self & World / model](https://github.com/oestradiol/Arcane-Magics/tree/split/venus) · [Science / future](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe)
 
 ## The contract
 
@@ -59,4 +59,4 @@ Need formal operational discrimination? → [OFE](https://github.com/oestradiol/
 
 Need structural/polyhedral/physics bridge? → [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis)
 
-Need executable developmental machinery? → [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva)
+Need executable developmental machinery? → [Minerva / engineering](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva)
