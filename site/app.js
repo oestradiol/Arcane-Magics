@@ -22,7 +22,7 @@
 
     document.querySelectorAll('[data-perspective]').forEach(button => {
       const selected = button.dataset.perspective === id;
-      button.setAttribute('aria-selected', selected ? 'true' : 'false');
+      button.setAttribute('aria-pressed', selected ? 'true' : 'false');
       button.tabIndex = selected ? 0 : -1;
     });
 
