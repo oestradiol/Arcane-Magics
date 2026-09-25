@@ -28,3 +28,7 @@ SHA256SUMS
 *.pyc
 __pycache__/
 .pytest_cache/
+
+# IMPORTANT:
+# sibling branch memory is NOT ignored.
+# Cross-register history belongs in Git ancestry and provenance/historical/.
