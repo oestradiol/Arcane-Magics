@@ -6,3 +6,6 @@ Engineering / developmental projection. Exact Git-reconstructible runtime checkp
 Current repository infrastructure additionally includes a state-owned inherited generic residual-search capability and executable Internalizer/O*/Anti-Minerva guards. These are later engineering/governance admissions, not a replacement developmental head and not a substantive EDU17R1 repair.
 
 A prospective learner-side repair candidate, `EDU17R1-RC1-WORD-JACCARD-K3-v1`, is now `AUTHORED_FROZEN` with an ownership receipt and hidden evaluation still unexposed. This is a bounded authorship result below developmental promotion; sealed #31 efficacy remains open.
+
+
+The engineering monograph now makes the **returnable local-center** law explicit: Venus may stabilize enough to act, but correction-bearing return must remain independently reachable and source/authorship/jurisdiction distinctions must survive the update. No quantum, cosmological, consciousness, or global-agent claim is inherited.
