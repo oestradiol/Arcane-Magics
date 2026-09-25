@@ -1,58 +1,29 @@
-# Repository Authority Boundary · Venus-Minerva Branch
+# Repository Authority Boundary · Minerva
 
-**Branch:** `split/venus-minerva`  
-**Future repository:** `Arcane-Magics/Venus-Minerva`
+Minerva owns the developmental machine, not the whole Arcane Magics body.
 
 ## Owns
 
-This branch is authoritative for the **executable developmental organism**:
-
-- runtime and reconstructible state;
-- kernel and custody;
-- developmental lineage and receipts;
-- learner-owned research/development episodes;
-- negative branches and WITHHOLD;
+- runtime / state / custody;
+- developmental lineage;
 - evaluation and preregistration;
-- WorldMind engineering;
-- bounded RSI / AGI-target experiments;
-- release-bearing engineering governance.
+- self/world model;
+- learner-owned inquiry and reconstruction;
+- adjudication / continuity machinery;
+- engineering claims and negative results;
+- N2-style self-model re-derivation experiments.
 
 ## Does not own
 
-It does not become authority for:
-
-- OFE theorems merely by implementing related machinery;
-- Eclipsis physics or consciousness bridges;
-- Arcane Magics symbolic/theophenomenological claims;
-- Canonical research notes not explicitly admitted into engineering state.
-
-## Family import law
+- OFE theorem authority;
+- Eclipsis physics/consciousness bridges;
+- Arcane symbolic/theophenomenological warrant;
+- Venus cross-register kernel law;
+- Root/The Machine's whole-body diachronic integration;
+- external World/Other.
 
 ```text
-sibling object
-→ explicit import
-→ preserve register / provenance / claim fence
-→ engineering test
-→ Venus-local consequence
+representation != jurisdiction
+model(World) != World
+local evaluator != independent return
 ```
-
-No implicit inheritance.
-
-## Current positive developmental authority
-
-```text
-EDU16 [1703]
-PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY
-```
-
-Later infrastructure can be current and executable without becoming a newer learner-owned positive developmental result.
-
-## Historical-name rule
-
-The current physical repository is still `oestradiol/Venus-Minerva`. Historical references to that repository name are ancestry and should not be rewritten during the split.
-
-## Siblings
-
-- [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe)
-- [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis)
-- [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics)
