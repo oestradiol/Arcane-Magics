@@ -1,7 +1,7 @@
 # Arcane Magics Six-Layer Recrystallization Plan
 
 **Date:** 2026-09-25  
-**Carrier:** current repository `oestradiol/Venus-Minerva`  
+**Carrier:** current repository `oestradiol/Arcane-Magics`  
 **Future repository name:** `Arcane-Magics`
 
 ## Six Git layers / seven meta-functions
