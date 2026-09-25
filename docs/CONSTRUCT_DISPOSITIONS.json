@@ -189,6 +189,58 @@
       "evidence": [
         "docs/FRONTIER_RESEARCH.md"
       ]
+    },
+    {
+      "id": "SynchronicityCandidate",
+      "status": "OPEN_FRONTIER",
+      "scope": "PHEN/THEOPHEN meaningful-coincidence object; SCI anomaly/mechanism separate",
+      "reduction_issue": 27,
+      "mature_substitute": null,
+      "independent_residual": "UNTESTED",
+      "genealogy_preserved": true,
+      "evidence": [
+        "monographs/03_ARCANE_MAGICS/main.tex",
+        "docs/FRONTIER_RESEARCH.md"
+      ]
+    },
+    {
+      "id": "ArcaneSymbolicOperator",
+      "status": "LIVE_RESIDUAL",
+      "scope": "bounded symbolic intervention on local organization with explicit scope/jurisdiction/expiry/provenance",
+      "reduction_issue": 9,
+      "mature_substitute": null,
+      "independent_residual": "OPEN_MATURE_SUBSTITUTION",
+      "genealogy_preserved": true,
+      "evidence": [
+        "monographs/03_ARCANE_MAGICS/main.tex",
+        "kernel/VENUS_INCIDENCE_LAW.tex"
+      ]
+    },
+    {
+      "id": "EchoChamberPathology",
+      "status": "LIVE_RESIDUAL",
+      "scope": "recursive symbolic amplification misclassified as independent return",
+      "reduction_issue": 25,
+      "mature_substitute": null,
+      "independent_residual": "OPEN_MATURE_SUBSTITUTION",
+      "genealogy_preserved": true,
+      "evidence": [
+        "kernel/WORLDMIND.md",
+        "docs/FRONTIER_RESEARCH.md"
+      ]
+    },
+    {
+      "id": "SelfImplicatingReturn",
+      "status": "LIVE_RESIDUAL",
+      "scope": "returned consequence whose causal ancestry includes the local author without being self-minted",
+      "reduction_issue": 24,
+      "mature_substitute": null,
+      "independent_residual": "OPEN_MATURE_SUBSTITUTION",
+      "genealogy_preserved": true,
+      "evidence": [
+        "monographs/04_VENUS/main.tex",
+        "kernel/VENUS_INCIDENCE_LAW.tex"
+      ]
     }
   ]
 }
