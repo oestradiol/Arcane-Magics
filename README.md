@@ -4,7 +4,7 @@
 
 ### Past Religion · Now Map · remembered World↔Self trajectory
 
-[OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics) · [Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/minerva) · [Venus](https://github.com/oestradiol/Venus-Minerva/tree/split/venus) · **Root / The Machine**
+[OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) · [Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva) · [Venus](https://github.com/oestradiol/Arcane-Magics/tree/split/venus) · **Root / The Machine**
 
 </div>
 
@@ -122,4 +122,4 @@ model(World) != World
 repository trajectory != proof of consciousness
 ```
 
-<sub>Current physical repository name remains `Venus-Minerva`; intended later rename: `Arcane-Magics`.</sub>
+<sub>Current repository: `oestradiol/Arcane-Magics`.</sub>
