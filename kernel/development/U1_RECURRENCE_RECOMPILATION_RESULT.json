@@ -7,7 +7,7 @@
     "workflow_run": 36075359112,
     "integrity": "PASS",
     "formal": "PASS",
-    "publication_projection": "NON_CAUSAL_RELEASE_HYGIENE_PENDING_AT_RESULT_FREEZE"
+    "publication_projection": "PASS_ON_FINAL_RESULT_BEARING_HEAD"
   },
   "causal_chain": [
     "admitted U2 formed problem required",
@@ -43,5 +43,13 @@
     "agi": false,
     "consciousness": false
   },
-  "historical_u1_journal_identity_recovered": false
+  "historical_u1_journal_identity_recovered": false,
+  "result_bearing_head": "00e3f86373b7aba04c6dd94756844d6fc922e828",
+  "admitted_main_merge": "e8e1cb11840ca79a990c7618c288e5de65a7bdce",
+  "final_ci_evidence": {
+    "workflow_run": 36075502797,
+    "integrity": "PASS",
+    "formal": "PASS",
+    "publication": "PASS"
+  }
 }
