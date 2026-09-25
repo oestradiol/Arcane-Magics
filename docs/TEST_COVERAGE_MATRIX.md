@@ -92,3 +92,8 @@ An issue is not “covered” because this table names it. Coverage requires an 
 
 
 | #174 standing Canonical developmental obligation | T3/T5 | `CANONICAL_TELIC_RECOVERY_BOOTSTRAP.json` + U2-style problem formation | make the prefrozen standing obligation causally visible without forcing a downstream issue; require stale UNKNOWN drafts not to dominate while concrete conflicts may preempt | bounded formed problem with carrier index only, no promotion/truth authority, and preserved external correction |
+
+
+| #178 target-related bounded REPRODUCTION extraction | T3/T5 | historical PR #132 preserved as provenance; fresh issue carries only mechanism debt | re-derive current-parent target-ranked fixed unittest execution with scrubbed environment and local-receipt boundary | donor/target text cannot author command/path/env; local execution != independent return |
+| #179 autonomous agency-provenance extraction | T3/T5 | historical PR #151 preserved as provenance; fresh issue carries only accounting debt | re-derive minimal current-parent agency receipt if still consequential | selected target != authored machinery; carrier action != reasoning; no promotion/truth authority |
+| standing developmental orientation | T3/T5/T6 | `CANONICAL_TELIC_RECOVERY_BOOTSTRAP.json` v0.2 | when no higher-priority returned defect exists, form a standing developmental problem over current open carriers; concrete DIRTY/BLOCKED/CONFLICTING still preempt | autonomous target selection continues without fixed human target and without converting local STOP into telos discharge |

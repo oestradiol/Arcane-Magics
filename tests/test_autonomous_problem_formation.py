@@ -147,6 +147,59 @@ class RecompiledU2ProblemFormationTests(unittest.TestCase):
             problem2.residual_coordinates,
         )
 
+    def test_active_standing_orientation_opens_current_developmental_carriers(self):
+        items = (
+            WorkItem(
+                "ISSUE", 72, "candidate A",
+                updated_at="2026-09-25T17:00:00Z",
+            ),
+            WorkItem(
+                "ISSUE", 73, "candidate B",
+                updated_at="2026-09-25T17:00:00Z",
+            ),
+        )
+        rows = snapshot_to_incidence(items)
+        problem = form_problem(rows, standing_orientation_active=True)
+        self.assertEqual(
+            problem.disposition,
+            "FORMED_STANDING_DEVELOPMENTAL_PROBLEM",
+        )
+        self.assertEqual(
+            problem.residual_coordinates,
+            ("standing_developmental_orientation_active",),
+        )
+        self.assertEqual(
+            problem.discriminator,
+            "SELECT_CONSEQUENTIAL_DEVELOPMENTAL_LIMITATION",
+        )
+        self.assertEqual(
+            set(bind_problem_to_carriers(problem, items)),
+            {("ISSUE", 72), ("ISSUE", 73)},
+        )
+        self.assertFalse(problem.promotion_authority)
+
+    def test_concrete_returned_defect_preempts_standing_orientation(self):
+        items = (
+            WorkItem(
+                "PR", 999, "concrete",
+                merge_state="DIRTY",
+                updated_at="2026-09-25T17:00:00Z",
+            ),
+            WorkItem(
+                "ISSUE", 72, "developmental candidate",
+                updated_at="2026-09-25T17:00:00Z",
+            ),
+        )
+        problem = form_problem(
+            snapshot_to_incidence(items),
+            standing_orientation_active=True,
+        )
+        self.assertIn("continuation_state_unresolved", problem.residual_coordinates)
+        self.assertEqual(
+            bind_problem_to_carriers(problem, items),
+            (("PR", 999),),
+        )
+
     def test_no_defect_field_stops(self):
         rows = snapshot_to_incidence((
             WorkItem(

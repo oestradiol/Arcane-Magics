@@ -1,7 +1,7 @@
 {
-  "schema": "Venus.CanonicalTelicRecoveryBootstrap.v0.1",
+  "schema": "Venus.CanonicalTelicRecoveryBootstrap.v0.2",
   "date": "2026-09-25",
-  "status": "PREFROZEN_RECOVERY_OBLIGATION",
+  "status": "ACTIVE_STANDING_ORIENTATION",
   "source_register": "PRE_GIT_CANONICAL",
   "standing_orientation": {
     "user_authored_telos": "Telos(Humanity)=AGI",
@@ -33,9 +33,10 @@
   "promotion_authority": false,
   "truth_authority": false,
   "safety_floor_authority": false,
-  "carrier": {
+  "bootstrap_carrier_history": {
     "kind": "ISSUE",
     "number": 174,
     "role": "INDEX_ONLY_NOT_SOURCE_OF_TELOS"
-  }
+  },
+  "selection_rule": "WHEN_NO_HIGHER_PRIORITY_RETURNED_DEFECT, OPEN_CURRENT_DEVELOPMENTAL_CARRIERS_TO_LEARNER_SIDE_SELECTION"
 }

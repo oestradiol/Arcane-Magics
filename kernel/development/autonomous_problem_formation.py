@@ -145,10 +145,12 @@ def form_problem(
     *,
     history_grammar_available: bool = True,
     reference_closure_available: bool = True,
+    standing_orientation_active: bool = False,
 ) -> FormedProblem:
     """Form one bounded problem from returned incidence without a target label."""
+    row_tuple = tuple(rows)
     candidates: list[tuple[tuple[int, int, str], RepositoryIncidenceRow, tuple[str, ...]]] = []
-    for row in rows:
+    for row in row_tuple:
         residuals = _row_residuals(row)
         if not residuals:
             continue
@@ -170,6 +172,45 @@ def form_problem(
         candidates.append((key, row, residuals))
 
     if not candidates:
+        open_streams = tuple(sorted(
+            row.stream_id for row in row_tuple if row.open_state
+        ))
+        if standing_orientation_active and open_streams:
+            rivals = (
+                ProblemRival(
+                    "r0",
+                    "one currently reachable developmental carrier contains a consequential limitation worth studying",
+                ),
+                ProblemRival(
+                    "r1",
+                    "none of the currently reachable carriers clears the learner-side threshold for consequential development",
+                ),
+            )
+            body = {
+                "schema": "Venus.RecompiledProblemFormation.v0.3",
+                "disposition": "FORMED_STANDING_DEVELOPMENTAL_PROBLEM",
+                "source_stream_ids": open_streams,
+                "residual_coordinates": (
+                    "standing_developmental_orientation_active",
+                ),
+                "rivals": tuple(asdict(x) for x in rivals),
+                "discriminator": "SELECT_CONSEQUENTIAL_DEVELOPMENTAL_LIMITATION",
+                "external_return_required": False,
+                "carrier_binding_authority": False,
+                "promotion_authority": False,
+            }
+            return FormedProblem(
+                schema=body["schema"],
+                problem_id=digest(body),
+                disposition=body["disposition"],
+                source_stream_ids=body["source_stream_ids"],
+                residual_coordinates=body["residual_coordinates"],
+                rivals=rivals,
+                discriminator=body["discriminator"],
+                external_return_required=False,
+                carrier_binding_authority=False,
+                promotion_authority=False,
+            )
         body = {
             "schema": "Venus.RecompiledProblemFormation.v0.2",
             "disposition": "STOP_NO_CONSEQUENTIAL_RESIDUAL",
