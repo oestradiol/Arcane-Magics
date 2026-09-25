@@ -1,28 +1,50 @@
-name: OFE formal / operational CI
+name: OFE scientific future gate
+
 on:
+  pull_request:
+    branches: [split/ofe]
   push:
     branches: [split/ofe]
   workflow_dispatch:
+
 permissions:
   contents: read
+  pull-requests: read
+
 jobs:
-  ofe:
+  scientific-future:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Claim-surface checks
+
+      - name: Require Venus crystallization for cross-layer PR
+        if: github.event_name == 'pull_request'
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          case "$HEAD_REF" in
+            handoff/venus-to-ofe/*|ofe/*) ;;
+            *) echo "OFE accepts cross-layer work through handoff/venus-to-ofe/*"; exit 1 ;;
+          esac
+
+      - name: Operational / scientific checks
         run: |
           python scripts/audit_proof_containers.py
           python scripts/lint_github_markdown.py
+          grep -q 'Scientific branch' docs/LAYER_IDENTITY.md
+
       - name: Install Lean
         run: |
           curl https://elan.lean-lang.org/elan-init.sh -sSf | sh -s -- -y --default-toolchain leanprover/lean4:v4.34.0
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
       - name: Machine-check formal core
         run: cd formal/lean && lake build
+
       - name: Build OFE monograph
         run: |
           sudo apt-get update
@@ -30,3 +52,6 @@ jobs:
           cd monographs/01_OFE
           pdflatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
           pdflatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
+
+      - name: Future remains open to return
+        run: echo 'FORMAL_PASS != empirical return != Root routing admission'
