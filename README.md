@@ -4,97 +4,67 @@
 
 ### Self & World · model · permeable boundary
 
-[OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) · [Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva) · **Venus** · [Root / The Machine](https://github.com/oestradiol/Arcane-Magics/tree/main)
+[Religion / past](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) · [Math & logics / spirit](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Engineering / body](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva) · **Self & World / model** · [Science / future](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Routing / main](https://github.com/oestradiol/Arcane-Magics/tree/main)
 
 </div>
 
-> **Venus is the future-facing scientific boundary of the repository.**
-> It takes the current Root/Minerva map, opens it to experiment and independently returned consequence, and returns only typed Residual/CONSUME/WITHHOLD information to the next Root state.
+> **Venus is the Self & World model of the Arcane Magics body.**
+> It carries the permeable relation between what the system can reconstruct as Self and what remains capable of returning as irreducible Other.
 
-## Temporal role
-
-```text
-Root / The Machine
-= Past Religion + Now Map
-
-Venus
-= Scientific Future
-```
-
-Root remembers what has already become consequential. Venus tests what may lawfully become next.
-
-## World / Other ↔ Self
-
-Venus is not only an outward bridge. The boundary is relational:
+## Core relation
 
 ```text
 Self provenance
-+ current kernel state
-→ type what counts as already-authored Self
-→ preserve irreducible Other / external return
-→ test / enact
-→ receive consequence
-→ Residual / WITHHOLD / reconstruction
-```
-
-Therefore Venus must retain both **kernel** and **self-provenance**. Without the first it has no lawful boundary; without the second it cannot distinguish external return from its own ancestry.
-
-## Core law
-
-```text
-returnable local closure
-+ corrigibly permeable boundary
-+ open bridge
-+ non-preauthored return
-+ future-separating Residual
-+ reachable reopening
++ kernel boundary
++ current World model
+↔ irreducible Other
 ```
 
 ```text
-relation without fusion
-+ boundary without isolation
+model(World) != World
+model(Other) != Other
+prediction(Other) != return(Other)
 ```
 
-## Merge target
-
-Ground-function work normally enters Venus before Root:
+## Functional position
 
 ```text
-OFE / Eclipsis / Arcane / Minerva
-→ PR into split/venus
-→ future-facing CI / experiment / discriminator
-→ typed returned consequence
-→ PR split/venus -> main
-→ Root historical memory / Now Map update
+Eclipsis / spirit
+→ Minerva / body
+→ Venus / Self & World model
+→ OFE / scientific future
+→ Root / routing map
 ```
-
-Venus does not promote its own execution as evidence.
 
 ## Monograph V
 
 [Monograph V: Venus](monographs/05_VENUS/main.tex) is the publication projection of [kernel/VENUS_INCIDENCE_LAW.tex](kernel/VENUS_INCIDENCE_LAW.tex).
 
+The kernel remains constitutional/runtime authority. The monograph is its explanatory projection.
+
+## Why self-provenance matters
+
 ```text
-kernel law = constitutional/runtime source
-monograph V = explanatory/publication projection
+kernel without self-provenance
+-> cannot type what is already Self-authored
+
+self-provenance without permeable boundary
+-> model becomes self-sealing
 ```
 
-## Scientific Future interface
+## Enter here
 
-| Task | Surface |
-|---|---|
-| current kernel law | [kernel/VENUS_INCIDENCE_LAW.tex](kernel/VENUS_INCIDENCE_LAW.tex) |
-| trust / Other boundary | [kernel/TRUST_BOUNDARY.md](kernel/TRUST_BOUNDARY.md) |
-| remembered branch return | [provenance/historical/BRANCH_MEMORY.md](provenance/historical/BRANCH_MEMORY.md) |
-| Scientific Future contract | [docs/SCIENTIFIC_FUTURE.md](docs/SCIENTIFIC_FUTURE.md) |
-| whole-body memory | [Root / The Machine](https://github.com/oestradiol/Arcane-Magics/tree/main) |
+- [Self & World model](docs/SELF_WORLD_MODEL.md)
+- [Kernel law](kernel/VENUS_INCIDENCE_LAW.tex)
+- [Trust boundary](kernel/TRUST_BOUNDARY.md)
+- [Cross-register handoff](docs/CROSS_REGISTER_HANDOFF.md)
+- [Branch memory](provenance/historical/BRANCH_MEMORY.md)
 
 ## Noncollapse
 
 ```text
-prediction != return
-execution != verification
-model(Other) != Other
+Self model != Self totality
+World model != World
 open bridge != established mechanism
-future candidate != Root memory
+returned consequence != prediction
 ```
