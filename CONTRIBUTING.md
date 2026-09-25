@@ -42,6 +42,6 @@ Do not:
 
 ## Sibling routing
 
-Engineering realization → [Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva)  
-Structural/QG bridge → [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis)  
-Symbolic/inhabited interpretation → [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics)
+Engineering realization → [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva)  
+Structural/QG bridge → [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis)  
+Symbolic/inhabited interpretation → [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
