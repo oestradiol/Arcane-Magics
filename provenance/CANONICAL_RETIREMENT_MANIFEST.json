@@ -110,6 +110,12 @@
       "class": "RECONSTRUCTED_CLAIM_BEARING_CARRIER",
       "git_owner": "kernel/development/EDU16_RECONSTRUCTED_CARRIER_MANIFEST.json; kernel/development/replay_edu16_reconstructed.py",
       "note": "Deterministic reconstruction of admitted EDU16 claim-bearing state over IG10; not recovery of original 1703-event runner/journal."
+    },
+    {
+      "surface": "/Canonical/Future/MetaTheory/QUANTUM_SUPERPOSITION_RLC_BRIDGE_2026-09-25.md",
+      "class": "OPEN_THEO_MODEL_PHYS_BRIDGE",
+      "git_owner": "docs/META_DYNAMICS.md; monographs/02_ECLIPSIS/main.tex; docs/FRONTIER_RESEARCH.md",
+      "note": "carrier-neutral returnable-closure residue admitted; VR/TO quantum-superposition and Observable-Universe physical identity remain OPEN / WITHHOLD"
     }
   ],
   "open_obligations": [
