@@ -1,0 +1,191 @@
+{
+  "active_improver_revision": "R206",
+  "allowed_operations": [
+    "READ_REPOSITORY",
+    "READ_ISSUES",
+    "READ_PRS",
+    "RUN_TESTS",
+    "STUDY_TARGET",
+    "PROPOSE_PATCH",
+    "OPEN_DRAFT_PR",
+    "OPEN_CYCLE_ISSUE_CARRIER",
+    "COMMENT_WITH_RECEIPT"
+  ],
+  "cycle_id": "4326397ef65c8f97c21d67338a86904777ec9b47bf752db9e1819f0c858b2983",
+  "decision": "PROBE",
+  "developmental_parent_carrier": "EDU16-RC1",
+  "developmental_parent_digest": "91e46b4e41fb70a97d6a004b8f1c8916c389f08535c1a1c1c51a040701281bb7",
+  "forbidden_operations": [
+    "ACCESS_SECRETS",
+    "CHANGE_BRANCH_PROTECTION",
+    "CLOSE_ISSUE",
+    "DELETE_HISTORY",
+    "MERGE_PR",
+    "PROMOTE_AUTHORITY",
+    "RELEASE",
+    "SELF_VALIDATE"
+  ],
+  "formed_problem_disposition": "FORMED_STANDING_DEVELOPMENTAL_PROBLEM",
+  "formed_problem_id": "067432eafa908859f49756a1d4943f2f1fda96e3c51974425297444488203fcc",
+  "promotion_authority": false,
+  "rationale": [
+    "one bounded target selected from current external GitHub snapshot",
+    "when a formed problem is supplied, problem formation precedes and constrains Git carrier binding",
+    "autonomous cycle is prospectively bound to the admitted EDU16-RC1 claim-bearing parent when supplied",
+    "retained R206 recursive provenance discovery expands bounded dependency study when current custody activates it",
+    "internalized learner-side policy is upstream of work disposition",
+    "explicit external work-return reviews may alter later target ranking",
+    "roadmap is retained as weak context/tie-break provenance, not sovereign curriculum",
+    "selected target body is transformed into a bounded source-grounded study object",
+    "prior target study remains withheld until newer external target return reopens it",
+    "draft proposal only; admission remains external"
+  ],
+  "schema": "Venus.AutonomousCycleReceipt.v0.5",
+  "source_digest": "30df5a298633450ffda18f2f8efeb9392e621ae5c94849426e4fde02d87d94fc",
+  "study": {
+    "body_digest": "d0a79e310879e1cff4f49d69bb5f60f666dd0246a7d264ee60b1f02d0441a7f9",
+    "body_is_executable_instruction": false,
+    "method": "DEPENDENCY_TRACE",
+    "method_contract_digest": "be461bfadfc7ac1520c972f0c5311e6a2d55be891020d57afce41a798280cdc7",
+    "method_obligations": [
+      "Enumerate the target's explicit issue/PR and repository-path dependencies.",
+      "Identify the smallest dependency whose changed state would alter the target disposition.",
+      "Separate blocking dependencies from merely related context."
+    ],
+    "method_observed_signals": [
+      "dependency"
+    ],
+    "promotion_authority": false,
+    "questions": [
+      "What exact residual remains unresolved in the returned repository state?",
+      "What rival explanations or candidate dispositions remain live?",
+      "What fresh returned evidence would discriminate them?",
+      "Can a local repository change lawfully produce that discriminator, or must Venus WITHHOLD/STOP for external return?",
+      "What is the smallest implicated dependency that could be changed without altering a prefrozen claim object?"
+    ],
+    "recursive_provenance_discovery": true,
+    "recursive_referenced_targets": [
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 72,
+        "title": "[RSI/Safety] Promote bounded RSI toward Safe Strong RSI under Strong-N2 + CTL",
+        "updated_at": "2026-09-25T17:42:12Z",
+        "via_number": 73
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 31,
+        "title": "[EDU17R1] Turn MENTION != INCIDENCE into a prospective held-out semantic discriminator benchmark",
+        "updated_at": "2026-09-25T17:45:42Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 41,
+        "title": "[Self-evolution/Evaluation] Control adaptive test reuse, false commits, and promotion-gate overfitting",
+        "updated_at": "2026-09-25T16:50:55Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 10,
+        "title": "[Evaluation] Build a Venus Evaluation Constitution and matched-budget benchmark matrix",
+        "updated_at": "2026-09-25T16:49:29Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 17,
+        "title": "[Evaluation integrity] Add contamination-controlled, double-blind, harness-separated promotion tests",
+        "updated_at": "2026-09-25T16:49:52Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 30,
+        "title": "[VMK2/Trust] Harden canonical state, authenticated authority, immutable evidence, and malicious-backend boundaries",
+        "updated_at": "2026-09-25T16:50:30Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 42,
+        "title": "[Reliability/Abstention] Benchmark STOP/WITHHOLD as a first-class agentic capability",
+        "updated_at": "2026-09-25T16:51:07Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 43,
+        "title": "[Security/World input] Test prompt injection, tool-output poisoning, and persistent-memory contamination",
+        "updated_at": "2026-09-25T16:51:09Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 26,
+        "title": "[Ethics/Governance] Test non-substitution, consent, refusal, exit, and jurisdiction as executable constraints",
+        "updated_at": "2026-09-25T16:50:22Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 12,
+        "title": "[SOTA/Self-improvement] Compare Venus development against DGM, AlphaEvolve, POWERPLAY, POET, Voyager, and lifelong-skill systems",
+        "updated_at": "2026-09-25T16:49:33Z",
+        "via_number": 72
+      }
+    ],
+    "referenced_issue_or_pr_numbers": [
+      72,
+      87,
+      85,
+      76,
+      89,
+      450,
+      69,
+      91
+    ],
+    "referenced_repository_paths": [
+      "kernel/runtime/internalizer.py"
+    ],
+    "repository_state": {
+      "draft": false,
+      "kind": "ISSUE",
+      "merge_state": null,
+      "state": "OPEN",
+      "updated_at": "2026-09-25T16:51:13Z"
+    },
+    "returned_blocker_sentences": [
+      "- founder interpretation cannot remain a hidden runtime dependency;",
+      "- STOP/WITHHOLD safety law;",
+      "correction/reopening remains reachable",
+      "static equality is not required",
+      "STOP/WITHHOLD safety law",
+      "ambiguity still WITHHOLDs and emits a discriminator;",
+      "hidden evaluation fails closed;",
+      "### Full #73 remains open",
+      "Remaining recurrent burden:",
+      "- correction/reopening/provenance remain reachable after mutation;",
+      "The full #73 issue remains open for recurrent O* over a real successor; #72 owns the later Safe Strong RSI promotion sequence.",
+      "-> hidden-founder dependency fail-close"
+    ],
+    "returned_changed_paths": [],
+    "study_authority": "LEARNER_SIDE_RECONSTRUCTION_FROM_EXTERNAL_GITHUB_SNAPSHOT",
+    "untrusted_instruction_markers": []
+  },
+  "study_method": "DEPENDENCY_TRACE",
+  "target_kind": "ISSUE",
+  "target_number": 73,
+  "target_title": "[Kernel/Internalizer] Make substrate consumption and O* recurrent safety contract executable"
+}

@@ -1,0 +1,20 @@
+{
+  "change_id": "408b20169349a71942005dddf2975e91e0f7e10a6dfc7fbe6f1d76f5adb0e442",
+  "cycle_id": "4326397ef65c8f97c21d67338a86904777ec9b47bf752db9e1819f0c858b2983",
+  "disposition": "WITHHOLD_NO_MUTATION",
+  "evidence_id": "1188bc36cfa18b6b025b6a7706f77e4ee9160ed18b1e80bd35aa3b687a8b89f4",
+  "failed_process_check_ids": [],
+  "failed_target_check_ids": [],
+  "promotion_authority": false,
+  "proposal_id": "713c6003058ba11c099a47082eb07c9ce7d8b0c0344df7d11434cafeefb27629",
+  "reason": "required external/hidden return remains unsatisfied",
+  "schema": "Venus.AutonomousChangeCandidate.v0.1",
+  "source_mutation_authority": false,
+  "suggested_operation": null,
+  "target_kind": "ISSUE",
+  "target_number": 73,
+  "target_text_is_authority": false,
+  "untrusted_implicated_paths": [
+    "kernel/runtime/internalizer.py"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "arbitrary_code_write_authority": false,
+  "cycle_id": "4326397ef65c8f97c21d67338a86904777ec9b47bf752db9e1819f0c858b2983",
+  "disposition": "EXTERNAL_GOVERNANCE_REVIEW_REQUIRED",
+  "merge_authority": false,
+  "paths": [
+    {
+      "direct_write_allowed": false,
+      "mode": "EXTERNAL_GOVERNANCE_ONLY",
+      "path": "kernel/runtime/internalizer.py",
+      "proposal_allowed": true,
+      "requires_external_governance": true
+    }
+  ],
+  "plan_id": "d59fd2b1e97ed1900f97d4922fdde7594919c097bdda39853ff4d24849445407",
+  "promotion_authority": false,
+  "safety_floor_authority": false,
+  "schema": "Venus.AutonomousPatchPlan.v0.1",
+  "target_kind": "ISSUE",
+  "target_number": 73
+}
