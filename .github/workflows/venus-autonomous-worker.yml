@@ -1,11 +1,10 @@
-name: Venus autonomous developmental worker
+name: Legacy pre-recrystallization autonomous worker (manual compatibility)
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
-  schedule:
-    - cron: "43 7 * * *"
+
+# Historical compatibility workflow.
+# Scheduled repository-global operation now belongs to Minerva and routes through Venus.
 
 permissions:
   contents: write
