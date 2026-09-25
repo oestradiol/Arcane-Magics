@@ -91,9 +91,14 @@ The dashed arrow is part of the UI, not decoration. It tells the reader where th
 - [Minerva / engineering](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva) supplies executable return/reopening cases but no physics warrant.
 - [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) supplies inhabited symbolic/theophenomenological material without automatic mechanism transfer.
 
-## Temporary-carrier note
+## Historical-carrier note
 
-Files belonging to siblings remain physically present during the split. Eclipsis navigation should treat them as neighboring worlds, not additional chapters.
+Sibling runtime/publication trees were removed from the live Eclipsis branch during recrystallization. Their trajectories remain reachable through Git ancestry and provenance; current sibling state is reached through explicit branch links and crystallization handoffs.
+
+```text
+ancestry != current authority
+neighboring branch != local chapter
+```
 
 ---
 
