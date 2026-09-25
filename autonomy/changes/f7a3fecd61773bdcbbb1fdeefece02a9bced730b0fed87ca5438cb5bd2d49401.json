@@ -1,0 +1,22 @@
+{
+  "change_id": "f7a3fecd61773bdcbbb1fdeefece02a9bced730b0fed87ca5438cb5bd2d49401",
+  "cycle_id": "6edb4825988a8477fd2bc0297a4f02495e8c8dce1066fe0f4e3448a47ffd2005",
+  "disposition": "WITHHOLD_NO_MUTATION",
+  "evidence_id": "58ca093a06f816ab8e9ddf5270bf9bff3ca989c335bc225900931fbc248f9a45",
+  "failed_process_check_ids": [],
+  "failed_target_check_ids": [],
+  "promotion_authority": false,
+  "proposal_id": "560a3f676807f8fbed1ae1a9eafcd20d5ef6fca4966d2517228deb3ba69c7742",
+  "reason": "required external/hidden return remains unsatisfied",
+  "schema": "Venus.AutonomousChangeCandidate.v0.1",
+  "source_mutation_authority": false,
+  "suggested_operation": null,
+  "target_kind": "PR",
+  "target_number": 106,
+  "target_text_is_authority": false,
+  "untrusted_implicated_paths": [
+    "docs/ISSUE_ROADMAP.md",
+    "provenance/context",
+    "kernel/development/AUTONOMOUS_LEARNING_STATE.json"
+  ]
+}
