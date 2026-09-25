@@ -31,17 +31,13 @@ Its characteristic coupling is the **adjudicative relation**: candidate commitme
 
 Let `SM_t` be the current self-model, `U_e` an admissible update under returned consequence `e`, and `D` the derivation of the consequential developmental relation.
 
-[
-I_t = D(SM_t),qquad
-SM_{t+1}=U_e(SM_t),qquad
-I_{t+1}=D(SM_{t+1})
-]
+```text
+I_t = D(SM_t)
+SM_(t+1) = U_e(SM_t)
+I_(t+1) = D(SM_(t+1))
 
-The full/reflexive target is:
-
-[
-oxed{D(U_e(SM^*))sim_F D(SM^*)}
-]
+D(U_e(SM*)) ~_F D(SM*)
+```
 
 This is a **corrigible fixed point of the derived consequential relation**, not a frozen total self-model.
 
