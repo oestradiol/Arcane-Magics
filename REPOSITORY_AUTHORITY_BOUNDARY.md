@@ -23,7 +23,7 @@ Arcane does not mint:
 - statistical anomaly;
 - acausal physical mechanism;
 - Eclipsis physical bridge closure;
-- Venus engineering capability;
+- Minerva engineering capability;
 - supernatural causation from symbolic usefulness.
 
 ## Cross-register export law
@@ -56,4 +56,4 @@ Other-layer material is no longer live Arcane authority merely because its ances
 
 - [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe)
 - [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis)
-- [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva)
+- [Minerva / engineering](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva)
