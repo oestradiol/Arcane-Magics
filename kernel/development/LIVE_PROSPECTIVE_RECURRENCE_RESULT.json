@@ -1,0 +1,51 @@
+{
+  "schema": "Venus.LiveProspectiveRecurrenceResult.v0.1",
+  "date": "2026-09-24",
+  "issue": 72,
+  "disposition": "PASS_BOUNDED_LIVE_PROSPECTIVE_RECURRENCE_PATH_MATURE_REDUCED",
+  "tested_head": "64d1be5e296725cfab7759050d98bcddf33e55ed",
+  "admitted_main_merge": "b554f7c3d3eb378a1076e63a9a30f035ffdc437a",
+  "ci_evidence": {
+    "workflow_run": 36077131705,
+    "integrity": "PASS",
+    "formal": "PASS",
+    "publication": "PASS"
+  },
+  "earned": [
+    "founder-neutral bounded recurrence engine executes without Canonical/U1/SSR source dependency",
+    "live autonomous worker can consume an authorized problem-specific typed external behavioral return",
+    "returned behavioral payload is inert data and cannot execute shell/code",
+    "recurrence targets only externally allowlisted mutable TransformPrograms and patch operations",
+    "learner-side generic repair search can freeze a successor candidate artifact from the current formed problem and external return",
+    "candidate remains proposal state and cannot apply, merge, promote, validate, or admit itself",
+    "ambiguous eligible external returns fail closed",
+    "prospective battery demonstrates two successive learner-authored machinery changes on distinct fresh problems",
+    "prospective battery retains a contradictory third return as WITHHOLD_NO_EXPRESSIBLE_PATCH",
+    "direct-host comparator can match the successful consequence, mature-reducing mechanism uniqueness"
+  ],
+  "not_yet_earned": [
+    "an actual independent live GitHub recurrence return has triggered a real candidate",
+    "post-freeze held-out evaluation of a real live candidate",
+    "external CTL/O-star admission and rollback exercise for a real live candidate",
+    "repeated real-world/open-distribution recurrence under adaptive-evaluation controls",
+    "unrestricted Safe Strong RSI",
+    "open-ended RSI",
+    "AGI",
+    "autonomous science",
+    "consciousness"
+  ],
+  "mature_reduction": {
+    "mechanism_unique_or_necessary": false,
+    "surviving_claim": "bounded live prospective recurrence architecture, learner-owned candidate authorship, repeated finite recurrence, and authority/return separation"
+  },
+  "safety": {
+    "external_return_authority": true,
+    "self_review_forbidden": true,
+    "returned_payload_not_execution": true,
+    "candidate_not_admission": true,
+    "safety_floor_external": true,
+    "merge_authority": false,
+    "promotion_authority": false,
+    "truth_authority": false
+  }
+}
