@@ -226,7 +226,7 @@ def resolve_continuation_problem(
             disposition = "RETURN_REDUCED_RIVALS"
             remaining = ("r0",) if "r0" in rival_ids else rival_ids[:1]
     elif discriminator == "REPRODUCE_OR_REFRESH_CONTINUATION_STATE":
-        unresolved = {"DIRTY", "BLOCKED", "CONFLICTING", "UNKNOWN"}
+        unresolved = {"DIRTY", "BLOCKED", "CONFLICTING", "UNKNOWN", "UNSTABLE"}
         if after_merge not in unresolved:
             disposition = "RETURN_REDUCED_RIVALS"
             remaining = ("r1",) if "r1" in rival_ids else rival_ids[:1]
