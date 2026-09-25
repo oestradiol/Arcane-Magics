@@ -150,3 +150,33 @@ Do not add these mechanically to every paragraph. Their job is to restore inhabi
 ## 10. Minimal humane invariant
 
 > Preserve enough selfhood for a center to continue, enough otherness for genuine return to exist, enough relation for consequences to cross the boundary, and enough openness for what returns to matter.
+
+
+## 11. Local closure, WITHHOLD, and Residual
+
+A useful plain-language picture is:
+
+> A center may be complete enough to continue without pretending to contain everything that can still matter to it.
+
+That is a **returnable local closure**.
+
+Its boundary should preserve enough identity for the center to remain a center, while still allowing independently sourced consequence to matter:
+
+```text
+relation without fusion
++
+boundary without isolation
+```
+
+When two possibilities still lead to distinguishable futures, do not flatten them merely because the current model would be simpler without the distinction.
+
+```text
+still future-separating
+-> Residual
+-> WITHHOLD collapse
+-> wait for / seek the separator
+```
+
+When no admissible future can distinguish them at the declared scope, the difference may be consumable as gauge.
+
+This reader-level picture is carrier-neutral. The physics-facing PPD-Crystal / horizon-rebarb program is one possible realization, not the definition.
