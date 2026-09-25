@@ -350,3 +350,16 @@ Ownership:
 - **#169**: unresolved cross-face correspondences stay open until returned future-separating consequence earns crystallization.
 
 No downstream projection may inherit authority from the meta-object hypothesis by naming alone.
+
+
+### 2026-09-25 Arcane operationalization routing
+
+- **#27 Theophenomenology:** Jung/Pauli synchronicity, chaos-magic symbolic intervention, and MYTHOS claim fences.
+- **#9 Meta-Dynamics:** symbolic intervention as representation/enactment operator; recurrence vs return.
+- **#25 WorldMind:** echo-chamber/source-ancestry guard and self-sealing distributed fields.
+- **#24 Epistemology:** meaningful coincidence vs anomaly vs mechanism; self-implication vs self-certification.
+- **#26 Ethics/Governance:** bounded delegated symbolic agents/servitors require scope, owner, expiry, revocation, and return.
+- **#28 Public interface:** explain `magic` as corrigible symbolic intervention, not exemption from causality.
+- **#32 Construct disposition:** classify SynchronicityCandidate, ArcaneSymbolicOperator, EchoChamberPathology.
+
+Primary propagation remains asymmetric: OFE owns the discriminator, Eclipsis owns structural/theophenomenological mapping, Arcane owns symbolic practice, Venus owns engineering intake, kernel owns source-independence and return guards.
