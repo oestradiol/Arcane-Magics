@@ -1,0 +1,20 @@
+{
+  "change_id": "75d66e338f22b1a8d3d5afd73d4101087e0ed000a16a65e97c907a9761c4a0e1",
+  "cycle_id": "c7bc16d30d9b1ed7fbad164594df5630aa6ce70ccaf965069f933fd84f7422ac",
+  "disposition": "WITHHOLD_NO_MUTATION",
+  "evidence_id": "135fdf037cb9fddd46449fccc4ce1c21e01d392701e930ed0fc3f6da53b4d11e",
+  "failed_process_check_ids": [],
+  "failed_target_check_ids": [],
+  "promotion_authority": false,
+  "proposal_id": "d64f2c52856c1b79b127762adc786e575d1c93df95b020b75109fef53b6b306b",
+  "reason": "required external/hidden return remains unsatisfied",
+  "schema": "Venus.AutonomousChangeCandidate.v0.1",
+  "source_mutation_authority": false,
+  "suggested_operation": null,
+  "target_kind": "PR",
+  "target_number": 132,
+  "target_text_is_authority": false,
+  "untrusted_implicated_paths": [
+    "tests/test_"
+  ]
+}

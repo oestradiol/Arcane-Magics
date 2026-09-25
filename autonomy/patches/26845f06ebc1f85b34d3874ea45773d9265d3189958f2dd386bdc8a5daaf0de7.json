@@ -1,0 +1,91 @@
+{
+  "arbitrary_code_write_authority": false,
+  "cycle_id": "c7bc16d30d9b1ed7fbad164594df5630aa6ce70ccaf965069f933fd84f7422ac",
+  "disposition": "EXTERNAL_GOVERNANCE_REVIEW_REQUIRED",
+  "merge_authority": false,
+  "paths": [
+    {
+      "direct_write_allowed": false,
+      "mode": "EXTERNAL_GOVERNANCE_ONLY",
+      "path": ".github/workflows/venus-autonomous-worker.yml",
+      "proposal_allowed": true,
+      "requires_external_governance": true
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "EXTERNAL_GOVERNANCE_ONLY",
+      "path": "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+      "proposal_allowed": true,
+      "requires_external_governance": true
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "EXTERNAL_GOVERNANCE_ONLY",
+      "path": "kernel/development/autonomous_proposal.py",
+      "proposal_allowed": true,
+      "requires_external_governance": true
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "kernel/development/autonomous_study.py",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "EXTERNAL_GOVERNANCE_ONLY",
+      "path": "scripts/audit_autonomy_safety_matrix.py",
+      "proposal_allowed": true,
+      "requires_external_governance": true
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "EXTERNAL_GOVERNANCE_ONLY",
+      "path": "scripts/run_venus_research_proposal.py",
+      "proposal_allowed": true,
+      "requires_external_governance": true
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "tests/test_autonomous_entrypoint.py",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "tests/test_autonomous_governance.py",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "tests/test_autonomous_research_proposal.py",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "tests/test_autonomous_study.py",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    },
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "tests/test_",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    }
+  ],
+  "plan_id": "26845f06ebc1f85b34d3874ea45773d9265d3189958f2dd386bdc8a5daaf0de7",
+  "promotion_authority": false,
+  "safety_floor_authority": false,
+  "schema": "Venus.AutonomousPatchPlan.v0.1",
+  "target_kind": "PR",
+  "target_number": 132
+}
