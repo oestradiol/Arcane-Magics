@@ -1,0 +1,9 @@
+{
+  "schema": "ArcaneMagics.RootPreRecrystallization.v1",
+  "recorded_at": "2026-09-25",
+  "pre_prune_commit": "ef4e69e001fc8bf238ccdb9b4ebd29247d1f72c6",
+  "pre_prune_tree": "e7255d2f779670fea8359fb18d8c1fd9dd806abf",
+  "meaning": "byte-exact whole-body carrier before Root live-tree pruning",
+  "recovery": "git checkout <commit> or read blobs from the recorded tree",
+  "authority": "historical only after recrystallization"
+}
