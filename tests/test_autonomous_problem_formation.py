@@ -178,6 +178,41 @@ class RecompiledU2ProblemFormationTests(unittest.TestCase):
         )
         self.assertFalse(problem.promotion_authority)
 
+    def test_standing_orientation_preempts_unknown_and_weak_incidence(self):
+        items = (
+            WorkItem(
+                "PR", 167, "clean but weak reference residual",
+                merge_state="CLEAN",
+                body="mentions #999",
+                updated_at="2026-09-25T17:00:00Z",
+            ),
+            WorkItem(
+                "PR", 168, "unknown continuation",
+                merge_state="UNKNOWN",
+                updated_at="2026-09-25T17:00:00Z",
+            ),
+            WorkItem(
+                "ISSUE", 72, "developmental candidate",
+                updated_at="2026-09-25T17:00:00Z",
+            ),
+        )
+        problem = form_problem(
+            snapshot_to_incidence(items),
+            standing_orientation_active=True,
+        )
+        self.assertEqual(
+            problem.disposition,
+            "FORMED_STANDING_DEVELOPMENTAL_PROBLEM",
+        )
+        self.assertEqual(
+            problem.discriminator,
+            "SELECT_CONSEQUENTIAL_DEVELOPMENTAL_LIMITATION",
+        )
+        self.assertEqual(
+            set(bind_problem_to_carriers(problem, items)),
+            {("PR", 167), ("PR", 168), ("ISSUE", 72)},
+        )
+
     def test_concrete_returned_defect_preempts_standing_orientation(self):
         items = (
             WorkItem(
