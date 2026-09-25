@@ -41,14 +41,14 @@ jobs:
         run: |
           test -f provenance/historical/BRANCH_MEMORY.md
           test -f docs/ARCANE_MAGICS_ORG_SPLIT_PLAN_2026-09-25.md
-          grep -q 'Past Religion' README.md
-          grep -q 'Scientific Future' README.md
+          grep -q 'Routing layer' README.md
+          grep -q 'map / territory' docs/LAYER_IDENTITY.md
           grep -q 'merge != fusion' provenance/historical/BRANCH_MEMORY.md
 
       - name: Verify cross-register claim fences
         run: |
           grep -q 'shared ancestry != shared warrant' REPOSITORY_AUTHORITY_BOUNDARY.md
-          grep -q 'World / Other' README.md
+          grep -q 'science / future' README.md
 
   record-merge-memory:
     if: github.event_name == 'push'
