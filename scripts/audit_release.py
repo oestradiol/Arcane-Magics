@@ -102,9 +102,13 @@ if "provenance/historical-runtime/R194" not in lineage:
     errors.append("lineage does not locate historical R194 runtime in provenance")
 
 meta = (ROOT / "docs/META_DYNAMICS.md").read_text(encoding="utf-8", errors="replace")
-for token in ("vacuous_relation", "Structure × Semantics", "Polyhedral", "meta-qualia", "Qualia", "Quantum", "Temporal inhabitation: map is not traversal"):
+for token in ("Structure × Semantics", "Polyhedral", "meta-qualia", "Qualia", "Quantum", "Temporal inhabitation: map is not traversal", "returnable local closure", "relation without fusion", "boundary without isolation"):
     if token not in meta:
         errors.append(f"Meta-Dynamics missing live object: {token}")
+if "vacuous_relation" not in meta or "not live premises" not in meta:
+    errors.append("Meta-Dynamics missing typed historical-alias status for vacuous_relation")
+if "trivial_object" not in meta or "not live premises" not in meta:
+    errors.append("Meta-Dynamics missing typed historical-alias status for trivial_object")
 
 vocab = (ROOT / "NxRxI_VOCABULARY_CENTER.md").read_text(encoding="utf-8", errors="replace")
 for token in ("Naturalism_C", "Rationalism_C", "Illuminism_C", "Repository grammar constitution", "Proof-container law", "Causally lossless prose"):
