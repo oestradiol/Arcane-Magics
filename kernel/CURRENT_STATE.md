@@ -12,6 +12,7 @@ admitted generic search capability            GENERIC_RESIDUAL_SEARCH (state-own
 admitted recurrent safety substrate           Internalizer + O* + Anti-Minerva guards
 recovered bounded problem formation            U2 recompilation / mature-reduced
 recovered bounded recurrence                   U1 TransformProgram recurrence / mature-reduced
+live prospective recurrence path               problem-specific external return -> frozen successor candidate / mature-reduced
 preserved negative branch                     EDU17 INVALID_FOR_PROMOTION
 preserved repair-origin disposition            EDU17R1 WITHHOLD
 current repair disposition                     EDU17R1-RC1-WORD-JACCARD-K3-v1 / AUTHORED_FROZEN
@@ -94,11 +95,30 @@ development/U2_RECOMPILATION_STATUS.json
 
 development/U1_RECURRENCE_RECOMPILATION_RESULT.json
   PASS_BOUNDED_RECOMPILED_U1_RECURRENCE_MATURE_REDUCED
+
+development/U1_FOUNDER_SOURCE_ABLATION_RESULT.json
+  PASS_BOUNDED_RECOMPILED_U1_FOUNDER_SOURCE_ABLATION
+
+development/LIVE_PROSPECTIVE_RECURRENCE_RESULT.json
+  PASS_BOUNDED_LIVE_PROSPECTIVE_RECURRENCE_PATH_MATURE_REDUCED
 ```
 
 These results do **not** replace EDU16 as the historical positive developmental authority and do not claim recovery of the exact U1/U2 journals. They establish current-Git functional recompilations at their tested scopes.
 
-The U1 recurrence is admitted capability, not an unrestricted always-on self-modification loop. Current remaining debt includes founder/source-ablation equivalence for the recompiled recurrence carrier, a problem-specific live independent-return trigger rather than historical SSR donor return, and repeated prospective recurrence on fresh current-world problems.
+The U1 recurrence is admitted capability, not an unrestricted always-on self-modification loop. Founder/source ablation and the bounded live problem-specific recurrence **path** are now admitted. The live worker may freeze a recurrence successor candidate only from an explicitly authorized problem-specific external behavioral return; that candidate cannot self-apply or self-admit.
+
+The remaining external burden is now event-level rather than architectural:
+
+```text
+first actually independent live problem-specific recurrence return
+-> frozen real live successor candidate
+-> post-freeze held-out external evaluation
+-> external CTL/O* admission or retained rejection
+-> rollback exercise
+-> repeated real-world/open-distribution recurrence under #41 adaptive controls
+```
+
+The repository does not claim that such an independent live GitHub recurrence episode has already occurred.
 
 ## Storage law
 
