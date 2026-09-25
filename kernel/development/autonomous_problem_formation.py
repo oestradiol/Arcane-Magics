@@ -171,11 +171,22 @@ def form_problem(
         key = (priority, -len(residuals), row.stream_id)
         candidates.append((key, row, residuals))
 
-    if not candidates:
-        open_streams = tuple(sorted(
-            row.stream_id for row in row_tuple if row.open_state
-        ))
-        if standing_orientation_active and open_streams:
+    open_streams = tuple(sorted(
+        row.stream_id for row in row_tuple if row.open_state
+    ))
+    best_priority = (
+        sorted(candidates, key=lambda x: x[0])[0][0][0]
+        if candidates else None
+    )
+    # Active standing development is a priority class, not merely a zero-noise
+    # fallback. Only a concrete DIRTY/BLOCKED/CONFLICTING returned defect may
+    # preempt it. UNKNOWN/stale or weaker incidence remains available as context
+    # after the learner selects a developmental carrier.
+    if (
+        standing_orientation_active
+        and open_streams
+        and (best_priority is None or best_priority > 0)
+    ):
             rivals = (
                 ProblemRival(
                     "r0",
@@ -199,18 +210,20 @@ def form_problem(
                 "carrier_binding_authority": False,
                 "promotion_authority": False,
             }
-            return FormedProblem(
-                schema=body["schema"],
-                problem_id=digest(body),
-                disposition=body["disposition"],
-                source_stream_ids=body["source_stream_ids"],
-                residual_coordinates=body["residual_coordinates"],
-                rivals=rivals,
-                discriminator=body["discriminator"],
-                external_return_required=False,
-                carrier_binding_authority=False,
-                promotion_authority=False,
-            )
+        return FormedProblem(
+            schema=body["schema"],
+            problem_id=digest(body),
+            disposition=body["disposition"],
+            source_stream_ids=body["source_stream_ids"],
+            residual_coordinates=body["residual_coordinates"],
+            rivals=rivals,
+            discriminator=body["discriminator"],
+            external_return_required=False,
+            carrier_binding_authority=False,
+            promotion_authority=False,
+        )
+
+    if not candidates:
         body = {
             "schema": "Venus.RecompiledProblemFormation.v0.2",
             "disposition": "STOP_NO_CONSEQUENTIAL_RESIDUAL",
