@@ -96,6 +96,58 @@ def snapshot_digest(snapshot: GitCarrierSnapshot) -> str:
     return digest(snapshot_dict(snapshot))
 
 
+
+def form_git_check_problem(snapshot: GitCarrierSnapshot) -> dict[str, Any]:
+    """Form one neutral bounded problem from a nonterminal GitHub check state.
+
+    The problem is defined from returned structural state only. It does not
+    encode the later check conclusion.
+    """
+    if snapshot.carrier_kind.upper() != "PR":
+        raise GitWorldReturnError("first bounded Git check problem supports PR carriers only")
+    status = str(snapshot.check_status or "").lower()
+    if status == "completed":
+        body = {
+            "schema": "Venus.GitCheckProblem.v0.1",
+            "disposition": "STOP_NO_CONSEQUENTIAL_RESIDUAL",
+            "source_stream_ids": (),
+            "residual_coordinates": (),
+            "discriminator": None,
+            "rivals": (),
+            "external_return_required": False,
+            "carrier_binding_authority": False,
+            "promotion_authority": False,
+        }
+        return {"problem_id": digest(body), **body}
+
+    source_stream_id = digest({
+        "carrier_kind": snapshot.carrier_kind.upper(),
+        "carrier_number": int(snapshot.carrier_number),
+    })
+    rivals = (
+        {
+            "rival_id": "r0",
+            "statement": "the unresolved continuation later terminates unsuccessfully",
+        },
+        {
+            "rival_id": "r1",
+            "statement": "the unresolved continuation is transient and later terminates successfully",
+        },
+    )
+    body = {
+        "schema": "Venus.GitCheckProblem.v0.1",
+        "disposition": "FORMED_BOUNDED_PROBLEM",
+        "source_stream_ids": (source_stream_id,),
+        "residual_coordinates": ("check_state_nonterminal",),
+        "discriminator": "OBSERVE_PR_CHECK_TERMINAL_STATE",
+        "rivals": rivals,
+        "external_return_required": True,
+        "carrier_binding_authority": False,
+        "promotion_authority": False,
+    }
+    return {"problem_id": digest(body), **body}
+
+
 def freeze_git_world_request(
     *,
     problem: Mapping[str, Any],
