@@ -1,0 +1,13 @@
+{
+  "arbitrary_code_write_authority": false,
+  "cycle_id": "e3fd1bc65fa09fc865f839845d3fa23cc51099822a5c637fa4a3f80da5a1ce66",
+  "disposition": "STUDY_ONLY_NO_TARGET_PATH",
+  "merge_authority": false,
+  "paths": [],
+  "plan_id": "123d331afdd01c81325c0b0ebc732d74c9b2f396346003fafe6c75f48c8de88c",
+  "promotion_authority": false,
+  "safety_floor_authority": false,
+  "schema": "Venus.AutonomousPatchPlan.v0.1",
+  "target_kind": "ISSUE",
+  "target_number": 174
+}

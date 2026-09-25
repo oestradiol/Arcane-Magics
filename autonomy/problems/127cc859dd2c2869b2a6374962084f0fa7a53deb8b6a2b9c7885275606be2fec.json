@@ -1,0 +1,25 @@
+{
+  "carrier_binding_authority": false,
+  "discriminator": "RECOVER_OR_REDUCE_STANDING_DEVELOPMENTAL_OBLIGATION",
+  "disposition": "FORMED_BOUNDED_PROBLEM",
+  "external_return_required": false,
+  "problem_id": "127cc859dd2c2869b2a6374962084f0fa7a53deb8b6a2b9c7885275606be2fec",
+  "promotion_authority": false,
+  "residual_coordinates": [
+    "standing_developmental_obligation_uncompiled"
+  ],
+  "rivals": [
+    {
+      "rival_id": "r0",
+      "statement": "the current carrier already represents the standing developmental obligation sufficiently for lawful continuation"
+    },
+    {
+      "rival_id": "r1",
+      "statement": "a standing pre-Git developmental function remains uncompiled and must become causally reachable before carrier-local STOP can imply anything broader"
+    }
+  ],
+  "schema": "Venus.RecompiledProblemFormation.v0.1",
+  "source_stream_ids": [
+    "10d9def950eb84b65aa949e2b1fd4d2580693d0956113b0f47d58a51653fa3cb"
+  ]
+}
