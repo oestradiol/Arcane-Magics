@@ -27,6 +27,7 @@ def load(rel: str):
 FORMED = {
     "problem_id": "u2-problem-current",
     "disposition": "FORMED_BOUNDED_PROBLEM",
+    "source_stream_ids": ["stream-returned-1"],
     "residual_coordinates": ["continuation_state_unresolved"],
     "discriminator": "REPRODUCE_OR_REFRESH_CONTINUATION_STATE",
 }
@@ -47,6 +48,9 @@ class U1RecurrenceRecompilationTests(unittest.TestCase):
             ),
             ctl_ostar_admission=load(
                 "kernel/development/SSR1_CTL_ADMISSION_RESULT.json"
+            ),
+            post_mutation_ostar_return=load(
+                "kernel/development/U1_RECURRENCE_POST_MUTATION_OSTAR_RETURN.json"
             ),
         )
 
@@ -200,6 +204,52 @@ class U1RecurrenceRecompilationTests(unittest.TestCase):
                         residual_unresolved=False,
                     ),
                 ),
+            )
+
+
+    def test_formed_problem_is_bound_into_returned_training_trace(self):
+        result, _ = self.run_case()
+        self.assertTrue(result.problem_trace_bound)
+
+    def test_post_mutation_ostar_is_freshly_rederived_and_causal(self):
+        result, _ = self.run_case()
+        self.assertTrue(result.post_mutation_ostar_rederived)
+        self.assertIsNotNone(result.post_mutation_ostar_model_id)
+        self.assertTrue(result.post_mutation_ostar_causal)
+        self.assertNotEqual(
+            result.post_mutation_ostar_decision,
+            result.post_mutation_ostar_ablation_decision,
+        )
+        self.assertEqual(result.post_mutation_ostar_decision, "REOPEN")
+        self.assertEqual(result.post_mutation_ostar_ablation_decision, "ACT")
+
+    def test_problem_without_provenance_cannot_drive_recurrence(self):
+        broken = dict(FORMED)
+        broken["source_stream_ids"] = []
+        with self.assertRaisesRegex(U1RecurrenceError, "source provenance"):
+            self.run_case(problem=broken)
+
+    def test_post_mutation_ostar_cannot_self_author_return(self):
+        obj = load(
+            "kernel/development/U1_RECURRENCE_POST_MUTATION_OSTAR_RETURN.json"
+        )
+        obj["owner"] = "VENUS"
+        with self.assertRaisesRegex(U1RecurrenceError, "externally owned"):
+            run_u1_recurrence(
+                formed_problem=FORMED,
+                pressure_parent=load(
+                    "kernel/development/SSR1_TRANSFORM_REPAIR_PRESSURE_PARENT.json"
+                ),
+                training_return=load(
+                    "kernel/development/SSR1_TRANSFORM_REPAIR_TRAINING_RETURNS.json"
+                ),
+                heldout_return=load(
+                    "kernel/development/SSR1_TRANSFORM_REPAIR_HELDOUT_RETURN.json"
+                ),
+                ctl_ostar_admission=load(
+                    "kernel/development/SSR1_CTL_ADMISSION_RESULT.json"
+                ),
+                post_mutation_ostar_return=obj,
             )
 
 
