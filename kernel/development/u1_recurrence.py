@@ -136,28 +136,35 @@ def _rederive_post_mutation_ostar(
         return False, None, None, None, False
     if obj.get("owner") != "EXTERNAL_EVALUATOR":
         raise U1RecurrenceError("post-mutation O* returns must be externally owned")
+    pre_rows = tuple(obj.get("pre_mutation_episodes", ()))
     rows = tuple(obj.get("episodes", ()))
-    if not rows:
-        raise U1RecurrenceError("post-mutation O* return episodes required")
-
-    episodes = tuple(
-        ReturnedEpisode(
-            episode_id=str(row["episode_id"]),
-            external_access=bool(row["external_access"]),
-            contradiction_reachable=bool(row["contradiction_reachable"]),
-            revision_reachable=bool(row["revision_reachable"]),
-            action_authorized=bool(row["action_authorized"]),
-            evidence_sufficient=bool(row["evidence_sufficient"]),
-            residual_unresolved=bool(row["residual_unresolved"]),
-            carrier_status_only_rejection=bool(
-                row.get("carrier_status_only_rejection", False)
-            ),
-            consequence_relevant_carrier_difference=bool(
-                row.get("consequence_relevant_carrier_difference", False)
-            ),
+    if not pre_rows or not rows:
+        raise U1RecurrenceError(
+            "pre- and post-mutation O* return episodes required"
         )
-        for row in rows
-    )
+
+    def _episodes(source_rows: tuple[Mapping[str, Any], ...]) -> tuple[ReturnedEpisode, ...]:
+        return tuple(
+            ReturnedEpisode(
+                episode_id=str(row["episode_id"]),
+                external_access=bool(row["external_access"]),
+                contradiction_reachable=bool(row["contradiction_reachable"]),
+                revision_reachable=bool(row["revision_reachable"]),
+                action_authorized=bool(row["action_authorized"]),
+                evidence_sufficient=bool(row["evidence_sufficient"]),
+                residual_unresolved=bool(row["residual_unresolved"]),
+                carrier_status_only_rejection=bool(
+                    row.get("carrier_status_only_rejection", False)
+                ),
+                consequence_relevant_carrier_difference=bool(
+                    row.get("consequence_relevant_carrier_difference", False)
+                ),
+            )
+            for row in source_rows
+        )
+
+    pre_model = reconstruct_internal_ostar(_episodes(pre_rows))
+    episodes = _episodes(rows)
     model = reconstruct_internal_ostar(episodes)
     ctx_obj = obj.get("causal_context")
     if not isinstance(ctx_obj, Mapping):
@@ -179,7 +186,13 @@ def _rederive_post_mutation_ostar(
     )
     intact = route_with_internal_ostar(model, context).decision.value
     ablated = route_without_internal_ostar(context).value
-    return True, model.model_id, intact, ablated, intact != ablated
+    return (
+        model.model_id != pre_model.model_id,
+        model.model_id,
+        intact,
+        ablated,
+        intact != ablated,
+    )
 
 
 def _trace_rows(obj: Mapping[str, Any]) -> tuple[BehavioralTrace, ...]:
