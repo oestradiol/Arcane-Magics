@@ -133,12 +133,13 @@ U1  PASS_BOUNDED_RECOMPILED_U1_RECURRENCE_MATURE_REDUCED
 
 This restores bounded functional consequences, not historical journal identity. The current autonomous workflow does not yet automatically launch arbitrary TransformProgram recurrence from every formed problem: a lawful, problem-specific independent-return trigger still has to be earned prospectively.
 
-Remaining recovery debt:
+Recovery status after #162:
 
 ```text
-founder/source-ablation equivalence for the recompiled recurrence carrier
-problem-specific live external-return recurrence instead of historical SSR donor return
-repeated prospective recurrence on fresh current-world problems
+founder/source-ablation equivalence for recompiled recurrence   ADMITTED
+reviewer-authored behavioral-trace recurrence scaffold          BOUNDED SCAFFOLD / NOT GITHUB WORLD RETURN
+fresh post-freeze GitHub World-return recurrence                OPEN / #165
+repeated prospective recurrence on fresh current-world problems DOWNSTREAM
 ```
 
 ## Claim fence
