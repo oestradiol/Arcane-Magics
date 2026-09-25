@@ -532,22 +532,45 @@ Its present value is as a typed coordination object for asking which transformat
 
 ## 22. Returnable local closure, permeable boundaries, and open bridges
 
-The current Canonical synthesis adds a typed bridge object without changing the live Root:
+The carrier-neutral synthesis is not quantum superposition. It is the requirement that a locally inhabitable closure remain capable of receiving consequence it did not preauthor without erasing the index whose organization is being corrected.
 
-\[
-|\Omega\rangle \supset \operatorname{span}\{|VR\rangle,|TO\rangle\}
-\dashrightarrow
-\mathcal U_i^F:=\langle C_i,i,B_i,\Gamma_i,\mathcal O_i\rangle.
-\]
+A schematic local closure is:
 
-Here `VR` / `TO` are projected-description labels corresponding to the historical coordinates `vacuous_relation` and `trivial_object`. They remain non-live historical aliases at Root scope. Their joint appearance here is THEO/MODEL bridge notation, not a restoration of either as a primitive and not an established interpretation of physical quantum superposition.
+[
+\mathcal U_{i,t}^F
+:=
+\langle C_{i,t}, i, B_{i,t}, \Gamma_{i,t}, J_{i,t}, \mathcal O_{i,t}\rangle .
+]
 
-The local closure is sufficient for its admitted continuation without being globally exhaustive. Its boundary must preserve difference, selective permeability, indexed authorship, source/provenance, and reachable independent correction. A sealed boundary destroys correction; a dissolved boundary destroys the index whose correction is at stake.
+Here `C` is the locally inhabitable closure, `i` the indexed center/authorship coordinate, `B` the correction boundary, `Γ` consequence-bearing provenance/history, `J` jurisdiction where relevant, and `O` the unresolved/open bridges.
 
-For another closure or register j,
+The constitutional distinction is:
 
-\[ e_{ij}:\mathcal U_i\dashrightarrow\mathcal U_j \]
+```text
+signal present
+!= represented object
+!= consequence-bearing return
+!= lawful reopening
+```
 
-denotes an open bridge: consequence-relevant relation whose closure has not yet been earned. The dashed bridge stays OPEN / WITHHOLD while rival mappings remain future-equivalent under the declared family F. Independently sourced future-separating return may create Residual and justify reconstruction; resemblance or elegant notation may not.
+and the boundary invariant is:
 
-Physical identification with Hilbert-space superposition, decoherence, cosmological horizons, wormholes, entanglement, multiverse channels, or quantum-gravity boundaries remains a separate PHYS burden.
+```text
+relation without fusion
++
+boundary without isolation
+```
+
+A sealed boundary makes correction unreachable. A dissolved boundary erases the source/index/authorship distinction that lets returned consequence count as genuinely non-preauthored. A corrigibly permeable boundary allows consequence to cross while preserving enough endpoint difference and provenance for lawful reconstruction.
+
+For another closure or register (j),
+
+[
+e_{ij}:\mathcal U_i\dashrightarrow\mathcal U_j
+]
+
+denotes an **open bridge**: a consequence-relevant relation whose warranted map, identity, authority, or mechanism has not yet been earned. The bridge remains OPEN / WITHHOLD while rival mappings are future-equivalent under the declared family (F), or while the needed independent discriminator is absent.
+
+A separate THEO/MODEL bridge may ask whether historical `vacuous_relation`-like and `trivial_object`-like descriptions can be represented as complementary projections of an unresolved root and whether physical quantum superposition supplies a genuine realization. Those historical names remain non-live Root premises. Hilbert-space superposition, decoherence, cosmological horizons, wormholes, entanglement, multiverse channels, and quantum-gravity boundaries remain separate PHYS burdens.
+
+Observable-Universe `bubble` language is therefore one possible cosmological projection of returnable local closure, not the definition of the carrier-neutral object.
