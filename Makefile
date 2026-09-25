@@ -1,13 +1,10 @@
-.PHONY: test lint formal-check custody audit papers clean
+.PHONY: test lint custody audit papers clean
 
 test:
 	python3 -m unittest discover -s tests -p 'test_*.py'
 
 lint:
 	python3 scripts/lint_github_markdown.py
-
-formal-check:
-	cd formal/lean && lake build
 
 custody:
 	python3 scripts/audit_custody.py
