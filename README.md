@@ -150,3 +150,16 @@ Funding supports compute, publication, experiments, and collaboration. It does n
 ## License
 
 Project-owned theory, documentation, and monographs: **CC BY-NC-SA 4.0**. Project-owned software: **PolyForm Noncommercial 1.0.0**. See [`licenses/README.md`](licenses/README.md).
+
+
+### Returnable closure and open bridges
+
+A current cross-register research object asks whether a local model can be complete enough to act without pretending to be globally complete. Its boundary must preserve identity, authorship, and provenance while still allowing independently sourced correction to enter.
+
+```text
+relation without fusion
++
+boundary without isolation
+```
+
+A stronger physics-facing program asks whether this structure has a nontrivial realization in quantum geometry, including a candidate `M_QG = R_GQT ⋈ R_LQG` factorization and PPD-Crystal / horizon-Residual models. Those remain OPEN/WITHHOLD and are not claimed as an LQG solution.
