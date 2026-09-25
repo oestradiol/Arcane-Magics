@@ -49,7 +49,6 @@ inhabit
 
 ## 3. Corrigible self-model fixed point
 
-[
 ```text
 I_t = D(SM_t)
 SM_(t+1) = U_e(SM_t)
@@ -57,7 +56,6 @@ I_(t+1) = D(SM_(t+1))
 
 D(U_e(SM*)) ~_F D(SM*)
 ```
-]
 
 The fixed object is the **re-derivable consequential relation/equivalence class**.
 
@@ -94,6 +92,6 @@ WorldModel != World
 
 ## 5. Relation to Venus
 
-Venus is the cross-register participant-routing / transformation law that allows these differentiated functions to circulate without fusion.
+Venus carries the Self↔World boundary / transformation law through which these differentiated functions remain correction-reachable without fusion.
 
 Minerva is the developmental organism that must inhabit, test, and eventually re-derive the relevant relations under consequence.
