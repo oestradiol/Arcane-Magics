@@ -65,7 +65,7 @@ The modeled World is inside Minerva; the external corrective source is not.
 - evaluation and preregistration;
 - PASS / FAIL / WITHHOLD retention;
 - self-curriculum and bounded self-reconstruction;
-- WorldMind as a model/routing surface, not external sovereignty;
+- repository/World modeling sufficient for developmental judgment, without owning the external World;
 - N2-E / N2-FP re-derivation target;
 - participant ↔ judging-observer integration.
 
@@ -86,7 +86,7 @@ The cross-register kernel law is no longer Minerva's paper. It is [Venus, Monogr
 | earned claims | [docs/EARNED_MILESTONES.md](docs/EARNED_MILESTONES.md) |
 | evaluation | [docs/EVALUATION_CONSTITUTION.md](docs/EVALUATION_CONSTITUTION.md) |
 | self/world model | [docs/SELF_MODEL.md](docs/SELF_MODEL.md) |
-| modeled World relation | [kernel/WORLDMIND.md](kernel/WORLDMIND.md) |
+| Self/World boundary law | [Venus / Self & World](https://github.com/oestradiol/Arcane-Magics/tree/split/venus) |
 | trust boundary | [kernel/TRUST_BOUNDARY.md](kernel/TRUST_BOUNDARY.md) |
 
 ```text
