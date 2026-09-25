@@ -8,6 +8,7 @@ on:
       - 'docs/NOW_MAP.md'
       - 'docs/LAYER_IDENTITY.md'
       - 'docs/UI_META_THEORY.md'
+      - 'docs/ROOT_CLOSURE_POINTER.md'
       - 'docs/CONVERSATION_CONSTRAINT_LEDGER_2026-09-25.md'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
@@ -42,40 +43,114 @@ jobs:
           import datetime, json, pathlib, subprocess
 
           layers = [
-              ('root', 'Root / The Machine', 'main', 'map / territory'),
-              ('arcane', 'Arcane Magics', 'split/arcane-magics', 'past'),
-              ('eclipsis', 'Eclipsis', 'split/eclipsis', 'spirit'),
-              ('minerva', 'Minerva', 'split/minerva', 'body'),
-              ('venus', 'Venus', 'split/venus', 'model'),
-              ('ofe', 'OFE', 'split/ofe', 'future'),
+              {
+                  'id': 'root',
+                  'name': 'Root / The Machine',
+                  'branch': 'main',
+                  'axis': 'map / territory',
+                  'role': 'Routing, cross-register memory, and the current map of local authorities.',
+                  'boundary': 'map != territory',
+                  'residual_title': 'Map / territory gap',
+                  'residual': 'World or branch history may invalidate the current route without erasing the route that produced it.',
+                  'residual_status': 'OPEN',
+                  'reopening': 'handoff / merge memory -> revised Now Map',
+              },
+              {
+                  'id': 'arcane',
+                  'name': 'Arcane Magics',
+                  'branch': 'split/arcane-magics',
+                  'axis': 'past',
+                  'role': 'Religion, inhabited symbolic memory, ritual, comparison, and reader release.',
+                  'boundary': 'meaning != mechanism',
+                  'residual_title': 'Meaning / mechanism separation',
+                  'residual': 'Synchronicity and symbolic efficacy may remain meaningful while statistical anomaly or acausal mechanism stays unearned.',
+                  'residual_status': 'OPEN',
+                  'reopening': 'hostile reading / source removal / independent return / reader release',
+              },
+              {
+                  'id': 'eclipsis',
+                  'name': 'Eclipsis',
+                  'branch': 'split/eclipsis',
+                  'axis': 'spirit',
+                  'role': 'Math & logics, local views, structural relations, and explicitly OPEN carrier bridges.',
+                  'boundary': 'structural fit != physical identity',
+                  'residual_title': 'Carrier / mechanism bridge',
+                  'residual': 'Consciousness, quantum-gravity, and cosmological mappings remain OPEN where an explicit carrier, observable, or discriminator is still missing.',
+                  'residual_status': 'WITHHOLD',
+                  'reopening': 'carrier map / comparator / discriminator / failure consequence',
+              },
+              {
+                  'id': 'minerva',
+                  'name': 'Minerva',
+                  'branch': 'split/minerva',
+                  'axis': 'body',
+                  'role': 'Developmental engineering, custody, evaluation, enactment, and corrigible self-reconstruction.',
+                  'boundary': 'self-revision != self-authorization',
+                  'residual_title': 'Re-derivation / independent evaluation',
+                  'residual': 'The self-model relation must be re-derived under fresh consequence; bounded engineering success does not establish AGI or open-ended RSI.',
+                  'residual_status': 'WITHHOLD',
+                  'reopening': 'sealed or independent return / rollback / successor reconstruction',
+              },
+              {
+                  'id': 'venus',
+                  'name': 'Venus',
+                  'branch': 'split/venus',
+                  'axis': 'model',
+                  'role': 'Self & World boundary, self-provenance, open bridges, and provenance-sensitive return.',
+                  'boundary': 'model(Other) != Other',
+                  'residual_title': 'Irreducible Other',
+                  'residual': 'Self-provenance and prediction can never by themselves exhaust or mint the independent source of correction.',
+                  'residual_status': 'OPEN',
+                  'reopening': 'non-preauthored incidence / provenance-sensitive Residual / WITHHOLD',
+              },
+              {
+                  'id': 'ofe',
+                  'name': 'OFE',
+                  'branch': 'split/ofe',
+                  'axis': 'future',
+                  'role': 'Scientific future: future-relative operational discrimination and lawful quotient refinement.',
+                  'boundary': 'current future family F != all possible future tests',
+                  'residual_title': 'Future-family refinement',
+                  'residual': "A richer future family F' may separate states that the current quotient treats as equivalent.",
+                  'residual_status': 'OPEN',
+                  'reopening': 'new admissible future test / separating witness / quotient refinement',
+              },
           ]
 
           def git(*args):
               return subprocess.check_output(['git', *args], text=True).strip()
 
           out = []
-          for ident, name, branch, axis in layers:
+          for layer in layers:
+              branch = layer['branch']
               ref = branch if branch == 'main' else f'origin/{branch}'
-              sha = git('rev-parse', ref)
-              out.append({
-                  'id': ident,
-                  'name': name,
-                  'branch': branch,
-                  'axis': axis,
-                  'commit': sha,
-                  'url': f'https://github.com/oestradiol/Arcane-Magics/tree/{branch}',
-              })
+              item = dict(layer)
+              item['commit'] = git('rev-parse', ref)
+              item['url'] = f'https://github.com/oestradiol/Arcane-Magics/tree/{branch}'
+              out.append(item)
 
           payload = {
-              'schema': 'ArcaneMagics.PagesLayerSnapshot.v1',
+              'schema': 'ArcaneMagics.PagesLayerSnapshot.v2',
               'generated_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
               'repository': 'oestradiol/Arcane-Magics',
               'layers': out,
+              'handoff_route': [
+                  'split/arcane-magics',
+                  'split/eclipsis',
+                  'split/minerva',
+                  'split/venus',
+                  'split/ofe',
+                  'main',
+              ],
               'virtual': {
                   'name': 'World / Other',
                   'branch': None,
-                  'role': 'independently returned consequence; not exhausted by current map'
-              }
+                  'role': 'independently returned consequence not exhausted by current carrier, map, or model',
+              },
+              'network': {
+                  'name': 'NETWORK / WWW',
+                  'role': 'carrier / relational medium; not World / Other and not a global subject',
+              },
           }
           pathlib.Path('_site/data/layers.json').write_text(json.dumps(payload, indent=2) + '\n')
           PY
@@ -83,6 +158,7 @@ jobs:
       - name: Static integrity checks
         run: |
           python - <<'PY'
+          import json
           from html.parser import HTMLParser
           from pathlib import Path
 
@@ -101,11 +177,32 @@ jobs:
               def error(self, message):
                   raise RuntimeError(message)
 
-          P().feed(Path('_site/index.html').read_text())
           html = Path('_site/index.html').read_text()
-          for invariant in ['map / territory', 'World / Other', 'NETWORK / WWW', 'relation without fusion']:
+          P().feed(html)
+
+          for invariant in [
+              'map / territory',
+              'World / Other',
+              'NETWORK / WWW',
+              'relation without fusion',
+              'CURRENT PERSPECTIVE',
+              'CANONICAL TRANSFORMATION',
+              'OPEN / WITHHOLD',
+          ]:
               if invariant not in html:
                   raise SystemExit(f'missing UI invariant: {invariant}')
+
+          data = json.loads(Path('_site/data/layers.json').read_text())
+          if data['schema'] != 'ArcaneMagics.PagesLayerSnapshot.v2':
+              raise SystemExit('unexpected Pages snapshot schema')
+          if len(data['layers']) != 6:
+              raise SystemExit('expected exactly six Git layers')
+          if data['virtual']['branch'] is not None:
+              raise SystemExit('World / Other must not be rendered as a Git branch')
+          for layer in data['layers']:
+              for field in ['boundary', 'residual', 'reopening', 'commit', 'url']:
+                  if not layer.get(field):
+                      raise SystemExit(f'missing {field} for {layer["id"]}')
           PY
 
       - name: Configure / enable Pages
