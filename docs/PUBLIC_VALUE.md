@@ -1,84 +1,37 @@
 # What OFE Actually Is
 
-> **Formal / operational branch of the Arcane Magics research family.**
+OFE is the **Scientific Future** layer of the six-function body.
 
-[Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) · [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
+It formalizes a simple scientific discipline: do not preserve a distinction merely because the current representation names it; preserve it when some admitted future can still make it matter.
 
-## 30 seconds
+## Owns
 
-**Operational Future Equivalence asks when two states or histories may be treated as the same because every admitted future test gives the same consequence.**
-
-[
-xsim_Fy
-iff
-Phi_F(x)=Phi_F(y)
-]
-
-The quotient
-
-[
-Q_F=mathcal S/!sim_F
-]
-
-keeps only distinctions that still matter relative to the declared future family (F).
-
-## Why it matters
-
-A representation should be allowed to forget a distinction only when the forgotten distinction cannot change what the declared future tests can observe, decide, or control.
-
-This gives a clean interface to:
-
-- sufficient representations;
-- predictive-state compression;
-- state abstraction;
-- operational quantum theory;
-- evolving test families;
+- future-relative operational equivalence;
+- minimal quotient / sufficient representation questions;
+- refinement and reopening under richer future families;
+- operational discriminators;
 - relational nonfactorization;
-- coarse-graining questions in quantum gravity.
+- scientific comparison against mature alternatives;
+- explicitly OPEN physical applications.
 
-## The important reopening result
+## Receives from Venus
 
-If (F') observes at least everything observed by (F),
-
-[
-Fpreceq F'
-Rightarrow
-sim_{F'}subseteqsim_F.
-]
-
-A richer future family can reopen a distinction previously treated as gauge.
-
-## Scientific posture
-
-OFE intentionally separates:
+Venus supplies a Self↔World model and unresolved boundary distinctions. OFE asks which of those distinctions survive future scientific discrimination.
 
 ```text
-definition
-!= theorem
-!= application
-!= physical realization
+model distinction
+→ declared future family
+→ observable / decision consequence
+→ discriminator
+→ retain, quotient, or reopen
 ```
 
-Its quantum-gravity lane is an OPEN application program, not a solved theory of quantum gravity.
+## Does not own
 
-Its coincidence/synchronicity lane supplies operational discriminators, not metaphysical conclusions.
+- religion/past → Arcane Magics;
+- math/logical spirit → Eclipsis;
+- engineering/body → Minerva;
+- Self/World model → Venus;
+- routing/map → main.
 
-## What OFE owns
-
-- future-equivalence and quotient definitions;
-- exact formal consequences of those definitions;
-- refinement / reopening structure;
-- operational discrimination;
-- relational nonfactorization;
-- future-sufficiency criteria;
-- comparator and reduction discipline.
-
-## What belongs elsewhere
-
-- executable developmental intelligence → Venus-Minerva;
-- polyhedral / meta-qualia / QG bridge ontology → Eclipsis;
-- inhabited symbolic/theophenomenological practice → Arcane Magics.
-
-## Read next
-
-[Start Here](START_HERE.md) → [OFE monograph](../monographs/01_OFE/main.tex) → [Credits / reductions](CREDITS_AND_REDUCTIONS.md) → [Frontier](FRONTIER_RESEARCH.md)
+Formal success does not by itself establish a physical mechanism.
