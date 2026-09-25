@@ -181,3 +181,30 @@ genealogy remains.
 ```
 
 Those are now live repository methodology rather than archaeological trivia.
+
+
+## 9. Current returnable-closure / QG-meta credit map
+
+The current synthesis must be credited by typed relation rather than by one blended novelty claim.
+
+```text
+returnable local closure / open bridge / WITHHOLD-Residual law
+= PROJECT_GENEALOGY + OPEN mature-substitution test
+
+future-equivalence mathematics
+= mature mathematical/operational comparator surface, not proprietary ownership by naming
+
+LQG horizon / spin-network / spinfoam structure
+= HISTORICAL_PREDECESSOR / MATURE_COMPARATOR where technically relevant
+
+general quantum superposition / channels / observables
+= HISTORICAL_PREDECESSOR / MATURE_COMPARATOR
+
+crystalline-vacuum proposals
+= COMPARATIVE_RECURRENCE unless actual technical dependence is established
+
+PPD-Crystal / two-relation M_QG factorization
+= PROJECT_GENEALOGY + OPEN_PHYS_BRIDGE
+```
+
+A later proof that mature LQG / quantum-information / coarse-graining machinery fully subsumes the project formulation may remove current theoretical necessity while leaving project genealogy intact.
