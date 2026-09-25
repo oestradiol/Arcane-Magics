@@ -1,34 +1,37 @@
 # Repository Authority Boundary · Root / The Machine
 
+Root is the **routing / map-territory** layer.
+
 ## Root owns
 
+- current six-layer routing map;
 - branch ancestry and cross-register merge memory;
 - `provenance/historical/`;
-- current cross-register Now Map;
-- common transformation-law pointers;
-- integration receipts and register boundaries;
-- the repository-level diachronic trajectory.
+- target-based handoff protocol;
+- current branch pointers;
+- common transformation-law routing and register boundaries.
 
 ## Root does not own
 
-- OFE theorem authority;
-- Eclipsis physics/consciousness bridge closure;
-- Arcane symbolic warrant;
-- Minerva engineering/developmental promotion;
-- Venus future-facing scientific verification;
+- religion/past → Arcane Magics;
+- math & logics/spirit → Eclipsis;
+- engineering/body → Minerva;
+- Self & World/model → Venus;
+- science/future → OFE;
 - external World / Other.
 
-## Integration order
+## Functional integration order
 
 ```text
-ground layer
--> Venus candidate future
--> independent/evaluator return
--> Venus typed consequence
--> Root memory
+Arcane / past
+→ Eclipsis / spirit
+→ Minerva / body
+→ Venus / Self & World model
+→ OFE / scientific future
+→ Root / routing map
 ```
 
-Direct cross-register merging into Root is exceptional maintenance, not the ordinary epistemic path.
+This is the normal memory-bearing handoff order, not a claim that every research question must traverse every layer.
 
 ## Memory law
 
@@ -36,8 +39,5 @@ Direct cross-register merging into Root is exceptional maintenance, not the ordi
 historical presence != current authority
 merge != fusion
 shared ancestry != shared warrant
+map != territory
 ```
-
-## World/Self fence
-
-Root may model and remember the repository Self. It may not infer that its representation exhausts the World that can still correct it.
