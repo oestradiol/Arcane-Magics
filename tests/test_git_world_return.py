@@ -5,6 +5,7 @@ import unittest
 from kernel.development.git_world_return import (
     GitCarrierSnapshot,
     GitWorldReturnError,
+    form_git_check_problem,
     freeze_git_world_request,
     observe_git_world_return,
     resolve_continuation_problem,
@@ -128,6 +129,26 @@ class GitWorldReturnTests(unittest.TestCase):
                 {"receipt_id": "local", "effect_digest": "x"},  # type: ignore[arg-type]
                 observed_at="2026-09-25T00:25:01Z",
             )
+
+
+    def test_nonterminal_check_state_forms_problem_without_future_answer(self):
+        problem = form_git_check_problem(snap(status="in_progress", conclusion=None))
+        self.assertEqual(problem["disposition"], "FORMED_BOUNDED_PROBLEM")
+        self.assertEqual(problem["residual_coordinates"], ("check_state_nonterminal",))
+        self.assertEqual(problem["discriminator"], "OBSERVE_PR_CHECK_TERMINAL_STATE")
+        self.assertEqual(
+            tuple(x["rival_id"] for x in problem["rivals"]),
+            ("r0", "r1"),
+        )
+        self.assertTrue(problem["external_return_required"])
+        self.assertFalse(problem["promotion_authority"])
+
+    def test_completed_check_state_does_not_invent_new_problem(self):
+        problem = form_git_check_problem(
+            snap(status="completed", conclusion="success")
+        )
+        self.assertEqual(problem["disposition"], "STOP_NO_CONSEQUENTIAL_RESIDUAL")
+        self.assertEqual(problem["rivals"], ())
 
 
 if __name__ == "__main__":
