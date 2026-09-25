@@ -1,6 +1,6 @@
 # Publication Constitution
 
-The bundle is one research family and four independently warranted projections. Shared vocabulary, provenance, didactics, or genealogy never transfers truth status across registers.
+The repository is one research body and five independently warranted monograph projections, plus the routing/memory surface on `main`. Shared vocabulary, provenance, didactics, or genealogy never transfers truth status across registers.
 
 ## 1. Non-transfer law
 
@@ -79,7 +79,7 @@ Research artifacts distinguish proposal, source acquisition, evaluation, and adj
 
 Public-facing material should state the strongest earned positive contribution before its nearest claim fence.
 
-The authoritative public achievement surface is `docs/EARNED_MILESTONES.md`. A claim may be advertised strongly when that ledger records:
+Engineering earned-milestone authority lives on `split/minerva` at `docs/EARNED_MILESTONES.md`; Root/main routes to it rather than duplicating it. A claim may be advertised strongly when that ledger records:
 - the exact milestone or result;
 - register and scope;
 - warrant;
@@ -87,7 +87,7 @@ The authoritative public achievement surface is `docs/EARNED_MILESTONES.md`. A c
 
 Claim fences prevent unsupported promotion; they do not require burying the positive result.
 
-SOTA comparison is maintained separately in `docs/SOTA_WATCH.md`, and evaluation rules live in `docs/EVALUATION_CONSTITUTION.md`. A moving comparator may reopen an evaluation burden without rewriting project genealogy.
+SOTA/evaluation surfaces live in the owning branches (notably OFE for science/future and Minerva for engineering/body); Root/main routes to them rather than duplicating their authority. A moving comparator may reopen an evaluation burden without rewriting project genealogy.
 
 ## 10. Forum and arXiv projections
 
@@ -131,7 +131,7 @@ TL;DR
 
 Generated Markdown is an editing substrate, not automatically a publishable essay. Conversion must not leave broken cross-references, raw Pandoc theorem wrappers, unsupported renderer macros, or paper-native exposition that hides the argument behind notation.
 
-A suggested public sequence is OFE -> Eclipsis -> Arcane Magics -> Venus -> cross-paper cruxes. Each post should bind itself to an exact manuscript snapshot and must not import warrant from later posts.
+A suggested public sequence is Arcane Magics -> Eclipsis -> Minerva -> Venus -> OFE -> cross-register cruxes. Each post should bind itself to an exact manuscript snapshot and must not import warrant from later posts.
 
 Platform/editor and LLM-disclosure requirements change over time and must be checked against the target platform at publication time; they are not frozen as repository theory.
 
