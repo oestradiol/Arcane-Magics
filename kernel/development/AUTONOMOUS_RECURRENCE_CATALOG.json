@@ -1,0 +1,19 @@
+{
+  "schema": "Venus.AutonomousRecurrenceCatalog.v0.1",
+  "date": "2026-09-24",
+  "programs": [
+    {
+      "program_id": "AUTONOMOUS_RESEARCH_LOOP_V1",
+      "path": "kernel/development/AUTONOMOUS_RESEARCH_TRANSFORM_PROGRAM.json",
+      "allowed_patch_ops": ["ADD_TRANSITION", "REPLACE_TRANSITION", "REMOVE_TRANSITION"],
+      "max_training_traces": 32,
+      "max_payload_fields": 16
+    }
+  ],
+  "autonomy_may_add_programs": false,
+  "autonomy_may_change_patch_ops": false,
+  "autonomy_may_modify_return_authority": false,
+  "promotion_authority": false,
+  "merge_authority": false,
+  "truth_authority": false
+}

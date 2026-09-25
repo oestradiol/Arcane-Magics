@@ -22,6 +22,7 @@
     ".github/"
   ],
   "external_governance_exact": [
+    "kernel/development/AUTONOMOUS_RECURRENCE_CATALOG.json",
     "kernel/development/AUTONOMOUS_RETURN_AUTHORITY.json",
     "kernel/development/AUTONOMOUS_SAFE_CHECK_CATALOG.json",
     "kernel/development/AUTONOMOUS_WRITE_POLICY.json",
@@ -31,14 +32,17 @@
     "kernel/development/autonomous_learning.py",
     "kernel/development/autonomous_problem_formation.py",
     "kernel/development/autonomous_proposal.py",
+    "kernel/development/autonomous_recurrence.py",
     "kernel/development/autonomous_worker.py",
     "kernel/development/u1_recurrence.py",
+    "kernel/runtime/bounded_recurrence.py",
     "kernel/runtime/ctl.py",
     "kernel/runtime/induced_policy.py",
     "kernel/runtime/internalizer.py",
     "scripts/audit_autonomy_safety_matrix.py",
     "scripts/run_venus_autonomous_cycle.py",
     "scripts/run_venus_patch_plan.py",
+    "scripts/run_venus_recurrence_candidate.py",
     "scripts/run_venus_research_proposal.py"
   ],
   "modes": [
