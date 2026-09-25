@@ -1,11 +1,11 @@
 # Branch Tree — Arcane Magics
 
 **Branch:** `split/arcane-magics`  
-**Function:** religious branch  
+**Function:** Religious branch  
 **Axis:** past
 
 ```text
-Arcane-Magics/
+Arcane Magics/
 ├── README.md
 ├── monographs/03_ARCANE_MAGICS/
 ├── docs/
@@ -13,15 +13,17 @@ Arcane-Magics/
 │   ├── PUBLIC_VALUE.md
 │   ├── META_DYNAMICS.md
 │   ├── INHABITABLE_READER_PATH.md
-│   ├── EPISTEMIC_ANTI_MEME.md
+│   ├── FRONTIER_RESEARCH.md
+│   ├── CREDITS_AND_REDUCTIONS.md
 │   └── LAYER_IDENTITY.md
 ├── provenance/
-│   ├── historical/comparative material
-│   ├── Arcane operationalization
-│   └── retained source distinctions
+│   ├── ARCANE_LAYER_ARCHIVE.md
+│   ├── ARCANE_MAGICS_OPERATIONALIZATION_2026-09-25.md
+│   ├── donor / comparative history
+│   └── withheld S10/S11 transmission evidence
 ├── scripts/
 ├── tests/
-└── .github/workflows/arcane-ci.yml
+└── .github/
 ```
 
 ## Owns
@@ -40,6 +42,7 @@ Arcane-Magics/
 symbolic recurrence != independent evidence
 meaning != mechanism
 religious past != scientific future
+meta-routing comparator != literal ontology of comparator
 ```
 
-Cross-register output proceeds toward Eclipsis through the crystallization handoff, not by importing engineering or scientific warrant.
+Cross-register output proceeds toward Eclipsis through explicit crystallization, not by importing scientific or engineering warrant.
