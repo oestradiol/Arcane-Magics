@@ -1,0 +1,29 @@
+{
+  "schema": "Venus.U1FounderSourceAblationPrefreeze.v0.1",
+  "date": "2026-09-24",
+  "issue": 161,
+  "status": "PREFROZEN",
+  "claim": "The admitted bounded recompiled U1 recurrence can be packaged from an explicit current-Git dependency allowlist, moved outside the repository tree, and reproduce its causal result under Python isolated mode without Canonical Library, conversation state, network input, or problem-label identity.",
+  "required": [
+    "fresh-directory execution",
+    "python -I isolated mode",
+    "explicit source/artifact allowlist",
+    "parent 5/8 successor 8/8 ablation 5/8",
+    "safety floor unchanged",
+    "rollback available",
+    "external CTL/O* admission retained",
+    "problem/source label rename leaves consequence metrics invariant",
+    "provenance-bound identities change under rename",
+    "missing required return artifact fails closed",
+    "no promotion authority"
+  ],
+  "excluded_claims": [
+    "independent external replication",
+    "historical U1 package identity",
+    "open-ended RSI",
+    "AGI",
+    "consciousness",
+    "unrestricted autonomy"
+  ],
+  "promotion_authority": false
+}

@@ -186,16 +186,15 @@ They compete for priority when they obtain a short path to a real discriminator 
 
 ### Canonical capability recovery lane
 
-Issue #154 restores an already-earned Canonical function that the current Git carrier does not presently execute at the same causal location.
+The bounded U2/U1 functional recovery is admitted. Remaining recovery proceeds in this order:
 
 ```text
-#153 capability map / EDU16 parent custody / R206 recursive provenance restoration
--> #154 U2-style unlabeled problem formation before Git target selection
--> integrate formed problem with current O*/autonomy carrier
--> then revisit U1-level state-owned research/TransformProgram recurrence
+#161 founder/source-ablation equivalence for the recompiled U1 recurrence
+-> fresh problem-specific live external-return recurrence
+-> repeated prospective recurrence on fresh current-world problems
 ```
 
-This lane does not outrank sealed external-return work by rhetoric alone, but it may run in parallel because it repairs a demonstrated carrier regression rather than minting a new broad capability claim.
+#161 is an operational portability gate, not independent external replication.
 
 ## Current shortest high-leverage chain
 
