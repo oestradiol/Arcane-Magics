@@ -193,3 +193,22 @@ If that occurs repeatedly under matched external evaluation, the project moves f
 - `docs/SOTA_WATCH.md` — moving external comparator surface
 - `kernel/CURRENT_STATE.md` — current runtime/developmental authority
 - `provenance/DEVELOPMENTAL_LINEAGE.md` — full causal development history
+
+
+## Returnable closure in ordinary language
+
+One broader research idea behind Venus is simple to state:
+
+> A model can be complete enough to act without being complete enough to erase whatever may still correct it.
+
+The project calls this a **returnable local closure**. The useful boundary rule is:
+
+```text
+relation without fusion
++
+boundary without isolation
+```
+
+If two candidate states still lead to distinguishable admissible futures, the project treats that surviving difference as a **Residual** and WITHHOLDs collapsing the distinction until a stronger separator or mature reduction is available.
+
+This same pattern is being explored in a separate quantum-gravity bridge program, but that program has not earned a quantum-gravity solution, a physical pre-expansion crystal, or a cosmological origin claim.
