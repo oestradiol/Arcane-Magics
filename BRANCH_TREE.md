@@ -1,6 +1,8 @@
 # Branch Tree — Minerva
 
-**Branch:** `split/minerva`
+**Branch:** `split/minerva`  
+**Function:** Engineering  
+**Axis:** body
 
 ```text
 Minerva/
@@ -8,8 +10,8 @@ Minerva/
 ├── monographs/04_MINERVA/
 ├── kernel/
 │   ├── CURRENT_STATE.md
+│   ├── README.md
 │   ├── TRUST_BOUNDARY.md
-│   ├── WORLDMIND.md          # local World/Other model
 │   ├── runtime/
 │   ├── state/
 │   ├── custody/
@@ -20,13 +22,24 @@ Minerva/
 ├── scripts/
 ├── docs/
 │   ├── SELF_MODEL.md
+│   ├── GLOBAL_REPOSITORY_OPERATION.md
 │   ├── EARNED_MILESTONES.md
 │   ├── EVALUATION_CONSTITUTION.md
 │   └── REPRODUCE.md
 └── provenance/
     ├── developmental/
-    ├── negative-results/
-    └── historical-runtime/
+    ├── historical/
+    ├── historical-runtime/
+    └── negative-result receipts
 ```
 
-`kernel/VENUS_INCIDENCE_LAW.tex` is not native Minerva authority after recrystallization. It belongs to the Venus branch.
+## Imported sibling law
+
+Minerva consumes the Venus Self↔World / boundary law only through explicit cross-register handoff/provenance.
+
+```text
+implementation != constitutional co-authority
+can inspect != can claim
+```
+
+The live Venus law is on `split/venus`; OFE formal authority is on `split/ofe`.
