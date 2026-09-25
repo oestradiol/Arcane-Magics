@@ -269,5 +269,25 @@ class RecompiledU2ProblemFormationTests(unittest.TestCase):
         self.assertEqual(problem.residual_coordinates, residuals)
 
 
+    def test_problem_former_source_has_no_known_case_answer_mapping(self):
+        from pathlib import Path
+        source = (
+            Path(__file__).resolve().parents[1]
+            / "kernel/development/autonomous_problem_formation.py"
+        ).read_text(encoding="utf-8").lower()
+        for forbidden in (
+            "security_problem",
+            "dependency_problem",
+            "reproduction_problem",
+            "correct target",
+            "issue 401",
+            "issue 500",
+            "pr 401",
+            "pr 987",
+            "#999",
+        ):
+            self.assertNotIn(forbidden, source)
+
+
 if __name__ == "__main__":
     unittest.main()
