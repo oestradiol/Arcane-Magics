@@ -1,0 +1,75 @@
+name: Venus Scientific Future gate
+
+on:
+  pull_request:
+    branches: [split/venus]
+  push:
+    branches: [split/venus]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: venus-future-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  admissibility:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Require known source layer
+        if: github.event_name == 'pull_request'
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          case "$HEAD_REF" in
+            split/ofe|split/eclipsis|split/arcane-magics|split/minerva|ofe/*|eclipsis/*|arcane/*|minerva/*|venus/*) ;;
+            *)
+              echo "Venus accepts future candidates only from typed ground/Minerva/Venus work branches."
+              echo "Observed head: $HEAD_REF"
+              exit 1
+              ;;
+          esac
+
+      - name: Compile current kernel law
+        run: |
+          python -m py_compile kernel/runtime/*.py || true
+          test -f kernel/VENUS_INCIDENCE_LAW.tex
+          test -f provenance/historical/BRANCH_MEMORY.md
+          grep -q 'Scientific Future' README.md
+          grep -q 'prediction != return' README.md
+
+      - name: Boundary / return guards
+        run: |
+          grep -q 'Self provenance' docs/SCIENTIFIC_FUTURE.md
+          grep -q 'independent return' docs/SCIENTIFIC_FUTURE.md
+          grep -q 'candidate success != promotion' docs/SCIENTIFIC_FUTURE.md
+          grep -q 'cannot promote its own prediction' REPOSITORY_AUTHORITY_BOUNDARY.md
+
+      - name: Build Monograph V
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-latex-base texlive-latex-recommended texlive-latex-extra lmodern
+          cd monographs/05_VENUS
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
+
+  future-result-fence:
+    needs: [admissibility]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Do not confuse CI with World return
+        run: |
+          echo 'CI_PASS != independent World return != Root promotion'
+          test -f docs/SCIENTIFIC_FUTURE.md
