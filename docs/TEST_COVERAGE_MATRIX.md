@@ -75,3 +75,5 @@ The largest uncovered classes are:
 ## Rule
 
 An issue is not “covered” because this table names it. Coverage requires an executable test, formal proof obligation, externally scored benchmark, human reconstruction protocol, or a clearly typed reason why automation is not yet lawful.
+
+| #169 Lateral reconstruction / basis expansion | T3/T5/T6 | recovered G10.3/G10.5/G10.6 + R54/R59 + R194 + 5.5→6 ancestry; current U2/U1 autonomous carrier; #73 O*/Anti-Minerva/Internalizer substrate | bounded unlabeled insufficiency -> derived coordinate -> >=2 non-merged faces -> prefrozen projection -> fresh returned disagreement -> retained cross-face residual -> minimum invariant -> withheld/new-face regeneration; ordinary-generation, pairwise-diff, history/residual, name-removal and mature-substitution ablations | causal gain must depend on cross-face returned structure, survive founder/scaffold removal, and preserve independent return/correction; otherwise mature-reduce |
