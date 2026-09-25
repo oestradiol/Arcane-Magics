@@ -50,4 +50,4 @@ referent
 
 Operational/statistical question → [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe)  
 Structural/physics bridge → [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis)  
-Executable developmental implementation → [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva)
+Executable developmental implementation → [Minerva / engineering](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva)
