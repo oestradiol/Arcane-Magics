@@ -196,6 +196,21 @@ The bounded U2/U1 functional recovery is admitted. Remaining recovery proceeds i
 
 #161 is an operational portability gate, not independent external replication.
 
+### Canonical capability recovery lane
+
+The bounded U2/U1 recovery and founder/source ablation are admitted. The next recovery discriminator is #165:
+
+```text
+formed current repository problem
+-> freeze exact GitHub World request
+-> later changed GitHub state
+-> typed WORLD_RETURN
+-> reduce/reopen/withhold from returned consequence
+-> only then consider a problem-specific machinery recurrence
+```
+
+Reviewer-authored behavioral answer traces do not discharge #165. Local execution receipts also do not discharge it.
+
 ## Current shortest high-leverage chain
 
 ```text
