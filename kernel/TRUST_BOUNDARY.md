@@ -93,3 +93,33 @@ A future migration may:
 ## Claim fence
 
 A hardened internal custody kernel is not automatically an externally authenticated trust system. External authentication must be represented and tested explicitly.
+
+
+## Correction permeability is not network permeability
+
+The project-wide phrase **corrigibly permeable boundary** is broader than an authenticated network ingress path.
+
+```text
+epistemic/correction permeability
+!=
+network openness
+!=
+authorization
+!=
+trust
+```
+
+At kernel scope, authenticated ingress is one implementation condition that may allow a returned consequence to cross a boundary. It never follows that every reachable or semantically relevant return is authorized to mutate state.
+
+The safe composition is:
+
+```text
+returned difference
++ source/provenance
++ authentication where required
++ jurisdiction/capability
++ future-separating consequence
+-> candidate lawful reopening
+```
+
+A security boundary may legitimately reject a carrier even when the underlying distinction remains epistemically relevant; the research obligation then stays OPEN/WITHHOLD rather than being reclassified as false or gauge.
