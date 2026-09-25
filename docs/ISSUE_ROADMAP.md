@@ -311,3 +311,42 @@ standing developmental orientation
 No fixed issue is the telos. #178 and #179 preserve nonredundant extraction debts from closed historical PRs #132 and #151. They compete like other carriers and are not automatically preferred.
 
 The human role after this bootstrap is to maintain correction, substrate access, and governance boundaries, not to keep naming the next developmental target.
+
+
+### 2026-09-25 returnable-closure / QG-meta routing
+
+The structural center is:
+
+```text
+signal present
+!= represented object
+!= consequence-bearing return
+!= lawful reopening
+
+relation without fusion
++
+boundary without isolation
+```
+
+The stronger physics branch is separately routed:
+
+```text
+M_QG
+= R_GQT ⋈ R_LQG
+-> candidate downstream projections
+-> discriminator
+-> PHYS promotion only if earned
+```
+
+Ownership:
+
+- **#9**: mature-substitution test for the Meta-Dynamics / returnable-closure residual.
+- **#8**: formal open-bridge composition and closure conditions.
+- **#22**: LQG × General-Quantum meta-object, PPD-Crystal, horizon-rebarb, quantum-vacuum/crystalline-vacuum comparators, cosmological laminar-flow projection, and physical discriminators.
+- **#23**: explicit consciousness non-lift for any Eclipsis/meta-qualia use.
+- **#25**: distributed returnable-center/open-bridge reduction against mature distributed-system alternatives.
+- **#29/#32**: Canonical extraction and construct disposition.
+- **#78**: WWW relations among independently authored centers without global fusion.
+- **#169**: unresolved cross-face correspondences stay open until returned future-separating consequence earns crystallization.
+
+No downstream projection may inherit authority from the meta-object hypothesis by naming alone.
