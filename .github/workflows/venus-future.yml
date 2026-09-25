@@ -33,13 +33,19 @@ jobs:
           HEAD_REF: ${{ github.head_ref }}
         run: |
           case "$HEAD_REF" in
-            split/ofe|split/eclipsis|split/arcane-magics|split/minerva|ofe/*|eclipsis/*|arcane/*|minerva/*|venus/*) ;;
+            handoff/ofe-to-venus/*|handoff/eclipsis-to-venus/*|handoff/arcane-to-venus/*|handoff/minerva-to-venus/*|venus/*) ;;
             *)
-              echo "Venus accepts future candidates only from typed ground/Minerva/Venus work branches."
+              echo "Venus accepts cross-register candidates only through target-based handoff/*-to-venus/* branches (or Venus-local work)."
               echo "Observed head: $HEAD_REF"
               exit 1
               ;;
           esac
+
+      - name: Verify crystallization receipt
+        if: github.event_name == 'pull_request' && startsWith(github.head_ref, 'handoff/')
+        run: |
+          test -d provenance/historical/handoffs
+          test "$(find provenance/historical/handoffs -maxdepth 1 -name '*.json' | wc -l)" -ge 1
 
       - name: Compile current kernel law
         run: |
