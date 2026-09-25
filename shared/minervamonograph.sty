@@ -1,0 +1,51 @@
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{minervamonograph}[2026/09/25 Minerva developmental monograph style]
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[english]{babel}
+\RequirePackage[a4paper,margin=23mm,headheight=15pt]{geometry}
+\RequirePackage{amsmath,amssymb,amsthm,mathtools,bm}
+\RequirePackage{lmodern}
+\RequirePackage{microtype}
+\RequirePackage{booktabs,longtable,tabularx,array}
+\RequirePackage{enumitem}
+\RequirePackage{xcolor}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{titlesec}
+\RequirePackage{fancyhdr}
+\RequirePackage{xurl}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{bookmark}
+\definecolor{VMink}{HTML}{20242A}
+\definecolor{VMmuted}{HTML}{5A6570}
+\definecolor{VMline}{HTML}{D8DEE5}
+\definecolor{VMsoft}{HTML}{F4F6F8}
+\definecolor{VMwarm}{HTML}{F8F4EC}
+\definecolor{VMcool}{HTML}{EFF5F8}
+\definecolor{VMrose}{HTML}{F8EFF2}
+\hypersetup{colorlinks=true,linkcolor=VMink,citecolor=VMink,urlcolor=VMmuted}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4.5pt}
+\setlist{nosep,leftmargin=1.55em}
+\renewcommand{\arraystretch}{1.12}
+\allowdisplaybreaks[1]
+\titleformat{\section}{\sffamily\Large\bfseries\color{VMink}}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\sffamily\large\bfseries\color{VMink}}{\thesubsection}{0.65em}{}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\sffamily\small Minerva Developmental Intelligence}\fancyhead[R]{\sffamily\small\thepage}\renewcommand{\headrulewidth}{0.3pt}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{conjecture}[definition]{Conjecture}
+\newtheorem{remark}[definition]{Remark}
+\newcommand{\Withhold}{\textsc{withhold}}
+\newcommand{\Open}{\textsc{open}}
+\newcommand{\Stop}{\textsc{stop}}
+\newcommand{\nonentails}{\mathrel{\not\!\Rightarrow}}
+\newcommand{\register}[1]{\textsf{#1}}
+\newcommand{\status}[1]{\textsf{\textbf{#1}}}
+\newtcolorbox{claimbox}[1][]{enhanced,breakable,colback=VMsoft,colframe=VMline,boxrule=.6pt,arc=1.5mm,title={\sffamily\bfseries Claim boundary},#1}
+\newtcolorbox{readerbox}[1][]{enhanced,breakable,colback=VMcool,colframe=VMline,boxrule=.6pt,arc=1.5mm,title={\sffamily\bfseries Reader reconstruction},#1}
+\newtcolorbox{devilbox}[1][]{enhanced,breakable,colback=VMrose,colframe=VMline,boxrule=.6pt,arc=1.5mm,title={\sffamily\bfseries Devil's Audit},#1}
+\newtcolorbox{mythosbox}[1][]{enhanced,breakable,colback=VMwarm,colframe=VMline,boxrule=.6pt,arc=1.5mm,title={\sffamily\bfseries Mythos register},#1}
+\newtcolorbox{translationbox}[1][]{enhanced,breakable,colback=white,colframe=VMline,boxrule=.6pt,arc=1.5mm,title={\sffamily\bfseries Vocabulary bridge},#1}
