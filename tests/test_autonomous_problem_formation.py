@@ -269,5 +269,22 @@ class RecompiledU2ProblemFormationTests(unittest.TestCase):
         self.assertEqual(problem.residual_coordinates, residuals)
 
 
+    def test_unstable_pr_forms_continuation_problem(self):
+        rows = snapshot_to_incidence((
+            WorkItem(
+                "PR", 166, "ignored",
+                merge_state="UNSTABLE",
+                updated_at="2026-09-25T00:20:00Z",
+            ),
+        ))
+        problem = form_problem(rows)
+        self.assertEqual(problem.disposition, "FORMED_BOUNDED_PROBLEM")
+        self.assertIn("continuation_state_unresolved", problem.residual_coordinates)
+        self.assertEqual(
+            problem.discriminator,
+            "REPRODUCE_OR_REFRESH_CONTINUATION_STATE",
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
