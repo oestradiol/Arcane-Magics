@@ -2,8 +2,8 @@
   "schema": "Venus.LiveProspectiveRecurrencePrefreeze.v0.1",
   "date": "2026-09-24",
   "issue": 72,
-  "status": "PREFROZEN_PENDING_EXECUTION",
-  "claim": "The live autonomous carrier may freeze a learner-authored TransformProgram successor candidate only when an authorized external reviewer supplies a problem-specific typed behavioral return; the candidate remains non-authoritative pending separately held-out evaluation and external admission.",
+  "status": "WITHHOLD_REVIEWER_AUTHORED_SEMANTICS_NOT_GITHUB_WORLD_RETURN",
+  "claim": "Reviewer-authored typed behavioral returns are retained only as an external-scaffold bounded recurrence experiment. They do not establish a fresh GitHub World-return recurrence because the reviewer supplies the behavioral success semantics.",
   "required": [
     "founder-neutral recurrence engine executes without Canonical/U1/SSR source dependency",
     "live return is bound to the current formed problem id",
@@ -24,5 +24,8 @@
   "truth_authority": false,
   "open_ended_rsi": false,
   "agi": false,
-  "consciousness": false
+  "consciousness": false,
+  "fresh_github_world_return_earned": false,
+  "live_workflow_enabled": false,
+  "reopening_issue": 165
 }
