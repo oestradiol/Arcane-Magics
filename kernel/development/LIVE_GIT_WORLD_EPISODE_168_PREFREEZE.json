@@ -1,0 +1,67 @@
+{
+  "schema": "Venus.LiveGitWorldEpisodePrefreeze.v0.1",
+  "issue": 165,
+  "pr": 168,
+  "status": "PREFROZEN_AWAITING_GITHUB_WORLD_RETURN",
+  "problem": {
+    "problem_id": "3420d72bc2abe0f80b5f181b2bd0e5393fede744b21ca0a8f542c1134bf901dc",
+    "schema": "Venus.RecompiledProblemFormation.v0.1",
+    "disposition": "FORMED_BOUNDED_PROBLEM",
+    "source_stream_ids": [
+      "16aa39a6fc6dadf81f17908e97cde84ea901d3bcb5c5e8cd401c04b51cb7b9e1"
+    ],
+    "residual_coordinates": [
+      "continuation_state_unresolved"
+    ],
+    "rivals": [
+      {
+        "rival_id": "r0",
+        "statement": "the returned continuation state reflects a locally reproducible repository incompatibility"
+      },
+      {
+        "rival_id": "r1",
+        "statement": "the returned continuation state is incomplete/stale and requires a fresh repository return"
+      }
+    ],
+    "discriminator": "REPRODUCE_OR_REFRESH_CONTINUATION_STATE",
+    "external_return_required": true,
+    "carrier_binding_authority": false,
+    "promotion_authority": false
+  },
+  "request": {
+    "request_id": "b7a39b25342e90f00d258e4d8d46f46667c79324ac4a9e2456b86e77c3c9339c",
+    "schema": "Venus.GitWorldRequest.v0.1",
+    "problem_id": "3420d72bc2abe0f80b5f181b2bd0e5393fede744b21ca0a8f542c1134bf901dc",
+    "source_stream_id": "16aa39a6fc6dadf81f17908e97cde84ea901d3bcb5c5e8cd401c04b51cb7b9e1",
+    "discriminator": "REPRODUCE_OR_REFRESH_CONTINUATION_STATE",
+    "carrier_kind": "PR",
+    "carrier_number": 168,
+    "frozen_snapshot_digest": "da165e513f649783f787d01049214852172866e2f4a2c6e2a1d68c5c43c75d8a",
+    "frozen_head_sha": "7e83f6807d88b0332a6bb248a74de904edb0fd5c",
+    "frozen_merge_state": "UNSTABLE",
+    "frozen_updated_at": "2026-09-25T00:32:38Z",
+    "frozen_check_run_id": 36078024561,
+    "frozen_check_status": "in_progress",
+    "accepted_observation_fields": [
+      "head_sha",
+      "merge_state",
+      "updated_at",
+      "check_run_id",
+      "check_status",
+      "check_conclusion"
+    ],
+    "promotion_authority": false
+  },
+  "observation_at_freeze": {
+    "workflow_run_id": 36078024561,
+    "workflow_status": "in_progress",
+    "workflow_conclusion": null,
+    "pr_head_sha": "7e83f6807d88b0332a6bb248a74de904edb0fd5c",
+    "pr_merge_state": "UNSTABLE",
+    "pr_updated_at": "2026-09-25T00:32:38Z"
+  },
+  "answer_known_at_freeze": false,
+  "local_execution_is_world_return": false,
+  "reviewer_authored_trace_is_world_return": false,
+  "promotion_authority": false
+}
