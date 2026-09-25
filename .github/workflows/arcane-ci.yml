@@ -1,0 +1,31 @@
+name: Arcane symbolic / comparative CI
+on:
+  push:
+    branches: [split/arcane-magics]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  arcane:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Symbolic/provenance checks
+        run: |
+          python scripts/audit_causal_distinctions.py
+          python scripts/audit_construct_dispositions.py
+          python scripts/lint_github_markdown.py
+          grep -q 'meaningful coincidence' README.md
+          grep -q 'Anti-scripture' REPOSITORY_AUTHORITY_BOUNDARY.md
+      - name: Build Arcane monograph
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-bibtex-extra biber lmodern
+          cd monographs/03_ARCANE_MAGICS
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
+          biber main
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
