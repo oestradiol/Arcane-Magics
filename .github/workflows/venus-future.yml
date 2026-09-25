@@ -35,7 +35,7 @@ jobs:
           test -f provenance/historical/BRANCH_MEMORY.md
           grep -q 'Self & World' docs/LAYER_IDENTITY.md
           grep -q 'model(Other) != Other' README.md
-          grep -q 'Self provenance' docs/SCIENTIFIC_FUTURE.md
+          grep -q 'Self provenance' docs/SELF_WORLD_MODEL.md
 
       - name: Build Monograph V
         run: |
@@ -46,4 +46,4 @@ jobs:
           pdflatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
 
       - name: Model is not World
-        run: echo 'SELF_WORLD_MODEL != World / Other != scientific future verdict'
+        run: echo 'SELF_WORLD_MODEL != World / Other != Self / World model verdict'
