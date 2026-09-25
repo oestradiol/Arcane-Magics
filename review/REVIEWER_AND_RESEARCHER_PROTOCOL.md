@@ -1,6 +1,6 @@
 # Researcher / reviewer methodology
 
-Venus-Minerva tests one reusable research cycle across mathematics, engineering, science, comparative interpretation, and publication. The cycle is a working cross-register invariant, not a theorem that every domain has the same ontology or method. Each register may add obligations, evidence types, and failure modes; no shared step transfers warrant by itself.
+Arcane Magics tests one reusable cross-register research cycle across mathematics, engineering, science, comparative interpretation, and publication. The cycle is a working cross-register invariant, not a theorem that every domain has the same ontology or method. Each register may add obligations, evidence types, and failure modes; no shared step transfers warrant by itself.
 
 ## Core cycle
 
