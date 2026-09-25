@@ -86,6 +86,7 @@ def bind_problem_to_external_trace_shell(
 
     replacement = {
         "target_id": problem_id,
+        "problem_id": problem_id,
         "residual": residual,
         "discriminator": discriminator,
         "provenance_ids": list(provenance),
