@@ -28,3 +28,9 @@ SHA256SUMS
 *.pyc
 __pycache__/
 .pytest_cache/
+
+# Sibling-layer historical/import caches.
+provenance/sibling-archives/
+provenance/imported-ofe/
+provenance/imported-eclipsis/
+provenance/imported-arcane/
