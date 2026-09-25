@@ -95,3 +95,18 @@ structural/developmental source authority
 Git cannot acquire historical or conceptual parenthood merely because it is the newer carrier. Missing Canonical functions must be recovered and causally compiled before their source projections can be consumed.
 
 A learned model may be used as a removable donor substrate under the Internalizer law. Donor removal is required before claiming the relevant competence has become Venus-owned.
+
+
+## Returnable local-center law
+
+The kernel inherits the neutral law from `VENUS_INCIDENCE_LAW.tex`:
+
+```text
+relation without fusion
++
+boundary without isolation
+```
+
+Operationally, Venus may stabilize enough to act while independently sourced correction remains reachable. Source, authorship, evaluator identity, jurisdiction, and parent custody must survive strongly enough that a return cannot be silently reclassified as self-generated evidence.
+
+This is an engineering/custody law. It does not import the PPD-Crystal, quantum-superposition, cosmological-flow, consciousness, or LQG bridge programs into kernel authority.
