@@ -2,7 +2,7 @@
 
 # ♀ VENUS
 
-### Scientific Future · permeable World↔Self boundary · Monograph V
+### Self & World · model · permeable boundary
 
 [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) · [Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva) · **Venus** · [Root / The Machine](https://github.com/oestradiol/Arcane-Magics/tree/main)
 
