@@ -40,6 +40,7 @@ jobs:
           python scripts/audit_autonomy_safety_matrix.py
           test -f docs/SELF_MODEL.md
           test -f docs/GLOBAL_REPOSITORY_OPERATION.md
+          test -f docs/SELF_CORRECTION_OPERATOR.md
 
       - name: Snapshot repository World model
         env:
@@ -52,8 +53,6 @@ jobs:
           gh issue list --state open --limit 200 --json number,title,updatedAt > /tmp/minerva/issues.json
 
       - name: Form bounded Minerva repository proposal
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
           python scripts/run_venus_autonomous_cycle.py \
             --issues /tmp/minerva/issues.json \
@@ -69,21 +68,48 @@ jobs:
             --problem-output /tmp/minerva/FORMED_PROBLEM.json \
             --output /tmp/minerva/CYCLE.json
 
-      - name: Freeze proposal branch and route to Venus
+      - name: Crystallize Minerva trajectory into a Venus-based handoff
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          branch="minerva/autonomous-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
-          git checkout -b "$branch"
-          mkdir -p provenance/minerva-cycles
-          cp /tmp/minerva/CYCLE.json provenance/minerva-cycles/${GITHUB_RUN_ID}.json
-          cp /tmp/minerva/FORMED_PROBLEM.json provenance/minerva-cycles/${GITHUB_RUN_ID}-problem.json
-          cp /tmp/minerva/LEARNING_STATE.json kernel/development/AUTONOMOUS_LEARNING_STATE.json
-          git config user.name 'Minerva developmental worker'
+          source_sha="$(git rev-parse HEAD)"
+          target_sha="$(git rev-parse origin/split/venus)"
+          branch="handoff/minerva-to-venus/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+
+          git checkout -b "$branch" origin/split/venus
+          git config user.name 'Minerva/Venus crystallization worker'
           git config user.email 'actions@users.noreply.github.com'
-          git add provenance/minerva-cycles kernel/development/AUTONOMOUS_LEARNING_STATE.json
-          git commit -m "minerva: freeze global repository proposal ${GITHUB_RUN_ID}"
+
+          # Preserve Minerva as a second parent while retaining the Venus tree.
+          git merge --no-ff -s ours --no-commit "$source_sha"
+
+          mkdir -p provenance/historical/handoffs
+          export SOURCE_SHA="$source_sha" TARGET_SHA="$target_sha" RUN_ID="$GITHUB_RUN_ID"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          receipt={
+            'schema':'ArcaneMagics.CrossRegisterHandoff.v1',
+            'source_layer':'Minerva',
+            'target_layer':'Venus',
+            'source_commit':os.environ['SOURCE_SHA'],
+            'target_parent':os.environ['TARGET_SHA'],
+            'run_id':os.environ['RUN_ID'],
+            'content_admission':'proposal receipts only; no Minerva tree replacement',
+            'authority':'candidate future only; no Root promotion',
+          }
+          Path(f"provenance/historical/handoffs/minerva-{os.environ['RUN_ID']}.json").write_text(json.dumps(receipt,indent=2)+'\n')
+          PY
+
+          mkdir -p provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}
+          cp /tmp/minerva/CYCLE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/cycle.json
+          cp /tmp/minerva/FORMED_PROBLEM.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/problem.json
+          cp /tmp/minerva/LEARNING_STATE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/proposed-learning-state.json
+
+          git add provenance/historical/handoffs
+          git commit -m "handoff(minerva->venus): crystallize candidate future ${GITHUB_RUN_ID}"
           git push origin "$branch"
+
           gh pr create --draft --base split/venus --head "$branch" \
-            --title "minerva: candidate future ${GITHUB_RUN_ID}" \
-            --body $'Minerva formed this candidate from repository-global observation.\n\nIt targets **split/venus**, not Root. Venus must supply the future-facing boundary, discriminator, and returned consequence before any Root integration.\n\nThis PR cannot self-promote.'
+            --title "handoff: Minerva → Venus candidate future ${GITHUB_RUN_ID}" \
+            --body $'This is a target-based crystallization handoff.\n\nThe merge commit preserves Minerva as a second parent while retaining the Venus tree. Only explicit proposal receipts are admitted.\n\nVenus must supply the Scientific Future discriminator and non-preauthored return before any Root integration.'
