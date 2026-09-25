@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "Cite the specific branch, monograph, or release artifact actually used."
-title: "Operational Future Equivalence (OFE)"
+message: "Cite the OFE monograph, formal artifact, or specific scientific-future result used."
+title: "OFE — Operational Future Equivalence"
 type: collection
-version: "2026-09-25-split-ofe"
+version: "2026-09-25-scientific-future"
 authors:
   - family-names: "Amaral"
     given-names: "Elaina Lynn"
