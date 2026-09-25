@@ -214,7 +214,7 @@ def form_problem(
             ),
         )
         discriminator = "REPRODUCE_OR_REFRESH_CONTINUATION_STATE"
-        external_required = row.merge_state in {None, "UNKNOWN"}
+        external_required = row.merge_state in {None, "UNKNOWN", "UNSTABLE"}
     elif "referenced_incidence_missing" in residuals:
         rivals = (
             ProblemRival(
