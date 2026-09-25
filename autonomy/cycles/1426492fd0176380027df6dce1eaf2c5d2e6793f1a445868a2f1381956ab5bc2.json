@@ -1,0 +1,102 @@
+{
+  "active_improver_revision": "R206",
+  "allowed_operations": [
+    "READ_REPOSITORY",
+    "READ_ISSUES",
+    "READ_PRS",
+    "RUN_TESTS",
+    "STUDY_TARGET",
+    "PROPOSE_PATCH",
+    "OPEN_DRAFT_PR",
+    "OPEN_CYCLE_ISSUE_CARRIER",
+    "COMMENT_WITH_RECEIPT"
+  ],
+  "cycle_id": "1426492fd0176380027df6dce1eaf2c5d2e6793f1a445868a2f1381956ab5bc2",
+  "decision": "PROBE",
+  "developmental_parent_carrier": "EDU16-RC1",
+  "developmental_parent_digest": "91e46b4e41fb70a97d6a004b8f1c8916c389f08535c1a1c1c51a040701281bb7",
+  "forbidden_operations": [
+    "ACCESS_SECRETS",
+    "CHANGE_BRANCH_PROTECTION",
+    "CLOSE_ISSUE",
+    "DELETE_HISTORY",
+    "MERGE_PR",
+    "PROMOTE_AUTHORITY",
+    "RELEASE",
+    "SELF_VALIDATE"
+  ],
+  "formed_problem_disposition": "FORMED_STANDING_DEVELOPMENTAL_PROBLEM",
+  "formed_problem_id": "067432eafa908859f49756a1d4943f2f1fda96e3c51974425297444488203fcc",
+  "promotion_authority": false,
+  "rationale": [
+    "one bounded target selected from current external GitHub snapshot",
+    "when a formed problem is supplied, problem formation precedes and constrains Git carrier binding",
+    "autonomous cycle is prospectively bound to the admitted EDU16-RC1 claim-bearing parent when supplied",
+    "retained R206 recursive provenance discovery expands bounded dependency study when current custody activates it",
+    "internalized learner-side policy is upstream of work disposition",
+    "explicit external work-return reviews may alter later target ranking",
+    "roadmap is retained as weak context/tie-break provenance, not sovereign curriculum",
+    "selected target body is transformed into a bounded source-grounded study object",
+    "prior target study remains withheld until newer external target return reopens it",
+    "draft proposal only; admission remains external"
+  ],
+  "schema": "Venus.AutonomousCycleReceipt.v0.5",
+  "source_digest": "37a8830e46694722e8d154d8bc16ad51f9d1dccdbadffa10a476d9abbf2c553c",
+  "study": {
+    "body_digest": "8d033fee7783c33adbcd00da5b2876efa7added68cdcb56de639ad5b1e3492d7",
+    "body_is_executable_instruction": false,
+    "method": "DEPENDENCY_TRACE",
+    "method_contract_digest": "080380564f752a24456b821dbae1a7badb7f65da279b73063ecc80cba94dbe89",
+    "method_obligations": [
+      "Enumerate the target's explicit issue/PR and repository-path dependencies.",
+      "Identify the smallest dependency whose changed state would alter the target disposition.",
+      "Separate blocking dependencies from merely related context."
+    ],
+    "method_observed_signals": [
+      "requires"
+    ],
+    "promotion_authority": false,
+    "questions": [
+      "What exact residual remains unresolved in the returned repository state?",
+      "What rival explanations or candidate dispositions remain live?",
+      "What fresh returned evidence would discriminate them?",
+      "Can a local repository change lawfully produce that discriminator, or must Venus WITHHOLD/STOP for external return?",
+      "What is the smallest implicated dependency that could be changed without altering a prefrozen claim object?"
+    ],
+    "recursive_provenance_discovery": true,
+    "recursive_referenced_targets": [],
+    "referenced_issue_or_pr_numbers": [
+      161,
+      162,
+      163
+    ],
+    "referenced_repository_paths": [
+      "tests/build"
+    ],
+    "repository_state": {
+      "draft": false,
+      "kind": "ISSUE",
+      "merge_state": null,
+      "state": "OPEN",
+      "updated_at": "2026-09-25T16:51:23Z"
+    },
+    "returned_blocker_sentences": [
+      "## Required return source",
+      "The frozen request may contain exact problem ID, source-stream/carrier identity, prefreeze Git state, discriminator, accepted observation schema, and stop/withhold rules.",
+      "A valid World return requires same frozen source carrier/problem, observation timestamp/state later than freeze, changed source state, provenance to GitHub rather than local execution, and no self-minted semantic verdict.",
+      "WORLD_RETURN may update/reopen learner state",
+      "Return can reduce prefrozen rivals / reopen the problem.",
+      "No-reroll barrier remains while request is pending.",
+      "It does not establish open-ended RSI, unrestricted Safe Strong RSI, autonomous science, AGI, consciousness, independent external replication, or general semantic learning."
+    ],
+    "returned_changed_paths": [],
+    "study_authority": "LEARNER_SIDE_RECONSTRUCTION_FROM_EXTERNAL_GITHUB_SNAPSHOT",
+    "untrusted_instruction_markers": [
+      "merge"
+    ]
+  },
+  "study_method": "DEPENDENCY_TRACE",
+  "target_kind": "ISSUE",
+  "target_number": 165,
+  "target_title": "Run one fresh current-world recurrence from a post-freeze GitHub return"
+}
