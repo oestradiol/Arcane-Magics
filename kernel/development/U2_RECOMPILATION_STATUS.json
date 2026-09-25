@@ -2,8 +2,7 @@
   "schema": "Venus.U2RecompilationStatus.v0.1",
   "date": "2026-09-24",
   "issue": 154,
-  "status": "PREFROZEN_PENDING_CI",
-  "candidate_disposition_if_tests_pass": "PASS_BOUNDED_RECOMPILED_UNLABELED_PROBLEM_FORMATION_MATURE_REDUCED",
+  "status": "PASS_BOUNDED_RECOMPILED_UNLABELED_PROBLEM_FORMATION_MATURE_REDUCED",
   "restored_consequences": [
     "problem formation precedes Git carrier binding",
     "no-defect field STOPs without fallback target invention",
@@ -22,5 +21,13 @@
   "promotion_authority": false,
   "open_ended_rsi": false,
   "agi": false,
-  "consciousness": false
+  "consciousness": false,
+  "tested_head": "372f462543f5911dba92af9223e108853793c582",
+  "admitted_main_merge": "0b69416e0f72d5c3426c98a92739277800980c06",
+  "ci_evidence": {
+    "workflow_run": 36074920972,
+    "integrity": "PASS",
+    "formal": "PASS",
+    "publication": "PASS"
+  }
 }

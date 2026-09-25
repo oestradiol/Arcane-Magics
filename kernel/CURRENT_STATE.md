@@ -10,6 +10,8 @@ current positive developmental authority      EDU16 [1703]
 reconstructed developmental carrier           EDU16-RC1
 admitted generic search capability            GENERIC_RESIDUAL_SEARCH (state-owned; inherited)
 admitted recurrent safety substrate           Internalizer + O* + Anti-Minerva guards
+recovered bounded problem formation            U2 recompilation / mature-reduced
+recovered bounded recurrence                   U1 TransformProgram recurrence / mature-reduced
 preserved negative branch                     EDU17 INVALID_FOR_PROMOTION
 preserved repair-origin disposition            EDU17R1 WITHHOLD
 current repair disposition                     EDU17R1-RC1-WORD-JACCARD-K3-v1 / AUTHORED_FROZEN
@@ -66,6 +68,37 @@ promotion authority             false
 ```
 
 This removes the practical need to reverse-engineer EDU16 from prose while preserving the historical boundary. The lost original event-by-event runner/journal is still not claimed recovered. Prospective successor work may cite `EDU16-RC1` only as an explicitly reconstructed parent carrier.
+
+## Recovered Canonical functional continuity
+
+Current Git now admits a bounded functional recovery chain from the older Canonical developmental state into the present carrier:
+
+```text
+EDU16-RC1 parent custody
+→ R206 recursive dependency/provenance traversal
+→ U2-style problem formation before Git carrier binding
+→ external-return / STOP / history / reference-closure controls
+→ mature ordinary comparator reduction
+→ bounded U1-style writable TransformProgram recurrence
+→ held-out successor 8/8 vs parent 5/8 vs ablation 5/8
+→ external CTL/O* admission and rollback
+→ fresh post-mutation internal O* rederivation
+→ causally different learner-side routing
+```
+
+Machine-readable dispositions:
+
+```text
+development/U2_RECOMPILATION_STATUS.json
+  PASS_BOUNDED_RECOMPILED_UNLABELED_PROBLEM_FORMATION_MATURE_REDUCED
+
+development/U1_RECURRENCE_RECOMPILATION_RESULT.json
+  PASS_BOUNDED_RECOMPILED_U1_RECURRENCE_MATURE_REDUCED
+```
+
+These results do **not** replace EDU16 as the historical positive developmental authority and do not claim recovery of the exact U1/U2 journals. They establish current-Git functional recompilations at their tested scopes.
+
+The U1 recurrence is admitted capability, not an unrestricted always-on self-modification loop. Current remaining debt includes founder/source-ablation equivalence for the recompiled recurrence carrier, a problem-specific live independent-return trigger rather than historical SSR donor return, and repeated prospective recurrence on fresh current-world problems.
 
 ## Storage law
 
