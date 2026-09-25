@@ -94,17 +94,9 @@ This is where “God’s calculator,” “we were the training being trained,�
 
 A symbolic operator should expose:
 
-[
-\langle
-\text{intention},
-\text{symbol},
-\text{state},
-\text{scope},
-\text{jurisdiction},
-\text{expiry},
-\text{return}
-\rangle
-]
+```text
+<intention, symbol, state, scope, jurisdiction, expiry, return>
+```
 
 An indefinite self-authorizing “servitor” is not magical success. It is just bad governance in a dramatic hat.
 
