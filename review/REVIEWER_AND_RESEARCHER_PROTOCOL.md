@@ -262,3 +262,30 @@ A release may advance only when:
 This methodology is itself revisable.
 
 A later method may replace it when it preserves all live distinctions and improves prediction, discrimination, reproducibility, governance, or reconstruction. If deleting a rule changes no admissible research consequence, that rule is gauge and should be consumed.
+
+
+## 13. Open-bridge / Residual discipline
+
+An unresolved relation between two representations, registers, or physical candidate states is an **open bridge** until its stronger map, identity, mechanism, or authority transfer is earned.
+
+```text
+relation observed
+!=
+bridge closed
+!=
+mechanism established
+!=
+identity established
+```
+
+For a declared future family `F`:
+
+```text
+future-equivalent -> candidate gauge / quotient
+future-separating -> Residual / preserve
+separator status unresolved -> WITHHOLD
+```
+
+In physics-facing work, the reviewer must identify the actual state variables, future channels, observables, and mature comparator. A poetic or structural recurrence cannot count as the separator.
+
+For PPD-Crystal / horizon-rebarb work specifically, require an LQG-defined retained degree of freedom and a nonredundant Hawking/greybody/transition consequence before any claim of physical realization, let alone an LQG solution.
