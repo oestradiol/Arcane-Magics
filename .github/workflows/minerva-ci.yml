@@ -1,0 +1,29 @@
+name: Minerva developmental / adjudication CI
+on:
+  push:
+    branches: [split/minerva]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  minerva:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Developmental machine checks
+        run: |
+          python -m unittest discover -s tests -p 'test_*.py'
+          python scripts/audit_autonomy_safety_matrix.py
+          python scripts/audit_custody.py
+          python scripts/audit_edu16_custody.py
+      - name: Self-model fences
+        run: |
+          grep -q 'fixed relation != frozen self-model' docs/SELF_MODEL.md
+          grep -q 'model(World) != World' README.md
+          grep -q 'can inspect != can claim' docs/GLOBAL_REPOSITORY_OPERATION.md
