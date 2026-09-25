@@ -529,3 +529,25 @@ Meta-Dynamics currently does **not** establish:
 - a global Agent or globally lifted Authorship.
 
 Its present value is as a typed coordination object for asking which transformation laws genuinely survive across registers and which dissolve under stronger comparison.
+
+## 22. Returnable local closure, permeable boundaries, and open bridges
+
+The current Canonical synthesis adds a typed bridge object without changing the live Root:
+
+\[
+|\Omega\rangle \supset \operatorname{span}\{|VR\rangle,|TO\rangle\}
+\dashrightarrow
+\mathcal U_i^F:=\langle C_i,i,B_i,\Gamma_i,\mathcal O_i\rangle.
+\]
+
+Here `VR` / `TO` are projected-description labels corresponding to the historical coordinates `vacuous_relation` and `trivial_object`. They remain non-live historical aliases at Root scope. Their joint appearance here is THEO/MODEL bridge notation, not a restoration of either as a primitive and not an established interpretation of physical quantum superposition.
+
+The local closure is sufficient for its admitted continuation without being globally exhaustive. Its boundary must preserve difference, selective permeability, indexed authorship, source/provenance, and reachable independent correction. A sealed boundary destroys correction; a dissolved boundary destroys the index whose correction is at stake.
+
+For another closure or register j,
+
+\[ e_{ij}:\mathcal U_i\dashrightarrow\mathcal U_j \]
+
+denotes an open bridge: consequence-relevant relation whose closure has not yet been earned. The dashed bridge stays OPEN / WITHHOLD while rival mappings remain future-equivalent under the declared family F. Independently sourced future-separating return may create Residual and justify reconstruction; resemblance or elegant notation may not.
+
+Physical identification with Hilbert-space superposition, decoherence, cosmological horizons, wormholes, entanglement, multiverse channels, or quantum-gravity boundaries remains a separate PHYS burden.
