@@ -62,6 +62,7 @@ class AutonomousWriteScopeTests(unittest.TestCase):
             "kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json",
             "kernel/development/autonomous_learning.py",
             "kernel/development/autonomous_worker.py",
+            "kernel/development/git_world_return.py",
             "kernel/development/autonomous_problem_formation.py",
             "kernel/development/u1_recurrence.py",
             "scripts/run_venus_recurrence_candidate.py",
