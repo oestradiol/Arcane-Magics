@@ -1,7 +1,8 @@
-# Repository Authority Boundary · Eclipsis Branch
+# Repository Authority Boundary · Eclipsis
 
 **Branch:** `split/eclipsis`  
-**Future repository:** `Arcane-Magics/Eclipsis`
+**Function:** Math & logics  
+**Axis:** spirit
 
 ## Owns
 
@@ -9,24 +10,23 @@ Eclipsis is authoritative for its own structural/model objects:
 
 - polyhedral local views and gluing;
 - indexed boundary geometry;
-- returnable local closure as a structural model;
-- meta-qualia / theophenomenological mappings;
-- OPEN quantum / LQG / cosmological bridge programs;
-- explicit claim fences and discriminators for those bridges.
+- returnable local closure as structural model;
+- meta-qualia / THEOPHEN mappings;
+- explicit OPEN quantum/LQG/cosmological bridges;
+- preserved-invariant / information-loss / discriminator statements for those bridges.
 
 ## Does not own
 
 It does not automatically inherit:
 
-- OFE formal theorem status;
-- Venus engineering evidence;
+- OFE theorem status;
+- Minerva engineering evidence;
 - Arcane symbolic/religious warrant;
-- physical mechanism merely from structural fit;
-- consciousness mechanism merely from phenomenological organization.
+- Venus Self/World model authority;
+- physical mechanism from structural fit;
+- consciousness mechanism from phenomenological organization.
 
-## Bridge admission rule
-
-A cross-register bridge must state:
+## Bridge admission
 
 ```text
 source object
@@ -38,14 +38,21 @@ source object
 + failure consequence
 ```
 
-Until then, use a dashed arrow and OPEN / WITHHOLD.
+Until those are earned, the relation stays OPEN / WITHHOLD.
 
-## Temporary carrier
+## Historical carrier
 
-Sibling runtime, formal, and Arcane files remain physically present during the split. They are neighboring carriers, not Eclipsis authority.
+Sibling runtime and publication trees were removed from the live Eclipsis branch during recrystallization. Their ancestry remains reachable through Git and branch-specific provenance.
+
+```text
+historical presence != current authority
+ancestry != warrant
+```
 
 ## Siblings
 
-- [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe)
-- [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva)
-- [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
+- [Root / routing](https://github.com/oestradiol/Arcane-Magics/tree/main)
+- [Arcane Magics / religion-past](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
+- [Minerva / engineering-body](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva)
+- [Venus / Self-World model](https://github.com/oestradiol/Arcane-Magics/tree/split/venus)
+- [OFE / science-future](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe)
