@@ -17,11 +17,11 @@ Past / retained consequence
 
 ## Branches
 
-- [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe) — operational discrimination
-- [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis) — structural/open bridges
-- [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics) — symbolic/inhabited meta-routing
-- [Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/minerva) — developmental judgment/self-world model
-- [Venus](https://github.com/oestradiol/Venus-Minerva/tree/split/venus) — kernel and Scientific Future
+- [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) — operational discrimination
+- [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) — structural/open bridges
+- [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) — symbolic/inhabited meta-routing
+- [Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva) — developmental judgment/self-world model
+- [Venus](https://github.com/oestradiol/Arcane-Magics/tree/split/venus) — kernel and Scientific Future
 
 ## Integration rule
 
