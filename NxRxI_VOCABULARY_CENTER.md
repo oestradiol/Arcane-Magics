@@ -178,3 +178,17 @@ PRESERVED NEGATIVE
 ```
 
 A claim fence belongs next to the claim it bounds. It should not replace the positive statement with a page of disclaimers.
+
+
+## Returnable-closure vocabulary amendment
+
+These terms are carrier-neutral unless a stronger register is explicitly declared.
+
+| Name / symbol | Register | Index / scope | Neutral referent | False-friend guard |
+|---|---|---|---|---|
+| `Returnable local closure` / `U_i^F` | META / FORM / ENG | indexed center + declared future family | locally sufficient, globally non-exhaustive closure that remains reachable by correction-bearing return | not a cosmological bubble or conscious subject by default |
+| `Corrigibly permeable boundary` / `B_i` | META / GOVERNANCE | local closure boundary | boundary through which consequence may cross while source/index/authorship remain reconstructible | permeability != unrestricted access; security boundary is only one implementation case |
+| `Open bridge` / `e_ij` | META / cross-register | between typed closures/registers | consequence-relevant relation whose stronger map/identity/mechanism remains unearned | relation != identity; similarity != mechanism; dashed arrow != PHYS bridge |
+| `Looking` | META / PHEN / ENG | center-relative | signal made into provenance-bearing consequence capable of reopening the receiving organization | data presence != representation != understanding != authority |
+| `Reopening` | META / FORM / ENG | successor relation | lawful reconstruction caused by a still-future-separating returned difference | edit != learning; execution != return |
+| `VR/TO superposition bridge` | THEOPHEN / MODEL; PHYS OPEN | bridge-specific | hypothesis treating historical VR-like and TO-like descriptions as complementary unresolved projections | not live Root, not physical basis states, not quantum proof |
