@@ -4,7 +4,7 @@
 
 ### polyhedral local views · open bridges · meta-qualia · quantum-gravity frontier
 
-[Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva) · [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe) · **Eclipsis** · [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics)
+[Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) · [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · **Eclipsis** · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
 
 <br>
 
@@ -87,9 +87,9 @@ The dashed arrow is part of the UI, not decoration. It tells the reader where th
 
 ## Sibling interfaces
 
-- [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe) supplies operational tests for whether Eclipsis distinctions actually matter.
-- [Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva) supplies executable return/reopening cases but no physics warrant.
-- [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics) supplies inhabited symbolic/theophenomenological material without automatic mechanism transfer.
+- [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) supplies operational tests for whether Eclipsis distinctions actually matter.
+- [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) supplies executable return/reopening cases but no physics warrant.
+- [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) supplies inhabited symbolic/theophenomenological material without automatic mechanism transfer.
 
 ## Temporary-carrier note
 
