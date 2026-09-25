@@ -1,6 +1,8 @@
 # Branch Tree — Venus
 
-**Branch:** `split/venus`
+**Branch:** `split/venus`  
+**Function:** Self & World  
+**Axis:** model
 
 ```text
 Venus/
@@ -9,17 +11,14 @@ Venus/
 ├── kernel/
 │   ├── VENUS_INCIDENCE_LAW.tex
 │   ├── TRUST_BOUNDARY.md
-│   └── current boundary/runtime companions
+│   └── model/boundary runtime companions
 ├── docs/
-│   ├── SCIENTIFIC_FUTURE.md
+│   ├── SELF_WORLD_MODEL.md
+│   ├── CROSS_REGISTER_HANDOFF.md
 │   └── START_HERE.md
 ├── provenance/
-│   └── historical/
-│       └── branch / self / return memory
+│   └── historical / self / branch memory
 ├── tests/
-│   └── boundary / return / discriminator tests
 └── .github/workflows/
-    └── future-facing CI
+    └── Venus model-boundary CI
 ```
-
-Venus intentionally retains self-provenance and branch-return history because the distinction between Self and irreducible Other is relational and cannot be reconstructed from the kernel in isolation.
