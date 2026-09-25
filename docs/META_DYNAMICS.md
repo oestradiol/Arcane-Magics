@@ -536,11 +536,11 @@ The carrier-neutral synthesis is not quantum superposition. It is the requiremen
 
 A schematic local closure is:
 
-[
+```math
 \mathcal U_{i,t}^F
 :=
 \langle C_{i,t}, i, B_{i,t}, \Gamma_{i,t}, J_{i,t}, \mathcal O_{i,t}\rangle .
-]
+```
 
 Here `C` is the locally inhabitable closure, `i` the indexed center/authorship coordinate, `B` the correction boundary, `Γ` consequence-bearing provenance/history, `J` jurisdiction where relevant, and `O` the unresolved/open bridges.
 
@@ -565,12 +565,38 @@ A sealed boundary makes correction unreachable. A dissolved boundary erases the 
 
 For another closure or register (j),
 
-[
+```math
 e_{ij}:\mathcal U_i\dashrightarrow\mathcal U_j
-]
+```
 
 denotes an **open bridge**: a consequence-relevant relation whose warranted map, identity, authority, or mechanism has not yet been earned. The bridge remains OPEN / WITHHOLD while rival mappings are future-equivalent under the declared family (F), or while the needed independent discriminator is absent.
 
 A separate THEO/MODEL bridge may ask whether historical `vacuous_relation`-like and `trivial_object`-like descriptions can be represented as complementary projections of an unresolved root and whether physical quantum superposition supplies a genuine realization. Those historical names remain non-live Root premises. Hilbert-space superposition, decoherence, cosmological horizons, wormholes, entanglement, multiverse channels, and quantum-gravity boundaries remain separate PHYS burdens.
 
 Observable-Universe `bubble` language is therefore one possible cosmological projection of returnable local closure, not the definition of the carrier-neutral object.
+
+
+### Physics-facing two-relation meta-object
+
+A later physics program may test a stronger meta-object without changing the carrier-neutral constitutional law:
+
+```math
+\mathcal M_{\mathrm{QG}}
+=
+\mathcal R_{\mathrm{GQT}}
+\bowtie
+\mathcal R_{\mathrm{LQG}} .
+```
+
+Here `R_GQT` denotes the general quantum relation: superposition, composition, interaction, conditional observable structure, and quantum return. `R_LQG` denotes the quantum-geometry relation: graph/spin/intertwiner or covariant boundary data, geometric operators, refinement/coarse-graining, and horizon/boundary structure.
+
+This is a THEO/MODEL research factorization, not a theorem that existing General Quantum Theory and Loop Quantum Gravity are projections of one known physical object. Candidate descendants such as Polyhedral Planck-diameter Crystal states, crystalline-vacuum models, horizon states, and vacuum/radiation structures remain separate projection hypotheses until explicit maps and discriminators are derived.
+
+The bridge must therefore preserve:
+
+```text
+common meta-object hypothesis
+!= established unification
+!= LQG solution
+!= quantum-vacuum-crystal identity
+```
