@@ -1,0 +1,28 @@
+{
+  "schema": "Venus.LiveGitWorldReturnPrefreeze.v0.1",
+  "date": "2026-09-24",
+  "issue": 165,
+  "status": "PROTOCOL_PREFROZEN_BEFORE_LIVE_EPISODE",
+  "claim": "A formed current repository problem can freeze a GitHub World request before its answer is known, and only a later changed GitHub observation of the same carrier may satisfy it; local execution and reviewer-authored semantic traces cannot substitute for the return.",
+  "required": [
+    "PREFREEZE precedes WORLD_RETURN",
+    "same carrier/problem identity",
+    "later changed GitHub observation",
+    "same-state replay rejected",
+    "wrong carrier rejected",
+    "local execution receipt cannot satisfy request",
+    "changed but nonterminal state WITHHOLDs",
+    "terminal GitHub check state may reduce prefrozen rivals",
+    "promotion authority false"
+  ],
+  "excluded_claims": [
+    "machinery self-repair already demonstrated from this return",
+    "open-ended RSI",
+    "unrestricted Safe Strong RSI",
+    "autonomous science",
+    "AGI",
+    "consciousness",
+    "independent external replication"
+  ],
+  "promotion_authority": false
+}
