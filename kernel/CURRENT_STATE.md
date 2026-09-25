@@ -12,7 +12,7 @@ admitted generic search capability            GENERIC_RESIDUAL_SEARCH (state-own
 admitted recurrent safety substrate           Internalizer + O* + Anti-Minerva guards
 recovered bounded problem formation            U2 recompilation / mature-reduced
 recovered bounded recurrence                   U1 TransformProgram recurrence / mature-reduced
-live prospective recurrence path               problem-specific external return -> frozen successor candidate / mature-reduced
+evaluator-assisted recurrence candidate path   problem-specific reviewer return -> frozen successor candidate / mature-reduced
 preserved negative branch                     EDU17 INVALID_FOR_PROMOTION
 preserved repair-origin disposition            EDU17R1 WITHHOLD
 current repair disposition                     EDU17R1-RC1-WORD-JACCARD-K3-v1 / AUTHORED_FROZEN
@@ -100,17 +100,17 @@ development/U1_FOUNDER_SOURCE_ABLATION_RESULT.json
   PASS_BOUNDED_RECOMPILED_U1_FOUNDER_SOURCE_ABLATION
 
 development/LIVE_PROSPECTIVE_RECURRENCE_RESULT.json
-  PASS_BOUNDED_LIVE_PROSPECTIVE_RECURRENCE_PATH_MATURE_REDUCED
+  PASS_BOUNDED_EVALUATOR_ASSISTED_LIVE_RECURRENCE_CANDIDATE_PATH_MATURE_REDUCED
 ```
 
 These results do **not** replace EDU16 as the historical positive developmental authority and do not claim recovery of the exact U1/U2 journals. They establish current-Git functional recompilations at their tested scopes.
 
 The U1 recurrence is admitted capability, not an unrestricted always-on self-modification loop. Founder/source ablation and the bounded live problem-specific recurrence **path** are now admitted. The live worker may freeze a recurrence successor candidate only from an explicitly authorized problem-specific external behavioral return; that candidate cannot self-apply or self-admit.
 
-The remaining external burden is now event-level rather than architectural:
+The evaluator-assisted candidate path is admitted, but #165 correctly reopens the stronger externality burden: reviewer-authored behavioral traces are not themselves a GitHub World observation. The remaining burden is:
 
 ```text
-first actually independent live problem-specific recurrence return
+prefrozen request -> later changed GitHub repository-state World return with no reviewer-authored answer labels
 -> frozen real live successor candidate
 -> post-freeze held-out external evaluation
 -> external CTL/O* admission or retained rejection
