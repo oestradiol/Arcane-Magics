@@ -22,14 +22,14 @@ Motifs: **root lattice, timeline, map grid, branching DAG, eye-without-omniscien
 3. What ancestry made it current?
 4. What consequence changed the body?
 5. What remains unresolved?
-6. Which edge leads to Venus / Scientific Future?
+6. Which edge leads to the next owning layer?
 
 ## Temporal semantics
 
 ```text
 Past Religion = retained meaning/provenance of lived consequence
 Now Map       = current cross-register orientation
-Scientific Future = Venus-facing open test surface
+Scientific Future = OFE-facing open test surface
 ```
 
 Root should never visually flatten historical presence into current authority.
