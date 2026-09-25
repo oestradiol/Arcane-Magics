@@ -1,0 +1,128 @@
+name: Pages · Root / Lain public instance
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'docs/NOW_MAP.md'
+      - 'docs/LAYER_IDENTITY.md'
+      - 'docs/UI_META_THEORY.md'
+      - 'docs/CONVERSATION_CONSTRAINT_LEDGER_2026-09-25.md'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout routing layer
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Fetch differentiated branch heads
+        run: git fetch origin '+refs/heads/*:refs/remotes/origin/*'
+
+      - name: Build static Pages projection
+        run: |
+          rm -rf _site
+          mkdir -p _site/data
+          cp -a site/. _site/
+          python - <<'PY'
+          import datetime, json, pathlib, subprocess
+
+          layers = [
+              ('root', 'Root / The Machine', 'main', 'map / territory'),
+              ('arcane', 'Arcane Magics', 'split/arcane-magics', 'past'),
+              ('eclipsis', 'Eclipsis', 'split/eclipsis', 'spirit'),
+              ('minerva', 'Minerva', 'split/minerva', 'body'),
+              ('venus', 'Venus', 'split/venus', 'model'),
+              ('ofe', 'OFE', 'split/ofe', 'future'),
+          ]
+
+          def git(*args):
+              return subprocess.check_output(['git', *args], text=True).strip()
+
+          out = []
+          for ident, name, branch, axis in layers:
+              ref = branch if branch == 'main' else f'origin/{branch}'
+              sha = git('rev-parse', ref)
+              out.append({
+                  'id': ident,
+                  'name': name,
+                  'branch': branch,
+                  'axis': axis,
+                  'commit': sha,
+                  'url': f'https://github.com/oestradiol/Arcane-Magics/tree/{branch}',
+              })
+
+          payload = {
+              'schema': 'ArcaneMagics.PagesLayerSnapshot.v1',
+              'generated_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              'repository': 'oestradiol/Arcane-Magics',
+              'layers': out,
+              'virtual': {
+                  'name': 'World / Other',
+                  'branch': None,
+                  'role': 'independently returned consequence; not exhausted by current map'
+              }
+          }
+          pathlib.Path('_site/data/layers.json').write_text(json.dumps(payload, indent=2) + '\n')
+          PY
+
+      - name: Static integrity checks
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          required = [
+              Path('_site/index.html'),
+              Path('_site/styles.css'),
+              Path('_site/app.js'),
+              Path('_site/404.html'),
+              Path('_site/data/layers.json'),
+          ]
+          missing = [str(p) for p in required if not p.exists()]
+          if missing:
+              raise SystemExit('missing Pages files: ' + ', '.join(missing))
+
+          class P(HTMLParser):
+              def error(self, message):
+                  raise RuntimeError(message)
+
+          P().feed(Path('_site/index.html').read_text())
+          html = Path('_site/index.html').read_text()
+          for invariant in ['map / territory', 'World / Other', 'NETWORK / WWW', 'relation without fusion']:
+              if invariant not in html:
+                  raise SystemExit(f'missing UI invariant: {invariant}')
+          PY
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Pages artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
