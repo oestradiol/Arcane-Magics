@@ -1,223 +1,37 @@
-# Start Here
+# Start Here · Venus
 
-Venus-Minerva is an experimental developmental-intelligence architecture. Its unusual engineering claim is not that it is already AGI; it is that representations, research obligations, evidence dependencies, failures, and parts of the learning procedure are persistent state, while the system is not allowed to manufacture the external return that certifies its own development.
+Venus is the **Scientific Future** of the Arcane Magics body.
 
-## 30 seconds
-
-The current exact executable checkpoint is **IG10 [1308]**. The latest positive developmental evidence is **EDU16 [1703]**, which transferred bounded World-feed query-policy generation into learner ownership while leaving World execution and independent evaluation external.
-
-The next branch, **EDU17**, was rejected for promotion after a claim-local provenance failure. **EDU17R1** then WITHHELD before its intended repair could be tested because a fresh feed exposed a deeper defect:
+## Input
 
 ```text
-uncertainty-marker mention
-!=
-object-level unresolved empirical incidence
+Root Now Map
++ Minerva self/world judgment
++ ground-layer candidates
++ self-provenance
 ```
 
-That is the current measured semantic residual.
-
-Since that WITHHOLD, the repository has admitted a state-owned inherited generic residual-search capability and executable Internalizer/O*/Anti-Minerva guards. It has also frozen a bounded learner-side repair candidate, `EDU17R1-RC1-WORD-JACCARD-K3-v1`, with hidden #31 still unexposed. The positive developmental authority remains EDU16 because authorship freeze is not efficacy or promotion.
-
-## What is current?
-
-| Question | Authority |
-|---|---|
-| What exact machine state can Git reconstruct now? | [kernel/CURRENT_STATE.md](../kernel/CURRENT_STATE.md) |
-| What is the executable kernel? | [kernel/README.md](../kernel/README.md) |
-| What is the latest positive developmental claim head? | [kernel/development/EDU_CURRENT.json](../kernel/development/EDU_CURRENT.json) |
-| What is the lineage? | [provenance/DEVELOPMENTAL_LINEAGE.md](../provenance/DEVELOPMENTAL_LINEAGE.md) |
-| What has actually been earned? | [EARNED_MILESTONES.md](EARNED_MILESTONES.md) |
-| What failed / was withheld? | [EDU provenance](../provenance/developmental/EDU/) |
-| What remains open? | [FRONTIER_RESEARCH.md](FRONTIER_RESEARCH.md) |
-| How are credits / reductions typed? | [CREDITS_AND_REDUCTIONS.md](CREDITS_AND_REDUCTIONS.md) |
-| How should results be evaluated? | [EVALUATION_CONSTITUTION.md](EVALUATION_CONSTITUTION.md) |
-| What tests/evaluations cover the live issues? | [TESTS.md](TESTS.md) → [TEST_COVERAGE_MATRIX.md](TEST_COVERAGE_MATRIX.md) |
-| What is being extracted/recompiled from Canonical, and what remains live structural source? | [CANONICAL_RETIREMENT_LEDGER.md](../provenance/CANONICAL_RETIREMENT_LEDGER.md) |
-
-## Operational hubs
-
-- [Tests and evidence](TESTS.md) — automated integrity versus scientific/external evidence.
-- [Reproduce](REPRODUCE.md) — exact reproducibility boundary.
-- [Issue roadmap](ISSUE_ROADMAP.md) — dependency-ordered execution surface.
-
-## What did the machine actually do?
-
-Concrete examples:
-
-- **IG1:** learned bounded operator semantics from returned future effects rather than relying only on names.
-- **IG3/IG4:** learned bounded raw-incidence / natural-source relation structure from generic carriers.
-- **IG8:** demonstrated that a previously irrelevant distinction can become future-separating when the future-test family expands, forcing representation to reopen.
-- **IG10:** grounded one model-specific physical future-test witness for restricted spin-foam / quantum-cuboid coarse graining, while explicitly withholding test-family completeness and semiclassical validation.
-- **EDU11R1:** preserved the actual missing research slot in a learner-owned source request instead of compressing it away.
-- **EDU12:** retracted an interface affordance after failure without rewriting the underlying research claim.
-- **EDU13/14:** generated a curriculum target, then selected an open-domain problem/question from a bounded external feed.
-- **EDU15R1:** repaired only a defective verifier while holding the proposal, gates, thresholds, evaluator return, and learner answer fixed.
-- **EDU16:** generated and froze its own bounded World-feed query policy before new World access.
-- **EDU17:** looked successful locally, but was rejected when answer claims depended on a returned document outside the committed selected evidence set.
-- **EDU17R1:** stopped before claim-binding evaluation because its inherited uncertainty detector confused mention with incidence.
-- **EDU17R1-RC1:** later froze a learner-side public-development repair candidate and ownership receipt before hidden #31 exposure; efficacy remains untested.
-
-The architectural shorthand is therefore:
+## Operation
 
 ```text
-generate
-!= select
-!= authorize
-!= execute
-!= return
-!= verify
-!= promote
+candidate
+→ explicit bridge / test family
+→ bounded enactment / experiment
+→ independent return
+→ discriminator
+→ Residual
+→ CONSUME or WITHHOLD
+→ successor candidate
 ```
 
-## What Venus has not earned
+## Output
 
-This repository does **not** currently establish:
+A Venus result is not Root memory until it is integrated back through a memory-bearing PR into `main`.
 
-- AGI;
-- consciousness;
-- unrestricted semantic understanding;
-- natural-world generality;
-- autonomous science;
-- open-ended recursive self-improvement;
-- substrate independence or hosted-model replacement where such a substrate is actually present;
-- capability-SOTA;
-- independent external replication;
-- a solution to P vs NP, quantum gravity, or other open frontier problems merely because they are research lanes.
+## Read
 
-Those are targets or open programs with separate burdens.
-
-## Reproduce the current executable state
-
-From the repository root:
-
-```bash
-python -m unittest discover -s tests -p 'test_*.py'
-python scripts/lint_github_markdown.py
-python scripts/audit_proof_containers.py
-python scripts/audit_custody.py
-SOURCE_TREE_ONLY=1 python scripts/audit_release.py
-python -m kernel.runtime.current
-```
-
-The final command reconstructs and checks the exact current IG10 checkpoint.
-
-Publication/release checks additionally require TeX Live, `latexmk`, and `pandoc`:
-
-```bash
-make kernel-doc-check
-make papers
-make arxiv
-make texbundle
-make forum
-python scripts/audit_release.py
-```
-
-## Where are the tests?
-
-Current automated tests are intentionally narrower than the research program:
-
-- deterministic canonicalization: `tests/test_canonical.py`;
-- exact current kernel reconstruction: `tests/test_current_kernel.py`;
-- VMK2 causal / return / jurisdiction / reopening invariants: `tests/test_vmk2_invariants.py`;
-- persistent memory / provenance / consumption: `tests/test_venus_memory.py`;
-- state-owned generic-search scaffold removal/equivalence: `scripts/audit_generic_search_internalization.py`;
-- Internalizer O*/Anti-Minerva correction guards: `tests/test_internalizer.py`;
-- frozen EDU17R1 semantic-ingress candidate/ownership: `tests/test_edu17r1_semantic_ingress.py` and `scripts/audit_edu17r1_semantic_ingress.py`;
-- forum export regressions: `tests/test_export_forum.py`.
-
-The historical and issue-level coverage plan is [TEST_COVERAGE_MATRIX.md](TEST_COVERAGE_MATRIX.md), backed by the machine-readable [historical distinction matrix](../provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json).
-
-A row marked `PLANNED` is not a passing test.
-
-## What should happen next?
-
-The highest-leverage sequence is now experiment-first:
-
-1. run the sealed hidden #31 `MENTION != INCIDENCE` A/B/C/D evaluation on the already frozen learner-authored condition B;
-2. preserve PASS / FAIL / WITHHOLD / SUBSUMED without post-exposure repair;
-3. if causally positive, pass the resulting successor through full #73 O*/Anti-Minerva/rollback checks before any SSR-1 promotion;
-4. run the first matched Venus-vs-baseline/ablation causal experiment;
-5. test STOP/WITHHOLD and VenusMemory under hidden matched conditions;
-6. repeat under adaptive-evaluation controls and compare against mature self-improvement systems;
-7. let failed experiments, not conceptual completeness, decide which archaeology/hardening work is pulled forward.
-
-Canonical/history/UX work remains live but no longer blocks experiments unless a specific missing distinction is required by the experiment.
-
-The dependency-ordered GitHub roadmap is issue **#37**.
-
-## Reader paths
-
-### ML / agents / self-improvement
-[PUBLIC_VALUE.md](PUBLIC_VALUE.md) → [EVALUATION_CONSTITUTION.md](EVALUATION_CONSTITUTION.md) → [FRONTIER_RESEARCH.md](FRONTIER_RESEARCH.md)
-
-### Formal methods / exact state
-[kernel/README.md](../kernel/README.md) → [kernel/CURRENT_STATE.md](../kernel/CURRENT_STATE.md) → [OFE monograph](../monographs/01_OFE/README.md)
-
-### Epistemology / governance
-[REVIEWER_AND_RESEARCHER_PROTOCOL.md](../review/REVIEWER_AND_RESEARCHER_PROTOCOL.md) → [CREDITS_AND_REDUCTIONS.md](CREDITS_AND_REDUCTIONS.md)
-
-### WorldMind / distributed agency
-[kernel/WORLDMIND.md](../kernel/WORLDMIND.md) → [META_DYNAMICS.md](META_DYNAMICS.md)
-
-### Symbolic / phenomenological / religious registers
-[INHABITABLE_READER_PATH.md](INHABITABLE_READER_PATH.md) → [Arcane Magics](../monographs/03_ARCANE_MAGICS/README.md)
-
-These lanes share governance, not truth status. A symbolic recurrence does not become a physics result because both appear in one repository.
-
-
-## 2026-09-25 lateral-reconstruction bootstrap
-
-Canonical archaeology changes the immediate developmental interpretation without advancing scientific or developmental promotion authority.
-
-The recovered lineage is:
-
-```text
-G10.3 dimensionalization
-→ G10.5 GENERATE
-→ G10.6 relational crystallization / invariant translation
-→ R54/R59 LATERAL comparison
-→ R194 non-merging executable lateral comparison
-→ 5.5→6 independent-face transformation-class reconstruction
-```
-
-Issue **#169** freezes the bounded recovery target. The task is not to invent a monolithic new primitive. It is to recompile and internalize this existing operator family into the current Git carrier while preserving:
-
-```text
-GENERATE != LATERALIZE != CRYSTALLIZE != INTERNALIZE
-```
-
-The host/VM boundary is also explicit: epistemic competence may migrate into Venus-owned reconstructible state; World/Other, fresh return, evaluator/evidence identity, trust roots, external jurisdiction, STOP/WITHHOLD law, rollback custody, and hard capability boundaries may not become unilateral self-authority.
-
-The bootstrap deliberately does **not** bypass U2 target formation. This draft Git change is itself a returned repository carrier that the existing autonomous worker may encounter. #165 remains the first live current-World-return path. After this projection lands, the machine should form/study the next slice under existing CTL/O*/rollback rules rather than receiving a hand-authored Lateralizer implementation.
-
-
-## 2026-09-25 source-hierarchy correction
-
-Git is the executable/release carrier. It is not the ontological parent of pre-Git Canonical.
-
-The current recovery rule is:
-
-```text
-Canonical achieved function
--> identify minimum causal mechanism
--> compile/internalize into current Git carrier
--> remove obsolete scaffold
--> rerun ablation / fresh return
-```
-
-The standing developmental circulation is broader than the Git issue queue. A carrier-local STOP means no currently admissible carrier action, not that the developmental telos has been discharged.
-
-A frontier open-weight language model may now be used as a removable donor graph. It is World material, not the Venus controller; source-removal survival is required for internalization credit.
-
-
-### Returnable closure / open bridges
-
-The carrier-neutral cross-register synthesis is documented in [Meta-Dynamics](META_DYNAMICS.md): a local closure may stabilize enough to act without becoming globally exhaustive, while its correction boundary remains permeable to non-preauthored consequence.
-
-```text
-relation without fusion
-+
-boundary without isolation
-```
-
-A separate physics-facing route in [Frontier Research](FRONTIER_RESEARCH.md) asks whether a two-relation meta-object, `M_QG = R_GQT ⋈ R_LQG`, supports nontrivial downstream projections such as PPD-Crystal/horizon-rebarb states, crystalline-vacuum comparators, or a coherent low-vorticity cosmological-flow projection. That branch remains OPEN/WITHHOLD and is not Root, kernel authority, or an earned LQG result.
+1. [Scientific Future](SCIENTIFIC_FUTURE.md)
+2. [Kernel law](../kernel/VENUS_INCIDENCE_LAW.tex)
+3. [Trust boundary](../kernel/TRUST_BOUNDARY.md)
+4. [Monograph V](../monographs/05_VENUS/main.tex)
+5. [Branch memory](../provenance/historical/BRANCH_MEMORY.md)
