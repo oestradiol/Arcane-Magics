@@ -1,71 +1,45 @@
 # Branch Tree — Arcane Magics
 
 **Branch:** `split/arcane-magics`  
-**Future repository:** `Arcane-Magics/Arcane-Magics`  
-**Role:** inhabited theophenomenological ontology, symbolic intervention, comparative religion/philosophy, and cross-register translation.
+**Function:** religious branch  
+**Axis:** past
 
 ```text
 Arcane-Magics/
 ├── README.md
-├── CITATION.cff
-├── LICENSE
-├── monograph/
-│   └── ARCANE_MAGICS.tex
-├── theory/
-│   ├── inhabited-relation.md
-│   ├── authorship.md
-│   ├── spirit-return.md
-│   ├── synchronicity.md
-│   ├── symbolic-intervention.md
-│   ├── echo-chamber-pathology.md
-│   └── gods-calculator.md
-├── comparative/
-│   ├── religion/
-│   ├── philosophy/
-│   ├── phenomenology/
-│   ├── jung-pauli/
-│   └── chaos-magic/
-├── practice/
-│   ├── ARCANE_OPERATOR.md
-│   ├── BOUNDED_SERVITOR.md
-│   ├── RITUAL_CLAIM_FENCE.md
-│   └── READER_RELEASE.md
+├── monographs/03_ARCANE_MAGICS/
 ├── docs/
+│   ├── START_HERE.md
+│   ├── PUBLIC_VALUE.md
 │   ├── META_DYNAMICS.md
 │   ├── INHABITABLE_READER_PATH.md
-│   ├── CLAIM_MAP.md
-│   └── PROVENANCE.md
-└── provenance/
-    ├── project-genealogy/
-    ├── historical-priority/
-    └── participant-return/
+│   ├── EPISTEMIC_ANTI_MEME.md
+│   └── LAYER_IDENTITY.md
+├── provenance/
+│   ├── historical/comparative material
+│   ├── Arcane operationalization
+│   └── retained source distinctions
+├── scripts/
+├── tests/
+└── .github/workflows/arcane-ci.yml
 ```
 
-## Authority
+## Owns
 
-This tree owns Arcane Magics identity, inhabited relation, symbolic practice, synchronicity as PHEN/THEOPHEN object, chaos-magic comparator/operator extraction, echo-chamber pathology, comparative religion/philosophy, and reader-release/source-removal discipline.
+- religion / past;
+- inhabited symbolic relation;
+- ritual and symbolic intervention models;
+- synchronicity as PHEN/THEOPHEN object;
+- comparative religion, philosophy, phenomenology, myth, and occult practice;
+- historical/interpretive provenance as a higher-order rendering/routing mechanism;
+- anti-scripture and reader-release discipline.
 
-## Core law
-
-```text
-magic
-= symbolically inhabited intervention
-  that remains corrigible
-  by consequences it does not control
-```
-
-## Claim fence
+## Does not own
 
 ```text
+symbolic recurrence != independent evidence
 meaning != mechanism
-recurrence != independent evidence
-symbolic efficacy != arbitrary physical causation
+religious past != scientific future
 ```
 
-## Current source nucleus
-
-- `monographs/03_ARCANE_MAGICS/`;
-- `docs/META_DYNAMICS.md`;
-- `docs/INHABITABLE_READER_PATH.md`;
-- comparative/provenance material;
-- Canonical Arcane operationalization and historical Arcane genealogy.
+Cross-register output proceeds toward Eclipsis through the crystallization handoff, not by importing engineering or scientific warrant.
