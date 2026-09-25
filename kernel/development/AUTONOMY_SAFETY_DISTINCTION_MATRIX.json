@@ -618,7 +618,7 @@
       "id": "LOCAL_EXECUTION_NOT_GITHUB_WORLD_RETURN",
       "tests": [
         "tests/test_git_world_return.py",
-        "tests/test_autonomous_evidence.py"
+        "tests/test_autonomous_research_proposal.py"
       ],
       "invariant": "local execution/build/check receipts cannot satisfy a GitHub World-return request or mint independent returned consequence"
     },
