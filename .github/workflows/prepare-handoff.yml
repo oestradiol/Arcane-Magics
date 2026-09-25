@@ -38,7 +38,7 @@ jobs:
         run: |
           edge="${SOURCE_REF}->${TARGET_REF}"
           case "$edge" in
-            split/ofe->split/venus|split/eclipsis->split/venus|split/arcane-magics->split/venus|split/minerva->split/venus|split/venus->main) ;;
+            "split/ofe->split/venus"|"split/eclipsis->split/venus"|"split/arcane-magics->split/venus"|"split/minerva->split/venus"|"split/venus->main") ;;
             *)
               echo "Illegal cross-register edge: $edge"
               exit 1
