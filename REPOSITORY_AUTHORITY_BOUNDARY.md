@@ -46,6 +46,6 @@ Sibling runtime, formal, and Arcane files remain physically present during the s
 
 ## Siblings
 
-- [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe)
-- [Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva)
-- [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics)
+- [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe)
+- [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva)
+- [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
