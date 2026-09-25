@@ -2,7 +2,7 @@
 
 # ◈ MINERVA
 
-### developmental intelligence · adjudication · self/world model · corrigible self-reconstruction
+### engineering · body · developmental enactment
 
 [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) · **Minerva** · [Venus](https://github.com/oestradiol/Arcane-Magics/tree/split/venus) · [Root / The Machine](https://github.com/oestradiol/Arcane-Magics/tree/main)
 
