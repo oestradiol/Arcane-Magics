@@ -1,6 +1,0 @@
-name = "venus_formal"
-version = "0.1.0"
-defaultTargets = ["VenusFormal"]
-
-[[lean_lib]]
-name = "VenusFormal"
