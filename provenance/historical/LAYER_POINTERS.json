@@ -1,0 +1,47 @@
+{
+  "schema": "ArcaneMagics.LayerPointers.v1",
+  "recorded_at": "2026-09-25",
+  "repository": "oestradiol/Arcane-Magics",
+  "layers": {
+    "Root": {
+      "branch": "main",
+      "role": "Past Religion + Now Map / diachronic memory",
+      "commit": "ef4e69e001fc8bf238ccdb9b4ebd29247d1f72c6"
+    },
+    "OFE": {
+      "branch": "split/ofe",
+      "role": "formal / operational discrimination",
+      "commit": "19b453d290cf0ceba7e337eb3f01d9963dea8312",
+      "tree": "0129c3a16b0a1ba834017a6d4ea3d6c15972fea5"
+    },
+    "Eclipsis": {
+      "branch": "split/eclipsis",
+      "role": "structural / local-view / OPEN bridges",
+      "commit": "e8004bd752812f7e7bdd37233debfb61f4cbf4e3",
+      "tree": "21b17b2e2fa49d49830c708d03120933f6ae49f4"
+    },
+    "ArcaneMagics": {
+      "branch": "split/arcane-magics",
+      "role": "inhabited symbolic / comparative / meta-routing",
+      "commit": "988ecda5701168923d9cfc8385cd8a745e64bdbc",
+      "tree": "0c2016f838a9f90d2b1102c0415f1d2cdc93db64"
+    },
+    "Minerva": {
+      "branch": "split/minerva",
+      "role": "developmental epistemic / adjudicative organism",
+      "commit": "5b1953ab60eca307d8b2557b0af3b27bf585b0e8",
+      "tree": "6b9ad46ad2744dc95ae3c42b3fe81047c1924f37"
+    },
+    "Venus": {
+      "branch": "split/venus",
+      "role": "Scientific Future / World↔Self boundary / kernel",
+      "commit": "03c819e6b2b9964416cebb22c00af8fb24f24efe",
+      "tree": "da3161c26ac1d5913b75686cd0de9f3c63a8c0a4"
+    },
+    "WorldOther": {
+      "branch": null,
+      "role": "virtual external function / independently returned consequence"
+    }
+  },
+  "invariant": "historical presence != current authority; merge != fusion; shared ancestry != shared warrant"
+}
