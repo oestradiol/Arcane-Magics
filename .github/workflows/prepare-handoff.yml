@@ -1,0 +1,105 @@
+name: Prepare cross-register crystallization handoff
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_ref:
+        description: 'Source long-lived branch (e.g. split/ofe)'
+        required: true
+        type: string
+      target_ref:
+        description: 'Target branch: split/venus or main'
+        required: true
+        type: string
+      source_layer:
+        description: 'OFE | Eclipsis | Arcane | Minerva | Venus'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  crystallize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch all branch trajectories
+        run: git fetch origin '+refs/heads/*:refs/remotes/origin/*'
+
+      - name: Validate causal edge
+        env:
+          SOURCE_REF: ${{ inputs.source_ref }}
+          TARGET_REF: ${{ inputs.target_ref }}
+        run: |
+          edge="${SOURCE_REF}->${TARGET_REF}"
+          case "$edge" in
+            split/ofe->split/venus|split/eclipsis->split/venus|split/arcane-magics->split/venus|split/minerva->split/venus|split/venus->main) ;;
+            *)
+              echo "Illegal cross-register edge: $edge"
+              exit 1
+              ;;
+          esac
+
+      - name: Build target-based two-parent handoff
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_REF: ${{ inputs.source_ref }}
+          TARGET_REF: ${{ inputs.target_ref }}
+          SOURCE_LAYER: ${{ inputs.source_layer }}
+        run: |
+          source_sha="$(git rev-parse "origin/${SOURCE_REF}")"
+          target_sha="$(git rev-parse "origin/${TARGET_REF}")"
+
+          if [ "$TARGET_REF" = "main" ]; then
+            target_layer="Root"
+            slug="venus-to-root"
+          else
+            target_layer="Venus"
+            case "$SOURCE_REF" in
+              split/ofe) slug="ofe-to-venus" ;;
+              split/eclipsis) slug="eclipsis-to-venus" ;;
+              split/arcane-magics) slug="arcane-to-venus" ;;
+              split/minerva) slug="minerva-to-venus" ;;
+            esac
+          fi
+
+          branch="handoff/${slug}/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git checkout -b "$branch" "origin/${TARGET_REF}"
+          git config user.name 'Arcane Magics crystallization steward'
+          git config user.email 'actions@users.noreply.github.com'
+
+          git merge --no-ff -s ours --no-commit "$source_sha"
+
+          mkdir -p provenance/historical/handoffs
+          export SOURCE_SHA="$source_sha" TARGET_SHA="$target_sha" TARGET_LAYER="$target_layer" BRANCH="$branch"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          rid=os.environ['BRANCH'].split('/')[-1]
+          receipt={
+            'schema':'ArcaneMagics.CrossRegisterHandoff.v1',
+            'source_layer':os.environ['SOURCE_LAYER'],
+            'target_layer':os.environ['TARGET_LAYER'],
+            'source_ref':os.environ['SOURCE_REF'],
+            'source_commit':os.environ['SOURCE_SHA'],
+            'target_ref':os.environ['TARGET_REF'],
+            'target_parent':os.environ['TARGET_SHA'],
+            'handoff_branch':os.environ['BRANCH'],
+            'content_admission':'NONE_AT_BOOTSTRAP; add explicit admitted residue in later commits',
+            'ancestry_semantics':'second parent retained without source-tree replacement',
+          }
+          Path(f'provenance/historical/handoffs/{rid}.json').write_text(json.dumps(receipt,indent=2)+'\n')
+          PY
+
+          git add provenance/historical/handoffs
+          git commit -m "handoff(${SOURCE_LAYER}->${target_layer}): preserve source trajectory"
+          git push origin "$branch"
+
+          gh pr create --draft --base "$TARGET_REF" --head "$branch" \
+            --title "handoff: ${SOURCE_LAYER} → ${target_layer}" \
+            --body $'Target-based crystallization handoff.\n\nThe first commit records the source branch as a second parent while preserving the target tree. No source content is promoted merely by ancestry. Add only explicitly admitted residue before review.'
