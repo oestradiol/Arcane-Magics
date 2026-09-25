@@ -4,7 +4,7 @@
 
 ### math & logics · spirit · structural relation
 
-[Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) · [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · **Eclipsis** · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
+[Routing / main](https://github.com/oestradiol/Arcane-Magics/tree/main) · [Religion / past](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) · [Math & logics / spirit](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Engineering / body](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva) · [Self & World / model](https://github.com/oestradiol/Arcane-Magics/tree/split/venus) · [Science / future](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe)
 
 <br>
 
@@ -77,9 +77,9 @@ QG bridge
 
 A bridge is rendered as:
 
-[
-A dashrightarrow B
-]
+```text
+A - - - > B   [OPEN bridge]
+```
 
 until states, observables, dynamics, composition, boundary data, and a discriminator are earned.
 
@@ -88,7 +88,7 @@ The dashed arrow is part of the UI, not decoration. It tells the reader where th
 ## Sibling interfaces
 
 - [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) supplies operational tests for whether Eclipsis distinctions actually matter.
-- [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) supplies executable return/reopening cases but no physics warrant.
+- [Minerva / engineering](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva) supplies executable return/reopening cases but no physics warrant.
 - [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) supplies inhabited symbolic/theophenomenological material without automatic mechanism transfer.
 
 ## Temporary-carrier note
@@ -97,4 +97,4 @@ Files belonging to siblings remain physically present during the split. Eclipsis
 
 ---
 
-<sub>Future repository: `Arcane-Magics/Eclipsis`.</sub>
+<sub>Current function: math & logics / spirit.</sub>
