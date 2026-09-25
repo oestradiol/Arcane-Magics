@@ -56,6 +56,6 @@ Engineering/formal/Eclipsis material remains in this branch because all four fut
 
 ## Siblings
 
-- [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe)
-- [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis)
-- [Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva)
+- [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe)
+- [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis)
+- [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva)
