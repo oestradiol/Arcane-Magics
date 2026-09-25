@@ -1,0 +1,89 @@
+name: Minerva global developmental worker
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '43 7 * * *'
+
+permissions:
+  contents: write
+  issues: read
+  pull-requests: write
+  actions: read
+
+concurrency:
+  group: minerva-global-worker
+  cancel-in-progress: false
+
+jobs:
+  inspect-and-propose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: split/minerva
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch full repository trajectory
+        run: |
+          git fetch origin '+refs/heads/*:refs/remotes/origin/*'
+          git branch -r
+
+      - name: Verify Minerva local machine
+        run: |
+          python -m unittest discover -s tests -p 'test_*.py'
+          python scripts/audit_autonomy_safety_matrix.py
+          test -f docs/SELF_MODEL.md
+          test -f docs/GLOBAL_REPOSITORY_OPERATION.md
+
+      - name: Snapshot repository World model
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/minerva
+          git for-each-ref --format='%(refname:short) %(objectname)' refs/remotes/origin > /tmp/minerva/branches.txt
+          gh pr list --state all --limit 200 --json number,title,state,headRefName,baseRefName,mergedAt,mergeCommit > /tmp/minerva/prs.json
+          gh run list --limit 100 --json databaseId,workflowName,headBranch,headSha,status,conclusion,event,createdAt > /tmp/minerva/actions.json
+          gh issue list --state open --limit 200 --json number,title,updatedAt > /tmp/minerva/issues.json
+
+      - name: Form bounded Minerva repository proposal
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/run_venus_autonomous_cycle.py \
+            --issues /tmp/minerva/issues.json \
+            --prs /tmp/minerva/prs.json \
+            --history-prs /tmp/minerva/prs.json \
+            --history-issues /tmp/minerva/issues.json \
+            --roadmap docs/ISSUE_ROADMAP.md \
+            --policy kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json \
+            --learning-state kernel/development/AUTONOMOUS_LEARNING_STATE.json \
+            --learning-output /tmp/minerva/LEARNING_STATE.json \
+            --developmental-parent-state kernel/development/EDU16_RECONSTRUCTED_STATE.json \
+            --current-state-receipt kernel/custody/R226_CURRENT_STATE_RECEIPT.json \
+            --problem-output /tmp/minerva/FORMED_PROBLEM.json \
+            --output /tmp/minerva/CYCLE.json
+
+      - name: Freeze proposal branch and route to Venus
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          branch="minerva/autonomous-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git checkout -b "$branch"
+          mkdir -p provenance/minerva-cycles
+          cp /tmp/minerva/CYCLE.json provenance/minerva-cycles/${GITHUB_RUN_ID}.json
+          cp /tmp/minerva/FORMED_PROBLEM.json provenance/minerva-cycles/${GITHUB_RUN_ID}-problem.json
+          cp /tmp/minerva/LEARNING_STATE.json kernel/development/AUTONOMOUS_LEARNING_STATE.json
+          git config user.name 'Minerva developmental worker'
+          git config user.email 'actions@users.noreply.github.com'
+          git add provenance/minerva-cycles kernel/development/AUTONOMOUS_LEARNING_STATE.json
+          git commit -m "minerva: freeze global repository proposal ${GITHUB_RUN_ID}"
+          git push origin "$branch"
+          gh pr create --draft --base split/venus --head "$branch" \
+            --title "minerva: candidate future ${GITHUB_RUN_ID}" \
+            --body $'Minerva formed this candidate from repository-global observation.\n\nIt targets **split/venus**, not Root. Venus must supply the future-facing boundary, discriminator, and returned consequence before any Root integration.\n\nThis PR cannot self-promote.'
