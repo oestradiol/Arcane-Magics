@@ -137,14 +137,14 @@ Recovery implementation status:
 
 ```text
 founder/source-ablation equivalence                 ADMITTED
-problem-specific live external-return intake       ADMITTED PATH
+evaluator-assisted problem-specific return intake ADMITTED PATH (not GitHub World return)
 repeated finite prospective recurrence battery     PASS (2 accepted + 1 retained rejection)
 ```
 
 Remaining evidence debt:
 
 ```text
-actual independent live recurrence return
+#165 post-freeze changed GitHub repository-state World return
 post-freeze held-out evaluation of that real candidate
 external CTL/O* admission or retained rejection + rollback
 repeated real-world/open-distribution recurrence under adaptive controls
