@@ -1,138 +1,47 @@
-# Contributing to Venus-Minerva
+# Contributing to Root / The Machine
 
-Contributions are welcome from people who want to improve the mathematics, engineering, reproducibility, provenance, criticism, or public accessibility of the project.
+Root is the routing layer of the Arcane Magics repository body. Most substantive work belongs first in a specialized branch.
 
-You do **not** need to accept the project's terminology or larger interpretations to contribute.
+## Route by function
 
-AI-assisted work follows `AGENTS.md`: scope the change, re-read the resulting state, report the tests actually run, and do not create issue/PR volume as a proxy for progress. External model output does not become Venus learner-owned development by being committed to Git.
+- religion / past → `split/arcane-magics`
+- math & logics / spirit → `split/eclipsis`
+- engineering / body → `split/minerva`
+- Self & World / model → `split/venus`
+- science / future → `split/ofe`
+- routing / map-territory / cross-register memory → `main`
 
-## High-value contributions
+## High-value Root contributions
 
-Especially useful:
+- repair the branch map;
+- preserve a cross-register handoff;
+- detect a register/authority collapse;
+- repair historical ancestry or branch pointers;
+- improve routing UI/UX;
+- expose a contradiction between branch-local claims without stealing ownership of either claim.
 
-- reproduce an experiment;
-- find a bug;
-- formalize a small theorem;
-- supply a counterexample;
-- show that a project construct reduces to a mature existing formalism;
-- improve a comparator or null model;
-- trace a provenance error;
-- improve documentation for an outsider;
-- challenge a claimed dependency;
-- propose a tighter discriminator;
-- independently reimplement a bounded result.
+## Integration rule
 
-A successful deletion or narrowing is progress.
+Long-lived specialized branches are pruned to their own functions. Do not merge them directly into one another and let Git interpret absent files as deletions.
 
-## Before opening a large PR
-
-Prefer an issue for:
-
-- new research lanes;
-- cross-register promotions;
-- new physical interpretations;
-- new AGI/consciousness claims;
-- large terminology changes;
-- changes that affect current developmental authority.
-
-Small corrections, tests, formalizations, and documentation fixes can go directly to a PR.
-
-## Research contribution format
-
-For a new bounded result, include:
-
-1. **Parent** — exact commit / receipt / state.
-2. **Question** — frozen before the result.
-3. **Scope** — what register and target are actually being tested.
-4. **Comparator** — null, baseline, rival, or mature substitute; separately type whether it is a historical predecessor, technical donor, comparative recurrence, or substitution target.
-5. **Evidence budget** — what evidence is admitted.
-6. **Result** — PASS / FAIL / WITHHOLD / mature reduction / other typed outcome.
-7. **Dependency-local update** — exactly what changes.
-8. **Claim fence** — what the result does not establish.
-9. **Reproduction** — commands, fixtures, or proof checker.
-
-## Commit style
-
-Prefer one causal change per commit.
-
-Good:
+Use target-based crystallization handoffs that preserve source ancestry as a second parent while admitting only explicit residue.
 
 ```text
-formal: add section existence counterexample
-test: preserve EDU17 provenance failure
-docs: expose current developmental boundary
-research: freeze residual-incidence discriminator
+source trajectory
+-> handoff
+-> target-local validation
+-> next functional layer
+-> Root routing memory
 ```
-
-Avoid commits that simultaneously rewrite terminology, alter tests, reinterpret results, and promote conclusions.
-
-## Criticism protocol
-
-Please be direct and specific.
-
-Useful criticism identifies one or more of:
-
-- hidden premise;
-- invalid inference;
-- missing comparator;
-- unearned register crossing;
-- circular definition;
-- inadequate lower-bound argument;
-- provenance break;
-- unreproducible result;
-- mature comparator that substitutes the project construct at the declared task/index;
-- historical predecessor or technical donor whose credit/genealogy relation is misstated;
-- stronger ordinary explanation.
-
-The project explicitly prefers a correct negative result to a dramatic incorrect positive result.
 
 ## Truth-status discipline
 
-A result in one register does not automatically propagate to another.
-
-Examples:
-
-- FORM theorem does not establish PHYS identity.
-- ENG PASS does not establish AGI.
-- historical recurrence does not establish metaphysics.
-- symbolic usefulness does not establish mechanism.
-- analogy to P versus NP does not establish a complexity lower bound.
-
-See `PUBLICATION_CONSTITUTION.md`, `docs/CREDITS_AND_REDUCTIONS.md`, `docs/EARNED_MILESTONES.md`, and `docs/FRONTIER_RESEARCH.md`.
-
-## Humane interface check
-
-For reader-facing work, include at least one ordinary-language reconstruction of what the machinery means for an indexed participant or affected system.
-
-Useful prompts:
-
-- what is being received?
-- where does it land?
-- what action or continuation changes?
-- what can return independently?
-- who pays the maintenance cost?
-- can another center disagree, refuse, fork, or exit?
-- what remains stable, and what is allowed to reopen?
-
-Do not invent personal stories merely to make a theory feel warm. The point is operational legibility, not sentimentality.
-
-See `docs/INHABITABLE_READER_PATH.md`.
-
-## Reproducibility
-
-Start with:
-
-```bash
-make audit
-make papers
+```text
+religious meaning != scientific mechanism
+formal spirit != engineering implementation
+engineering success != scientific truth
+Self/World model != World
+routing map != territory
 ```
 
-The live executable state lives under `kernel/`; developmental ancestry and receipts live under `provenance/`; historical R194 runtime code is preserved under `provenance/historical-runtime/R194/`.
-
-If your result depends on a generated artifact, include enough source and commands for another person to regenerate it.
-
-## Funding
-
-If you want to support compute, publication, or maintenance without contributing code, GitHub Sponsors is enabled for this repository.
-
-Funding does not buy claim authority, acceptance, or favorable review.
+Run `make audit` before declaring a Root routing change complete.
