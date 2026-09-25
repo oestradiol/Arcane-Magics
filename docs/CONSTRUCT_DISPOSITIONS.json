@@ -99,6 +99,45 @@
       "evidence": [
         "kernel/runtime/vmk2.py"
       ]
+    },
+    {
+      "id": "ReturnableLocalClosure",
+      "status": "LIVE_RESIDUAL",
+      "scope": "carrier-neutral local closure + correction boundary + reopening",
+      "reduction_issue": 9,
+      "mature_substitute": null,
+      "independent_residual": "OPEN",
+      "genealogy_preserved": true,
+      "evidence": [
+        "docs/META_DYNAMICS.md",
+        "kernel/VENUS_INCIDENCE_LAW.tex"
+      ]
+    },
+    {
+      "id": "OpenBridge",
+      "status": "OPEN_FRONTIER",
+      "scope": "typed consequence-relevant relation without earned closure",
+      "reduction_issue": 8,
+      "mature_substitute": null,
+      "independent_residual": "UNTESTED",
+      "genealogy_preserved": true,
+      "evidence": [
+        "docs/META_DYNAMICS.md",
+        "monographs/02_ECLIPSIS/main.tex"
+      ]
+    },
+    {
+      "id": "VR_TO_QuantumBridge",
+      "status": "OPEN_FRONTIER",
+      "scope": "THEO/MODEL bridge; PHYS OPEN",
+      "reduction_issue": 22,
+      "mature_substitute": null,
+      "independent_residual": "UNTESTED",
+      "genealogy_preserved": true,
+      "evidence": [
+        "monographs/02_ECLIPSIS/main.tex",
+        "docs/FRONTIER_RESEARCH.md"
+      ]
     }
   ]
 }
