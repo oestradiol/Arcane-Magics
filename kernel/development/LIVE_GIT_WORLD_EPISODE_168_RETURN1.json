@@ -1,0 +1,51 @@
+{
+  "schema": "Venus.LiveGitWorldEpisodeResult.v0.1",
+  "issue": 165,
+  "pr": 168,
+  "prefreeze_commit": "f9525ced739845eb2f559bf580b17bebbb02eca7",
+  "prefreeze_committed_at": "2026-09-25T00:33:20Z",
+  "world_return": {
+    "return_id": "fba3e1dda241fc9adcf1e4d39258f3d5d1edb46e5923f3bd57ed4cabafe05610",
+    "schema": "Venus.GitWorldReturn.v0.1",
+    "request_id": "b7a39b25342e90f00d258e4d8d46f46667c79324ac4a9e2456b86e77c3c9339c",
+    "problem_id": "3420d72bc2abe0f80b5f181b2bd0e5393fede744b21ca0a8f542c1134bf901dc",
+    "source_id": "GITHUB_REPOSITORY_STATE",
+    "observed_snapshot_digest": "fcffc48882b27bd49e747e1efbed2023a968da85e5685702597047a7eab02f71",
+    "observed_at": "2026-09-25T00:33:47Z",
+    "changed_fields": ["check_status", "check_conclusion"],
+    "before": {
+      "head_sha": "7e83f6807d88b0332a6bb248a74de904edb0fd5c",
+      "merge_state": "UNSTABLE",
+      "updated_at": "2026-09-25T00:32:38Z",
+      "check_run_id": 36078024561,
+      "check_status": "in_progress",
+      "check_conclusion": null
+    },
+    "after": {
+      "head_sha": "7e83f6807d88b0332a6bb248a74de904edb0fd5c",
+      "merge_state": "UNSTABLE",
+      "updated_at": "2026-09-25T00:32:38Z",
+      "check_run_id": 36078024561,
+      "check_status": "completed",
+      "check_conclusion": "cancelled"
+    },
+    "independent_world_observation": true,
+    "promotion_authority": false
+  },
+  "resolution": {
+    "resolution_id": "2484143394ffe0071ec58b48463f971a5eeddfb5bfbcd972d265b886c5ba9246",
+    "schema": "Venus.GitProblemResolution.v0.1",
+    "problem_id": "3420d72bc2abe0f80b5f181b2bd0e5393fede744b21ca0a8f542c1134bf901dc",
+    "request_id": "b7a39b25342e90f00d258e4d8d46f46667c79324ac4a9e2456b86e77c3c9339c",
+    "return_id": "fba3e1dda241fc9adcf1e4d39258f3d5d1edb46e5923f3bd57ed4cabafe05610",
+    "disposition": "WITHHOLD_CHANGED_BUT_UNRESOLVED",
+    "remaining_rival_ids": ["r0", "r1"],
+    "external_return_consumed": true,
+    "promotion_authority": false
+  },
+  "causal_order_valid": true,
+  "world_return_after_prefreeze": true,
+  "disposition": "WITHHOLD_CHANGED_BUT_UNRESOLVED",
+  "note": "The frozen check run was cancelled after the branch advanced. This is a genuine later GitHub observation but does not decide the prefrozen continuation rivals, so both are retained.",
+  "promotion_authority": false
+}
