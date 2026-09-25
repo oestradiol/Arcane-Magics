@@ -1,4 +1,4 @@
-name: Venus Self / World model gate
+name: Venus · Self / World model gate
 
 on:
   pull_request:
@@ -12,10 +12,10 @@ permissions:
   pull-requests: read
 
 jobs:
-  model-boundary:
+  venus-model-boundary:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -30,20 +30,14 @@ jobs:
           esac
 
       - name: Self / World boundary checks
-        run: |
-          test -f kernel/VENUS_INCIDENCE_LAW.tex
-          test -f provenance/historical/BRANCH_MEMORY.md
-          grep -q 'Self & World' docs/LAYER_IDENTITY.md
-          grep -q 'model(Other) != Other' README.md
-          grep -q 'Self provenance' docs/SELF_WORLD_MODEL.md
+        run: make boundary
 
       - name: Build Monograph V
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends texlive-latex-base texlive-latex-recommended texlive-latex-extra lmodern
-          cd monographs/05_VENUS
-          pdflatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
-          pdflatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
+          make paper
 
-      - name: Model is not World
-        run: echo 'SELF_WORLD_MODEL != World / Other != Self / World model verdict'
+      - name: Noncollapse receipt
+        run: |
+          printf '%s\n'             'model(World) != World'             'model(Other) != Other'             'prediction != return'             'NETWORK / WWW != World / Other'
