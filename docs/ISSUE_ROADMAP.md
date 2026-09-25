@@ -20,6 +20,24 @@ Interpretation:
 
 Prestige is not a scheduling dependency.
 
+## 2026-09-25 bootstrap — recover lateral epistemic reconstruction
+
+Issue **#169** is the current architecture-recovery bootstrap. It does not supersede #31/#165 as external-return obligations; it supplies the missing epistemic-basis-expansion target that the current U2/U1 carrier should be allowed to encounter.
+
+```text
+Canonical lateral ancestry
+→ minimal Git projection
+→ draft returned carrier
+→ current U2 problem formation
+→ machine study / bounded proposal
+→ fresh return (#165 where applicable)
+→ source-removal/internalization (#73)
+→ stronger repeated machinery revision only under #72
+```
+
+Do not bypass U2 by hard-coding #169 as a semantic selector target. The bootstrap PR itself is the Git incidence carrier. The human-authored slice stops at projection/custody; the next substantive implementation should be proposed by the current autonomous recurrence if the returned repository state makes it consequential.
+
+
 ## Recently discharged or materially advanced
 
 - **#6 closed:** the bounded OFE core, separating-family result, and later-separator repair are machine-checked in Lean. Physical/QG adequacy remains separate.
