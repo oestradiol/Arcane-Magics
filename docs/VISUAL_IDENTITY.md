@@ -1,44 +1,34 @@
-# Venus-Minerva Visual Identity & Interface Constitution
+# Minerva Visual Identity & Interface Constitution
 
-## Responsibility first
+## Character
 
-The interface should feel like an **instrument panel**, not a universal theory portal.
+Minerva should feel like an **adjudication chamber fused with a developmental lab**.
 
-### Visual language
+- graphite / ash — epistemic model
+- violet — Minerva-instance / adjudicative relation
+- blue — candidate / inference
+- teal — returned consequence
+- red — actual FAIL / invalid continuation
 
-- **Primary:** midnight / slate — `#111827`
-- **Signal:** electric blue — `#2563EB`
-- **Verified / return:** teal — `#0F766E`
-- **WITHHOLD / neutral:** gray — `#6B7280`
-- **Failure:** red only for actual FAIL / INVALID states
+Motif: **◈** — a differentiated center with an internal diagonal of judgment.
 
-Motif: **◇** — a bounded local center with an explicit edge.
+## UI priority
 
-## UI hierarchy
+1. current machine state;
+2. model / provenance;
+3. candidate continuation;
+4. evaluator / judge;
+5. returned consequence;
+6. PASS / FAIL / WITHHOLD;
+7. self-model reconstruction.
 
-Every top-level page should answer, in order:
+Never make the self-model fixed point look like a static creed.
 
-1. What can I run?
-2. What is current authority?
-3. What has actually been earned?
-4. What failed?
-5. What can still correct the system?
-6. Which sibling branch owns the theory I am about to wander into?
+## Permanent fences
 
-Prefer tables, status blocks, commands, and dependency paths over atmospheric prose.
-
-## Labels
-
-Use these prominently:
-
-`EXECUTABLE` · `VERIFIED` · `WITHHOLD` · `INVALID` · `TARGET`
-
-Never use decorative certainty.
-
-## Navigation rule
-
-Persistent sibling bar:
-
-**Venus-Minerva** · [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics)
-
-Venus pages may link deeply into siblings, but sibling claims must retain their register.
+```text
+Perspective != Observer
+model(World) != World
+self-implication != self-certification
+re-derivation != repetition
+```
