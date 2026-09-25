@@ -3,7 +3,7 @@
 **Status:** live methodology / repository governance  
 **Date:** 2026-09-24
 
-Venus-Minerva keeps five questions separate:
+Arcane Magics keeps five questions separate:
 
 ```text
 project causal derivation
