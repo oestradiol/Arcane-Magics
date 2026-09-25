@@ -1,4 +1,4 @@
-name: Venus Scientific Future gate
+name: Venus Self / World model gate
 
 on:
   pull_request:
@@ -11,56 +11,31 @@ permissions:
   contents: read
   pull-requests: read
 
-concurrency:
-  group: venus-future-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
-  admissibility:
+  model-boundary:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Require known source layer
+      - name: Require Minerva crystallization for cross-layer PR
         if: github.event_name == 'pull_request'
         env:
           HEAD_REF: ${{ github.head_ref }}
         run: |
           case "$HEAD_REF" in
-            handoff/ofe-to-venus/*|handoff/eclipsis-to-venus/*|handoff/arcane-to-venus/*|handoff/minerva-to-venus/*|venus/*) ;;
-            *)
-              echo "Venus accepts cross-register candidates only through target-based handoff/*-to-venus/* branches (or Venus-local work)."
-              echo "Observed head: $HEAD_REF"
-              exit 1
-              ;;
+            handoff/minerva-to-venus/*|venus/*) ;;
+            *) echo "Venus accepts cross-layer work through handoff/minerva-to-venus/*"; exit 1 ;;
           esac
 
-      - name: Verify crystallization receipt
-        if: github.event_name == 'pull_request' && startsWith(github.head_ref, 'handoff/')
+      - name: Self / World boundary checks
         run: |
-          test -d provenance/historical/handoffs
-          test "$(find provenance/historical/handoffs -maxdepth 1 -name '*.json' | wc -l)" -ge 1
-
-      - name: Compile current kernel law
-        run: |
-          python -m py_compile kernel/runtime/*.py || true
           test -f kernel/VENUS_INCIDENCE_LAW.tex
           test -f provenance/historical/BRANCH_MEMORY.md
-          grep -q 'Scientific Future' README.md
-          grep -q 'prediction != return' README.md
-
-      - name: Boundary / return guards
-        run: |
+          grep -q 'Self & World' docs/LAYER_IDENTITY.md
+          grep -q 'model(Other) != Other' README.md
           grep -q 'Self provenance' docs/SCIENTIFIC_FUTURE.md
-          grep -q 'independent return' docs/SCIENTIFIC_FUTURE.md
-          grep -q 'candidate success != promotion' docs/SCIENTIFIC_FUTURE.md
-          grep -q 'cannot promote its own prediction' REPOSITORY_AUTHORITY_BOUNDARY.md
 
       - name: Build Monograph V
         run: |
@@ -70,12 +45,5 @@ jobs:
           pdflatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
           pdflatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
 
-  future-result-fence:
-    needs: [admissibility]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Do not confuse CI with World return
-        run: |
-          echo 'CI_PASS != independent World return != Root promotion'
-          test -f docs/SCIENTIFIC_FUTURE.md
+      - name: Model is not World
+        run: echo 'SELF_WORLD_MODEL != World / Other != scientific future verdict'
