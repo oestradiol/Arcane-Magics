@@ -308,3 +308,44 @@ horizon/interior residual R_h
 ```
 
 must beat the mature comparator set, including effective LQG models in which quantum geometry already changes subleading greybody structure and evaporation/final-state behavior, as well as horizon-state and geometry-matter-entanglement constructions.
+
+
+## J. Arcane operationalization: synchronicity, symbolic action, and echo chambers
+
+The Arcane branch now has an explicit research program rather than a purely comparative symbolic role.
+
+### Synchronicity
+
+Preserve three levels:
+
+```text
+meaningful coincidence
+!= statistical anomaly
+!= acausal mechanism
+```
+
+PHEN/THEOPHEN work may study experienced significance and transformation. SCI work must preregister event classes, base rates, multiple-comparison controls, source independence, and held-out or replicated return before claiming anomaly. Any acausal or psychophysical mechanism remains OPEN/WITHHOLD until it beats causal, attentional, memory, selection, social-transmission, and chance comparators.
+
+### Symbolic intervention / chaos-magic comparator
+
+Study whether bounded symbolic interventions change attention, memory, affect, hypothesis generation, policy, or action in reproducible ways. The neutral object requires intention, symbol/compression, scope, jurisdiction, expiry/revocation, provenance, and consequence family.
+
+```text
+symbolic local efficacy != arbitrary external physical causation
+```
+
+### Echo chamber / recursive symbolic field
+
+Treat echo chambers as a direct falsifier for any Arcane practice that mistakes recurrence for return. Research should measure source ancestry, amplification loops, dissent/exit reachability, exposure diversity, and whether apparent independent confirmations collapse to one source family.
+
+### Reflexive causal participation
+
+Test self-implicating return separately from self-certification:
+
+```text
+i in CausalAncestry(rho_i)
+and
+rho_i not preauthored by i
+```
+
+This is the neutral research form of the participant-origin `God's calculator` / `we misfired on ourselves` compression.
