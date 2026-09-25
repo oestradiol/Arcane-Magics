@@ -1,0 +1,62 @@
+{
+  "schema": "Venus.LiveGitWorldEpisodePrefreeze.v0.2",
+  "issue": 165,
+  "target_pr": 168,
+  "custody_kind": "SEPARATE_BRANCH",
+  "status": "PREFROZEN_AWAITING_GITHUB_CHECK_RETURN",
+  "problem": {
+    "problem_id": "dd6242675e244d96ff3c1574e5e90afba2cd4c5481e465933be1c1bfe56021b8",
+    "schema": "Venus.GitCheckProblem.v0.1",
+    "disposition": "FORMED_BOUNDED_PROBLEM",
+    "source_stream_ids": [
+      "16aa39a6fc6dadf81f17908e97cde84ea901d3bcb5c5e8cd401c04b51cb7b9e1"
+    ],
+    "residual_coordinates": ["check_state_unresolved"],
+    "rivals": [
+      {
+        "rival_id": "r0",
+        "statement": "the frozen GitHub check reaches a non-success terminal state"
+      },
+      {
+        "rival_id": "r1",
+        "statement": "the frozen GitHub check reaches a successful terminal state"
+      }
+    ],
+    "discriminator": "OBSERVE_PR_CHECK_TERMINAL_STATE",
+    "external_return_required": true,
+    "carrier_binding_authority": false,
+    "promotion_authority": false
+  },
+  "request": {
+    "request_id": "dab3d6f5b8aa22d771d431013d8ba166fe0ead49996dbe753b0828b46ef1e8b1",
+    "schema": "Venus.GitWorldRequest.v0.1",
+    "problem_id": "dd6242675e244d96ff3c1574e5e90afba2cd4c5481e465933be1c1bfe56021b8",
+    "source_stream_id": "16aa39a6fc6dadf81f17908e97cde84ea901d3bcb5c5e8cd401c04b51cb7b9e1",
+    "discriminator": "OBSERVE_PR_CHECK_TERMINAL_STATE",
+    "carrier_kind": "PR",
+    "carrier_number": 168,
+    "frozen_snapshot_digest": "2888fcad09baccccc10ff2f7af0bf7a81234a1d3ddee357bbdb49d1f2894d929",
+    "frozen_head_sha": "2721be2c83c88cff8b0d58ecf64451ce6bb11455",
+    "frozen_merge_state": "CLEAN",
+    "frozen_updated_at": "2026-09-25T00:35:11Z",
+    "frozen_check_run_id": 36078219870,
+    "frozen_check_status": "in_progress",
+    "accepted_observation_fields": [
+      "head_sha", "merge_state", "updated_at", "check_run_id", "check_status", "check_conclusion"
+    ],
+    "promotion_authority": false
+  },
+  "observation_at_freeze": {
+    "workflow_run_id": 36078219870,
+    "workflow_status": "in_progress",
+    "workflow_conclusion": null,
+    "target_head_sha": "2721be2c83c88cff8b0d58ecf64451ce6bb11455",
+    "target_merge_state": "CLEAN",
+    "target_pr_updated_at": "2026-09-25T00:35:11Z",
+    "last_observed_run_update": "2026-09-25T00:35:33Z"
+  },
+  "target_branch_mutated_by_freeze": false,
+  "problem_formation_credit": "HOST_PREFROZEN_NEUTRAL_CHECK_STATE_PROBLEM_FOR_WORLD_RETURN_PROTOCOL_TEST",
+  "answer_known_at_freeze": false,
+  "promotion_authority": false
+}
