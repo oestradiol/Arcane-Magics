@@ -6,7 +6,7 @@
 
 **future-relative quotient · sufficient representation · reopening · operational discrimination**
 
-[Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva) · **OFE** · [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics)
+[Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) · **OFE** · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
 
 <br>
 
@@ -89,9 +89,9 @@ declare state/history space
 
 | Branch | Interface |
 |---|---|
-| [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis) | proposes structural/physical bridge objects that OFE can operationalize |
-| [Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva) | supplies executable developmental cases where future distinctions matter |
-| [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics) | may propose lived/symbolic distinctions; OFE only inherits explicit testable coordinates |
+| [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) | proposes structural/physical bridge objects that OFE can operationalize |
+| [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) | supplies executable developmental cases where future distinctions matter |
+| [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) | may propose lived/symbolic distinctions; OFE only inherits explicit testable coordinates |
 
 ## Claim grammar
 
