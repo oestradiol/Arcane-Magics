@@ -123,3 +123,16 @@ returned difference
 ```
 
 A security boundary may legitimately reject a carrier even when the underlying distinction remains epistemically relevant; the research obligation then stays OPEN/WITHHOLD rather than being reclassified as false or gauge.
+
+
+## Symbolic salience is not source independence
+
+A vivid symbol, repeated narrative, synchronistic-feeling coincidence, or high-consensus message can be epistemically important without being independently sourced.
+
+```text
+salience != independence != authorization != truth
+```
+
+Trust evaluation must therefore preserve provenance/source ancestry separately from phenomenological or social intensity. Recursive citation, algorithmic amplification, or repeated restatement does not create new external evidence.
+
+A symbolic object may still be admitted as a local intervention or research prompt. What it cannot do is cross the trust boundary as `Return` or `Verify` merely because it is meaningful, resonant, or widely repeated.
