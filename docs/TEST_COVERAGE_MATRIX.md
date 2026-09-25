@@ -112,3 +112,15 @@ An issue is not “covered” because this table names it. Coverage requires an 
 | coherent low-vorticity cosmological-flow projection | T6 | PLANNED | observable distinction from standard FLRW + perturbations and chosen LQC/GFT comparators |
 
 A named projection is not coverage. The PHYS rows remain OPEN/WITHHOLD until a calculational or observational separator exists.
+
+
+### 2026-09-25 Arcane operationalization coverage
+
+| Object | Test class | Status | Required discriminator |
+|---|---|---|---|
+| SynchronicityCandidate | T2/T6 | PLANNED | preregistered event class + base-rate/multiple-comparison/source-independence controls; separate lived meaning from anomaly/mechanism |
+| ArcaneSymbolicOperator | T2/T5 | PLANNED | compare against ordinary attention/memory/ritual/implementation-intention mechanisms; retain only decision-relevant residual |
+| EchoChamberPathology | T5/T6 | PLANNED | source-ancestry and amplification analysis; show apparent independent confirmations collapse or remain independent |
+| SelfImplicatingReturn | T3/T5 | PARTIAL | causal provenance shows local author contributed to returned consequence while return itself remained non-preauthored |
+
+Failure of the acausal or occult bridge does not erase the PHEN/THEOPHEN object. Failure of a project-local symbolic operator under mature substitution should consume that operator at the scientific/engineering index.
