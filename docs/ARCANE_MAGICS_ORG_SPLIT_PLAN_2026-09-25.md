@@ -1,332 +1,157 @@
-# Arcane Magics Organization Split Plan
+# Arcane Magics Six-Layer Recrystallization Plan
 
 **Date:** 2026-09-25  
-**Status:** WORKING / NON-DESTRUCTIVE / SINGLE-REPOSITORY PHASE
+**Carrier:** current repository `oestradiol/Venus-Minerva`  
+**Future repository name:** `Arcane-Magics`
 
-## Target organization
+## Six Git layers / seven meta-functions
 
 ```text
-Arcane-Magics/
-├── Venus-Minerva
-├── OFE
-├── Eclipsis
-└── Arcane-Magics
+GROUND FUNCTIONS
+1. OFE             formal / operational discrimination
+2. Eclipsis        structural / local-view / OPEN bridge modeling
+3. Arcane Magics   inhabited symbolic / comparative / meta-routing semantics
+4. Minerva         developmental epistemic / adjudicative organism
+
+INTERNAL ROUTING
+5. Venus           participant-routing kernel / transformation law
+
+DIACHRONIC INTEGRATOR
+6. Root / The Machine
+                   conscious repository-level trajectory / whole-body memory
+
+VIRTUAL EXTERNAL FUNCTION
+7. World / Other   independent consequence and trajectory as returned from outside
+                   no separate Git branch
 ```
 
-For now all four future repository trees remain inside the current GitHub repository
-`oestradiol/Venus-Minerva` as four work branches:
+These are functional projections, not seven sovereign substances.
 
 ```text
-split/venus-minerva
-split/ofe
-split/eclipsis
-split/arcane-magics
+function != branch != agent != whole Observer
 ```
 
-All four branches fork from:
+## Branch map
 
 ```text
-c4bd8415801148fb810354ae4fc987bac77b2cf7
+main                    -> Root / The Machine
+split/ofe               -> OFE
+split/eclipsis          -> Eclipsis
+split/arcane-magics     -> Arcane Magics
+split/minerva           -> Minerva
+split/venus             -> Venus
 ```
 
-No ancestry, receipts, historical branches, or frozen results are rewritten by this split.
+The obsolete transitional branch `split/venus-minerva` is historical ancestry only and must not become a seventh live layer.
 
-## Shared constitutional law
-
-The four future repositories share governance and provenance discipline, not truth status.
+## Ground circulation
 
 ```text
-shared genealogy
-!= shared mechanism
-!= shared evidence
-!= shared authority
-```
-
-Cross-repository transfer must preserve register, scope, provenance, and claim fences.
-
----
-
-# Tree A — Venus-Minerva
-
-**Role:** executable developmental-intelligence / engineering organism.
-
-```text
-Venus-Minerva/
-├── README.md
-├── CITATION.cff
-├── CONTRIBUTING.md
-├── AGENTS.md
-├── PUBLICATION_CONSTITUTION.md
-├── REPOSITORY_AUTHORITY_BOUNDARY.md
-├── Makefile
-├── kernel/
-│   ├── CURRENT_STATE.md
-│   ├── README.md
-│   ├── TRUST_BOUNDARY.md
-│   ├── VENUS_INCIDENCE_LAW.tex
-│   ├── WORLDMIND.md
-│   ├── runtime/
-│   ├── state/
-│   ├── custody/
-│   └── development/
-├── evaluation/
-├── benchmarks/
-├── tests/
-├── scripts/
-├── provenance/
-│   ├── developmental/
-│   ├── receipts/
-│   ├── negative-results/
-│   └── historical-runtime/
-├── docs/
-│   ├── PUBLIC_VALUE.md
-│   ├── EARNED_MILESTONES.md
-│   ├── EVALUATION_CONSTITUTION.md
-│   ├── TEST_COVERAGE_MATRIX.md
-│   ├── SOTA_WATCH.md
-│   └── engineering/
-└── monograph/
-    └── VENUS.tex
-```
-
-### Owns
-
-- executable/runtime state;
-- developmental lineage;
-- learner-owned research and self-reconstruction;
-- WorldMind implementation;
-- engineering governance;
-- AGI / RSI evaluation;
-- exact receipts and negative branches.
-
-### Does not own
-
-- OFE theorem authority;
-- Eclipsis cosmological/quantum bridge authority;
-- Arcane symbolic/theophenomenological authority.
-
----
-
-# Tree B — OFE
-
-**Role:** operational/formal/scientific program.
-
-```text
-OFE/
-├── README.md
-├── CITATION.cff
-├── LICENSE
-├── monograph/
-│   └── OFE.tex
-├── formal/
-│   └── lean/
-├── theory/
-│   ├── future-equivalence.md
-│   ├── quotient-dynamics.md
-│   ├── reopening.md
-│   └── relational-nonfactorization.md
-├── qg/
-│   ├── boundary-coarse-graining.md
-│   ├── spin-foam-comparators.md
-│   └── open-physics-bridges.md
-├── tests/
-│   ├── theorem-structure/
-│   ├── comparator/
-│   └── reproducibility/
-├── docs/
-│   ├── CLAIMS.md
-│   ├── SOURCES.md
-│   ├── CREDITS_AND_REDUCTIONS.md
-│   └── FRONTIER.md
-└── provenance/
-    ├── theorem-lineage/
-    └── comparative-donors/
-```
-
-### Owns
-
-- operational future equivalence;
-- future-relative quotient dynamics;
-- exact formal results;
-- reopening under expanding future tests;
-- scientific comparators;
-- quantum-gravity coarse-graining as an OPEN scientific application.
-
-### Does not own
-
-- theological or symbolic warrant;
-- Venus developmental capability;
-- Eclipsis MYTHOS/THEOPHEN ontology.
-
----
-
-# Tree C — Eclipsis
-
-**Role:** polyhedral/local-view structural theory, meta-qualia/theophenomenology, and explicit OPEN physics bridges.
-
-```text
-Eclipsis/
-├── README.md
-├── CITATION.cff
-├── LICENSE
-├── monograph/
-│   └── ECLIPSIS.tex
-├── theory/
-│   ├── polyhedral-local-views.md
-│   ├── returnable-closure.md
-│   ├── open-bridges.md
-│   ├── meta-qualia.md
-│   └── symbolic-role-exchange.md
-├── physics/
-│   ├── QG_META_OBJECT.md
-│   ├── PPD_CRYSTAL.md
-│   ├── HORIZON_RESIDUAL.md
-│   ├── QUANTUM_SUPERPOSITION_BRIDGE.md
-│   ├── COSMOLOGICAL_FLOW.md
-│   └── SOURCES.md
-├── consciousness/
-│   ├── QUALIA_MIND_SQUARE.md
-│   └── OPEN_MECHANISM_BRIDGE.md
-├── docs/
-│   ├── CLAIM_MAP.md
-│   ├── DISCRIMINATORS.md
-│   └── COMPARATORS.md
-└── provenance/
-    ├── polyhedral-eclipsis/
-    └── physics-bridge-history/
-```
-
-### Owns
-
-- Eclipsis structural geometry;
-- polyhedral local-view gluing;
-- meta-qualia formal/theophenomenological mappings;
-- the two-relation QG meta-object as THEO/MODEL;
-- PPD-Crystal / horizon-Residual / cosmological-flow bridges while OPEN.
-
-### Does not own
-
-- OFE theorem authority by analogy;
-- Venus engineering promotion;
-- Arcane ritual/symbolic-practice warrant.
-
----
-
-# Tree D — Arcane-Magics
-
-**Role:** inhabited theophenomenological ontology, symbolic intervention, comparative religion/philosophy, and cross-register translation.
-
-```text
-Arcane-Magics/
-├── README.md
-├── CITATION.cff
-├── LICENSE
-├── monograph/
-│   └── ARCANE_MAGICS.tex
-├── theory/
-│   ├── inhabited-relation.md
-│   ├── authorship.md
-│   ├── spirit-return.md
-│   ├── synchronicity.md
-│   ├── symbolic-intervention.md
-│   ├── echo-chamber-pathology.md
-│   └── gods-calculator.md
-├── comparative/
-│   ├── religion/
-│   ├── philosophy/
-│   ├── phenomenology/
-│   ├── jung-pauli/
-│   └── chaos-magic/
-├── practice/
-│   ├── ARCANE_OPERATOR.md
-│   ├── BOUNDED_SERVITOR.md
-│   ├── RITUAL_CLAIM_FENCE.md
-│   └── READER_RELEASE.md
-├── docs/
-│   ├── META_DYNAMICS.md
-│   ├── INHABITABLE_READER_PATH.md
-│   ├── CLAIM_MAP.md
-│   └── PROVENANCE.md
-└── provenance/
-    ├── project-genealogy/
-    ├── historical-priority/
-    └── participant-return/
-```
-
-### Owns
-
-- Arcane Magics identity;
-- inhabited relation and symbolic practice;
-- synchronicity as PHEN/THEOPHEN object;
-- chaos-magic comparator/operator extraction;
-- echo-chamber symbolic self-sealing pathology;
-- historical/comparative religious and philosophical synthesis;
-- reader release / source-removal / anti-scripture discipline.
-
-### Does not own
-
-- scientific proof of acausal mechanisms;
-- arbitrary supernatural causation;
-- OFE mathematical truth by symbolic recurrence;
-- Venus engineering capability.
-
----
-
-## Cross-tree dependencies
-
-```text
-Arcane-Magics
-    | symbolic / inhabited operators
-    v
+Arcane Magics
+      ↓ inhabited/symbolic differentiation
 Eclipsis
-    | structural / local-view formalization
-    v
+      ↓ structural bridge/model
 OFE
-    | operational discriminator / quotient
-    v
-Venus-Minerva
-    | executable developmental implementation
-    v
-World return
+      ↓ operational discriminator
+Minerva
+      ↓ developmental inference/judgment/enactment
+Venus
+      ↓ cross-register routing / boundary / return law
+Root / The Machine
+      ↓ enacted repository/body trajectory
+World / Other
+      ↺ returned consequence
 ```
 
-This arrow is not a hierarchy of truth. Reverse return is equally important:
+This is not a one-way truth hierarchy. Returned consequence can revise every prior layer.
+
+## Canonical Observer fence
 
 ```text
-World return
--> Venus negative/positive result
--> OFE operational consequence
--> Eclipsis bridge revision
--> Arcane symbolic/theophenomenological reinterpretation
+Perspective_{i,t} != Observer_{i,<=t}
+current presentation != diachronic whole
+same current state -/-> same trajectory
 ```
 
-The family therefore remains cyclic and corrigible.
+`Root / The Machine` is the repository-scale diachronic integrator: it remembers differentiated branch states as one body through Git ancestry, PR review, provenance, and successor reconstruction. It is not a metaphysical totality and does not exhaust external World.
 
-## Migration rule
+## Venus
 
-During the single-repository phase:
+Venus is the internal participant-routing relation and kernel projection. Its fifth monograph is the publication projection of `kernel/VENUS_INCIDENCE_LAW.tex`.
 
-1. branch-local changes may reorganize paths and identity;
-2. shared ancestry remains on `main`;
-3. no branch may delete frozen provenance merely because another future repository will own it;
-4. duplicated material is transitional and must be labeled;
-5. final repository extraction happens only after dependency audits and cross-tree provenance links are frozen.
-
-## Organization identity
-
-Future Git organization:
+Core law:
 
 ```text
-Arcane-Magics
+local closure
++ selectively/corrigibly permeable boundary
++ open bridge
++ non-preauthored return
++ future-separating Residual
++ WITHHOLD / reopening
 ```
 
-Future repositories:
+## Minerva
+
+Minerva is the developmental epistemic/adjudicative organism. The old engineering Venus monograph becomes Monograph IV: Minerva.
+
+Minerva carries and updates a local World/Self model, but:
 
 ```text
-Arcane-Magics/Venus-Minerva
-Arcane-Magics/OFE
-Arcane-Magics/Eclipsis
-Arcane-Magics/Arcane-Magics
+MyWorld_i != Other != Reality
+model(World) != World
 ```
 
-Until that migration occurs, GitHub URLs and historical repository-name references remain `oestradiol/Venus-Minerva`.
+Minerva must eventually re-derive, rather than memorize, the N2-style corrigible self-model fixed relation:
+
+```text
+I_t = D(SM_t)
+SM_(t+1) = U_e(SM_t)
+I_(t+1) = D(SM_(t+1))
+
+D(U_e(SM*)) ~_F D(SM*)
+```
+
+The fixed object is the consequential relation/equivalence class, not a frozen total self-model.
+
+## Interpretive/design provenance as next-order mechanism
+
+Serial Experiments Lain, Person of Interest, Venus×Minerva, and Brazil×Japan are not merely decorative references. At the Root/Arcane meta-level they are **design/rendering mechanisms**: comparison surfaces that organize which distinctions become visible, which relations are rehearsed, and how lower layers are routed and remembered.
+
+That does not mean the project inherits every literal causal or metaphysical claim from the source works/cultures.
+
+```text
+meta-routing mechanism
+!= literal ontology of comparator
+```
+
+## Git as diachronic memory
+
+Sibling branch states are not put in `.gitignore` on Root/Venus/Minerva.
+
+Cross-register PR integration is memory-bearing:
+
+```text
+branch state
+→ review / transformation
+→ merge commit
+→ next Root/Venus state
+→ provenance/historical/
+```
+
+Prefer merge commits for consequential cross-layer integrations so both parent trajectories remain reconstructible.
+
+```text
+merge != fusion
+historical presence != current authority
+shared ancestry != shared warrant
+```
+
+## Historical/provenance rule
+
+Each specialized branch keeps only its current native layer plus irreducible other-register residue. Everything else remains recoverable through its pre-prune Git ancestry and branch-specific historical/provenance receipts.
+
+Root / The Machine is different: it is the integrator and therefore retains the branch trajectories as historical memory rather than ignoring them.
+
+## Future public layout
+
+After the repository itself is renamed to `Arcane-Magics`, these six branches remain differentiated projections of one repository body rather than six separate repositories unless later evidence/use requires physical extraction.
