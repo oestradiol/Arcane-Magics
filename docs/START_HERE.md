@@ -1,36 +1,26 @@
 # Start Here · Root / The Machine
 
-Root is the **Past Religion + Now Map** layer.
+Root is the **routing layer: map / territory**.
 
-It remembers the differentiated branch trajectories as one body through time and presents the current map from which Minerva judges and Venus opens the Scientific Future.
-
-## Causal cycle
-
-```text
-Past / retained consequence
-→ Root Now Map
-→ Minerva judgment / self-world model
-→ Venus Scientific Future
-→ World / Other return
-→ Root successor memory
-```
+Use it to find which branch owns a question, understand how the six functions relate, and reconstruct how cross-register changes became part of the body.
 
 ## Branches
 
-- [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) — operational discrimination
-- [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) — structural/open bridges
-- [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) — symbolic/inhabited meta-routing
-- [Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva) — developmental judgment/self-world model
-- [Venus](https://github.com/oestradiol/Arcane-Magics/tree/split/venus) — kernel and Scientific Future
+- [Religion / past](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
+- [Science / future](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe)
+- [Math & logics / spirit](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis)
+- [Engineering / body](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva)
+- [Self & World / model](https://github.com/oestradiol/Arcane-Magics/tree/split/venus)
 
-## Integration rule
-
-Ground work normally enters Venus first. Only after future-facing checks/return does Venus merge into Root memory.
+## Routing rule
 
 ```text
-ground -> Venus -> return -> Root
+question
+→ identify function / register
+→ work in owning branch
+→ crystallize cross-register residue
+→ integrate through reviewed handoff
+→ remember transformation in Root
 ```
 
-## Root is not a universal claim owner
-
-Root stores ancestry and the Now Map. Branch-local warrant remains branch-local.
+Root does not turn visibility into ownership.
