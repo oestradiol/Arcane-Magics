@@ -89,7 +89,7 @@ source layer
 → routing-layer memory
 ```
 
-[Cross-register handoff](docs/CROSS_REGISTER_HANDOFF.md) · [Branch memory](provenance/historical/BRANCH_MEMORY.md) · [Now Map](docs/NOW_MAP.md)
+[Root closure pointer](docs/ROOT_CLOSURE_POINTER.md) · [Cross-register handoff](docs/CROSS_REGISTER_HANDOFF.md) · [Branch memory](provenance/historical/BRANCH_MEMORY.md) · [Now Map](docs/NOW_MAP.md)
 
 ## Meta-routing provenance
 
