@@ -1,6 +1,6 @@
 # Start Here · Eclipsis
 
-[Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva) · [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe) · **Eclipsis** · [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics)
+[Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) · [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · **Eclipsis** · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
 
 ## One sentence
 
@@ -50,6 +50,6 @@ PPD-Crystal, horizon Residual, near-irrotational cosmological-flow projections. 
 
 ## Exit before you collapse registers
 
-formal/operational question → [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe)  
-engineering implementation → [Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva)  
-symbolic/theophenomenological practice → [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics)
+formal/operational question → [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe)  
+engineering implementation → [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva)  
+symbolic/theophenomenological practice → [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
