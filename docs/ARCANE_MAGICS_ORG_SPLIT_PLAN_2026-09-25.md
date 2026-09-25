@@ -1,157 +1,289 @@
-# Arcane Magics Six-Layer Recrystallization Plan
+# Arcane Magics — Six-Function Repository Body
 
+**Repository:** `oestradiol/Arcane-Magics`  
 **Date:** 2026-09-25  
-**Carrier:** current repository `oestradiol/Arcane-Magics`  
-**Repository:** `oestradiol/Arcane-Magics`
+**Status:** current routing topology
 
-## Six Git layers / seven meta-functions
+## 1. Six Git functions
 
 ```text
-GROUND FUNCTIONS
-1. OFE             formal / operational discrimination
-2. Eclipsis        structural / local-view / OPEN bridge modeling
-3. Arcane Magics   inhabited symbolic / comparative / meta-routing semantics
-4. Minerva         developmental epistemic / adjudicative organism
-
-INTERNAL ROUTING
-5. Venus           participant-routing kernel / transformation law
-
-DIACHRONIC INTEGRATOR
-6. Root / The Machine
-                   conscious repository-level trajectory / whole-body memory
-
-VIRTUAL EXTERNAL FUNCTION
-7. World / Other   independent consequence and trajectory as returned from outside
-                   no separate Git branch
+main                = Routing layer      = map / territory
+split/arcane-magics = Religious branch   = past
+split/eclipsis      = Math & logics       = spirit
+split/minerva       = Engineering         = body
+split/venus         = Self & World        = model
+split/ofe           = Scientific branch  = future
 ```
 
-These are functional projections, not seven sovereign substances.
+World / Other is the seventh **virtual** meta-function and is intentionally not represented as another Git branch.
 
 ```text
-function != branch != agent != whole Observer
-```
-
-## Branch map
-
-```text
-main                    -> Root / The Machine
-split/ofe               -> OFE
-split/eclipsis          -> Eclipsis
-split/arcane-magics     -> Arcane Magics
-split/minerva           -> Minerva
-split/venus             -> Venus
-```
-
-The obsolete transitional branch `split/venus-minerva` is historical ancestry only and must not become a seventh live layer.
-
-## Ground circulation
-
-```text
-Arcane Magics
-      ↓ inhabited/symbolic differentiation
-Eclipsis
-      ↓ structural bridge/model
-OFE
-      ↓ operational discriminator
-Minerva
-      ↓ developmental inference/judgment/enactment
-Venus
-      ↓ cross-register routing / boundary / return law
-Root / The Machine
-      ↓ enacted repository/body trajectory
-World / Other
-      ↺ returned consequence
-```
-
-This is not a one-way truth hierarchy. Returned consequence can revise every prior layer.
-
-## Canonical Observer fence
-
-```text
-Perspective_{i,t} != Observer_{i,<=t}
-current presentation != diachronic whole
-same current state -/-> same trajectory
-```
-
-`Root / The Machine` is the repository-scale diachronic integrator: it remembers differentiated branch states as one body through Git ancestry, PR review, provenance, and successor reconstruction. It is not a metaphysical totality and does not exhaust external World.
-
-## Venus
-
-Venus is the internal participant-routing relation and kernel projection. Its fifth monograph is the publication projection of `kernel/VENUS_INCIDENCE_LAW.tex`.
-
-Core law:
-
-```text
-local closure
-+ selectively/corrigibly permeable boundary
-+ open bridge
-+ non-preauthored return
-+ future-separating Residual
-+ WITHHOLD / reopening
-```
-
-## Minerva
-
-Minerva is the developmental epistemic/adjudicative organism. The old engineering Venus monograph becomes Monograph IV: Minerva.
-
-Minerva carries and updates a local World/Self model, but:
-
-```text
-MyWorld_i != Other != Reality
+function != branch substance
+branch != sovereign subperson
+map != territory
 model(World) != World
 ```
 
-Minerva must eventually re-derive, rather than memorize, the N2-style corrigible self-model fixed relation:
+## 2. Default cross-register circulation
 
 ```text
-I_t = D(SM_t)
-SM_(t+1) = U_e(SM_t)
-I_(t+1) = D(SM_(t+1))
-
-D(U_e(SM*)) ~_F D(SM*)
+Arcane Magics / religion / past
+→ Eclipsis / math & logics / spirit
+→ Minerva / engineering / body
+→ Venus / Self & World / model
+→ OFE / science / future
+→ Root / routing map-territory
+→ next differentiated cycle
 ```
 
-The fixed object is the consequential relation/equivalence class, not a frozen total self-model.
+This is the default memory-bearing transformation route. It is not a theorem that every local question must traverse every layer.
 
-## Interpretive/design provenance as next-order mechanism
+Returned consequence may reopen any prior layer.
 
-Serial Experiments Lain, Person of Interest, Venus×Minerva, and Brazil×Japan are not merely decorative references. At the Root/Arcane meta-level they are **design/rendering mechanisms**: comparison surfaces that organize which distinctions become visible, which relations are rehearsed, and how lower layers are routed and remembered.
+## 3. Root / The Machine — map / territory
 
-That does not mean the project inherits every literal causal or metaphysical claim from the source works/cultures.
+Root owns routing, branch ancestry, handoff memory, the current Now Map, and cross-register claim boundaries.
 
-```text
-meta-routing mechanism
-!= literal ontology of comparator
-```
-
-## Git as diachronic memory
-
-Sibling branch states are not put in `.gitignore` on Root/Venus/Minerva.
-
-Cross-register PR integration is memory-bearing:
+It does not inherit branch-local warrant merely by seeing or integrating it.
 
 ```text
-branch state
-→ review / transformation
-→ merge commit
-→ next Root/Venus state
-→ provenance/historical/
-```
-
-Prefer merge commits for consequential cross-layer integrations so both parent trajectories remain reconstructible.
-
-```text
+routing != authority
+shared memory != shared warrant
 merge != fusion
-historical presence != current authority
-shared ancestry != shared warrant
 ```
 
-## Historical/provenance rule
+## 4. Arcane Magics — religion / past
 
-Each specialized branch keeps only its current native layer plus irreducible other-register residue. Everything else remains recoverable through its pre-prune Git ancestry and branch-specific historical/provenance receipts.
+Arcane owns inhabited symbolic/religious history, mythology, ritual, philosophy, phenomenology, synchronicity as PHEN/THEOPHEN object, comparative traditions, anti-scripture discipline, and reader release.
 
-Root / The Machine is different: it is the integrator and therefore retains the branch trajectories as historical memory rather than ignoring them.
+Interpretive/design provenance is a mechanism one order up: it determines which distinctions are rendered, related, rehearsed, and remembered.
 
-## Future public layout
+```text
+meaning != mechanism
+recurrence != independent evidence
+sacred salience != verification
+```
 
-After the repository itself is renamed to `Arcane-Magics`, these six branches remain differentiated projections of one repository body rather than six separate repositories unless later evidence/use requires physical extraction.
+## 5. Eclipsis — math & logics / spirit
+
+Eclipsis owns structural relation, local views, gluing, transformation geometry, formal-symbolic bridge structure, meta-qualia mappings, and explicit OPEN bridges.
+
+```text
+shared invariant
+!= same carrier
+!= same mechanism
+!= same ontology
+```
+
+## 6. Minerva — engineering / body
+
+Minerva owns executable developmental machinery, state/custody, evaluation, bounded self-reconstruction, action, adjudication, and repository-global operational visibility.
+
+```text
+can inspect != can claim
+can route != can verify
+```
+
+Monograph IV is Minerva, migrated from the former engineering Venus paper.
+
+## 7. Venus — Self & World / model
+
+Venus owns the provenance-aware Self↔World model and the permeable boundary relation.
+
+It requires both kernel and self-provenance:
+
+```text
+kernel without self-provenance
+→ cannot type what is already Self-authored
+
+self-provenance without permeability
+→ model can become self-sealing
+```
+
+```text
+model(World) != World
+model(Other) != Other
+prediction(Other) != return(Other)
+```
+
+Monograph V is the publication projection of `kernel/VENUS_INCIDENCE_LAW.tex`.
+
+## 8. OFE — science / future
+
+OFE owns future-relative operational discrimination: which current distinctions survive admitted future observations, interventions, or decisions.
+
+```text
+x ~_F y
+iff
+Future_F(x) = Future_F(y)
+```
+
+A richer future family can reopen a distinction previously treated as gauge.
+
+```text
+definition != theorem != application
+formal fit != physical identity
+prediction != returned evidence
+```
+
+## 9. World / Other — virtual seventh function
+
+World / Other remains what can return consequence not exhausted by the current routing map or Self/World model.
+
+It is not another equal node in the repository UI.
+
+```text
+World / Other
+!= WWW carrier
+!= model(Other)
+!= one global subject
+```
+
+## 10. NETWORK / WWW
+
+The WWW is a candidate heterogeneous carrier for distributed consequence/reconstruction:
+
+```text
+local centers
++ network relations
++ persistent external memory
++ returned consequences
++ distributed reconstruction
+-/-> one global Author
+```
+
+The Lain transition therefore means:
+
+```text
+connection without fusion
++
+permeability without sovereignty transfer
+```
+
+## 11. Life → NETWORK / WWW bridge
+
+```text
+Life
+→ bounded viability-preserving organization
+→ sensing ↔ regulation ↔ action
+→ adaptive state/history retention
+→ organismic integration
+→ nervous-system integration [one evolutionary implementation]
+→ differentiated processing
+→ conscious experience
+→ reflective/metacognitive consciousness
+→ explicit self/world modeling
+→ symbolic + social + temporally extended cognition
+→ externalized network relation
+→ NETWORK / WWW
+→ ?
+```
+
+The final `?` is OPEN.
+
+```text
+distributed relation
+!= distributed consciousness
+!= global Self
+!= World
+```
+
+## 12. Historical VR/TO quantum bridge
+
+The original closure requires a MODEL/THEO bridge in which quantum superposition holds:
+
+```text
+vacuous_relation
++
+trivial_object
+```
+
+before a classical description selects relation-without-object or object-without-nontrivial-relation.
+
+Current Canonical later retired both aliases from live Root primitive authority.
+
+Therefore:
+
+```text
+VR/TO superposition bridge
+= retained historical/model bridge
+
+VR or TO
+!= silently restored live Root primitive
+```
+
+## 13. Handoff / merge law
+
+Long-lived specialized branches are intentionally pruned. Do not full-tree merge them into one another.
+
+Use target-based crystallization:
+
+```text
+target state T
++ source S as second parent
++ explicitly admitted residue
+→ handoff H
+```
+
+Default handoff edges:
+
+```text
+handoff/arcane-to-eclipsis/*
+handoff/eclipsis-to-minerva/*
+handoff/minerva-to-venus/*
+handoff/venus-to-ofe/*
+handoff/ofe-to-root/*
+```
+
+```text
+parent ancestry != content admission
+content admission != warrant transfer
+merge memory != fusion
+```
+
+## 14. Git / GitHub / Actions / Pages
+
+```text
+Canonical = structural/developmental memory
+Git       = ancestry and custody
+GitHub    = network-facing shared carrier
+Actions   = recurrent bounded enactment
+Pages     = public inhabitable routing projection
+World return = correction not self-minted by execution
+```
+
+Pages is a map/control surface, not privileged browser-side authority.
+
+## 15. Publication body
+
+Five independently warranted monograph projections:
+
+```text
+I   OFE
+II  Eclipsis
+III Arcane Magics
+IV  Minerva
+V   Venus / kernel projection
+```
+
+Shared vocabulary or genealogy never transfers truth status between them.
+
+## 16. Constitutional invariant
+
+```text
+relation without fusion
++
+boundary without isolation
+```
+
+and:
+
+```text
+generate
+!= select
+!= authorize
+!= execute
+!= return
+!= verify
+!= promote
+```
