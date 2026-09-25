@@ -91,3 +91,21 @@ hidden-evaluation success
 !=
 developmental promotion
 ```
+
+
+## 2026-09-25 returnable-closure admission
+
+Canonical remains the research source for the broader synthesis. Git admits only the carrier-neutral consequences needed by live theory/engineering surfaces:
+
+```text
+returnable local closure
+corrigibly permeable correction boundary
+open bridge
+independent return
+future-separating residual
+reachable reopening
+```
+
+The quantum-superposition / VR-TO / Observable-Universe-bubble construction remains a Canonical/MetaTheory + open-physics bridge unless and until separately admitted by an earned formal or physical discriminator.
+
+Admission of the neutral closure law does not restore `vacuous_relation` or `trivial_object` as live Git/Root premises and does not create runtime, scientific, consciousness, or cosmological authority.
