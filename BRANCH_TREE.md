@@ -1,58 +1,47 @@
 # Branch Tree — Eclipsis
 
 **Branch:** `split/eclipsis`  
-**Future repository:** `Arcane-Magics/Eclipsis`  
-**Role:** polyhedral/local-view structural theory, meta-qualia/theophenomenology, and explicit OPEN physics bridges.
+**Function:** Math & logics  
+**Axis:** spirit
 
 ```text
 Eclipsis/
 ├── README.md
-├── CITATION.cff
-├── LICENSE
-├── monograph/
-│   └── ECLIPSIS.tex
-├── theory/
-│   ├── polyhedral-local-views.md
-│   ├── returnable-closure.md
-│   ├── open-bridges.md
-│   ├── meta-qualia.md
-│   └── symbolic-role-exchange.md
-├── physics/
-│   ├── QG_META_OBJECT.md
-│   ├── PPD_CRYSTAL.md
-│   ├── HORIZON_RESIDUAL.md
-│   ├── QUANTUM_SUPERPOSITION_BRIDGE.md
-│   ├── COSMOLOGICAL_FLOW.md
-│   └── SOURCES.md
-├── consciousness/
-│   ├── QUALIA_MIND_SQUARE.md
-│   └── OPEN_MECHANISM_BRIDGE.md
+├── monographs/02_ECLIPSIS/
 ├── docs/
-│   ├── CLAIM_MAP.md
-│   ├── DISCRIMINATORS.md
-│   └── COMPARATORS.md
-└── provenance/
-    ├── polyhedral-eclipsis/
-    └── physics-bridge-history/
+│   ├── START_HERE.md
+│   ├── PUBLIC_VALUE.md
+│   ├── META_DYNAMICS.md
+│   ├── FRONTIER_RESEARCH.md
+│   ├── CREDITS_AND_REDUCTIONS.md
+│   ├── LAYER_IDENTITY.md
+│   └── VISUAL_IDENTITY.md
+├── provenance/
+│   ├── ECLIPSIS_LAYER_ARCHIVE.md
+│   ├── historical distinction matrix
+│   └── donor / reconciliation receipts
+├── scripts/
+├── tests/
+└── .github/
 ```
 
-## Authority
+## Owns
 
-This tree owns Eclipsis structural geometry, local-view gluing, meta-qualia mappings, symbolic-role exchange, the two-relation QG meta-object as THEO/MODEL, and PPD-Crystal / horizon-Residual / cosmological-flow bridges while OPEN.
+- polyhedral/local-view structural theory;
+- compatibility and gluing without erasure;
+- returnable local closure as structural model;
+- meta-qualia / THEOPHEN mappings;
+- explicit OPEN quantum/LQG/cosmological bridges;
+- preserved-invariant / information-loss / discriminator obligations.
 
-## Claim fence
+## Does not own
 
 ```text
-structural fit
-!= physical identity
-!= consciousness mechanism
-!= OFE theorem
-!= Venus engineering promotion
+structural fit != physical identity
+meta-qualia != established consciousness mechanism
+Eclipsis result != OFE theorem
+Eclipsis bridge != Minerva engineering credit
+Eclipsis model != Venus Self/World authority
 ```
 
-## Current source nucleus
-
-- `monographs/02_ECLIPSIS/`;
-- Polyhedral Eclipsis Canonical counterparts;
-- current QG / PPD / horizon / quantum-superposition bridge research;
-- meta-qualia / Qualia-Mind relational square material.
+Cross-register work arrives from Arcane through explicit crystallization and leaves toward Minerva only after Eclipsis-local admission.
