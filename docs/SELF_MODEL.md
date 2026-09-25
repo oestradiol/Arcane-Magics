@@ -50,21 +50,13 @@ inhabit
 ## 3. Corrigible self-model fixed point
 
 [
-I_t=D(SM_t)
-]
+```text
+I_t = D(SM_t)
+SM_(t+1) = U_e(SM_t)
+I_(t+1) = D(SM_(t+1))
 
-[
-SM_{t+1}=U_e(SM_t)
-]
-
-[
-I_{t+1}=D(SM_{t+1})
-]
-
-Candidate N2-FP condition:
-
-[
-D(U_e(SM^*))sim_FD(SM^*)
+D(U_e(SM*)) ~_F D(SM*)
+```
 ]
 
 The fixed object is the **re-derivable consequential relation/equivalence class**.
