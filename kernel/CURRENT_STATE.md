@@ -1,4 +1,4 @@
-# Venus-Minerva current state
+# Minerva current state
 
 **Date:** 2026-09-24
 
@@ -206,3 +206,17 @@ Repository issues/PRs are one World surface inside this loop.
 A frontier open-weight model may be exposed as removable donor material, not as controller or permanent proposal engine. The first candidate donor is recorded separately in `kernel/development/LEARNED_MODEL_DONOR_BOOTSTRAP.json`; internalization credit requires source-removal survival.
 
 Safe Strong RSI remains a possible instrument the center may discover as useful to the standing developmental obligation. It is not predeclared as success and retains all CTL/O*/rollback/external-return gates.
+
+
+## Naming after branch recrystallization
+
+Historical runtime identifiers containing `Venus` or `Venus-Minerva` remain unchanged where renaming would break replay, hashes, code identity, or provenance.
+
+Current branch authority is nevertheless:
+
+```text
+Minerva = engineering / body / developmental machine
+Venus   = Self & World / model / boundary law
+```
+
+A historical identifier is not current cross-register ownership.
