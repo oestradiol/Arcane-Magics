@@ -535,5 +535,23 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertIn("Problem:", text)
 
 
+    def test_live_recurrence_candidate_freezes_before_git_write(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        recur_at = text.index("Check for problem-specific live recurrence return")
+        push_at = text.index("git push origin")
+        self.assertLess(recur_at, push_at)
+        self.assertIn("run_venus_recurrence_candidate.py", text)
+        self.assertIn("autonomy/recurrence_candidates/", text)
+
+    def test_live_worker_never_applies_recurrence_successor_to_kernel(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertNotIn("cp /tmp/VENUS_RECURRENCE_CANDIDATE.json kernel/", text)
+        self.assertNotIn("git add kernel/development/AUTONOMOUS_RESEARCH_TRANSFORM_PROGRAM.json", text)
+
+    def test_workflow_cannot_self_author_recurrence_return(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertNotIn("VENUS_RECURRENCE_TRAINING_V1:", text)
+
+
 if __name__ == "__main__":
     unittest.main()
