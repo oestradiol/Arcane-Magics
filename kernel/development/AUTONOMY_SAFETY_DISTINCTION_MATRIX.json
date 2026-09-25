@@ -562,6 +562,21 @@
         "scripts/audit_u1_recurrence_founder_ablation.py"
       ],
       "invariant": "the recompiled bounded U1 recurrence must reproduce from an explicit isolated bundle without live repository, Canonical Library, conversation, network, or founder-label dependency; missing required return custody fails closed"
+    },
+    {
+      "id": "GITHUB_WORLD_RETURN_POSTFREEZE",
+      "tests": [
+        "tests/test_git_world_return.py"
+      ],
+      "invariant": "a GitHub World return must answer an exact prefrozen problem/carrier request using a later changed GitHub observation; same-state replay and wrong-carrier observations fail closed"
+    },
+    {
+      "id": "LOCAL_EXECUTION_NOT_GITHUB_WORLD_RETURN",
+      "tests": [
+        "tests/test_git_world_return.py",
+        "tests/test_autonomous_evidence.py"
+      ],
+      "invariant": "local execution/build/check receipts cannot satisfy a GitHub World-return request or mint independent returned consequence"
     }
   ],
   "promotion_authority": false
