@@ -1,66 +1,27 @@
-# Contributing to Venus-Minerva
+# Contributing to Minerva
 
-This branch is for **developmental-intelligence engineering** inside the Arcane Magics family.
+Minerva is the **developmental / epistemic / adjudicative** layer of the Arcane Magics body.
 
-Sibling work belongs primarily in [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe), [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis), or [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics).
+High-value work includes:
 
-## High-value contributions
+- reproducing developmental episodes;
+- finding provenance/custody breaks;
+- testing self-model re-derivation;
+- improving evaluator separation;
+- exposing self-certification leakage;
+- testing STOP/WITHHOLD / rollback;
+- improving repository-global observation without authority collapse;
+- causal ablations of developmental machinery;
+- independent reimplementations of bounded results.
 
-- reproduce a developmental episode;
-- find a provenance/custody break;
-- improve a hidden or matched evaluator;
-- produce a causal ablation;
-- find self-certification leakage;
-- improve STOP/WITHHOLD or rollback;
-- tighten jurisdiction/capability boundaries;
-- independently reimplement a bounded result;
-- show a Venus-specific construct reduces to mature engineering;
-- improve runtime/readability without changing claim authority.
+## Result format
 
-## Research-result format
-
-Include:
-
-1. exact parent;
-2. frozen question;
-3. scope;
-4. comparator / ablation;
-5. evidence budget;
-6. PASS / FAIL / WITHHOLD;
-7. dependency-local consequence;
-8. claim fence;
-9. reproduction commands.
-
-## Branch rule
+Include exact parent, frozen question, comparator/ablation, evidence budget, PASS/FAIL/WITHHOLD, claim fence, and reproduction commands.
 
 ```text
-generate
-!= select
-!= authorize
-!= execute
-!= return
-!= verify
-!= promote
+generate != select != authorize != execute != return != verify != promote
 ```
 
-External model output does not become learner-owned Venus cognition merely because it was committed to Git.
+Minerva may inspect the whole repository DAG. That does not let it claim every register it can see.
 
-## Before a large change
-
-Open or update an issue when changing:
-
-- current developmental authority;
-- kernel trust/jurisdiction;
-- evaluator independence;
-- self-reconstruction scope;
-- WorldMind deployment surface;
-- AGI / RSI claim criteria.
-
-## Reproduce
-
-```bash
-python -m kernel.runtime.current
-make audit
-```
-
-A successful build proves only what the build checks.
+Cross-register candidate futures route through the target-based handoff into Venus before any Root integration.
