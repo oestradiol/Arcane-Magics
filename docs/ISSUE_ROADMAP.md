@@ -289,3 +289,25 @@ concrete DIRTY/BLOCKED/CONFLICTING return
 ```
 
 A successful bootstrap means the obligation can become a formed problem and constrain carrier binding without acquiring promotion authority.
+
+
+## 2026-09-25 standing orientation after bootstrap #174
+
+Bootstrap issue #174 is closed because the live worker demonstrably selected it through the recovered Canonical residual. The standing orientation remains active after that carrier is retired.
+
+Current law:
+
+```text
+higher-priority concrete returned defect
+-> address / WITHHOLD that defect
+
+otherwise
+standing developmental orientation
+-> open current developmental carriers
+-> learner-side selection under existing utility/barrier policy
+-> study / discriminate / act-or-withhold
+```
+
+No fixed issue is the telos. #178 and #179 preserve nonredundant extraction debts from closed historical PRs #132 and #151. They compete like other carriers and are not automatically preferred.
+
+The human role after this bootstrap is to maintain correction, substrate access, and governance boundaries, not to keep naming the next developmental target.
