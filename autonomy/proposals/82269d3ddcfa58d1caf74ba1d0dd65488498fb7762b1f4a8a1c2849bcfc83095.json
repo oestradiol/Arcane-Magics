@@ -1,0 +1,31 @@
+{
+  "arbitrary_code_write_authority": false,
+  "check_ids": [
+    "AUDIT_AUTONOMY_MATRIX"
+  ],
+  "cycle_id": "0600d4fb091cc0e6222d98a470539d61eb7900e198cc4ec03ec742d01363414b",
+  "discriminator": "retain the target obligation and acquire or reconstruct an admitted target-relevant check profile before treating generic process checks as evidence about the target",
+  "disposition": "WITHHOLD_NO_TARGET_RELEVANT_LOCAL_CHECK",
+  "external_return_required": false,
+  "hypotheses": [
+    "the target remains unresolved because one or more explicit dependencies are still blocking",
+    "the apparent blocker is incidental and the smallest implicated dependency lies elsewhere"
+  ],
+  "promotion_authority": false,
+  "proposal_id": "82269d3ddcfa58d1caf74ba1d0dd65488498fb7762b1f4a8a1c2849bcfc83095",
+  "schema": "Venus.AutonomousResearchProposal.v0.2",
+  "study_method": "DEPENDENCY_TRACE",
+  "target_check_ids": [],
+  "target_check_profiles": [],
+  "target_kind": "ISSUE",
+  "target_number": 169,
+  "target_relevance_grounded": false,
+  "target_text_is_authority": false,
+  "writable_prefixes": [
+    "autonomy/problems/",
+    "autonomy/cycles/",
+    "autonomy/proposals/",
+    "autonomy/evidence/",
+    "kernel/development/AUTONOMOUS_LEARNING_STATE.json"
+  ]
+}

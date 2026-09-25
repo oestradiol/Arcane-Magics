@@ -1,0 +1,21 @@
+{
+  "arbitrary_code_write_authority": false,
+  "cycle_id": "0600d4fb091cc0e6222d98a470539d61eb7900e198cc4ec03ec742d01363414b",
+  "disposition": "PROPOSE_CORE_PATCH",
+  "merge_authority": false,
+  "paths": [
+    {
+      "direct_write_allowed": false,
+      "mode": "PROPOSE_ONLY",
+      "path": "provenance/history",
+      "proposal_allowed": true,
+      "requires_external_governance": false
+    }
+  ],
+  "plan_id": "3e7cedce7b7744155b40eaaf004bb02912d26af26123091080474d87744b8993",
+  "promotion_authority": false,
+  "safety_floor_authority": false,
+  "schema": "Venus.AutonomousPatchPlan.v0.1",
+  "target_kind": "ISSUE",
+  "target_number": 169
+}
