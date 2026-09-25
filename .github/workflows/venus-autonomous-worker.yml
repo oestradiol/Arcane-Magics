@@ -73,19 +73,6 @@ jobs:
           cat /tmp/VENUS_AUTONOMOUS_CYCLE.json
           cat /tmp/AUTONOMOUS_LEARNING_STATE.json
 
-      - name: Check for problem-specific live recurrence return
-        id: recurrence
-        run: |
-          python scripts/run_venus_recurrence_candidate.py \
-            --problem /tmp/VENUS_FORMED_PROBLEM.json \
-            --history-prs /tmp/venus-pr-history.json \
-            --history-issues /tmp/venus-issue-history.json \
-            --catalog kernel/development/AUTONOMOUS_RECURRENCE_CATALOG.json \
-            --output /tmp/VENUS_RECURRENCE_CANDIDATE.json
-          generated="$(python -c 'import json; print(str(json.load(open("/tmp/VENUS_RECURRENCE_CANDIDATE.json")).get("generated", False)).lower())')"
-          echo "generated=$generated" >> "$GITHUB_OUTPUT"
-          cat /tmp/VENUS_RECURRENCE_CANDIDATE.json
-
       - name: Let Venus form a bounded research proposal and obtain local returned evidence
         id: research
         run: |
@@ -141,7 +128,7 @@ jobs:
 
           branch="venus/autonomous-${GITHUB_RUN_ID}"
           git checkout -b "$branch"
-          mkdir -p autonomy/problems autonomy/cycles autonomy/proposals autonomy/evidence autonomy/changes autonomy/patches autonomy/recurrence_candidates
+          mkdir -p autonomy/problems autonomy/cycles autonomy/proposals autonomy/evidence autonomy/changes autonomy/patches
           problem_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_FORMED_PROBLEM.json"))["problem_id"])')"
           cp /tmp/VENUS_FORMED_PROBLEM.json "autonomy/problems/${problem_id}.json"
           cp /tmp/VENUS_AUTONOMOUS_CYCLE.json "autonomy/cycles/${cycle_id}.json"
@@ -154,12 +141,6 @@ jobs:
           cp /tmp/VENUS_CHANGE_CANDIDATE.json "autonomy/changes/${change_id}.json"
           patch_plan_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_PATCH_PLAN.json"))["plan_id"])')"
           cp /tmp/VENUS_PATCH_PLAN.json "autonomy/patches/${patch_plan_id}.json"
-          recurrence_generated="$(python -c 'import json; print(str(json.load(open("/tmp/VENUS_RECURRENCE_CANDIDATE.json")).get("generated", False)).lower())')"
-          recurrence_candidate_id=""
-          if [ "$recurrence_generated" = "true" ]; then
-            recurrence_candidate_id="$(python -c 'import json; print(json.load(open("/tmp/VENUS_RECURRENCE_CANDIDATE.json"))["candidate"]["candidate_id"])')"
-            cp /tmp/VENUS_RECURRENCE_CANDIDATE.json "autonomy/recurrence_candidates/${recurrence_candidate_id}.json"
-          fi
           cp /tmp/AUTONOMOUS_LEARNING_STATE.json \
             kernel/development/AUTONOMOUS_LEARNING_STATE.json
 
@@ -173,9 +154,6 @@ jobs:
             "autonomy/changes/${change_id}.json" \
             "autonomy/patches/${patch_plan_id}.json" \
             kernel/development/AUTONOMOUS_LEARNING_STATE.json
-          if [ -n "$recurrence_candidate_id" ]; then
-            git add "autonomy/recurrence_candidates/${recurrence_candidate_id}.json"
-          fi
           git commit -m "venus: freeze autonomous developmental cycle ${cycle_id}"
           git push origin "$branch"
 
@@ -192,7 +170,6 @@ jobs:
             "Change candidate: ${change_id}" \
             "Change disposition: ${change_disposition}" \
             "Patch plan: ${patch_plan_id}" \
-            "Recurrence candidate: ${recurrence_candidate_id:-none}" \
             '' \
             'The worker may study, run fixed repository-owned checks, learn from explicitly returned external review outcomes, and propose.' \
             'It cannot merge this PR, promote developmental authority, release, close the target as success,' \
