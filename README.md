@@ -4,7 +4,7 @@
 
 ### inhabited relation · symbolic intervention · returned consequence
 
-[Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva) · [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis) · **Arcane Magics**
+[Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) · [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · **Arcane Magics**
 
 <br>
 
@@ -112,9 +112,9 @@ An indefinite self-authorizing “servitor” is not magical success. It is just
 
 | Need | Leave through |
 |---|---|
-| exact future-equivalence / statistical discriminator | [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe) |
-| structural polyhedral / consciousness / QG bridge | [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis) |
-| executable developmental implementation | [Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva) |
+| exact future-equivalence / statistical discriminator | [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) |
+| structural polyhedral / consciousness / QG bridge | [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) |
+| executable developmental implementation | [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) |
 
 Arcane may inspire them. It may not borrow their warrant.
 
