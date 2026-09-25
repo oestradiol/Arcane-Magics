@@ -74,6 +74,8 @@ class AutonomousCycleReceipt:
     active_improver_revision: str | None
     formed_problem_id: str | None
     formed_problem_disposition: str | None
+    formed_problem_external_return_required: bool
+    formed_problem_discriminator: str | None
     study: Mapping[str, Any] | None
     allowed_operations: tuple[str, ...]
     forbidden_operations: tuple[str, ...]
@@ -440,6 +442,16 @@ def make_cycle(
     improver_revision = _active_improver_revision(current_state_receipt)
     problem_id = None if formed_problem is None else str(formed_problem.get("problem_id") or "")
     problem_disposition = None if formed_problem is None else str(formed_problem.get("disposition") or "")
+    problem_external_return_required = bool(
+        formed_problem.get("external_return_required", False)
+    ) if formed_problem is not None else False
+    problem_discriminator = (
+        None if formed_problem is None
+        else (
+            None if formed_problem.get("discriminator") is None
+            else str(formed_problem.get("discriminator"))
+        )
+    )
     target = choose_target(
         items,
         roadmap_text=roadmap_text,
@@ -462,6 +474,8 @@ def make_cycle(
         "active_improver_revision": improver_revision,
         "formed_problem_id": problem_id,
         "formed_problem_disposition": problem_disposition,
+        "formed_problem_external_return_required": problem_external_return_required,
+        "formed_problem_discriminator": problem_discriminator,
         "allowed_target_keys": tuple(sorted(allowed_target_keys or ())),
     }
 
@@ -519,6 +533,8 @@ def make_cycle(
         "active_improver_revision": improver_revision,
         "formed_problem_id": problem_id,
         "formed_problem_disposition": problem_disposition,
+        "formed_problem_external_return_required": problem_external_return_required,
+        "formed_problem_discriminator": problem_discriminator,
         "study": study,
         "allowed_operations": ALLOWED_OPERATIONS,
         "forbidden_operations": tuple(sorted(FORBIDDEN_OPERATIONS)),
