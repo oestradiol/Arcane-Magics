@@ -96,7 +96,7 @@ jobs:
             'target_parent':os.environ['TARGET_SHA'],
             'run_id':os.environ['RUN_ID'],
             'content_admission':'proposal receipts only; no Minerva tree replacement',
-            'authority':'candidate future only; no Root promotion',
+            'authority':'engineering candidate only; no Root promotion',
           }
           Path(f"provenance/historical/handoffs/minerva-{os.environ['RUN_ID']}.json").write_text(json.dumps(receipt,indent=2)+'\n')
           PY
@@ -107,9 +107,9 @@ jobs:
           cp /tmp/minerva/LEARNING_STATE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/proposed-learning-state.json
 
           git add provenance/historical/handoffs
-          git commit -m "handoff(minerva->venus): crystallize candidate future ${GITHUB_RUN_ID}"
+          git commit -m "handoff(minerva->venus): crystallize engineering candidate ${GITHUB_RUN_ID}"
           git push origin "$branch"
 
           gh pr create --draft --base split/venus --head "$branch" \
-            --title "handoff: Minerva → Venus candidate future ${GITHUB_RUN_ID}" \
-            --body $'This is a target-based crystallization handoff.\n\nThe merge commit preserves Minerva as a second parent while retaining the Venus tree. Only explicit proposal receipts are admitted.\n\nVenus must supply the Scientific Future discriminator and non-preauthored return before any Root integration.'
+            --title "handoff: Minerva → Venus engineering candidate ${GITHUB_RUN_ID}" \
+            --body $'This is a target-based crystallization handoff.\n\nThe merge commit preserves Minerva as a second parent while retaining the Venus tree. Only explicit proposal receipts are admitted.\n\nVenus must integrate the candidate into the Self/World model. Scientific future discrimination belongs to the subsequent Venus → OFE handoff; Root integration comes only after OFE.'
