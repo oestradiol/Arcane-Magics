@@ -1,6 +1,6 @@
 # Start Here · Arcane Magics
 
-[Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva) · [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis) · **Arcane Magics**
+[Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) · [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · **Arcane Magics**
 
 ## The contract
 
@@ -55,8 +55,8 @@ symbolic action != arbitrary external causation
 
 ## When to leave this branch
 
-Need formal operational discrimination? → [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe)
+Need formal operational discrimination? → [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe)
 
-Need structural/polyhedral/physics bridge? → [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis)
+Need structural/polyhedral/physics bridge? → [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis)
 
-Need executable developmental machinery? → [Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva)
+Need executable developmental machinery? → [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva)
