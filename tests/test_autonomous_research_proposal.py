@@ -266,5 +266,15 @@ class AutonomousResearchProposalTests(unittest.TestCase):
             run_proposal_checks(proposal)
 
 
+    def test_formed_problem_external_return_overrides_generic_local_checks(self):
+        row = cycle("REPRODUCTION")
+        row["formed_problem_external_return_required"] = True
+        row["formed_problem_discriminator"] = "RESOLVE_REFERENCED_INCIDENCE"
+        proposal = make_research_proposal(row)
+        self.assertEqual(proposal.disposition, "WITHHOLD_EXTERNAL_RETURN")
+        self.assertTrue(proposal.external_return_required)
+        self.assertEqual(proposal.discriminator, "RESOLVE_REFERENCED_INCIDENCE")
+
+
 if __name__ == "__main__":
     unittest.main()
