@@ -36,6 +36,6 @@ This branch is for **structural models and explicitly burdened bridges**.
 
 ## Sibling routing
 
-Operational test → [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe)  
-Engineering realization → [Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva)  
-Symbolic / religious / ritual interpretation → [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics)
+Operational test → [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe)  
+Engineering realization → [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva)  
+Symbolic / religious / ritual interpretation → [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
