@@ -2,7 +2,7 @@
 
 # ≡<sub>F</sub> OFE
 
-### Operational Future Equivalence
+### scientific branch · future · operational discrimination
 
 **future-relative quotient · sufficient representation · reopening · operational discrimination**
 
