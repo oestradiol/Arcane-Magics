@@ -2,7 +2,7 @@
 
 > **Structural / theophenomenological / bridge branch of the Arcane Magics research family.**
 
-[Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva) · [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics)
+[Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) · [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
 
 ## 30 seconds
 
