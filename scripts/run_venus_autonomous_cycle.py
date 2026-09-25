@@ -80,11 +80,16 @@ def main() -> int:
 
     all_items = tuple(issues) + tuple(prs)
     standing_carrier_key = None
+    standing_orientation_active = False
     standing_path = Path(args.standing_obligation)
     if standing_path.exists():
         standing = json.loads(standing_path.read_text(encoding="utf-8"))
         carrier = standing.get("carrier") or {}
-        if standing.get("status") == "PREFROZEN_RECOVERY_OBLIGATION":
+        standing_status = str(standing.get("status") or "")
+        standing_orientation_active = (
+            standing_status == "ACTIVE_STANDING_ORIENTATION"
+        )
+        if standing_status == "PREFROZEN_RECOVERY_OBLIGATION":
             kind = str(carrier.get("kind") or "").upper()
             number = int(carrier.get("number", 0) or 0)
             if kind in {"ISSUE", "PR"} and number > 0:
@@ -93,7 +98,8 @@ def main() -> int:
         snapshot_to_incidence(
             all_items,
             standing_carrier_key=standing_carrier_key,
-        )
+        ),
+        standing_orientation_active=standing_orientation_active,
     )
     allowed_target_keys = bind_problem_to_carriers(formed_problem, all_items)
     if args.problem_output:
