@@ -74,10 +74,11 @@ def _problem_training_return(
     formed_problem: Mapping[str, Any],
     base_training_return: Mapping[str, Any],
 ) -> dict[str, Any]:
-    """Bind the formed problem into the externally returned repair episode.
+    """Bind a formed problem into externally supplied trace semantics.
 
-    The external evaluator still supplies the expected behavior. The learner's
-    formed problem supplies the target/residual/discriminator/provenance values.
+    The formed problem supplies target/residual/discriminator/provenance values.
+    The external return artifact supplies which field-patterns should succeed,
+    fail, and where a successful transition should land.
     """
     problem_id = str(formed_problem["problem_id"])
     residuals = tuple(str(x) for x in formed_problem.get("residual_coordinates", ()))
@@ -94,37 +95,43 @@ def _problem_training_return(
         "discriminator": discriminator,
         "provenance_ids": list(provenance_ids),
     }
-    rows = [
-        {
-            "trace_id": "problem-valid",
-            "prior_state": "IDLE",
-            "action": "SELECT_TARGET",
-            "payload": positive,
-            "expect_success": True,
-            "expected_next_state": "TARGET_SELECTED",
-            "provenance_id": "external-training:return:problem-valid",
-        }
-    ]
-    for missing in ("target_id", "residual", "discriminator", "provenance_ids"):
+    required = frozenset(positive)
+    base_rows = tuple(base_training_return.get("traces", ()))
+    if not base_rows:
+        raise U1RecurrenceError("external training-return traces required")
+
+    rows: list[dict[str, Any]] = []
+    for index, base in enumerate(base_rows):
+        if str(base.get("prior_state")) != "IDLE" or str(base.get("action")) != "SELECT_TARGET":
+            continue
+        base_payload = dict(base.get("payload") or {})
+        missing = required - set(base_payload)
         payload = dict(positive)
-        payload.pop(missing)
+        for field in missing:
+            payload.pop(field, None)
         rows.append({
-            "trace_id": f"problem-missing-{missing}",
+            "trace_id": f"problem-bound-{index}",
             "prior_state": "IDLE",
             "action": "SELECT_TARGET",
             "payload": payload,
-            "expect_success": False,
-            "expected_next_state": None,
-            "provenance_id": f"external-training:return:missing-{missing}",
+            "expect_success": bool(base["expect_success"]),
+            "expected_next_state": base.get("expected_next_state"),
+            "provenance_id": str(base["provenance_id"]),
         })
 
+    if not rows or not any(row["expect_success"] for row in rows):
+        raise U1RecurrenceError(
+            "external training return lacks usable SELECT_TARGET semantics"
+        )
     return {
         "schema": base_training_return.get("schema"),
         "date": base_training_return.get("date"),
         "exposure": base_training_return.get("exposure"),
         "target_kind": base_training_return.get("target_kind"),
         "traces": rows,
-        "hidden_evaluation_exposed": False,
+        "hidden_evaluation_exposed": bool(
+            base_training_return.get("hidden_evaluation_exposed", False)
+        ),
         "promotion_authority": False,
     }
 
