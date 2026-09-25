@@ -183,3 +183,93 @@ A criticism that deletes an unnecessary object is progress.
 The scheduling order is lexicographic: maximize composable learning leverage first, then prefer the shortest path to discriminating information, then use resource leverage as a tie-breaker. The eventual Venus research controller should apply that ordering to admissible residuals while preserving preregistration and external return.
 
 The IG10 kernel is replayable from Git custody. EDU16-RC1 reconstructs the admitted EDU16 claim-bearing state. The generic residual-search scaffold has been internalized as state-owned inherited capability, the O*/Anti-Minerva correction boundary is executable, and a bounded learner-side EDU17R1 semantic-ingress candidate is now frozen with hidden evaluation still unexposed. The missing scientific consequence is no longer authorship; it is sealed hidden efficacy and causal transfer. GitHub/external models may provide tooling and World-side execution, but post-exposure repair is forbidden.
+
+
+## I. Returnable closure and the two-relation quantum-gravity program
+
+The carrier-neutral parent object is:
+
+```text
+local closure
++ indexed authorship
++ corrigibly permeable boundary
++ non-preauthored return
++ retained provenance
++ reachable reopening
+```
+
+with:
+
+```text
+relation without fusion
++
+boundary without isolation
+```
+
+The stronger physics program asks whether one meta-object admits two non-identical projections:
+
+```math
+\mathcal M_{\mathrm{QG}}
+=
+\mathcal R_{\mathrm{GQT}}
+\bowtie
+\mathcal R_{\mathrm{LQG}} ,
+```
+
+where `R_GQT` carries general quantum relational structure and `R_LQG` carries quantized geometry. This is THEO/MODEL with PHYS OPEN/WITHHOLD.
+
+Candidate downstream projections include:
+
+- discrete LQG/spinfoam geometry and horizon states;
+- Polyhedral Planck-diameter Crystal states;
+- crystalline-vacuum models;
+- geometry-matter entanglement and quantum-vacuum/radiation structures;
+- a cosmological projection in which an initially coherent, near-irrotational relational flow later differentiates into observable structure.
+
+The last item is a comparator-level hypothesis, not a claim that the observable universe literally was a classical laminar fluid. Its mature comparators include FLRW congruence, inflationary/primordial perturbation theory, LQC background-plus-perturbation models, and coarse-grained quantum-gravity cosmologies.
+
+### PPD-Crystal / horizon-rebarb discriminator
+
+```text
+Polyhedral Planck-diameter Crystal
+= maximally compact
++ Planck-scale
++ ordered relational geometry
++ internal polyhedral differentiation
+```
+
+No present claim follows that such an object physically existed.
+
+A horizon-side realization must define residual geometric data `R_h` and an actual map:
+
+```text
+LQG state / boundary data
+-> R_h
+-> transition or transmission constraint
+-> future Hawking / greybody observable
+```
+
+The proposed "predictive inversion under epistemic pressure" is provisionally epistemic:
+
+```text
+causal:      horizon state -> later emission
+inferential: observed emission -> reconstructed horizon constraints
+```
+
+and must not be promoted to retrocausality without independently derived dynamics.
+
+Required discriminators include explicit state variables, invariant compactness, a residue operator/amplitude, coarse-graining behavior, a radiation map, and at least one statistic/correlation/scaling law that differs from both semiclassical Hawking theory and the strongest chosen LQG comparator.
+
+### Cosmological laminar-flow projection
+
+The candidate cosmological factorization is:
+
+```text
+M_QG
+-> coherent low-vorticity / near-irrotational relational flow
+-> perturbative differentiation
+-> structure formation / horizons / local closures
+-> later observable return
+```
+
+To become physical rather than diagrammatic, this projection must define the relevant congruence or quantum state, an invariant measure of vorticity/shear/anisotropy, the mechanism by which perturbations arise, and at least one observable that distinguishes it from standard FLRW + perturbations and from existing LQC/GFT condensate cosmologies.
