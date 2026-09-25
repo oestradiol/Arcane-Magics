@@ -273,3 +273,38 @@ M_QG
 ```
 
 To become physical rather than diagrammatic, this projection must define the relevant congruence or quantum state, an invariant measure of vorticity/shear/anisotropy, the mechanism by which perturbations arise, and at least one observable that distinguishes it from standard FLRW + perturbations and from existing LQC/GFT condensate cosmologies.
+
+
+### Physical WITHHOLD / Residual formalization
+
+For candidate states `rho, sigma`, a future family `F`, channels/continuations `Phi`, and observables `O`:
+
+```math
+rho ~_F sigma
+iff
+for all Phi in F, for all O:
+Tr[O Phi(rho)] = Tr[O Phi(sigma)].
+```
+
+A **Residual** is a still-future-separating distinction:
+
+```math
+Res_F(rho,sigma) > 0
+iff
+exists Phi,O:
+Tr[O Phi(rho)] != Tr[O Phi(sigma)].
+```
+
+**WITHHOLD** is the corresponding non-quotient rule: do not identify/erase `rho` and `sigma` while such a future separator remains reachable.
+
+A physical realization requires more than an epistemic decision rule. The dynamics must actually retain the relevant degree of freedom so that a later observable can inherit its consequence. Candidate mechanisms/comparators include protected boundary/horizon charges, quantum-geometric transition data, constraint-algebra sectors, and coarse-graining fixed/residual modes.
+
+For the PPD-Crystal black-hole branch:
+
+```text
+horizon/interior residual R_h
+-> retained transition constraint
+-> future Hawking/greybody statistic
+```
+
+must beat the mature comparator set, including effective LQG models in which quantum geometry already changes subleading greybody structure and evaporation/final-state behavior, as well as horizon-state and geometry-matter-entanglement constructions.
