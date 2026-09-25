@@ -158,3 +158,16 @@ This reconciliation does **not** establish:
 - AGI or open-ended RSI.
 
 It records a typed research architecture and its current discriminators.
+
+
+## Post-receipt comparator completion
+
+The authoritative source surfaces subsequently added the dedicated QG bridge SOTA watch at parent commit:
+
+```text
+9641f4d61f123de35488185c9bc07e95305a7d06
+```
+
+Canonical `Future/Physics/SOURCES.md` was also refreshed with the selected Hawking/LQG, geometry-matter entanglement, horizon-transition, spinfoam-entanglement, and crystalline-vacuum comparators.
+
+This receipt amendment is the final Git-side reconciliation step; its own commit is therefore the successor of the parent hash above.
