@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "Cite the specific monograph or release artifact actually used."
-title: "Venus-Minerva Research Family"
+message: "Cite the specific Arcane Magics monograph, branch, or release artifact actually used."
+title: "Arcane Magics"
 type: collection
-version: "2026-09-24-bundle-v1"
+version: "2026-09-25-split-arcane"
 authors:
   - family-names: "Amaral"
     given-names: "Elaina Lynn"
