@@ -186,15 +186,20 @@ They compete for priority when they obtain a short path to a real discriminator 
 
 ### Canonical capability recovery lane
 
-The bounded U2/U1 functional recovery is admitted. Remaining recovery proceeds in this order:
+The bounded U2/U1 functional recovery and #162 founder/source ablation are admitted.
+
+The next discriminator is #165:
 
 ```text
-#161 founder/source-ablation equivalence for the recompiled U1 recurrence
--> fresh problem-specific live external-return recurrence
--> repeated prospective recurrence on fresh current-world problems
+formed current repository problem
+-> freeze exact GitHub World request before the answer exists
+-> later changed GitHub repository/check state
+-> typed WORLD_RETURN
+-> reduce / reopen / WITHHOLD
+-> only then consider problem-specific machinery recurrence
 ```
 
-#161 is an operational portability gate, not independent external replication.
+The reviewer-authored behavioral-trace recurrence merged via #164 is retained only as an external-scaffold bounded recurrence experiment. It does not discharge #165 and is disabled in the live autonomous workflow until a genuine World-return path is admitted.
 
 ## Current shortest high-leverage chain
 
