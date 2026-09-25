@@ -2,7 +2,7 @@
 
 # ◇ ECLIPSIS ◇
 
-### polyhedral local views · open bridges · meta-qualia · quantum-gravity frontier
+### math & logics · spirit · structural relation
 
 [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva) · [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · **Eclipsis** · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
 
