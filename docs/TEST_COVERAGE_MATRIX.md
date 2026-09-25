@@ -89,3 +89,6 @@ An issue is not “covered” because this table names it. Coverage requires an 
 | mythos refinement under Reality + mathematics | T2/T5 | representation change must face independently sourced consequence and/or formal discriminator; coherence alone cannot promote |
 | learned-model donor internalization | T5/T6 | donor-present competence -> reconstructed candidate -> donor/source removal -> matched competence survival; donor outputs/weights have no truth/promotion authority |
 | Safe Strong RSI as instrumental rather than benchmark goal | T3/T5/T6 | machinery-level self-improvement must be selected because it resolves a consequential limitation and must survive fresh return, ablation, rollback, and safety-floor checks |
+
+
+| #174 standing Canonical developmental obligation | T3/T5 | `CANONICAL_TELIC_RECOVERY_BOOTSTRAP.json` + U2-style problem formation | make the prefrozen standing obligation causally visible without forcing a downstream issue; require stale UNKNOWN drafts not to dominate while concrete conflicts may preempt | bounded formed problem with carrier index only, no promotion/truth authority, and preserved external correction |
