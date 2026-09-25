@@ -1,47 +1,29 @@
 # Contributing to OFE
 
-This branch is for **formal, operational, and scientific discrimination work**.
+OFE is the **science / future** layer.
 
-## High-value contributions
+High-value contributions include:
 
-- proof checks;
-- counterexamples;
-- sharper definitions;
+- proof checks and counterexamples;
+- sharper future families;
+- nontrivial reopening examples;
 - mature reductions;
-- equivalence to existing formalisms;
-- nontrivial examples where a larger future family reopens a quotient;
-- composition / transport failures;
-- quantum-process or QG applications with explicit observables;
-- null models and strongest comparators;
-- source corrections.
+- operational discriminators;
+- null models;
+- physical applications with explicit observables;
+- evidence that a proposed distinction is gauge.
 
-A successful reduction is progress.
+## Contribution grammar
 
-## Contribution template
+```text
+state/history space
++ future family F
++ equivalence relation
++ comparator
++ discriminator
++ result / non-entailments
+```
 
-1. state/history space;
-2. future-test family (F);
-3. exact equivalence relation;
-4. claim type: definition / exact result / application / hypothesis;
-5. assumptions;
-6. proof or computation;
-7. strongest comparator;
-8. discriminator;
-9. non-entailments.
+Cross-register material enters through `handoff/venus-to-ofe/*`. Scientific results leave for Root through `handoff/ofe-to-root/*`.
 
-## Automatic failure modes
-
-Do not:
-
-- restate a definition as a theorem;
-- smuggle a bridge conclusion into the premises;
-- call structural analogy physical evidence;
-- use notation to hide an undeclared test family;
-- treat build success as proof;
-- treat an Eclipsis or Arcane object as OFE authority without operational translation.
-
-## Sibling routing
-
-Engineering realization → [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva)  
-Structural/QG bridge → [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis)  
-Symbolic/inhabited interpretation → [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
+Do not promote a definition into a theorem or a formal resemblance into physical evidence.
