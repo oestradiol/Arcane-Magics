@@ -1,49 +1,39 @@
-# Repository Authority Boundary · OFE Branch
+# Repository Authority Boundary · OFE
 
-**Branch:** `split/ofe`  
-**Future repository:** `Arcane-Magics/OFE`
+## OFE owns
 
-## Owns
-
-OFE is authoritative for:
-
+- scientific future discrimination;
 - future-relative operational equivalence;
-- quotient construction;
-- exact formal results stated in OFE;
-- refinement / reopening conditions;
-- operational discriminators;
-- relational nonfactorization;
-- declared scientific applications and their comparator burden.
+- quotient/refinement/reopening structure;
+- exact formal consequences stated in OFE;
+- comparator and discriminator burden for declared scientific applications.
 
-## Does not own
-
-OFE does not inherit:
-
-- Venus engineering authority;
-- Eclipsis physical or consciousness bridges;
-- Arcane symbolic/theophenomenological warrant;
-- metaphysical truth from formal elegance.
-
-## Import rule
-
-A sibling concept becomes OFE material only after translation into:
+## OFE receives
 
 ```text
-state / history space
-+ future family F
-+ observable / decision consequence
-+ comparator
-+ discriminator
+handoff/venus-to-ofe/*
+→ Self/World-model residue
+→ scientific future test
 ```
 
-If that translation cannot be made, the object may remain meaningful elsewhere without becoming OFE.
+## OFE does not inherit
 
-## Temporary carrier
+- Venus model authority as scientific truth;
+- Minerva engineering success as empirical proof;
+- Eclipsis structural fit as physical identity;
+- Arcane religious/symbolic meaning as mechanism;
+- Root routing visibility as warrant.
 
-Unrelated runtime and symbolic files remain physically present during the split. They are inherited carrier, not OFE authority.
+## Outgoing
 
-## Siblings
+```text
+typed scientific consequence
+→ handoff/ofe-to-root/*
+→ Root routing/map revision
+```
 
-- [Venus-Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/venus-minerva)
-- [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis)
-- [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics)
+```text
+formal consistency != empirical truth
+prediction != return
+application != mechanism
+```
