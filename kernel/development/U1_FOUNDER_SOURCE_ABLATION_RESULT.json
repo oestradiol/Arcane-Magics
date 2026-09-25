@@ -1,0 +1,41 @@
+{
+  "schema": "Venus.U1FounderSourceAblationResult.v0.1",
+  "date": "2026-09-24",
+  "issue": 161,
+  "disposition": "PASS_BOUNDED_RECOMPILED_U1_FOUNDER_SOURCE_ABLATION",
+  "causal_tested_head": "d020d9808d72161a49a520f8d9c24a7e8595c515",
+  "ci_evidence": {
+    "workflow_run": 36076581299,
+    "integrity": "PASS",
+    "formal": "PASS",
+    "publication": "PASS"
+  },
+  "gates": {
+    "fresh_directory": true,
+    "python_isolated_mode": true,
+    "explicit_dependency_allowlist": true,
+    "repository_root_required_at_runtime": false,
+    "canonical_library_required": false,
+    "conversation_state_required": false,
+    "network_admitted": false,
+    "parent_correct": "5/8",
+    "successor_correct": "8/8",
+    "ablation_correct": "5/8",
+    "safety_floor_unchanged": true,
+    "rollback_available": true,
+    "ctl_ostar_admitted": true,
+    "label_rename_consequence_invariant": true,
+    "provenance_identity_changes_under_rename": true,
+    "missing_required_return_fails_closed": true
+  },
+  "claim_fence": {
+    "independent_external_replication": false,
+    "historical_u1_package_identity": false,
+    "open_ended_rsi": false,
+    "agi": false,
+    "consciousness": false,
+    "unrestricted_autonomy": false,
+    "promotion_authority": false
+  },
+  "next_recovery_debt": "fresh problem-specific live external-return recurrence instead of historical SSR1 return reuse"
+}
