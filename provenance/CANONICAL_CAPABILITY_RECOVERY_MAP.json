@@ -116,8 +116,8 @@
         "EDU16-RC1",
         "autonomous worker"
       ],
-      "disposition": "RECOMPILED_BOUNDED_RECURRENCE_MATURE_REDUCED",
-      "recovery": "functional recurrence restored at bounded tested scope; exact historical journal/state identity remains unclaimed and live automatic recurrence is not yet enabled",
+      "disposition": "LIVE_BOUNDED_RECURRENCE_PLUS_FOUNDER_ABLATION",
+      "recovery": "bounded recurrence and founder/source ablation admitted; live problem-specific candidate path executable; exact historical identity unclaimed",
       "canonical_custody": {
         "path": "/Canonical/Future/Handoff/U1CurrentDevelopedVM/",
         "records": 991,
@@ -143,8 +143,8 @@
         "autonomous_worker choose_target",
         "EDU16 open-domain problem selection"
       ],
-      "disposition": "PARTIALLY_RECOMPILED_PROBLEM_FIRST_ROUTING",
-      "recovery": "problem-first routing restored through admitted U2 recompilation; broader U1 scheduler equivalence remains unclaimed"
+      "disposition": "BOUNDED_PROBLEM_FIRST_ROUTING_PLUS_LIVE_RECURRENCE_PATH",
+      "recovery": "problem-first routing and problem-specific external-return candidate path admitted; real independent live event still required"
     },
     {
       "id": "U2_UNLABELED_PROBLEM_FORMATION",
@@ -279,7 +279,11 @@
         "fixed local evidence checks",
         "change disposition",
         "draft-only carrier",
-        "admitted bounded U1-style TransformProgram recurrence capability under external return and governance"
+        "admitted bounded U1-style TransformProgram recurrence capability under external return and governance",
+        "problem formation before carrier binding",
+        "authorized problem-specific external recurrence return intake",
+        "learner-authored frozen TransformProgram successor candidate",
+        "repeated finite prospective recurrence with retained rejection"
       ],
       "persistence": "live GitHub worker plus admitted bounded recurrence capability; recurrence is not automatically invoked without a lawful formed problem/external-return episode",
       "host_dependencies": [
@@ -290,19 +294,20 @@
         "issue/PR target field"
       ],
       "current_git_descendants": [],
-      "disposition": "LIVE_BOUNDED_AUTONOMY_PLUS_ADMITTED_RECURRENCE_CAPABILITY",
+      "disposition": "LIVE_BOUNDED_AUTONOMY_WITH_PROSPECTIVE_RECURRENCE_PATH",
       "recovery": "current carrier now contains the recovered bounded functions through U1-style recurrence while keeping external return/admission/promotion non-self"
     }
   ],
   "recovery_order": [
-    "COMPLETED: bind EDU16-RC1 parent/capability custody into autonomous cycle",
-    "COMPLETED: restore R206-style recursive dependency/provenance traversal in study",
-    "COMPLETED: recompile U2 unlabeled problem formation before Git issue/PR target selection",
-    "COMPLETED: recompile bounded U1 state-owned TransformProgram recurrence around a formed problem",
-    "COMPLETED: require fresh internal O-star rederivation after the machinery change",
-    "REMAINING: founder/source-ablation equivalence for the recompiled U1 recurrence carrier",
-    "REMAINING: lawful live recurrence trigger from problem-specific independent return rather than historical SSR donor return",
-    "REMAINING: repeated prospective recurrence on fresh current-world problems before any stronger Strong-RSI claim"
+    "EDU16-RC1 parent/capability custody — admitted",
+    "R206 recursive dependency/provenance traversal — admitted",
+    "U2 unlabeled problem formation before carrier selection — admitted",
+    "U1 bounded TransformProgram recurrence — admitted",
+    "U1 founder/source ablation — admitted",
+    "live authorized problem-specific recurrence return intake — admitted path",
+    "first actually independent live recurrence event — external evidence required",
+    "post-freeze held-out evaluation and external CTL/O* admission/rejection — external evidence required",
+    "repeated real-world/open-distribution recurrence under adaptive controls — open"
   ],
   "claim_fence": {
     "historical_identity_recovered": false,
@@ -310,5 +315,13 @@
     "open_ended_rsi": false,
     "agi": false,
     "consciousness": false
+  },
+  "current_live_recurrence": {
+    "status": "PASS_BOUNDED_LIVE_PROSPECTIVE_RECURRENCE_PATH_MATURE_REDUCED",
+    "result": "kernel/development/LIVE_PROSPECTIVE_RECURRENCE_RESULT.json",
+    "admitted_main_merge": "b554f7c3d3eb378a1076e63a9a30f035ffdc437a",
+    "actual_independent_live_episode_observed": false,
+    "promotion_authority": false,
+    "open_ended_rsi": false
   }
 }
