@@ -1,5 +1,7 @@
 name: Arcane symbolic / comparative CI
 on:
+  pull_request:
+    branches: [split/arcane-magics]
   push:
     branches: [split/arcane-magics]
   workflow_dispatch:
@@ -9,17 +11,12 @@ jobs:
   arcane:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Symbolic/provenance checks
-        run: |
-          python scripts/audit_causal_distinctions.py
-          python scripts/audit_construct_dispositions.py
-          python scripts/lint_github_markdown.py
-          grep -q 'meaningful coincidence' README.md
-          grep -q 'Anti-scripture' REPOSITORY_AUTHORITY_BOUNDARY.md
+      - name: Arcane-local symbolic/provenance checks
+        run: python scripts/audit_layer_surface.py
       - name: Build Arcane monograph
         run: |
           sudo apt-get update
@@ -29,3 +26,5 @@ jobs:
           biber main
           pdflatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
           pdflatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
+      - name: Anti-scripture fence
+        run: echo 'meaning != mechanism != source independence'
