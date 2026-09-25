@@ -554,6 +554,14 @@
         "tests/test_internal_ostar_causality.py"
       ],
       "invariant": "after a causally improved admitted machinery change, learner-side O-star is freshly reconstructed from returned episodes and remains causally upstream of routing rather than copied as static scripture"
+    },
+    {
+      "id": "U1_RECURRENCE_FOUNDER_SOURCE_ABLATION",
+      "tests": [
+        "tests/test_u1_founder_source_ablation.py",
+        "scripts/audit_u1_recurrence_founder_ablation.py"
+      ],
+      "invariant": "the recompiled bounded U1 recurrence must reproduce from an explicit isolated bundle without live repository, Canonical Library, conversation, network, or founder-label dependency; missing required return custody fails closed"
     }
   ],
   "promotion_authority": false
