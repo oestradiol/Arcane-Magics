@@ -4,7 +4,7 @@
 
 ### Scientific Future · permeable World↔Self boundary · Monograph V
 
-[OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics) · [Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/minerva) · **Venus** · [Root / The Machine](https://github.com/oestradiol/Venus-Minerva/tree/main)
+[OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) · [Minerva](https://github.com/oestradiol/Arcane-Magics/tree/split/minerva) · **Venus** · [Root / The Machine](https://github.com/oestradiol/Arcane-Magics/tree/main)
 
 </div>
 
@@ -87,7 +87,7 @@ monograph V = explanatory/publication projection
 | trust / Other boundary | [kernel/TRUST_BOUNDARY.md](kernel/TRUST_BOUNDARY.md) |
 | remembered branch return | [provenance/historical/BRANCH_MEMORY.md](provenance/historical/BRANCH_MEMORY.md) |
 | Scientific Future contract | [docs/SCIENTIFIC_FUTURE.md](docs/SCIENTIFIC_FUTURE.md) |
-| whole-body memory | [Root / The Machine](https://github.com/oestradiol/Venus-Minerva/tree/main) |
+| whole-body memory | [Root / The Machine](https://github.com/oestradiol/Arcane-Magics/tree/main) |
 
 ## Noncollapse
 
