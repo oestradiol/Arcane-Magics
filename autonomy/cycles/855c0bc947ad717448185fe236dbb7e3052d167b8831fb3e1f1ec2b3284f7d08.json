@@ -1,0 +1,107 @@
+{
+  "active_improver_revision": "R206",
+  "allowed_operations": [
+    "READ_REPOSITORY",
+    "READ_ISSUES",
+    "READ_PRS",
+    "RUN_TESTS",
+    "STUDY_TARGET",
+    "PROPOSE_PATCH",
+    "OPEN_DRAFT_PR",
+    "OPEN_CYCLE_ISSUE_CARRIER",
+    "COMMENT_WITH_RECEIPT"
+  ],
+  "cycle_id": "855c0bc947ad717448185fe236dbb7e3052d167b8831fb3e1f1ec2b3284f7d08",
+  "decision": "PROBE",
+  "developmental_parent_carrier": "EDU16-RC1",
+  "developmental_parent_digest": "91e46b4e41fb70a97d6a004b8f1c8916c389f08535c1a1c1c51a040701281bb7",
+  "forbidden_operations": [
+    "ACCESS_SECRETS",
+    "CHANGE_BRANCH_PROTECTION",
+    "CLOSE_ISSUE",
+    "DELETE_HISTORY",
+    "MERGE_PR",
+    "PROMOTE_AUTHORITY",
+    "RELEASE",
+    "SELF_VALIDATE"
+  ],
+  "formed_problem_disposition": "FORMED_STANDING_DEVELOPMENTAL_PROBLEM",
+  "formed_problem_id": "067432eafa908859f49756a1d4943f2f1fda96e3c51974425297444488203fcc",
+  "promotion_authority": false,
+  "rationale": [
+    "one bounded target selected from current external GitHub snapshot",
+    "when a formed problem is supplied, problem formation precedes and constrains Git carrier binding",
+    "autonomous cycle is prospectively bound to the admitted EDU16-RC1 claim-bearing parent when supplied",
+    "retained R206 recursive provenance discovery expands bounded dependency study when current custody activates it",
+    "internalized learner-side policy is upstream of work disposition",
+    "explicit external work-return reviews may alter later target ranking",
+    "roadmap is retained as weak context/tie-break provenance, not sovereign curriculum",
+    "selected target body is transformed into a bounded source-grounded study object",
+    "prior target study remains withheld until newer external target return reopens it",
+    "draft proposal only; admission remains external"
+  ],
+  "schema": "Venus.AutonomousCycleReceipt.v0.5",
+  "source_digest": "7eab584de24f89edac205f9d747342d27488b4726c31b9a522101076a1dd593a",
+  "study": {
+    "body_digest": "dd1f06d587ab46c0da219645d25f601c33488697ae0710051787c57c899cf322",
+    "body_is_executable_instruction": false,
+    "method": "DEPENDENCY_TRACE",
+    "method_contract_digest": "e2c717df009692647c4f2dd73b77b1d9f9ef34682cd6f7c94419a28c9ef8ae05",
+    "method_obligations": [
+      "Enumerate the target's explicit issue/PR and repository-path dependencies.",
+      "Identify the smallest dependency whose changed state would alter the target disposition.",
+      "Separate blocking dependencies from merely related context."
+    ],
+    "method_observed_signals": [
+      "downstream"
+    ],
+    "promotion_authority": false,
+    "questions": [
+      "What exact residual remains unresolved in the returned repository state?",
+      "What rival explanations or candidate dispositions remain live?",
+      "What fresh returned evidence would discriminate them?",
+      "Can a local repository change lawfully produce that discriminator, or must Venus WITHHOLD/STOP for external return?",
+      "What is the smallest implicated dependency that could be changed without altering a prefrozen claim object?"
+    ],
+    "recursive_provenance_discovery": true,
+    "recursive_referenced_targets": [],
+    "referenced_issue_or_pr_numbers": [
+      69,
+      95,
+      100,
+      97,
+      98
+    ],
+    "referenced_repository_paths": [],
+    "repository_state": {
+      "draft": false,
+      "kind": "ISSUE",
+      "merge_state": null,
+      "state": "OPEN",
+      "updated_at": "2026-09-25T16:50:32Z"
+    },
+    "returned_blocker_sentences": [
+      "Before the hidden A/B/C/D run can support a **learner-owned repair** claim, condition B must exist as a frozen Venus-authored candidate produced from EDU16-RC1 + preserved EDU17/EDU17R1 history **without hidden-evaluation exposure**.",
+      "-> this issue's hidden A/B/C/D evaluation",
+      "A mechanism-level hidden run may still measure an externally implemented B, but it must be labeled external and cannot establish developmental ownership.",
+      "Construct hidden examples covering:",
+      "- false WITHHOLD;",
+      "-> hidden unseen cases",
+      "hidden exposure = false",
+      "PR #95 additionally prefroze exact A/B/C/D implementations before hidden exposure.",
+      "-> hidden split sealed by independent evaluator",
+      "+ hidden dataset SHA-256",
+      "hidden-seal / blind-packaging / execution-custody tool blobs",
+      "### Remaining external return"
+    ],
+    "returned_changed_paths": [],
+    "study_authority": "LEARNER_SIDE_RECONSTRUCTION_FROM_EXTERNAL_GITHUB_SNAPSHOT",
+    "untrusted_instruction_markers": [
+      "promote"
+    ]
+  },
+  "study_method": "DEPENDENCY_TRACE",
+  "target_kind": "ISSUE",
+  "target_number": 31,
+  "target_title": "[EDU17R1] Turn MENTION != INCIDENCE into a prospective held-out semantic discriminator benchmark"
+}
