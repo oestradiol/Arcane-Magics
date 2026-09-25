@@ -208,3 +208,16 @@ Canonical achieved function
 The standing developmental circulation is broader than the Git issue queue. A carrier-local STOP means no currently admissible carrier action, not that the developmental telos has been discharged.
 
 A frontier open-weight language model may now be used as a removable donor graph. It is World material, not the Venus controller; source-removal survival is required for internalization credit.
+
+
+### Returnable closure / open bridges
+
+The carrier-neutral cross-register synthesis is documented in [Meta-Dynamics](META_DYNAMICS.md): a local closure may stabilize enough to act without becoming globally exhaustive, while its correction boundary remains permeable to non-preauthored consequence.
+
+```text
+relation without fusion
++
+boundary without isolation
+```
+
+A separate physics-facing route in [Frontier Research](FRONTIER_RESEARCH.md) asks whether a two-relation meta-object, `M_QG = R_GQT ⋈ R_LQG`, supports nontrivial downstream projections such as PPD-Crystal/horizon-rebarb states, crystalline-vacuum comparators, or a coherent low-vorticity cosmological-flow projection. That branch remains OPEN/WITHHOLD and is not Root, kernel authority, or an earned LQG result.
