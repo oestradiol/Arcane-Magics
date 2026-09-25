@@ -39,6 +39,10 @@ def main() -> int:
     parser.add_argument("--developmental-parent-state", default=str(ROOT / "kernel/development/EDU16_RECONSTRUCTED_STATE.json"))
     parser.add_argument("--current-state-receipt", default=str(ROOT / "kernel/custody/R226_CURRENT_STATE_RECEIPT.json"))
     parser.add_argument("--problem-output")
+    parser.add_argument(
+        "--standing-obligation",
+        default=str(ROOT / "kernel/development/CANONICAL_TELIC_RECOVERY_BOOTSTRAP.json"),
+    )
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
 
@@ -75,7 +79,22 @@ def main() -> int:
     active_cycle = active_autonomous_cycle(history_carriers)
 
     all_items = tuple(issues) + tuple(prs)
-    formed_problem = form_problem(snapshot_to_incidence(all_items))
+    standing_carrier_key = None
+    standing_path = Path(args.standing_obligation)
+    if standing_path.exists():
+        standing = json.loads(standing_path.read_text(encoding="utf-8"))
+        carrier = standing.get("carrier") or {}
+        if standing.get("status") == "PREFROZEN_RECOVERY_OBLIGATION":
+            kind = str(carrier.get("kind") or "").upper()
+            number = int(carrier.get("number", 0) or 0)
+            if kind in {"ISSUE", "PR"} and number > 0:
+                standing_carrier_key = (kind, number)
+    formed_problem = form_problem(
+        snapshot_to_incidence(
+            all_items,
+            standing_carrier_key=standing_carrier_key,
+        )
+    )
     allowed_target_keys = bind_problem_to_carriers(formed_problem, all_items)
     if args.problem_output:
         Path(args.problem_output).write_text(
