@@ -284,6 +284,7 @@ class RecompiledU2ProblemFormationTests(unittest.TestCase):
             problem.discriminator,
             "REPRODUCE_OR_REFRESH_CONTINUATION_STATE",
         )
+        self.assertTrue(problem.external_return_required)
 
 
 if __name__ == "__main__":
