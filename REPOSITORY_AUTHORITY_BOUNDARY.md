@@ -1,111 +1,61 @@
-# Repository Authority Boundary
+# Repository Authority Boundary · Arcane Magics Branch
 
-**Effective:** 2026-09-24
+**Branch:** `split/arcane-magics`  
+**Future repository:** `Arcane-Magics/Arcane-Magics`
 
-This repository is the authority for the Venus-Minerva implementation and its release-bearing developmental state.
+## Owns
 
-## Venus-Minerva owns
+Arcane Magics is authoritative for its native PHEN / THEOPHEN / symbolic / comparative objects:
 
-- executable and developmental implementation artifacts;
-- release-bearing source and runtime packages;
-- current developmental receipts, negative branches, prefreezes, gates, and state pointers needed to interpret the implementation line;
-- repository-local governance required to keep those artifacts reconstructible and non-self-certifying;
-- publication projections that are intentionally shipped with the repository.
+- inhabited relation;
+- Perspective-indexed symbolic meaning;
+- Authorship and Spirit/return;
+- ritual / symbolic intervention models;
+- synchronicity as meaningful-coincidence object;
+- comparative religion, philosophy, phenomenology, myth, and occult practice;
+- echo-chamber / anti-scripture analysis;
+- reader transformation and release;
+- project genealogy in these registers.
 
-## Canonical owns outside this repository
+## Does not own
 
-- research mappings and synthesis maps;
-- planning documents and future sprint programs;
-- literature/research provenance that is useful to the project but not required to reconstruct the Venus-Minerva release;
-- exploratory donor material, broad theory reconciliation, and external provenance that has not been admitted into Venus-Minerva as a release-bearing artifact.
+Arcane does not mint:
 
-Canonical therefore does **not** advance Venus-Minerva state merely by describing a newer result. A developmental result becomes Venus-Minerva authority only when its exact claim-bearing artifact is deliberately admitted here and the repository's own current-state projection is updated.
+- OFE theorem status;
+- statistical anomaly;
+- acausal physical mechanism;
+- Eclipsis physical bridge closure;
+- Venus engineering capability;
+- supernatural causation from symbolic usefulness.
 
-Conversely, Venus-Minerva should not absorb every research note merely because it influenced development. This keeps the implementation/release organism smaller than the surrounding research ecology.
+## Cross-register export law
 
-## Import rule
-
-```text
-Canonical research / planning / provenance
-        |
-        | explicit admission when state-bearing
-        v
-Venus-Minerva release artifact
-        |
-        | repository-local verification / current-state update
-        v
-Venus-Minerva authority
-```
-
-No implicit cross-repository inheritance is allowed.
-
-## Current developmental authority
+Arcane can export:
 
 ```text
-positive mainline:
-EDU16 [1703]
-PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY
-
-preserved negative:
-EDU17
-INVALID_FOR_PROMOTION / PRESERVED_NEGATIVE
-
-preserved repair-origin branch:
-EDU17R1
-WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION
-measured separator: MENTION != INCIDENCE
-
-prospective frozen repair candidate:
-EDU17R1-RC1-WORD-JACCARD-K3-v1
-AUTHORED_FROZEN / PENDING_SEALED_HIDDEN_#31
-promotion authority: false
+referent
++ operator
++ provenance
++ lived consequence
++ claim fence
 ```
 
-The repository ships an exact Git-reconstructible IG10 VMK2 checkpoint under `kernel/`; R194 is historical implementation provenance only. EDU16 remains the latest positive developmental authority. The original self-contained 1703-event EDU16 runner/journal is still not recovered, but `kernel/development/EDU16-RC1` custody now deterministically reconstructs the admitted claim-bearing EDU16 state from the exact recovered Canonical EDU13→EDU16 artifacts. That reconstructed carrier is not historical event-level replay and grants no promotion authority.
+A sibling must independently supply whatever additional warrant its own register requires.
 
-## Admitted infrastructure below the developmental head
+## Anti-scripture law
 
-Current repository authority also includes bounded infrastructure admitted after EDU16 without changing the positive developmental head:
+A symbolic closure is unhealthy when criticism, dissent, source removal, or World return becomes impossible while internal resonance continues increasing.
 
 ```text
-GENERIC_RESIDUAL_SEARCH
-state-owned inherited capability
-fresh learner authorship claim = false
-
-Internalizer / O* / Anti-Minerva
-executable governance and correction-channel guards
-Safe Strong RSI performance claim = false
+recurrence != return
 ```
 
-This distinction prevents a status fossil in the opposite direction: later infrastructure may be current and executable while the strongest learner-owned developmental result remains EDU16. Infrastructure admission is not developmental promotion.
+## Temporary carrier
 
+Engineering/formal/Eclipsis material remains in this branch because all four future repositories still share one physical Git carrier. It is not Arcane authority merely because it is reachable.
 
-## Prospective repair authority below promotion
+## Siblings
 
-The frozen EDU17R1 candidate and its ownership receipt are repository-admitted **candidate state**. They establish bounded learner-side repair authorship before hidden exposure; they do not supersede EDU16 as the current positive developmental authority and do not establish repair efficacy.
-
-```text
-authorship freeze
-!=
-hidden-evaluation success
-!=
-developmental promotion
-```
-
-
-## 2026-09-25 returnable-closure admission
-
-Canonical remains the research source for the broader synthesis. Git admits only the carrier-neutral consequences needed by live theory/engineering surfaces:
-
-```text
-returnable local closure
-corrigibly permeable correction boundary
-open bridge
-independent return
-future-separating residual
-reachable reopening
-```
-
-The quantum-superposition / VR-TO / Observable-Universe-bubble construction remains a Canonical/MetaTheory + open-physics bridge unless and until separately admitted by an earned formal or physical discriminator.
-
-Admission of the neutral closure law does not restore `vacuous_relation` or `trivial_object` as live Git/Root premises and does not create runtime, scientific, consciousness, or cosmological authority.
+- [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe)
+- [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis)
+- [Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva)
