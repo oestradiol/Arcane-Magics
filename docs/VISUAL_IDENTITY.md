@@ -1,35 +1,23 @@
 # OFE Visual Identity & Interface Constitution
 
-## Character
+OFE should feel like a **future-test instrument**: formal, sparse, and hostile to distinctions that cannot earn downstream consequence.
 
-OFE should look like a **technical notebook that survived peer review**, not a mystical system diagram.
+- graphite — current state space
+- white — explicit definitions
+- cyan — observable future consequence
+- violet — OPEN physical application
+- amber — unresolved comparator / WITHHOLD
 
-### Palette
+Motif: **≡ᶠ / quotient / branching future cone**.
 
-- graphite — `#18181B`
-- slate — `#334155`
-- paper-gray — `#F4F4F5`
-- violet only for OPEN physics bridges — `#7C3AED`
+UI order:
 
-Motif: **≡ᶠ** / quotient brackets `[x]₍F₎`.
+1. state/history space;
+2. future family `F`;
+3. equivalence / quotient;
+4. comparator;
+5. discriminator;
+6. reopening condition;
+7. outgoing scientific consequence.
 
-## UI hierarchy
-
-1. definition / exact object;
-2. theorem or exact consequence;
-3. assumptions;
-4. strongest comparator;
-5. application;
-6. explicit OPEN bridge.
-
-Put equations before project mythology. Put falsifiers before grand implications.
-
-## Status vocabulary
-
-`EXACT` · `ELEMENTARY` · `SUPPORTED` · `OPEN` · `WITHHOLD`
-
-Avoid `BREAKTHROUGH`, `UNIFICATION`, or `SOLUTION` unless independently earned.
-
-## Navigation
-
-[Venus-Minerva](https://github.com/oestradiol/Venus-Minerva/tree/split/venus-minerva) · **OFE** · [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics)
+Never use equation typography to imply more warrant than the declared future family supports.
