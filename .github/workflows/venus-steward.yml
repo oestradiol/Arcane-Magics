@@ -1,12 +1,11 @@
-name: Venus CI/CD
+name: Legacy pre-recrystallization steward (manual compatibility)
 
 on:
-  push:
-    tags: ["v*"]
-  pull_request:
   workflow_dispatch:
-  schedule:
-    - cron: "17 6 * * *"
+
+# Historical compatibility workflow.
+# Current CI ownership is split across layer branches, Venus Scientific Future,
+# and Root memory/integration. This workflow must not run automatically.
 
 permissions:
   contents: read
