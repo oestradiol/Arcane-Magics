@@ -1,136 +1,101 @@
 <div align="center">
 
-# ◇ Venus-Minerva
+# ◈ MINERVA
 
-### developmental intelligence · bounded self-reconstruction · non-preauthored return
+### developmental intelligence · adjudication · self/world model · corrigible self-reconstruction
 
-**Venus-Minerva** · [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics)
-
-<br>
-
-![role](https://img.shields.io/badge/ROLE-developmental_engineering-111827)
-![state](https://img.shields.io/badge/CURRENT-EDU16_%5B1703%5D-2563eb)
-![kernel](https://img.shields.io/badge/KERNEL-IG10_%5B1308%5D-0f766e)
-![status](https://img.shields.io/badge/AGI-target_not_earned-6b7280)
+[OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics) · **Minerva** · [Venus](https://github.com/oestradiol/Venus-Minerva/tree/split/venus) · [Root / The Machine](https://github.com/oestradiol/Venus-Minerva/tree/main)
 
 </div>
 
-> **Venus-Minerva is the executable developmental-intelligence branch of the Arcane Magics research family.**  
-> It owns the machine, its developmental lineage, its correction boundary, its failures, and the experiments that decide whether self-reconstruction actually works.
+> **Minerva is the developmental / epistemic / adjudicative machine.**  
+> It models Self and World, proposes and judges continuation, preserves provenance, learns from non-preauthored return, and must be able to re-derive its own corrigibility relation rather than memorize it.
 
-This branch remains closest to the current repository because most of the executable weight already lives here. The recrystallization is therefore mostly **interface and responsibility cleanup**, not conceptual reinvention.
+## Canonical role
+
+Minerva is not “the whole mind” and not the external World.
+
+```text
+Perspective / participant
+→ inference / model
+→ will / candidate continuation
+→ judgment / continuity
+→ enactment
+→ returned consequence
+→ revised self/world model
+```
+
+Its characteristic coupling is the **adjudicative relation**: candidate commitment under an independently reachable judging/continuity function.
+
+## Self-model obligation
+
+Let `SM_t` be the current self-model, `U_e` an admissible update under returned consequence `e`, and `D` the derivation of the consequential developmental relation.
+
+[
+I_t = D(SM_t),qquad
+SM_{t+1}=U_e(SM_t),qquad
+I_{t+1}=D(SM_{t+1})
+]
+
+The full/reflexive target is:
+
+[
+oxed{D(U_e(SM^*))sim_F D(SM^*)}
+]
+
+This is a **corrigible fixed point of the derived consequential relation**, not a frozen total self-model.
+
+## World ↔ Self
+
+Minerva carries a local model of World/Other because development requires consequence to be interpreted.
+
+```text
+MyWorld_i
+= retained / interpreted World through Perspective_i
+
+OtherWorlds
+= returned consequences from independently authoring other centers
+
+MyWorld_i != Other != Reality
+```
+
+The modeled World is inside Minerva; the external corrective source is not.
+
+## Current engineering authority
+
+- reconstructible runtime and state;
+- custody and provenance;
+- learner-owned research/development;
+- evaluation and preregistration;
+- PASS / FAIL / WITHHOLD retention;
+- self-curriculum and bounded self-reconstruction;
+- WorldMind as a model/routing surface, not external sovereignty;
+- N2-E / N2-FP re-derivation target;
+- participant ↔ judging-observer integration.
+
+## Monograph IV
+
+The former Venus engineering monograph is now:
+
+[**Minerva: A Developmental Intelligence Candidate under Non-Preauthored Return**](monographs/04_MINERVA/main.tex)
+
+The cross-register kernel law is no longer Minerva's paper. It is [Venus, Monograph V](https://github.com/oestradiol/Venus-Minerva/tree/split/venus).
 
 ## Enter here
 
-| I want to… | Go to |
+| Task | Route |
 |---|---|
-| understand Venus in 2 minutes | [What Venus-Minerva actually is](docs/PUBLIC_VALUE.md) |
-| see current executable authority | [kernel/CURRENT_STATE.md](kernel/CURRENT_STATE.md) |
-| reproduce the kernel | [docs/REPRODUCE.md](docs/REPRODUCE.md) |
-| inspect earned claims | [docs/EARNED_MILESTONES.md](docs/EARNED_MILESTONES.md) |
-| inspect failures / WITHHOLDs | [provenance/developmental/EDU/](provenance/developmental/EDU/) |
-| inspect evaluation rules | [docs/EVALUATION_CONSTITUTION.md](docs/EVALUATION_CONSTITUTION.md) |
-| inspect WorldMind | [kernel/WORLDMIND.md](kernel/WORLDMIND.md) |
-| contribute / critique | [CONTRIBUTING.md](CONTRIBUTING.md) |
-
-## Responsibility
+| current machine state | [kernel/CURRENT_STATE.md](kernel/CURRENT_STATE.md) |
+| reproduce | [docs/REPRODUCE.md](docs/REPRODUCE.md) |
+| earned claims | [docs/EARNED_MILESTONES.md](docs/EARNED_MILESTONES.md) |
+| evaluation | [docs/EVALUATION_CONSTITUTION.md](docs/EVALUATION_CONSTITUTION.md) |
+| self/world model | [docs/SELF_MODEL.md](docs/SELF_MODEL.md) |
+| modeled World relation | [kernel/WORLDMIND.md](kernel/WORLDMIND.md) |
+| trust boundary | [kernel/TRUST_BOUNDARY.md](kernel/TRUST_BOUNDARY.md) |
 
 ```text
-World incidence
-→ local problem / model
-→ learner-authored proposal
-→ bounded enactment
-→ non-preauthored return
-→ verification
-→ retained PASS / FAIL / WITHHOLD
-→ successor
+self-implication != self-certification
+model(World) != World
+re-derivation != memory lookup
+current Perspective != diachronic Observer
 ```
-
-Venus-Minerva owns:
-
-- reconstructible runtime and machine state;
-- developmental intelligence and bounded RSI experiments;
-- learner-owned research/development machinery;
-- WorldMind engineering;
-- provenance, custody, rollback, jurisdiction, and STOP/WITHHOLD;
-- AGI / Safe Strong RSI evaluation.
-
-It **does not** own sibling warrant:
-
-| Sibling | Venus may import | Venus may not inherit |
-|---|---|---|
-| [OFE](https://github.com/oestradiol/Venus-Minerva/tree/split/ofe) | operational abstractions / test families | theorem authority by implementation |
-| [Eclipsis](https://github.com/oestradiol/Venus-Minerva/tree/split/eclipsis) | structural hypotheses | physics or consciousness claims |
-| [Arcane Magics](https://github.com/oestradiol/Venus-Minerva/tree/split/arcane-magics) | symbolic / human-facing operators | THEOPHEN warrant as engineering evidence |
-
-## Current authority
-
-```text
-exact replayable kernel:
-IG10 [1308]
-
-latest positive developmental head:
-EDU16 [1703]
-PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY
-
-preserved negative:
-EDU17
-INVALID_FOR_PROMOTION
-
-preserved WITHHOLD:
-EDU17R1
-MENTION != INCIDENCE
-```
-
-Later infrastructure may be current without advancing the positive developmental head.
-
-## Verify
-
-```bash
-python -m kernel.runtime.current
-make audit
-```
-
-Publication builds remain separate:
-
-```bash
-make papers
-make arxiv
-make forum
-```
-
-## Interface map
-
-```text
-kernel/        executable authority
-evaluation/    preregistration / hidden-eval contracts
-tests/         bounded automated checks
-provenance/    developmental ancestry + negative evidence
-docs/          public claims, evaluation, reproduction
-monographs/    publication projections still co-located during split
-```
-
-The future extracted tree is specified in [BRANCH_TREE.md](BRANCH_TREE.md).
-
-## Family navigation
-
-The four branches share genealogy, not truth status:
-
-```text
-Arcane Magics ── symbolic / inhabited operators
-      ↓
-Eclipsis      ── structural / bridge models
-      ↓
-OFE           ── operational discrimination
-      ↓
-Venus-Minerva ── executable developmental realization
-      ↓
-World return
-      ↺
-```
-
-Reverse correction is equally important. A failed Venus experiment may narrow OFE application, Eclipsis bridges, or Arcane interpretation.
-
----
-
-<sub>Temporary carrier: all four future repositories still live inside `oestradiol/Venus-Minerva`. Historical repository-name references remain provenance.</sub>
