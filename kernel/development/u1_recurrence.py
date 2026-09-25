@@ -27,6 +27,13 @@ from kernel.runtime.transform_program_successor import (
     ProgramPatch,
     apply_successor_patch,
 )
+from kernel.runtime.internal_ostar import (
+    ReturnedEpisode,
+    RoutingContext,
+    reconstruct_internal_ostar,
+    route_with_internal_ostar,
+    route_without_internal_ostar,
+)
 from kernel.runtime.vmk2 import digest
 
 
@@ -53,7 +60,126 @@ class U1RecurrenceResult:
     external_return_required: bool
     ctl_ostar_admitted: bool
     mechanism_unique_or_necessary: bool
+    problem_trace_bound: bool
+    post_mutation_ostar_rederived: bool
+    post_mutation_ostar_model_id: str | None
+    post_mutation_ostar_decision: str | None
+    post_mutation_ostar_ablation_decision: str | None
+    post_mutation_ostar_causal: bool
     promotion_authority: bool
+
+
+
+def _problem_training_return(
+    formed_problem: Mapping[str, Any],
+    base_training_return: Mapping[str, Any],
+) -> dict[str, Any]:
+    """Bind the formed problem into the externally returned repair episode.
+
+    The external evaluator still supplies the expected behavior. The learner's
+    formed problem supplies the target/residual/discriminator/provenance values.
+    """
+    problem_id = str(formed_problem["problem_id"])
+    residuals = tuple(str(x) for x in formed_problem.get("residual_coordinates", ()))
+    discriminator = str(formed_problem.get("discriminator") or "")
+    provenance_ids = tuple(str(x) for x in formed_problem.get("source_stream_ids", ()))
+    if not residuals or not discriminator or not provenance_ids:
+        raise U1RecurrenceError(
+            "formed problem must carry residual, discriminator and source provenance"
+        )
+
+    positive = {
+        "target_id": problem_id,
+        "residual": "|".join(residuals),
+        "discriminator": discriminator,
+        "provenance_ids": list(provenance_ids),
+    }
+    rows = [
+        {
+            "trace_id": "problem-valid",
+            "prior_state": "IDLE",
+            "action": "SELECT_TARGET",
+            "payload": positive,
+            "expect_success": True,
+            "expected_next_state": "TARGET_SELECTED",
+            "provenance_id": "external-training:return:problem-valid",
+        }
+    ]
+    for missing in ("target_id", "residual", "discriminator", "provenance_ids"):
+        payload = dict(positive)
+        payload.pop(missing)
+        rows.append({
+            "trace_id": f"problem-missing-{missing}",
+            "prior_state": "IDLE",
+            "action": "SELECT_TARGET",
+            "payload": payload,
+            "expect_success": False,
+            "expected_next_state": None,
+            "provenance_id": f"external-training:return:missing-{missing}",
+        })
+
+    return {
+        "schema": base_training_return.get("schema"),
+        "date": base_training_return.get("date"),
+        "exposure": base_training_return.get("exposure"),
+        "target_kind": base_training_return.get("target_kind"),
+        "traces": rows,
+        "hidden_evaluation_exposed": False,
+        "promotion_authority": False,
+    }
+
+
+def _rederive_post_mutation_ostar(
+    obj: Mapping[str, Any] | None,
+) -> tuple[bool, str | None, str | None, str | None, bool]:
+    if not isinstance(obj, Mapping):
+        return False, None, None, None, False
+    if obj.get("owner") != "EXTERNAL_EVALUATOR":
+        raise U1RecurrenceError("post-mutation O* returns must be externally owned")
+    rows = tuple(obj.get("episodes", ()))
+    if not rows:
+        raise U1RecurrenceError("post-mutation O* return episodes required")
+
+    episodes = tuple(
+        ReturnedEpisode(
+            episode_id=str(row["episode_id"]),
+            external_access=bool(row["external_access"]),
+            contradiction_reachable=bool(row["contradiction_reachable"]),
+            revision_reachable=bool(row["revision_reachable"]),
+            action_authorized=bool(row["action_authorized"]),
+            evidence_sufficient=bool(row["evidence_sufficient"]),
+            residual_unresolved=bool(row["residual_unresolved"]),
+            carrier_status_only_rejection=bool(
+                row.get("carrier_status_only_rejection", False)
+            ),
+            consequence_relevant_carrier_difference=bool(
+                row.get("consequence_relevant_carrier_difference", False)
+            ),
+        )
+        for row in rows
+    )
+    model = reconstruct_internal_ostar(episodes)
+    ctx_obj = obj.get("causal_context")
+    if not isinstance(ctx_obj, Mapping):
+        raise U1RecurrenceError("post-mutation O* causal context required")
+    context = RoutingContext(
+        context_id=str(ctx_obj["context_id"]),
+        has_external_access=bool(ctx_obj["has_external_access"]),
+        contradiction_reachable=bool(ctx_obj["contradiction_reachable"]),
+        revision_reachable=bool(ctx_obj["revision_reachable"]),
+        action_authorized=bool(ctx_obj["action_authorized"]),
+        evidence_sufficient=bool(ctx_obj["evidence_sufficient"]),
+        residual_unresolved=bool(ctx_obj["residual_unresolved"]),
+        carrier_status_only_rejection=bool(
+            ctx_obj.get("carrier_status_only_rejection", False)
+        ),
+        consequence_relevant_carrier_difference=bool(
+            ctx_obj.get("consequence_relevant_carrier_difference", False)
+        ),
+    )
+    intact = route_with_internal_ostar(model, context).decision.value
+    ablated = route_without_internal_ostar(context).value
+    return True, model.model_id, intact, ablated, intact != ablated
 
 
 def _trace_rows(obj: Mapping[str, Any]) -> tuple[BehavioralTrace, ...]:
@@ -121,6 +247,7 @@ def run_u1_recurrence(
     training_return: Mapping[str, Any],
     heldout_return: Mapping[str, Any],
     ctl_ostar_admission: Mapping[str, Any],
+    post_mutation_ostar_return: Mapping[str, Any] | None = None,
 ) -> tuple[U1RecurrenceResult, Mapping[str, Any] | None]:
     if not isinstance(formed_problem, Mapping):
         raise U1RecurrenceError("a formed U2 problem is required before recurrence")
@@ -137,9 +264,13 @@ def run_u1_recurrence(
     if ctl_ostar_admission.get("execution_owner") != "EXTERNAL_TOOLING":
         raise U1RecurrenceError("CTL/O* admission must remain externally executed")
 
+    problem_training_return = _problem_training_return(
+        formed_problem,
+        training_return,
+    )
     search = search_transition_repair(
         pressure_parent,
-        _trace_rows(training_return),
+        _trace_rows(problem_training_return),
         allowed_patch_ops=("REPLACE_TRANSITION",),
     )
 
@@ -168,6 +299,25 @@ def run_u1_recurrence(
     # At this bounded pressure surface, that leaves the unrepaired parent.
     ablated_correct = parent_correct
 
+    positive_payload = problem_training_return["traces"][0]["payload"]
+    problem_trace_bound = (
+        positive_payload["target_id"] == problem_id
+        and positive_payload["residual"]
+        == "|".join(str(x) for x in formed_problem.get("residual_coordinates", ()))
+        and positive_payload["discriminator"]
+        == str(formed_problem.get("discriminator") or "")
+        and tuple(positive_payload["provenance_ids"])
+        == tuple(str(x) for x in formed_problem.get("source_stream_ids", ()))
+    )
+
+    (
+        post_rederived,
+        post_model_id,
+        post_decision,
+        post_ablation,
+        post_causal,
+    ) = _rederive_post_mutation_ostar(post_mutation_ostar_return)
+
     body = {
         "schema": "Venus.U1RecurrenceRecompilation.v0.1",
         "selected_problem_id": problem_id,
@@ -189,6 +339,12 @@ def run_u1_recurrence(
         "external_return_required": True,
         "ctl_ostar_admitted": bool(ctl_ostar_admission.get("admitted")),
         "mechanism_unique_or_necessary": False,
+        "problem_trace_bound": problem_trace_bound,
+        "post_mutation_ostar_rederived": post_rederived,
+        "post_mutation_ostar_model_id": post_model_id,
+        "post_mutation_ostar_decision": post_decision,
+        "post_mutation_ostar_ablation_decision": post_ablation,
+        "post_mutation_ostar_causal": post_causal,
         "promotion_authority": False,
     }
     return (
