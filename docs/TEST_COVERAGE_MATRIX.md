@@ -97,3 +97,18 @@ An issue is not “covered” because this table names it. Coverage requires an 
 | #178 target-related bounded REPRODUCTION extraction | T3/T5 | historical PR #132 preserved as provenance; fresh issue carries only mechanism debt | re-derive current-parent target-ranked fixed unittest execution with scrubbed environment and local-receipt boundary | donor/target text cannot author command/path/env; local execution != independent return |
 | #179 autonomous agency-provenance extraction | T3/T5 | historical PR #151 preserved as provenance; fresh issue carries only accounting debt | re-derive minimal current-parent agency receipt if still consequential | selected target != authored machinery; carrier action != reasoning; no promotion/truth authority |
 | standing developmental orientation | T3/T5/T6 | `CANONICAL_TELIC_RECOVERY_BOOTSTRAP.json` v0.2 | when no higher-priority returned defect exists, form a standing developmental problem over current open carriers; concrete DIRTY/BLOCKED/CONFLICTING still preempt | autonomous target selection continues without fixed human target and without converting local STOP into telos discharge |
+
+
+### 2026-09-25 returnable-closure / QG-meta coverage
+
+| Object | Test class | Current status | Required discriminator |
+|---|---|---|---|
+| returnable local closure | T2/T5 | PLANNED | compare against mature process/control/enaction/state-abstraction formulations; retain only a decision-relevant residual |
+| corrigibly permeable boundary | T3/T5 | PARTIAL via existing return/jurisdiction/authentication guards | show correction can cross while source/authorship/jurisdiction remain reconstructible; security rejection must not become epistemic erasure |
+| open bridge | T2/T5 | PLANNED | unresolved mapping remains OPEN until declared separator closes map/identity/mechanism |
+| physical WITHHOLD / Residual | T5/T6 | PLANNED | explicit state family + future channels + observables; distinguish future-equivalent from future-separating candidates |
+| QG two-relation meta-object `M_QG` | T2/T6 | PLANNED | explicit maps to both GQT and LQG projections; fail if mature theory already supplies all consequences |
+| PPD-Crystal / horizon rebarb | T6 | PLANNED | LQG-defined retained degree of freedom -> nonredundant Hawking/greybody/transition observable |
+| coherent low-vorticity cosmological-flow projection | T6 | PLANNED | observable distinction from standard FLRW + perturbations and chosen LQC/GFT comparators |
+
+A named projection is not coverage. The PHYS rows remain OPEN/WITHHOLD until a calculational or observational separator exists.
