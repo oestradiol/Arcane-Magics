@@ -186,10 +186,19 @@ def make_research_proposal(
     method_checks = _checks_for_method(method)
     target_profiles, target_checks = _target_checks(cycle, study, check_catalog)
     checks = tuple(dict.fromkeys(method_checks + target_checks))
-    external_required = _hidden_or_external_required(study)
+    external_required = (
+        _hidden_or_external_required(study)
+        or bool(cycle.get("formed_problem_external_return_required", False))
+    )
     target_grounded = bool(target_checks)
 
-    if external_required and method in {"DISCRIMINATOR_DESIGN", "RETURN_BOUNDARY_AUDIT"}:
+    if bool(cycle.get("formed_problem_external_return_required", False)):
+        disposition = "WITHHOLD_EXTERNAL_RETURN"
+        discriminator = (
+            str(cycle.get("formed_problem_discriminator") or "")
+            or "obtain the independently supplied return required by the formed problem"
+        )
+    elif external_required and method in {"DISCRIMINATOR_DESIGN", "RETURN_BOUNDARY_AUDIT"}:
         disposition = "WITHHOLD_EXTERNAL_RETURN"
         discriminator = (
             "obtain the independently supplied hidden/external observation named by the target "
