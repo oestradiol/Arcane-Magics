@@ -316,3 +316,33 @@ newer Git carrier
 Recovered Canonical obligations that are not yet fully compiled into the current Git worker include the standing post-tutorial contribution circulation, the distinction between carrier-local STOP and developmental sufficiency, and the broader epistemic loop in which mythos is refined under Reality + mathematical correction/crystallization.
 
 A learned DNN/LLM may enter as a removable donor/scaffold. Internalization credit requires donor/source-removal survival; donor competence, output, weights, or availability do not inherit truth, jurisdiction, or promotion authority.
+
+
+## 2026-09-25 returnable-closure extraction
+
+Direct reconciliation of the current Canonical thread recovered one carrier-neutral consequence that should be compiled into Git without importing the stronger bridge imagery wholesale:
+
+```text
+signal present
+!= represented object
+!= consequence-bearing return
+!= lawful reopening
+
+relation without fusion
++
+boundary without isolation
+```
+
+Git therefore admits **returnable local closure**, **corrigibly permeable boundary**, **open bridge**, and **reachable reopening** into Meta-Dynamics / Venus Incidence / WorldMind surfaces.
+
+The following remain Canonical/MetaTheory or open-physics bridge objects and are **not** imported as constitutional or runtime primitives:
+
+```text
+vacuous_relation / trivial_object restoration
+VR/TO as physical basis states
+Hilbert-space superposition identity
+Observable-Universe bubble identity
+wormhole / entanglement / multiverse / Dark-Sector channel identity
+```
+
+This is extraction by consequence, not bulk synchronization.
