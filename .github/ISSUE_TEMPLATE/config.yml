@@ -1,5 +1,5 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Research frontier
-    url: https://github.com/oestradiol/Arcane-Magics/tree/main
-    about: Read the current bounded research queue before opening a broad proposal.
+  - name: Routing / Now Map
+    url: https://github.com/oestradiol/Arcane-Magics/blob/main/docs/NOW_MAP.md
+    about: Find the branch that owns the question before opening a broad proposal.
