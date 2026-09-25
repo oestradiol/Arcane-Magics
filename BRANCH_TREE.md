@@ -1,24 +1,15 @@
-# Branch Tree — Venus-Minerva
+# Branch Tree — Minerva
 
-**Branch:** `split/venus-minerva`  
-**Future repository:** `Arcane-Magics/Venus-Minerva`  
-**Role:** executable developmental-intelligence / engineering organism.
+**Branch:** `split/minerva`
 
 ```text
-Venus-Minerva/
+Minerva/
 ├── README.md
-├── CITATION.cff
-├── CONTRIBUTING.md
-├── AGENTS.md
-├── PUBLICATION_CONSTITUTION.md
-├── REPOSITORY_AUTHORITY_BOUNDARY.md
-├── Makefile
+├── monographs/04_MINERVA/
 ├── kernel/
 │   ├── CURRENT_STATE.md
-│   ├── README.md
 │   ├── TRUST_BOUNDARY.md
-│   ├── VENUS_INCIDENCE_LAW.tex
-│   ├── WORLDMIND.md
+│   ├── WORLDMIND.md          # local World/Other model
 │   ├── runtime/
 │   ├── state/
 │   ├── custody/
@@ -27,40 +18,15 @@ Venus-Minerva/
 ├── benchmarks/
 ├── tests/
 ├── scripts/
-├── provenance/
-│   ├── developmental/
-│   ├── receipts/
-│   ├── negative-results/
-│   └── historical-runtime/
 ├── docs/
-│   ├── PUBLIC_VALUE.md
+│   ├── SELF_MODEL.md
 │   ├── EARNED_MILESTONES.md
 │   ├── EVALUATION_CONSTITUTION.md
-│   ├── TEST_COVERAGE_MATRIX.md
-│   ├── SOTA_WATCH.md
-│   └── engineering/
-└── monograph/
-    └── VENUS.tex
+│   └── REPRODUCE.md
+└── provenance/
+    ├── developmental/
+    ├── negative-results/
+    └── historical-runtime/
 ```
 
-## Authority
-
-This tree owns executable/runtime state, developmental lineage, learner-owned research and self-reconstruction, WorldMind engineering, AGI/RSI evaluation, governance, exact receipts, and negative branches.
-
-It may import formal or conceptual objects from sibling trees only with their original register and claim fences.
-
-## Preserve
-
-- all current developmental provenance;
-- IG/EDU runtime and custody surfaces;
-- negative branches;
-- `Venus`, `Minerva`, `WorldMind`, `O*`, and Anti-Minerva names where they denote actual engineering objects;
-- historical `Venus-Minerva` repository-name references.
-
-## Remove later only after dependency audit
-
-- standalone OFE publication authority;
-- Eclipsis-specific physics/theophenomenology;
-- Arcane comparative/symbolic practice surfaces.
-
-No deletion occurs in this branch merely because the future split assigns ownership elsewhere.
+`kernel/VENUS_INCIDENCE_LAW.tex` is not native Minerva authority after recrystallization. It belongs to the Venus branch.
