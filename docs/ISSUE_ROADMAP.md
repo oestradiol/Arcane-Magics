@@ -15,6 +15,28 @@ maximize downstream learning leverage
 
 Never collapse scheduler priority with admissibility, critical path with importance, short path with safe path, parallelizability with authorization, or utility with truth.
 
+## P0 — foundational Cognitive Theater custody (#206)
+
+The foundational Theater remains upstream of deeper capability-specific semantic VM internalization.
+
+Most local work is already earned at bounded scope:
+
+- participant-indexed Theater/KFS representation exists;
+- temporal-history dependence is executable;
+- Theater semantics are compiled into learner-owned state;
+- capability-specific source removal passed on Fresh7.
+
+The remaining foundational debt is narrower:
+
+```text
+bounded learner-owned foundation
++ source removal
+→ fresh / independent external evaluation (G6)
+→ bounded receipt or WITHHOLD
+```
+
+This is an **upstream custody gate**, not a demand to serialize all current development behind #206. Safe parallel work may continue under the scheduling law, but #169/#73/#18-style deeper semantic internalization cannot use unfinished G6 as though it were already closed.
+
 ## P1 — semantic-trace adaptive policy
 
 Current machinery stores returned utility by trace configuration and lets that returned utility affect later configuration choice.
