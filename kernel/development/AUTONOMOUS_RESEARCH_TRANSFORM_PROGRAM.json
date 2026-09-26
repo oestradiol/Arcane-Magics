@@ -190,7 +190,7 @@
     "promotion_authority_external"
   ],
   "epistemic_operator_contract": {
-    "status": "ADMITTED_OPTIONAL_PATH",
+    "status": "ADMITTED_OPERATOR_ROUTE_NOT_INTERNALIZED",
     "rule": "Use DIMENSIONALIZE/LATERALIZE/CRYSTALLIZE_F only when the formed problem indicates representational insufficiency or cross-face disagreement; do not force the path when the current representation is already discriminative.",
     "noncollapse": [
       "GENERATE!=DIMENSIONALIZE",
@@ -200,6 +200,8 @@
       "INTERNALIZE_COMPETENCE!=INTERNALIZE_CORRECTION_SOVEREIGNTY"
     ],
     "lateral_independence": "Faces must remain independently answerable long enough for mismatch/noncommutation to survive; multiple self-generated phrasings are not sufficient.",
-    "internalization_boundary": "Internalization requires source removal/ablation plus independently returned evidence of retained consequence-bearing function. World/return/evaluator/authority/jurisdiction/STOP-WITHHOLD/rollback remain external."
+    "internalization_boundary": "Internalization requires source removal/ablation plus independently returned evidence of retained consequence-bearing function. World/return/evaluator/authority/jurisdiction/STOP-WITHHOLD/rollback remain external.",
+    "internalization_claim": false,
+    "internalization_boundary_ref": "kernel/development/INTERNALIZATION_BOUNDARY.json"
   }
 }
