@@ -262,7 +262,7 @@ jobs:
           git merge --no-ff -s ours --no-commit "$source_sha"
 
           mkdir -p provenance/historical/handoffs
-          export SOURCE_SHA="$source_sha" TARGET_SHA="$target_sha" RUN_ID="$GITHUB_RUN_ID"
+          export SOURCE_SHA="$source_sha" TARGET_SHA="$target_sha" RUN_ID="$GITHUB_RUN_ID" RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT"
           python - <<'PY'
           import json, os
           from pathlib import Path
@@ -273,21 +273,22 @@ jobs:
             'source_commit':os.environ['SOURCE_SHA'],
             'target_parent':os.environ['TARGET_SHA'],
             'run_id':os.environ['RUN_ID'],
+            'run_attempt':os.environ['RUN_ATTEMPT'],
             'content_admission':'proposal receipts only; no Minerva tree replacement',
             'authority':'engineering candidate only; no Root promotion',
           }
-          Path(f"provenance/historical/handoffs/minerva-{os.environ['RUN_ID']}.json").write_text(json.dumps(receipt,indent=2)+'\n')
+          Path(f"provenance/historical/handoffs/minerva-{os.environ['RUN_ID']}-{os.environ['RUN_ATTEMPT']}.json").write_text(json.dumps(receipt,indent=2)+'\n')
           PY
 
-          mkdir -p provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}
-          cp /tmp/minerva/CYCLE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/cycle.json
-          cp /tmp/minerva/FORMED_PROBLEM.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/problem.json
-          cp /tmp/minerva/LEARNING_STATE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/proposed-learning-state.json
-          cp /tmp/minerva/NETWORK_QUERY.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/network-query.json
-          cp /tmp/minerva/NETWORK_CONTEXT.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/network-context.json
+          mkdir -p provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}
+          cp /tmp/minerva/CYCLE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/cycle.json
+          cp /tmp/minerva/FORMED_PROBLEM.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/problem.json
+          cp /tmp/minerva/LEARNING_STATE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/proposed-learning-state.json
+          cp /tmp/minerva/NETWORK_QUERY.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/network-query.json
+          cp /tmp/minerva/NETWORK_CONTEXT.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/network-context.json
           for f in NETWORK_ENCOUNTER_1.json NETWORK_RESULT_1.json NETWORK_QUERY_2.json NETWORK_ENCOUNTER_2.json NETWORK_LINEAGE.json NETWORK_MEMORY.zlib NETWORK_RELEVANCE_WITHHOLD.json WWW_MIND_GATE_RESULT.json AUTHORED_CENTER_LEDGER.json LAIN_STRUCTURAL_GATE_RESULT.json; do
             if [ -f "/tmp/minerva/$f" ]; then
-              cp "/tmp/minerva/$f" "provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/$f"
+              cp "/tmp/minerva/$f" "provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/$f"
             fi
           done
 
