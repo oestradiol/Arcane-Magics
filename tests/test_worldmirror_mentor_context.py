@@ -60,6 +60,33 @@ class MentorContextTests(unittest.TestCase):
         self.assertIsNotNone(chosen)
         self.assertEqual(chosen.number,206)
 
+
+    def test_advisory_ref_breaks_tie_only_among_already_admissible_targets(self):
+        items=(
+            WorkItem("ISSUE",30,"admitted A"),
+            WorkItem("ISSUE",78,"admitted B"),
+        )
+        chosen=choose_target(
+            items,
+            roadmap_text="#30\n#78",
+            allowed_target_keys=(("ISSUE",30),("ISSUE",78)),
+            advisory_issue_refs=(78,),
+        )
+        self.assertEqual(chosen.number,78)
+
+    def test_advisory_ref_cannot_create_target_admissibility(self):
+        items=(
+            WorkItem("ISSUE",30,"formed problem admitted"),
+            WorkItem("ISSUE",78,"mentor preferred but inadmissible"),
+        )
+        chosen=choose_target(
+            items,
+            roadmap_text="#30\n#78",
+            allowed_target_keys=(("ISSUE",30),),
+            advisory_issue_refs=(78,),
+        )
+        self.assertEqual(chosen.number,30)
+
     def test_authority_or_evaluation_claim_fails_closed(self):
         for field in (
             "target_binding_authority",
