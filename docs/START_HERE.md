@@ -8,13 +8,13 @@ Minerva is the **developmental machine and judging self/world model**.
 [Current state](../kernel/CURRENT_STATE.md) → [Reproduce](REPRODUCE.md)
 
 ### Understand WorldMirror
-[WorldMirror VM](WORLDMIRROR_VM.md) → [Runtime index](../kernel/runtime/README.md) → [Development index](../kernel/development/README.md) → [State index](../kernel/state/README.md) → [Evidence index](../autonomy/evidence/README.md)
+[WorldMirror VM](WORLDMIRROR_VM.md) → [Kernel index](../kernel/README.md) → [Runtime index](../kernel/runtime/README.md) → [Development index](../kernel/development/README.md) → [State index](../kernel/state/README.md) → [Evidence index](../autonomy/evidence/README.md)
 
 ### Audit / judge
-[Earned milestones](EARNED_MILESTONES.md) → [Evaluation](EVALUATION_CONSTITUTION.md) → [Tests](TESTS.md)
+[Earned milestones](EARNED_MILESTONES.md) → [Evaluation](EVALUATION_CONSTITUTION.md) → [Tests](TESTS.md) → [Coverage matrix](TEST_COVERAGE_MATRIX.md) → [Canonical retirement ledger](../provenance/CANONICAL_RETIREMENT_LEDGER.md)
 
 ### Understand Self / World
-[Self model](SELF_MODEL.md) → [Global repository operation](GLOBAL_REPOSITORY_OPERATION.md) → [WorldMind model](../kernel/WORLDMIND.md)
+[Self model](SELF_MODEL.md) → [Global repository operation](GLOBAL_REPOSITORY_OPERATION.md) → [WorldMind law on Root](https://github.com/oestradiol/Arcane-Magics/blob/main/kernel/WORLDMIND.md)
 
 ## Developmental law
 
