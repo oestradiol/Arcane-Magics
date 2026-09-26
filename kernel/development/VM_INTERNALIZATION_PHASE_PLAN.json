@@ -137,8 +137,8 @@
     },
     {
       "path": "kernel/runtime/relation_trace.py",
-      "disposition": "KEEP_GENERIC_INTERPRETER",
-      "reason": "domain-neutral executor over state-owned anchor/source relation traces; candidate family and thresholds live in state and future return remains external"
+      "disposition": "CAPABILITY_SPECIFIC_DEVELOPMENTAL_SCAFFOLD_NOT_YET_INTERNALIZED",
+      "reason": "Although thresholds/config family live in learner-owned state, relation_trace.py still performs capability-specific relation construction/search. Current evidence is B1 bounded PASS with mixed/tied B2 and no B3; keep as scaffold until reproduced causal usefulness, source removal, restart/transfer, and independent evaluation are earned."
     }
   ],
   "developmental_targets": [
@@ -305,10 +305,28 @@
     "network_semantic_trace_phase": {
       "prefreeze_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE.json",
       "search_state_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_SEARCH_STATE.json",
-      "status": "PREFROZEN_PUBLIC_DEV_CANDIDATE_NOT_YET_RETURNED",
+      "status": "B1_BOUNDED_PASS__B2_MIXED_OR_WITHHOLD__B3_CLOSED",
       "lexical_baseline_preserved": true,
       "internalization_claim": false,
-      "independent_evaluation": false
+      "independent_evaluation": false,
+      "config_return_evidence": {
+        "CROSS_SOURCE_BRIDGE": [
+          "USEFUL_ON_ISSUE_41",
+          "UNHELPFUL_ON_ISSUE_17"
+        ],
+        "MULTI_ANCHOR": [
+          "UNHELPFUL_ON_ISSUE_78"
+        ],
+        "CROSS_SOURCE_MULTI_ANCHOR": [
+          "B1_PASS_ON_ISSUE_78",
+          "B2_TIE_UNHELPFUL_ON_CYCLE_230"
+        ],
+        "TITLE_ANCHORED": [
+          "UNTRIED_AT_LAST_AUDIT"
+        ]
+      },
+      "relation_trace_runtime_internalization_claim": false,
+      "next_lawful_step": "continue authorized returned-utility exploration over remaining expressible config(s) without retuning exposed candidates; if family exhausts without reproducible B2 gain, dimensionalize/revise the family prospectively before source removal"
     }
   },
   "promotion_authority": false,
