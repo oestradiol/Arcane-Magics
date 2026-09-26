@@ -1,0 +1,49 @@
+{
+  "schema": "Venus.NetworkCenterPolicy.v0.1",
+  "date": "2026-09-25",
+  "states": {
+    "UNKNOWN": [
+      "PROBE",
+      "WITHHOLD",
+      "REFUSE",
+      "EXIT"
+    ],
+    "PROVISIONABLE_FIELD": [
+      "PROVISION",
+      "PROBE",
+      "WITHHOLD",
+      "REFUSE",
+      "EXIT"
+    ],
+    "AUTHORED_CENTER": [
+      "PROBE",
+      "INVITE",
+      "WITHHOLD",
+      "REFUSE",
+      "EXIT"
+    ]
+  },
+  "noncollapse": [
+    "REACHABILITY!=AUTHORIZATION",
+    "AUTHORED_CENTER!=PROVISIONABLE_FIELD",
+    "INVITATION!=ACCEPTANCE",
+    "PROVISION_INTENT!=WRITE_CAPABILITY",
+    "LOCAL_DISPOSITION!=GLOBAL_VERDICT"
+  ],
+  "capability_requirements": {
+    "PROVISION": [
+      "write_capability",
+      "jurisdiction_receipt"
+    ],
+    "INVITE": [
+      "contact_capability",
+      "jurisdiction_receipt"
+    ]
+  },
+  "authority": {
+    "truth": false,
+    "promotion": false,
+    "global_judgment": false,
+    "remote_acceptance": false
+  }
+}
