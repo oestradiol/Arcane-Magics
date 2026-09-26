@@ -1,0 +1,33 @@
+{
+  "evaluation_owner": "PREFROZEN_EXTERNAL_EQUIVALENCE_EVALUATOR",
+  "exact_prediction_equivalence": true,
+  "labels_accessed": false,
+  "promotion_authority": false,
+  "schema": "Venus.LateralInternalizationTransferPredictions.v0.1",
+  "source_predictions": {
+    "128": false,
+    "130": false,
+    "136": false,
+    "137": true,
+    "139": true,
+    "144": false,
+    "146": false,
+    "148": false
+  },
+  "source_scaffold_sha256": "84e367019e8fd1ed024dd6f1df851f6473cadb903ad58e41248445d930f4ee54",
+  "state_predictions": {
+    "128": false,
+    "130": false,
+    "136": false,
+    "137": true,
+    "139": true,
+    "144": false,
+    "146": false,
+    "148": false
+  },
+  "state_runtime_scaffold_present": false,
+  "state_sha256": "0d5bc9eb46ffa85d7fff9a85be50d5ac175d5383d4eba9ea13d22da66b683ebc",
+  "status": "PASS_TRANSFER_EQUIVALENCE_BEFORE_LABEL_REVEAL",
+  "transfer_episode": 1,
+  "truth_authority": false
+}
