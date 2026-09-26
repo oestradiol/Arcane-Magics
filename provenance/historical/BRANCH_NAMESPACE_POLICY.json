@@ -1,0 +1,33 @@
+{
+  "schema": "ArcaneMagics.BranchNamespacePolicy.v1",
+  "recorded_at": "2026-09-25",
+  "rule": "Only explicitly listed live routing branches or issue-bound active carriers may route current authority. Every other branch is historical evidence, regardless of legacy prefix.",
+  "live_authority": [
+    "main",
+    "split/arcane-magics",
+    "split/eclipsis",
+    "split/minerva",
+    "split/venus",
+    "split/ofe"
+  ],
+  "active_carriers": [
+    {
+      "branch": "venus/autonomous-36178462392-1",
+      "bound_issue": 189,
+      "status": "ACTIVE_NONAUTHORITATIVE_CARRIER",
+      "note": "Issue-bound frozen fallback carrier; cannot promote, merge, validate, or route authority by existence alone."
+    }
+  ],
+  "historical_namespace_target": "historical/<original-ref>",
+  "migration_semantics": "Rename/move stale and superseded refs under historical/ when branch-ref deletion/rename capability is available. Do not create duplicate historical aliases while leaving legacy refs in place, because that increases noise.",
+  "deprecated_live_names": [
+    "split/venus-minerva"
+  ],
+  "default_disposition": "HISTORICAL_NONROUTING",
+  "invariants": [
+    "branch existence != current authority",
+    "ancestry != warrant",
+    "historical evidence remains reachable",
+    "open issue-bound carrier != live authority"
+  ]
+}
