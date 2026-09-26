@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from http.server import HTTPServer
 from pathlib import Path
+from queue import Queue
 import sys
 import tempfile
 import textwrap
@@ -35,16 +36,27 @@ class WorldMirrorConsoleEndToEndTests(unittest.TestCase):
                 encoding="utf-8",
             )
 
-            ctx = ConsoleContext(
-                data_root=root / "data",
-                static_root=ROOT / "apps/worldmirror_console/static",
-                process_bridge=None,
-                agent_bridge=AgentBridge.build([sys.executable, str(adapter)]),
-            )
-            server = ThreadingHTTPServer(("127.0.0.1", 0), Handler)
-            server.ctx = ctx
-            thread = threading.Thread(target=server.serve_forever, daemon=True)
+            ready: Queue = Queue()
+
+            def serve() -> None:
+                ctx = ConsoleContext(
+                    data_root=root / "data",
+                    static_root=ROOT / "apps/worldmirror_console/static",
+                    process_bridge=None,
+                    agent_bridge=AgentBridge.build([sys.executable, str(adapter)]),
+                )
+                server = HTTPServer(("127.0.0.1", 0), Handler)
+                server.ctx = ctx
+                ready.put(server)
+                try:
+                    server.serve_forever()
+                finally:
+                    server.server_close()
+                    ctx.close()
+
+            thread = threading.Thread(target=serve, daemon=True)
             thread.start()
+            server = ready.get(timeout=5)
             base = f"http://127.0.0.1:{server.server_address[1]}"
 
             try:
@@ -72,7 +84,10 @@ class WorldMirrorConsoleEndToEndTests(unittest.TestCase):
                 with urlopen(req, timeout=5) as response:
                     posted = json.loads(response.read())
                 self.assertEqual(posted["event"]["decoded_text"], "hello from outside")
-                self.assertEqual(posted["machine_event"]["decoded_text"], "machine:hello from outside")
+                self.assertEqual(
+                    posted["machine_event"]["decoded_text"],
+                    "machine:hello from outside",
+                )
                 self.assertIsNone(posted["agent_error"])
 
                 with urlopen(base + "/api/events?session_id=" + sid, timeout=5) as response:
@@ -93,8 +108,7 @@ class WorldMirrorConsoleEndToEndTests(unittest.TestCase):
             finally:
                 server.shutdown()
                 thread.join(timeout=5)
-                server.server_close()
-                ctx.close()
+                self.assertFalse(thread.is_alive())
 
 
 if __name__ == "__main__":
