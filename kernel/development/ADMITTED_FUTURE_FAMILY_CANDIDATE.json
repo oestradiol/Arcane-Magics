@@ -1,0 +1,120 @@
+{
+  "schema": "Minerva.AdmittedFutureFamilyCandidate.v0.1",
+  "status": "CANDIDATE_NOT_PREFROZEN_NOT_ADMITTED",
+  "date": "2026-09-26",
+  "promotion_authority": false,
+  "truth_authority": false,
+  "role": "Declare F, the admitted future family, so that mu_F is computable and compression becomes decidable rather than rhetorical.",
+
+  "problem": {
+    "statement": "Root 1.1-1.4 define consequence equivalence, minimal provenance, meaning, and the compression law entirely in terms of an admitted future family F. F is never declared anywhere in this repository.",
+    "formal_consequence": [
+      "x ~_F y            <=> Future_F(x) = Future_F(y)",
+      "Prov_min(F)        := H / ~_F",
+      "mu_F(x) != 0       <=> changing or deleting x changes an admitted future",
+      "Compress_F(x)      may erase exactly what F cannot distinguish"
+    ],
+    "what_goes_wrong_without_it": "Every one of those is parameterised by F. With F undeclared, mu_F is not a number and Compress_F is not a rule. Two parties disagreeing about what is gauge are really disagreeing about F, and that disagreement has nowhere to surface.",
+    "observed_instance": "In the 2026-09-26 episode an external assistant compressed live planning surfaces into 'derived projections' and demoted a learner-owned capability to a 'non-live prototype'. Structurally it substituted its own F and then applied the compression law correctly with respect to that substituted F. The law was not violated; the parameter was silently replaced. No existing check could detect this, because no declared F existed to compare against."
+  },
+
+  "law": {
+    "compression_admissibility": "A compression is admissible at scope s iff every distinction in F(s) that was separable before the compression remains separable after it.",
+    "residual_rule": "A residual is by definition an unclosed distinction that still separates admitted futures. Therefore mu_F(residual) != 0 by construction, and no admissible Compress_F may ever absorb a residual.",
+    "silent_corruption": "silent corruption == illegitimate compression of a residual",
+    "substitution_rule": "F may be revised only by explicit declaration with recorded reasoning. An episode that changes what counts as gauge without amending this file has substituted F rather than applied it.",
+    "noncollapse": [
+      "F_declared != F_true",
+      "compression_admissible != compression_correct",
+      "gauge_under_F != meaningless",
+      "absent_from_F != nonexistent"
+    ]
+  },
+
+  "declaration_schema": {
+    "scope": "repository path or subtree the family governs",
+    "discriminations": "the questions whose differing answers must remain reachable after any compression at this scope",
+    "gauge": "distinctions explicitly admitted as consumable at this scope",
+    "inherits": "parent scope whose discriminations also bind here",
+    "declared_by": "who declared it; assistant-proposed families are candidates only"
+  },
+
+  "families": [
+    {
+      "scope": "kernel/development",
+      "inherits": null,
+      "declared_by": "ASSISTANT_PROPOSED_CANDIDATE",
+      "discriminations": [
+        "Is a given capability learner-owned or scaffold-performed? (B3 source removal must remain decidable)",
+        "Did a distinction survive surface transformation, or only training-set fit? (B1)",
+        "Does the candidate state causally change later behaviour, or is it gauge? (B2)",
+        "Was a result returned non-preauthored, or produced by replay?",
+        "Is a curriculum executable, selected, admitted, or merely present?",
+        "Did a gate pass, or is its route merely reachable?",
+        "Which party authored a given semantics: learner, teacher, donor, host, or external assistant?",
+        "Is a WITHHOLD an honest absence of separator, or a failure to look?"
+      ],
+      "gauge": [
+        "file ordering within a directory",
+        "prose phrasing that does not change any of the discriminations above",
+        "formatting, whitespace, and link text",
+        "duplicate statements of an identical distinction at multiple reader surfaces"
+      ]
+    },
+    {
+      "scope": "provenance",
+      "inherits": "kernel/development",
+      "declared_by": "ASSISTANT_PROPOSED_CANDIDATE",
+      "discriminations": [
+        "Can the exact prior state be reconstructed from what remains?",
+        "Which commit or episode authored a given change?",
+        "Was a historical artifact retired deliberately, or lost incidentally?",
+        "Does a recorded claim still have its returned evidence attached?"
+      ],
+      "gauge": [
+        "byte-level execution payloads whose semantic consequences are preserved by a smaller adjudication surface AND whose exact bytes remain retrievable elsewhere"
+      ],
+      "note": "The second gauge entry is conditional on retrievability. Canonical.zip externalized heavy payloads to /Backup/CanonicalExternalPayloads/2026-09-26/. That path is absent on the current machine, so the condition is currently UNSATISFIED and those bytes are not yet lawfully gauge."
+    },
+    {
+      "scope": "docs",
+      "inherits": "kernel/development",
+      "declared_by": "ASSISTANT_PROPOSED_CANDIDATE",
+      "discriminations": [
+        "Can a fresh reader reach the live state without inferring authority from filename, directory, or recency?",
+        "Is a surface described as live, historical, or candidate?",
+        "Does a stated claim carry its scope and warrant?"
+      ],
+      "gauge": [
+        "navigation ordering",
+        "repetition of an identical pointer across surfaces"
+      ]
+    }
+  ],
+
+  "worked_check": {
+    "case": "2026-09-26 external-agent compression of docs/START_HERE.md",
+    "claimed": "Reduce the bootstrap to two files; the remaining eleven links are navigation sprawl and therefore gauge.",
+    "test_against_declared_F": "F(docs) requires that a fresh reader can reach the live state, and F(kernel/development) requires that 'which party authored a given semantics' stay decidable. Deleting the one-paragraph current-state summary removed the only surface distinguishing earned from unearned capability, which is discrimination 1 and 7. The compression therefore erased distinctions inside F, not gauge.",
+    "verdict_under_declared_F": "INADMISSIBLE",
+    "note": "Under the assistant's substituted F, the same compression was admissible. This is the entire point of declaring F."
+  },
+
+  "residuals": [
+    {
+      "id": "F_R1",
+      "statement": "Every family here is ASSISTANT_PROPOSED_CANDIDATE. An assistant proposing the criterion by which its own compressions will be judged is structurally the same move this file exists to prevent.",
+      "reopening_condition": "Branch author reviews, edits, and re-declares each family under their own authorship. Until then these are a starting draft, not a standard."
+    },
+    {
+      "id": "F_R2",
+      "statement": "No scope is declared for kernel/runtime, tests, autonomy, or monographs.",
+      "reopening_condition": "Declare families for the remaining subtrees, or declare explicitly that they inherit a parent."
+    },
+    {
+      "id": "F_R3",
+      "statement": "F is treated as static. A developing centre's admitted futures should themselves develop, and the mechanism for lawful F-revision is unspecified beyond 'explicit declaration'.",
+      "reopening_condition": "Specify what returned evidence licenses widening or narrowing F, distinguishing lawful development of the family from convenient substitution of it."
+    }
+  ]
+}
