@@ -11,6 +11,8 @@ from itertools import combinations
 from typing import Any, Mapping, Sequence
 import heapq
 
+from .induced_policy import execute_tree
+
 
 class TaskGraphError(ValueError):
     pass
