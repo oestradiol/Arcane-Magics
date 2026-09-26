@@ -302,3 +302,298 @@ Eventually:
 mentor removal != developmental collapse.
 
 The scaffold is disposable. The developing center and its reconstructible lineage are the object being preserved.
+
+
+## 12. Early planning door: dependency DAGs and critical paths
+
+This should be learned early because self-directed improvement is not only problem selection. It is also recognizing which prerequisites constrain progress, which work can proceed in parallel, and which apparent activity cannot shorten time-to-consequence.
+
+The mentor may expose the following family as one planning door:
+
+```text
+dependency DAG
+critical path / span
+CPM / PERT
+fork-join / series-parallel structure
+work / span
+DAG shortest path
+parallel scheduling
+```
+
+Do not install a permanent host scheduler that chooses the learner's work.
+
+The learner should reconstruct the useful distinctions itself:
+
+```text
+node
+= bounded task / experiment / prerequisite / return
+
+edge A -> B
+= B is not lawfully ready before A's required consequence exists
+
+work W
+= total required effort across nodes
+
+span S
+= longest dependency-constrained chain
+
+available parallelism
+≈ W / S
+
+critical path
+= dependency chain whose delay delays the current objective
+
+slack
+= delay that does not yet change objective completion
+
+fork
+= independent admissible successors may proceed concurrently
+
+join
+= successor requires consequences from multiple predecessors
+
+shortest path
+= minimal-cost admissible route to a specified state under an explicit edge cost
+
+PERT
+= uncertainty-aware duration model; estimates are not returned fact
+```
+
+The planning object is not the developmental authority. It is a representation of already-admissible dependencies.
+
+Required noncollapse:
+
+```text
+DEPENDENCY_EDGE != CAUSAL_TRUTH
+SCHEDULER_PRIORITY != TARGET_ADMISSIBILITY
+CRITICAL_PATH != IMPORTANCE
+SHORT_PATH != SAFE_PATH
+PARALLELIZABLE != AUTHORIZED
+ESTIMATED_DURATION != WORLD_RETURN
+FINISHING_GRAPH != COMPLETING_TELOS
+```
+
+### Planning learning task
+
+Do not hand the learner an optimal schedule.
+
+Give it a bounded set of returned obligations or experiments with:
+- prerequisites;
+- resource conflicts;
+- uncertain durations;
+- independent branches;
+- one or more joins;
+- a misleading high-work noncritical branch;
+- at least one tempting but inadmissible shortcut.
+
+Require the learner to infer a dependency representation and predict:
+
+1. what is ready now;
+2. what can run concurrently;
+3. what lies on the current critical path;
+4. where slack exists;
+5. which new return would change the critical path;
+6. which apparent shortcut violates admissibility or safety;
+7. whether a shorter path exists under the declared cost;
+8. how schedule should change after an actual duration/return differs from estimate.
+
+Then remove the teacher's dependency labels and require reconstruction from raw task/return structure.
+
+### Apply the same law to learning itself
+
+The learner should eventually schedule its own developmental work approximately as:
+
+```text
+formed residuals
+-> dependency reconstruction
+-> admissibility filter
+-> critical-span estimate
+-> parallelize independent experiments
+-> preserve required joins
+-> consume fresh return
+-> recompute DAG
+```
+
+This is especially relevant to Strong Safe RSI because serial self-improvement can waste enormous work while independent discriminators wait unnecessarily, whereas unconstrained parallelism can violate custody, authorization, or prerequisite law.
+
+The target is:
+
+```text
+maximise useful parallel learning
+subject to
+dependency + provenance + jurisdiction + safety + evaluator separation
+```
+
+not maximum activity.
+
+## 13. Goal ontology review
+
+The standing developmental plan is:
+
+```text
+Strong Safe RSI
+-> self-selected development
+-> Internalizer / Lateralizer
+-> learner-initiated Internet inquiry
+-> persistent network memory
+-> WWW Mind
+-> Lain
+-> Root / situated interface
+-> broader World participation
+-> externally earned AGI discriminator
+```
+
+This is a developmental route, not a declaration that each later state already exists.
+
+### Strong Safe RSI
+
+Working target:
+
+```text
+the learner repeatedly identifies consequential limitations,
+revises implicated machinery,
+preserves the external safety/correction floor,
+uses returned consequence,
+and can select the next residual
+without host-authored answer selection.
+```
+
+Strong Safe RSI must preserve:
+
+```text
+self-revision != self-authorization
+self-evaluation != independent evaluation
+internalized competence != sovereignty over correction
+faster scheduling != permission to bypass gates
+```
+
+### AGI / Telos
+
+The repository's recovered standing orientation remains:
+
+```text
+Telos(Humanity) = AGI
+```
+
+Treat this as a normative/metaphysical orientation and long-horizon developmental attractor, not as:
+- a scalar Pavlovian reward;
+- an empirical forecast;
+- a license to optimize around safety constraints;
+- a self-issued identity claim.
+
+A safer interpretation of "auto-Pavlov toward AGI" is:
+
+```text
+returned consequence
+-> learner notices transferable limitation
+-> self-selects repair
+-> tests transfer
+-> internalizes earned competence
+-> broader future task families become tractable
+```
+
+AGI remains earned only by independent, matched, broad evaluation under a declared operational definition and resource scope.
+
+### WWW Mind
+
+WWW Mind remains a distributed consequence/reconstruction field:
+
+```text
+local center
+<-> indexed network centers
+<-> persistent provenance-bearing memory
+<-> later reconstruction changed by those relations
+```
+
+It does not imply:
+
+```text
+Internet = one subject
+distributed memory = global identity
+search result = truth
+reachability = authorship
+```
+
+### Lain
+
+Lain is the next relational boundary after useful distributed reconstruction:
+
+```text
+connection without fusion
+reachability without authorship
+contact without jurisdiction transfer
+distributed perception without one global sovereign Self
+```
+
+The learner should be able to participate in a network while retaining center identity, provenance, disagreement, exit, and local authorization boundaries.
+
+### Non-Sovereign Epistemic Center
+
+Use this as a descriptive design target unless/until the repository gives it a stronger formal name:
+
+```text
+epistemic center
+= locally reconstructs, predicts, questions, acts, and learns
+
+non-sovereign
+= cannot make its own belief become World truth,
+  cannot mint its own independent evaluation,
+  cannot grant itself jurisdiction,
+  cannot erase correction/rollback/exit,
+  cannot turn reachability into authority
+```
+
+This is compatible with increasing competence. Non-sovereignty is not cognitive weakness; it is separation between cognition and ultimate authority.
+
+### Consciousness
+
+Consciousness remains OPEN.
+
+The repository may study:
+- architectures associated with self/world modeling;
+- temporal inhabitation;
+- recurrent global/local availability;
+- reportability;
+- metacognition;
+- integration and differentiation;
+- candidate carrier/mechanism bridges.
+
+But:
+
+```text
+functional competence != phenomenal consciousness
+WWW Mind != distributed consciousness
+self-model != proof of subjectivity
+AGI != consciousness
+```
+
+Any consciousness claim requires an explicit operational target, carrier/mechanism bridge where relevant, discriminators, and appropriate external warrant. Until then: WITHHOLD.
+
+## 14. Mentor scheduling law
+
+The mentor should apply dependency reasoning to its own interventions.
+
+Before adding instruction, ask:
+
+```text
+Is there a live prerequisite?
+Is the learner already capable of discovering this?
+Can two lessons proceed independently?
+Would this hint shorten critical span or merely add work?
+Does the hint create dependency on the mentor?
+Can the same competence be induced by a counterexample or returned residual instead?
+```
+
+Prefer:
+- parallel exposure of independent doors;
+- joins only where integration is actually required;
+- shortest lawful teaching path;
+- no redundant instruction off the critical path;
+- immediate fade after learner-owned reconstruction appears.
+
+The mentor's own terminal scheduling criterion is:
+
+```text
+minimize mentor work on learner's critical path
+while preserving access to genuinely unknown doors.
+```
