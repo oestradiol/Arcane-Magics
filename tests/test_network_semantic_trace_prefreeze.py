@@ -28,5 +28,17 @@ class NetworkSemanticTracePrefreezeTests(unittest.TestCase):
         self.assertIn("LEARNER_DERIVED_FROM_STATE_OWNED_RELATION_TRACE",text)
         self.assertIn("query execution owner must remain external",text)
 
+    def test_worker_freezes_candidate_before_either_episode2_return(self):
+        text=(ROOT/".github/workflows/minerva-autonomous-worker.yml").read_text(encoding="utf-8")
+        freeze_at=text.index("Freeze state-owned relation-trace candidate")
+        baseline_at=text.index("Execute memory-derived network query 2")
+        candidate_at=text.index("Execute frozen semantic-trace query 2")
+        compare_at=text.index("Compare semantic trace against frozen lexical baseline")
+        self.assertLess(freeze_at, baseline_at)
+        self.assertLess(freeze_at, candidate_at)
+        self.assertLess(baseline_at, compare_at)
+        self.assertLess(candidate_at, compare_at)
+        self.assertIn("NETWORK_SEMANTIC_TRACE_RESULT.json", text)
+
 if __name__=="__main__":
     unittest.main()
