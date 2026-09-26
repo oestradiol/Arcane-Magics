@@ -16,7 +16,7 @@ PROGRAM = json.loads(
 class AutonomousEpistemicOperatorContractTests(unittest.TestCase):
     def test_operator_noncollapse_is_explicit(self):
         contract = PROGRAM["epistemic_operator_contract"]
-        self.assertEqual(contract["status"], "ADMITTED_OPTIONAL_PATH")
+        self.assertEqual(contract["status"], "ADMITTED_OPERATOR_ROUTE_NOT_INTERNALIZED")
         for invariant in (
             "GENERATE!=DIMENSIONALIZE",
             "DIMENSIONALIZE!=LATERALIZE",
