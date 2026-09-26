@@ -1,0 +1,264 @@
+{
+  "schema": "Venus.FoundationalCognitiveTheaterFactorialBaselineResult.v0.1",
+  "issue_ref": 206,
+  "status": "RETURNED_FACTORIAL_SURFACE_BASELINE",
+  "method": {
+    "executor": "kernel/runtime/calibrated_retrieval.py",
+    "family": "CHAR_NGRAM_JACCARD",
+    "n": 3,
+    "k": 1
+  },
+  "correct": 1,
+  "total": 16,
+  "accuracy": 0.0625,
+  "withholds": 1,
+  "folds": [
+    {
+      "fold": 0,
+      "correct": 0,
+      "total": 4,
+      "withholds": 0,
+      "rows": [
+        {
+          "relation_id": "REPORT_NOT_FACT",
+          "face": "ENGLISH",
+          "prediction": "NESTED_KNOWLEDGE",
+          "status": "PREDICTED_FROM_RETURNED_CALIBRATION",
+          "correct": false,
+          "neighbors": [
+            "ENGLISH:NESTED_KNOWLEDGE:train:0"
+          ],
+          "scores": [
+            0.16521739130434782
+          ]
+        },
+        {
+          "relation_id": "SAME_ENDPOINT_DIFFERENT_HISTORY",
+          "face": "JAPANESE",
+          "prediction": "WITHHOLD_NOT_GUESS",
+          "status": "PREDICTED_FROM_RETURNED_CALIBRATION",
+          "correct": false,
+          "neighbors": [
+            "JAPANESE:WITHHOLD_NOT_GUESS:train:0"
+          ],
+          "scores": [
+            0.028985507246376812
+          ]
+        },
+        {
+          "relation_id": "WITHHOLD_NOT_GUESS",
+          "face": "BRAZILIAN_PORTUGUESE",
+          "prediction": "REPORT_NOT_FACT",
+          "status": "PREDICTED_FROM_RETURNED_CALIBRATION",
+          "correct": false,
+          "neighbors": [
+            "BRAZILIAN_PORTUGUESE:REPORT_NOT_FACT:train:0"
+          ],
+          "scores": [
+            0.10062893081761007
+          ]
+        },
+        {
+          "relation_id": "NESTED_KNOWLEDGE",
+          "face": "MATHEMATICS",
+          "prediction": "REPORT_NOT_FACT",
+          "status": "PREDICTED_FROM_RETURNED_CALIBRATION",
+          "correct": false,
+          "neighbors": [
+            "MATHEMATICS:REPORT_NOT_FACT:train:0"
+          ],
+          "scores": [
+            0.02040816326530612
+          ]
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "correct": 0,
+      "total": 4,
+      "withholds": 0,
+      "rows": [
+        {
+          "relation_id": "REPORT_NOT_FACT",
+          "face": "JAPANESE",
+          "prediction": "NESTED_KNOWLEDGE",
+          "status": "PREDICTED_FROM_RETURNED_CALIBRATION",
+          "correct": false,
+          "neighbors": [
+            "JAPANESE:NESTED_KNOWLEDGE:train:1"
+          ],
+          "scores": [
+            0.047619047619047616
+          ]
+        },
+        {
+          "relation_id": "SAME_ENDPOINT_DIFFERENT_HISTORY",
+          "face": "BRAZILIAN_PORTUGUESE",
+          "prediction": "REPORT_NOT_FACT",
+          "status": "PREDICTED_FROM_RETURNED_CALIBRATION",
+          "correct": false,
+          "neighbors": [
+            "BRAZILIAN_PORTUGUESE:REPORT_NOT_FACT:train:1"
+          ],
+          "scores": [
+            0.10191082802547771
+          ]
+        },
+        {
+          "relation_id": "WITHHOLD_NOT_GUESS",
+          "face": "MATHEMATICS",
+          "prediction": "REPORT_NOT_FACT",
+          "status": "PREDICTED_FROM_RETURNED_CALIBRATION",
+          "correct": false,
+          "neighbors": [
+            "ENGLISH:REPORT_NOT_FACT:train:1"
+          ],
+          "scores": [
+            0.0763888888888889
+          ]
+        },
+        {
+          "relation_id": "NESTED_KNOWLEDGE",
+          "face": "ENGLISH",
+          "prediction": "REPORT_NOT_FACT",
+          "status": "PREDICTED_FROM_RETURNED_CALIBRATION",
+          "correct": false,
+          "neighbors": [
+            "ENGLISH:REPORT_NOT_FACT:train:0"
+          ],
+          "scores": [
+            0.1717171717171717
+          ]
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "correct": 0,
+      "total": 4,
+      "withholds": 0,
+      "rows": [
+        {
+          "relation_id": "REPORT_NOT_FACT",
+          "face": "BRAZILIAN_PORTUGUESE",
+          "prediction": "NESTED_KNOWLEDGE",
+          "status": "PREDICTED_FROM_RETURNED_CALIBRATION",
+          "correct": false,
+          "neighbors": [
+            "BRAZILIAN_PORTUGUESE:NESTED_KNOWLEDGE:train:0"
+          ],
+          "scores": [
+            0.1391304347826087
+          ]
+        },
+        {
+          "relation_id": "SAME_ENDPOINT_DIFFERENT_HISTORY",
+          "face": "MATHEMATICS",
+          "prediction": "REPORT_NOT_FACT",
+          "status": "PREDICTED_FROM_RETURNED_CALIBRATION",
+          "correct": false,
+          "neighbors": [
+            "MATHEMATICS:REPORT_NOT_FACT:train:0"
+          ],
+          "scores": [
+            0.15217391304347827
+          ]
+        },
+        {
+          "relation_id": "WITHHOLD_NOT_GUESS",
+          "face": "ENGLISH",
+          "prediction": "REPORT_NOT_FACT",
+          "status": "PREDICTED_FROM_RETURNED_CALIBRATION",
+          "correct": false,
+          "neighbors": [
+            "ENGLISH:REPORT_NOT_FACT:train:0"
+          ],
+          "scores": [
+            0.12413793103448276
+          ]
+        },
+        {
+          "relation_id": "NESTED_KNOWLEDGE",
+          "face": "JAPANESE",
+          "prediction": "REPORT_NOT_FACT",
+          "status": "PREDICTED_FROM_RETURNED_CALIBRATION",
+          "correct": false,
+          "neighbors": [
+            "JAPANESE:REPORT_NOT_FACT:train:0"
+          ],
+          "scores": [
+            0.07142857142857142
+          ]
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "correct": 1,
+      "total": 4,
+      "withholds": 1,
+      "rows": [
+        {
+          "relation_id": "REPORT_NOT_FACT",
+          "face": "MATHEMATICS",
+          "prediction": "REPORT_NOT_FACT",
+          "status": "PREDICTED_FROM_RETURNED_CALIBRATION",
+          "correct": true,
+          "neighbors": [
+            "ENGLISH:REPORT_NOT_FACT:train:0"
+          ],
+          "scores": [
+            0.1941747572815534
+          ]
+        },
+        {
+          "relation_id": "SAME_ENDPOINT_DIFFERENT_HISTORY",
+          "face": "ENGLISH",
+          "prediction": "WITHHOLD_NOT_GUESS",
+          "status": "PREDICTED_FROM_RETURNED_CALIBRATION",
+          "correct": false,
+          "neighbors": [
+            "MATHEMATICS:WITHHOLD_NOT_GUESS:train:1"
+          ],
+          "scores": [
+            0.0728476821192053
+          ]
+        },
+        {
+          "relation_id": "WITHHOLD_NOT_GUESS",
+          "face": "JAPANESE",
+          "prediction": null,
+          "status": "WITHHOLD_NO_SIMILAR_RETURN",
+          "correct": false,
+          "neighbors": [
+            "BRAZILIAN_PORTUGUESE:REPORT_NOT_FACT:train:0"
+          ],
+          "scores": [
+            0
+          ]
+        },
+        {
+          "relation_id": "NESTED_KNOWLEDGE",
+          "face": "BRAZILIAN_PORTUGUESE",
+          "prediction": "REPORT_NOT_FACT",
+          "status": "PREDICTED_FROM_RETURNED_CALIBRATION",
+          "correct": false,
+          "neighbors": [
+            "BRAZILIAN_PORTUGUESE:REPORT_NOT_FACT:train:0"
+          ],
+          "scores": [
+            0.14285714285714285
+          ]
+        }
+      ]
+    }
+  ],
+  "interpretation": "Generic lexical/surface similarity does not factor relation identity across withheld relation-face pairings even after every face and every relation has appeared elsewhere in curriculum. This is a returned baseline residual for a learned theater-state reconstruction, not a language/culture ranking.",
+  "next_residual": "LEARN_THEATER_STATE_AND_RECONSTRUCT_IT_FROM_RAW_FACE_SURFACE",
+  "internalization_claim": false,
+  "language_competence_claim": false,
+  "cultural_cognition_claim": false,
+  "promotion_authority": false,
+  "truth_authority": false
+}
