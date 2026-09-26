@@ -148,6 +148,43 @@ def form_git_check_problem(snapshot: GitCarrierSnapshot) -> dict[str, Any]:
     return {"problem_id": digest(body), **body}
 
 
+
+def form_next_head_check_problem(snapshot: GitCarrierSnapshot) -> dict[str, Any]:
+    """Freeze a prospective discriminator for the next PR head's terminal check.
+
+    This is useful when the current head's check is already terminal. The current
+    state is only the prefreeze anchor. The later answer must come from a changed
+    GitHub head and its check state.
+    """
+    if snapshot.carrier_kind.upper() != "PR":
+        raise GitWorldReturnError("next-head check problem supports PR carriers only")
+    source_stream_id = digest({
+        "carrier_kind": snapshot.carrier_kind.upper(),
+        "carrier_number": int(snapshot.carrier_number),
+    })
+    rivals = (
+        {
+            "rival_id": "r0",
+            "statement": "the next changed PR head terminates unsuccessfully under repository checks",
+        },
+        {
+            "rival_id": "r1",
+            "statement": "the next changed PR head terminates successfully under repository checks",
+        },
+    )
+    body = {
+        "schema": "Venus.GitNextHeadCheckProblem.v0.1",
+        "disposition": "FORMED_BOUNDED_PROBLEM",
+        "source_stream_ids": (source_stream_id,),
+        "residual_coordinates": ("next_head_check_unknown",),
+        "discriminator": "OBSERVE_NEXT_HEAD_CHECK_TERMINAL_STATE",
+        "rivals": rivals,
+        "external_return_required": True,
+        "carrier_binding_authority": False,
+        "promotion_authority": False,
+    }
+    return {"problem_id": digest(body), **body}
+
 def freeze_git_world_request(
     *,
     problem: Mapping[str, Any],
@@ -269,6 +306,19 @@ def resolve_continuation_problem(
 
     if discriminator == "OBSERVE_PR_CHECK_TERMINAL_STATE":
         if after_status != "completed":
+            disposition = "WITHHOLD_CHANGED_BUT_NONTERMINAL"
+            remaining = rival_ids
+        elif after_conclusion == "success":
+            disposition = "RETURN_REDUCED_RIVALS"
+            remaining = ("r1",) if "r1" in rival_ids else rival_ids[:1]
+        else:
+            disposition = "RETURN_REDUCED_RIVALS"
+            remaining = ("r0",) if "r0" in rival_ids else rival_ids[:1]
+    elif discriminator == "OBSERVE_NEXT_HEAD_CHECK_TERMINAL_STATE":
+        if str(returned.after.get("head_sha") or "") == request.frozen_head_sha:
+            disposition = "WITHHOLD_NEXT_HEAD_NOT_OBSERVED"
+            remaining = rival_ids
+        elif after_status != "completed":
             disposition = "WITHHOLD_CHANGED_BUT_NONTERMINAL"
             remaining = rival_ids
         elif after_conclusion == "success":
