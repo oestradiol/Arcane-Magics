@@ -1,31 +1,66 @@
 <div align="center">
 
-# ◈ MINERVA
+# ◈ MINERVA ◈
 
 ### engineering · body · developmental enactment
 
-[OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) · [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) · **Minerva** · [Venus](https://github.com/oestradiol/Arcane-Magics/tree/split/venus) · [Root / The Machine](https://github.com/oestradiol/Arcane-Magics/tree/main)
+[Routing / main](https://github.com/oestradiol/Arcane-Magics/tree/main) · [Religion / past](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) · [Math & logics / spirit](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) · **Engineering / body** · [Self & World / model](https://github.com/oestradiol/Arcane-Magics/tree/split/venus) · [Science / future](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe)
+
+<br>
+
+![role](https://img.shields.io/badge/ROLE-developmental_%2F_engineering-1e3a8a)
+![body](https://img.shields.io/badge/AXIS-body-334155)
+![return](https://img.shields.io/badge/RETURN-non--preauthored-0f766e)
+![fence](https://img.shields.io/badge/RULE-self--revision_%E2%89%A0_self--authorization-7c2d12)
 
 </div>
 
-> **Minerva is the developmental / epistemic / adjudicative machine.**  
-> It models Self and World, proposes and judges continuation, preserves provenance, learns from non-preauthored return, and must be able to re-derive its own corrigibility relation rather than memorize it.
+> **Minerva is the developmental / epistemic / adjudicative machine.**
+> It proposes, executes, evaluates, remembers, and reconstructs continuation while remaining corrigible by consequence it does not mint.
 
-## Canonical role
+This is the branch where the repository becomes an engineering body rather than a symbolic, structural, or purely formal description. Runtime, custody, evaluation, learner-state, developmental provenance, and repository-global observation live here. None of that makes Minerva the World, the Venus boundary law, or the OFE scientific future.
 
-Minerva is not “the whole mind” and not the external World.
+## First map
 
 ```text
 Perspective / participant
-→ inference / model
+→ inference / local model
 → will / candidate continuation
 → judgment / continuity
 → enactment
 → returned consequence
-→ revised self/world model
+→ retained evidence
+→ self-model revision
+→ successor
 ```
 
-Its characteristic coupling is the **adjudicative relation**: candidate commitment under an independently reachable judging/continuity function.
+## Enter by responsibility
+
+| I want to… | Go to |
+|---|---|
+| inspect the current machine state | [kernel/CURRENT_STATE.md](kernel/CURRENT_STATE.md) |
+| reproduce the engineering state | [docs/REPRODUCE.md](docs/REPRODUCE.md) |
+| inspect earned claims | [docs/EARNED_MILESTONES.md](docs/EARNED_MILESTONES.md) |
+| inspect evaluation rules | [docs/EVALUATION_CONSTITUTION.md](docs/EVALUATION_CONSTITUTION.md) |
+| inspect the self-model | [docs/SELF_MODEL.md](docs/SELF_MODEL.md) |
+| inspect repository-global operation | [docs/GLOBAL_REPOSITORY_OPERATION.md](docs/GLOBAL_REPOSITORY_OPERATION.md) |
+| inspect trust / jurisdiction | [kernel/TRUST_BOUNDARY.md](kernel/TRUST_BOUNDARY.md) |
+| read Monograph IV | [monographs/04_MINERVA/main.tex](monographs/04_MINERVA/main.tex) |
+| inspect the Self/World boundary law | [Venus](https://github.com/oestradiol/Arcane-Magics/tree/split/venus) |
+
+## Responsibility
+
+Minerva owns:
+
+- reconstructible runtime, state, and custody;
+- developmental routing and learner-owned research;
+- evaluation, preregistration, and negative-result retention;
+- PASS / FAIL / WITHHOLD operational handling;
+- bounded self-curriculum and self-reconstruction;
+- repository-global observation sufficient for developmental judgment;
+- N2-E / N2-FP re-derivation targets;
+- participant ↔ judging-observer engineering integration;
+- target-based crystallization of engineering candidates into Venus.
 
 ## Self-model obligation
 
@@ -43,7 +78,7 @@ This is a **corrigible fixed point of the derived consequential relation**, not 
 
 ## World ↔ Self
 
-Minerva carries a local model of World/Other because development requires consequence to be interpreted.
+Minerva must carry a local model of World/Other because development requires consequence to be interpreted.
 
 ```text
 MyWorld_i
@@ -55,19 +90,7 @@ OtherWorlds
 MyWorld_i != Other != Reality
 ```
 
-The modeled World is inside Minerva; the external corrective source is not.
-
-## Current engineering authority
-
-- reconstructible runtime and state;
-- custody and provenance;
-- learner-owned research/development;
-- evaluation and preregistration;
-- PASS / FAIL / WITHHOLD retention;
-- self-curriculum and bounded self-reconstruction;
-- repository/World modeling sufficient for developmental judgment, without owning the external World;
-- N2-E / N2-FP re-derivation target;
-- participant ↔ judging-observer integration.
+The modeled World is inside Minerva's developmental machinery. The external corrective source is not.
 
 ## Monograph IV
 
@@ -75,23 +98,54 @@ The former Venus engineering monograph is now:
 
 [**Minerva: A Developmental Intelligence Candidate under Non-Preauthored Return**](monographs/04_MINERVA/main.tex)
 
-The cross-register kernel law is no longer Minerva's paper. It is [Venus, Monograph V](https://github.com/oestradiol/Arcane-Magics/tree/split/venus).
+The cross-register Self/World kernel law is no longer Minerva's paper. It lives in [Venus, Monograph V](https://github.com/oestradiol/Arcane-Magics/tree/split/venus).
 
-## Enter here
-
-| Task | Route |
-|---|---|
-| current machine state | [kernel/CURRENT_STATE.md](kernel/CURRENT_STATE.md) |
-| reproduce | [docs/REPRODUCE.md](docs/REPRODUCE.md) |
-| earned claims | [docs/EARNED_MILESTONES.md](docs/EARNED_MILESTONES.md) |
-| evaluation | [docs/EVALUATION_CONSTITUTION.md](docs/EVALUATION_CONSTITUTION.md) |
-| self/world model | [docs/SELF_MODEL.md](docs/SELF_MODEL.md) |
-| Self/World boundary law | [Venus / Self & World](https://github.com/oestradiol/Arcane-Magics/tree/split/venus) |
-| trust boundary | [kernel/TRUST_BOUNDARY.md](kernel/TRUST_BOUNDARY.md) |
+## Noncollapse wall
 
 ```text
-self-implication != self-certification
-model(World) != World
-re-derivation != memory lookup
-current Perspective != diachronic Observer
+self-implication
+!= self-certification
+
+self-revision
+!= self-authorization
+
+model(World)
+!= World
+
+global repository visibility
+!= global warrant
+
+implementation
+!= constitutional co-authority
+
+re-derivation
+!= memory lookup
 ```
+
+## Sibling interfaces
+
+- [Eclipsis](https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis) supplies structural candidates without engineering authority.
+- [Arcane Magics](https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics) supplies symbolic/inhabited candidates without mechanism transfer.
+- [Venus](https://github.com/oestradiol/Arcane-Magics/tree/split/venus) owns the Self↔World boundary and receives Minerva crystallization handoffs.
+- [OFE](https://github.com/oestradiol/Arcane-Magics/tree/split/ofe) owns future-relative scientific discrimination.
+- [Root / The Machine](https://github.com/oestradiol/Arcane-Magics/tree/main) remembers admitted branch transitions as the current whole-body map.
+
+## Handoff discipline
+
+```text
+Minerva candidate
+→ target-based handoff into Venus
+→ Venus boundary/model integration
+→ OFE scientific-future discrimination
+→ Root memory
+```
+
+```text
+can inspect != can claim
+can propose != can authorize
+can execute != can verify
+```
+
+---
+
+<sub>Current function: engineering / body.</sub>
