@@ -1,7 +1,7 @@
 {
   "schema": "Venus.CognitiveTheaterFactorModel.v0.1",
   "date": "2026-09-26",
-  "status": "PREFROZEN_FACTOR_MODEL_WITH_RETURNED_G0_G3_EVIDENCE",
+  "status": "RETURNED_LOCAL_OPERATOR_SEPARATION__G2_G3_BOUNDED_PASS_G4_OPEN",
   "issue_ref": 206,
   "thesis": "Cognitive-theater competence is decomposed so lexical grounding, symbolic transformation, temporal inhabitation, participant/KFS binding, and returned consequence cannot substitute for one another.",
   "factors": [
@@ -64,7 +64,10 @@
     "SAME_SYMBOLS_DIFFERENT_BINDING_CAN_DIFFER",
     "SAME_EVENTS_DIFFERENT_ORDER_CAN_DIFFER",
     "SURFACE_PARAPHRASE_CAN_PRESERVE_RELATION",
-    "CROSS_FACE_AGREEMENT!=WORLD_TRUTH"
+    "CROSS_FACE_AGREEMENT!=WORLD_TRUTH",
+    "DISCOURSE_PRESENTATION_ORDER!=EVENT_ORDER",
+    "LOCAL_OPERATOR_COMPOSITION!=WHOLE_SCENE_TEMPLATE",
+    "LANGUAGE_OPERATOR_STRUCTURE!=EXPLICIT_THEATER_STATE"
   ],
   "staged_burdens": [
     {
@@ -141,7 +144,30 @@
       "G2_indexed_kfs_accuracy": 0.625,
       "G3_symbolic_order_accuracy": 1,
       "disposition": "G3_PASS_BOUNDED__G2_FAIL_REVISE"
+    },
+    "G2_relational_graph_fresh3": {
+      "ref": "kernel/development/COGNITIVE_THEATER_RELATIONAL_GRAPH_FRESH3_RESULT.json",
+      "pairwise_accuracy": 0.4375,
+      "status": "FAIL_G2_PAIRWISE_RELATIONAL_GRAPH_INSUFFICIENT"
+    },
+    "G2_joint_scene_fresh4": {
+      "ref": "kernel/development/COGNITIVE_THEATER_JOINT_SCENE_FRESH4_RESULT.json",
+      "joint_accuracy": 0.4375,
+      "unary_accuracy": 0.625,
+      "pairwise_accuracy": 0.625,
+      "status": "FAIL_JOINT_WHOLE_SCENE_TEMPLATE_NOT_THEATER"
+    },
+    "G2_G3_local_operator_fresh5": {
+      "ref": "kernel/development/COGNITIVE_THEATER_LOCAL_OPERATOR_FRESH5_RESULT.json",
+      "local_operator_accuracy": 1,
+      "joint_accuracy": 0.625,
+      "pairwise_accuracy": 0.6666666666666666,
+      "unary_accuracy": 0.5833333333333334,
+      "G2_nested_accuracy": 1,
+      "G2_transmission_accuracy": 1,
+      "G3_symbolic_event_order_accuracy": 1,
+      "status": "PASS_BOUNDED_LOCAL_OPERATOR_COMPOSITION__WITHHOLD_GENERAL_THEATER_AND_INTERNALIZATION"
     }
   },
-  "next_residual": "PAIRWISE_RELATIONAL_THEATER_GRAPH_FOR_INDEXED_KFS"
+  "next_residual": "COMPILE_LOCAL_OPERATORS_INTO_EXPLICIT_COGNITIVE_THEATER_STATE_AND_TEST_PARTICIPANT_KFS_AND_EVENT_ORDER_INTERVENTIONS"
 }
