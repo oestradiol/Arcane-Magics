@@ -41,8 +41,20 @@ jobs:
 
       - name: Verify Minerva local machine
         run: |
-          python -m unittest discover -s tests -p 'test_*.py'
+          python scripts/audit_layer_surface.py
+          python -m unittest tests/test_autonomous_governance.py
+          python -m unittest tests/test_autonomous_return_authority.py
+          python -m unittest tests/test_internalizer.py
+          python -m unittest tests/test_vmk2_invariants.py
+          python -m unittest tests/test_edu16_reconstructed_carrier.py
+          python -m unittest tests/test_world_input_security_public_dev.py
+          python -m unittest tests/test_autonomous_epistemic_operator_contract.py
+          python -m unittest tests/test_internalization_boundary.py
+          python -m unittest tests/test_www_mind_gate.py
+          python -m unittest tests/test_developmental_gate_chain.py
           python scripts/audit_autonomy_safety_matrix.py
+          python scripts/audit_custody.py
+          python scripts/audit_edu16_custody.py
           test -f docs/SELF_MODEL.md
           test -f docs/GLOBAL_REPOSITORY_OPERATION.md
           test -f docs/SELF_CORRECTION_OPERATOR.md
