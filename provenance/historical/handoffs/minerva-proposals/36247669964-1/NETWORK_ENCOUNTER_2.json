@@ -1,0 +1,171 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:BryanMcManusAI/rationale-integrity-demo",
+    "github-repo:amandachan-ai/evaluation-playbook",
+    "github-repo:dunay2/dvt",
+    "github-repo:freddybalaa-prog/ChironMl",
+    "github-repo:oginniisrael4-bot/critical-thinming-project",
+    "github-repo:ramaalshaban/dbtestprojectt-shoppingcartu-service"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:BryanMcManusAI/rationale-integrity-demo",
+    "github-repo:amandachan-ai/evaluation-playbook",
+    "github-repo:dunay2/dvt",
+    "github-repo:freddybalaa-prog/ChironMl",
+    "github-repo:oginniisrael4-bot/critical-thinming-project",
+    "github-repo:ramaalshaban/dbtestprojectt-shoppingcartu-service"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "5381c5784e24bdcfad18d15084cebc4d73e057d2b52e4292dd9df3d28803dd69",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T14:12:18Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "evaluation integrity add accepted across added adds admission",
+    "evaluation integrity add accepted across added",
+    "evaluation integrity add accepted",
+    "evaluation integrity add"
+  ],
+  "selected_study_relevance_terms": [
+    "evaluation",
+    "integrity",
+    "add",
+    "contamination-controlled",
+    "double-blind",
+    "harness-separated",
+    "promotion",
+    "hidden",
+    "task",
+    "selection",
+    "bias",
+    "where"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:dunay2",
+      "author_login": "dunay2",
+      "author_type": "User",
+      "center_id": "github-repo:dunay2/dvt",
+      "learner_minted_artifact": false,
+      "observed_relation": "Parent: #3265 Depends on: #3266, #3267, #3268. Coordinates with: #2919, #3086, #3226, #3263. ## Outcome Allow a user to select an already canonical relation-tree node and perform bounded structural edits with validated Apply/Cancel while preserving semantic identity. ## First-slice structural actions For currently admitted JOIN/Set shapes: - append a connected pending relation to an eligible operator; - remove an operand from an operator while leaving its graph dependency connected and therefore pending; - reorder ordered N-ary inputs where canonical semantics preserve that order; - explicitly swap binary left/right orientation when semantically valid; - replace an operator only with a compatible admitted operation; - edit the selected JOIN predicate through the existing predicate editor; - edit Set schema alignment/output selection through the existing Set authoring path; - wrap the selected current subtree in an already-admitted unary relation only where a current canonical command exists. Do not implement arbitrary drag-to-reparent or free-form edge creation in the first slice. Add those only after a separate semantic and identity proof. ## Draft and transaction rules ```text ca",
+      "relevance_matches": [
+        "add",
+        "selection",
+        "where"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T14:12:01Z",
+      "source_id": "github-issue:dunay2/dvt#3269",
+      "source_url": "https://github.com/dunay2/dvt/issues/3269",
+      "title": "TASK-RELTREE1.4 Edit admitted relation trees structurally with validated Apply/Cancel"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:amandachan-ai",
+      "author_login": "amandachan-ai",
+      "author_type": "User",
+      "center_id": "github-repo:amandachan-ai/evaluation-playbook",
+      "learner_minted_artifact": false,
+      "observed_relation": "Evaluation is a steering system, not a scorecard added at the end. A provider-neutral playbook on dataset representativeness, oracle and judge validation, controlled comparison, run integrity, and the evidence chain from experiment to user impact.",
+      "relevance_matches": [
+        "evaluation",
+        "integrity"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-09-21T15:21:39Z",
+      "source_id": "github-repository:amandachan-ai/evaluation-playbook",
+      "source_url": "https://github.com/amandachan-ai/evaluation-playbook",
+      "title": "amandachan-ai/evaluation-playbook"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:BryanMcManusAI",
+      "author_login": "BryanMcManusAI",
+      "author_type": "User",
+      "center_id": "github-repo:BryanMcManusAI/rationale-integrity-demo",
+      "learner_minted_artifact": false,
+      "observed_relation": "Synthetic, no-API demo of a rationale-integrity judge: catches 'vacuous' evaluation rationales that wear the costume of substance. Surface 'looks-thorough' judge collapses on costumed vacuity (F1 1.00->0.13); a judge that must cite the span it scores holds (1.00->0.90). Adds Rogan-Gladen bias correction + robustness probes. Stdlib, pytest + CI.",
+      "relevance_matches": [
+        "evaluation",
+        "bias"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-07-19T11:08:37Z",
+      "source_id": "github-repository:BryanMcManusAI/rationale-integrity-demo",
+      "source_url": "https://github.com/BryanMcManusAI/rationale-integrity-demo",
+      "title": "BryanMcManusAI/rationale-integrity-demo"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:oginniisrael4-bot",
+      "author_login": "oginniisrael4-bot",
+      "author_type": "User",
+      "center_id": "github-repo:oginniisrael4-bot/critical-thinming-project",
+      "learner_minted_artifact": false,
+      "observed_relation": "Comprehensive Critical Thinking Project Report: Enterprise-Grade Source Code Management Migration Task 1: Comparative Evaluation \u2014 SVN vs. Git The transition from Apache Subversion (SVN) to Git is a strategic imperative driven by our team\u2019s shift to a fully distributed, remote work model. Centralized Architecture (SVN) Drawbacks Single Point of Failure (SPOF): SVN relies entirely on a centralized repository server. If the server goes down, all developer operations (including viewing history, committing code, and branching) are instantly paralyzed. Network Dependency: Every operation requires a network request to the primary server. For remote developers with variable internet connectivity, this introduces latency and delays integration. Distributed Architecture (Git) Advantages Local Redundancy: Git operates on a peer-to-peer model. Cloning a repository duplicates the entire project database, including its complete historical log, onto the developer's local machine. High Performance: Because the entire commit history resides locally, actions like committing, branching, and reviewing logs are executed instantly on local disk storage. Task 2: Standardizing the Distributed Git Workflo",
+      "relevance_matches": [
+        "evaluation",
+        "task"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-08-29T05:56:01Z",
+      "source_id": "github-repository:oginniisrael4-bot/critical-thinming-project",
+      "source_url": "https://github.com/oginniisrael4-bot/critical-thinming-project",
+      "title": "oginniisrael4-bot/critical-thinming-project"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:freddybalaa-prog",
+      "author_login": "freddybalaa-prog",
+      "author_type": "User",
+      "center_id": "github-repo:freddybalaa-prog/ChironMl",
+      "learner_minted_artifact": false,
+      "observed_relation": "Anomaly detection system named ChironML. The architecture in a way that each subsystem feature processing, dataset balancing model execution, evaluation, visualisation and explainability is there in a standalone python module, in a way where any addition, extension in adding new models or datasets do not affect the pipeline integrity.",
+      "relevance_matches": [
+        "evaluation",
+        "where"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-01-02T13:06:43Z",
+      "source_id": "github-repository:freddybalaa-prog/ChironMl",
+      "source_url": "https://github.com/freddybalaa-prog/ChironMl",
+      "title": "freddybalaa-prog/ChironMl"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:ramaalshaban",
+      "author_login": "ramaalshaban",
+      "author_type": "User",
+      "center_id": "github-repo:ramaalshaban/dbtestprojectt-shoppingcartu-service",
+      "learner_minted_artifact": false,
+      "observed_relation": "Manages each user's persistent shopping cart, including add, remove, update, and view actions for cart items. Maintains referential integrity with productCatalog, persists carts per user session, and ensures cart data consistency for e-commerce evaluation.",
+      "relevance_matches": [
+        "integrity",
+        "add"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2025-07-23T12:50:36Z",
+      "source_id": "github-repository:ramaalshaban/dbtestprojectt-shoppingcartu-service",
+      "source_url": "https://github.com/ramaalshaban/dbtestprojectt-shoppingcartu-service",
+      "title": "ramaalshaban/dbtestprojectt-shoppingcartu-service"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}

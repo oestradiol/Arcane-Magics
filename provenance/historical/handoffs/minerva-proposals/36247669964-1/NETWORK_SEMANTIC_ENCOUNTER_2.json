@@ -1,0 +1,85 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:dunay2/dvt",
+    "github-repo:keithah/steward-os"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:dunay2/dvt",
+    "github-repo:keithah/steward-os"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "2ee086e67970299a2cdc843baf2e43cb0dcbea811396e412e46022a1b77fa8ea",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T14:12:20Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "evaluation integrity add tests exact model never adversarial",
+    "evaluation integrity add tests exact model"
+  ],
+  "selected_study_relevance_terms": [
+    "evaluation",
+    "integrity",
+    "add",
+    "contamination-controlled",
+    "double-blind",
+    "harness-separated",
+    "promotion",
+    "hidden",
+    "task",
+    "selection",
+    "bias",
+    "where"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:keithah",
+      "author_login": "keithah",
+      "author_type": "User",
+      "center_id": "github-repo:keithah/steward-os",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Summary - add exact-head, fail-closed primary and adversarial review evidence for deep and visual lanes - bind reviewer contracts to the exact changed-path set - require Plex monitor-specific semantic probes for identity-less selection, cache migration, classification/correlation, and same-key refresh races ## Verification - `python3 -m unittest -q tests.test_steward_review tests.test_steward_llm_review tests.test_steward_review_benchmark` (107 passed) - `git diff --check main...HEAD` - exact-head Steward manifest and independent review report are stored locally outside the checkout",
+      "relevance_matches": [
+        "add",
+        "selection"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T14:06:56Z",
+      "source_id": "github-issue:keithah/steward-os#6",
+      "source_url": "https://github.com/keithah/steward-os/pull/6",
+      "title": "feat: require semantic evidence for Plex monitoring reviews"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:dunay2",
+      "author_login": "dunay2",
+      "author_type": "User",
+      "center_id": "github-repo:dunay2/dvt",
+      "learner_minted_artifact": false,
+      "observed_relation": "Parent: #3265 Depends on: #3266, #3267, #3268. Coordinates with: #2919, #3086, #3226, #3263. ## Outcome Allow a user to select an already canonical relation-tree node and perform bounded structural edits with validated Apply/Cancel while preserving semantic identity. ## First-slice structural actions For currently admitted JOIN/Set shapes: - append a connected pending relation to an eligible operator; - remove an operand from an operator while leaving its graph dependency connected and therefore pending; - reorder ordered N-ary inputs where canonical semantics preserve that order; - explicitly swap binary left/right orientation when semantically valid; - replace an operator only with a compatible admitted operation; - edit the selected JOIN predicate through the existing predicate editor; - edit Set schema alignment/output selection through the existing Set authoring path; - wrap the selected current subtree in an already-admitted unary relation only where a current canonical command exists. Do not implement arbitrary drag-to-reparent or free-form edge creation in the first slice. Add those only after a separate semantic and identity proof. ## Draft and transaction rules ```text ca",
+      "relevance_matches": [
+        "add",
+        "selection",
+        "where"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T14:12:01Z",
+      "source_id": "github-issue:dunay2/dvt#3269",
+      "source_url": "https://github.com/dunay2/dvt/issues/3269",
+      "title": "TASK-RELTREE1.4 Edit admitted relation trees structurally with validated Apply/Cancel"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}

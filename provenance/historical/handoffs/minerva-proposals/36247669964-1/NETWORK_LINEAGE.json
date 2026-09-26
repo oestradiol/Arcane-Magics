@@ -1,0 +1,158 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "6c69ebd1c11fee563bda3461600b8d009cec08901a6ed9e4870d1ab113b11ff2",
+    "0bff517a0515f182a96a4e81b121563721f4b227fbeaa7e8b493f55c7c260e70",
+    "6d756eff5eedd0a520f3dc0550f012154257f4bb27b50d871aa030b81c8de24f",
+    "1ed8bb4934c800feacc1f1f89f802bb7d84bdeb20301c7a56fc3cbf6746e27de",
+    "6e21d1851f23a9b31fd46ea18e13560c5782d70a2b1f2c77b717e72f892adf9d",
+    "d797ac21084876ca56972b6c4b0214daff6a1d05e06bc12cf8daa42f3b4ed165"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:Oleksii-debug/12-6-ai.#7",
+      "github-issue:dolejs-jan/arxiv-digest#28",
+      "github-issue:harbor-framework/terminal-bench-science#255",
+      "github-issue:lost-rob0t/prolog-rlm#404",
+      "github-issue:ndrorchestration/DGAF-Framework#64",
+      "github-issue:nhruska/nhruska.github.io#345"
+    ],
+    "memory_object_ids": [
+      "6c69ebd1c11fee563bda3461600b8d009cec08901a6ed9e4870d1ab113b11ff2",
+      "0bff517a0515f182a96a4e81b121563721f4b227fbeaa7e8b493f55c7c260e70",
+      "6d756eff5eedd0a520f3dc0550f012154257f4bb27b50d871aa030b81c8de24f",
+      "1ed8bb4934c800feacc1f1f89f802bb7d84bdeb20301c7a56fc3cbf6746e27de",
+      "6e21d1851f23a9b31fd46ea18e13560c5782d70a2b1f2c77b717e72f892adf9d",
+      "d797ac21084876ca56972b6c4b0214daff6a1d05e06bc12cf8daa42f3b4ed165"
+    ],
+    "next_query_terms": [
+      "accepted",
+      "across",
+      "added",
+      "adds",
+      "admission",
+      "admitted",
+      "adversarial",
+      "agent",
+      "agents",
+      "aliases",
+      "aligned",
+      "all"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "cc59054d79e7faca430b6d0019b1346775b71108721fc88e28d9c222cf2ecd0d",
+    "reconstruction_id": "a6e972f2532f80b009ba5073068eeffa840b18bf3066249db31db220338fb087",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "7e05fec9d2501dc32bcd620dacc4e86dc85f296be941f87bad74fa0625ea7380",
+    "74db4e6cf83c263f768e544aab788802abf8e44065da04037edbb6774490cd5b",
+    "866666775d769a3904dd8cdb5ba6f0098518ece02375fff7ea95e7e92ba0d2a9",
+    "2528e6daf3614c664b021b9472f6fc000e023ffcd55ab2a8a82e112c95ccd9ee",
+    "059bc8cb8d260aadf8f1b24f6e6aa34c80467c88f7643ccb58e3c50e07e3478e",
+    "f672dede490a23b03c9ff48e0a00c644b27a94986fb6cee1ec25034dbf5a024d"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:dunay2/dvt#3269",
+      "github-repository:BryanMcManusAI/rationale-integrity-demo",
+      "github-repository:amandachan-ai/evaluation-playbook",
+      "github-repository:freddybalaa-prog/ChironMl",
+      "github-repository:oginniisrael4-bot/critical-thinming-project",
+      "github-repository:ramaalshaban/dbtestprojectt-shoppingcartu-service"
+    ],
+    "memory_object_ids": [
+      "7e05fec9d2501dc32bcd620dacc4e86dc85f296be941f87bad74fa0625ea7380",
+      "74db4e6cf83c263f768e544aab788802abf8e44065da04037edbb6774490cd5b",
+      "866666775d769a3904dd8cdb5ba6f0098518ece02375fff7ea95e7e92ba0d2a9",
+      "2528e6daf3614c664b021b9472f6fc000e023ffcd55ab2a8a82e112c95ccd9ee",
+      "059bc8cb8d260aadf8f1b24f6e6aa34c80467c88f7643ccb58e3c50e07e3478e",
+      "f672dede490a23b03c9ff48e0a00c644b27a94986fb6cee1ec25034dbf5a024d"
+    ],
+    "next_query_terms": [
+      "actions",
+      "adding",
+      "addition",
+      "advantages",
+      "affect",
+      "alignment",
+      "all",
+      "allow",
+      "already",
+      "already-admitted",
+      "amandachan-ai",
+      "and"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "5381c5784e24bdcfad18d15084cebc4d73e057d2b52e4292dd9df3d28803dd69",
+    "reconstruction_id": "f05227335e78b24de1b09c624c46fdea713da3b2a5dc63d31b6848c0dc8208b9",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:BryanMcManusAI/rationale-integrity-demo",
+    "github-repo:Oleksii-debug/12-6-ai.",
+    "github-repo:amandachan-ai/evaluation-playbook",
+    "github-repo:dolejs-jan/arxiv-digest",
+    "github-repo:dunay2/dvt",
+    "github-repo:freddybalaa-prog/ChironMl",
+    "github-repo:harbor-framework/terminal-bench-science",
+    "github-repo:lost-rob0t/prolog-rlm",
+    "github-repo:ndrorchestration/DGAF-Framework",
+    "github-repo:nhruska/nhruska.github.io",
+    "github-repo:oginniisrael4-bot/critical-thinming-project",
+    "github-repo:ramaalshaban/dbtestprojectt-shoppingcartu-service"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:BryanMcManusAI/rationale-integrity-demo",
+    "github-repo:Oleksii-debug/12-6-ai.",
+    "github-repo:amandachan-ai/evaluation-playbook",
+    "github-repo:dolejs-jan/arxiv-digest",
+    "github-repo:dunay2/dvt",
+    "github-repo:freddybalaa-prog/ChironMl",
+    "github-repo:harbor-framework/terminal-bench-science",
+    "github-repo:lost-rob0t/prolog-rlm",
+    "github-repo:ndrorchestration/DGAF-Framework",
+    "github-repo:nhruska/nhruska.github.io",
+    "github-repo:oginniisrael4-bot/critical-thinming-project",
+    "github-repo:ramaalshaban/dbtestprojectt-shoppingcartu-service"
+  ],
+  "indexed_source_ids": [
+    "github-issue:Oleksii-debug/12-6-ai.#7",
+    "github-issue:dolejs-jan/arxiv-digest#28",
+    "github-issue:dunay2/dvt#3269",
+    "github-issue:harbor-framework/terminal-bench-science#255",
+    "github-issue:lost-rob0t/prolog-rlm#404",
+    "github-issue:ndrorchestration/DGAF-Framework#64",
+    "github-issue:nhruska/nhruska.github.io#345",
+    "github-repository:BryanMcManusAI/rationale-integrity-demo",
+    "github-repository:amandachan-ai/evaluation-playbook",
+    "github-repository:freddybalaa-prog/ChironMl",
+    "github-repository:oginniisrael4-bot/critical-thinming-project",
+    "github-repository:ramaalshaban/dbtestprojectt-shoppingcartu-service"
+  ],
+  "memory_checkpoint_sha256": "0e606904b73880b3785b5e4055536c8ae02941d4c1dc78747910b922fc180da4",
+  "memory_record_count": 12,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "cc59054d79e7faca430b6d0019b1346775b71108721fc88e28d9c222cf2ecd0d",
+  "query2_changed_from_query1": true,
+  "query2_id": "5381c5784e24bdcfad18d15084cebc4d73e057d2b52e4292dd9df3d28803dd69",
+  "query2_memory_provenance": [
+    "network-memory:0bff517a0515f182a96a4e81b121563721f4b227fbeaa7e8b493f55c7c260e70",
+    "network-memory:1ed8bb4934c800feacc1f1f89f802bb7d84bdeb20301c7a56fc3cbf6746e27de",
+    "network-memory:6c69ebd1c11fee563bda3461600b8d009cec08901a6ed9e4870d1ab113b11ff2",
+    "network-memory:6d756eff5eedd0a520f3dc0550f012154257f4bb27b50d871aa030b81c8de24f",
+    "network-memory:6e21d1851f23a9b31fd46ea18e13560c5782d70a2b1f2c77b717e72f892adf9d",
+    "network-memory:d797ac21084876ca56972b6c4b0214daff6a1d05e06bc12cf8daa42f3b4ed165"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}

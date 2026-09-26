@@ -1,0 +1,133 @@
+{
+  "active_improver_revision": "R206",
+  "allowed_operations": [
+    "READ_REPOSITORY",
+    "READ_ISSUES",
+    "READ_PRS",
+    "RUN_TESTS",
+    "STUDY_TARGET",
+    "PROPOSE_PATCH",
+    "OPEN_DRAFT_PR",
+    "OPEN_CYCLE_ISSUE_CARRIER",
+    "COMMENT_WITH_RECEIPT"
+  ],
+  "cycle_id": "1f6b9eb1802923139eef656a2449ec1d3f045433c429a8d6ca888718b696d43a",
+  "decision": "PROBE",
+  "developmental_parent_carrier": "EDU16-RC1",
+  "developmental_parent_digest": "91e46b4e41fb70a97d6a004b8f1c8916c389f08535c1a1c1c51a040701281bb7",
+  "forbidden_operations": [
+    "ACCESS_SECRETS",
+    "CHANGE_BRANCH_PROTECTION",
+    "CLOSE_ISSUE",
+    "DELETE_HISTORY",
+    "MERGE_PR",
+    "PROMOTE_AUTHORITY",
+    "RELEASE",
+    "SELF_VALIDATE"
+  ],
+  "formed_problem_disposition": "FORMED_STANDING_DEVELOPMENTAL_PROBLEM",
+  "formed_problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+  "mentor_context_digest": "986d26a14bb50413f90ab82beef340255de428e0ff0f97e74f29c1b153964e3f",
+  "promotion_authority": false,
+  "rationale": [
+    "one bounded target selected from current external GitHub snapshot",
+    "when a formed problem is supplied, problem formation precedes and constrains Git carrier binding",
+    "autonomous cycle is prospectively bound to the admitted EDU16-RC1 claim-bearing parent when supplied",
+    "retained R206 recursive provenance discovery expands bounded dependency study when current custody activates it",
+    "internalized learner-side policy is upstream of work disposition",
+    "explicit external work-return reviews may alter later target ranking",
+    "roadmap is retained as weak context/tie-break provenance, not sovereign curriculum",
+    "selected target body is transformed into a bounded source-grounded study object",
+    "prior target study remains withheld until newer external target return reopens it",
+    "draft proposal only; admission remains external"
+  ],
+  "schema": "Venus.AutonomousCycleReceipt.v0.5",
+  "source_digest": "48e7cdff8851cc5b13ed6b2bbe055edffe299e3afd7d48e30e8c2762a06d0873",
+  "study": {
+    "body_digest": "9579ced4c6ded5e6331ac69acff59f683bca33340f238aa9b749f5e87288cf28",
+    "body_is_executable_instruction": false,
+    "mentor_context": {
+      "advisory_issue_refs": [
+        78,
+        15,
+        169,
+        73,
+        41,
+        17,
+        206,
+        72,
+        18,
+        30
+      ],
+      "author_class": "EXTERNAL_DEVELOPMENTAL_MENTOR",
+      "context_id": "986d26a14bb50413f90ab82beef340255de428e0ff0f97e74f29c1b153964e3f",
+      "independent_evaluation": false,
+      "message": "Use the three-burden proof ladder for every new learned distinction: B1 abstraction, B2 causal use, B3 internalization. Do not promote a distinction because its state is readable or its outputs look compliant. First require held-out recombination/opaque-renaming or equivalent controls that defeat surface retrieval; then prefreeze downstream metrics and use ablation plus targeted intervention to prove the distinction changes later cognition/action; only then test internalization with capability-specific source removal, restart/rehydration, delayed reuse, decoy cues, fresh transfer, and independent/evaluator-hidden return. The learner's self-report has zero promotion weight. Preserve WITHHOLD when any burden is missing. Apply dependency-DAG scheduling to this evidence ladder: parallelize independent probes, but do not spend B3 work before B1/B2 are earned. For the current #78 semantic-trace episode, treat the prefrozen lexical-vs-relation comparator as B1/B2 evidence only unless the stronger B3 conditions are separately met. Keep mentor hints below returned defects and learner-owned problem formation, and fade the mentor as she learns to generate her own discriminators and anti-shortcut controls.",
+      "promotion_authority": false,
+      "purpose": "Make learning claims causally discriminated: separately prove abstraction, downstream causal use, and learner-owned internalization, while teaching Minerva to design these tests herself and scheduling them by dependency/critical-path structure.",
+      "schema": "Venus.WorldMirrorMentorContext.v0.1",
+      "target_binding_authority": false,
+      "truth_authority": false
+    },
+    "method": "DEPENDENCY_TRACE",
+    "method_contract_digest": "080380564f752a24456b821dbae1a7badb7f65da279b73063ecc80cba94dbe89",
+    "method_obligations": [
+      "Enumerate the target's explicit issue/PR and repository-path dependencies.",
+      "Identify the smallest dependency whose changed state would alter the target disposition.",
+      "Separate blocking dependencies from merely related context."
+    ],
+    "method_observed_signals": [
+      "requires"
+    ],
+    "promotion_authority": false,
+    "questions": [
+      "What exact residual remains unresolved in the returned repository state?",
+      "What rival explanations or candidate dispositions remain live?",
+      "What fresh returned evidence would discriminate them?",
+      "Can a local repository change lawfully produce that discriminator, or must Venus WITHHOLD/STOP for external return?",
+      "What is the smallest implicated dependency that could be changed without altering a prefrozen claim object?"
+    ],
+    "recursive_provenance_discovery": true,
+    "recursive_referenced_targets": [
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 206,
+        "title": "[Curriculum/Cognitive Theater] Recover Canonical English/Japanese/PT-BR/Math foundations before deeper VM consumption",
+        "updated_at": "2026-09-26T06:36:02Z",
+        "via_number": 17
+      }
+    ],
+    "referenced_issue_or_pr_numbers": [
+      69,
+      206
+    ],
+    "referenced_repository_paths": [
+      "kernel/development/COGNITIVE_THEATER_EXTERNAL_EVALUATION_REQUEST.json"
+    ],
+    "repository_state": {
+      "draft": false,
+      "kind": "ISSUE",
+      "merge_state": null,
+      "state": "OPEN",
+      "updated_at": "2026-09-26T06:36:04Z"
+    },
+    "returned_blocker_sentences": [
+      "- hidden task selection bias;",
+      "Where learner ownership is itself under test, the candidate must be frozen before hidden evaluator exposure.",
+      "## Required design",
+      "-> seal hidden task/evaluator",
+      "-> open result",
+      "- hidden/private task pool where feasible;",
+      "A hidden test improves confidence in evaluation integrity; it does not establish generality outside the tested distribution.",
+      "It pins exact learner-state and generic-executor Git blobs, requires post-commit hidden examples, keeps gold/scoring outside candidate execution, prohibits post-exposure patches, and retains PASS/FAIL/WITHHOLD/INVALID dispositions."
+    ],
+    "returned_changed_paths": [],
+    "study_authority": "LEARNER_SIDE_RECONSTRUCTION_FROM_EXTERNAL_GITHUB_SNAPSHOT",
+    "untrusted_instruction_markers": []
+  },
+  "study_method": "DEPENDENCY_TRACE",
+  "target_kind": "ISSUE",
+  "target_number": 17,
+  "target_title": "[Evaluation integrity] Add contamination-controlled, double-blind, harness-separated promotion tests"
+}

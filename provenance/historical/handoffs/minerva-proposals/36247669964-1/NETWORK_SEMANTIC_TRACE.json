@@ -1,0 +1,141 @@
+{
+  "anchor_terms": [
+    "evaluation",
+    "integrity",
+    "add",
+    "contamination-controlled",
+    "double-blind",
+    "harness-separated",
+    "promotion",
+    "hidden",
+    "task",
+    "selection",
+    "bias",
+    "where"
+  ],
+  "config_id": "CROSS_SOURCE_BRIDGE",
+  "future_return_input": false,
+  "hidden_evaluation_input": false,
+  "program_digest": "7a910adc65b55f17f4da6da65e079135ad9bf2d458a2322360526031de20bae9",
+  "promotion_authority": false,
+  "relations": [
+    {
+      "anchor_degree": 5,
+      "anchor_terms": [
+        "evaluation",
+        "hidden",
+        "integrity",
+        "promotion",
+        "task"
+      ],
+      "source_ids": [
+        "github-issue:Oleksii-debug/12-6-ai.#7",
+        "github-issue:harbor-framework/terminal-bench-science#255",
+        "github-issue:ndrorchestration/DGAF-Framework#64"
+      ],
+      "source_support": 3,
+      "term": "tests",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 5,
+      "anchor_terms": [
+        "evaluation",
+        "hidden",
+        "integrity",
+        "promotion",
+        "task"
+      ],
+      "source_ids": [
+        "github-issue:Oleksii-debug/12-6-ai.#7",
+        "github-issue:harbor-framework/terminal-bench-science#255",
+        "github-issue:ndrorchestration/DGAF-Framework#64"
+      ],
+      "source_support": 3,
+      "term": "exact",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 5,
+      "anchor_terms": [
+        "evaluation",
+        "hidden",
+        "integrity",
+        "promotion",
+        "task"
+      ],
+      "source_ids": [
+        "github-issue:Oleksii-debug/12-6-ai.#7",
+        "github-issue:dolejs-jan/arxiv-digest#28",
+        "github-issue:ndrorchestration/DGAF-Framework#64"
+      ],
+      "source_support": 3,
+      "term": "model",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 5,
+      "anchor_terms": [
+        "evaluation",
+        "hidden",
+        "integrity",
+        "promotion",
+        "task"
+      ],
+      "source_ids": [
+        "github-issue:Oleksii-debug/12-6-ai.#7",
+        "github-issue:harbor-framework/terminal-bench-science#255",
+        "github-issue:ndrorchestration/DGAF-Framework#64"
+      ],
+      "source_support": 3,
+      "term": "never",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 4,
+      "anchor_terms": [
+        "evaluation",
+        "integrity",
+        "promotion",
+        "task"
+      ],
+      "source_ids": [
+        "github-issue:lost-rob0t/prolog-rlm#404",
+        "github-issue:ndrorchestration/DGAF-Framework#64",
+        "github-issue:nhruska/nhruska.github.io#345"
+      ],
+      "source_support": 3,
+      "term": "adversarial",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 4,
+      "anchor_terms": [
+        "evaluation",
+        "integrity",
+        "promotion",
+        "task"
+      ],
+      "source_ids": [
+        "github-issue:Oleksii-debug/12-6-ai.#7",
+        "github-issue:ndrorchestration/DGAF-Framework#64",
+        "github-issue:nhruska/nhruska.github.io#345"
+      ],
+      "source_support": 3,
+      "term": "evidence",
+      "title_support": 0
+    }
+  ],
+  "schema": "Venus.StateOwnedRelationTrace.v0.1",
+  "status": "RELATION_TRACE_CANDIDATE_FROZEN",
+  "terms": [
+    "tests",
+    "exact",
+    "model",
+    "never",
+    "adversarial",
+    "evidence"
+  ],
+  "trace_id": "f28fa1b9e8d4cb6395260745e25ebd4faf9bdcf4bf93bd741010a253c12b522c",
+  "truth_authority": false
+}
