@@ -29,7 +29,17 @@ jobs:
           esac
       - name: Minerva-local surface checks
         run: python scripts/audit_layer_surface.py
-      - name: Full Minerva audit
-        run: make audit
+      - name: Minerva tests
+        run: make test
+      - name: Reader/navigation audit
+        run: make lint
+      - name: Custody audits
+        run: make custody
+      - name: Causal distinction audit
+        run: python3 scripts/audit_minerva_causal_distinctions.py
+      - name: Autonomy safety audit
+        run: python3 scripts/audit_autonomy_safety_matrix.py
+      - name: Construct disposition audit
+        run: python3 scripts/audit_minerva_construct_dispositions.py
       - name: Imported law does not become self-authority
         run: echo 'implementation != constitutional co-authority != independent return'
