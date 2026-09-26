@@ -1,0 +1,10 @@
+{
+  "schema": "ArcaneMagics.CrossRegisterHandoff.v1",
+  "source_layer": "Venus",
+  "target_layer": "OFE",
+  "source_commit": "376bb9c6aa7b621a891bf96dbb9f6f85f6fac477",
+  "target_parent": "0a41b07494b03aff6c60f1360ac7b9a3a73c5376",
+  "content_admission": "bounded Lain/WWW evidence only; OFE tree retained",
+  "authority": "scientific-future candidate only; no Root promotion",
+  "claim_fence": "PASS_BOUNDED_LAIN_NONFUSION_GATE is a tested network-boundary result, not consciousness, AGI, global-subject, or empirical-world generality."
+}
