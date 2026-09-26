@@ -37,3 +37,14 @@ territory can still exceed map
 World can still contradict model
 future can still reopen past
 ```
+## Branch lifecycle
+
+Only the six branches in the routing table are live authority surfaces. An explicitly issue-bound carrier may remain active without becoming authority. Every other branch is historical/non-routing unless Root explicitly re-admits it.
+
+```text
+branch existence != current authority
+legacy development/fix/benchmark/tmp refs -> historical evidence
+split/venus-minerva -> historical transitional carrier
+```
+
+The target namespace for stale/superseded refs is `historical/<original-ref>`. The machine-readable policy is `../provenance/historical/BRANCH_NAMESPACE_POLICY.json`.
