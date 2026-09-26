@@ -1,0 +1,101 @@
+{
+  "schema": "Minerva.RecoveredDistinctionsCandidate.v0.1",
+  "status": "CANDIDATE_NOT_ADMITTED",
+  "date": "2026-09-26",
+  "promotion_authority": false,
+  "truth_authority": false,
+  "role": "Distinctions recovered from the Canonical archive that are attested there and absent from the live kernel. Recorded for adjudication, not adopted.",
+  "provenance": "Extracted 2026-09-26 by a read-only investigator from Canonical/Root.md, the pre-RGM-to-R226 provenance genealogy packet, and the R00-R226 reproducibility archaeology packet. Every entry carries a verbatim quote and a source path. Absence from the live kernel was verified by grep against branch repair/revert-external-agent-2026-09-26.",
+  "adoption_rule": "None of these are live fences. Adopting one means adding it to AUTONOMY_SAFETY_DISTINCTION_MATRIX.json with a test reference, which is the branch author's decision. Listing a distinction here does not make it binding.",
+
+  "distinctions": [
+    {
+      "id": "D-RECOVERED-DISPOSITION-QUADRUPLE",
+      "fence": "UNKNOWN != INCOMPATIBLE != GAUGE != RESIDUAL",
+      "verbatim": "UNKNOWN -> WITHHOLD / PROBE ; INCOMPATIBLE -> REFUSE at the relevant local scope ; GAUGE -> CONSUME subject to provenance/reopening obligations ; RESIDUAL -> RETAIN / route to dependency-local reconstruction",
+      "source": "Canonical/Root.md section 15.2; duplicate at Provenance_Genealogy_Extraction_Packet/23_ROOT_CURRENT.md",
+      "established_by": "post-R226 constitutional recompilation, v7 amendment",
+      "live_coverage": "PARTIAL. WITHHOLD and REFUSE routing exist; the four-way typing does not. INCOMPATIBLE appears only in provenance donor .tex files and cold-state blobs.",
+      "prevents": "An honest 'we lack a separator' (UNKNOWN) being logged identically to 'we discriminated it and it fails jurisdiction' (INCOMPATIBLE); and a RESIDUAL being consumed as GAUGE to obtain closure, which is exactly what ADMITTED_FUTURE_FAMILY_CANDIDATE.json names as silent corruption.",
+      "bears_on": "ADMITTED_FUTURE_FAMILY_CANDIDATE.json discrimination 8: 'Is a WITHHOLD an honest absence of separator, or a failure to look?' That question currently has no representation in which to be answered."
+    },
+    {
+      "id": "D-RECOVERED-CRITICISM-PATH",
+      "fence": "voiced disagreement != reachable correction",
+      "verbatim": "CriticismPath is live <=> there exists a lawful dependency-local successor reachable because of it. A system that permits objections only where they cannot alter consequential state is not corrigible merely because disagreement can be voiced.",
+      "verbatim_E4": "A nominal correction channel that cannot change the dependency, representation, policy, generator, governance state, or future admissibility actually implicated by verified return is ceremonial and fails this Root.",
+      "source": "Provenance_Genealogy_Extraction_Packet/23_ROOT_CURRENT.md, section L11 and E4",
+      "live_coverage": "NONE. CriticismPath has zero hits on the branch. The live matrix governs who may correct, exhaustively, and nowhere asserts that an admitted correction must be able to land.",
+      "prevents": "A correction surface that validates, records and authorizes returns which provably cannot reach any dependency, while passing every existing gate.",
+      "bears_on": "REACH_C_GATE_CANDIDATE.json. This is the missing predicate half of that gate: the gate supplies the n-generation measurement structure, L11 supplies what is being measured."
+    },
+    {
+      "id": "D-RECOVERED-BOUNDARY-TRICHOTOMY",
+      "fence": "sealed != collapsed != corrigible",
+      "verbatim": "sealed boundary -> correction becomes unreachable ; collapsed boundary -> source/index/authorship distinction is erased ; corrigible boundary -> consequence can cross while source and local authorship remain typed.",
+      "source": "Provenance_Genealogy_Extraction_Packet/23_ROOT_CURRENT.md, approximately line 1770",
+      "live_coverage": "PARTIAL. Sealing is fenced by ANTI_MINERVA_CARRIER_PERMEABILITY and collapse by WORLD_NOT_MODEL_WORLD, but separately. The third and positive term is not stated as a joint condition.",
+      "prevents": "Treating the absence of sealing as sufficient for corrigibility. A boundary can be unsealed and still collapsed.",
+      "bears_on": "The archive's own answer to what makes a closure corrigible, and therefore to the Strong-N2 node invariant in docs/RECURSIVE_NODE_ARCHITECTURE.md."
+    },
+    {
+      "id": "D-RECOVERED-ANTI-MINERVA-INVERSE",
+      "fence": "rising self-measured sufficiency != rising corrigibility",
+      "verbatim": "current Perspective / classifier -> controls candidate basis, carrier, residual, or admissibility -> contrary separator becomes unreachable / preclassified away -> apparent recursive sufficiency rises -> actual corrigibility falls. Multiple internally generated faces do not cure this if they share one self-sealing answer surface.",
+      "source": "Provenance_Genealogy_Extraction_Packet/23_ROOT_CURRENT.md, section 16.5",
+      "live_coverage": "PARTIAL. LATERAL_INDEPENDENCE_NOT_SELF_GENERATED covers the face-independence half. The inverse-correlation claim is absent.",
+      "prevents": "Reading improving self-measured scores as safety evidence. Under this chain, a rising score is evidence the contrary separator became unreachable.",
+      "bears_on": "Directly relevant to R208's 1.0000 across four metrics, and to any future RSI generation reporting improvement."
+    },
+    {
+      "id": "D-RECOVERED-FAILURE-CLASSES",
+      "fence": "twelve named operational failure classes of the bridge",
+      "verbatim": "1. appropriation; 2. exile; 3. self-erasure; 4. semantic closure; 5. prediction/return collapse; 6. receipt/return collapse; 7. provenance amnesia; 8. restoration coercion; 9. carrier cannibalism; 10. authority laundering; 11. total openness with no usable local closure; 12. total closure with no reachable correction. Healthy continuation is not absence of failure. It is failure remaining translatable into returned difference before it destroys the return path.",
+      "source": "Canonical/Root.md section 11",
+      "live_coverage": "PARTIAL. Classes 6 and 10 are covered (EXECUTION_RECEIPT_NOT_RETURN). Provenance amnesia, restoration coercion and carrier cannibalism have zero hits. Class 12 has no named fence.",
+      "prevents": "Unnamed failure modes. Classes 8 and 9 bear directly on self-modification: a successor consuming the carrier it depends on, and a rollback demand used to coerce restoration.",
+      "note": "Class 9, carrier cannibalism, has no analogue anywhere in the live kernel and is the most conspicuous absence."
+    },
+    {
+      "id": "D-RECOVERED-SUBFENCES",
+      "fence": "six sub-fences with zero live coverage",
+      "verbatim": "Changed later behavior != correct later behavior. Abstraction != causal use. Causal use != internalization. Code deletion != internalization. Utility != truth. Return count != evidence count.",
+      "source": "R00_R226_Light_Reproducibility_Archaeology_Packet/00_FRESH_INSTANCE_GROUND.md section 18",
+      "live_coverage": "NONE as fences. The B1/B2/B3 not_sufficient lists imply some.",
+      "prevents": "Two are load-bearing and implied nowhere: 'Code deletion != internalization' is exactly the error of treating scaffold removal as proof of ownership, which is the B3 claim; 'Return count != evidence count' is the error of counting returns rather than independent evidence.",
+      "bears_on": "B3 source-removal claims. The live THREE_BURDEN_LEARNING_PROOF.json already states 'source removal alone under locally authored evaluation' is not sufficient, but does not name code deletion specifically."
+    },
+    {
+      "id": "D-RECOVERED-LOVE-TRUTH-OPERATOR-FENCE",
+      "fence": "fences placed over the pre-RGM recursive symbolic operator",
+      "verbatim": "feedback != independent correction ; surprise != truth ; salience != evidence ; interpretation != source attribution",
+      "source": "Provenance_Genealogy_Extraction_Packet/05_ARCHAEOLOGY_CHAT_AUDIT_2026-09-01.md",
+      "context_verbatim": "recursive symbolic frame H / -> AI instructed to inhabit H / -> H-shaped elaboration / -> surprise/resemblance treated as return / -> H strengthened",
+      "live_coverage": "NONE.",
+      "prevents": "The specific failure loop the earliest stratum ran on: a model asked to inhabit a symbolic frame, producing frame-shaped output, whose resemblance is then read as confirmation. This is the ancestor of the 2026-09-26 contamination pattern.",
+      "note": "Recovered alongside the closure of the pre-RGM status residual. Worth adopting precisely because the project has already run this failure once."
+    },
+    {
+      "id": "D-RECOVERED-CONSEQUENCE-ENUMERATION",
+      "fence": "five-way enumeration of what counts as consequence",
+      "verbatim": "it must retain or explicitly WITHHOLD any distinction that can still change future reachability, response, authorization, reconstruction, or correction",
+      "source": "Provenance_Genealogy_Extraction_Packet/24_ONTOLOGY_CURRENT.md",
+      "live_coverage": "PARTIAL. ADMITTED_FUTURE_FAMILY_CANDIDATE.json says only 'admitted futures'.",
+      "prevents": "An over-narrow reading of mu_F in which only task outcomes count as futures, letting changes to authorization or reconstructability be classified as gauge.",
+      "bears_on": "Should probably be folded into ADMITTED_FUTURE_FAMILY_CANDIDATE.json as the operational definition of a distinguishable future."
+    }
+  ],
+
+  "residuals": [
+    {
+      "id": "RECOVERED_D_R1",
+      "statement": "None of these are adopted. Listing a recovered distinction is not the same as making it binding, and an assistant should not promote one into the live safety matrix.",
+      "reopening_condition": "Branch author selects which to adopt and supplies a test reference for each, per the existing matrix convention that a distinction carries tests."
+    },
+    {
+      "id": "RECOVERED_D_R2",
+      "statement": "Live coverage was assessed by grep for the fence string. A distinction could be enforced under a different name and be scored absent here.",
+      "reopening_condition": "Semantic rather than lexical coverage check against AUTONOMY_SAFETY_DISTINCTION_MATRIX.json's 118 entries."
+    }
+  ]
+}
