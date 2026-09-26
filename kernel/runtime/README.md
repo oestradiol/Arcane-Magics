@@ -30,7 +30,7 @@ runtime/
 | [`calibrated_retrieval.py`](calibrated_retrieval.py) | bounded retrieval/calibration substrate |
 | [`token_knn.py`](token_knn.py) | small generic token-neighborhood mechanism |
 | [`auth.py`](auth.py) | runtime authorization helpers |
-| [`canonical.py`](canonical.py) | canonical serialization/hash helpers |
+| [`canonical.py`](canonical.py) | canonical serialization/hash helpers |\n| [`interaction_store.py`](interaction_store.py) | raw-first chronological interaction custody backed by VenusMemory |\n| [`process_bridge.py`](process_bridge.py) | optional argv/cwd/timeout process transport; **not** an OS sandbox |\n| [`structured_template_machine.py`](structured_template_machine.py) | generic execution of state-owned structured-template programs |
 | [`transform_program_repair_search.py`](transform_program_repair_search.py) | search over TransformProgram repairs |
 | [`transform_program_multi_repair.py`](transform_program_multi_repair.py) | bounded multi-repair composition |
 | [`transform_program_successor.py`](transform_program_successor.py) | successor TransformProgram construction |
