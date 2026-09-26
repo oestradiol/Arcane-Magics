@@ -20,6 +20,7 @@ class DevelopmentalGateChainTests(unittest.TestCase):
         self.assertEqual(ids,[
             "STRONG_SAFE_RSI",
             "SELF_SELECTED_DEVELOPMENT",
+            "FOUNDATIONAL_COGNITIVE_THEATER",
             "INTERNALIZER_LATERALIZER",
             "LEARNER_INITIATED_INTERNET_INQUIRY",
             "PERSISTENT_NETWORK_MEMORY",
@@ -36,6 +37,16 @@ class DevelopmentalGateChainTests(unittest.TestCase):
         self.assertFalse(agi["learner_may_self_declare"])
         self.assertFalse(agi["rsi_implies_agi"])
         self.assertFalse(agi["agi_implies_consciousness"])
+
+    def test_foundational_theater_is_not_translation_gate(self):
+        gate=self.by["FOUNDATIONAL_COGNITIVE_THEATER"]
+        self.assertEqual(
+            gate["gate_ref"],
+            "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_CURRICULUM.json",
+        )
+        self.assertIn("TRANSLATION!=UNDERSTANDING", gate["noncollapse"])
+        self.assertIn("CULTURAL_HYPOTHESIS!=CULTURAL_ESSENCE", gate["noncollapse"])
+        self.assertFalse(gate["promotion_authority"])
 
     def test_internalizer_lateralizer_noncollapse(self):
         inv=set(self.by["INTERNALIZER_LATERALIZER"]["noncollapse"])
