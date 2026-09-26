@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.VMInternalizationPhasePlan.v0.3",
+  "schema": "Venus.VMInternalizationPhasePlan.v0.4",
   "date": "2026-09-26",
   "status": "PREFROZEN_PHASE_PLAN_NOT_INTERNALIZATION_RESULT",
   "objective": "Shrink WorldMirror's capability-specific semantic Python by moving earned consequence-bearing policies into learner-owned state, while retaining or replacing generic execution substrate and preserving external correction/authority relations.",
@@ -236,6 +236,17 @@
       "leave_one_face_out_accuracy": 0.3125,
       "status": "FAIL_SURFACE_ONLY_CROSS_FACE_INVARIANCE",
       "next_residual": "LEARN_RELATIONAL_THEATER_STATE_BEYOND_SURFACE_SIMILARITY"
+    },
+    "cognitive_theater": {
+      "factor_model_ref": "kernel/development/COGNITIVE_THEATER_FACTOR_MODEL.json",
+      "grounded_template_accuracy": 1,
+      "initial_binding_order_accuracy": 0.625,
+      "fresh2_ordered_accuracy": 0.8125,
+      "fresh2_commutative_accuracy": 0,
+      "fresh2_G2_indexed_kfs_accuracy": 0.625,
+      "fresh2_G3_symbolic_order_accuracy": 1,
+      "status": "FOUNDATIONAL_GATE_PARTIAL_G3_BOUND_PASS_G2_OPEN",
+      "next_residual": "LEARN_PAIRWISE_RELATIONAL_THEATER_GRAPH_FOR_INDEXED_KFS_THEN_COMPOSE_WITH_G3_ORDER"
     }
   },
   "promotion_authority": false,
@@ -243,7 +254,7 @@
   "foundational_semantic_prerequisite": {
     "ref": "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_CURRICULUM.json",
     "issue_ref": 206,
-    "rule": "Before deeper capability-specific semantic Python is consumed, establish bounded learner-owned competence across the foundational English/Japanese/Brazilian-Portuguese/Mathematics cognitive-theater curriculum or explicitly WITHHOLD the blocked targets.",
+    "rule": "Before deeper capability-specific semantic Python is consumed, the foundational gate must at minimum close indexed participant/KFS reconstruction, compose it with returned symbolic temporal-order competence across faces, and then survive source removal; current G3 order success alone does not release P2.",
     "reason": "The learner must demonstrate that semantic relations survive substantially different representational theaters before using one-language/project-shaped competence as evidence for broader semantic internalization.",
     "prerequisite_not_truth_authority": true,
     "factor_model_ref": "kernel/development/COGNITIVE_THEATER_FACTOR_MODEL.json",
