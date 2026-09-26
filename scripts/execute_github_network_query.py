@@ -244,6 +244,7 @@ def execute(query: dict[str, Any], *, max_sources: int = 6) -> dict[str, Any]:
         "LEARNER_DERIVED_FROM_FORMED_PROBLEM",
         "LEARNER_DERIVED_FROM_SELECTED_STUDY",
         "LEARNER_DERIVED_FROM_NETWORK_RECONSTRUCTION",
+        "LEARNER_DERIVED_FROM_STATE_OWNED_RELATION_TRACE",
     }:
         raise GitHubNetworkAdapterError("query must be learner-derived")
     if query.get("execution_owner") != "EXTERNAL_ADAPTER":
