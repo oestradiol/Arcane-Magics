@@ -241,12 +241,15 @@ jobs:
           git commit -m "handoff(minerva->venus): crystallize engineering candidate ${GITHUB_RUN_ID}"
           git push origin "$branch"
 
-          pr_body="Target-based crystallization handoff. The merge commit preserves Minerva as a second parent while retaining the Venus tree. Only explicit proposal receipts are admitted. Venus must integrate the candidate into the Self/World model. Scientific future discrimination belongs to the subsequent Venus → OFE handoff; Root integration comes only after OFE."
+          target_kind="$(python -c 'import json; print(str(json.load(open("/tmp/minerva/CYCLE.json"))["target_kind"]).lower())')"
+          target_number="$(python -c 'import json; print(int(json.load(open("/tmp/minerva/CYCLE.json"))["target_number"]))')"
+          cycle_title="venus: autonomous cycle ${target_kind}-${target_number}"
+          pr_body="Target-based crystallization handoff. The merge commit preserves Minerva as a second parent while retaining the Venus tree. Only explicit proposal receipts are admitted. This PR is also the canonical external-review carrier for the selected autonomous cycle, so open state blocks reroll and authorized review markers may update later learning. Venus must integrate the candidate into the Self/World model. Scientific future discrimination belongs to the subsequent Venus → OFE handoff; Root integration comes only after OFE."
           if ! gh pr create --draft --base split/venus --head "$branch" \
-            --title "handoff: Minerva → Venus engineering candidate ${GITHUB_RUN_ID}" \
+            --title "$cycle_title" \
             --body "$pr_body"; then
-            echo "PR creation is unavailable; preserve handoff as an issue carrier"
+            echo "PR creation is unavailable; preserve handoff as the canonical cycle issue carrier"
             gh issue create \
-              --title "handoff carrier: Minerva → Venus engineering candidate ${GITHUB_RUN_ID}" \
-              --body "Frozen handoff branch: \`$branch\`. GitHub Actions could not create the draft PR. This issue is a non-authoritative external-review carrier only; it grants no merge, promotion, truth, or Venus-admission authority."
+              --title "$cycle_title" \
+              --body "Frozen handoff branch: \`$branch\`. GitHub Actions could not create the draft PR. This issue is the canonical non-authoritative external-review carrier for the selected cycle; open state blocks reroll. It grants no merge, promotion, truth, or Venus-admission authority."
           fi
