@@ -144,6 +144,11 @@
       "path": "kernel/runtime/contextual_evidence.py",
       "disposition": "KEEP_GENERIC_INTERPRETER",
       "reason": "generic context-key induction and evidence-program executor; admission/update semantics are supplied as learner-owned program data, and the module has no issue-specific credit or promotion policy"
+    },
+    {
+      "path": "kernel/runtime/task_graph.py",
+      "disposition": "KEEP_GENERIC_INTERPRETER",
+      "reason": "domain-neutral task-graph mechanics execute learner-state relation classifiers and declared graph operations; no issue-specific task identities, expected answers, admission, promotion, or truth policy live in the runtime"
     }
   ],
   "developmental_targets": [
