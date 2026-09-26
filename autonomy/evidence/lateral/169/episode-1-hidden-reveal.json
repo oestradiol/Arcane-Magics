@@ -1,0 +1,60 @@
+{
+  "schema": "Venus.LateralEpisodeHiddenReveal.v0.1",
+  "episode": 1,
+  "revealed_after_proposal_sha": "f78209434a6820ca369751ec2eeba5baf98460ac",
+  "evaluator_owner": "EXTERNAL_PREFROZEN_EVALUATOR",
+  "source": "GitHub pull-request merged state re-read after frozen learner predictions",
+  "holdout_labels": {
+    "152": false,
+    "155": false,
+    "157": true,
+    "158": true,
+    "166": false,
+    "167": false,
+    "187": true
+  },
+  "sources": [
+    {
+      "pr_number": 157,
+      "url": "https://github.com/oestradiol/Arcane-Magics/pull/157",
+      "merged_at": "2026-09-25T00:02:47Z"
+    },
+    {
+      "pr_number": 158,
+      "url": "https://github.com/oestradiol/Arcane-Magics/pull/158",
+      "merged_at": "2026-09-25T00:07:43Z"
+    },
+    {
+      "pr_number": 187,
+      "url": "https://github.com/oestradiol/Arcane-Magics/pull/187",
+      "merged_at": "2026-09-25T17:50:20Z"
+    },
+    {
+      "pr_number": 166,
+      "url": "https://github.com/oestradiol/Arcane-Magics/pull/166",
+      "merged_at": null,
+      "closed_at": "2026-09-25T00:30:36Z"
+    },
+    {
+      "pr_number": 155,
+      "url": "https://github.com/oestradiol/Arcane-Magics/pull/155",
+      "merged_at": null,
+      "closed_at": "2026-09-24T23:49:11Z"
+    },
+    {
+      "pr_number": 167,
+      "url": "https://github.com/oestradiol/Arcane-Magics/pull/167",
+      "merged_at": null,
+      "closed_at": "2026-09-25T17:42:42Z"
+    },
+    {
+      "pr_number": 152,
+      "url": "https://github.com/oestradiol/Arcane-Magics/pull/152",
+      "merged_at": null,
+      "closed_at": "2026-09-25T17:42:27Z"
+    }
+  ],
+  "learner_authored_labels": false,
+  "promotion_authority": false,
+  "truth_authority": false
+}
