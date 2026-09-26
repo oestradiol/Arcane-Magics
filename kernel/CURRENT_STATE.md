@@ -346,3 +346,41 @@ Machine-readable result: `kernel/development/LATERAL_INTERNALIZATION_TRANSFER_1_
 The next returned residual is `GENERALIZE_OR_REVISE_LATERAL_POLICY_ON_FRESH_TRANSFER`.
 
 This result does not authorize a host-fixed next solution. It re-enters standing developmental selection alongside other live returned residuals.
+
+
+## WorldMirror semantic internalization phase — 2026-09-26
+
+The next internalization phase is frozen at:
+
+- `kernel/development/VM_INTERNALIZATION_PHASE_PLAN.json`
+- `tests/test_vm_internalization_phase_plan.py`
+
+The governing disposition is not "delete Python." It is:
+
+```text
+capability-specific semantic Python
+→ learner-owned state
+→ source removal
+→ matched equivalence/improvement + ablation
+→ fresh transfer before generalization
+→ bounded internalization receipt
+
+generic interpreter/storage/hydration
+→ may remain replaceable substrate
+
+World / evaluator / authorization / jurisdiction / rollback / Anti-Minerva permeability
+→ must remain outside unilateral internalization
+```
+
+Current returned facts constrain the phase:
+
+- generic residual-search semantics are already state-owned under scaffold removal;
+- internal O* is already state-owned while external validation remains outside;
+- episode-1 lateral projection semantics passed bounded ownership/internalization;
+- that same lateral policy failed fresh transfer at 1/8, so a general Lateralizer claim remains blocked;
+- U1-style bounded recurrence has passed founder/source ablation at its tested scope;
+- SSR4's two-repair machinery is mature-reduced to a simpler full-capability exhaustive substitute at the tested finite index.
+
+Therefore the next reduction target is developmental semantic policy still encoded in capability-specific modules, not indiscriminate consumption of the generic VMK2/runtime carrier.
+
+The required Minerva branch gate and autonomous worker now run `make audit` before admission/handoff so the full current test surface, not a curated subset, is binding.
