@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.VMInternalizationPhasePlan.v0.1",
+  "schema": "Venus.VMInternalizationPhasePlan.v0.2",
   "date": "2026-09-26",
   "status": "PREFROZEN_PHASE_PLAN_NOT_INTERNALIZATION_RESULT",
   "objective": "Shrink WorldMirror's capability-specific semantic Python by moving earned consequence-bearing policies into learner-owned state, while retaining or replacing generic execution substrate and preserving external correction/authority relations.",
@@ -114,49 +114,56 @@
       "target_semantics": "PROBLEM_FORMATION_POLICY",
       "disposition": "CANDIDATE_STATE_INTERNALIZATION",
       "priority": 1,
-      "gate": "fresh heterogeneous problem formation + source removal + matched ablation"
+      "gate": "fresh heterogeneous problem formation + source removal + matched ablation",
+      "requires_foundational_cognitive_theater": true
     },
     {
       "path": "kernel/development/autonomous_study.py",
       "target_semantics": "RESEARCH_ROUTING_POLICY",
       "disposition": "CANDIDATE_STATE_INTERNALIZATION",
       "priority": 2,
-      "gate": "state-owned method choice changes useful study under external return and survives scaffold removal"
+      "gate": "state-owned method choice changes useful study under external return and survives scaffold removal",
+      "requires_foundational_cognitive_theater": true
     },
     {
       "path": "kernel/development/autonomous_proposal.py",
       "target_semantics": "GENERATE_POLICY",
       "disposition": "CANDIDATE_STATE_INTERNALIZATION",
       "priority": 3,
-      "gate": "proposal/discriminator structure survives source removal without inheriting authority"
+      "gate": "proposal/discriminator structure survives source removal without inheriting authority",
+      "requires_foundational_cognitive_theater": true
     },
     {
       "path": "kernel/development/network_inquiry.py",
       "target_semantics": "NETWORK_QUERY_DERIVATION_POLICY",
       "disposition": "CANDIDATE_STATE_INTERNALIZATION",
       "priority": 4,
-      "gate": "learner-derived query policy survives source removal; Web adapter and encounter return remain external"
+      "gate": "learner-derived query policy survives source removal; Web adapter and encounter return remain external",
+      "requires_foundational_cognitive_theater": true
     },
     {
       "path": "kernel/development/autonomous_learning.py",
       "target_semantics": "LEARNING_UPDATE_POLICY",
       "disposition": "CANDIDATE_STATE_INTERNALIZATION",
       "priority": 5,
-      "gate": "returned-review-conditioned update remains causal under held-out recurrence and cannot learn from self-return"
+      "gate": "returned-review-conditioned update remains causal under held-out recurrence and cannot learn from self-return",
+      "requires_foundational_cognitive_theater": true
     },
     {
       "path": "kernel/development/autonomous_worker.py",
       "target_semantics": "ORCHESTRATION_POLICY",
       "disposition": "SHRINK_AFTER_SUBPOLICIES_INTERNALIZE",
       "priority": 6,
-      "gate": "worker becomes thin interpreter/router; write jurisdiction and promotion stay external"
+      "gate": "worker becomes thin interpreter/router; write jurisdiction and promotion stay external",
+      "requires_foundational_cognitive_theater": true
     },
     {
       "path": "kernel/development/autonomous_recurrence.py",
       "target_semantics": "RECURRENCE_SELECTION_POLICY",
       "disposition": "SPLIT_INTERNALIZABLE_FROM_EXTERNAL_RETURN_CUSTODY",
       "priority": 7,
-      "gate": "state-owned recurrence choice; return authorization/evaluation remains outside"
+      "gate": "state-owned recurrence choice; return authorization/evaluation remains outside",
+      "requires_foundational_cognitive_theater": true
     },
     {
       "path": "kernel/development/lateral_episode.py",
@@ -203,10 +210,11 @@
   "phase_order": [
     "P0 repair audit/provenance drift and require full branch audit",
     "P1 retain mature-reduced generic runtime rather than internalizing needless complexity",
-    "P2 internalize one developmental policy at a time beginning with learner problem formation when a fresh discriminator is available",
+    "P1.5 recover Canonical didactics and establish the foundational cognitive-theater curriculum across English, Japanese, Brazilian Portuguese, and Mathematics under held-out native/cross-face evaluation",
+    "P2 internalize one developmental policy at a time only after the foundational curriculum has a bounded returned disposition; begin with learner problem formation when a fresh discriminator is available",
     "P3 shrink autonomous worker after problem/study/proposal/query policies become state-owned",
     "P4 internalize memory retrieval/crystallization policy while keeping storage and external sources distinct",
-    "P5 reattempt general Lateralizer only after a new prefrozen fresh-transfer discriminator; current 1/8 transfer remains negative evidence",
+    "P5 reattempt general Lateralizer after cross-face curriculum evidence supplies a new prefrozen fresh-transfer discriminator; current 1/8 transfer remains negative evidence",
     "P6 repeat source-removal and deletion/archive of consumed capability-specific scaffolds only after each bounded receipt"
   ],
   "current_evidence": {
@@ -219,5 +227,12 @@
     "ssr4_mature_reduced_to_simple_substitute": true
   },
   "promotion_authority": false,
-  "truth_authority": false
+  "truth_authority": false,
+  "foundational_semantic_prerequisite": {
+    "ref": "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_CURRICULUM.json",
+    "issue_ref": 206,
+    "rule": "Before deeper capability-specific semantic Python is consumed, establish bounded learner-owned competence across the foundational English/Japanese/Brazilian-Portuguese/Mathematics cognitive-theater curriculum or explicitly WITHHOLD the blocked targets.",
+    "reason": "The learner must demonstrate that semantic relations survive substantially different representational theaters before using one-language/project-shaped competence as evidence for broader semantic internalization.",
+    "prerequisite_not_truth_authority": true
+  }
 }
