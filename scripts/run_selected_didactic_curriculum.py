@@ -25,6 +25,40 @@ def selected_prefreeze_paths(cycle: Mapping[str, Any]) -> frozenset[str]:
     return frozenset(str(x) for x in study.get("referenced_repository_paths", ()))
 
 
+def resolve_selected_curricula(
+    cycle: Mapping[str, Any],
+    catalog: Mapping[str, Any],
+) -> dict[str, Any]:
+    referenced = selected_prefreeze_paths(cycle)
+    rows = [
+        row for row in catalog.get("curricula", ())
+        if str(row.get("prefreeze_path")) in referenced
+    ]
+    if len(rows) > 1:
+        return {
+            "status": "WITHHOLD_MULTIPLE_SELECTED_CURRICULA",
+            "referenced": referenced,
+            "rows": (),
+        }
+    if rows:
+        return {"status": "READY", "referenced": referenced, "rows": tuple(rows)}
+    unresolved = frozenset(
+        path for path in referenced if path.endswith("_PREFREEZE.json")
+    )
+    if unresolved:
+        return {
+            "status": "WITHHOLD_SELECTED_PREFREEZE_HAS_NO_EXECUTOR",
+            "referenced": referenced,
+            "unresolved_prefreezes": unresolved,
+            "rows": (),
+        }
+    return {
+        "status": "NO_SELECTED_EXECUTABLE_CURRICULUM",
+        "referenced": referenced,
+        "rows": (),
+    }
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--cycle", required=True)
@@ -62,24 +96,21 @@ def main() -> int:
         envelope_path.write_text(json.dumps(envelope, indent=2, sort_keys=True) + "\n")
         return 0
 
-    referenced = selected_prefreeze_paths(cycle)
-    rows = [
-        row for row in catalog.get("curricula", ())
-        if str(row.get("prefreeze_path")) in referenced
-    ]
-    if not rows:
+    route = resolve_selected_curricula(cycle, catalog)
+    referenced = route["referenced"]
+    rows = route["rows"]
+    if route["status"] != "READY":
         envelope = {
             "schema": "Venus.DidacticCurriculumExecutionEnvelope.v0.1",
-            "status": "NO_SELECTED_EXECUTABLE_CURRICULUM",
+            "status": route["status"],
             "executed": False,
             "selected_referenced_paths": sorted(referenced),
+            "unresolved_prefreezes": sorted(route.get("unresolved_prefreezes", ())),
             "promotion_authority": False,
             "truth_authority": False,
         }
         envelope_path.write_text(json.dumps(envelope, indent=2, sort_keys=True) + "\n")
         return 0
-    if len(rows) != 1:
-        raise DidacticExecutionError("selected study references multiple executable curricula")
 
     row = rows[0]
     module_name = str(row["module"])
