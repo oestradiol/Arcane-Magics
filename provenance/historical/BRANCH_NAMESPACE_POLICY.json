@@ -20,14 +20,20 @@
   ],
   "historical_namespace_target": "historical/<original-ref>",
   "migration_semantics": "Rename/move stale and superseded refs under historical/ when branch-ref deletion/rename capability is available. Do not create duplicate historical aliases while leaving legacy refs in place, because that increases noise.",
-  "deprecated_live_names": [
-    "split/venus-minerva"
-  ],
+  "deprecated_live_names": [],
   "default_disposition": "HISTORICAL_NONROUTING",
   "invariants": [
     "branch existence != current authority",
     "ancestry != warrant",
     "historical evidence remains reachable",
-    "open issue-bound carrier != live authority"
+    "open issue-bound carrier != live authority",
+    "deleted historical branch name != extant carrier"
+  ],
+  "historical_name_notes": [
+    {
+      "name": "split/venus-minerva",
+      "status": "DELETED_REF_HISTORICAL_NAME_ONLY",
+      "note": "The branch ref no longer exists. Preserve the name only when interpreting historical commits/issues/provenance."
+    }
   ]
 }
