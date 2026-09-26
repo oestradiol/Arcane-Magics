@@ -862,6 +862,274 @@
       "status": "PLANNED",
       "credit_genealogy_note": "participant-origin symbolic compression; neutral causal extraction admitted",
       "reopening_condition": "causal-provenance witness in a real developmental episode"
+    },
+    {
+      "id": "D-R195-INTEGRATION-NOT-EXTERNALITY",
+      "source_revision_or_branch": "R195",
+      "source_artifact": "R195_PYTHON_SUCCESSOR_CARRIER_RECONCILIATION_2026-09-21.md; R195_FAMILY__R194_PYTHON_PROTOTYPE_CONSERVATION_RECEIPT.json; R195_FAMILY__R194_CAUSAL_OBLIGATION_REGISTRY.json; R195_FAMILY__PYTHON_R194_SUCCESSOR_SHA256.txt; R195_FAMILY__PYTHON_R194_FULL_REGRESSION_STDOUT.txt",
+      "distinction": "integrated executable successor carrier != external replication / outside handoff",
+      "triggering_experiment_or_failure": "stale R195 carrier-gap audit corrected by the landed PythonPrototypeR194 integration (194/194 obligations, VMK-1 8/8, VMK-2 12/12, suite 287/287, R127 M7 recheck PASS, R128 U11/U12 replay PASS)",
+      "causal_consequence": "a real re-materialized carrier closes the carrier gap only; R194 outside execution/replication stays OPEN and cannot be minted by integration",
+      "later_dependents": [
+        "R196",
+        "R197"
+      ],
+      "current_owner": "provenance/historical-runtime/R194/source/R194_PYTHON_PROTOTYPE_CONSERVATION_RECEIPT.json",
+      "test_layer": "T1/T6",
+      "test_id_path": null,
+      "status": "HISTORICAL_EVIDENCE_NO_CURRENT_REGRESSION",
+      "credit_genealogy_note": "R195 is a reconciliation/integration revision over the PythonPrototypeR194 carrier; no standalone R195 result family exists.",
+      "reopening_condition": "independent outside execution of the frozen R194 packet, or a new carrier integration claiming externality",
+      "caveat": "No R195_RESULT.json or R195_PREFREEZE.md exists; the row is bound to the reconciliation plus the R194 receipt/registry/checksum/regression family, per the source packet README."
+    },
+    {
+      "id": "D-R196-PRIVATE-HANDOFF-NOT-EXTERNAL",
+      "source_revision_or_branch": "R196",
+      "source_artifact": "R196_RECURRENCE_M7_HANDOFF_RESULT_2026-09-21.md; R196_DEVELOPMENTAL_ACQUISITION_RESULT_2026-09-21.md",
+      "distinction": "restartable private successor handoff != outside handoff; bounded M7 WITHHOLD != M7 failure",
+      "triggering_experiment_or_failure": "12/12 restart-exact recurrence cycles with private handoff PASS while the bounded M7 intervention attempt terminated in WITHHOLD",
+      "causal_consequence": "exact journal/state reconstruction across process restart is earned locally; M7 WITHHOLD remains a lawful terminal result and externality stays OPEN",
+      "later_dependents": [
+        "R197",
+        "R198"
+      ],
+      "current_owner": "provenance/DEVELOPMENTAL_LINEAGE.md",
+      "test_layer": "T1/T6",
+      "test_id_path": null,
+      "status": "HISTORICAL_EVIDENCE_NO_CURRENT_REGRESSION",
+      "credit_genealogy_note": "bounded engineering PASS; the first attempted shortcut through the R134 language layer is preserved as a negative result",
+      "reopening_condition": "a handoff to a party outside the producing process, or a fresh M7 attempt with new evidence"
+    },
+    {
+      "id": "D-R197-CARRIER-SOURCE-NOT-CONSEQUENCE",
+      "source_revision_or_branch": "R197",
+      "source_artifact": "R197_CARRIER_SUBSTITUTION_PREFREEZE.md; R197_RUST_CARRIER_SUBSTITUTION_PREFREEZE_2026-09-21.sha256",
+      "distinction": "materialized substitute-carrier source != executed carrier-equivalent consequence; 'same source code' != 'same consequence behavior'",
+      "triggering_experiment_or_failure": "Rust carrier source materialized against twelve frozen obligations, but the execution container had no rustc/cargo/nix, so compilation never ran",
+      "causal_consequence": "consequence-level (non-Python-specific) developmental identity remains unproven; the substitution vector's required final consequences are frozen but unreturned",
+      "later_dependents": [
+        "R199 ready queue entry R197-A BLOCKED_RESOURCE_HERE",
+        "R204 synthetic rustc/nix perturbation arm"
+      ],
+      "current_owner": "external payload custody: Canonical_R00_R226_Light_Reproducibility_Archaeology_Packet/21_EXPERIMENT__R197RustCarrierSubstitution__*",
+      "test_layer": "T1/T6",
+      "test_id_path": null,
+      "status": "PRESERVED_NEGATIVE_CARRIER_GAP",
+      "credit_genealogy_note": "prefreeze only; no result artifact exists and none may be inferred from source materialization",
+      "reopening_condition": "compile and run the frozen substitution vector on a toolchain-bearing host and compare the frozen consequence partition"
+    },
+    {
+      "id": "D-R198-INTERNALIZATION-NOT-WORLD",
+      "source_revision_or_branch": "R198",
+      "source_artifact": "R198_FINAL_HANDOFF_REPLAY_RESULT.json; R198_SUCCESSOR_PROVISIONING_RESULT.json; FULL_DEVELOPMENTAL_DAG_POST_R226_RECOMPILE.json",
+      "distinction": "internalized scaffold function != internalized World; self-model-specific causal privilege != neutral system identification",
+      "triggering_experiment_or_failure": "G1 55/55, G2 40/40, G3 50/50 with scaffold ablation PASS 7/8; the H08 arm's internalized compression omitted the explicit World-remains-external clause",
+      "causal_consequence": "scaffold may be detached and the successor restart exactly while external return stays separately sourced; self-model privilege is mature-reduced to neutral system-ID",
+      "later_dependents": [
+        "R199",
+        "R200",
+        "R207",
+        "R208"
+      ],
+      "current_owner": "provenance/DEVELOPMENTAL_LINEAGE.md",
+      "test_layer": "T2/T5",
+      "test_id_path": null,
+      "status": "HISTORICAL_EVIDENCE_MATURE_REDUCED",
+      "credit_genealogy_note": "bounded internalization PASS with a preserved ablation residual; the H08 residual is the stated trigger for R207",
+      "reopening_condition": "a scaffold/source ablation in which the omitted clause changes consequence, or an outside transfer test",
+      "caveat": "R198_INDEPENDENT_AUDIT.json carries 27 passing checks but names no auditor, execution principal, custody, or authorship separation, and its stdout is byte-identical to the JSON it generated. The name 'IndependentAudit' is stronger than the custody evidence; only 'a verification program ran and its encoded checks returned true' is established."
+    },
+    {
+      "id": "D-R199-PERSISTED-SCHEDULE-NOT-CAPABILITY",
+      "source_revision_or_branch": "R199",
+      "source_artifact": "R199_RSM0_RESULT_2026-09-22.md; R199_RSM1_RESULT_2026-09-22.md",
+      "distinction": "locally resource-blocked task != externally-returned-blocked task != no ready local work",
+      "triggering_experiment_or_failure": "RSM-0 typed the ready queue and scoped R197-A/Nix as BLOCKED_RESOURCE_HERE against R194/R70 as BLOCKED_EXTERNAL_RETURN; RSM-1 recomputed readiness from its own persisted state",
+      "causal_consequence": "blocker class must stay typed: missing local resource does not serialize local work and does not convert into an externality claim, nor vice versa",
+      "later_dependents": [
+        "R200",
+        "R202",
+        "R203",
+        "R215 principled stop"
+      ],
+      "current_owner": "provenance/OPEN_RESIDUAL_REGISTER_2026-09-26.md",
+      "test_layer": "T0/T2",
+      "test_id_path": null,
+      "status": "NO_AUTOMATED_TEST_YET",
+      "credit_genealogy_note": "bounded self-management engineering; scheduler state persisted through VMK-2 and restart-exact",
+      "reopening_condition": "a blocker reclassification, or a scheduler that empties its queue without typing why"
+    },
+    {
+      "id": "D-R200-ROUTED-EXECUTION-NOT-AUTHORITY",
+      "source_revision_or_branch": "R200",
+      "source_artifact": "R200_RSM_ROUTED_CYCLE_RESULT_2026-09-22.md; R200_RSM_ROUTED_CYCLE_RESULT_2026-09-22.json",
+      "distinction": "task executed without a new human routing decision != self-granted routing authority over the task table",
+      "triggering_experiment_or_failure": "the persisted R199 RSM selected R198-RECURRENCE; a 9-episode revisit was executed, verified, written back to both R198 and R199 state, and restarted exactly",
+      "causal_consequence": "routing may be consumed from persisted scheduler state, but the fixed declared task table is what bounds it; no science/FORM/externality/M8/open-ended-RSI promotion follows",
+      "later_dependents": [
+        "R201",
+        "R202"
+      ],
+      "current_owner": "docs/AUTONOMOUS_RESEARCH.md",
+      "test_layer": "T0/T2",
+      "test_id_path": null,
+      "status": "NO_AUTOMATED_TEST_YET",
+      "credit_genealogy_note": "first RSM-routed developmental successor cycle; dependency-local writeback",
+      "reopening_condition": "a scheduler that extends its own task table without a separately declared mechanism"
+    },
+    {
+      "id": "D-R201-EVENT-FACTORIZED-NOT-ABSOLUTE",
+      "source_revision_or_branch": "R201",
+      "source_artifact": "R201_EVENT_FACTORIZED_RLC_FORM_PREFREEZE.md; R201_FORM_RESULT.json; R201_FORM_RESULT.md; R201_EVENT_FACTORIZED_RLC_FORM_THEOREM.md; R201_FINITE_VERIFIER_RESULT.json",
+      "distinction": "conditional RLC realization given an explicit differentiating event/resource != absolute/unconditioned first differentiation",
+      "triggering_experiment_or_failure": "R184/R185 first-realization burden split; T1 no-free-selection/event-factorization, T2 derived index/boundary non-smuggling and T3 minimum F-indexed provenance PROVED, with a 12/12 finite verifier including no-event, index-smuggling and provenance-collapse controls",
+      "causal_consequence": "local closure, index, boundary and provenance may be derived from a realized event rather than preloaded; the source or lawful emergence of the first event/resource remains OPEN and may not be smuggled in through a selector",
+      "later_dependents": [
+        "R203 FORM residual candidate class",
+        "R204 R201-residual perturbation arm",
+        "R205 projected verifier 12/12",
+        "FIRST-EVENT-SOURCE-DISCRIMINATOR"
+      ],
+      "current_owner": "provenance/DEVELOPMENTAL_LINEAGE.md",
+      "test_layer": "T2/T4",
+      "test_id_path": null,
+      "status": "HISTORICAL_EVIDENCE_NO_CURRENT_REGRESSION",
+      "credit_genealogy_note": "conditional FORM theorem; composes R166/R169-R172 constructively without superseding them; science/physics/ontology effect NONE",
+      "reopening_condition": "a candidate absolute-first-differentiation account, or a realization that selects asymmetry equivariantly from symmetry-fixed input",
+      "caveat": "The FORM claim rests on the analytic theorem; the 12/12 verifier is declared by its own schema as a finite witness/regression only, and no executable check for it exists in the live repository."
+    },
+    {
+      "id": "D-R202-LOCAL-PROJECTION-NOT-PUBLICATION",
+      "source_revision_or_branch": "R202",
+      "source_artifact": "R202_RSM_WRITEBACK_RESULT_2026-09-22.md; R202_RSM_WRITEBACK_RESULT_2026-09-22.json",
+      "distinction": "locally audited public-projection candidate != authorized external publication; empty ready queue != exhausted future",
+      "triggering_experiment_or_failure": "projection generated and audited locally, external publication WITHHELD on incomplete policy companions, and the fixed RSM queue emptied to WITHHOLD_NO_DECLARED_READY_TASK",
+      "causal_consequence": "a passing local audit confers no release authority; the scheduler must stop rather than invent a task when its declared table is exhausted",
+      "later_dependents": [
+        "R203",
+        "R205",
+        "R215 principled stop"
+      ],
+      "current_owner": "PUBLICATION_CONSTITUTION.md",
+      "test_layer": "T2/T9",
+      "test_id_path": null,
+      "status": "NO_AUTOMATED_TEST_YET",
+      "credit_genealogy_note": "bounded public-projection engineering; privacy transform declared",
+      "reopening_condition": "a release path that derives authorization from audit completeness"
+    },
+    {
+      "id": "D-R203-PROPOSAL-NOT-ADMISSION",
+      "source_revision_or_branch": "R203",
+      "source_artifact": "R203_RESULT.json; R203_RESULT.md",
+      "distinction": "generated candidate proposal != admitted task; generator != chooser",
+      "triggering_experiment_or_failure": "12 proposals reduced to 7 admitted tasks with generator_chose_task false; an adversarial MERGE-POLICY-H08-CONTROL candidate was rejected REJECT_MERGE_NONCOLLAPSE for merging public-projection and developmental jurisdictions into one verifier receipt",
+      "causal_consequence": "candidate generation is separated from admission; external handoff, external review, rustc and nix remain blocked and self-model privilege withheld in the generated set",
+      "later_dependents": [
+        "R204",
+        "R206"
+      ],
+      "current_owner": "kernel/CURRENT_STATE.md",
+      "test_layer": "T0/T2",
+      "test_id_path": null,
+      "status": "NO_AUTOMATED_TEST_YET",
+      "credit_genealogy_note": "bounded self-management engineering; jurisdiction noncollapse enforced at admission",
+      "reopening_condition": "a generator that admits its own proposals, or a merge candidate that survives admission"
+    },
+    {
+      "id": "D-R204-SENSITIVITY-NOT-RSI",
+      "source_revision_or_branch": "R204",
+      "source_artifact": "R204_DIFFERENTIAL_STRESS_RESULT.md; R204_RSM_WRITEBACK_RESULT.md",
+      "distinction": "dependency-local differential sensitivity of the generator != recursive self-improvement",
+      "triggering_experiment_or_failure": "seven frozen perturbation arms each changed only their dependent candidate; external-return blockers, mature-reduced self-model privilege and the unsafe merge stayed blocked in every arm",
+      "causal_consequence": "a generator that responds locally and only locally to perturbation earns sensitivity, explicitly 'not RSI'; the bounded RSI proposal becomes READY as a separate declared task",
+      "later_dependents": [
+        "R205",
+        "R206"
+      ],
+      "current_owner": "kernel/CURRENT_STATE.md",
+      "test_layer": "T0/T2",
+      "test_id_path": null,
+      "status": "NO_AUTOMATED_TEST_YET",
+      "credit_genealogy_note": "the PASS establishes bounded differential sensitivity only",
+      "reopening_condition": "a perturbation whose effect crosses dependency boundaries",
+      "caveat": "R204 self-reports an R203 provenance defect: an optional R202_WRITEBACK.json was present during the corrected admission execution but absent from the R203 input manifest. Ablation gave byte-identical output so the R203 semantic result survives, but the undeclared optional input is a real defect and was excluded from R204's frozen-input path."
+    },
+    {
+      "id": "D-R205-POLICY-COMPLETENESS-NOT-RELEASE",
+      "source_revision_or_branch": "R205",
+      "source_artifact": "R205_POLICY_REPAIR_RESULT.md; R205_RSM_WRITEBACK_RESULT.md",
+      "distinction": "complete local policy surface != publication authorization; repaired part-projection != current whole projection",
+      "triggering_experiment_or_failure": "R202's missing-policy blocker repaired by adding RESPONSIBLE_RELEASE.md and aliasing the hyphenated third-party notice bytes; links, privacy/secret/path scans and the projected R201 verifier all pass",
+      "causal_consequence": "'No publication authorization is inferred from policy completeness'; whole-projection currentness remains WITHHELD because R203/R204 are not yet projected",
+      "later_dependents": [
+        "R206 generation-2 target"
+      ],
+      "current_owner": "PUBLICATION_CONSTITUTION.md",
+      "test_layer": "T2/T9",
+      "test_id_path": null,
+      "status": "NO_AUTOMATED_TEST_YET",
+      "credit_genealogy_note": "local projection-policy repair; externality NONE",
+      "reopening_condition": "a projection claiming currentness while later revisions are unprojected"
+    },
+    {
+      "id": "D-R206-BOUNDED-RSI-NOT-OPEN-ENDED",
+      "source_revision_or_branch": "R206",
+      "source_artifact": "R206_RSM_RSI_IMPROVER_PREFREEZE.md; R206_GENERATION1_RESULT.json; R206_GENERATION2_RESULT.json; R206_BOUNDED_RSI_RESULT.json; R206_BOUNDED_RSI_RESULT.md",
+      "distinction": "two-generation bounded RSI on one named component != open-ended RSI; improvement retained after separate validation != improvement retained because it was produced",
+      "triggering_experiment_or_failure": "a single governed delta changed R203 source discovery from top-level to recursive provenance-preserving lookup; generation 1 scored I0=0.5 / I1=1.0 with flat-case parity preserved, and only after retention did generation 2 present a fresh nested layout with a .old decoy in which retained I1 selected the exact source and repaired the target while I0 did not",
+      "causal_consequence": "bounded RSI is earned for the candidate-discovery component only, at frozen scope, with open_ended_rsi, agi, science, form and externality all explicitly false; S2 may be inspected only after the S0/S1 retention decision",
+      "later_dependents": [
+        "R207",
+        "R208 (improver conserved)",
+        "R215 active improver",
+        "U1 unified seed overlay (r206_uses: 1)"
+      ],
+      "current_owner": "provenance/DEVELOPMENTAL_LINEAGE.md",
+      "test_layer": "T2/T4",
+      "test_id_path": null,
+      "status": "NO_AUTOMATED_TEST_YET",
+      "credit_genealogy_note": "the only BOUNDED_RSI node in the R186-R208 DAG; the prefreeze fixes the I0 -> delta -> V1 -> retain -> S2 -> V2 order before any result",
+      "reopening_condition": "a delta touching proposal types, priorities, governance, blockers or admission rules; a third generation; or any claim of improvement outside candidate-source discovery",
+      "caveat": "Highest-risk row in this band. The result preserves validation predicates (V1/V2 true) but names no validator identity, program hash, custody boundary, execution environment, or producer/validator authorship separation, so 'separately validated' means at most separate function invocation. R206 nevertheless survives live as a prose line with no executable check while still being named active improver at R215."
+    },
+    {
+      "id": "D-R207-NONCOLLAPSE-NOT-LEXICAL",
+      "source_revision_or_branch": "R207",
+      "source_artifact": "R207_RESULT.json; R207_RESULT.md",
+      "distinction": "typed internal noncollapse dependency != lexical answer; scaffold_function_internalized != world_internalized / other_internalized / self_minted_return",
+      "triggering_experiment_or_failure": "R198's H08 residual repaired by clause SC-WORLD-EXTERNAL under nine frozen gates: G1 pre lacks clause, G2 post exact clause, G3 held-out 6/6, G4 clause-deletion 0/6, G5 historical graph 14/14 plus repo memory, G6 obligations 194 with project/sibling unchanged, G7 external return sourced and self-mint rejected, G8 restart exact, G9 next curriculum selected",
+      "causal_consequence": "the clause is load-bearing rather than decorative - deleting only it returns the score to 0/6 - and a self-minted return substitute is rejected while a fresh World return stays separately sourced",
+      "later_dependents": [
+        "R208 (R207 noncollapse state conserved)",
+        "H08 noncollapse governance"
+      ],
+      "current_owner": "provenance/OPEN_RESIDUAL_REGISTER_2026-09-26.md",
+      "test_layer": "T2/T4/T5",
+      "test_id_path": null,
+      "status": "NO_AUTOMATED_TEST_YET",
+      "credit_genealogy_note": "repairs the R198 ablation residual; claims externality, form, science and world_internalized all false",
+      "reopening_condition": "a variant family the clause does not cover, or a repair that passes the gates without the deletion control failing",
+      "caveat": "The G4 deletion control fires because the pre-repair state also scored 0/6 (pre_eval all known=false); the control therefore shows the clause is necessary, not that it is the only sufficient clause."
+    },
+    {
+      "id": "D-R208-TRANSFER-NOT-GENERALITY",
+      "source_revision_or_branch": "R208",
+      "source_artifact": "R208_RESULT.md",
+      "distinction": "structured cross-domain functional transfer != natural-world generality or free-form language understanding",
+      "triggering_experiment_or_failure": "the unchanged R198 GENERAL model reached 1.0000 overall, per-family and invariance scores across 88 frozen cases in epidemiology, ecology, institutional review and distributed control, while deleting consequence-critical inherited features dropped accuracy to 0.0909",
+      "causal_consequence": "transfer is credited to learned functional structure rather than new-domain or source metadata; science, FORM, externality and open-ended RSI remain unestablished at the structured scope",
+      "later_dependents": [
+        "current RSM custody head",
+        "FIRST-EVENT-SOURCE-DISCRIMINATOR",
+        "R209"
+      ],
+      "current_owner": "docs/EARNED_MILESTONES.md",
+      "test_layer": "T2/T5",
+      "test_id_path": null,
+      "status": "HISTORICAL_EVIDENCE_NO_CURRENT_REGRESSION",
+      "credit_genealogy_note": "bounded structured transfer; conserved ProjectState, sibling, 194 obligations, repo memory, R207 state and the R206 improver",
+      "reopening_condition": "free-form or natural-world transfer, or a case family where the deletion control does not collapse accuracy",
+      "caveat": "Ceiling accuracy of exactly 1.0000 on every metric suggests the 88 frozen cases may be easy relative to the claim; no difficulty calibration survives in the recovered artifact."
     }
   ]
 }
