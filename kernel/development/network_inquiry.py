@@ -198,3 +198,44 @@ def reconstruct_from_network(
         reconstruction_id=digest(body),
         **body,
     )
+
+
+def form_followup_network_query(
+    *,
+    prior_query: NetworkQuery,
+    reconstruction: NetworkReconstruction,
+) -> NetworkQuery:
+    """Derive a successor query from retained network memory.
+
+    This is the causal memory test: removing the returned memory terms must
+    change the successor query identity/text. The external adapter still owns
+    execution and the query still carries no truth/promotion authority.
+    """
+    if reconstruction.query_id != prior_query.query_id:
+        raise NetworkInquiryError("reconstruction/prior-query identity mismatch")
+    if not reconstruction.changed_by_network_memory:
+        raise NetworkInquiryError("no returned network-memory change to compile into follow-up")
+    terms = tuple(str(x) for x in reconstruction.next_query_terms if str(x).strip())
+    if not terms:
+        raise NetworkInquiryError("follow-up query requires retained network terms")
+
+    query_text = " ".join(
+        (
+            prior_query.discriminator.replace("_", " ").lower(),
+            " ".join(terms),
+        )
+    ).strip()
+    body = {
+        "schema": "Venus.NetworkQuery.v0.1",
+        "problem_id": prior_query.problem_id,
+        "query_text": query_text,
+        "residual_coordinates": prior_query.residual_coordinates,
+        "discriminator": prior_query.discriminator,
+        "provenance_ids": tuple(prior_query.provenance_ids)
+            + tuple(f"network-memory:{x}" for x in reconstruction.memory_object_ids),
+        "authorship": "LEARNER_DERIVED_FROM_NETWORK_RECONSTRUCTION",
+        "execution_owner": "EXTERNAL_ADAPTER",
+        "promotion_authority": False,
+        "truth_authority": False,
+    }
+    return NetworkQuery(query_id=digest(body), **body)
