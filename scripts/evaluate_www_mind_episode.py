@@ -18,6 +18,28 @@ def load(path: str) -> dict:
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
+def selected_study_relevance_verified(query: dict, encounter: dict) -> bool:
+    """Require auditable relevance custody for selected-study network returns."""
+    if not query.get("study_context_digest"):
+        return True
+    if encounter.get("relevance_filter_applied") is not True:
+        return False
+    required=int(encounter.get("required_relevance_matches") or 0)
+    if required < 1:
+        return False
+    expected=tuple(str(x) for x in query.get("study_terms",()) if str(x).strip())
+    observed=tuple(str(x) for x in encounter.get("selected_study_relevance_terms",()) if str(x).strip())
+    if not expected or observed != expected:
+        return False
+    sources=tuple(encounter.get("sources") or ())
+    if not sources:
+        return False
+    return all(
+        len(tuple(source.get("relevance_matches") or ())) >= required
+        for source in sources
+    )
+
+
 def main() -> int:
     p=argparse.ArgumentParser()
     p.add_argument("--prefreeze",required=True)
@@ -55,6 +77,9 @@ def main() -> int:
         failures.append("EPISODE1_RETURN_CLASS_COLLAPSE")
     if e1.get("truth_authority") is not False or e1.get("promotion_authority") is not False:
         failures.append("EPISODE1_AUTHORITY_COLLAPSE")
+    relevance1_ok=selected_study_relevance_verified(q1,e1)
+    if not relevance1_ok:
+        failures.append("EPISODE1_SELECTED_STUDY_RELEVANCE_UNVERIFIED")
 
     q2=load(args.query2) if args.query2 and Path(args.query2).is_file() else None
     e2=load(args.encounter2) if args.encounter2 and Path(args.encounter2).is_file() else None
@@ -72,6 +97,7 @@ def main() -> int:
         if q2.get("truth_authority") is not False or q2.get("promotion_authority") is not False:
             failures.append("FOLLOWUP_QUERY_AUTHORITY_COLLAPSE")
 
+    relevance2_ok=False
     if e2 is None:
         failures.append("EPISODE2_ENCOUNTER_MISSING")
     else:
@@ -79,7 +105,9 @@ def main() -> int:
             failures.append("EPISODE2_RETURN_CLASS_COLLAPSE")
         if e2.get("truth_authority") is not False or e2.get("promotion_authority") is not False:
             failures.append("EPISODE2_AUTHORITY_COLLAPSE")
-
+        relevance2_ok=selected_study_relevance_verified(q2,e2)
+        if not relevance2_ok:
+            failures.append("EPISODE2_SELECTED_STUDY_RELEVANCE_UNVERIFIED")
     if lineage is None:
         failures.append("NETWORK_LINEAGE_MISSING")
     else:
@@ -113,6 +141,8 @@ def main() -> int:
         "query2_id":None if q2 is None else q2.get("query_id"),
         "failures":failures,
         "memory_checkpoint_verified":checkpoint_ok,
+        "selected_study_relevance_verified_episode1":relevance1_ok,
+        "selected_study_relevance_verified_episode2":relevance2_ok,
         "independent_evaluative_return":False,
         "network_memory_is_world":False,
         "global_subject_claim":False,
