@@ -69,3 +69,33 @@ merge memory != fusion
 ```
 
 Each target layer applies its own local admission rule before the next handoff is possible.
+
+## Astrology handoff
+
+Arcane owns:
+
+```text
+celestial configuration
+→ astrological symbolic projection
+→ indexed interpretation / action
+```
+
+It exports only typed residue:
+
+```text
+to Eclipsis:
+orientation-reversing / Earth-boundary structural candidate
+
+to OFE:
+prospective discriminator for predictive or causal claims
+
+to Minerva:
+bounded symbolic-intervention candidate
+
+to Venus:
+source-independence / nonpreauthored-return question
+```
+
+```text
+symbolic incidence != independent return != physical verification
+```
