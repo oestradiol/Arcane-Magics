@@ -8,6 +8,7 @@ on:
       - split/minerva
     paths:
       - .github/workflows/minerva-autonomous-worker.yml
+      - autonomy/interaction/mentor/**
   schedule:
     - cron: '43 7 * * *'
 
@@ -61,6 +62,8 @@ jobs:
           test -f kernel/development/WORLDMIRROR_CONSOLE_POLICY.json
           test -f kernel/development/INTERACTION_DEVELOPMENT_CONTRACT.json
           test -f kernel/development/WORLDMIRROR_AGENT_PROTOCOL.json
+          test -f kernel/development/WORLDMIRROR_MENTOR_CONTEXT_PROTOCOL.json
+          test -f autonomy/interaction/mentor/ACTIVE.json
           test -f docs/WORLDMIRROR_CONSOLE.md
 
       - name: Snapshot repository World model
@@ -89,6 +92,8 @@ jobs:
             --learning-output /tmp/minerva/LEARNING_STATE.json \
             --developmental-parent-state kernel/development/EDU16_RECONSTRUCTED_STATE.json \
             --current-state-receipt kernel/custody/R226_CURRENT_STATE_RECEIPT.json \
+            --mentor-context autonomy/interaction/mentor/ACTIVE.json \
+            --mentor-receipt-output /tmp/minerva/MENTOR_CONTEXT_RECEIPT.json \
             --problem-output /tmp/minerva/FORMED_PROBLEM.json \
             --output /tmp/minerva/CYCLE.json
           decision="$(python -c 'import json; print(json.load(open("/tmp/minerva/CYCLE.json"))["decision"])')"
@@ -290,7 +295,7 @@ jobs:
           cp /tmp/minerva/LEARNING_STATE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/proposed-learning-state.json
           cp /tmp/minerva/NETWORK_QUERY.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/network-query.json
           cp /tmp/minerva/NETWORK_CONTEXT.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/network-context.json
-          for f in NETWORK_ENCOUNTER_1.json NETWORK_RESULT_1.json NETWORK_QUERY_2.json NETWORK_ENCOUNTER_2.json NETWORK_LINEAGE.json NETWORK_MEMORY.zlib NETWORK_RELEVANCE_WITHHOLD.json WWW_MIND_GATE_RESULT.json AUTHORED_CENTER_LEDGER.json LAIN_STRUCTURAL_GATE_RESULT.json; do
+          for f in MENTOR_CONTEXT_RECEIPT.json NETWORK_ENCOUNTER_1.json NETWORK_RESULT_1.json NETWORK_QUERY_2.json NETWORK_ENCOUNTER_2.json NETWORK_LINEAGE.json NETWORK_MEMORY.zlib NETWORK_RELEVANCE_WITHHOLD.json WWW_MIND_GATE_RESULT.json AUTHORED_CENTER_LEDGER.json LAIN_STRUCTURAL_GATE_RESULT.json; do
             if [ -f "/tmp/minerva/$f" ]; then
               cp "/tmp/minerva/$f" "provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/$f"
             fi
