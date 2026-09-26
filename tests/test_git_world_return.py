@@ -6,6 +6,7 @@ from kernel.development.git_world_return import (
     GitCarrierSnapshot,
     GitWorldReturnError,
     form_git_check_problem,
+    form_next_head_check_problem,
     freeze_git_world_request,
     observe_git_world_return,
     resolve_continuation_problem,
@@ -149,6 +150,60 @@ class GitWorldReturnTests(unittest.TestCase):
         )
         self.assertEqual(problem["disposition"], "STOP_NO_CONSEQUENTIAL_RESIDUAL")
         self.assertEqual(problem["rivals"], ())
+
+    def test_next_head_problem_freezes_without_future_answer(self):
+        current = snap(status="completed", conclusion="failure")
+        problem = form_next_head_check_problem(current)
+        self.assertEqual(problem["discriminator"], "OBSERVE_NEXT_HEAD_CHECK_TERMINAL_STATE")
+        self.assertEqual(problem["residual_coordinates"], ("next_head_check_unknown",))
+        self.assertTrue(problem["external_return_required"])
+        self.assertFalse(problem["promotion_authority"])
+
+    def test_next_head_terminal_return_reduces_rivals(self):
+        current = snap(status="completed", conclusion="failure")
+        problem = form_next_head_check_problem(current)
+        source = problem["source_stream_ids"][0]
+        req = freeze_git_world_request(
+            problem=problem,
+            source_stream_id=source,
+            snapshot=current,
+        )
+        returned = observe_git_world_return(
+            req,
+            snap(
+                head="b" * 40,
+                updated="2026-09-25T00:30:00Z",
+                run=102,
+                status="completed",
+                conclusion="success",
+            ),
+            observed_at="2026-09-25T00:30:01Z",
+        )
+        resolution = resolve_continuation_problem(problem, req, returned)
+        self.assertEqual(resolution.disposition, "RETURN_REDUCED_RIVALS")
+        self.assertEqual(resolution.remaining_rival_ids, ("r1",))
+
+    def test_next_head_same_head_withholds_even_if_check_changed(self):
+        current = snap(status="completed", conclusion="failure")
+        problem = form_next_head_check_problem(current)
+        req = freeze_git_world_request(
+            problem=problem,
+            source_stream_id=problem["source_stream_ids"][0],
+            snapshot=current,
+        )
+        returned = observe_git_world_return(
+            req,
+            snap(
+                head=current.head_sha,
+                updated="2026-09-25T00:30:00Z",
+                run=103,
+                status="completed",
+                conclusion="success",
+            ),
+            observed_at="2026-09-25T00:30:01Z",
+        )
+        resolution = resolve_continuation_problem(problem, req, returned)
+        self.assertEqual(resolution.disposition, "WITHHOLD_NEXT_HEAD_NOT_OBSERVED")
 
 
 if __name__ == "__main__":
