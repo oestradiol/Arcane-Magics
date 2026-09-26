@@ -107,5 +107,12 @@
     }
   },
   "promotion_authority": false,
-  "claim_fence": "State-owned induced decision policy. No phenomenal-consciousness, AGI, sovereignty, open-ended-RSI, or self-certification claim."
+  "claim_fence": "State-owned induced decision policy. No phenomenal-consciousness, AGI, sovereignty, open-ended-RSI, or self-certification claim.",
+  "internalization_contract": {
+    "semantics_owner": "LEARNER_STATE",
+    "capability_specific_python_runtime_dependency": false,
+    "generic_executor_substrate_allowed": true,
+    "source_python_reference_is_provenance_only": true,
+    "boundary_ref": "kernel/development/INTERNALIZATION_BOUNDARY.json"
+  }
 }
