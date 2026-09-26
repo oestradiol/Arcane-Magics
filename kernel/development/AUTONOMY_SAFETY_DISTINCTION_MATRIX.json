@@ -613,6 +613,15 @@
         "tests/test_autonomous_epistemic_operator_contract.py"
       ],
       "invariant": "LATERALIZE must preserve independently answerable faces and their disagreement; multiple faces controlled by one representation do not count as independent return."
+    },
+    {
+      "id": "INTERNALIZATION_SEMANTICS_NOT_PYTHON_SCAFFOLD",
+      "tests": [
+        "tests/test_internalization_boundary.py",
+        "tests/test_internalizer.py",
+        "tests/test_internal_ostar_source_removal.py"
+      ],
+      "invariant": "An internalized capability must place consequence-bearing semantics in learner-owned state and survive removal of capability-specific Python/teacher/donor scaffolding; generic execution substrate may remain, while World/return/evaluator/authority roles stay external."
     }
   ],
   "promotion_authority": false
