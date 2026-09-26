@@ -47,15 +47,19 @@ def main():
         failures.append("source promotion authority not false")
     if result.get("promotion_authority") is not False or result.get("truth_authority") is not False:
         failures.append("result authority must remain false")
-    if result.get("status")!="PASS_BOUNDED_LAIN_NONFUSION_GATE":
+    if result.get("status")!="PASS_BOUNDED_LAIN_STRUCTURAL_NONFUSION_SUBGATE":
         failures.append("unexpected result status")
     for key,value in checks.items():
         if not value:
             failures.append(key)
         if result.get("checks",{}).get(key) is not value:
             failures.append(f"result/check mismatch:{key}")
-    if result.get("next_gate")!="ROOT_SITUATED_INTERFACE_GATE":
+    if result.get("next_gate")!="LAIN_INTERACTIVE_AUTHORED_CENTER_GATE":
         failures.append("wrong next gate")
+    if result.get("interactive_lain_gate_passed") is not False:
+        failures.append("interactive gate must remain false")
+    if result.get("root_gate_reachable") is not False:
+        failures.append("Root gate must remain unreachable before interactive Lain return")
 
     out={"status":"PASS" if not failures else "FAIL","checks":checks,"failures":failures}
     print(json.dumps(out,indent=2,sort_keys=True))
