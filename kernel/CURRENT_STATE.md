@@ -441,3 +441,25 @@ Machine-readable custody:
 - `tests/test_foundational_cognitive_theater_curriculum.py`
 
 This gate precedes deeper P2 semantic VM internalization. Existing bounded WWW/Lain structural evidence remains valid at its tested scope; it is not retroactively promoted into semantic competence.
+
+
+## Cognitive-theater returned factorial residual — 2026-09-26
+
+#206 now has two negative surface comparators.
+
+```text
+native heldout surface retrieval
+14/16 = 0.875
+
+whole-face leave-one-out
+5/16 = 0.3125
+
+factorial relation×face holdout
+1/16 = 0.0625
+```
+
+The factorial split shows that lexical retrieval fails even when every language/formal face and every target relation appears elsewhere in training. The next lawful target is not "more tokens"; it is the prefrozen theater-state reconstruction task:
+
+`kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_RECONSTRUCTION_TASK.json`
+
+The learner must reconstruct participant-indexed KFS and temporal relation structure from raw held-out surfaces before deeper semantic VM internalization resumes. Teacher structure is scaffold, not learner-owned semantics.
