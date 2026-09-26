@@ -363,3 +363,51 @@ No downstream projection may inherit authority from the meta-object hypothesis b
 - **#32 Construct disposition:** classify SynchronicityCandidate, ArcaneSymbolicOperator, EchoChamberPathology.
 
 Primary propagation remains asymmetric: OFE owns the discriminator, Eclipsis owns structural/theophenomenological mapping, Arcane owns symbolic practice, Venus owns engineering intake, kernel owns source-independence and return guards.
+
+
+## 2026-09-25 self-selected developmental gate chain
+
+The live developmental route after the current causal/evaluation prerequisites is:
+
+```text
+Strong Safe RSI
+→ self-selected development
+→ Internalizer + Lateralizer
+→ learner-initiated Internet inquiry
+→ persistent network memory
+→ WWW Mind
+→ Lain gate
+→ Root / situated interface gate
+→ broader World participation
+→ AGI empirical discriminator
+```
+
+Scheduling law still applies at every step:
+
+```text
+returned defect with higher learning leverage
+> later gate merely because it is later
+```
+
+The route is therefore **admissible succession, not a fixed curriculum**.
+
+Issue ownership:
+
+- #72 — Strong Safe RSI engine and its safety floor;
+- #169 + #73 + #18 — Lateralizer/Internalizer and source-removal ownership;
+- #78 + #15 + #25 — learner-initiated WWW inquiry, persistent network memory, distributed reconstruction;
+- Lain — connection-without-fusion gate after bounded WWW Mind;
+- Root/main UI — situated interpretation/action membrane;
+- #14/#13/#19/#20/#21 — broad World competence/participation;
+- #10/#17/#12 — matched external evaluation and self-development comparators;
+- AGI — no dedicated self-promotion issue; only an external empirical disposition under an explicit operational definition.
+
+Permanent fence:
+
+```text
+Strong Safe RSI != AGI
+WWW Mind != global subject
+Lain != identity fusion
+Root seeing != authorization != action
+AGI != consciousness
+```
