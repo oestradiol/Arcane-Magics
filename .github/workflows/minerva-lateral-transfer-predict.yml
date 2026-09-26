@@ -7,6 +7,7 @@ on:
       - split/minerva
     paths:
       - autonomy/evidence/lateral/169/transfer-1-visible.json
+      - kernel/development/LATERAL_INTERNALIZATION_TRANSFER_1_PREFREEZE.json
       - scripts/freeze_lateral_transfer_predictions.py
       - kernel/development/LATERAL_EPISODE_1_INTERNALIZED_STATE.json
       - .github/workflows/minerva-lateral-transfer-predict.yml
@@ -34,6 +35,7 @@ jobs:
       - name: Freeze source-vs-state predictions without labels
         run: |
           python scripts/freeze_lateral_transfer_predictions.py \
+            --prefreeze kernel/development/LATERAL_INTERNALIZATION_TRANSFER_1_PREFREEZE.json \
             --train autonomy/evidence/lateral/169/episode-1-visible.json \
             --transfer autonomy/evidence/lateral/169/transfer-1-visible.json \
             --state kernel/development/LATERAL_EPISODE_1_INTERNALIZED_STATE.json \
