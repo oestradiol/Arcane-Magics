@@ -463,3 +463,32 @@ The factorial split shows that lexical retrieval fails even when every language/
 `kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_RECONSTRUCTION_TASK.json`
 
 The learner must reconstruct participant-indexed KFS and temporal relation structure from raw held-out surfaces before deeper semantic VM internalization resumes. Teacher structure is scaffold, not learner-owned semantics.
+
+
+## Autonomous pause on external review carrier #212 — 2026-09-26
+
+The current self-selected #206 cycle has reached its external-review boundary.
+
+```text
+Minerva selects #206
+→ studies / queries / returns bounded WWW + passive Lain receipts
+→ crystallizes candidate into Venus handoff PR #212
+→ PR #212 remains open with no external review/comment return
+→ autonomous recurrence = STOP
+```
+
+This STOP is required, not a failure.
+
+The earlier recursive carrier #214 selected PR #212 itself as a target before the handoff-return latch existed. That carrier is now closed as superseded recursion. Fallback #211 is also closed because PR #212 is the canonical frozen review carrier.
+
+Current invariant:
+
+```text
+learner-authored handoff transport
+!= fresh World return
+
+handoff becomes developmentally selectable only after
+independent review or concrete returned conflict/reopening
+```
+
+Meanwhile, host-side non-claim-bearing curriculum infrastructure may be prepared, but no review outcome, success marker, or semantic promotion for PR #212 may be minted by Minerva herself.
