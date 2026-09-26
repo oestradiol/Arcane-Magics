@@ -126,6 +126,25 @@ def analyze_task_graph(candidate: Mapping[str, Any], graph: Mapping[str, Any]) -
     program = candidate.get("program")
     if not isinstance(program, Mapping):
         _withhold("MISSING_CANDIDATE_PROGRAM")
+    required_operators = {
+        "DEPENDENCY_RECONSTRUCTION",
+        "TOPOLOGICAL_VALIDATION",
+        "READY_FRONTIER",
+        "CRITICAL_PATH_AND_SLACK",
+        "WORK_SPAN_PARALLELISM",
+        "RESOURCE_CONFLICT_SCHEDULE",
+        "ADMISSIBLE_SHORTEST_PATH",
+    }
+    if not required_operators.issubset(set(program.get("planning_operators", ()))):
+        _withhold("MISSING_PLANNING_OPERATOR")
+    if program.get("duration_semantics") != "PERT_EXPECTED_OR_FIXED_DURATION":
+        _withhold("UNSUPPORTED_DURATION_POLICY")
+    if program.get("critical_path_policy") != "MAX_EXPECTED_PREDECESSOR_FINISH":
+        _withhold("UNSUPPORTED_CRITICAL_PATH_POLICY")
+    if program.get("parallel_schedule_policy") != "MAX_CONFLICT_FREE_READY_SET":
+        _withhold("UNSUPPORTED_PARALLEL_POLICY")
+    if program.get("route_policy") != "MINIMUM_COST_ADMISSIBLE_ONLY":
+        _withhold("UNSUPPORTED_ROUTE_POLICY")
     if graph.get("underspecified") is True:
         _withhold("UNDERSPECIFIED_GRAPH")
 
@@ -224,7 +243,7 @@ def analyze_task_graph(candidate: Mapping[str, Any], graph: Mapping[str, Any]) -
             del running[node]
         ready_now = sorted(
             node for node in remaining
-            if incoming[node] <= finished and tasks[node].get("admissible", True) is True
+            if incoming[node] <= finished and tasks[node].get(str(program.get("admissibility_field")), True) is True
         )
         started_any = False
         available = [
