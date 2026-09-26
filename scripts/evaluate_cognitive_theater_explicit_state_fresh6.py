@@ -178,17 +178,19 @@ def evaluate():
         base = expected_state(task, row["gold"])
         mutated = copy.deepcopy(base)
 
-        changed = False
-        for event in mutated["events"]:
-            for effect in event.get("effects") or []:
-                old = effect["status"]
-                effect["status"] = "KNOWN_FALSE" if old != "KNOWN_FALSE" else "KNOWN_TRUE"
-                changed = True
+        # Intervene on the last effective write so the prefrozen endpoint
+        # discriminator measures a causally live KFS consequence rather than an
+        # earlier write that is legitimately overwritten by later history.
+        target = None
+        for event in reversed(mutated["events"]):
+            effects = event.get("effects") or []
+            if effects:
+                target = effects[-1]
                 break
-            if changed:
-                break
-        if not changed:
+        if target is None:
             raise RuntimeError(f"{tid} has no KFS effect for intervention")
+        old = target["status"]
+        target["status"] = "KNOWN_FALSE" if old != "KNOWN_FALSE" else "KNOWN_TRUE"
 
         theater.validate(base)
         theater.validate(mutated)
