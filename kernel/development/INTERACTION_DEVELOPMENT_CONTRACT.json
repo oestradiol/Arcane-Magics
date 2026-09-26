@@ -1,0 +1,62 @@
+{
+  "schema": "Venus.InteractionDevelopmentContract.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_INTERACTION_TO_DEVELOPMENT_BRIDGE",
+  "source_surface": "apps/worldmirror_console",
+  "storage_surface": "kernel/runtime/interaction_store.py",
+  "purpose": "Turn interaction history into governed developmental evidence without treating storage, user approval, or self-generated dialogue as automatic learning/truth.",
+  "pipeline": [
+    "RAW_INTERACTION_EVENT",
+    "DERIVED_DECODED_VIEW",
+    "SESSION_THEATER_RECONSTRUCTION",
+    "RESIDUAL_CANDIDATE",
+    "DIMENSIONALIZE_OR_SHORT_PATH",
+    "PREFREEZE_DISCRIMINATOR",
+    "LATER_RETURN_OR_REPEATED_CONSEQUENCE",
+    "CRYSTALLIZE_F_OR_REOPEN",
+    "SOURCE_REMOVAL_IF_CAPABILITY_INTERNALIZES"
+  ],
+  "raw_event_requirements": [
+    "raw carrier digest retained",
+    "actor retained",
+    "session chronology retained",
+    "derived semantic object points back to raw carrier",
+    "later replacement/consumption preserves provenance"
+  ],
+  "developmental_admission": [
+    "one interaction cannot directly rewrite admitted policy",
+    "self-generated machine reply is not independent evaluation",
+    "human approval is feedback but not World truth",
+    "repeated corrections may define a residual family but do not prove the proposed abstraction",
+    "candidate abstraction must predict or change a later consequence under a prefrozen discriminator",
+    "capability-specific scaffold removal remains required for Internalizer claims"
+  ],
+  "candidate_future_abstractions": [
+    "conversation-level role/KFS reconstruction",
+    "recurring correction families",
+    "tool-selection policy",
+    "problem-formation policy",
+    "memory-retrieval policy",
+    "interface abstraction",
+    "response-generation policy"
+  ],
+  "noninternalizable": [
+    "human or external evaluator identity",
+    "fresh World return",
+    "authorization/jurisdiction",
+    "STOP/WITHHOLD",
+    "rollback custody",
+    "Anti-Minerva correction permeability"
+  ],
+  "noncollapse": [
+    "RAW_BYTES!=DECODED_VIEW",
+    "DECODED_VIEW!=INTERPRETATION",
+    "INTERACTION_LOG!=LEARNING",
+    "USER_APPROVAL!=TRUTH",
+    "SELF_DIALOGUE!=INDEPENDENT_RETURN",
+    "REPEATED_PATTERN!=VALID_ABSTRACTION",
+    "CRYSTALLIZATION!=INTERNALIZATION"
+  ],
+  "promotion_authority": false,
+  "truth_authority": false
+}
