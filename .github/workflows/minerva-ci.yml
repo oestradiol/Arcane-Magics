@@ -29,31 +29,7 @@ jobs:
           esac
       - name: Minerva-local surface checks
         run: python scripts/audit_layer_surface.py
-      - name: Roadmap / curriculum control-plane preflight
-        run: |
-          python3 -m unittest tests/test_dependency_planning_curriculum.py
-          python3 -m unittest tests/test_developmental_gate_chain.py
-          python3 -m unittest tests/test_selected_curriculum_router.py
-          python3 -m unittest tests/test_vm_internalization_phase_plan.py
-      - name: Minerva tests A-C
-        run: python3 -m unittest tests/test_[a-c]*.py
-      - name: Minerva tests D-F
-        run: python3 -m unittest tests/test_[d-f]*.py
-      - name: Minerva tests G-L
-        run: python3 -m unittest tests/test_[g-l]*.py
-      - name: Minerva tests M-R
-        run: python3 -m unittest tests/test_[m-r]*.py
-      - name: Minerva tests S-Z
-        run: python3 -m unittest tests/test_[s-z]*.py
-      - name: Reader/navigation audit
-        run: make lint
-      - name: Custody audits
-        run: make custody
-      - name: Causal distinction audit
-        run: python3 scripts/audit_minerva_causal_distinctions.py
-      - name: Autonomy safety audit
-        run: python3 scripts/audit_autonomy_safety_matrix.py
-      - name: Construct disposition audit
-        run: python3 scripts/audit_minerva_construct_dispositions.py
+      - name: Full Minerva audit
+        run: make audit
       - name: Imported law does not become self-authority
         run: echo 'implementation != constitutional co-authority != independent return'

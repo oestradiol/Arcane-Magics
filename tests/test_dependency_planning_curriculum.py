@@ -1,46 +1,63 @@
 from __future__ import annotations
 
-import json
 from pathlib import Path
 import unittest
 
-from scripts.run_selected_didactic_curriculum import (
-    _execution_envelope_status,
-    resolve_selected_curricula,
-)
+from kernel.development.dependency_planning_curriculum import run
+from scripts.run_selected_didactic_curriculum import _execution_envelope_status
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CATALOG_PATH = ROOT / "kernel/development/DIDACTIC_CURRICULUM_EXECUTION_CATALOG.json"
-PREFREEZE = "kernel/development/DEPENDENCY_PLANNING_CURRICULUM_PREFREEZE.json"
 
 
-class DependencyPlanningPrototypeDispositionTests(unittest.TestCase):
+class DependencyPlanningCurriculumTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
-
-    def test_host_authored_prototype_is_preserved_but_not_routable(self):
-        self.assertNotIn(
-            "DEPENDENCY_PLANNING_V1",
-            {row["curriculum_id"] for row in self.catalog["curricula"]},
+        cls.candidate, cls.result = run(
+            ROOT / "kernel/development/DEPENDENCY_PLANNING_CURRICULUM_PREFREEZE.json",
+            ROOT / "kernel/development/DEPENDENCY_PLANNING_DIDACTIC_CASES.json",
         )
-        prototype = next(
-            row for row in self.catalog["preserved_non_executable_prototypes"]
-            if row["id"] == "DEPENDENCY_PLANNING_HOST_PROTOTYPE_2026_09_26"
-        )
-        self.assertEqual(prototype["status"], "WITHHELD_NOT_LEARNER_OWNED")
-        self.assertIn("kernel/runtime/task_graph.py", prototype["source_paths"])
 
-    def test_selected_issue_236_contract_withholds_without_learner_owned_solution(self):
-        cycle = {"study": {"referenced_repository_paths": [PREFREEZE]}}
-        route = resolve_selected_curricula(cycle, self.catalog)
-        self.assertEqual(route["status"], "WITHHOLD_SELECTED_PREFREEZE_HAS_NO_EXECUTOR")
-        self.assertEqual(route["unresolved_prefreezes"], frozenset({PREFREEZE}))
+    def test_candidate_passes_frozen_b1_and_b2_checks(self):
+        self.assertEqual(self.result["status"], "PASS_BOUNDED_DEPENDENCY_PLANNING_B1_B2")
+        self.assertTrue(self.result["b1_pass"])
+        self.assertTrue(self.result["b2_pass"])
+        self.assertTrue(all(self.result["b1_checks"].values()))
+        self.assertTrue(all(self.result["b2_checks"].values()))
 
-    def test_unadmitted_prototype_status_cannot_be_counted_as_execution(self):
+    def test_candidate_representation_is_learner_state_without_authority(self):
+        self.assertEqual(self.candidate["semantics_owner"], "LEARNER_STATE_CANDIDATE")
+        self.assertEqual(self.candidate["generic_executor"], "kernel/runtime/task_graph.py")
+        self.assertIn("CRITICAL_PATH_AND_SLACK", self.candidate["program"]["planning_operators"])
+        self.assertEqual(self.candidate["program"]["critical_path_policy"], "MAX_EXPECTED_PREDECESSOR_FINISH")
+        self.assertFalse(self.candidate["independent_evaluation"])
+        self.assertFalse(self.candidate["internalization_claim"])
+        self.assertFalse(self.candidate["promotion_authority"])
+        self.assertFalse(self.candidate["truth_authority"])
+        self.assertNotIn("K7", str(self.candidate["program"]))
+        self.assertNotIn("H1", str(self.candidate["program"]))
+
+    def test_interventions_are_bounded_and_withhold_on_invalid_graphs(self):
         self.assertEqual(
-            _execution_envelope_status("WITHHOLD_HOST_AUTHORED_PROTOTYPE_NOT_ADMITTED"),
+            self.result["bounded_base_result"]["critical_path"],
+            ["A", "C", "E"],
+        )
+        self.assertEqual(self.result["critical_intervention_result"]["span"], 11)
+        self.assertEqual(self.result["noncritical_intervention_result"]["span"], 9)
+        self.assertEqual(
+            self.result["withhold_cases"],
+            {
+                "cycle": "WITHHOLD_DEPENDENCY_CYCLE",
+                "underspecified": "WITHHOLD_UNDERSPECIFIED_GRAPH",
+                "missing_duration": "WITHHOLD_MISSING_DURATION",
+                "candidate_state_ablation": "WITHHOLD_MISSING_RELATION_CLASSIFIER",
+                "candidate_operator_ablation": "WITHHOLD_MISSING_PLANNING_OPERATOR",
+            },
+        )
+
+    def test_curriculum_withhold_stops_generic_fallback(self):
+        self.assertEqual(
+            _execution_envelope_status("WITHHOLD_DEPENDENCY_PLANNING_DISCRIMINATOR_NOT_MET"),
             "WITHHOLD_CURRICULUM_RESULT",
         )
         self.assertEqual(
@@ -51,6 +68,7 @@ class DependencyPlanningPrototypeDispositionTests(unittest.TestCase):
             _execution_envelope_status("PASS_BOUNDED_LOCAL_ONLY"),
             "WITHHOLD_CURRICULUM_RESULT",
         )
+        self.assertEqual(_execution_envelope_status(None), "WITHHOLD_CURRICULUM_RESULT")
 
 
 if __name__ == "__main__":

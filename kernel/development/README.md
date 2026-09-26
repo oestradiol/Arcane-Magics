@@ -2,7 +2,7 @@
 
 This directory contains the mutable **developmental semantics** of Minerva / WorldMirror: learner-owned state, prefrozen gates, returned results, and bounded developmental mechanisms.
 
-Start with [`DEVELOPMENTAL_GATE_CHAIN.json`](DEVELOPMENTAL_GATE_CHAIN.json) and [current state](../CURRENT_STATE.md). Open other files only along the selected DAG path.
+Start with [WorldMirror VM](../../docs/WORLDMIRROR_VM.md) and [current state](../CURRENT_STATE.md).
 
 ## Current developmental spine
 
@@ -19,7 +19,7 @@ Strong Safe RSI
 → AGI remains an external empirical discriminator
 ```
 
-Canonical semantic roadmap, recurrence, precedence, frontier, and file dispositions: [`DEVELOPMENTAL_GATE_CHAIN.json`](DEVELOPMENTAL_GATE_CHAIN.json). [`SELF_TEACHING_DEVELOPMENT_DAG.json`](SELF_TEACHING_DEVELOPMENT_DAG.json) is a derived A–E projection only.
+Machine-readable route: [`DEVELOPMENTAL_GATE_CHAIN.json`](DEVELOPMENTAL_GATE_CHAIN.json).
 
 ## Core state/policy objects
 
@@ -131,15 +131,3 @@ process transport
 The console is intended to generate inspectable developmental episodes that may
 later support prefrozen abstraction/crystallization experiments. It does not
 directly rewrite admitted learner policy.
-
-
-## Non-live host prototype
-
-The dependency-planning prototype added during the 2026-09-26 repair episode is retained only as audit evidence:
-
-- `dependency_planning_curriculum.py`
-- `DEPENDENCY_PLANNING_DIDACTIC_CASES.json`
-- `../runtime/task_graph.py`
-- `../../tests/test_dependency_planning_curriculum.py`
-
-It is absent from executable curriculum routing. Passing its local tests does not establish learner-owned planning and must not close #236 or #238.

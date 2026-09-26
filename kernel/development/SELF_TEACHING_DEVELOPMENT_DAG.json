@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.SelfTeachingDevelopmentSubgraph.v0.2",
+  "schema": "Venus.SelfTeachingDevelopmentDAG.v0.1",
   "date": "2026-09-26",
   "status": "PREFROZEN_DEVELOPMENTAL_DAG_NOT_COMPLETION_CLAIM",
   "principle": "Parallelize independent developmental evidence, preserve true joins, and never let scheduling override admissibility, jurisdiction, evaluator separation, or returned consequence.",
@@ -117,22 +117,5 @@
     "B1!=B2!=B3"
   ],
   "promotion_authority": false,
-  "truth_authority": false,
-  "canonical_semantic_graph": "kernel/development/DEVELOPMENTAL_GATE_CHAIN.json",
-  "role": "Current active A-E work subgraph of the canonical semantic developmental graph; it is not a second whole-program roadmap.",
-  "agent_traversal": {
-    "target_selection": "agent internally reconstructs the admissible ready frontier from current evidence and selects a READY node using downstream learning leverage, time-to-discriminator, safe parallelism, then resource leverage",
-    "method_selection": "derive the method from the selected residual and inspect existing learner-owned state/generic substrate before proposing any new machinery",
-    "host_authored_capability_solvers": "PROHIBITED_AS_LEARNER_SOLUTION",
-    "missing_mechanism": "WITHHOLD and record the exact unmet proof burden; do not substitute a host-written domain solver",
-    "status_update": "after each returned result, update only affected nodes and dependent edges; preserve source snapshots, negative evidence, and issue status"
-  },
-  "projection_only": true,
-  "precedence": "This file is a derived current-work projection. If it conflicts with DEVELOPMENTAL_GATE_CHAIN.json or live evidence, it loses.",
-  "non_authorities": [
-    "target binding",
-    "truth",
-    "promotion",
-    "semantic topology"
-  ]
+  "truth_authority": false
 }

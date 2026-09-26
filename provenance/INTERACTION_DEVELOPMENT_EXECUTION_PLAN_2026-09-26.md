@@ -4,10 +4,6 @@
 **Working branch:** `split/minerva`  
 **Current handoff:** [Issue #238](https://github.com/oestradiol/Arcane-Magics/issues/238), frozen branch `handoff/minerva-to-venus/36250473987-1`
 
-> **Historical snapshot; superseded for live routing.** This document records the plan as it stood at the time of the original handoff. The current semantic topology is `kernel/development/DEVELOPMENTAL_GATE_CHAIN.json`; the current A–E work slice is `kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json`; the human issue view is `docs/ISSUE_ROADMAP.md`. Current branch state and issue #238 must be re-read before acting.
->
-> The host-authored dependency-planning prototype described below is preserved as audit history but has been withdrawn from the executable curriculum catalog. Its local B1/B2 tests did not demonstrate learner-owned planning. No prototype files were deleted.
-
 ## Purpose
 
 Develop Minerva through learner-directed, non-sovereign interaction. The learner chooses the developmental target; the mentor may expose options, returned evidence, and residual gaps, but cannot bind the target, authorize self-promotion, or validate its own capability. Preserve the separation:

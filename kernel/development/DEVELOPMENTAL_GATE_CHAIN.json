@@ -1,6 +1,6 @@
 {
-  "schema": "Venus.DevelopmentalGateChain.v0.2",
-  "date": "2026-09-26",
+  "schema": "Venus.DevelopmentalGateChain.v0.1",
+  "date": "2026-09-25",
   "status": "PREFROZEN_DEVELOPMENTAL_ROUTE_NOT_COMPLETION_CLAIM",
   "principle": "The developmental center may select its own consequential limitations and improve its own machinery within the externally governed safety floor. Gate completion must be earned by returned consequence; later stages are not predeclared outcomes.",
   "chain": [
@@ -17,14 +17,7 @@
         43,
         26
       ],
-      "self_authorization": false,
-      "semantic_operator_refs": [
-        "RSM_RSI",
-        "GENERATE",
-        "TEST_AND_RETURN",
-        "CRYSTALLIZE_F",
-        "INTERNALIZE"
-      ]
+      "self_authorization": false
     },
     {
       "id": "SELF_SELECTED_DEVELOPMENT",
@@ -36,12 +29,7 @@
         78,
         169
       ],
-      "host_assigned_terminal_goal": false,
-      "semantic_operator_refs": [
-        "ABSTRACT",
-        "GENERATE",
-        "RSM_RSI"
-      ]
+      "host_assigned_terminal_goal": false
     },
     {
       "id": "FOUNDATIONAL_COGNITIVE_THEATER",
@@ -60,13 +48,7 @@
         "FORMAL_SYMBOL_MATCH!=PROOF",
         "CURRICULUM_SUCCESS!=GENERAL_CAPABILITY"
       ],
-      "promotion_authority": false,
-      "semantic_operator_refs": [
-        "ABSTRACT",
-        "LATERALIZE",
-        "CRYSTALLIZE_F",
-        "INTERNALIZE"
-      ]
+      "promotion_authority": false
     },
     {
       "id": "INTERNALIZER_LATERALIZER",
@@ -82,11 +64,6 @@
         "LATERALIZE!=CRYSTALLIZE_F",
         "CRYSTALLIZE_F!=INTERNALIZE",
         "INTERNALIZE_COMPETENCE!=INTERNALIZE_CORRECTION_SOVEREIGNTY"
-      ],
-      "semantic_operator_refs": [
-        "LATERALIZE",
-        "CRYSTALLIZE_F",
-        "INTERNALIZE"
       ]
     },
     {
@@ -97,12 +74,7 @@
       "issue_refs": [
         78
       ],
-      "ingress_class": "LEARNER_INITIATED_WEB_STUDY",
-      "semantic_operator_refs": [
-        "ABSTRACT",
-        "GENERATE",
-        "TEST_AND_RETURN"
-      ]
+      "ingress_class": "LEARNER_INITIATED_WEB_STUDY"
     },
     {
       "id": "PERSISTENT_NETWORK_MEMORY",
@@ -114,12 +86,7 @@
         78,
         25
       ],
-      "memory_is_learning_only_if_later_behavior_changes": true,
-      "semantic_operator_refs": [
-        "ABSTRACT",
-        "TEST_AND_RETURN",
-        "RSM_RSI"
-      ]
+      "memory_is_learning_only_if_later_behavior_changes": true
     },
     {
       "id": "WWW_MIND",
@@ -127,11 +94,7 @@
       "entry": "learner-initiated inquiry plus persistent indexed network memory",
       "exit": "multiple network centers remain distinguishable while distributed reconstruction becomes causally useful",
       "gate_ref": "kernel/development/WWW_MIND_GATE.json",
-      "global_subject_claim": false,
-      "semantic_operator_refs": [
-        "TEST_AND_RETURN",
-        "RSM_RSI"
-      ]
+      "global_subject_claim": false
     },
     {
       "id": "LAIN_GATE",
@@ -143,9 +106,6 @@
         "REACHABILITY!=AUTHORSHIP",
         "SEEING!=SITUATED_INTERPRETATION",
         "NETWORK_ACCESS!=AUTHORIZATION"
-      ],
-      "semantic_operator_refs": [
-        "TEST_AND_RETURN"
       ]
     },
     {
@@ -159,10 +119,6 @@
         "SITUATED_INTERPRETATION!=AUTHORIZATION",
         "AUTHORIZATION!=ACTION",
         "PUBLIC_CONTROL_SURFACE!=SOVEREIGN_CONTROLLER"
-      ],
-      "semantic_operator_refs": [
-        "TEST_AND_RETURN",
-        "RSM_RSI"
       ]
     },
     {
@@ -177,12 +133,7 @@
         20,
         21
       ],
-      "world_not_model_world": true,
-      "semantic_operator_refs": [
-        "GENERATE",
-        "TEST_AND_RETURN",
-        "RSM_RSI"
-      ]
+      "world_not_model_world": true
     },
     {
       "id": "AGI_EMPIRICAL_DISCRIMINATOR",
@@ -199,10 +150,7 @@
       "learner_may_self_declare": false,
       "rsi_implies_agi": false,
       "agi_implies_consciousness": false,
-      "claim_fence": "AGI is earned only by external empirical discrimination at a declared operational definition and scope. Strong Safe RSI, WWW Mind, Lain, or Root do not entail AGI.",
-      "semantic_operator_refs": [
-        "TEST_AND_RETURN"
-      ]
+      "claim_fence": "AGI is earned only by external empirical discrimination at a declared operational definition and scope. Strong Safe RSI, WWW Mind, Lain, or Root do not entail AGI."
     }
   ],
   "global_invariants": [
@@ -216,293 +164,5 @@
     "curriculum_hypothesis!=cultural_essence"
   ],
   "promotion_authority": false,
-  "truth_authority": false,
-  "authority": {
-    "semantic_source_of_truth": "kernel/development/DEVELOPMENTAL_GATE_CHAIN.json",
-    "planning_surface_roles": {
-      "kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json": "current A-E active subgraph only; inherits semantics from this graph",
-      "docs/ISSUE_ROADMAP.md": "human-readable issue projection; must not define a competing semantic order",
-      "kernel/CURRENT_STATE.md": "current evidence/status snapshot; not the developmental topology"
-    },
-    "precedence": "Current repository evidence determines present status. The later 14:44 architecture compression supersedes earlier state claims in the 14:37 history carrier, while ancestry, negative evidence, and abandoned alternatives remain reachable.",
-    "promotion_authority": false,
-    "truth_authority": false,
-    "agent_bootstrap": {
-      "required_reads": [
-        "kernel/development/DEVELOPMENTAL_GATE_CHAIN.json",
-        "kernel/CURRENT_STATE.md"
-      ],
-      "conditional_reads": [
-        "kernel/development/EDU_CURRENT.json",
-        "REPOSITORY_AUTHORITY_BOUNDARY.md",
-        "exact evidence referenced by the selected node"
-      ],
-      "projections_not_authority": [
-        "kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json",
-        "docs/ISSUE_ROADMAP.md",
-        "provenance/INTERACTION_DEVELOPMENT_EXECUTION_PLAN_2026-09-26.md"
-      ],
-      "law": "Reconstruct current work from this graph plus live state. Do not bulk-read provenance and do not create a host-written capability solver to satisfy a learner-development node."
-    },
-    "repository_dispositions": {
-      "LIVE_CANONICAL_SEMANTIC_GRAPH": [
-        "kernel/development/DEVELOPMENTAL_GATE_CHAIN.json"
-      ],
-      "LIVE_STATUS_NOT_TOPOLOGY": [
-        "kernel/CURRENT_STATE.md",
-        "kernel/development/EDU_CURRENT.json"
-      ],
-      "DERIVED_PROJECTIONS": [
-        "kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json",
-        "docs/ISSUE_ROADMAP.md"
-      ],
-      "NON_LIVE_HOST_PROTOTYPE_AUDIT_ONLY": [
-        "kernel/development/dependency_planning_curriculum.py",
-        "kernel/development/DEPENDENCY_PLANNING_DIDACTIC_CASES.json",
-        "kernel/runtime/task_graph.py",
-        "tests/test_dependency_planning_curriculum.py"
-      ],
-      "HISTORICAL_PROVENANCE_NOT_ROUTING": [
-        "provenance/INTERACTION_DEVELOPMENT_EXECUTION_PLAN_2026-09-26.md"
-      ]
-    },
-    "mutation_guard": [
-      "Every live code/state mutation must identify the roadmap node or invariant it advances.",
-      "Capability-specific host machinery is not a substitute for learner-owned competence.",
-      "Audit before deletion; preserve negative results and ancestry.",
-      "A projection may never override this graph.",
-      "If live evidence conflicts with snapshot status here, live evidence wins and this snapshot must be refreshed."
-    ],
-    "audit_start_snapshot": "split/minerva@37fd1ce3bf90354e580bc5b8dd77fe495a523130",
-    "live_status_sources": [
-      "kernel/CURRENT_STATE.md",
-      "kernel/development/EDU_CURRENT.json",
-      "live GitHub issue and branch state"
-    ],
-    "register_rule": "These are linked projections of one research body with distinct claim registers. Use their relations to route work; never merge their warrants or state into one undifferentiated claim.",
-    "current_state_snapshot": "split/minerva@95b228c5995cea0d322fcb45f51a5d86b600cbb1"
-  },
-  "temporal_provenance": [
-    {
-      "id": "HISTORY_CARRIER_143744",
-      "source": "Pasted text(20260926-143744).txt",
-      "role": "developmental ancestry, experiments, operators, and historical claims",
-      "observed_at": "2026-09-26T14:37:43Z",
-      "disposition": "PRESERVE_AS_PROVENANCE"
-    },
-    {
-      "id": "ARCHITECTURE_COMPRESSION_144422",
-      "source": "Pasted text(20260926-144422).txt",
-      "role": "integrated developmental architecture and current conceptual relations",
-      "observed_at": "2026-09-26T14:44:22Z",
-      "supersedes": [
-        "HISTORY_CARRIER_143744"
-      ],
-      "supersession_scope": "state claims and architecture where explicitly refined; never deletes ancestry, failed discriminators, negative results, or abandoned alternatives"
-    },
-    {
-      "id": "LIVE_REPOSITORY_SNAPSHOT",
-      "source": "split/minerva@37fd1ce3bf90354e580bc5b8dd77fe495a523130",
-      "role": "current code, data, issue routing, and branch state at audit start",
-      "disposition": "SNAPSHOT_NOT_FUTURE_GUARANTEE"
-    },
-    {
-      "id": "BYTES_TO_ABSTRACTION_CORRECTION",
-      "source": "user correction in conversation 2026-09-26",
-      "role": "input boundary constraint",
-      "rule": "arbitrary bytes -> learner abstraction; do not insert a host-authored modality ontology between them"
-    }
-  ],
-  "semantic_recurrence": {
-    "claim": "One time-indexed semantic graph governs the recurrence; artifacts and issues are evidence carriers attached to graph nodes, not competing roadmaps.",
-    "state_variables": [
-      "learner_state",
-      "future_test_family_F",
-      "retained_history_and_provenance",
-      "external_boundary_and_jurisdiction"
-    ],
-    "inputs": {
-      "world": "genuinely external World/Other and non-preauthored consequence",
-      "carrier": "raw bytes",
-      "rule": "bytes -> abstraction directly; retain source identity/provenance and raw carrier, but do not dispatch by MIME into a hand-authored semantic taxonomy"
-    },
-    "operators": [
-      {
-        "id": "ABSTRACT",
-        "input": "bytes + retained learner state",
-        "operation": "form candidate distinctions/relations indexed to a declared future-test family F",
-        "output": "candidate abstraction",
-        "role": "learner-owned semantics; substrate may carry bytes and execute generic operations"
-      },
-      {
-        "id": "GENERATE",
-        "input": "abstraction + residual",
-        "operation": "generate candidate relations, transformations, questions, actions, and discriminators",
-        "output": "candidate set",
-        "noncollapse": "generation != selection != authorization"
-      },
-      {
-        "id": "LATERALIZE",
-        "input": "residual not resolved in current representational basis",
-        "operation": "expand/re-coordinate the basis into independently answerable faces whose disagreement can expose hidden structure",
-        "output": "richer candidate representation",
-        "conditional": true
-      },
-      {
-        "id": "TEST_AND_RETURN",
-        "input": "prefrozen candidate/discriminator and admissible action",
-        "operation": "enact or inquire; obtain independently sourced consequence",
-        "output": "return with provenance",
-        "external_ownership": [
-          "World/Other",
-          "return source",
-          "evidence identity",
-          "jurisdiction",
-          "authorization"
-        ]
-      },
-      {
-        "id": "CRYSTALLIZE_F",
-        "input": "candidate relations + admitted future-test family F + returned separators",
-        "operation": "quotient only distinctions that no reachable admissible test separates; retain residuals",
-        "output": "minimum future-sufficient organization",
-        "reopen_rule": "if a newly admissible future test separates formerly equivalent states, reopen/refine the earlier quotient"
-      },
-      {
-        "id": "INTERNALIZE",
-        "input": "stable consequence-bearing competence",
-        "operation": "move competence into learner-owned persistent state and remove capability-specific source/scaffold",
-        "output": "state-owned competence if the same consequence survives",
-        "entry_gate": "B1 abstraction and B2 causal use passed; B3 source removal, restart/delay, fresh transfer, and independent evaluation required"
-      },
-      {
-        "id": "RSM_RSI",
-        "input": "current learner state + residuals + admissible work frontier",
-        "operation": "select and schedule the learner's next developmental limitation, revise implicated machinery under governance, then repeat",
-        "output": "successor learner state and next residual",
-        "noncollapse": "self-revision != self-authorization != self-validation"
-      }
-    ],
-    "one_cycle_edges": [
-      [
-        "BYTES",
-        "ABSTRACT"
-      ],
-      [
-        "ABSTRACT",
-        "RESIDUAL_IF_FUTURE_SEPARATING"
-      ],
-      [
-        "RESIDUAL_IF_FUTURE_SEPARATING",
-        "GENERATE"
-      ],
-      [
-        "RESIDUAL_IF_REPRESENTATION_FAILURE",
-        "LATERALIZE"
-      ],
-      [
-        "GENERATE",
-        "PREFROZEN_TEST_OR_ACTION"
-      ],
-      [
-        "PREFROZEN_TEST_OR_ACTION",
-        "TEST_AND_RETURN"
-      ],
-      [
-        "TEST_AND_RETURN",
-        "CRYSTALLIZE_F"
-      ],
-      [
-        "CRYSTALLIZE_F",
-        "INTERNALIZE_IF_B1_B2_STABLE"
-      ],
-      [
-        "INTERNALIZE_IF_B1_B2_STABLE",
-        "RSM_RSI"
-      ],
-      [
-        "RSM_RSI",
-        "SUCCESSOR_STATE"
-      ]
-    ],
-    "recurrence_edge": {
-      "from": "SUCCESSOR_STATE",
-      "to": "BYTES",
-      "index_shift": "t -> t+1",
-      "law": "new returned difference may create a residual, change F, reopen a crystal, or expose a different machinery limitation"
-    },
-    "proof_burdens": {
-      "B1": "abstraction survives nuisance/surface changes while preserving consequential sensitivity",
-      "B2": "intervention on the distinction changes later behavior/consequence for the predicted reason",
-      "B3": "capability survives capability-specific source removal, rehydration/restart, delay, fresh transfer, and independent evaluation"
-    },
-    "permanent_external_boundaries": [
-      "World/Other",
-      "fresh non-preauthored Return",
-      "evidence identity and custody",
-      "independent evaluator",
-      "trust root",
-      "authorization",
-      "jurisdiction",
-      "claim promotion",
-      "STOP/WITHHOLD",
-      "rollback/parent custody",
-      "hard substrate limits",
-      "O* / Anti-Minerva correction permeability"
-    ]
-  },
-  "current_frontier_ref": "kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json",
-  "current_snapshot_status": {
-    "active_frontier": [
-      "A_RETURN_CREDIT_ASSIGNMENT",
-      "B_DEPENDENCY_DAG_PLANNING"
-    ],
-    "blocked_chain": [
-      "C_UNCERTAINTY_NONSTATIONARITY <- A_RETURN_CREDIT_ASSIGNMENT",
-      "D_RSI_RECURRENCE_AUDIT <- A_RETURN_CREDIT_ASSIGNMENT + B_DEPENDENCY_DAG_PLANNING",
-      "E_INTERNALIZATION <- D_RSI_RECURRENCE_AUDIT"
-    ],
-    "review_barrier": "Issue #238 remains the canonical open external-review carrier for the selected #236 cycle and blocks reroll; no host prototype closes that barrier.",
-    "caveat": "Status is snapshot-specific and must be re-read from live repository evidence before action.",
-    "snapshot_head": "95b228c5995cea0d322fcb45f51a5d86b600cbb1",
-    "dependency_planning_host_prototype": "PRESERVED_NON_LIVE_AUDIT_ONLY",
-    "dependency_planning_executable_curriculum": false
-  },
-  "register_interfaces": [
-    {
-      "id": "OFE",
-      "branch": "split/ofe",
-      "snapshot": "58fc7b4293ffc6fadd99f21004913d9426f3229b",
-      "role": "scientific/future discriminator; future-sufficient quotient and evolving-test transport",
-      "non_transfer": "formal quotient results do not establish a physical realization"
-    },
-    {
-      "id": "ECLIPSIS",
-      "branch": "split/eclipsis",
-      "snapshot": "2f3264aee8d63c8de9b4da8c76f1749e2ed69f89",
-      "role": "math/logics and structural model; local faces, residuals, gluing, return-conditioned reconstruction",
-      "non_transfer": "structural fit does not establish physics or consciousness"
-    },
-    {
-      "id": "ARCANE_MAGICS",
-      "branch": "split/arcane-magics",
-      "snapshot": "297a48a71dd02b1f3ae3a5179045e5648062b765",
-      "role": "historical/comparative and theophenomenological symbolic projection",
-      "non_transfer": "symbolic recurrence does not transfer scientific warrant"
-    },
-    {
-      "id": "MINERVA",
-      "branch": "split/minerva",
-      "snapshot": "37fd1ce3bf90354e580bc5b8dd77fe495a523130",
-      "role": "engineering/body; executable developmental machinery and returned evidence",
-      "non_transfer": "engineering success does not self-certify claims"
-    },
-    {
-      "id": "VENUS",
-      "branch": "split/venus",
-      "snapshot": "b4c1e5d9f249b28b213d0f4cad54912e9210d378",
-      "role": "Self↔World model, incidence and boundary law",
-      "non_transfer": "architecture names do not prove AGI, consciousness, or global agency"
-    }
-  ]
+  "truth_authority": false
 }

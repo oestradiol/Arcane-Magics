@@ -2,39 +2,47 @@
 
 Minerva is the Engineering / body branch and live WorldMirror developmental machine.
 
-## Two-file live bootstrap
+Do not use old shared Venus-Minerva roadmaps to infer current state.
 
-1. [Canonical developmental DAG](../kernel/development/DEVELOPMENTAL_GATE_CHAIN.json) — the sole machine-readable topology, recurrence, precedence, and file-disposition authority.
-2. [Current state](../kernel/CURRENT_STATE.md) — the live status/evidence snapshot.
+## Read first
 
-After those two, follow only the references required by the selected DAG node. Open [EDU authority](../kernel/development/EDU_CURRENT.json), [repository authority boundary](../REPOSITORY_AUTHORITY_BOUNDARY.md), tests, or provenance only when that node requires them.
+1. [Current state](../kernel/CURRENT_STATE.md)
+2. [Kernel map](../kernel/README.md)
+3. [WorldMirror VM](WORLDMIRROR_VM.md)
+4. [Runtime substrate](../kernel/runtime/README.md)
+5. [Developmental semantics](../kernel/development/README.md)
+6. [State surfaces](../kernel/state/README.md)
+7. [Autonomy evidence](../autonomy/evidence/README.md)
+8. [Development roadmap](ISSUE_ROADMAP.md)
+9. [Autonomous research contract](AUTONOMOUS_RESEARCH.md)
+10. [Earned milestones](EARNED_MILESTONES.md)
+11. [Test coverage matrix](TEST_COVERAGE_MATRIX.md)
+12. [Canonical retirement ledger](../provenance/CANONICAL_RETIREMENT_LEDGER.md)
+13. [Repository authority boundary](../REPOSITORY_AUTHORITY_BOUNDARY.md)
+7. [Kernel index](../kernel/README.md)
+8. [Runtime index](../kernel/runtime/README.md)
+9. [Development index](../kernel/development/README.md)
+10. [State index](../kernel/state/README.md)
+11. [Evidence index](../autonomy/evidence/README.md)
+12. [Test coverage matrix](TEST_COVERAGE_MATRIX.md)
+13. [Canonical retirement ledger](../provenance/CANONICAL_RETIREMENT_LEDGER.md)
 
-The [A–E subgraph](../kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json) and [issue roadmap](ISSUE_ROADMAP.md) are projections for convenience. They do not define a second planning system.
+## Current one-paragraph state
 
-Do not bulk-read provenance as a substitute for selecting a dependency path.
+Minerva already has bounded learner-owned recurrence, problem formation, Internalizer/O*/Anti-Minerva safety, learner-initiated network inquiry, persistent memory, Theater/KFS state reconstruction, a non-sovereign interaction/mentor surface, and an early returned-utility learning loop for semantic-trace configuration. General lateral transfer, interactive Lain, repeated heterogeneous Strong Safe RSI, AGI, and consciousness remain unearned.
 
-## Core recurrence
+## Core loop
 
 ```text
-World / bytes
-→ abstraction
-→ residual
-→ GENERATE
-→ LATERALIZE iff representation is insufficient
-→ prefrozen consequential test
-→ nonpreauthored return
-→ CRYSTALLIZE_F
-→ INTERNALIZE iff B1/B2 are stable and B3 is earned
-→ RSM / next developmental residual
-→ World
+residual
+→ problem
+→ candidate
+→ discriminator
+→ World return
+→ abstraction / causal-use / ownership tests
+→ learner-state revision
+→ transfer / reopening
+→ next residual
 ```
-
-```text
-learner-owned competence ↑
-capability-specific machinery ↓
-external correction / authority boundaries remain reachable
-```
-
-The preserved #236 dependency-planning host prototype is non-live audit material. It does not count as Minerva learning planning and is not executable curriculum routing.
 
 Historical files may still say Venus or Venus-Minerva where renaming would break provenance. That is ancestry, not current ownership.

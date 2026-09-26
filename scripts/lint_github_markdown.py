@@ -238,13 +238,17 @@ def inspect_public(md: Path) -> list[str]:
 def inspect_navigation_contract() -> list[str]:
     errors: list[str] = []
 
-    # Bootstrap is intentionally minimal: one semantic authority plus one live
-    # status surface. Subsystem indexes are validated below, but are not startup
-    # dependencies. This prevents navigation sprawl from becoming a second
-    # planning system.
     required_start_links = (
-        "../kernel/development/DEVELOPMENTAL_GATE_CHAIN.json",
         "../kernel/CURRENT_STATE.md",
+        "../kernel/README.md",
+        "WORLDMIRROR_VM.md",
+        "../kernel/runtime/README.md",
+        "../kernel/development/README.md",
+        "../kernel/state/README.md",
+        "../autonomy/evidence/README.md",
+        "EARNED_MILESTONES.md",
+        "TEST_COVERAGE_MATRIX.md",
+        "../provenance/CANONICAL_RETIREMENT_LEDGER.md",
     )
     start = ROOT / "docs/START_HERE.md"
     if not start.exists():
@@ -258,12 +262,8 @@ def inspect_navigation_contract() -> list[str]:
     readme = ROOT / "README.md"
     if readme.exists():
         text = readme.read_text(encoding="utf-8", errors="replace")
-        for link in (
-            "kernel/development/DEVELOPMENTAL_GATE_CHAIN.json",
-            "kernel/CURRENT_STATE.md",
-        ):
-            if link not in text:
-                errors.append(f"README.md: missing minimal bootstrap route {link}")
+        if "docs/START_HERE.md" not in text:
+            errors.append("README.md: does not route through docs/START_HERE.md")
 
 
     subsystem_routes = {
