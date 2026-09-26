@@ -8,7 +8,10 @@ This ledger distinguishes historical claim-bearing authority from the live execu
 
 - R226 remains a required ancestry anchor in the developmental lineage (`R226 → S/SM → CTL-K1 → WM1R1 → U* → RB1 → IG1…IG10 → EDU*`).
 - IG10 remains the exact Git-reconstructible runtime checkpoint for the VMK2 carrier.
-- EDU16 remains the current historical positive developmental authority at its admitted scope.
+- EDU16 remains the current historical positive developmental authority at its admitted scope:
+  - head: `6e02302abafb9f31ee5cb1b6f6d69a4e5c1e750371f99c4ee640f259f228c81e`
+  - sha256: `bde664e4bc2c45bc961720fc83e907a9c6b09ce581ccdfb61b8fb7bf5897e414`
+  - verdict: `PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY`.
 - EDU16-RC1 remains the deterministic reconstructed claim-bearing carrier; it is not a recovered 1703-event historical journal.
 - EDU17 remains a preserved negative with disposition `INVALID_FOR_PROMOTION`.
 - EDU17R1 retains the measured separator `MENTION != INCIDENCE`; its repair artifacts remain bounded historical/prospective evidence, not today's whole developmental state.
