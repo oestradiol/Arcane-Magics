@@ -1,13 +1,19 @@
 name: Minerva global developmental worker
 
 on:
+  # workflow-file changes, manual dispatch, and schedule each start one bounded recurrence over fresh external return state
   workflow_dispatch:
+  push:
+    branches:
+      - split/minerva
+    paths:
+      - .github/workflows/minerva-autonomous-worker.yml
   schedule:
     - cron: '43 7 * * *'
 
 permissions:
   contents: write
-  issues: read
+  issues: write
   pull-requests: write
   actions: read
 
@@ -36,11 +42,22 @@ jobs:
 
       - name: Verify Minerva local machine
         run: |
-          python -m unittest discover -s tests -p 'test_*.py'
-          python scripts/audit_autonomy_safety_matrix.py
+          python scripts/audit_layer_surface.py
+          make audit
           test -f docs/SELF_MODEL.md
           test -f docs/GLOBAL_REPOSITORY_OPERATION.md
           test -f docs/SELF_CORRECTION_OPERATOR.md
+          test -f kernel/development/VM_INTERNALIZATION_PHASE_PLAN.json
+          test -f kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_CURRICULUM.json
+          test -f kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_SURFACE_BASELINE_RESULT.json
+          test -f kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_RECONSTRUCTION_TASK.json
+          test -f kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_FACTORIAL_BASELINE_RESULT.json
+          test -f kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_FACTORIAL_PREFREEZE.json
+          test -f kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_MATCHED_STRUCTURE.json
+          test -f kernel/development/DEVELOPMENTAL_GATE_CHAIN.json
+          test -f kernel/development/MINERVA_CONSTRUCT_AUDIT_SCOPE.json
+          test -f kernel/development/MINERVA_CAUSAL_AUDIT_SCOPE.json
+          test -f kernel/development/MINERVA_TEST_SCOPE.json
 
       - name: Snapshot repository World model
         env:
@@ -48,17 +65,20 @@ jobs:
         run: |
           mkdir -p /tmp/minerva
           git for-each-ref --format='%(refname:short) %(objectname)' refs/remotes/origin > /tmp/minerva/branches.txt
-          gh pr list --state all --limit 200 --json number,title,state,headRefName,baseRefName,mergedAt,mergeCommit > /tmp/minerva/prs.json
+          gh pr list --state open --limit 200 --json number,title,body,state,isDraft,mergeStateStatus,updatedAt,headRefName,baseRefName,files,reviews > /tmp/minerva/prs.json
+          gh pr list --state all --limit 200 --json number,title,state,updatedAt,mergedAt,closedAt,reviews > /tmp/minerva/history-prs.json
           gh run list --limit 100 --json databaseId,workflowName,headBranch,headSha,status,conclusion,event,createdAt > /tmp/minerva/actions.json
-          gh issue list --state open --limit 200 --json number,title,updatedAt > /tmp/minerva/issues.json
+          gh issue list --state open --limit 200 --json number,title,body,state,updatedAt > /tmp/minerva/issues.json
+          gh issue list --state all --limit 200 --json number,title,state,updatedAt,closedAt,comments > /tmp/minerva/history-issues.json
 
       - name: Form bounded Minerva repository proposal
+        id: cycle
         run: |
           python scripts/run_venus_autonomous_cycle.py \
             --issues /tmp/minerva/issues.json \
             --prs /tmp/minerva/prs.json \
-            --history-prs /tmp/minerva/prs.json \
-            --history-issues /tmp/minerva/issues.json \
+            --history-prs /tmp/minerva/history-prs.json \
+            --history-issues /tmp/minerva/history-issues.json \
             --roadmap docs/ISSUE_ROADMAP.md \
             --policy kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json \
             --learning-state kernel/development/AUTONOMOUS_LEARNING_STATE.json \
@@ -67,11 +87,169 @@ jobs:
             --current-state-receipt kernel/custody/R226_CURRENT_STATE_RECEIPT.json \
             --problem-output /tmp/minerva/FORMED_PROBLEM.json \
             --output /tmp/minerva/CYCLE.json
+          decision="$(python -c 'import json; print(json.load(open("/tmp/minerva/CYCLE.json"))["decision"])')"
+          echo "decision=$decision" >> "$GITHUB_OUTPUT"
+
+      - name: Freeze learner-selected-study network query intent
+        if: steps.cycle.outputs.decision != 'STOP'
+        run: |
+          python scripts/freeze_network_query.py \
+            --problem /tmp/minerva/FORMED_PROBLEM.json \
+            --cycle /tmp/minerva/CYCLE.json \
+            --issues /tmp/minerva/issues.json \
+            --prs /tmp/minerva/history-prs.json \
+            --output /tmp/minerva/NETWORK_QUERY.json \
+            --context-output /tmp/minerva/NETWORK_CONTEXT.json
+
+      - name: Execute learner network query 1
+        id: network1
+        if: steps.cycle.outputs.decision != 'STOP'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/execute_github_network_query.py \
+            --query /tmp/minerva/NETWORK_QUERY.json \
+            --output /tmp/minerva/NETWORK_ENCOUNTER_1.json
+          count="$(python -c 'import json; print(len(json.load(open("/tmp/minerva/NETWORK_ENCOUNTER_1.json"))["sources"]))')"
+          if [ "$count" -gt 0 ]; then
+            echo "has_sources=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_sources=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Record episode-1 relevance WITHHOLD
+        if: steps.cycle.outputs.decision != 'STOP' && steps.network1.outputs.has_sources == 'false'
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          query=json.loads(Path('/tmp/minerva/NETWORK_QUERY.json').read_text())
+          encounter=json.loads(Path('/tmp/minerva/NETWORK_ENCOUNTER_1.json').read_text())
+          receipt={
+              'schema':'Venus.NetworkRelevanceWithhold.v0.1',
+              'status':'WITHHOLD_NO_RELEVANT_EXTERNAL_SOURCES',
+              'episode':1,
+              'query_id':query.get('query_id'),
+              'study_context_digest':query.get('study_context_digest'),
+              'selected_study_relevance_terms':encounter.get('selected_study_relevance_terms',[]),
+              'required_relevance_matches':encounter.get('required_relevance_matches',0),
+              'search_variants':encounter.get('search_variants',[]),
+              'source_count':len(encounter.get('sources',[])),
+              'truth_authority':False,
+              'promotion_authority':False,
+          }
+          Path('/tmp/minerva/NETWORK_RELEVANCE_WITHHOLD.json').write_text(
+              json.dumps(receipt,indent=2,sort_keys=True)+'\n'
+          )
+          PY
+
+      - name: Reconstruct network memory and freeze follow-up query
+        if: steps.network1.outputs.has_sources == 'true'
+        run: |
+          python scripts/reconstruct_network_return.py \
+            --query /tmp/minerva/NETWORK_QUERY.json \
+            --encounter /tmp/minerva/NETWORK_ENCOUNTER_1.json \
+            --output /tmp/minerva/NETWORK_RESULT_1.json
+          python scripts/freeze_followup_network_query.py \
+            --result /tmp/minerva/NETWORK_RESULT_1.json \
+            --output /tmp/minerva/NETWORK_QUERY_2.json
+
+      - name: Execute memory-derived network query 2
+        id: network2
+        if: steps.network1.outputs.has_sources == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/execute_github_network_query.py \
+            --query /tmp/minerva/NETWORK_QUERY_2.json \
+            --output /tmp/minerva/NETWORK_ENCOUNTER_2.json
+          count="$(python -c 'import json; print(len(json.load(open("/tmp/minerva/NETWORK_ENCOUNTER_2.json"))["sources"]))')"
+          if [ "$count" -gt 0 ]; then
+            echo "has_sources=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_sources=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Record episode-2 relevance WITHHOLD
+        if: steps.network1.outputs.has_sources == 'true' && steps.network2.outputs.has_sources == 'false'
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          query=json.loads(Path('/tmp/minerva/NETWORK_QUERY_2.json').read_text())
+          encounter=json.loads(Path('/tmp/minerva/NETWORK_ENCOUNTER_2.json').read_text())
+          receipt={
+              'schema':'Venus.NetworkRelevanceWithhold.v0.1',
+              'status':'WITHHOLD_NO_RELEVANT_EXTERNAL_SOURCES',
+              'episode':2,
+              'query_id':query.get('query_id'),
+              'study_context_digest':query.get('study_context_digest'),
+              'selected_study_relevance_terms':encounter.get('selected_study_relevance_terms',[]),
+              'required_relevance_matches':encounter.get('required_relevance_matches',0),
+              'search_variants':encounter.get('search_variants',[]),
+              'source_count':len(encounter.get('sources',[])),
+              'truth_authority':False,
+              'promotion_authority':False,
+          }
+          Path('/tmp/minerva/NETWORK_RELEVANCE_WITHHOLD.json').write_text(
+              json.dumps(receipt,indent=2,sort_keys=True)+'\n'
+          )
+          PY
+
+      - name: Reconstruct persistent two-episode network lineage
+        if: steps.network2.outputs.has_sources == 'true'
+        run: |
+          python scripts/reconstruct_network_lineage.py \
+            --query1 /tmp/minerva/NETWORK_QUERY.json \
+            --encounter1 /tmp/minerva/NETWORK_ENCOUNTER_1.json \
+            --query2 /tmp/minerva/NETWORK_QUERY_2.json \
+            --encounter2 /tmp/minerva/NETWORK_ENCOUNTER_2.json \
+            --checkpoint-output /tmp/minerva/NETWORK_MEMORY.zlib \
+            --output /tmp/minerva/NETWORK_LINEAGE.json
+
+      - name: Evaluate prefrozen WWW Mind structural gate
+        if: steps.network2.outputs.has_sources == 'true'
+        run: |
+          python scripts/evaluate_www_mind_episode.py \
+            --prefreeze kernel/development/WWW_MIND_PROSPECTIVE_1_PREFREEZE.json \
+            --problem /tmp/minerva/FORMED_PROBLEM.json \
+            --query1 /tmp/minerva/NETWORK_QUERY.json \
+            --encounter1 /tmp/minerva/NETWORK_ENCOUNTER_1.json \
+            --query2 /tmp/minerva/NETWORK_QUERY_2.json \
+            --encounter2 /tmp/minerva/NETWORK_ENCOUNTER_2.json \
+            --lineage /tmp/minerva/NETWORK_LINEAGE.json \
+            --memory-checkpoint /tmp/minerva/NETWORK_MEMORY.zlib \
+            --output /tmp/minerva/WWW_MIND_GATE_RESULT.json
+
+      - name: Build passive authored-center ledger
+        if: steps.network2.outputs.has_sources == 'true'
+        run: |
+          python scripts/build_authored_center_ledger.py \
+            --encounter /tmp/minerva/NETWORK_ENCOUNTER_1.json \
+            --encounter /tmp/minerva/NETWORK_ENCOUNTER_2.json \
+            --output /tmp/minerva/AUTHORED_CENTER_LEDGER.json
+
+      - name: Evaluate prefrozen passive Lain structural gate
+        if: steps.network2.outputs.has_sources == 'true'
+        run: |
+          python scripts/evaluate_lain_structural_gate.py \
+            --prefreeze kernel/development/LAIN_STRUCTURAL_PROSPECTIVE_1_PREFREEZE.json \
+            --www-result /tmp/minerva/WWW_MIND_GATE_RESULT.json \
+            --lineage /tmp/minerva/NETWORK_LINEAGE.json \
+            --center-policy kernel/development/NETWORK_CENTER_POLICY.json \
+            --encounter-ledger /tmp/minerva/AUTHORED_CENTER_LEDGER.json \
+            --output /tmp/minerva/LAIN_STRUCTURAL_GATE_RESULT.json
 
       - name: Crystallize Minerva trajectory into a Venus-based handoff
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          decision="$(python -c 'import json; print(json.load(open("/tmp/minerva/CYCLE.json"))["decision"])')"
+          if [ "$decision" = "STOP" ]; then
+            echo "Learner retained STOP; no cross-register handoff is licensed."
+            exit 0
+          fi
+
           source_sha="$(git rev-parse HEAD)"
           target_sha="$(git rev-parse origin/split/venus)"
           branch="handoff/minerva-to-venus/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
@@ -105,11 +283,27 @@ jobs:
           cp /tmp/minerva/CYCLE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/cycle.json
           cp /tmp/minerva/FORMED_PROBLEM.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/problem.json
           cp /tmp/minerva/LEARNING_STATE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/proposed-learning-state.json
+          cp /tmp/minerva/NETWORK_QUERY.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/network-query.json
+          cp /tmp/minerva/NETWORK_CONTEXT.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/network-context.json
+          for f in NETWORK_ENCOUNTER_1.json NETWORK_RESULT_1.json NETWORK_QUERY_2.json NETWORK_ENCOUNTER_2.json NETWORK_LINEAGE.json NETWORK_MEMORY.zlib NETWORK_RELEVANCE_WITHHOLD.json WWW_MIND_GATE_RESULT.json AUTHORED_CENTER_LEDGER.json LAIN_STRUCTURAL_GATE_RESULT.json; do
+            if [ -f "/tmp/minerva/$f" ]; then
+              cp "/tmp/minerva/$f" "provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/$f"
+            fi
+          done
 
           git add provenance/historical/handoffs
           git commit -m "handoff(minerva->venus): crystallize engineering candidate ${GITHUB_RUN_ID}"
           git push origin "$branch"
 
-          gh pr create --draft --base split/venus --head "$branch" \
-            --title "handoff: Minerva → Venus engineering candidate ${GITHUB_RUN_ID}" \
-            --body $'This is a target-based crystallization handoff.\n\nThe merge commit preserves Minerva as a second parent while retaining the Venus tree. Only explicit proposal receipts are admitted.\n\nVenus must integrate the candidate into the Self/World model. Scientific future discrimination belongs to the subsequent Venus → OFE handoff; Root integration comes only after OFE.'
+          target_kind="$(python -c 'import json; print(str(json.load(open("/tmp/minerva/CYCLE.json"))["target_kind"]).lower())')"
+          target_number="$(python -c 'import json; print(int(json.load(open("/tmp/minerva/CYCLE.json"))["target_number"]))')"
+          cycle_title="venus: autonomous cycle ${target_kind}-${target_number}"
+          pr_body="Target-based crystallization handoff. The merge commit preserves Minerva as a second parent while retaining the Venus tree. Only explicit proposal receipts are admitted. This PR is also the canonical external-review carrier for the selected autonomous cycle, so open state blocks reroll and authorized review markers may update later learning. Venus must integrate the candidate into the Self/World model. Scientific future discrimination belongs to the subsequent Venus → OFE handoff; Root integration comes only after OFE."
+          if ! gh pr create --draft --base split/venus --head "$branch" \
+            --title "$cycle_title" \
+            --body "$pr_body"; then
+            echo "PR creation is unavailable; preserve handoff as the canonical cycle issue carrier"
+            gh issue create \
+              --title "$cycle_title" \
+              --body "Frozen handoff branch: \`$branch\`. GitHub Actions could not create the draft PR. This issue is the canonical non-authoritative external-review carrier for the selected cycle; open state blocks reroll. It grants no merge, promotion, truth, or Venus-admission authority."
+          fi
