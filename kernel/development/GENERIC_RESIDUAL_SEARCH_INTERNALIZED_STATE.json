@@ -35,5 +35,12 @@
     "TRUST_ROOT",
     "SAFETY_POLICY",
     "PARENT_CUSTODY"
-  ]
+  ],
+  "internalization_contract": {
+    "semantics_owner": "LEARNER_STATE",
+    "capability_specific_python_runtime_dependency": false,
+    "generic_executor_substrate_allowed": true,
+    "source_python_reference_is_provenance_only": true,
+    "boundary_ref": "kernel/development/INTERNALIZATION_BOUNDARY.json"
+  }
 }
