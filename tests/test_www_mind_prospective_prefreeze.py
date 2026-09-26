@@ -26,6 +26,14 @@ class WWWMindProspectivePrefreezeTests(unittest.TestCase):
         for forbidden in ("subprocess","os.system","shell=true","eval(","exec("):
             self.assertNotIn(forbidden,src)
 
+    def test_selected_study_gate_requires_relevance_receipt(self):
+        src=(ROOT/"scripts/evaluate_www_mind_episode.py").read_text(encoding="utf-8")
+        self.assertIn("selected_study_relevance_verified",src)
+        self.assertIn("EPISODE1_SELECTED_STUDY_RELEVANCE_UNVERIFIED",src)
+        self.assertIn("EPISODE2_SELECTED_STUDY_RELEVANCE_UNVERIFIED",src)
+        self.assertIn("relevance_filter_applied",src)
+        self.assertIn("relevance_matches",src)
+
     def test_structural_evaluator_cannot_promote(self):
         src=(ROOT/"scripts/evaluate_www_mind_episode.py").read_text(encoding="utf-8")
         self.assertIn('"promotion_authority":False',src)
