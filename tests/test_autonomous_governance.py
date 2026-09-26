@@ -534,6 +534,28 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertIn("Root integration comes only after OFE", text)
 
 
+    def test_handoff_review_carrier_uses_cycle_identity(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn('cycle_title="venus: autonomous cycle ${target_kind}-${target_number}"', text)
+        self.assertIn('--title "$cycle_title"', text)
+        self.assertIn("open state blocks reroll", text)
+
+    def test_handoff_review_carrier_can_receive_external_learning_return(self):
+        carriers = ({
+            "_carrier_kind": "PR",
+            "number": 999,
+            "title": "venus: autonomous cycle issue-206",
+            "state": "OPEN",
+            "reviews": [{
+                "author": {"login": "oestradiol"},
+                "body": "VENUS_WORK_RETURN: USEFUL\nVENUS_METHOD_RETURN: DEPENDENCY_TRACE: USEFUL",
+                "submittedAt": "2026-09-26T05:00:00Z",
+            }],
+        },)
+        returns = extract_explicit_returns(carriers, authorized_logins={"oestradiol"})
+        self.assertTrue(any(row[1:] == ("KIND", "ISSUE", True) for row in returns))
+        self.assertTrue(any(row[1:] == ("METHOD", "DEPENDENCY_TRACE", True) for row in returns))
+
 
 if __name__ == "__main__":
     unittest.main()
