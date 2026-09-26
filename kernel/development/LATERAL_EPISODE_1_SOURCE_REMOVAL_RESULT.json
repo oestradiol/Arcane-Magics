@@ -1,0 +1,20 @@
+{
+  "alpha_rename_invariant": false,
+  "behavior_equivalent_after_removal": false,
+  "capability_id": "LATERAL169_EPISODE1_PROJECTION_POLICY",
+  "fresh_transfer_return_external": false,
+  "generic_executor": "kernel/runtime/token_knn.py",
+  "generic_executor_sha256": "7ef1765c0d70fefc683c875bc0ea1b402576be145aa0b438eac5f76c8fd09fba",
+  "internalization_receipt_minted": false,
+  "next_residual": "FRESH_RENAMED_TRANSFER_RETURN_FOR_INTERNALIZATION",
+  "original_scaffold_in_isolated_bundle": false,
+  "promotion_authority": false,
+  "schema": "Venus.LateralSourceRemovalResult.v0.1",
+  "source_provenance_preserved": true,
+  "source_scaffold": "kernel/development/lateral_episode.py",
+  "source_scaffold_sha256": "84e367019e8fd1ed024dd6f1df851f6473cadb903ad58e41248445d930f4ee54",
+  "state_sha256": "0d5bc9eb46ffa85d7fff9a85be50d5ac175d5383d4eba9ea13d22da66b683ebc",
+  "status": "PASS_EPISODE1_SOURCE_REMOVAL_EQUIVALENCE_PENDING_FRESH_TRANSFER",
+  "successor_reconstructible": true,
+  "truth_authority": false
+}
