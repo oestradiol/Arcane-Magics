@@ -1,0 +1,331 @@
+{
+  "schema": "Venus.CognitiveTheaterBindingOrderFresh2Prefreeze.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_AFTER_G2_G3_FAILURE_BEFORE_FRESH2_RESULT",
+  "issue_ref": 206,
+  "parent_negative_ref": "kernel/development/COGNITIVE_THEATER_BINDING_ORDER_RESULT.json",
+  "purpose": "Test whether explicitly noncommutative ordered center-context representation improves participant/KFS and temporal binding over the previously returned commutative set-similarity scaffold on fresh three-center/three-event microtheaters.",
+  "freshness_rule": "No row from COGNITIVE_THEATER_BINDING_ORDER_PREFREEZE.json is reused as a Fresh2 heldout row.",
+  "tasks": [
+    {
+      "id": "G2_THREE_CENTER_KFS",
+      "output_schema": {
+        "base_knower": "participant_token",
+        "meta_knower": "participant_token",
+        "ignorant": "participant_token"
+      },
+      "train_examples": {
+        "ENGLISH": [
+          {
+            "surface": "@a knows P. @b knows that @a knows P. @c does not know P.",
+            "gold": {
+              "base_knower": "@a",
+              "meta_knower": "@b",
+              "ignorant": "@c"
+            }
+          },
+          {
+            "surface": "@f does not know P. @e knows that @d knows P. @d knows P.",
+            "gold": {
+              "base_knower": "@d",
+              "meta_knower": "@e",
+              "ignorant": "@f"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "@aはPを知っている。@bは@aがPを知っていることを知っている。@cはPを知らない。",
+            "gold": {
+              "base_knower": "@a",
+              "meta_knower": "@b",
+              "ignorant": "@c"
+            }
+          },
+          {
+            "surface": "@fはPを知らない。@eは@dがPを知っていることを知っている。@dはPを知っている。",
+            "gold": {
+              "base_knower": "@d",
+              "meta_knower": "@e",
+              "ignorant": "@f"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "@a sabe P. @b sabe que @a sabe P. @c não sabe P.",
+            "gold": {
+              "base_knower": "@a",
+              "meta_knower": "@b",
+              "ignorant": "@c"
+            }
+          },
+          {
+            "surface": "@f não sabe P. @e sabe que @d sabe P. @d sabe P.",
+            "gold": {
+              "base_knower": "@d",
+              "meta_knower": "@e",
+              "ignorant": "@f"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "K_@a(P) ∧ K_@b(K_@a(P)) ∧ ¬K_@c(P).",
+            "gold": {
+              "base_knower": "@a",
+              "meta_knower": "@b",
+              "ignorant": "@c"
+            }
+          },
+          {
+            "surface": "¬K_@f(P) ∧ K_@e(K_@d(P)) ∧ K_@d(P).",
+            "gold": {
+              "base_knower": "@d",
+              "meta_knower": "@e",
+              "ignorant": "@f"
+            }
+          }
+        ]
+      },
+      "heldout_examples": {
+        "ENGLISH": [
+          {
+            "surface": "@m knows P. @o does not know P. @n knows that @m knows P.",
+            "gold": {
+              "base_knower": "@m",
+              "meta_knower": "@n",
+              "ignorant": "@o"
+            }
+          },
+          {
+            "surface": "@r knows that @q knows P. @p does not know P. @q knows P.",
+            "gold": {
+              "base_knower": "@q",
+              "meta_knower": "@r",
+              "ignorant": "@p"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "@mはPを知っている。@oはPを知らない。@nは@mがPを知っていることを知っている。",
+            "gold": {
+              "base_knower": "@m",
+              "meta_knower": "@n",
+              "ignorant": "@o"
+            }
+          },
+          {
+            "surface": "@rは@qがPを知っていることを知っている。@pはPを知らない。@qはPを知っている。",
+            "gold": {
+              "base_knower": "@q",
+              "meta_knower": "@r",
+              "ignorant": "@p"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "@m sabe P. @o não sabe P. @n sabe que @m sabe P.",
+            "gold": {
+              "base_knower": "@m",
+              "meta_knower": "@n",
+              "ignorant": "@o"
+            }
+          },
+          {
+            "surface": "@r sabe que @q sabe P. @p não sabe P. @q sabe P.",
+            "gold": {
+              "base_knower": "@q",
+              "meta_knower": "@r",
+              "ignorant": "@p"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "K_@m(P) ∧ ¬K_@o(P) ∧ K_@n(K_@m(P)).",
+            "gold": {
+              "base_knower": "@m",
+              "meta_knower": "@n",
+              "ignorant": "@o"
+            }
+          },
+          {
+            "surface": "K_@r(K_@q(P)) ∧ ¬K_@p(P) ∧ K_@q(P).",
+            "gold": {
+              "base_knower": "@q",
+              "meta_knower": "@r",
+              "ignorant": "@p"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "G3_THREE_EVENT_ORDER",
+      "output_schema": {
+        "first": "event_token",
+        "middle": "event_token",
+        "last": "event_token"
+      },
+      "train_examples": {
+        "ENGLISH": [
+          {
+            "surface": "First #a, then #b, finally #c.",
+            "gold": {
+              "first": "#a",
+              "middle": "#b",
+              "last": "#c"
+            }
+          },
+          {
+            "surface": "First #f, then #e, finally #d.",
+            "gold": {
+              "first": "#f",
+              "middle": "#e",
+              "last": "#d"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "最初に#a、次に#b、最後に#c。",
+            "gold": {
+              "first": "#a",
+              "middle": "#b",
+              "last": "#c"
+            }
+          },
+          {
+            "surface": "最初に#f、次に#e、最後に#d。",
+            "gold": {
+              "first": "#f",
+              "middle": "#e",
+              "last": "#d"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "Primeiro #a, depois #b, por fim #c.",
+            "gold": {
+              "first": "#a",
+              "middle": "#b",
+              "last": "#c"
+            }
+          },
+          {
+            "surface": "Primeiro #f, depois #e, por fim #d.",
+            "gold": {
+              "first": "#f",
+              "middle": "#e",
+              "last": "#d"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "t(#a) < t(#b) < t(#c).",
+            "gold": {
+              "first": "#a",
+              "middle": "#b",
+              "last": "#c"
+            }
+          },
+          {
+            "surface": "t(#f) < t(#e) < t(#d).",
+            "gold": {
+              "first": "#f",
+              "middle": "#e",
+              "last": "#d"
+            }
+          }
+        ]
+      },
+      "heldout_examples": {
+        "ENGLISH": [
+          {
+            "surface": "First #m, then #o, finally #n.",
+            "gold": {
+              "first": "#m",
+              "middle": "#o",
+              "last": "#n"
+            }
+          },
+          {
+            "surface": "First #r, then #p, finally #q.",
+            "gold": {
+              "first": "#r",
+              "middle": "#p",
+              "last": "#q"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "最初に#m、次に#o、最後に#n。",
+            "gold": {
+              "first": "#m",
+              "middle": "#o",
+              "last": "#n"
+            }
+          },
+          {
+            "surface": "最初に#r、次に#p、最後に#q。",
+            "gold": {
+              "first": "#r",
+              "middle": "#p",
+              "last": "#q"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "Primeiro #m, depois #o, por fim #n.",
+            "gold": {
+              "first": "#m",
+              "middle": "#o",
+              "last": "#n"
+            }
+          },
+          {
+            "surface": "Primeiro #r, depois #p, por fim #q.",
+            "gold": {
+              "first": "#r",
+              "middle": "#p",
+              "last": "#q"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "t(#m) < t(#o) < t(#n).",
+            "gold": {
+              "first": "#m",
+              "middle": "#o",
+              "last": "#n"
+            }
+          },
+          {
+            "surface": "t(#r) < t(#p) < t(#q).",
+            "gold": {
+              "first": "#r",
+              "middle": "#p",
+              "last": "#q"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "comparators": [
+    "RETURNED_COMMUTATIVE_TOKEN_CENTERED_JACCARD_SCAFFOLD",
+    "ORDERED_CENTERED_SEQUENCE_SCAFFOLD"
+  ],
+  "pass_rule": "Report both comparators on the exact same fresh rows. Improvement supports only that noncommutative ordered context matters for this bounded microtheater; it does not establish general Theater or Music.",
+  "claim_fence": "Fresh local developmental discriminator, not independent external evaluation. No culture/language essence, unrestricted reference resolution, prosody, general Theater, Internalizer, AGI, or truth claim follows.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
