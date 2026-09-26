@@ -571,7 +571,7 @@ def load_work_items(path: str | Path, kind: str) -> tuple[WorkItem, ...]:
                     for file_row in (row.get("files") or ())
                     if isinstance(file_row, Mapping) and file_row.get("path")
                 ),
-                review_count=len(tuple(row.get("reviews") or ())),
+                review_count=len(tuple(row.get("reviews") or row.get("comments") or ())),
             )
         )
     return tuple(out)
