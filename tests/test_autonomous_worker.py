@@ -444,6 +444,15 @@ class AutonomousWorkerTests(unittest.TestCase):
         self.assertIsNone(cycle.target_number)
         self.assertEqual(cycle.formed_problem_disposition, "STOP_NO_CONSEQUENTIAL_RESIDUAL")
 
+    def test_generated_handoff_carriers_are_not_reselected(self):
+        items = (
+            WorkItem("ISSUE", 211, "handoff carrier: Minerva → Venus engineering candidate 1"),
+            WorkItem("PR", 212, "handoff: Minerva → Venus engineering candidate 1"),
+            WorkItem("ISSUE", 206, "actual developmental target"),
+        )
+        chosen = choose_target(items, roadmap_text="#206")
+        self.assertEqual((chosen.kind, chosen.number), ("ISSUE", 206))
+
 
 if __name__ == "__main__":
     unittest.main()
