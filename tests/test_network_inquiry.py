@@ -14,6 +14,7 @@ from kernel.development.network_inquiry import (
     reconstruct_from_network,
 )
 from kernel.runtime.memory import VenusMemory
+from scripts.freeze_network_query import selected_study_context
 
 
 PROBLEM = {
@@ -61,6 +62,10 @@ class NetworkInquiryTests(unittest.TestCase):
         self.assertIn("math", q.query_text)
         self.assertNotEqual(q.query_id, base.query_id)
         self.assertTrue(q.study_context_digest)
+        self.assertEqual(
+            q.study_terms[:6],
+            ("curriculum", "cognitive", "theater", "canonical", "english", "japanese"),
+        )
         self.assertIn(
             f"selected-study:{q.study_context_digest}",
             q.provenance_ids,
@@ -68,6 +73,22 @@ class NetworkInquiryTests(unittest.TestCase):
         self.assertNotIn("206", q.query_text)
         self.assertFalse(q.truth_authority)
         self.assertFalse(q.promotion_authority)
+
+    def test_cycle_top_level_target_becomes_selected_study_context(self):
+        cycle={
+            "target_kind":"ISSUE",
+            "target_number":206,
+            "target_title":STUDY["target_title"],
+            "study":{
+                "method":"DEPENDENCY_TRACE",
+                "returned_blocker_sentences":["surface-only baseline failed"],
+            },
+        }
+        merged=selected_study_context(cycle)
+        self.assertEqual(merged["target_number"],206)
+        self.assertEqual(merged["target_title"],STUDY["target_title"])
+        q=form_network_query(PROBLEM,study=merged)
+        self.assertTrue(q.query_text.startswith("curriculum cognitive theater"))
 
     def test_selected_study_text_remains_inert_lexical_context(self):
         hostile = {
@@ -230,6 +251,10 @@ class NetworkInquiryTests(unittest.TestCase):
             )
             q2 = form_followup_network_query(prior_query=q, reconstruction=r)
             self.assertEqual(q2.study_context_digest, q.study_context_digest)
+            self.assertEqual(tuple(q2.study_terms), tuple(q.study_terms))
+            self.assertTrue(q2.query_text.startswith("curriculum cognitive theater"))
+            self.assertIn("linguistic", q2.query_text)
+            self.assertFalse(any(ch.isdigit() for ch in q2.query_text))
             self.assertEqual(
                 q2.authorship,
                 "LEARNER_DERIVED_FROM_NETWORK_RECONSTRUCTION",
