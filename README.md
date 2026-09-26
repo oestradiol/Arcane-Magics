@@ -56,21 +56,18 @@ dependency DAG / critical path / work-span
 
 The goal is repeated, causally interpretable improvement under an external correction/safety floor, not maximum autonomous activity.
 
-The developmental topology and recurrence live in the [semantic DAG](kernel/development/DEVELOPMENTAL_GATE_CHAIN.json). The [issue roadmap](docs/ISSUE_ROADMAP.md) and [active A–E subgraph](kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json) are projections of that source.
+The developmental topology, recurrence, precedence, active frontier, and file dispositions live in the [canonical semantic DAG](kernel/development/DEVELOPMENTAL_GATE_CHAIN.json).
 
 ## Start here
 
-- [Current state](kernel/CURRENT_STATE.md)
-- [Start Here](docs/START_HERE.md)
-- [Development roadmap](docs/ISSUE_ROADMAP.md)
-- [Autonomous research contract](docs/AUTONOMOUS_RESEARCH.md)
-- [Earned milestones](docs/EARNED_MILESTONES.md)
-- [WorldMirror VM](docs/WORLDMIRROR_VM.md)
-- [Runtime index](kernel/runtime/README.md)
-- [Development index](kernel/development/README.md)
-- [State index](kernel/state/README.md)
-- [Evidence index](autonomy/evidence/README.md)
-- [Mentor teaching plan](autonomy/interaction/mentor/TEACHING_PLAN_2026-09-26.md)
+Fresh agents and humans should begin with only:
+
+1. [Canonical semantic DAG](kernel/development/DEVELOPMENTAL_GATE_CHAIN.json)
+2. [Current state](kernel/CURRENT_STATE.md)
+
+Then follow references from the selected node. The [issue roadmap](docs/ISSUE_ROADMAP.md) and [A–E subgraph](kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json) are derived views, not competing authorities. Provenance is evidence-on-demand, not bootstrap context.
+
+The preserved dependency-planning host prototype is explicitly non-live audit material and must not be mistaken for learner-owned planning.
 
 ## Permanent noncollapse
 
