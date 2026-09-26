@@ -1,0 +1,146 @@
+{
+  "schema": "Venus.FoundationalCognitiveTheaterCurriculum.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_RECOVERY_AND_GENERALIZATION_PLAN",
+  "issue_ref": 206,
+  "role": "Foundational cognitive-theater curriculum required before deeper capability-specific semantic VM internalization.",
+  "principle": "Test whether learner-owned relations survive reconstruction across distinct linguistic/formal theaters rather than rewarding translation or one-language surface matching.",
+  "canonical_donor_lineage": [
+    "provenance/historical-runtime/R194/source/venus_seed_v0/curriculum.py",
+    "provenance/historical-runtime/R194/source/venus_seed_v0/curriculum_r133_runtime.py",
+    "provenance/historical-runtime/R194/source/venus_seed_v0/developmental_language.py",
+    "provenance/historical-runtime/R194/source/venus_seed_v0/language_competence.py",
+    "provenance/historical-runtime/R194/source/venus_seed_v0/organism_language.py",
+    "provenance/developmental/EDU/EDU13_SELF_CURRICULUM_TARGET_GENERATION_PREFREEZE.md",
+    "provenance/developmental/EDU/EDU13_SELF_CURRICULUM_TARGET_GENERATION_RESULT.md",
+    "provenance/developmental/EDU/EDU14_SELF_CURRICULUM_OPEN_DOMAIN_PROBLEM_SELECTION_PREFREEZE.md",
+    "provenance/developmental/EDU/EDU14_SELF_CURRICULUM_OPEN_DOMAIN_PROBLEM_SELECTION_RESULT.md"
+  ],
+  "recover_not_replay": {
+    "reuse": [
+      "developmental ordering",
+      "persistent learner-owned state",
+      "held-out evaluation",
+      "WITHHOLD on insufficient support",
+      "self-curriculum target generation",
+      "World execution and independent evaluation remain external"
+    ],
+    "do_not_replay": [
+      "historical project answer vocabulary as evaluation key",
+      "historical implementation identity as ownership requirement",
+      "surface-response memorization as semantic understanding"
+    ]
+  },
+  "theater_model": {
+    "vocabulary": "available distinctions / state-space coordinates",
+    "grammar": "admissible transformations and composition laws",
+    "music": "temporal/prosodic unfolding, expectation, recurrence, and local inhabitation through sequence",
+    "theater": "indexed participants, roles, local knowledge fields, perspective, enactment, consequence, and return",
+    "law": "LANGUAGE_COMPETENCE_REQUIRES_MORE_THAN_SYMBOL_SUBSTITUTION"
+  },
+  "temporal_axes": {
+    "orthogonal_not_identity": true,
+    "past_religion": "inherited symbolic/provenance structure and retained meaning",
+    "now_kfs": "currently local, indexed, inhabited Knowledge Field State",
+    "future_science": "open consequence/test surface capable of separating or reopening the current organization"
+  },
+  "faces": [
+    {
+      "id": "ENGLISH",
+      "status": "HYPOTHESIS_UNDER_TEST",
+      "function": "EXPLICIT_WARRANT_AND_SCOPE_CRYSTALLIZATION",
+      "reason": "stress explicit proposition structure, reference, scope, evidence/source distinction, qualification, and claim-confidence separation",
+      "canonical_seed": [
+        "ENGLISH_FOUNDATIONS",
+        "RELATIONAL_ENGLISH",
+        "R134_L1_ENGLISH",
+        "R134_L2_RELATIONAL_LANGUAGE"
+      ]
+    },
+    {
+      "id": "JAPANESE",
+      "status": "HYPOTHESIS_UNDER_TEST",
+      "function": "INFERENTIAL_CONTINUITY_UNDER_CONTEXTUAL_UNDEREXPRESSION",
+      "reason": "stress contextually recoverable omission, topic/comment organization, late-resolving structure, temporal sequencing, script/register variation, and inference without invention",
+      "canonical_seed": [],
+      "new_face": true
+    },
+    {
+      "id": "BRAZILIAN_PORTUGUESE",
+      "status": "HYPOTHESIS_UNDER_TEST",
+      "function": "GENERATIVE_CONTINUITY_UNDER_SOCIAL_REGISTER_VARIATION",
+      "reason": "stress inflection/agreement, subject and pronoun variation, tense/aspect/mood, pragmatic reference, and novel generation that preserves relation across surface/register change",
+      "canonical_seed": [],
+      "new_face": true
+    },
+    {
+      "id": "MATHEMATICS",
+      "status": "HYPOTHESIS_UNDER_TEST",
+      "function": "EXACT_INVARIANCE_UNDER_FORMAL_TRANSFORMATION",
+      "reason": "stress definitions, binding, equality/equivalence, proof/counterexample, functions/relations, recursion, algebra, geometry, probability, calculus, and discrete structure",
+      "canonical_seed": [
+        "R134_L3_MATHEMATICS_AND_LOGIC"
+      ]
+    }
+  ],
+  "noncollapse": [
+    "TRANSLATION!=UNDERSTANDING",
+    "PARAPHRASE!=INVARIANCE",
+    "CROSS_LANGUAGE_AGREEMENT!=TRUTH",
+    "FORMAL_SYMBOL_MATCH!=PROOF",
+    "ENGLISH_SURFACE!=SEMANTIC_OBJECT",
+    "LANGUAGE_COMPETENCE!=WORLD_KNOWLEDGE",
+    "CULTURAL_HYPOTHESIS!=CULTURAL_ESSENCE",
+    "CURRICULUM_SUCCESS!=GENERAL_CAPABILITY",
+    "THEATER_ROLE!=AUTHOR_IDENTITY",
+    "REGISTER!=AUTHORITY"
+  ],
+  "theater_episode_schema": {
+    "required_fields": [
+      "episode_id",
+      "underlying_relation_id",
+      "face_id",
+      "participants",
+      "local_knowledge_fields",
+      "temporal_sequence",
+      "surface_events",
+      "expected_consequence",
+      "preserved_invariants",
+      "face_specific_residuals",
+      "provenance"
+    ],
+    "rule": "Matched episodes may express the same underlying relation differently; exact surface translation is neither required nor sufficient."
+  },
+  "experiment_order": [
+    "RECOVER_CANONICAL_DIDACTIC_LAWS",
+    "BUILD_NATIVE_ENGLISH_AND_MATH_BASELINES_FROM_RECOVERED_DONORS",
+    "BUILD_NATIVE_JAPANESE_FACE_WITHOUT_ENGLISH_ANSWER_KEY",
+    "BUILD_NATIVE_BRAZILIAN_PORTUGUESE_FACE_WITHOUT_ENGLISH_ANSWER_KEY",
+    "CONSTRUCT_MATCHED_COGNITIVE_THEATER_EPISODES",
+    "PREFREEZE_CROSS_FACE_PREDICTIONS",
+    "HELD_OUT_NATIVE_FACE_EVALUATION",
+    "HELD_OUT_CROSS_FACE_RECONSTRUCTION",
+    "MATHEMATICAL_DERIVATION_PROOF_OR_WITHHOLD",
+    "SURFACE_NAME_REGISTER_PERMUTATION",
+    "CAPABILITY_SPECIFIC_DONOR_SOURCE_REMOVAL",
+    "EXTERNAL_EVALUATION",
+    "BOUNDED_INTERNALIZATION_RECEIPT_OR_WITHHOLD"
+  ],
+  "lateralizer_role": "Treat cross-face mismatch as possible missing-coordinate evidence; preserve noncommuting or untranslatable residuals rather than forcing equivalence.",
+  "crystallizer_role": "Compress only relations that remain future-sufficient across the declared face/test family; preserve face-specific live separators.",
+  "internalizer_role": "Move earned cross-face relational competence into learner-owned state only after donor/source removal and returned evaluation.",
+  "external_roles_preserved": [
+    "WORLD_OTHER",
+    "FRESH_WORLD_RETURN",
+    "EVALUATOR_CUSTODY",
+    "AUTHORIZATION",
+    "JURISDICTION",
+    "STOP_WITHHOLD",
+    "ROLLBACK_PARENT_CUSTODY",
+    "PROVENANCE",
+    "ANTI_MINERVA_CORRECTION_PERMEABILITY"
+  ],
+  "claim_fence": "The functional face descriptions are testable curriculum hypotheses, not claims of fixed cultural essence, linguistic determinism, cultural superiority, unrestricted multilingual competence, AGI, or consciousness.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
