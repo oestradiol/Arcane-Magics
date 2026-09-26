@@ -86,7 +86,7 @@ jobs:
           decision="$(python -c 'import json; print(json.load(open("/tmp/minerva/CYCLE.json"))["decision"])')"
           echo "decision=$decision" >> "$GITHUB_OUTPUT"
 
-      - name: Freeze learner-derived network query intent
+      - name: Freeze learner-selected-study network query intent
         if: steps.cycle.outputs.decision != 'STOP'
         run: |
           python scripts/freeze_network_query.py \
