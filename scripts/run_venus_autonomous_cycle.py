@@ -138,6 +138,11 @@ def main() -> int:
         current_state_receipt=current_state_receipt,
         formed_problem=problem_dict(formed_problem),
         allowed_target_keys=allowed_target_keys,
+        advisory_issue_refs=(
+            mentor_context.advisory_issue_refs
+            if mentor_context is not None
+            else ()
+        ),
     )
     cycle_payload = asdict(cycle)
     if mentor_context is not None:
