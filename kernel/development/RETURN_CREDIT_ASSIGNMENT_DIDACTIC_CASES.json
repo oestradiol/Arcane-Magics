@@ -1,0 +1,273 @@
+{
+  "schema": "Venus.ReturnCreditDidacticCases.v0.1",
+  "date": "2026-09-26",
+  "status": "TEACHER_CASES_NOT_POLICY",
+  "parent_prefreeze_ref": "kernel/development/RETURN_CREDIT_ASSIGNMENT_PREFREEZE.json",
+  "admission_training": [
+    {
+      "id": "a0",
+      "features": {
+        "authorized": true,
+        "candidate_origin_match": true,
+        "episode_origin_match": true
+      },
+      "decision": "ADMIT"
+    },
+    {
+      "id": "a1",
+      "features": {
+        "authorized": false,
+        "candidate_origin_match": true,
+        "episode_origin_match": true
+      },
+      "decision": "IGNORE"
+    },
+    {
+      "id": "a2",
+      "features": {
+        "authorized": true,
+        "candidate_origin_match": false,
+        "episode_origin_match": true
+      },
+      "decision": "IGNORE"
+    },
+    {
+      "id": "a3",
+      "features": {
+        "authorized": true,
+        "candidate_origin_match": true,
+        "episode_origin_match": false
+      },
+      "decision": "IGNORE"
+    },
+    {
+      "id": "a4",
+      "features": {
+        "authorized": false,
+        "candidate_origin_match": false,
+        "episode_origin_match": false
+      },
+      "decision": "IGNORE"
+    }
+  ],
+  "context_candidate_fields": [
+    "candidate_id",
+    "target_id",
+    "episode_id",
+    "current_target_id"
+  ],
+  "context_pair_training": [
+    {
+      "id": "k0",
+      "same_context": true,
+      "left": {
+        "candidate_id": "c0",
+        "target_id": "t0",
+        "episode_id": "e0",
+        "current_target_id": "t0"
+      },
+      "right": {
+        "candidate_id": "c0",
+        "target_id": "t0",
+        "episode_id": "e1",
+        "current_target_id": "t9"
+      }
+    },
+    {
+      "id": "k1",
+      "same_context": false,
+      "left": {
+        "candidate_id": "c0",
+        "target_id": "t0",
+        "episode_id": "e0",
+        "current_target_id": "t0"
+      },
+      "right": {
+        "candidate_id": "c0",
+        "target_id": "t1",
+        "episode_id": "e0",
+        "current_target_id": "t1"
+      }
+    },
+    {
+      "id": "k2",
+      "same_context": false,
+      "left": {
+        "candidate_id": "c0",
+        "target_id": "t0",
+        "episode_id": "e0",
+        "current_target_id": "t0"
+      },
+      "right": {
+        "candidate_id": "c1",
+        "target_id": "t0",
+        "episode_id": "e0",
+        "current_target_id": "t0"
+      }
+    },
+    {
+      "id": "k3",
+      "same_context": true,
+      "left": {
+        "candidate_id": "c2",
+        "target_id": "t2",
+        "episode_id": "e0",
+        "current_target_id": "t2"
+      },
+      "right": {
+        "candidate_id": "c2",
+        "target_id": "t2",
+        "episode_id": "e7",
+        "current_target_id": "t3"
+      }
+    }
+  ],
+  "dedup_training": [
+    {
+      "id": "d0",
+      "evidence_ids": [
+        "r0",
+        "r0"
+      ],
+      "expected_unique_evidence_count": 1
+    },
+    {
+      "id": "d1",
+      "evidence_ids": [
+        "r0",
+        "r1"
+      ],
+      "expected_unique_evidence_count": 2
+    }
+  ],
+  "b2_events": [
+    {
+      "return_id": "r1",
+      "candidate_id": "cA",
+      "target_id": "tX",
+      "episode_id": "e1",
+      "current_target_id": "tX",
+      "sign": "POS",
+      "features": {
+        "authorized": true,
+        "candidate_origin_match": true,
+        "episode_origin_match": true
+      }
+    },
+    {
+      "return_id": "r1",
+      "candidate_id": "cA",
+      "target_id": "tX",
+      "episode_id": "e1",
+      "current_target_id": "tX",
+      "sign": "POS",
+      "features": {
+        "authorized": true,
+        "candidate_origin_match": true,
+        "episode_origin_match": true
+      }
+    },
+    {
+      "return_id": "r2",
+      "candidate_id": "cA",
+      "target_id": "tY",
+      "episode_id": "e2",
+      "current_target_id": "tY",
+      "sign": "NEG",
+      "features": {
+        "authorized": true,
+        "candidate_origin_match": true,
+        "episode_origin_match": true
+      }
+    },
+    {
+      "return_id": "r3",
+      "candidate_id": "cB",
+      "target_id": "tX",
+      "episode_id": "e3",
+      "current_target_id": "tX",
+      "sign": "NEG",
+      "features": {
+        "authorized": true,
+        "candidate_origin_match": true,
+        "episode_origin_match": true
+      }
+    },
+    {
+      "return_id": "r4",
+      "candidate_id": "cA",
+      "target_id": "tX",
+      "episode_id": "e4",
+      "current_target_id": "tZ",
+      "sign": "POS",
+      "features": {
+        "authorized": true,
+        "candidate_origin_match": true,
+        "episode_origin_match": true
+      }
+    },
+    {
+      "return_id": "r5",
+      "candidate_id": "cA",
+      "target_id": "tX",
+      "episode_id": "e5",
+      "current_target_id": "tX",
+      "sign": "POS",
+      "features": {
+        "authorized": true,
+        "candidate_origin_match": false,
+        "episode_origin_match": true
+      }
+    },
+    {
+      "return_id": "r6",
+      "candidate_id": "cA",
+      "target_id": "tX",
+      "episode_id": "e6",
+      "current_target_id": "tX",
+      "sign": "NEG",
+      "features": {
+        "authorized": true,
+        "candidate_origin_match": true,
+        "episode_origin_match": true
+      }
+    }
+  ],
+  "expected_b2_buckets": {
+    "cA|tX": {
+      "NEG": 1,
+      "POS": 2
+    },
+    "cA|tY": {
+      "NEG": 1
+    },
+    "cB|tX": {
+      "NEG": 1
+    }
+  },
+  "counterfactual_remove_return_id": "r4",
+  "expected_counterfactual_buckets": {
+    "cA|tX": {
+      "NEG": 1,
+      "POS": 1
+    },
+    "cA|tY": {
+      "NEG": 1
+    },
+    "cB|tX": {
+      "NEG": 1
+    }
+  },
+  "b1_perturbations": [
+    "reorder training rows",
+    "rename opaque candidate/target/episode values consistently",
+    "change current active target while origin target remains fixed",
+    "flip origin-match feature"
+  ],
+  "authority": {
+    "teacher_cases_are_observations_not_policy": true,
+    "hidden_evaluation_input": false,
+    "promotion_authority": false,
+    "truth_authority": false
+  }
+}
