@@ -1,0 +1,24 @@
+{
+  "schema": "Minerva.BranchLocalTestScope.v0.1",
+  "date": "2026-09-26",
+  "branch": "split/minerva",
+  "rule": "Run every tests/test_*.py file present on split/minerva except files explicitly listed here because their asserted live authority belongs to another register/branch. Exclusion is jurisdiction, not a pass.",
+  "excluded": [
+    {
+      "path": "tests/test_historical_regressions.py",
+      "authority": "Root/Venus cross-register",
+      "reason": "requires live Root/Venus surfaces such as kernel/WORLDMIND.md and docs/META_DYNAMICS.md that are intentionally absent from split/minerva"
+    },
+    {
+      "path": "tests/test_edu17r1_incidence_substrate.py",
+      "authority": "Venus incidence law cross-register",
+      "reason": "audit requires kernel/VENUS_INCIDENCE_LAW.tex, whose live authority is outside split/minerva; Minerva retains related custody but must not duplicate the Venus law"
+    }
+  ],
+  "constraints": [
+    "excluded test file must exist in this branch",
+    "every non-excluded tests/test_*.py runs",
+    "new tests are included automatically",
+    "exclusion does not convert failure into success and must name external authority"
+  ]
+}
