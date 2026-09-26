@@ -24,6 +24,55 @@ class NetworkInquiryError(ValueError):
     pass
 
 
+STUDY_QUERY_STOP = frozenset({
+    "about", "after", "before", "deeper", "from", "into", "issue", "kernel",
+    "minerva", "problem", "recover", "required", "requires", "returned",
+    "selected", "split", "test", "tests", "that", "this", "with", "without",
+})
+
+
+def study_query_terms(study: Mapping[str, Any], *, limit: int = 12) -> tuple[str, ...]:
+    """Extract bounded inert lexical cues from a learner-selected study.
+
+    The study text remains untrusted external material. This helper never
+    executes it, grants it truth, or treats issue/carrier identity as a semantic
+    answer. It only lets the learner's already-selected study constrain what
+    the external network adapter is asked to search for.
+    """
+    if limit < 1:
+        raise NetworkInquiryError("study query term limit must be positive")
+    parts = [
+        str(study.get("target_title") or ""),
+        *[str(x) for x in study.get("returned_blocker_sentences", ())],
+    ]
+    out: list[str] = []
+    for part in parts:
+        for token in re.findall(r"[A-Za-z0-9]+(?:-[A-Za-z0-9]+)?", part.lower()):
+            if len(token) < 3 or token in STUDY_QUERY_STOP or token in out:
+                continue
+            out.append(token)
+            if len(out) >= limit:
+                return tuple(out)
+    return tuple(out)
+
+
+def study_context_digest(study: Mapping[str, Any]) -> str:
+    """Bind the selected study context as provenance, not as truth authority."""
+    body = {
+        "target_kind": str(study.get("target_kind") or ""),
+        "target_number": int(study.get("target_number") or 0),
+        "target_title": str(study.get("target_title") or ""),
+        "method": str(study.get("method") or ""),
+        "returned_blocker_sentences": tuple(
+            str(x) for x in study.get("returned_blocker_sentences", ())
+        ),
+        "referenced_repository_paths": tuple(
+            str(x) for x in study.get("referenced_repository_paths", ())
+        ),
+    }
+    return digest(body)
+
+
 @dataclass(frozen=True)
 class NetworkQuery:
     schema: str
@@ -33,6 +82,7 @@ class NetworkQuery:
     residual_coordinates: tuple[str, ...]
     discriminator: str
     provenance_ids: tuple[str, ...]
+    study_context_digest: str | None = None
     authorship: str = "LEARNER_DERIVED_FROM_FORMED_PROBLEM"
     execution_owner: str = "EXTERNAL_ADAPTER"
     promotion_authority: bool = False
@@ -84,7 +134,11 @@ def _tokens(value: str) -> tuple[str, ...]:
     )
 
 
-def form_network_query(problem: Mapping[str, Any]) -> NetworkQuery:
+def form_network_query(
+    problem: Mapping[str, Any],
+    *,
+    study: Mapping[str, Any] | None = None,
+) -> NetworkQuery:
     disposition = str(problem.get("disposition") or "")
     if disposition not in {
         "FORMED_BOUNDED_PROBLEM",
@@ -101,14 +155,26 @@ def form_network_query(problem: Mapping[str, Any]) -> NetworkQuery:
             "problem id, residual coordinates, discriminator, and provenance required"
         )
 
-    # Generic rendering only. No domain answer or target label is injected here.
-    # The semantic content comes entirely from the learner-formed problem state.
-    query_text = " ".join(
-        (
-            discriminator.replace("_", " ").lower(),
-            *[r.replace("_", " ").lower() for r in residuals],
-        )
+    # Generic rendering only. A learner-selected study may contribute bounded
+    # lexical cues, but no issue text is executed or promoted into an answer.
+    base_terms = (
+        discriminator.replace("_", " ").lower(),
+        *[r.replace("_", " ").lower() for r in residuals],
     )
+    study_digest: str | None = None
+    authorship = "LEARNER_DERIVED_FROM_FORMED_PROBLEM"
+    if study is not None:
+        terms = study_query_terms(study)
+        if terms:
+            query_text = " ".join((*terms, *base_terms))
+            study_digest = study_context_digest(study)
+            provenance = provenance + (f"selected-study:{study_digest}",)
+            authorship = "LEARNER_DERIVED_FROM_SELECTED_STUDY"
+        else:
+            query_text = " ".join(base_terms)
+    else:
+        query_text = " ".join(base_terms)
+
     body = {
         "schema": "Venus.NetworkQuery.v0.1",
         "problem_id": problem_id,
@@ -116,7 +182,8 @@ def form_network_query(problem: Mapping[str, Any]) -> NetworkQuery:
         "residual_coordinates": residuals,
         "discriminator": discriminator,
         "provenance_ids": provenance,
-        "authorship": "LEARNER_DERIVED_FROM_FORMED_PROBLEM",
+        "study_context_digest": study_digest,
+        "authorship": authorship,
         "execution_owner": "EXTERNAL_ADAPTER",
         "promotion_authority": False,
         "truth_authority": False,
@@ -246,6 +313,7 @@ def form_followup_network_query(
         "discriminator": prior_query.discriminator,
         "provenance_ids": tuple(prior_query.provenance_ids)
             + tuple(f"network-memory:{x}" for x in reconstruction.memory_object_ids),
+        "study_context_digest": prior_query.study_context_digest,
         "authorship": "LEARNER_DERIVED_FROM_NETWORK_RECONSTRUCTION",
         "execution_owner": "EXTERNAL_ADAPTER",
         "promotion_authority": False,
