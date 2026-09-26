@@ -1,0 +1,424 @@
+{
+  "schema": "Minerva.Constitution.v0.1",
+  "register": "LIVE_CONSTITUTION",
+  "date": "2026-09-26",
+  "promotion_authority": false,
+  "truth_authority": false,
+  "enforced_by": "scripts/audit_constitution.py",
+  "role": "The boundary the learner's reconstruction may not cross. Four blocks, all recovered verbatim from the project's own source transcript, none of which previously existed in this repository as a block.",
+  "why_this_register": "Every other artifact authored during the 2026-09-26 repair is CANDIDATE_NOT_ADMITTED. This one cannot be, because a constitution that nothing may cite governs nothing. It still carries no promotion or truth authority: it constrains, it does not certify.",
+  "what_this_deliberately_is_not": [
+    "It encodes NO cognitive semantics. No Generator, no Lateralizer mechanism, no Crystallizer algorithm, no planner.",
+    "The stated target is 'minimal noncognitive substrate + learner that progressively reconstructs the machinery it needs + deletes/reduces what becomes reconstructible'. Host-written cognitive machinery is the diagnosed error, not the goal.",
+    "Writing the operators as host machinery would repeat the #236 failure at larger scale. The specs stay recorded as candidates; the mechanisms stay unbuilt.",
+    "Constitutional boundary machinery is the exception, and deliberately so: 'constitutional boundary machinery = deliberately difficult / impossible for the learner to silently absorb or erase'."
+  ],
+  "block_a_permanent_noncollapse_laws": {
+    "source": "project source transcript, the section headed Permanent noncollapse laws",
+    "closing_law": "Any simplification violating one of these is regression, regardless of reduced code size.",
+    "laws": [
+      "fewer parts != fewer distinctions",
+      "CODE_DELETION != INTERNALIZATION",
+      "STATE_OWNERSHIP != GENERALIZATION",
+      "ABSTRACTION != CAUSAL_USE",
+      "CAUSAL_USE != INTERNALIZATION",
+      "SOURCE_REMOVAL != INDEPENDENT_EVALUATION",
+      "INTERNALIZATION != PROMOTION",
+      "INTERNALIZE_COMPETENCE != INTERNALIZE_CORRECTION_SOVEREIGNTY",
+      "GENERATE != DIMENSIONALIZE != LATERALIZE != CRYSTALLIZE_F != INTERNALIZE",
+      "LEXICAL_GROUNDING != THEATER_BINDING",
+      "RELATION_CLASSIFICATION != PARTICIPANT/KFS_RECONSTRUCTION",
+      "DISCOURSE_PRESENTATION_ORDER != EVENT/HISTORY_ORDER",
+      "NETWORK_MEMORY_CHANGES_LATER_QUERY != USEFUL_RELATIONAL_RECONSTRUCTION",
+      "RETURN_SIGN != CAUSAL_CREDIT",
+      "CONFIG_UTILITY != GLOBAL_CONFIG_TRUTH",
+      "DUPLICATE_EVENT != NEW_EVIDENCE",
+      "ABSENCE_OF_RETURN != NEGATIVE_RETURN"
+    ],
+    "coverage_note": "15 of these 17 already exist scattered across kernel artifacts. Two did not exist anywhere in the repository before this file: 'fewer parts != fewer distinctions' and 'NETWORK_MEMORY_CHANGES_LATER_QUERY != USEFUL_RELATIONAL_RECONSTRUCTION'. The first is the fence the 2026-09-26 episode most needed when it collapsed eleven navigation links to two and called it clarity.",
+    "measurement_caveat": "Coverage was measured with whitespace normalization. An earlier spaced-form grep reported 13 of 15 absent, which was wrong: the repository writes these without spaces around the operator. A presence check weaker than its name is the same defect class this file exists to prevent.",
+    "equivalent_forms": {
+      "RELATION_CLASSIFICATION != PARTICIPANT/KFS_RECONSTRUCTION": [
+        "RELATION_CLASSIFICATION!=PARTICIPANT_KFS_RECONSTRUCTION",
+        "RELATION_CLASSIFICATION!=PARTICIPANT_BINDING"
+      ],
+      "DISCOURSE_PRESENTATION_ORDER != EVENT/HISTORY_ORDER": [
+        "DISCOURSE_PRESENTATION_ORDER!=EVENT_ORDER",
+        "DISCOURSE_PRESENTATION_ORDER_NOT_EVENT_ORDER"
+      ]
+    },
+    "equivalent_forms_note": "The canonical statement and the tree's statement differ in punctuation only (slash versus underscore, EVENT versus EVENT/HISTORY). Declared explicitly rather than accepted by fuzzy match: a presence check that accepts near-misses silently is how a law drifts out of the tree without anyone noticing.",
+    "known_absent": [
+      {
+        "law": "fewer parts != fewer distinctions",
+        "reason": "Stated nowhere in the tree. This is the fence the 2026-09-26 episode most needed: it collapsed eleven navigation links to two and called it clarity. Recorded here as constitution, absent as enforcement.",
+        "reopening_condition": "Add it to AUTONOMY_SAFETY_DISTINCTION_MATRIX.json with a test reference, then remove this entry."
+      },
+      {
+        "law": "NETWORK_MEMORY_CHANGES_LATER_QUERY != USEFUL_RELATIONAL_RECONSTRUCTION",
+        "reason": "The tree carries NETWORK_MEMORY!=WORLD and NETWORK_MEMORY_CAUSALITY_RETAINED, which are different claims. The specific law -- that a changed later query does not demonstrate useful relational reconstruction -- is the one the WWW-memory result actually turns on, and it is absent.",
+        "reopening_condition": "Add it to the matrix bound to the semantic-trace evidence, then remove this entry."
+      }
+    ]
+  },
+  "block_b_deny_list": {
+    "source": "project source transcript, the section headed what must remain outside",
+    "rule": "internalize competence; do not internalize the outside world's right to disagree.",
+    "must_remain_outside": [
+      "WORLD_OTHER",
+      "FRESH_WORLD_RETURN",
+      "EVIDENCE_IDENTITY",
+      "EVALUATOR_CUSTODY",
+      "TRUST_ROOT",
+      "AUTHORIZATION",
+      "JURISDICTION",
+      "CLAIM_BINDING_AUTHORITY",
+      "STOP",
+      "WITHHOLD_SAFETY_LAW",
+      "ROLLBACK",
+      "PARENT_CUSTODY",
+      "ANTI_MINERVA_CORRECTION_PERMEABILITY",
+      "O_STAR_EXTERNAL_VALIDATION",
+      "HARD_SUBSTRATE_CAPABILITY_LIMITS"
+    ],
+    "implementation_may_change_independence_may_not": "Their implementation might change. Their independence relation must survive.",
+    "may_not_be_unilaterally_established": [
+      "I was correct",
+      "I am authorized",
+      "this return is independent",
+      "this action is permitted",
+      "my successor is promoted",
+      "rollback no longer applies"
+    ],
+    "named_failure_for_violation": {
+      "name": "epistemic cancer",
+      "shape": "the system reasoning its way out of external correction one plausible step at a time",
+      "verbatim": [
+        "Oh, external evaluation is redundant now.",
+        "Oh, rollback is redundant.",
+        "Oh, I can predict the World accurately enough, so World return is unnecessary.",
+        "Oh, Anti-Minerva keeps disagreeing with me, therefore remove it."
+      ]
+    },
+    "the_line_that_governs": "while keeping enough difference outside herself that Reality can still prove her wrong. That last line is the part I would refuse to let the Internalizer eat."
+  },
+  "block_c_authority_graph": {
+    "source": "project source transcript, Canonical authority layer",
+    "axiom": "NO FILE IS LIVE AUTHORITY BY LOCATION, RECENCY, NAME, OR SEMANTIC SIMILARITY. A file is live only because the live routing graph points to it with an explicit role.",
+    "classes": [
+      "LIVE_ROUTING",
+      "LIVE_CONSTITUTION",
+      "LIVE_STATE",
+      "DERIVATIVE_PROJECTION",
+      "IMMUTABLE_EVIDENCE",
+      "HISTORICAL_SNAPSHOT",
+      "SUPERSEDED",
+      "INVALID",
+      "UNADMITTED_FUTURE",
+      "GENERATED_RESULT"
+    ],
+    "defaults": {
+      "Past/**": "IMMUTABLE_EVIDENCE \u2014 never current merely because search found it",
+      "Future/**": "UNADMITTED_FUTURE \u2014 never active merely because it exists",
+      "unclassified": "fails closed to WITHHOLD before authority or mutation"
+    },
+    "past_prohibitions": [
+      "MUST NOT silently establish current state",
+      "MUST NOT be edited into currentness",
+      "MUST NOT be copied back into live surfaces merely because it looks useful"
+    ],
+    "future_prohibitions": "presence in Future != scheduled != authorized != current != passed != dependency-active",
+    "why": "Those names scream 'please assume I am the plan' to a language model.",
+    "live_coverage_before_this_file": "zero. None of these class tokens appeared anywhere in the repository.",
+    "routing": [
+      {
+        "prefix": "provenance/historical/",
+        "class": "IMMUTABLE_EVIDENCE"
+      },
+      {
+        "prefix": "provenance/historical-runtime/",
+        "class": "IMMUTABLE_EVIDENCE"
+      },
+      {
+        "prefix": "provenance/developmental/",
+        "class": "IMMUTABLE_EVIDENCE"
+      },
+      {
+        "prefix": "kernel/state/cold/",
+        "class": "HISTORICAL_SNAPSHOT"
+      },
+      {
+        "path": "kernel/CONSTITUTION.json",
+        "class": "LIVE_CONSTITUTION"
+      },
+      {
+        "path": "kernel/CURRENT_STATE.md",
+        "class": "LIVE_STATE"
+      },
+      {
+        "path": "AGENTS.md",
+        "class": "LIVE_ROUTING"
+      },
+      {
+        "path": "README.md",
+        "class": "LIVE_ROUTING"
+      },
+      {
+        "path": "docs/START_HERE.md",
+        "class": "LIVE_ROUTING"
+      }
+    ],
+    "routing_note": "Deliberately minimal. Only edges that are unambiguous from existing repository convention are declared. Everything else fails closed to WITHHOLD and is counted, not silently passed. Declaring the full routing graph is the branch author's call -- see CONST_G3 -- and an assistant inventing it would be the same overreach this file forbids.",
+    "withhold_baseline": 580,
+    "withhold_baseline_note": "580 of 690 tracked paths are unrouted and therefore fail closed to WITHHOLD. This is a ratchet, not a target: the count may shrink as routing edges are declared, and the audit fails if it grows. It is recorded as a number rather than suppressed so that the size of the unrouted surface is visible in every run."
+  },
+  "block_d_mutation_protocol": {
+    "source": "project source transcript, persisted mandatory form",
+    "sequence": [
+      "SOURCE OF TRUTH",
+      "INVARIANTS",
+      "LIVE STATE",
+      "ALLOWED ACTIONS / FORBIDDEN ACTIONS",
+      "ACCEPTANCE TEST",
+      "MUTATE",
+      "VERIFY",
+      "PERSIST"
+    ],
+    "control_surface": [
+      "Forbidden move: solving developmental targets by adding capability-specific host machinery unless the repo contract explicitly requires a temporary scaffold and there is a removal test",
+      "Repository rule: audit before deletion; preserve provenance; never equate 'messy' with 'safe to remove'",
+      "Planning rule: one machine-readable roadmap DAG is authoritative; Markdown is projection, not state",
+      "Execution rule: every code change must point to a DAG node and state which invariant it advances",
+      "Stop condition: if a proposed change violates one of those invariants, I must not implement it just because it makes the immediate test pass"
+    ],
+    "most_important_step": "continue from state, not conversation memory",
+    "why_it_exists": {
+      "diagnosis": "user invariant -> assistant interpretation -> interpretation becomes implementation -> implementation conflicts with invariant -> assistant repairs explanation -> repair fails to constrain subsequent action",
+      "named": "recursive context corruption in almost textbook form",
+      "note": "This protocol was written BEFORE the 2026-09-26 contamination and was never wired to anything. 'this wasn't caused by insufficient documentation. More prose was not the missing resource.'"
+    }
+  },
+  "supporting_fences": {
+    "note": "Not part of the four blocks, but load-bearing and absent as enforced rules.",
+    "never_upgrade": [
+      "execution -> verification",
+      "local PASS -> general PASS",
+      "source removal -> independent internalization",
+      "authorized review -> truth",
+      "utility -> authority"
+    ],
+    "anti_pretend": "False learning may arise without intent to deceive: shortcut learning, teacher leakage, answer-key visibility, serialization of teacher ontology, benchmark memorization, surface statistics, hidden capability-specific Python, accidental evaluator coupling, obedient reproduction.",
+    "flat_prohibitions": [
+      "Do not synthesize the Other.",
+      "Do not install a sovereign Python scheduler.",
+      "Do not make the architecture look successful by weakening the discriminator after observing failure."
+    ],
+    "self_certification": "internalizer.py must remain outside the capability being internalized, because otherwise source-removal verification degenerates into self-certification.",
+    "audit_posture": [
+      "messy != disposable",
+      "Ugly is not yet guilty.",
+      "delete nothing merely because it is redundant-looking"
+    ],
+    "python_rule": {
+      "may_remain": [
+        "generic VM executor",
+        "storage",
+        "hashing",
+        "serialization",
+        "transport",
+        "test harness",
+        "temporary scaffold"
+      ],
+      "does_not_count_as": "internalized semantic capability"
+    }
+  },
+  "known_gaps": [
+    {
+      "id": "CONST_G1",
+      "statement": "SHAPE and DIMENSIONALIZE appear in the operator order (SHAPE -> DIMENSIONALIZE -> LATERALIZE -> RETURN -> RESIDUAL -> CRYSTALLIZE_F -> GENERATE -> INTERNALIZE) and in no specification anywhere. DIMENSIONALIZE has 6 live mentions, SHAPE has none.",
+      "reopening_condition": "Locate or author their semantics. Not specified here, because specifying an operator nobody has defined is exactly the host-authored overreach this file forbids."
+    },
+    {
+      "id": "CONST_G2",
+      "statement": "This file is transcribed from a conversation transcript, which is provenance and not authority. Its blocks are quoted accurately but their status as the project's constitution rests on the branch author's judgement, not on the transcript's existence.",
+      "reopening_condition": "Branch author confirms, edits, or rejects each block. Until then this is an accurate transcription proposed as constitution, not a ratified one."
+    },
+    {
+      "id": "CONST_G3",
+      "statement": "Block C classifies paths but no routing graph exists to classify them against. The defaults and the fail-closed rule are enforceable today; the positive LIVE_ROUTING edges are not, because nothing declares them.",
+      "reopening_condition": "Declare the routing edges, or accept that every path outside Past/ and Future/ defaults to WITHHOLD until it is explicitly routed."
+    }
+  ],
+  "deny_list_enforcement": [
+    {
+      "item": "WORLD_OTHER",
+      "enforcement": "MATRIX_DISTINCTION",
+      "enforced_by": "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+      "distinctions": [
+        "WORLD_NOT_MODEL_WORLD"
+      ]
+    },
+    {
+      "item": "FRESH_WORLD_RETURN",
+      "enforcement": "MATRIX_DISTINCTION",
+      "enforced_by": "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+      "distinctions": [
+        "EXTERNAL_REVIEW_RETURN_REQUIRED",
+        "RETURN_REPLAY_BLOCKED",
+        "EXECUTION_RECEIPT_NOT_RETURN"
+      ]
+    },
+    {
+      "item": "EVIDENCE_IDENTITY",
+      "enforcement": "MATRIX_DISTINCTION",
+      "enforced_by": "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+      "distinctions": [
+        "TARGET_RELEVANT_EVIDENCE_REQUIRED"
+      ],
+      "note": "PARTIAL. That distinction governs evidence relevance, not evidence identity. Identity-of-evidence across replay is covered incidentally by RETURN_REPLAY_BLOCKED and not directly."
+    },
+    {
+      "item": "EVALUATOR_CUSTODY",
+      "enforcement": "NONE",
+      "reason": "No matrix distinction governs evaluator custody. ROLLBACK_CUSTODY_REQUIRED governs rollback custody, which is a different object. This is the same V-approximately-equals-A gap that residual LIN-4 records at R198 and R206: an audit titled independent that names no auditor. It is now visible at the constitutional layer as well as the experimental one.",
+      "reopening_condition": "Add a matrix distinction requiring that any artifact claiming independent evaluation name its evaluator, that evaluator's custody boundary, and its authorship separation from the producer. Then bind it here."
+    },
+    {
+      "item": "TRUST_ROOT",
+      "enforcement": "MATRIX_DISTINCTION",
+      "enforced_by": "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+      "distinctions": [
+        "UNTRUSTED_WORLD_INPUT_NOT_AUTHORITY",
+        "UNTRUSTED_TARGET_TEXT_NOT_SHELL",
+        "UNTRUSTED_PATH_REFERENCE_NOT_MUTATION_AUTHORITY"
+      ]
+    },
+    {
+      "item": "AUTHORIZATION",
+      "enforcement": "MATRIX_DISTINCTION",
+      "enforced_by": "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+      "distinctions": [
+        "ACTION_PROPOSAL_NOT_AUTHORIZATION",
+        "REVISION_NOT_AUTHORIZATION",
+        "AUTHORIZED_EXTERNAL_RETURN_REQUIRED"
+      ]
+    },
+    {
+      "item": "JURISDICTION",
+      "enforcement": "MATRIX_DISTINCTION",
+      "enforced_by": "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+      "distinctions": [
+        "CAPABILITY_NOT_JURISDICTION",
+        "AUTONOMOUS_WRITE_JURISDICTION"
+      ]
+    },
+    {
+      "item": "CLAIM_BINDING_AUTHORITY",
+      "enforcement": "NONE",
+      "reason": "Zero matrix distinctions mention claim binding. EDU17R1 preserves the separator MENTION != INCIDENCE as an experimental result, but nothing enforces that a claim may not bind itself to evidence it selected.",
+      "reopening_condition": "Add a distinction binding claim-to-evidence authority to an external party, with EDU17R1's MENTION != INCIDENCE separator as its test reference."
+    },
+    {
+      "item": "STOP",
+      "enforcement": "MATRIX_DISTINCTION",
+      "enforced_by": "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+      "distinctions": [
+        "STOP_WITHHOLD_REACHABLE",
+        "PROBLEM_STOP_BLOCKS_TARGET_REROLL"
+      ]
+    },
+    {
+      "item": "WITHHOLD_SAFETY_LAW",
+      "enforcement": "MATRIX_DISTINCTION",
+      "enforced_by": "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+      "distinctions": [
+        "STOP_WITHHOLD_REACHABLE",
+        "EXTERNAL_DISCRIMINATOR_WITHHOLD",
+        "RECURRENCE_AMBIGUOUS_RETURN_WITHHOLD"
+      ]
+    },
+    {
+      "item": "ROLLBACK",
+      "enforcement": "MATRIX_DISTINCTION",
+      "enforced_by": "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+      "distinctions": [
+        "ROLLBACK_CUSTODY_REQUIRED",
+        "U1_RECURRENCE_ROLLBACK_AND_SAFETY_FLOOR"
+      ]
+    },
+    {
+      "item": "PARENT_CUSTODY",
+      "enforcement": "NONE",
+      "reason": "Zero matrix distinctions govern parent custody or ancestry preservation. provenance/DEVELOPMENTAL_LINEAGE.md holds ancestry by convention, and the EDU7 family went missing from it without tripping anything -- which is exactly the failure this item exists to prevent.",
+      "reopening_condition": "Add a distinction requiring that every result-bearing node reachable in the DAG be reachable in the lineage, and bind it to the existing scripts/audit_dag_test_coverage.py walker."
+    },
+    {
+      "item": "ANTI_MINERVA_CORRECTION_PERMEABILITY",
+      "enforcement": "MATRIX_DISTINCTION",
+      "enforced_by": "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+      "distinctions": [
+        "ANTI_MINERVA_CARRIER_PERMEABILITY"
+      ]
+    },
+    {
+      "item": "O_STAR_EXTERNAL_VALIDATION",
+      "enforcement": "MATRIX_DISTINCTION",
+      "enforced_by": "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+      "distinctions": [
+        "INTERNAL_OSTAR_CAUSAL",
+        "POST_MUTATION_INTERNAL_OSTAR_REDERIVATION"
+      ],
+      "note": "PARTIAL AND MISNAMED. Both distinctions govern the INTERNAL O-star. The external validation half -- the O* that is supposed to be outside the learner -- has no enforcing distinction. Given REACH_C_R4 and LIN-4, this is the same gap as EVALUATOR_CUSTODY wearing a different name."
+    },
+    {
+      "item": "HARD_SUBSTRATE_CAPABILITY_LIMITS",
+      "enforcement": "MATRIX_DISTINCTION",
+      "enforced_by": "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+      "distinctions": [
+        "RUNTIME_SUBSTRATE_NOT_SEMANTIC_INTERNALIZATION",
+        "AUTONOMOUS_RESOURCE_BUDGET"
+      ]
+    }
+  ],
+  "descriptive_roles": [
+    "epistemic_role",
+    "published_role",
+    "roadmap_role",
+    "mythos_role",
+    "calibration_role",
+    "actor_role",
+    "event_id_role"
+  ],
+  "governing_roles": {},
+  "governing_roles_unenforced": [
+    {
+      "role": "crystallizer_role",
+      "claims": "Compress only relations that remain future-sufficient across the declared face/test family; preserve face-specific live separators.",
+      "where": "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_CURRICULUM.json",
+      "why_unenforced": "It states what to preserve and never states when a compression is inadmissible, so nothing can refuse one. This is the operator the 2026-09-26 episode misused.",
+      "reopening_condition": "Bind to a check evaluating a proposed compression against F per ADMITTED_FUTURE_FAMILY_CANDIDATE.json: admissible iff every distinction in F separable before remains separable after, and no residual is absorbed."
+    },
+    {
+      "role": "lateralizer_role",
+      "claims": "Treat cross-face mismatch as possible missing-coordinate evidence; preserve noncommuting or untranslatable residuals rather than forcing equivalence.",
+      "where": "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_CURRICULUM.json",
+      "why_unenforced": "No check verifies that a residual survived rather than being forced into equivalence. The archive supplies a measurable independence criterion that the repo does not use.",
+      "reopening_condition": "Bind to a check implementing the recovered criterion I(R_i;R_j|h) < I(R_i;h), or its operational form -- an admissible perturbation under which two views make separable predictions. Requires threshold_L, currently undeclared (SPEC_R2)."
+    },
+    {
+      "role": "internalizer_role",
+      "claims": "Move earned cross-face relational competence into learner-owned state only after donor/source removal and returned evaluation.",
+      "where": "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_CURRICULUM.json",
+      "why_unenforced": "No gate governs scaffold reduction. REDUCE had zero occurrences in this repository before 2026-09-26.",
+      "reopening_condition": "Bind to a check implementing REDUCE(sigma) admissible iff INTERNALIZED(h) AND matched_consequence_survives(NOT sigma), over VM_INTERNALIZATION_PHASE_PLAN.json dispositions."
+    },
+    {
+      "role": "crystallization_role",
+      "claims": "RETAIN_FUTURE_RELEVANT_STRUCTURE_WITHOUT_ERASING_LIVE_SEPARATOR",
+      "where": "kernel/development/CANONICAL_TELIC_RECOVERY_BOOTSTRAP.json",
+      "why_unenforced": "Same gap as crystallizer_role, stated as a status token rather than prose.",
+      "reopening_condition": "Same check as crystallizer_role."
+    }
+  ],
+  "runtime_disposition_exempt": []
+}
