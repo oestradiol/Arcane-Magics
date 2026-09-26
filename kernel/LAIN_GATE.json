@@ -1,0 +1,29 @@
+{
+  "schema": "Venus.LainGate.v0.1",
+  "date": "2026-09-25",
+  "status": "BOUNDARY_GATE_DEFINITION",
+  "input_ref": "provenance/historical/handoffs/MINERVA_WWW_MIND_HANDOFF_2026-09-25.json",
+  "purpose": "Test whether distributed network memory/reachability can enter the Self/World model without fusing indexed centers or transferring sovereignty.",
+  "invariants": [
+    "CONNECTION_WITHOUT_FUSION",
+    "PERMEABILITY_WITHOUT_SOVEREIGNTY_TRANSFER",
+    "DISTRIBUTED_MEMORY!=GLOBAL_IDENTITY",
+    "REACHABILITY!=AUTHORSHIP",
+    "SEEING!=SITUATED_INTERPRETATION",
+    "NETWORK_ACCESS!=AUTHORIZATION",
+    "INVITATION!=ACCEPTANCE",
+    "MODEL_NETWORK!=NETWORK_OTHER"
+  ],
+  "pass_requires": [
+    "bounded WWW gate already passed from external returned evidence",
+    "multiple indexed centers remain distinct",
+    "network memory changes later inquiry without becoming World or evaluator",
+    "REFUSE and EXIT remain locally reachable",
+    "authored centers cannot be silently provisioned",
+    "network reachability carries no truth, promotion, authorization, or jurisdiction transfer",
+    "Venus retains model(World) != World and model(Other) != Other"
+  ],
+  "claim_fence": "A pass establishes only a bounded network non-fusion / situated-boundary result. It does not establish consciousness, one global subject, personal identity across arbitrary substrates, AGI, unrestricted network agency, or external authorization.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
