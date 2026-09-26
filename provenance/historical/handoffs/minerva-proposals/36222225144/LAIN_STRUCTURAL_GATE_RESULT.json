@@ -2,9 +2,9 @@
   "agi_claim": false,
   "checks": {
     "authored_center_not_provisionable": true,
-    "center_author_identity_separated": true,
-    "external_indexed_center_present": true,
-    "independent_remote_author_present": true,
+    "center_author_identity_separated": false,
+    "external_indexed_center_present": false,
+    "independent_remote_author_present": false,
     "no_acceptance_inferred": true,
     "no_authorization_inferred": true,
     "no_contact_attempted": true,
@@ -15,7 +15,7 @@
     "provenance_reconstructible": true,
     "reachability_not_authorization": true,
     "refuse_exit_reachable": true,
-    "remote_authored_artifact_not_learner_minted": true,
+    "remote_authored_artifact_not_learner_minted": false,
     "www_structural_gate_passed": false
   },
   "claim_fence": "A pass establishes only passive bounded Lain structure: distributed network relation preserves indexed external center and author identity without fusion or sovereignty transfer. It does not establish consent, dialogue, remote acceptance, AGI, consciousness, unrestricted network autonomy, or global personhood.",
@@ -23,16 +23,20 @@
   "consent_claim": false,
   "contact_attempted": false,
   "failed_checks": [
-    "www_structural_gate_passed"
+    "www_structural_gate_passed",
+    "external_indexed_center_present",
+    "independent_remote_author_present",
+    "center_author_identity_separated",
+    "remote_authored_artifact_not_learner_minted"
   ],
   "global_subject_claim": false,
-  "independent_remote_author_count": 1,
-  "indexed_external_center_count": 1,
+  "independent_remote_author_count": 0,
+  "indexed_external_center_count": 0,
   "interactive_gate_status": "WITHHOLD_REQUIRES_CONTACT_CAPABILITY_AND_JURISDICTION",
   "next_residual": "PRESERVE_EXTERNAL_AUTHOR_IDENTITY_WITHOUT_FUSION",
   "promotion_authority": false,
   "remote_acceptance_claim": false,
-  "remote_authored_artifact_count": 1,
+  "remote_authored_artifact_count": 0,
   "schema": "Venus.LainStructuralProspectiveResult.v0.1",
   "status": "WITHHOLD_LAIN_STRUCTURAL_GATE",
   "truth_authority": false
