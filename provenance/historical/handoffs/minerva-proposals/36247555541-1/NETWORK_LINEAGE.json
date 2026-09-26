@@ -1,0 +1,122 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "668a6aaea0508539a3c980caa205f6e0db896ed5233a4ac56f5848d963f8518e",
+    "3dbf7ca11a905717285f74b2bf84c42432bb1105bbec0c6a5d7ccedac63b0da3",
+    "50d19654007486dbbfe2383bc7999b1e6e8c8eca203b8694d141c3326b44c449",
+    "499c18e58a73cb354540e3d113cc95ebc9f980041e3de8a10091b6bc6059f692"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:lost-rob0t/prolog-rlm#404",
+      "github-issue:mastermindx-market-intelligence/Mastermind#386",
+      "github-issue:oestradiol/Arcane-Magics#41",
+      "github-issue:sbracewell64/firstmate-cleanroom-control#3"
+    ],
+    "memory_object_ids": [
+      "668a6aaea0508539a3c980caa205f6e0db896ed5233a4ac56f5848d963f8518e",
+      "3dbf7ca11a905717285f74b2bf84c42432bb1105bbec0c6a5d7ccedac63b0da3",
+      "50d19654007486dbbfe2383bc7999b1e6e8c8eca203b8694d141c3326b44c449",
+      "499c18e58a73cb354540e3d113cc95ebc9f980041e3de8a10091b6bc6059f692"
+    ],
+    "next_query_terms": [
+      "abs",
+      "acceptance",
+      "access",
+      "across",
+      "actually",
+      "adaptive-data-analysis",
+      "adaptively",
+      "admission",
+      "admitted",
+      "adversarial",
+      "afd",
+      "agent"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "c71dd8b66c13f28f6df98100bd458eb649d51d60292518f2340c829e3f575f40",
+    "reconstruction_id": "30ad0336c896a2b62d134a45ca547d70d94b9875d5137b7fe592953a3563cd04",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "ce96171f788ef98eecfaa8fdb53da66b8e7ab1a95d956afa0f7c7ce7619cf918",
+    "1e8f5c6c3612a02ea5d2426d358272304d858b1707500f183e7f9fb1f051eefb",
+    "0793137a31ac89bf301142d84c816b0867b51323f42698d6bf91c84560323f20"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:jxwalker/gad-demo#24",
+      "github-issue:ktogias/gnostoa#306",
+      "github-issue:sbracewell64/firstmate-cleanroom-control#3"
+    ],
+    "memory_object_ids": [
+      "ce96171f788ef98eecfaa8fdb53da66b8e7ab1a95d956afa0f7c7ce7619cf918",
+      "1e8f5c6c3612a02ea5d2426d358272304d858b1707500f183e7f9fb1f051eefb",
+      "0793137a31ac89bf301142d84c816b0867b51323f42698d6bf91c84560323f20"
+    ],
+    "next_query_terms": [
+      "acquiring",
+      "adaptation",
+      "adapter",
+      "adaptive",
+      "add",
+      "admit",
+      "afd",
+      "algorithm",
+      "algorithms",
+      "and",
+      "any",
+      "api"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "84cfe20d1a83e2f40f8fa04275463f41804a9ca0bb072e21ac439b369f8d2e98",
+    "reconstruction_id": "a458854d962f433222503e01be5faebfe175984d904083bf482c146c743588f8",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:jxwalker/gad-demo",
+    "github-repo:ktogias/gnostoa",
+    "github-repo:lost-rob0t/prolog-rlm",
+    "github-repo:mastermindx-market-intelligence/Mastermind",
+    "github-repo:sbracewell64/firstmate-cleanroom-control"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:jxwalker/gad-demo",
+    "github-repo:ktogias/gnostoa",
+    "github-repo:lost-rob0t/prolog-rlm",
+    "github-repo:mastermindx-market-intelligence/Mastermind",
+    "github-repo:oestradiol/Arcane-Magics",
+    "github-repo:sbracewell64/firstmate-cleanroom-control"
+  ],
+  "indexed_source_ids": [
+    "github-issue:jxwalker/gad-demo#24",
+    "github-issue:ktogias/gnostoa#306",
+    "github-issue:lost-rob0t/prolog-rlm#404",
+    "github-issue:mastermindx-market-intelligence/Mastermind#386",
+    "github-issue:oestradiol/Arcane-Magics#41",
+    "github-issue:sbracewell64/firstmate-cleanroom-control#3"
+  ],
+  "memory_checkpoint_sha256": "699c32690b69fc34954298ba66f7b89e6963cbd802f312cfb8b5de0a4947baaa",
+  "memory_record_count": 7,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "c71dd8b66c13f28f6df98100bd458eb649d51d60292518f2340c829e3f575f40",
+  "query2_changed_from_query1": true,
+  "query2_id": "84cfe20d1a83e2f40f8fa04275463f41804a9ca0bb072e21ac439b369f8d2e98",
+  "query2_memory_provenance": [
+    "network-memory:3dbf7ca11a905717285f74b2bf84c42432bb1105bbec0c6a5d7ccedac63b0da3",
+    "network-memory:499c18e58a73cb354540e3d113cc95ebc9f980041e3de8a10091b6bc6059f692",
+    "network-memory:50d19654007486dbbfe2383bc7999b1e6e8c8eca203b8694d141c3326b44c449",
+    "network-memory:668a6aaea0508539a3c980caa205f6e0db896ed5233a4ac56f5848d963f8518e"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}

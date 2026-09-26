@@ -1,0 +1,162 @@
+{
+  "anchor_terms": [
+    "self-evolution",
+    "evaluation",
+    "control",
+    "adaptive",
+    "reuse",
+    "false",
+    "commits",
+    "and",
+    "promotion-gate",
+    "overfitting",
+    "experiment",
+    "structure"
+  ],
+  "config_id": "CROSS_SOURCE_BRIDGE",
+  "future_return_input": false,
+  "hidden_evaluation_input": false,
+  "program_digest": "7a910adc65b55f17f4da6da65e079135ad9bf2d458a2322360526031de20bae9",
+  "promotion_authority": false,
+  "relations": [
+    {
+      "anchor_degree": 9,
+      "anchor_terms": [
+        "adaptive",
+        "commits",
+        "control",
+        "evaluation",
+        "false",
+        "overfitting",
+        "promotion-gate",
+        "reuse",
+        "self-evolution"
+      ],
+      "source_ids": [
+        "github-issue:mastermindx-market-intelligence/Mastermind#386",
+        "github-issue:oestradiol/Arcane-Magics#41",
+        "github-issue:sbracewell64/firstmate-cleanroom-control#3"
+      ],
+      "source_support": 3,
+      "term": "because",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 9,
+      "anchor_terms": [
+        "adaptive",
+        "commits",
+        "control",
+        "evaluation",
+        "false",
+        "overfitting",
+        "promotion-gate",
+        "reuse",
+        "self-evolution"
+      ],
+      "source_ids": [
+        "github-issue:lost-rob0t/prolog-rlm#404",
+        "github-issue:oestradiol/Arcane-Magics#41"
+      ],
+      "source_support": 2,
+      "term": "promotion",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 9,
+      "anchor_terms": [
+        "adaptive",
+        "commits",
+        "control",
+        "evaluation",
+        "false",
+        "overfitting",
+        "promotion-gate",
+        "reuse",
+        "self-evolution"
+      ],
+      "source_ids": [
+        "github-issue:lost-rob0t/prolog-rlm#404",
+        "github-issue:oestradiol/Arcane-Magics#41"
+      ],
+      "source_support": 2,
+      "term": "self-improvement",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 9,
+      "anchor_terms": [
+        "adaptive",
+        "commits",
+        "control",
+        "evaluation",
+        "false",
+        "overfitting",
+        "promotion-gate",
+        "reuse",
+        "self-evolution"
+      ],
+      "source_ids": [
+        "github-issue:mastermindx-market-intelligence/Mastermind#386",
+        "github-issue:oestradiol/Arcane-Magics#41"
+      ],
+      "source_support": 2,
+      "term": "acceptance",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 9,
+      "anchor_terms": [
+        "adaptive",
+        "commits",
+        "control",
+        "evaluation",
+        "false",
+        "overfitting",
+        "promotion-gate",
+        "reuse",
+        "self-evolution"
+      ],
+      "source_ids": [
+        "github-issue:mastermindx-market-intelligence/Mastermind#386",
+        "github-issue:oestradiol/Arcane-Magics#41"
+      ],
+      "source_support": 2,
+      "term": "agent",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 9,
+      "anchor_terms": [
+        "adaptive",
+        "commits",
+        "control",
+        "evaluation",
+        "false",
+        "overfitting",
+        "promotion-gate",
+        "reuse",
+        "self-evolution"
+      ],
+      "source_ids": [
+        "github-issue:lost-rob0t/prolog-rlm#404",
+        "github-issue:oestradiol/Arcane-Magics#41"
+      ],
+      "source_support": 2,
+      "term": "candidate",
+      "title_support": 0
+    }
+  ],
+  "schema": "Venus.StateOwnedRelationTrace.v0.1",
+  "status": "RELATION_TRACE_CANDIDATE_FROZEN",
+  "terms": [
+    "because",
+    "promotion",
+    "self-improvement",
+    "acceptance",
+    "agent",
+    "candidate"
+  ],
+  "trace_id": "d7f4e86e879039d2afc85eb37a59164506cb3ee48914ec88fed981fc4867c890",
+  "truth_authority": false
+}

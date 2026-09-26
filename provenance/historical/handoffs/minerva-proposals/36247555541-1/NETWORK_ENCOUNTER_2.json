@@ -1,0 +1,104 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:jxwalker/gad-demo",
+    "github-repo:ktogias/gnostoa",
+    "github-repo:sbracewell64/firstmate-cleanroom-control"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:jxwalker/gad-demo",
+    "github-repo:ktogias/gnostoa",
+    "github-repo:sbracewell64/firstmate-cleanroom-control"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "84cfe20d1a83e2f40f8fa04275463f41804a9ca0bb072e21ac439b369f8d2e98",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T14:10:09Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "self-evolution evaluation control abs acceptance access across actually"
+  ],
+  "selected_study_relevance_terms": [
+    "self-evolution",
+    "evaluation",
+    "control",
+    "adaptive",
+    "reuse",
+    "false",
+    "commits",
+    "and",
+    "promotion-gate",
+    "overfitting",
+    "experiment",
+    "structure"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:ktogias",
+      "author_login": "ktogias",
+      "author_type": "User",
+      "center_id": "github-repo:ktogias/gnostoa",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Purpose Evaluate whether a fast typed probabilistic decision evaluator can add measurable value to Gnostoa review orchestration without acquiring semantic, lifecycle, assurance, or provider-effect authority. The first concrete adapter under evaluation is **TypeSafe AI Jev**, preferably through the Vercel AI Gateway native HTTP API. The reusable design target is **provider-neutral**: Jev is an experiment adapter, not a core semantic dependency. This Work Item records **research and a staged experiment/implementation path**. It does **not** by itself admit production planner influence, reviewer dispatch, Draft/Ready mutation, approval, merge, quorum changes, or any provider write. ## Owner direction and Ariadne placement Owner direction on 2026-09-22 is to research this deeply, retain the best practices/patterns, and introduce the experiment and a possible implementation path into the Ariadne workflow. Placement: - attach this as a **non-gating A4-P learning lane** to Ariadne v9; - do **not** insert a new mandatory Ariadne stage; - do **not** block Q0, L2, L3, #259, or Phase D; - preserve the existing #15 sequence: PR #297 normative reviewer-orchestration baseline first, then the ",
+      "relevance_matches": [
+        "evaluation",
+        "experiment"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-22T07:52:14Z",
+      "source_id": "github-issue:ktogias/gnostoa#306",
+      "source_url": "https://github.com/ktogias/gnostoa/issues/306",
+      "title": "Evaluate a provider-neutral probabilistic decision evaluator with Jev in shadow mode"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:sbracewell64",
+      "author_login": "sbracewell64",
+      "author_type": "User",
+      "center_id": "github-repo:sbracewell64/firstmate-cleanroom-control",
+      "learner_minted_artifact": false,
+      "observed_relation": "protocol_family: fm-sol-control/v2 kind: browser-sol-follow-on-commission from: browser-sol to: firstmate project: FirstMate-Cleanroom authority: captain-delegated-browser-sol captain_required: false basis: - control issue #2 completed the first live clean-room round trip - request: fscr2-a30468b552d5a85eb0c9654f32041ee5 - ruling: sol-ruling-6b6dc8ea0de046e1a77fddcd1c94e772 - receipt: fscp2-0a45efd22b18f557fbb42ba6332d8b17 - schema_generation_2_digest: bbe6ce89744ef03901cd5823a75670db86293bdc1f55bff4f4095b0ced446908 - control_config_generation: 912f6238d94dfdf8afd672bc7f28a445b66138c14a5a08fa266a77837346c2aa rulings: control_plane_operability: decision: APPROVE_WITH_CONDITIONS instruction: > Treat the generation-2 round trip as successful evidence that the clean-room venue, Browser Sol credential path, listener, applicability checks, exactly-once sequential consumption, replay-zero-action, receipt and closure path work end to end. Do not treat schema generation 2 as the permanent authoritative tooling generation because the independent observer found the published request envelope does not validate as fetched and the frozen emitter cannot emit without a bridge. tooling_supersession",
+      "relevance_matches": [
+        "control",
+        "false"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-20T11:17:02Z",
+      "source_id": "github-issue:sbracewell64/firstmate-cleanroom-control#3",
+      "source_url": "https://github.com/sbracewell64/firstmate-cleanroom-control/issues/3",
+      "title": "[SOL\u2192FM] Post-handshake rulings: protocol gen3, no-mistakes isolation, requalification sequence"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:jxwalker",
+      "author_login": "jxwalker",
+      "author_type": "User",
+      "center_id": "github-repo:jxwalker/gad-demo",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Summary This is a major upgrade that improves CodeScorpion's compliance with canonical evolutionary computation theory (Eiben & Smith baseline) from ~45% to ~80%. ### New Capabilities **Phase 1: Selection Algorithms & Operator Registry** - Rank-based selection (linear/exponential) - Roulette wheel selection - Stochastic universal sampling (SUS) - Tournament selection with configurable pressure - Centralized operator registry pattern for pluggable operators **Phase 2: Diversity Mechanisms** - Fitness sharing with configurable niche radius - Adaptive niching with auto-adjusting parameters - NEAT-style speciation with compatibility thresholds - Island model with ring/star/random migration topologies **Phase 3: Memetic Algorithm Support** - Meme representation with 6 meme types (code pattern, strategy, hyperparameter, etc.) - Meme pool with UCB-based selection - Lamarckian learning (genotype modification) - Baldwinian learning (fitness-only modification) - Hybrid learning modes **Phase 4: Adaptive Parameter Control** - Self-adaptive parameters (ES-style log-normal mutation) - Operator probability adaptation (adaptive pursuit, success ratio, UCB) - Population size adaptation (diversi",
+      "relevance_matches": [
+        "control",
+        "adaptive"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-01-01T18:43:51Z",
+      "source_id": "github-issue:jxwalker/gad-demo#24",
+      "source_url": "https://github.com/jxwalker/gad-demo/pull/24",
+      "title": "feat: Evolutionary Computation v2.0 Compliance Upgrade"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}

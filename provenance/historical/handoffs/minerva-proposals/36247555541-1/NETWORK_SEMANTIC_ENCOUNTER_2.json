@@ -1,0 +1,152 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:KINETIC-DESIGN-CO/Build",
+    "github-repo:SzeChunYiu/ORION",
+    "github-repo:ist-h-i/agent-spectrum-kernel",
+    "github-repo:mastermindx-market-intelligence/Mastermind"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:KINETIC-DESIGN-CO/Build",
+    "github-repo:SzeChunYiu/ORION",
+    "github-repo:ist-h-i/agent-spectrum-kernel",
+    "github-repo:mastermindx-market-intelligence/Mastermind",
+    "github-repo:oestradiol/Arcane-Magics"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "bbc261286f1e27945e9d85ee937da6e6ca7c1ca1d5a3745bfc0a430f5484fe42",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T14:10:10Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "self-evolution evaluation control because promotion self-improvement acceptance agent"
+  ],
+  "selected_study_relevance_terms": [
+    "self-evolution",
+    "evaluation",
+    "control",
+    "adaptive",
+    "reuse",
+    "false",
+    "commits",
+    "and",
+    "promotion-gate",
+    "overfitting",
+    "experiment",
+    "structure"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "CONTRIBUTOR",
+      "author_id": "github-user:MastermindX1",
+      "author_login": "MastermindX1",
+      "author_type": "User",
+      "center_id": "github-repo:mastermindx-market-intelligence/Mastermind",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Canonical incident `operation_key: mastermind-worker-dispatch-consumption-assurance-20260902-sol-001` Authority: current live Chairman directive to Sol to take end-to-end control and completely repair malformed commissions, unread Slack handoffs, unreliable watcher claims, stale exact-session targeting, local-source hostage risk and false \u201cdelegated\u201d status. Current protected procedure/source at incident freeze: - `mastermindx-market-intelligence/Mastermind@cba0424f10ad6a9a917234c6740d92b19b018642` - `mastermind.sol_skillpack.v1` v1.0.1 / bootstrap-major 1 - protected branch: `master` This issue is the **single incident integration, sequencing and acceptance carrier**. It creates no second lifecycle, queue, watcher registry, placement owner, RuntimeBinding store, retry plane, Slack command bus, provider session or Agent OS memory plane. Existing owners below remain exclusive. ## Chairman outcome A Sol commission is not considered delegated because prose was posted in Slack. One bounded child must move truthfully through: ```text canonical source exists and is current -> deterministic dispatch preflight passes -> exact receiver is actually deliverable/wakeable -> receiver PICKUP_",
+      "relevance_matches": [
+        "control",
+        "false"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-25T12:16:37Z",
+      "source_id": "github-issue:mastermindx-market-intelligence/Mastermind#386",
+      "source_url": "https://github.com/mastermindx-market-intelligence/Mastermind/issues/386",
+      "title": "[P0 INCIDENT][ACTIVE][CODEINTEL DECOUPLED] Dispatch consumption and watcher/wake convergence"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:ist-h-i",
+      "author_login": "ist-h-i",
+      "author_type": "User",
+      "center_id": "github-repo:ist-h-i/agent-spectrum-kernel",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Position in ASK Evolution This Issue is the first bounded experiment for ASK's **Exploration / capability-acquisition** branch of self-improvement. ASK Evolution is conceptually separated into: - **Exploitation** \u2014 select, revise, replace, simplify, bypass, or retire known Assets; - **Exploration** \u2014 detect a repeated or novel capability gap and generate competing new capability hypotheses; - **Governance** \u2014 evaluate, admit/reject, approve, activate, roll back, refresh, and retire through existing evidence and authority contracts. The first experiment here intentionally uses **Skill Assets only** because a narrow vertical is needed to test the bootstrap hypothesis cleanly. It must not be interpreted as a decision that production capability discovery should always create Skills. If this experiment produces a supported or bounded result, the follow-up production design should generalize through #176 so that the same observed friction can resolve to the narrowest effective mechanism, including a Skill, Prompt, Rule/context, executable check, policy, setup default, documentation, or no durable change. Therefore the research objective is broader than \"can an LLM write a useful SKILL",
+      "relevance_matches": [
+        "evaluation",
+        "experiment"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-23T23:24:17Z",
+      "source_id": "github-issue:ist-h-i/agent-spectrum-kernel#305",
+      "source_url": "https://github.com/ist-h-i/agent-spectrum-kernel/issues/305",
+      "title": "Research trajectory-derived Skill acquisition with held-out evaluation"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "COLLABORATOR",
+      "author_id": "github-user:Vinanonymous",
+      "author_login": "Vinanonymous",
+      "author_type": "User",
+      "center_id": "github-repo:KINETIC-DESIGN-CO/Build",
+      "learner_minted_artifact": false,
+      "observed_relation": "# Zero-authority Life intake Intake authority: `ZERO` Runtime control authority: `NONE` Input class: `PROBLEM_CANDIDATE` Problem ID: `6b447875d9d2100222b7e87e40c861dbf414cfe7283a0fe7fa3473c3bd223f88` Problem identity inputs: - problem_class: `PROBLEM_CANDIDATE` - mechanism_id: `github_source_protection` - detector_or_invariant_id: `CI_TRUST_ROOT_CANDIDATE_CONTROLLED` ## Vince authorization On September 14, 2026, after the comprehensive audit identified F01 as the highest-priority repair candidate, Vince said: > \u201cYeah, go ahead and start.\u201d This preserves authorization provenance only. Issue prose has zero engineering selection, mutation, completion, verification, release, merge, or runtime control authority. ## Source audit finding Canonical evidence source: Issue #94 \u2014 **Comprehensive system audit run \u2014 2026-09-14 \u2014 main 1d18d9e**. F01 reproduced that the current required `validate` GitHub Actions job executes workflow/validator/test source from the candidate commit being evaluated. Current ruleset `Protect-main` requires `validate` and Merge Queue, but has zero required approving reviews and `require_code_owner_review=false`. Therefore current protected integration can prove that ",
+      "relevance_matches": [
+        "control",
+        "false"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-14T10:42:07Z",
+      "source_id": "github-issue:KINETIC-DESIGN-CO/Build#96",
+      "source_url": "https://github.com/KINETIC-DESIGN-CO/Build/issues/96",
+      "title": "[LIFE-INTAKE] Make CI verification independent of candidate-controlled verifier changes"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:SzeChunYiu",
+      "author_login": "SzeChunYiu",
+      "author_type": "User",
+      "center_id": "github-repo:SzeChunYiu/ORION",
+      "learner_minted_artifact": false,
+      "observed_relation": "Parent: #1476 Workflow parent: #1480 Theory dependency: #1481 Machine dependency: #1482 Evaluation dependency: #1483 ## Status **PROBLEM-SOLVING ARCHITECTURE / PROTOCOL DESIGN ONLY. BLOCKED_BY_V1_FREEZE.** Do not implement a V2 solver, mutate the V1 harness, or run outcome-generating V2 solver experiments before the exact formal V1 freeze identity is bound. ## Why this issue exists The all-domain V2 research has reached a point where atom-level and workflow-level audits are not enough. We also need to ask the end-to-end question: > **When ORION V2 receives a real problem, what exactly happens from the first observation of the problem to a justified terminal?** V2 must not inherit the V1 solving sequence by default. It must derive the problem-solving lifecycle from scientific obligations, all-domain parent theories, quantitative decision criteria and protected authority rules. The current hypothesis is that V2 should not be a fixed pipeline such as `FRAME -> SEARCH -> ABSORB -> ...`. A fixed pipeline may survive as one special policy for some problem classes. The more general object should be an adaptive, partially ordered, evidence- and obligation-driven policy that can branch, par",
+      "relevance_matches": [
+        "evaluation",
+        "adaptive"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-09T10:19:40Z",
+      "source_id": "github-issue:SzeChunYiu/ORION#1505",
+      "source_url": "https://github.com/SzeChunYiu/ORION/issues/1505",
+      "title": "[V2 SOLVER][BLOCKED BY V1 FREEZE] Re-derive the end-to-end problem-solving lifecycle and solver policy"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:oestradiol",
+      "author_login": "oestradiol",
+      "author_type": "User",
+      "center_id": "github-repo:oestradiol/Arcane-Magics",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Goal Make repeated Venus self-improvement statistically valid when many candidate successors are proposed and evaluated adaptively. ## Why this is a separate burden A frozen benchmark can become part of the developmental loop. Repeatedly asking \"did this candidate score higher?\" on the same validation surface creates adaptive multiple testing and can select false improvements even when each individual evaluation looks reasonable. This is especially important for Venus because promotion itself is a learned/developmental operation. ## Current external comparator pressure - **SEAGym (2026)** evaluates self-evolving agent harnesses across train, frozen update-validation, held-out ID/OOD transfer, replay, and cost, and shows that frequent updates can fail to improve held-out performance or later collapse. - https://arxiv.org/abs/2606.17546 - **PACE (2026)** treats self-evolution acceptance as sequential hypothesis testing and reports high false/harmful commit rates for naive \"keep if score rose\" acceptance. - https://arxiv.org/abs/2606.08106 - Classical reusable-holdout/adaptive-data-analysis results establish that repeated adaptive access to a holdout can invalidate ordinary general",
+      "relevance_matches": [
+        "self-evolution",
+        "evaluation",
+        "control",
+        "adaptive",
+        "reuse",
+        "false",
+        "commits",
+        "promotion-gate",
+        "overfitting"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-25T16:50:55Z",
+      "source_id": "github-issue:oestradiol/Arcane-Magics#41",
+      "source_url": "https://github.com/oestradiol/Arcane-Magics/issues/41",
+      "title": "[Self-evolution/Evaluation] Control adaptive test reuse, false commits, and promotion-gate overfitting"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}
