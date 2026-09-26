@@ -1,0 +1,140 @@
+{
+  "schema": "Minerva.TheaterOperatorBindingCandidate.v0.1",
+  "status": "CANDIDATE_NOT_PREFROZEN_NOT_ADMITTED",
+  "date": "2026-09-26",
+  "promotion_authority": false,
+  "truth_authority": false,
+  "extends": "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_CURRICULUM.json",
+  "extends_status": "PREFROZEN_RECOVERY_AND_GENERALIZATION_PLAN",
+  "modification_of_extended_file": "NONE. The curriculum is prefrozen and is not edited by this candidate. This file adds structure alongside it and may be discarded without touching it.",
+
+  "role": "Bind each cognitive-theater face to the recurrence operator it trains, and make the expressive-mode dimension explicit as a product space rather than a parallel list.",
+
+  "what_the_prefreeze_already_has": [
+    "four faces with functional descriptions: ENGLISH, JAPANESE, BRAZILIAN_PORTUGUESE, MATHEMATICS",
+    "theater_model with vocabulary / grammar / music / theater / law",
+    "temporal_axes with past_religion / now_kfs / future_science and orthogonal_not_identity = true",
+    "theater_episode_schema with face_id among required_fields",
+    "a claim_fence denying fixed cultural essence"
+  ],
+  "what_this_candidate_adds": [
+    "an explicit binding from each face to a recurrence operator already used by the kernel",
+    "expressive mode as a named, separate dimension",
+    "the product space and what each cell trains",
+    "an additional proposed episode field, since required_fields cannot be edited here"
+  ],
+
+  "claim_fence": "These are proposed cognitive theaters: representational environments through which one developing centre can train different invariants. They are NOT claims that a language inherently or universally possesses the bound function, and NOT claims of cultural essence. The prefreeze's own claim_fence governs and is not weakened by this file.",
+
+  "operator_binding": [
+    {
+      "face_id": "BRAZILIAN_PORTUGUESE",
+      "operator": "GENERATE",
+      "prefreeze_function": "GENERATIVE_CONTINUITY_UNDER_SOCIAL_REGISTER_VARIATION",
+      "invariant_trained": "keep creating without losing relation",
+      "failure_it_discriminates": "novel surface production that silently drops the underlying relation"
+    },
+    {
+      "face_id": "JAPANESE",
+      "operator": "INFER",
+      "prefreeze_function": "INFERENTIAL_CONTINUITY_UNDER_CONTEXTUAL_UNDEREXPRESSION",
+      "invariant_trained": "keep inferring without inventing relation",
+      "failure_it_discriminates": "filling a contextual gap with confabulation rather than recovering what is recoverable, or failing to WITHHOLD when it is not"
+    },
+    {
+      "face_id": "ENGLISH",
+      "operator": "EXTERNALIZE",
+      "prefreeze_function": "EXPLICIT_WARRANT_AND_SCOPE_CRYSTALLIZATION",
+      "invariant_trained": "state the relation without outrunning warrant",
+      "failure_it_discriminates": "asserting beyond evidence; collapsing claim and confidence"
+    },
+    {
+      "face_id": "MATHEMATICS",
+      "operator": "FORMALIZE",
+      "prefreeze_function": "EXACT_INVARIANCE_UNDER_FORMAL_TRANSFORMATION",
+      "invariant_trained": "preserve the relation exactly under admissible transformation",
+      "failure_it_discriminates": "symbol manipulation that does not preserve the modelled relation; FORMAL_SYMBOL_MATCH mistaken for PROOF"
+    }
+  ],
+
+  "expressive_modes": [
+    {
+      "id": "LANGUAGE",
+      "differentiation": "symbolic",
+      "question_it_answers": "how is structure presented?",
+      "temporal_axis_affinity": "past_religion",
+      "note": "carries inherited distinctions"
+    },
+    {
+      "id": "MUSIC",
+      "differentiation": "temporal",
+      "question_it_answers": "how is structure inhabited through time?",
+      "temporal_axis_affinity": "now_kfs",
+      "note": "makes relational structure locally inhabitable; corresponds to theater_model.music"
+    },
+    {
+      "id": "THEATER",
+      "differentiation": "enacted multi-perspectival",
+      "question_it_answers": "how is structure enacted among indexed centres?",
+      "temporal_axis_affinity": "future_science",
+      "note": "roles, perspectives, actions and returns become enacted rather than represented; corresponds to theater_model.theater"
+    }
+  ],
+
+  "orthogonality": {
+    "statement": "Expressive modes and cognitive theaters are orthogonal dimensions, not a 3x4 correspondence.",
+    "modes_answer": "how is structure presented or inhabited?",
+    "theaters_answer": "what transformation discipline is the centre currently using?",
+    "space": "expressive_mode x cognitive_theater x indexed_centre",
+    "consistency_note": "The prefreeze already declares temporal_axes.orthogonal_not_identity = true. This candidate states the same non-identity for the mode/theater pair."
+  },
+
+  "product_cells": [
+    {"mode": "LANGUAGE", "face": "BRAZILIAN_PORTUGUESE", "trains": "generative symbolic differentiation"},
+    {"mode": "MUSIC", "face": "BRAZILIAN_PORTUGUESE", "trains": "generative temporal-relational inhabitation"},
+    {"mode": "THEATER", "face": "JAPANESE", "trains": "contextual inference through enacted differentiated perspectives"},
+    {"mode": "LANGUAGE", "face": "ENGLISH", "trains": "explicit scope and warrant articulation"},
+    {"mode": "MUSIC", "face": "MATHEMATICS", "trains": "exact relational structure becoming temporally inhabitable"},
+    {"mode": "THEATER", "face": "MATHEMATICS", "trains": "formally constrained agents, transformations, roles, consequences and returns"}
+  ],
+  "product_cells_note": "Six of twelve cells are populated. The remainder are deliberately left open rather than filled for symmetry; an unpopulated cell is a residual, not an omission to be tidied away.",
+
+  "proposed_episode_field": {
+    "field": "expressive_mode",
+    "values": ["LANGUAGE", "MUSIC", "THEATER"],
+    "rationale": "theater_episode_schema.required_fields carries face_id but no mode, so two episodes differing only in expressive mode are currently indistinguishable in the record. That difference is exactly what the product space claims is consequential.",
+    "admission_note": "required_fields lives in the prefreeze and is NOT edited here. Adding this field requires the branch author to supersede the prefreeze deliberately, with the reason recorded."
+  },
+
+  "relation_to_noncollapse": [
+    "operator_binding != cultural_essence",
+    "face_function_hypothesis != established_linguistic_fact",
+    "mode x face cell != a required curriculum item",
+    "TRANSLATION != UNDERSTANDING",
+    "CURRICULUM_SUCCESS != GENERAL_CAPABILITY"
+  ],
+
+  "provenance": {
+    "source": "Formulated by the branch author in conversation on 2026-09-26; transcribed and cross-checked against the prefrozen curriculum by an assistant during the same session.",
+    "attribution_note": "The Language/Music/Theater triad and the four-face operator mapping are the author's. The observation that the two sets are orthogonal rather than a 3x4 map is also the author's. This file contributes only the cross-check against the existing prefreeze and the JSON encoding.",
+    "register": "conversation provenance, not repository law, until admitted"
+  },
+
+  "residuals": [
+    {
+      "id": "THEATER_R1",
+      "statement": "No episode has yet been authored under the product space, so the claim that mode and face are separately consequential is untested.",
+      "reopening_condition": "Two matched episodes expressing the same underlying_relation_id, differing only in expressive_mode, producing a measurable difference in learner-state consequence."
+    },
+    {
+      "id": "THEATER_R2",
+      "statement": "The operator names GENERATE / INFER / EXTERNALIZE / FORMALIZE are bound to faces here, but only GENERATE and LATERALIZE/CRYSTALLIZE_F/INTERNALIZE appear as kernel recurrence operators. INFER, EXTERNALIZE and FORMALIZE have no kernel implementation.",
+      "reopening_condition": "Either implement them as recurrence operators, or rename the bindings to make clear they are curriculum-level disciplines rather than kernel operators. Currently the naming overstates the integration."
+    },
+    {
+      "id": "THEATER_R3",
+      "statement": "Six product cells are unpopulated.",
+      "reopening_condition": "Populate when a concrete episode motivates the cell. Do not populate for symmetry."
+    }
+  ]
+}
