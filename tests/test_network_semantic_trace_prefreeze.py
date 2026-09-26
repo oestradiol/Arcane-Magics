@@ -65,6 +65,67 @@ class NetworkSemanticTracePrefreezeTests(unittest.TestCase):
         self.assertIn("relevant_anchor_perturbation_changes_trace",text)
         self.assertIn("general_semantics_claim",text)
         self.assertIn("internalization_claim",text)
+    def test_v2_rejects_diversity_regression(self):
+        import importlib.util
+        spec=importlib.util.spec_from_file_location(
+            "trace_eval",
+            ROOT/"scripts/evaluate_network_semantic_trace.py",
+        )
+        mod=importlib.util.module_from_spec(spec)
+        assert spec.loader is not None
+        spec.loader.exec_module(mod)
+        pref=json.loads(
+            (ROOT/"kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE_V2.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        baseline={
+            "anchor_coverage_count":4,
+            "mean_relevance_matches":2.0,
+            "external_center_count":6,
+            "query_token_count":9,
+        }
+        candidate={
+            "anchor_coverage_count":5,
+            "mean_relevance_matches":2.7,
+            "external_center_count":3,
+            "query_token_count":9,
+        }
+        decision=mod.decide(pref,baseline,candidate)
+        self.assertFalse(decision["passed"])
+        self.assertFalse(decision["checks"]["external_center_nonregression"])
+        self.assertEqual(decision["mode"],"PARETO_NONREGRESSION_V2")
+
+    def test_v2_accepts_strict_pareto_gain(self):
+        import importlib.util
+        spec=importlib.util.spec_from_file_location(
+            "trace_eval2",
+            ROOT/"scripts/evaluate_network_semantic_trace.py",
+        )
+        mod=importlib.util.module_from_spec(spec)
+        assert spec.loader is not None
+        spec.loader.exec_module(mod)
+        pref=json.loads(
+            (ROOT/"kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE_V2.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        baseline={
+            "anchor_coverage_count":5,
+            "mean_relevance_matches":2.1,
+            "external_center_count":6,
+            "query_token_count":9,
+        }
+        candidate={
+            "anchor_coverage_count":6,
+            "mean_relevance_matches":2.3,
+            "external_center_count":6,
+            "query_token_count":9,
+        }
+        decision=mod.decide(pref,baseline,candidate)
+        self.assertTrue(decision["passed"])
+        self.assertTrue(all(decision["checks"].values()))
+
 
 if __name__=="__main__":
     unittest.main()
