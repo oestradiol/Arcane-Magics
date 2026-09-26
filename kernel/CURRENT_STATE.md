@@ -592,3 +592,68 @@ Canonical provenance is recorded at
 The extract preserves the older role/deixis/coreference/tense/discourse/history consequences without retroactively claiming that Canonical contained a primitive literally named Theater.
 
 General Theater, general Music, cultural-cognitive, Internalizer, AGI, and consciousness claims remain WITHHOLD.
+
+
+## Cognitive theater: state ownership + source removal
+
+The #206 developmental sequence has now crossed the local representation/source-removal boundary:
+
+```text
+Fresh5
+local Language-operator composition
+→ 24/24
+→ whole-scene / pairwise / unary controls remain lower
+
+Fresh6
+task/relation identity hidden
+→ explicit CognitiveTheaterState = 24/24
+→ whole-scene hidden-task comparator = 15/24
+→ 12/12 discourse-order gauge pairs preserve state
+→ KFS interventions change endpoint
+→ event-history reversal preserves endpoint but changes history
+
+Fresh7
+isolated execution bundle:
+    learner-owned state
+    + generic structured-template executor
+    + fresh raw inputs
+→ capability-specific curriculum/composer absent
+→ state = 24/24
+→ task/binding = 24/24
+→ 12/12 gauge pairs preserve state
+```
+
+The current earned decomposition is therefore:
+
+```text
+Language
+→ local relation-bearing symbolic operators
+
+Theater
+→ explicit indexed participant / local-KFS state
+
+Music
+→ event/history order that can differ while endpoint remains equal
+
+Internalizer
+→ semantics are now state-owned at this bounded scope
+→ source-removal equivalence has passed
+→ final admission is still WITHHOLD
+   because local CI/evaluation != independent fresh World return
+```
+
+Current state-owned carrier:
+
+`kernel/development/COGNITIVE_THEATER_STATE_OWNERSHIP_CANDIDATE.json`
+
+Generic executor:
+
+`kernel/runtime/structured_template_machine.py`
+
+Returned source-removal result:
+
+`kernel/development/COGNITIVE_THEATER_SOURCE_REMOVAL_FRESH7_RESULT.json`
+
+The next burden is no longer another local parser. It is an independent hidden evaluation with non-preauthored fresh surfaces and evaluator custody outside the learner/local implementation loop. Only that can support the final bounded Internalizer receipt.
+
+General Theater, general Music, cultural-cognitive, AGI, consciousness, promotion, and truth claims remain WITHHOLD.
