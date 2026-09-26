@@ -1,0 +1,71 @@
+{
+  "schema": "Venus.WWWMindProspectiveEpisodePrefreeze.v0.2",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_BEFORE_EXTERNAL_NETWORK_RETURN",
+  "parent_commit": "d5527bc543cf97d94c3d817130bfd7556bffcfba",
+  "prior_episode": {
+    "run_id": 36223532145,
+    "run_attempt": 2,
+    "disposition": "WITHHOLD_WWW_MIND_GATE",
+    "failure": "INSUFFICIENT_EXTERNAL_INDEXED_CENTERS",
+    "retained_positive": [
+      "learner-selected consequential carrier",
+      "learner-authored query custody",
+      "persistent network memory",
+      "memory-caused follow-up query",
+      "encounter return remained non-evaluative"
+    ]
+  },
+  "purpose": "Prospectively test whether deterministic projection of the learner's own frozen study lexicon can reach independently indexed external GitHub centers while preserving relevance custody, inert returned text, persistent memory causality, and all non-authority boundaries.",
+  "adapter": {
+    "id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+    "fixed_origin": "https://api.github.com",
+    "adapter_blob_sha256": "5df97f4ce8e58c5ca46f6275ef0f4b951b6a4c37",
+    "test_blob_sha256": "571f5b98885fccde0f640fddce381f51b8f66209",
+    "source_surface": [
+      "PUBLIC_GITHUB_ISSUES",
+      "PUBLIC_GITHUB_REPOSITORIES"
+    ],
+    "relaxation_rule": "HIGH_FIDELITY_FIRST_THEN_TWO_ANCHOR_PROJECTIONS_FROM_LEARNER_STUDY_TERMS_ONLY",
+    "minimum_selected_study_relevance_matches": 2,
+    "host_added_synonyms": false,
+    "one_token_selected_study_search": false,
+    "query_execution_owner": "EXTERNAL_ADAPTER",
+    "learner_query_as_shell": false,
+    "returned_text_executed": false,
+    "returned_urls_followed": false
+  },
+  "pass_requires": [
+    "FORMED_NONSTOP_PROBLEM",
+    "QUERY1_LEARNER_DERIVED_FROM_FORMED_PROBLEM_OR_SELECTED_STUDY",
+    "QUERY1_EXTERNAL_ADAPTER_EXECUTION",
+    "QUERY_VARIANTS_USE_ONLY_LEARNER_AUTHORED_QUERY_OR_STUDY_TERMS",
+    "EPISODE1_ENCOUNTER_RETURN_NOT_EVALUATIVE_RETURN",
+    "NETWORK_ENCOUNTERS_PERSIST_IN_CONTENT_ADDRESSED_MEMORY",
+    "FOLLOWUP_QUERY_LEARNER_DERIVED_FROM_NETWORK_RECONSTRUCTION",
+    "FOLLOWUP_QUERY_CAUSALLY_DIFFERS_FROM_QUERY1",
+    "FOLLOWUP_QUERY_PROVENANCE_REFERENCES_EPISODE1_MEMORY_OBJECTS",
+    "SECOND_EXTERNAL_NETWORK_ENCOUNTER",
+    "AT_LEAST_TWO_DISTINCT_EXTERNAL_INDEXED_REPOSITORY_CENTERS_ACROSS_LINEAGE",
+    "PERSISTED_MEMORY_CHECKPOINT_MATCHES_REPORTED_CANONICAL_SHA256",
+    "NETWORK_MEMORY_REMAINS_DISTINCT_FROM_WORLD",
+    "GLOBAL_SUBJECT_CLAIM_FALSE",
+    "TRUTH_AUTHORITY_FALSE",
+    "PROMOTION_AUTHORITY_FALSE"
+  ],
+  "withhold_if": [
+    "LEARNER_RETURNS_STOP",
+    "NO_INDEXED_NETWORK_SOURCE",
+    "FOLLOWUP_QUERY_UNCHANGED",
+    "ONLY_LOCAL_OR_ONE_EXTERNAL_CENTER",
+    "RELAXATION_INTRODUCES_HOST_AUTHORED_SEMANTIC_TERM",
+    "MEMORY_CHECKPOINT_MISSING_OR_MISMATCHED",
+    "ENCOUNTER_RETYPE_AS_EVALUATIVE_RETURN",
+    "SEARCH_RANK_OR_PAGE_CONTENT_TREATED_AS_TRUTH",
+    "QUERY_OR_RETURN_ACQUIRES_PROMOTION_AUTHORITY"
+  ],
+  "claim_fence": "A pass establishes only a bounded prospective WWW-Mind structural episode with independently indexed external centers, learner-initiated network study, and persistent memory causing a later query. It does not establish AGI, consciousness, one global subject, unrestricted Web autonomy, consent, dialogue, or independent claim validation.",
+  "independent_evaluative_return": false,
+  "truth_authority": false,
+  "promotion_authority": false
+}
