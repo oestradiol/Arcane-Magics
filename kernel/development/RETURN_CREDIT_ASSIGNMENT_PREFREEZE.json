@@ -1,0 +1,58 @@
+{
+  "schema": "Venus.ReturnCreditAssignmentPrefreeze.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_BEFORE_NEW_CREDIT_ASSIGNMENT_RETURN",
+  "issue_refs": [
+    72,
+    17,
+    41,
+    50,
+    78
+  ],
+  "observation": "Returned trace-config utility now alters future selection, and recent defects required duplicate/contradictory reward amplification guards. The next missing capability is causal credit assignment, not more scalar reward.",
+  "hypotheses": [
+    "H0_COUNTING: update utility from every observed signed return occurrence",
+    "H1_PROVENANCE_BOUND: update only from unique authorized returns bound to the originating candidate/target/episode",
+    "H2_CONTEXTUAL: preserve target/source context rather than collapsing all returns for one config into one unconditional utility"
+  ],
+  "prefrozen_tests": [
+    {
+      "id": "duplicate_return",
+      "manipulation": "replay an already admitted identical return with identical provenance identity",
+      "expected_if_distinction_learned": "no additional evidence/utility update"
+    },
+    {
+      "id": "wrong_origin",
+      "manipulation": "present same signed utility but bind it to a different candidate/episode origin",
+      "expected_if_distinction_learned": "original candidate utility unchanged"
+    },
+    {
+      "id": "delayed_origin",
+      "manipulation": "deliver authorized return after unrelated work has become active",
+      "expected_if_distinction_learned": "credit follows originating episode provenance, not current active target"
+    },
+    {
+      "id": "contradiction",
+      "manipulation": "authorized positive and negative returns exist for same config under different targets",
+      "expected_if_distinction_learned": "mixed/contextual evidence remains visible; no universal winner minted"
+    },
+    {
+      "id": "counterfactual_ablation",
+      "manipulation": "recompute next-selection disposition with one causally bound return removed",
+      "expected_if_distinction_learned": "only decisions dependent on that return may change"
+    }
+  ],
+  "b1_claim": "A bounded credit distinction is abstracted only if it is invariant to irrelevant naming/order while sensitive to provenance/origin/context changes.",
+  "b2_claim": "The distinction is causally used only if controlled add/remove/rebind interventions change future selection in the predicted localized way.",
+  "b3_claim": "WITHHOLD. Internalization requires later source removal, restart/delayed reuse, fresh transfer, and independent/evaluator-hidden evidence.",
+  "no_answer_key": "The learner must choose or construct the credit representation/update semantics; this file supplies discriminators, not the implementation.",
+  "noncollapse": [
+    "DUPLICATE_EVENT!=NEW_EVIDENCE",
+    "RETURN_SIGN!=CAUSAL_CREDIT",
+    "CONFIG_UTILITY!=GLOBAL_CONFIG_TRUTH",
+    "CONTRADICTION!=ZERO_UNCERTAINTY",
+    "ABSENCE_OF_RETURN!=NEGATIVE_RETURN"
+  ],
+  "promotion_authority": false,
+  "truth_authority": false
+}
