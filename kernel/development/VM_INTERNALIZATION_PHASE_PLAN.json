@@ -134,6 +134,11 @@
       "path": "kernel/runtime/action_proposal.py",
       "disposition": "KEEP_GENERIC_INERT_PROPOSAL_CARRIER",
       "reason": "canonical action proposal/authorization-binding data model; cannot execute and leaves issuer authentication, jurisdiction, authorization and ProcessBridge execution outside the proposing learner"
+    },
+    {
+      "path": "kernel/runtime/relation_trace.py",
+      "disposition": "KEEP_GENERIC_INTERPRETER",
+      "reason": "domain-neutral executor over state-owned anchor/source relation traces; candidate family and thresholds live in state and future return remains external"
     }
   ],
   "developmental_targets": [
@@ -296,6 +301,14 @@
       "independent_evaluation_status": "WITHHOLD",
       "G5_source_removal_status": "PASS_BOUNDED",
       "G6_internalization_status": "WITHHOLD_INDEPENDENT_EXTERNAL_RETURN_REQUIRED"
+    },
+    "network_semantic_trace_phase": {
+      "prefreeze_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE.json",
+      "search_state_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_SEARCH_STATE.json",
+      "status": "PREFROZEN_PUBLIC_DEV_CANDIDATE_NOT_YET_RETURNED",
+      "lexical_baseline_preserved": true,
+      "internalization_claim": false,
+      "independent_evaluation": false
     }
   },
   "promotion_authority": false,
