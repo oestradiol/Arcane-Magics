@@ -1,0 +1,22 @@
+{
+  "schema": "Minerva.CausalAuditJurisdiction.v0.1",
+  "date": "2026-09-26",
+  "branch": "split/minerva",
+  "rule": "The historical distinction matrix remains whole-repository provenance. On Minerva, structural completeness is checked for every row; source-existence is checked locally when Minerva owns/carries the artifact and otherwise requires an explicit foreign-authority mapping. Foreign mapping is not evidence that the distinction passes.",
+  "foreign_source_paths": {
+    "docs/FRONTIER_RESEARCH.md": "split/ofe (also inherited on some sibling historical projections)",
+    "docs/META_DYNAMICS.md": "split/eclipsis structural authority",
+    "kernel/WORLDMIND.md": "split/venus Self/World authority",
+    "kernel/VENUS_INCIDENCE_LAW.tex": "split/venus Self/World authority",
+    "monographs/02_ECLIPSIS/main.tex": "split/eclipsis",
+    "monographs/03_ARCANE_MAGICS/main.tex": "split/arcane-magics",
+    "monographs/04_VENUS/main.tex": "split/venus"
+  },
+  "constraints": [
+    "unlisted missing source fails",
+    "all matrix rows remain structurally audited",
+    "all required causal concepts remain required",
+    "foreign source mapping does not mint PASS",
+    "Minerva must not copy foreign live authority merely to satisfy the audit"
+  ]
+}
