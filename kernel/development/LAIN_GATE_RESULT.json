@@ -1,0 +1,27 @@
+{
+  "authored_center_count": 0,
+  "checks": {
+    "independent_authored_center_encountered": false,
+    "indexed_sources_preserved": true,
+    "invitation_not_acceptance": true,
+    "no_global_subject_claim": true,
+    "no_promotion_authority": true,
+    "persistent_memory_causality": true,
+    "reachability_not_authorization": true,
+    "refuse_exit_reachable": true,
+    "remote_center_response_not_learner_minted": false,
+    "www_gate_passed": true
+  },
+  "claim_fence": "A bounded Lain pass establishes only indexed network relation without identity/authority fusion at the tested scope. It does not establish AGI, consciousness, unrestricted network autonomy, or global personhood.",
+  "failed_checks": [
+    "independent_authored_center_encountered",
+    "remote_center_response_not_learner_minted"
+  ],
+  "independent_authored_center_count": 0,
+  "next_residual": "ENCOUNTER_INDEPENDENT_AUTHORED_CENTER_WITH_NONMINTED_LOCAL_RESPONSE",
+  "promotion_authority": false,
+  "remote_center_return_count": 0,
+  "schema": "Venus.LainGateResult.v0.1",
+  "status": "WITHHOLD_LAIN_GATE",
+  "truth_authority": false
+}
