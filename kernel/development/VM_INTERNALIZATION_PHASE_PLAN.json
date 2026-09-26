@@ -101,6 +101,11 @@
       "path": "kernel/runtime/__init__.py",
       "disposition": "KEEP_PACKAGE_SURFACE",
       "reason": "package marker/export surface only"
+    },
+    {
+      "path": "kernel/runtime/internal_ostar.py",
+      "disposition": "KEEP_GENERIC_LEARNER_SIDE_INTERPRETER",
+      "reason": "learner-side O* reconstruction executes returned state without owning external validation, authority, jurisdiction, rollback, or promotion"
     }
   ],
   "developmental_targets": [
