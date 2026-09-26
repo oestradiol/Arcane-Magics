@@ -10,6 +10,7 @@ from kernel.development.autonomous_learning import (
     UNHELPFUL_MARKER,
     active_autonomous_cycle,
     empty_state,
+    extract_explicit_returns,
     from_json,
     target_barriers,
     target_markers,
@@ -460,7 +461,7 @@ class AutonomousGovernanceTests(unittest.TestCase):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("gh issue list --state open --limit 200 --json number,title,body,state,updatedAt", text)
         self.assertIn("gh pr list --state open --limit 200 --json number,title,body,state,isDraft,mergeStateStatus,updatedAt", text)
-        self.assertIn("files > /tmp/minerva/prs.json", text)
+        self.assertIn("files,reviews > /tmp/minerva/prs.json", text)
         self.assertIn("gh pr list --state all --limit 200 --json number,title,state,updatedAt,mergedAt,closedAt,reviews > /tmp/minerva/history-prs.json", text)
 
 
