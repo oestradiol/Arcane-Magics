@@ -29,21 +29,7 @@ jobs:
           esac
       - name: Minerva-local surface checks
         run: python scripts/audit_layer_surface.py
-      - name: Core engineering regressions
-        run: |
-          python -m unittest tests/test_autonomous_governance.py
-          python -m unittest tests/test_autonomous_return_authority.py
-          python -m unittest tests/test_internalizer.py
-          python -m unittest tests/test_vmk2_invariants.py
-          python -m unittest tests/test_edu16_reconstructed_carrier.py
-          python -m unittest tests/test_world_input_security_public_dev.py
-          python -m unittest tests/test_git_world_return.py
-          python -m unittest tests/test_lateral_episode.py
-          python -m unittest tests/test_lateral_episode_result.py
-      - name: Custody / autonomy checks
-        run: |
-          python scripts/audit_autonomy_safety_matrix.py
-          python scripts/audit_custody.py
-          python scripts/audit_edu16_custody.py
+      - name: Full Minerva audit
+        run: make audit
       - name: Imported law does not become self-authority
         run: echo 'implementation != constitutional co-authority != independent return'
