@@ -460,6 +460,13 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertIn("--developmental-parent-state kernel/development/EDU16_RECONSTRUCTED_STATE.json", text)
         self.assertIn("--current-state-receipt kernel/custody/R226_CURRENT_STATE_RECEIPT.json", text)
 
+
+    def test_world_snapshot_retains_issue_body_and_pr_state(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("gh issue list --state open --limit 200 --json number,title,body,state,updatedAt", text)
+        self.assertIn("gh pr list --state all --limit 200 --json number,title,body,state,isDraft,mergeStateStatus,updatedAt", text)
+        self.assertIn("files > /tmp/minerva/prs.json", text)
+
     def test_handoff_preserves_minerva_as_second_parent(self):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn('git checkout -b "$branch" origin/split/venus', text)
