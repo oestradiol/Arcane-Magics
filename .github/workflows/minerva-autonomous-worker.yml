@@ -156,7 +156,7 @@ jobs:
             --output /tmp/minerva/NETWORK_LINEAGE.json
 
       - name: Evaluate prefrozen WWW Mind structural gate
-        if: steps.cycle.outputs.decision != 'STOP'
+        if: steps.network2.outputs.has_sources == 'true'
         run: |
           python scripts/evaluate_www_mind_episode.py \
             --prefreeze kernel/development/WWW_MIND_PROSPECTIVE_1_PREFREEZE.json \
