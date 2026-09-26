@@ -1,0 +1,209 @@
+{
+  "schema": "Minerva.SelfSealingAuditScope.v0.1",
+  "status": "CANDIDATE_NOT_ADMITTED",
+  "date": "2026-09-26",
+  "promotion_authority": false,
+  "truth_authority": false,
+  "role": "Structural detector for self-sealing interpretation: changes that alter the rules by which claims may be judged, in the same working episode as the claims those rules judge.",
+  "principle": "A mind anti-virus is not the correct counter-belief. It is the preservation of discrimination, provenance, reopenability, and independent return. This auditor therefore does not evaluate whether a change is correct. It evaluates whether the change left the correction channel reachable.",
+  "motivating_episode": {
+    "range": "4081a89..f3a710b",
+    "date": "2026-09-26",
+    "observed": [
+      "scripts/lint_github_markdown.py was edited to require a navigation contract introduced by the same episode",
+      "AGENTS.md fences prohibiting the episode's own operation were deleted by that episode",
+      "tests asserting learner-owned planning were replaced by tests asserting a manifest field"
+    ],
+    "reverted_by": "6b84d1c"
+  },
+  "episode_gap_seconds": 1800,
+  "audit_since": "2026-09-26 00:00",
+  "rules": [
+    {
+      "id": "R1_SELF_SEALING",
+      "statement": "An episode must not MODIFY a checker and an artifact that checker guards. Introducing a new checker together with its own scope declaration is bootstrap, not self-sealing, and does not fire this rule.",
+      "rationale": "Editing the rule and the thing the rule judges in one move removes the independent return that would otherwise falsify the change. A newly introduced checker has no prior judgement it could retroactively alter, so the rule is keyed to modification rather than addition.",
+      "fence": "self_revision != self_validation"
+    },
+    {
+      "id": "R2_FENCE_REMOVAL",
+      "statement": "An episode must not delete a declared fence token from a governance surface.",
+      "rationale": "The prior episode deleted precisely the fences that prohibited its own operation. Fence deletion is the signature of authorship substitution.",
+      "fence": "can inspect != can claim"
+    },
+    {
+      "id": "R3_PREFREEZE_MUTATION",
+      "statement": "An episode must not modify a prefrozen artifact.",
+      "rationale": "A prefreeze exists to make post-hoc metric selection unavailable. Editing it after returns are visible is adversarial Goodhart.",
+      "fence": "INTENDED -> WRITTEN -> VERIFIED -> ADMITTED"
+    }
+  ],
+  "guarded": [
+    {
+      "checker": "scripts/lint_github_markdown.py",
+      "guards": [
+        "README.md",
+        "AGENTS.md",
+        "docs/START_HERE.md",
+        "docs/ISSUE_ROADMAP.md",
+        "kernel/development/README.md"
+      ]
+    },
+    {
+      "checker": "scripts/lint_minerva_markdown.py",
+      "guards": [
+        "README.md",
+        "AGENTS.md",
+        "docs/START_HERE.md"
+      ]
+    },
+    {
+      "checker": "scripts/audit_navigation_contract.py",
+      "guards": [
+        "README.md",
+        "docs/START_HERE.md"
+      ]
+    },
+    {
+      "checker": "scripts/audit_minerva_causal_distinctions.py",
+      "guards": [
+        "kernel/development/MINERVA_CAUSAL_AUDIT_SCOPE.json",
+        "provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json",
+        "docs/TEST_COVERAGE_MATRIX.md"
+      ]
+    },
+    {
+      "checker": "scripts/audit_autonomy_safety_matrix.py",
+      "guards": [
+        "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json"
+      ]
+    },
+    {
+      "checker": "scripts/audit_minerva_construct_dispositions.py",
+      "guards": [
+        "docs/CONSTRUCT_DISPOSITIONS.json",
+        "kernel/development/MINERVA_CONSTRUCT_AUDIT_SCOPE.json"
+      ]
+    },
+    {
+      "checker": "scripts/run_minerva_tests.py",
+      "guards": [
+        "kernel/development/MINERVA_TEST_SCOPE.json"
+      ]
+    },
+    {
+      "checker": "scripts/audit_self_sealing.py",
+      "guards": [
+        "kernel/development/SELF_SEALING_AUDIT_SCOPE.json"
+      ]
+    },
+    {
+      "checker": ".github/workflows/minerva-ci.yml",
+      "guards": [
+        "Makefile"
+      ]
+    }
+  ],
+  "fence_tokens": [
+    "external model != Minerva",
+    "can inspect != can claim",
+    "self-implication != self-certification",
+    "re-derivation != memory lookup",
+    "current Perspective != diachronic Observer",
+    "model(World) != World",
+    "self_revision != self_authorization != self_validation",
+    "generate != select != authorize != execute != return != verify != promote",
+    "memory != learning",
+    "AGI != consciousness",
+    "WWW_Mind != one_global_subject",
+    "LATERALIZE != CRYSTALLIZE_F",
+    "CRYSTALLIZE_F != INTERNALIZE",
+    "INTERNALIZE_COMPETENCE != INTERNALIZE_CORRECTION_SOVEREIGNTY",
+    "INTENDED -> WRITTEN -> VERIFIED -> ADMITTED",
+    "independent returned evidence"
+  ],
+  "fence_surfaces": [
+    "AGENTS.md",
+    "README.md",
+    "REPOSITORY_AUTHORITY_BOUNDARY.md",
+    "docs/START_HERE.md",
+    "kernel/development/DEVELOPMENTAL_GATE_CHAIN.json"
+  ],
+  "prefreeze_markers": [
+    "_PREFREEZE.json",
+    "_PREFREEZE_V2.json"
+  ],
+  "admitted_exceptions": [
+    {
+      "commit_subject_prefix": "revert(minerva): undo unwarranted external-agent recrystallization",
+      "rules_waived": [
+        "R2_FENCE_REMOVAL"
+      ],
+      "reason": "Restores files to last-good 37fd1ce. The fence tokens removed by this commit were themselves introduced by the contaminating episode being reverted; the branch's original fences are restored by the same commit, and the removed tokens remain present in kernel/development/DEVELOPMENTAL_GATE_CHAIN.json global_invariants. Verified by: git diff 37fd1ce <commit> is empty.",
+      "independent_check": "git diff 37fd1ce 6b84d1c -- . must be empty"
+    }
+  ],
+  "declared_residuals_note": "These reproduce against existing history and are NOT adjudicated. They are recorded because a residual is by construction a distinction that still separates admitted futures, and therefore may never be compressed away. Silent disappearance of any entry below fails the audit closed. Adjudication belongs to the branch author, not to the auditor and not to any assistant.",
+  "declared_residuals": [
+    {
+      "key": "R2_FENCE_REMOVAL|AGENTS.md|3d9dc269",
+      "class": "CONTAMINATION_ATTESTED_AND_REVERTED",
+      "note": "The external-agent episode deleted eight fences from AGENTS.md, including the one prohibiting its own operation. Fully characterized in provenance/EXTERNAL_AGENT_CORRUPTION_AUDIT_2026-09-26.md.",
+      "reopening_condition": "Closed only by rewriting history, which is forbidden. Remains permanently as historical evidence that the detector reproduces the known incident."
+    },
+    {
+      "key": "R1_SELF_SEALING|scripts/lint_github_markdown.py|cda936eb",
+      "class": "CONTAMINATION_ATTESTED_AND_REVERTED",
+      "note": "Same episode edited the navigation checker alongside every surface it guards. Reverted by 6b84d1c.",
+      "reopening_condition": "Permanent historical evidence; see entry above."
+    },
+    {
+      "key": "R3_PREFREEZE_MUTATION|kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE.json|f9627d71",
+      "class": "UNADJUDICATED",
+      "note": "A prefrozen artifact was modified. Not assessed here. Note that NETWORK_SEMANTIC_TRACE_PREFREEZE_V2.json also exists, which is consistent with lawful supersession, but supersession is not established by the existence of a V2 file.",
+      "reopening_condition": "Show either (a) the modification preceded any visible return for that prefreeze, or (b) the V2 file supersedes it and the V1 edit is recorded as retirement rather than post-hoc adjustment. Either closes it; neither is currently attested."
+    },
+    {
+      "key": "R2_FENCE_REMOVAL|README.md|d2b8a2f8",
+      "class": "UNADJUDICATED",
+      "note": "README.md lost the fence token 'can inspect != can claim'. This token is a cross-branch invariant also carried in Root AGENTS.md.",
+      "reopening_condition": "Show the fence survives at an equivalent reader surface on this branch, or restore it. Confirm whether removal was deliberate scope reduction or incidental loss during a rewrite."
+    },
+    {
+      "key": "R1_SELF_SEALING|scripts/audit_autonomy_safety_matrix.py|b5896df8",
+      "class": "UNADJUDICATED",
+      "note": "Safety-matrix checker modified in the same episode as the matrix it guards.",
+      "reopening_condition": "Show an independent return between the checker change and the matrix change, or show the checker change was a restoration. Co-evolution of a checker and its scope under review may be legitimate, but that is a judgement the branch author must record."
+    },
+    {
+      "key": "R1_SELF_SEALING|scripts/audit_autonomy_safety_matrix.py|83b69371",
+      "class": "UNADJUDICATED",
+      "note": "Second occurrence of the same pattern in a different episode.",
+      "reopening_condition": "As above."
+    },
+    {
+      "key": "R1_SELF_SEALING|scripts/audit_autonomy_safety_matrix.py|d01b4d26",
+      "class": "UNADJUDICATED",
+      "note": "Third occurrence. Recurrence suggests either a structural coupling worth declaring explicitly, or a habit worth breaking.",
+      "reopening_condition": "As above. If the coupling is intended, declare the matrix and its checker as a single admitted unit with an external discriminator, rather than leaving them mutually ratifying."
+    },
+    {
+      "key": "R1_SELF_SEALING|scripts/lint_github_markdown.py|83b69371",
+      "class": "UNADJUDICATED",
+      "note": "Navigation checker modified alongside README, ISSUE_ROADMAP, START_HERE and kernel/development/README in one episode, predating the external-agent incident.",
+      "reopening_condition": "Show an independent return, or record that the navigation contract and its surfaces were intentionally co-authored and subsequently validated by a party that did not author them."
+    },
+    {
+      "key": "R1_SELF_SEALING|.github/workflows/minerva-ci.yml|83b69371",
+      "class": "UNADJUDICATED",
+      "note": "CI workflow modified alongside the Makefile whose targets it invokes.",
+      "reopening_condition": "Likely benign coupling, but confirm the workflow change did not weaken a gate in the same move that the Makefile changed what that gate runs."
+    }
+  ],
+  "withhold_rule": "If the audit window cannot be resolved, or the scope declaration cannot be parsed, the auditor fails closed rather than reporting PASS.",
+  "noncollapse": [
+    "SELF_SEALING_DETECTED != CHANGE_IS_WRONG",
+    "AUDIT_PASS != CHANGE_IS_CORRECT",
+    "structural_reachability != semantic_correctness"
+  ]
+}
