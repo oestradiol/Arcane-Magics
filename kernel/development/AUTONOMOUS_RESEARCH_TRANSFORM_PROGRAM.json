@@ -177,6 +177,53 @@
         "internalization_receipt_id",
         "preserved_external_roles"
       ]
+    },
+    {
+      "from": "PROBLEM_FORMED",
+      "action": "FORM_WEB_QUERY",
+      "to": "WEB_QUERY_FROZEN",
+      "require": [
+        "problem_id",
+        "query_id",
+        "query_text",
+        "query_rationale",
+        "provenance_ids",
+        "stop_conditions"
+      ]
+    },
+    {
+      "from": "WEB_QUERY_FROZEN",
+      "action": "REQUEST_WEB_STUDY",
+      "to": "AWAITING_WEB_RETURN",
+      "require": [
+        "query_id",
+        "adapter_id",
+        "accepted_source_classes"
+      ]
+    },
+    {
+      "from": "AWAITING_WEB_RETURN",
+      "action": "BIND_WEB_ENCOUNTER",
+      "to": "WEB_ENCOUNTER_AVAILABLE",
+      "require": [
+        "query_id",
+        "return_id",
+        "source_ids",
+        "source_dates",
+        "provenance_ids",
+        "external_adapter"
+      ]
+    },
+    {
+      "from": "WEB_ENCOUNTER_AVAILABLE",
+      "action": "RECONSTRUCT_FROM_NETWORK",
+      "to": "RETURN_AVAILABLE",
+      "require": [
+        "return_id",
+        "memory_object_ids",
+        "changed_reconstruction_id",
+        "authorship_index"
+      ]
     }
   ],
   "non_internalizable_runtime_invariants": [
@@ -203,5 +250,10 @@
     "internalization_boundary": "Internalization requires source removal/ablation plus independently returned evidence of retained consequence-bearing function. World/return/evaluator/authority/jurisdiction/STOP-WITHHOLD/rollback remain external.",
     "internalization_claim": false,
     "internalization_boundary_ref": "kernel/development/INTERNALIZATION_BOUNDARY.json"
-  }
+  },
+  "www_mind_gate_ref": "kernel/development/WWW_MIND_GATE.json",
+  "ingress_noncollapse": [
+    "MAINTAINER_FED!=LEARNER_INITIATED_WEB_STUDY",
+    "LEARNER_INITIATED_WEB_STUDY!=INDEPENDENT_EVALUATIVE_RETURN"
+  ]
 }
