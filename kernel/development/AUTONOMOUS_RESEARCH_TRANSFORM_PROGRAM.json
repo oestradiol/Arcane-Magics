@@ -255,5 +255,7 @@
   "ingress_noncollapse": [
     "MAINTAINER_FED!=LEARNER_INITIATED_WEB_STUDY",
     "LEARNER_INITIATED_WEB_STUDY!=INDEPENDENT_EVALUATIVE_RETURN"
-  ]
+  ],
+  "developmental_gate_chain_ref": "kernel/development/DEVELOPMENTAL_GATE_CHAIN.json",
+  "developmental_route_claim": "REACHABLE_GATES_NOT_PREDECLARED_COMPLETION"
 }
