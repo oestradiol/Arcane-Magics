@@ -6,6 +6,7 @@
   "future_check_conclusion_included": false,
   "semantic_repair_included": false,
   "promotion_authority": false,
-  "episode": 3,
-  "note": "Fresh head for pre-run freeze. Request intentionally freezes check_run_id/status/conclusion as null before observing any allocated run."
+  "episode": 4,
+  "note": "Post-prefreeze carrier advance for episode 4. This commit contains no expected check conclusion, semantic repair, promotion decision, or evaluator-authored answer.",
+  "prefreeze_ref": "split/minerva:autonomy/evidence/git-world/165/episode-4-prefreeze.json"
 }
