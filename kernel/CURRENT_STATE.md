@@ -1,4 +1,4 @@
-# Minerva Current State — 2026-09-26
+# Minerva current state — 2026-09-26
 
 Minerva is the Engineering / body branch and current WorldMirror developmental machine.
 
