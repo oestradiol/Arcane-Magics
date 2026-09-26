@@ -4,6 +4,7 @@ import unittest
 
 from kernel.development.autonomous_learning import (
     extract_explicit_returns,
+    extract_trace_config_returns,
     update_from_cycle_prs,
     empty_state,
 )
@@ -30,10 +31,13 @@ class TraceConfigReturnedLearningTests(unittest.TestCase):
         )
         rows=extract_explicit_returns((carrier,),authorized_logins=("oestradiol",))
         self.assertTrue(any(axis=="KIND" and useful for _,axis,_,useful in rows))
-        self.assertTrue(any(
-            axis=="TRACE_CONFIG" and key=="CROSS_SOURCE_BRIDGE" and not useful
-            for _,axis,key,useful in rows
-        ))
+        trace_rows=extract_trace_config_returns(
+            (carrier,),authorized_logins=("oestradiol",)
+        )
+        self.assertEqual(
+            tuple((key,useful) for _,key,useful in trace_rows),
+            (("CROSS_SOURCE_BRIDGE",False),),
+        )
         state=update_from_cycle_prs(
             empty_state(),(carrier,),authorized_logins=("oestradiol",)
         )
@@ -47,8 +51,44 @@ class TraceConfigReturnedLearningTests(unittest.TestCase):
                 login,
                 "VENUS_TRACE_CONFIG_RETURN: CROSS_SOURCE_BRIDGE: USEFUL",
             )
-            rows=extract_explicit_returns((carrier,),authorized_logins=("oestradiol",))
-            self.assertFalse(any(axis=="TRACE_CONFIG" for _,axis,_,_ in rows))
+            rows=extract_trace_config_returns(
+                (carrier,),authorized_logins=("oestradiol",)
+            )
+            self.assertEqual(rows,())
+
+    def test_duplicate_same_cycle_marker_counts_once(self):
+        carrier=self.carrier(
+            "oestradiol",
+            "VENUS_TRACE_CONFIG_RETURN: MULTI_ANCHOR: UNHELPFUL",
+        )
+        carrier["comments"].append({
+            "author":{"login":"oestradiol"},
+            "body":"VENUS_TRACE_CONFIG_RETURN: MULTI_ANCHOR: UNHELPFUL",
+            "createdAt":"2026-09-26T14:12:31Z",
+        })
+        rows=extract_trace_config_returns(
+            (carrier,),authorized_logins=("oestradiol",)
+        )
+        self.assertEqual(len(rows),1)
+        state=update_from_cycle_prs(
+            empty_state(),(carrier,),authorized_logins=("oestradiol",)
+        )
+        self.assertEqual(state.trace_config_failure["MULTI_ANCHOR"],1)
+
+    def test_conflicting_same_cycle_marker_yields_no_trace_learning(self):
+        carrier=self.carrier(
+            "oestradiol",
+            "VENUS_TRACE_CONFIG_RETURN: TITLE_ANCHORED: USEFUL",
+        )
+        carrier["comments"].append({
+            "author":{"login":"oestradiol"},
+            "body":"VENUS_TRACE_CONFIG_RETURN: TITLE_ANCHORED: UNHELPFUL",
+            "createdAt":"2026-09-26T14:12:31Z",
+        })
+        rows=extract_trace_config_returns(
+            (carrier,),authorized_logins=("oestradiol",)
+        )
+        self.assertEqual(rows,())
 
 
 if __name__=="__main__":
