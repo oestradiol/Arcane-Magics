@@ -23,6 +23,15 @@ class GitHubNetworkAdapterTests(unittest.TestCase):
         self.assertLessEqual(len(rows),4)
         self.assertTrue(all(len(x.split()) <= 6 for x in rows))
 
+    def test_selected_study_relaxation_never_collapses_to_one_word(self):
+        rows=MOD.query_variants(
+            "development lateral reconstruction internalize epistemic basis expansion",
+            study_anchors=("development","lateral","reconstruction","internalize","epistemic","basis"),
+        )
+        self.assertTrue(rows)
+        self.assertTrue(all(len(row.split()) >= 3 for row in rows))
+        self.assertTrue(all(row.startswith("development lateral reconstruction") for row in rows))
+
     def test_source_collection_keeps_distinct_centers(self):
         issues=[{"items":[
             {
@@ -53,6 +62,63 @@ class GitHubNetworkAdapterTests(unittest.TestCase):
         rows=MOD.collect_sources(issue_payloads=issues,repo_payloads=(),max_sources=6)
         self.assertEqual({x["center_id"] for x in rows},{"github-repo:a/one","github-repo:b/two"})
         self.assertEqual(len(rows),2)
+
+    def test_selected_study_relevance_filters_unrelated_sources(self):
+        issues=[{"items":[
+            {
+                "repository_url":"https://api.github.com/repos/noise/arxiv",
+                "number":1,
+                "html_url":"https://github.com/noise/arxiv/issues/1",
+                "title":"Daily arXiv notification",
+                "body":"new submissions and abstracts",
+            },
+            {
+                "repository_url":"https://api.github.com/repos/rel/lateral",
+                "number":2,
+                "html_url":"https://github.com/rel/lateral/issues/2",
+                "title":"Lateral epistemic reconstruction",
+                "body":"independent faces support basis expansion and reconstruction",
+            },
+        ]}]
+        rows=MOD.collect_sources(
+            issue_payloads=issues,
+            repo_payloads=(),
+            max_sources=6,
+            relevance_terms=("lateral","epistemic","reconstruction","basis","independent","faces"),
+            min_relevance_matches=3,
+        )
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]["center_id"],"github-repo:rel/lateral")
+        self.assertGreaterEqual(len(rows[0]["relevance_matches"]),3)
+
+    def test_api_order_is_preserved_within_external_centers(self):
+        issues=[{"items":[
+            {
+                "repository_url":"https://api.github.com/repos/z/first",
+                "number":1,
+                "html_url":"https://github.com/z/first/issues/1",
+                "title":"epistemic lateral reconstruction",
+                "body":"independent faces",
+            },
+            {
+                "repository_url":"https://api.github.com/repos/a/second",
+                "number":2,
+                "html_url":"https://github.com/a/second/issues/2",
+                "title":"epistemic lateral reconstruction",
+                "body":"independent faces",
+            },
+        ]}]
+        rows=MOD.collect_sources(
+            issue_payloads=issues,
+            repo_payloads=(),
+            max_sources=2,
+            relevance_terms=("epistemic","lateral","reconstruction"),
+            min_relevance_matches=3,
+        )
+        self.assertEqual(
+            [row["center_id"] for row in rows],
+            ["github-repo:z/first","github-repo:a/second"],
+        )
 
     def test_current_repo_is_not_preferred_over_external_centers(self):
         issues=[{"items":[
