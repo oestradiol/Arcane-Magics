@@ -1,0 +1,17 @@
+{
+  "authorship": "LEARNER_DERIVED_FROM_FORMED_PROBLEM",
+  "discriminator": "RESOLVE_REFERENCED_INCIDENCE",
+  "execution_owner": "EXTERNAL_ADAPTER",
+  "problem_id": "a6a260792d87c0c98fe8d60fc4d3ba7a547bfcfd89c8353380eb0c9c5a023ccc",
+  "promotion_authority": false,
+  "provenance_ids": [
+    "179cf2e7dc2d0f80e88ec165431051227b6763cb606b8617e2cb58707b8a36ab"
+  ],
+  "query_id": "1a591ae6bbf2c53bbc9cabfbd6d4911a423b1efa6e3d410b302658a94feaf8fc",
+  "query_text": "resolve referenced incidence referenced incidence missing",
+  "residual_coordinates": [
+    "referenced_incidence_missing"
+  ],
+  "schema": "Venus.NetworkQuery.v0.1",
+  "truth_authority": false
+}
