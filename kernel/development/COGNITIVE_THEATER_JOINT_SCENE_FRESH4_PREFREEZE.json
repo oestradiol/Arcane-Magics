@@ -1,0 +1,333 @@
+{
+  "schema": "Venus.CognitiveTheaterJointSceneFresh4Prefreeze.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_AFTER_FRESH3_BEFORE_FRESH4_RESULT",
+  "issue_ref": 206,
+  "parent_result_ref": "kernel/development/COGNITIVE_THEATER_RELATIONAL_GRAPH_FRESH3_RESULT.json",
+  "purpose": "Test whether joint whole-scene variable binding improves indexed Theater role reconstruction over count-only, unary ordered-center, and pairwise relational comparators.",
+  "freshness_rule": "No Fresh3 heldout surface is reused as a Fresh4 heldout surface.",
+  "tasks": [
+    {
+      "id": "G2_NESTED_KFS_JOINT",
+      "output_schema": {
+        "base_knower": "participant_token",
+        "meta_knower": "participant_token",
+        "ignorant": "participant_token"
+      },
+      "train_examples": {
+        "ENGLISH": [
+          {
+            "surface": "@a knows P; @b knows that @a knows P; @c does not know P.",
+            "gold": {
+              "base_knower": "@a",
+              "meta_knower": "@b",
+              "ignorant": "@c"
+            }
+          },
+          {
+            "surface": "@f does not know P; @e knows that @d knows P; @d knows P.",
+            "gold": {
+              "base_knower": "@d",
+              "meta_knower": "@e",
+              "ignorant": "@f"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "@aはPを知っている。@bは@aがPを知っていることを知っている。@cはPを知らない。",
+            "gold": {
+              "base_knower": "@a",
+              "meta_knower": "@b",
+              "ignorant": "@c"
+            }
+          },
+          {
+            "surface": "@fはPを知らない。@eは@dがPを知っていることを知っている。@dはPを知っている。",
+            "gold": {
+              "base_knower": "@d",
+              "meta_knower": "@e",
+              "ignorant": "@f"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "@a sabe P; @b sabe que @a sabe P; @c não sabe P.",
+            "gold": {
+              "base_knower": "@a",
+              "meta_knower": "@b",
+              "ignorant": "@c"
+            }
+          },
+          {
+            "surface": "@f não sabe P; @e sabe que @d sabe P; @d sabe P.",
+            "gold": {
+              "base_knower": "@d",
+              "meta_knower": "@e",
+              "ignorant": "@f"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "K_@a(P) ∧ K_@b(K_@a(P)) ∧ ¬K_@c(P).",
+            "gold": {
+              "base_knower": "@a",
+              "meta_knower": "@b",
+              "ignorant": "@c"
+            }
+          },
+          {
+            "surface": "¬K_@f(P) ∧ K_@e(K_@d(P)) ∧ K_@d(P).",
+            "gold": {
+              "base_knower": "@d",
+              "meta_knower": "@e",
+              "ignorant": "@f"
+            }
+          }
+        ]
+      },
+      "heldout_examples": {
+        "ENGLISH": [
+          {
+            "surface": "@n knows that @m knows P; @m knows P; @o does not know P.",
+            "gold": {
+              "base_knower": "@m",
+              "meta_knower": "@n",
+              "ignorant": "@o"
+            }
+          },
+          {
+            "surface": "@q knows P; @p does not know P; @r knows that @q knows P.",
+            "gold": {
+              "base_knower": "@q",
+              "meta_knower": "@r",
+              "ignorant": "@p"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "@nは@mがPを知っていることを知っている。@mはPを知っている。@oはPを知らない。",
+            "gold": {
+              "base_knower": "@m",
+              "meta_knower": "@n",
+              "ignorant": "@o"
+            }
+          },
+          {
+            "surface": "@qはPを知っている。@pはPを知らない。@rは@qがPを知っていることを知っている。",
+            "gold": {
+              "base_knower": "@q",
+              "meta_knower": "@r",
+              "ignorant": "@p"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "@n sabe que @m sabe P; @m sabe P; @o não sabe P.",
+            "gold": {
+              "base_knower": "@m",
+              "meta_knower": "@n",
+              "ignorant": "@o"
+            }
+          },
+          {
+            "surface": "@q sabe P; @p não sabe P; @r sabe que @q sabe P.",
+            "gold": {
+              "base_knower": "@q",
+              "meta_knower": "@r",
+              "ignorant": "@p"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "K_@n(K_@m(P)) ∧ K_@m(P) ∧ ¬K_@o(P).",
+            "gold": {
+              "base_knower": "@m",
+              "meta_knower": "@n",
+              "ignorant": "@o"
+            }
+          },
+          {
+            "surface": "K_@q(P) ∧ ¬K_@p(P) ∧ K_@r(K_@q(P)).",
+            "gold": {
+              "base_knower": "@q",
+              "meta_knower": "@r",
+              "ignorant": "@p"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "G2_TRANSMISSION_KFS_JOINT",
+      "output_schema": {
+        "source": "participant_token",
+        "receiver_knower": "participant_token",
+        "excluded": "participant_token"
+      },
+      "train_examples": {
+        "ENGLISH": [
+          {
+            "surface": "@a tells @b P. @b can answer P. @c was absent.",
+            "gold": {
+              "source": "@a",
+              "receiver_knower": "@b",
+              "excluded": "@c"
+            }
+          },
+          {
+            "surface": "@f was absent. @d tells @e P. @e can answer P.",
+            "gold": {
+              "source": "@d",
+              "receiver_knower": "@e",
+              "excluded": "@f"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "@aは@bにPを伝える。@bはPに答えられる。@cは不在だった。",
+            "gold": {
+              "source": "@a",
+              "receiver_knower": "@b",
+              "excluded": "@c"
+            }
+          },
+          {
+            "surface": "@fは不在だった。@dは@eにPを伝える。@eはPに答えられる。",
+            "gold": {
+              "source": "@d",
+              "receiver_knower": "@e",
+              "excluded": "@f"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "@a conta P a @b. @b pode responder sobre P. @c estava ausente.",
+            "gold": {
+              "source": "@a",
+              "receiver_knower": "@b",
+              "excluded": "@c"
+            }
+          },
+          {
+            "surface": "@f estava ausente. @d conta P a @e. @e pode responder sobre P.",
+            "gold": {
+              "source": "@d",
+              "receiver_knower": "@e",
+              "excluded": "@f"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "Tell(@a,@b,P) ∧ CanAnswer(@b,P) ∧ Absent(@c).",
+            "gold": {
+              "source": "@a",
+              "receiver_knower": "@b",
+              "excluded": "@c"
+            }
+          },
+          {
+            "surface": "Absent(@f) ∧ Tell(@d,@e,P) ∧ CanAnswer(@e,P).",
+            "gold": {
+              "source": "@d",
+              "receiver_knower": "@e",
+              "excluded": "@f"
+            }
+          }
+        ]
+      },
+      "heldout_examples": {
+        "ENGLISH": [
+          {
+            "surface": "@n can answer P. @o was absent. @m tells @n P.",
+            "gold": {
+              "source": "@m",
+              "receiver_knower": "@n",
+              "excluded": "@o"
+            }
+          },
+          {
+            "surface": "@p tells @r P. @q was absent. @r can answer P.",
+            "gold": {
+              "source": "@p",
+              "receiver_knower": "@r",
+              "excluded": "@q"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "@nはPに答えられる。@oは不在だった。@mは@nにPを伝える。",
+            "gold": {
+              "source": "@m",
+              "receiver_knower": "@n",
+              "excluded": "@o"
+            }
+          },
+          {
+            "surface": "@pは@rにPを伝える。@qは不在だった。@rはPに答えられる。",
+            "gold": {
+              "source": "@p",
+              "receiver_knower": "@r",
+              "excluded": "@q"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "@n pode responder sobre P. @o estava ausente. @m conta P a @n.",
+            "gold": {
+              "source": "@m",
+              "receiver_knower": "@n",
+              "excluded": "@o"
+            }
+          },
+          {
+            "surface": "@p conta P a @r. @q estava ausente. @r pode responder sobre P.",
+            "gold": {
+              "source": "@p",
+              "receiver_knower": "@r",
+              "excluded": "@q"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "CanAnswer(@n,P) ∧ Absent(@o) ∧ Tell(@m,@n,P).",
+            "gold": {
+              "source": "@m",
+              "receiver_knower": "@n",
+              "excluded": "@o"
+            }
+          },
+          {
+            "surface": "Tell(@p,@r,P) ∧ Absent(@q) ∧ CanAnswer(@r,P).",
+            "gold": {
+              "source": "@p",
+              "receiver_knower": "@r",
+              "excluded": "@q"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "comparators": [
+    "OCCURRENCE_COUNT_ONLY",
+    "UNARY_ORDERED_CENTER",
+    "PAIRWISE_RELATIONAL_GRAPH",
+    "JOINT_ROLE_NORMALIZED_SCENE"
+  ],
+  "pass_rule": "Report every comparator on identical fresh rows. A joint-scene gain supports only that role identity is better treated as a jointly constrained variable assignment in this microtheater.",
+  "claim_fence": "Local developmental microtheater only; no unrestricted reference/coreference, cultural cognition, general Theater, Internalizer, promotion, or truth claim.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
