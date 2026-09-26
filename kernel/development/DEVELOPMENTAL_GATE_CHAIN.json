@@ -1,6 +1,6 @@
 {
-  "schema": "Venus.DevelopmentalGateChain.v0.1",
-  "date": "2026-09-25",
+  "schema": "Venus.DevelopmentalGateChain.v0.2",
+  "date": "2026-09-26",
   "status": "PREFROZEN_DEVELOPMENTAL_ROUTE_NOT_COMPLETION_CLAIM",
   "principle": "The developmental center may select its own consequential limitations and improve its own machinery within the externally governed safety floor. Gate completion must be earned by returned consequence; later stages are not predeclared outcomes.",
   "chain": [
@@ -164,5 +164,200 @@
     "curriculum_hypothesis!=cultural_essence"
   ],
   "promotion_authority": false,
-  "truth_authority": false
+  "truth_authority": false,
+  "authority": {
+    "semantic_source_of_truth": "kernel/development/DEVELOPMENTAL_GATE_CHAIN.json",
+    "current_state_snapshot": "split/minerva@37fd1ce3bf90354e580bc5b8dd77fe495a523130",
+    "planning_surface_roles": {
+      "kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json": "current A-E active subgraph only; inherits semantics from this graph",
+      "docs/ISSUE_ROADMAP.md": "human-readable issue projection; must not define a competing semantic order",
+      "kernel/CURRENT_STATE.md": "current evidence/status snapshot; not the developmental topology"
+    },
+    "precedence": "Current repository evidence determines present status. The later 14:44 architecture compression supersedes earlier state claims in the 14:37 history carrier, while ancestry, negative evidence, and abandoned alternatives remain reachable.",
+    "promotion_authority": false,
+    "truth_authority": false
+  },
+  "temporal_provenance": [
+    {
+      "id": "HISTORY_CARRIER_143744",
+      "source": "Pasted text(20260926-143744).txt",
+      "role": "developmental ancestry, experiments, operators, and historical claims",
+      "observed_at": "2026-09-26T14:37:43Z",
+      "disposition": "PRESERVE_AS_PROVENANCE"
+    },
+    {
+      "id": "ARCHITECTURE_COMPRESSION_144422",
+      "source": "Pasted text(20260926-144422).txt",
+      "role": "integrated developmental architecture and current conceptual relations",
+      "observed_at": "2026-09-26T14:44:22Z",
+      "supersedes": [
+        "HISTORY_CARRIER_143744"
+      ],
+      "supersession_scope": "state claims and architecture where explicitly refined; never deletes ancestry, failed discriminators, negative results, or abandoned alternatives"
+    },
+    {
+      "id": "LIVE_REPOSITORY_SNAPSHOT",
+      "source": "split/minerva@37fd1ce3bf90354e580bc5b8dd77fe495a523130",
+      "role": "current code, data, issue routing, and branch state at audit start",
+      "disposition": "SNAPSHOT_NOT_FUTURE_GUARANTEE"
+    },
+    {
+      "id": "BYTES_TO_ABSTRACTION_CORRECTION",
+      "source": "user correction in conversation 2026-09-26",
+      "role": "input boundary constraint",
+      "rule": "arbitrary bytes -> learner abstraction; do not insert a host-authored modality ontology between them"
+    }
+  ],
+  "semantic_recurrence": {
+    "claim": "One time-indexed semantic graph governs the recurrence; artifacts and issues are evidence carriers attached to graph nodes, not competing roadmaps.",
+    "state_variables": [
+      "learner_state",
+      "future_test_family_F",
+      "retained_history_and_provenance",
+      "external_boundary_and_jurisdiction"
+    ],
+    "inputs": {
+      "world": "genuinely external World/Other and non-preauthored consequence",
+      "carrier": "raw bytes",
+      "rule": "bytes -> abstraction directly; retain source identity/provenance and raw carrier, but do not dispatch by MIME into a hand-authored semantic taxonomy"
+    },
+    "operators": [
+      {
+        "id": "ABSTRACT",
+        "input": "bytes + retained learner state",
+        "operation": "form candidate distinctions/relations indexed to a declared future-test family F",
+        "output": "candidate abstraction",
+        "role": "learner-owned semantics; substrate may carry bytes and execute generic operations"
+      },
+      {
+        "id": "GENERATE",
+        "input": "abstraction + residual",
+        "operation": "generate candidate relations, transformations, questions, actions, and discriminators",
+        "output": "candidate set",
+        "noncollapse": "generation != selection != authorization"
+      },
+      {
+        "id": "LATERALIZE",
+        "input": "residual not resolved in current representational basis",
+        "operation": "expand/re-coordinate the basis into independently answerable faces whose disagreement can expose hidden structure",
+        "output": "richer candidate representation",
+        "conditional": true
+      },
+      {
+        "id": "TEST_AND_RETURN",
+        "input": "prefrozen candidate/discriminator and admissible action",
+        "operation": "enact or inquire; obtain independently sourced consequence",
+        "output": "return with provenance",
+        "external_ownership": [
+          "World/Other",
+          "return source",
+          "evidence identity",
+          "jurisdiction",
+          "authorization"
+        ]
+      },
+      {
+        "id": "CRYSTALLIZE_F",
+        "input": "candidate relations + admitted future-test family F + returned separators",
+        "operation": "quotient only distinctions that no reachable admissible test separates; retain residuals",
+        "output": "minimum future-sufficient organization",
+        "reopen_rule": "if a newly admissible future test separates formerly equivalent states, reopen/refine the earlier quotient"
+      },
+      {
+        "id": "INTERNALIZE",
+        "input": "stable consequence-bearing competence",
+        "operation": "move competence into learner-owned persistent state and remove capability-specific source/scaffold",
+        "output": "state-owned competence if the same consequence survives",
+        "entry_gate": "B1 abstraction and B2 causal use passed; B3 source removal, restart/delay, fresh transfer, and independent evaluation required"
+      },
+      {
+        "id": "RSM_RSI",
+        "input": "current learner state + residuals + admissible work frontier",
+        "operation": "select and schedule the learner's next developmental limitation, revise implicated machinery under governance, then repeat",
+        "output": "successor learner state and next residual",
+        "noncollapse": "self-revision != self-authorization != self-validation"
+      }
+    ],
+    "one_cycle_edges": [
+      [
+        "BYTES",
+        "ABSTRACT"
+      ],
+      [
+        "ABSTRACT",
+        "RESIDUAL_IF_FUTURE_SEPARATING"
+      ],
+      [
+        "RESIDUAL_IF_FUTURE_SEPARATING",
+        "GENERATE"
+      ],
+      [
+        "RESIDUAL_IF_REPRESENTATION_FAILURE",
+        "LATERALIZE"
+      ],
+      [
+        "GENERATE",
+        "PREFROZEN_TEST_OR_ACTION"
+      ],
+      [
+        "PREFROZEN_TEST_OR_ACTION",
+        "TEST_AND_RETURN"
+      ],
+      [
+        "TEST_AND_RETURN",
+        "CRYSTALLIZE_F"
+      ],
+      [
+        "CRYSTALLIZE_F",
+        "INTERNALIZE_IF_B1_B2_STABLE"
+      ],
+      [
+        "INTERNALIZE_IF_B1_B2_STABLE",
+        "RSM_RSI"
+      ],
+      [
+        "RSM_RSI",
+        "SUCCESSOR_STATE"
+      ]
+    ],
+    "recurrence_edge": {
+      "from": "SUCCESSOR_STATE",
+      "to": "BYTES",
+      "index_shift": "t -> t+1",
+      "law": "new returned difference may create a residual, change F, reopen a crystal, or expose a different machinery limitation"
+    },
+    "proof_burdens": {
+      "B1": "abstraction survives nuisance/surface changes while preserving consequential sensitivity",
+      "B2": "intervention on the distinction changes later behavior/consequence for the predicted reason",
+      "B3": "capability survives capability-specific source removal, rehydration/restart, delay, fresh transfer, and independent evaluation"
+    },
+    "permanent_external_boundaries": [
+      "World/Other",
+      "fresh non-preauthored Return",
+      "evidence identity and custody",
+      "independent evaluator",
+      "trust root",
+      "authorization",
+      "jurisdiction",
+      "claim promotion",
+      "STOP/WITHHOLD",
+      "rollback/parent custody",
+      "hard substrate limits",
+      "O* / Anti-Minerva correction permeability"
+    ]
+  },
+  "current_frontier_ref": "kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json",
+  "current_snapshot_status": {
+    "active_frontier": [
+      "A_RETURN_CREDIT_ASSIGNMENT",
+      "B_DEPENDENCY_DAG_PLANNING"
+    ],
+    "blocked_chain": [
+      "C_UNCERTAINTY_NONSTATIONARITY <- A_RETURN_CREDIT_ASSIGNMENT",
+      "D_RSI_RECURRENCE_AUDIT <- A_RETURN_CREDIT_ASSIGNMENT + B_DEPENDENCY_DAG_PLANNING",
+      "E_INTERNALIZATION <- D_RSI_RECURRENCE_AUDIT"
+    ],
+    "review_barrier": "Issue #238 remains open and blocks reroll; this graph does not change that state.",
+    "caveat": "Status is snapshot-specific and must be re-read from live repository evidence before action."
+  }
 }
