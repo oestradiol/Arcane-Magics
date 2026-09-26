@@ -1,0 +1,70 @@
+{
+  "schema": "Venus.GitWorldPrefreezeEpisode.v0.2",
+  "issue": 165,
+  "episode": 5,
+  "created_from_external_snapshot": {
+    "carrier_kind": "PR",
+    "carrier_number": 193,
+    "head_sha": "ea9c4d0407f5abbc49eb325eedfe3fd4e9e94a21",
+    "merge_state": "UNSTABLE",
+    "updated_at": "2026-09-26T02:56:58Z",
+    "check_run_id": 36213280199,
+    "check_status": "completed",
+    "check_conclusion": "failure"
+  },
+  "problem": {
+    "problem_id": "868e19fea34b0a5387c117815bd940b64e337a0f7f0d13317156a04b71348545",
+    "schema": "Venus.GitNextHeadCheckProblem.v0.1",
+    "disposition": "FORMED_BOUNDED_PROBLEM",
+    "source_stream_ids": [
+      "e5253c3bc07f0b99284dc5fb8b5bb5954682aac25b462a162bc3230ba115b2cb"
+    ],
+    "residual_coordinates": [
+      "next_head_check_unknown"
+    ],
+    "discriminator": "OBSERVE_NEXT_HEAD_CHECK_TERMINAL_STATE",
+    "rivals": [
+      {
+        "rival_id": "r0",
+        "statement": "the next changed PR head terminates unsuccessfully under repository checks"
+      },
+      {
+        "rival_id": "r1",
+        "statement": "the next changed PR head terminates successfully under repository checks"
+      }
+    ],
+    "external_return_required": true,
+    "carrier_binding_authority": false,
+    "promotion_authority": false
+  },
+  "request": {
+    "request_id": "6f56b00f0e477aae96675260f768ff807ff0241bdea294a042b195aa2f9138ce",
+    "schema": "Venus.GitWorldRequest.v0.1",
+    "problem_id": "868e19fea34b0a5387c117815bd940b64e337a0f7f0d13317156a04b71348545",
+    "source_stream_id": "e5253c3bc07f0b99284dc5fb8b5bb5954682aac25b462a162bc3230ba115b2cb",
+    "discriminator": "OBSERVE_NEXT_HEAD_CHECK_TERMINAL_STATE",
+    "carrier_kind": "PR",
+    "carrier_number": 193,
+    "frozen_snapshot_digest": "e593034b7abaf8f927413ee1057be14a30f06d31e03a9e77624339d76aeee9e2",
+    "frozen_head_sha": "ea9c4d0407f5abbc49eb325eedfe3fd4e9e94a21",
+    "frozen_merge_state": "UNSTABLE",
+    "frozen_updated_at": "2026-09-26T02:56:58Z",
+    "frozen_check_run_id": 36213280199,
+    "frozen_check_status": "completed",
+    "frozen_check_conclusion": "failure",
+    "accepted_observation_fields": [
+      "head_sha",
+      "merge_state",
+      "updated_at",
+      "check_run_id",
+      "check_status",
+      "check_conclusion"
+    ],
+    "promotion_authority": false
+  },
+  "future_head_known_at_freeze": false,
+  "future_check_run_known_at_freeze": false,
+  "future_check_conclusion_known_at_freeze": false,
+  "truth_authority": false,
+  "promotion_authority": false
+}
