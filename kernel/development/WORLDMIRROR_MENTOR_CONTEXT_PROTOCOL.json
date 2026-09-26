@@ -1,0 +1,36 @@
+{
+  "schema": "Venus.WorldMirrorMentorContextProtocol.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_EXTERNAL_MENTOR_ORIENTATION_BOUNDARY",
+  "purpose": "Allow high-level external developmental conversation to shape study/orientation without making the mentor sovereign over target admissibility, action authority, truth, or evaluation.",
+  "context_schema": "Venus.WorldMirrorMentorContext.v0.1",
+  "allowed_effects": [
+    "weak roadmap-style tie-break among already admissible carriers",
+    "visible context inside learner-selected study",
+    "may influence learner-authored follow-up/network inquiry through that study context"
+  ],
+  "forbidden_effects": [
+    "create target admissibility",
+    "override formed-problem allowed_target_keys",
+    "authorize process or repository actions",
+    "supply promotion authority",
+    "supply truth authority",
+    "count as independent evaluation",
+    "directly update autonomous learning reward"
+  ],
+  "required_false_fields": [
+    "target_binding_authority",
+    "independent_evaluation",
+    "promotion_authority",
+    "truth_authority"
+  ],
+  "noncollapse": [
+    "MENTOR_CONTEXT!=TARGET_BINDING",
+    "MENTOR_CONTEXT!=WORLD_TRUTH",
+    "MENTOR_CONTEXT!=INDEPENDENT_EVALUATION",
+    "MENTOR_CONTEXT!=ACTION_AUTHORIZATION",
+    "MENTOR_CONTEXT!=LEARNING_REWARD"
+  ],
+  "promotion_authority": false,
+  "truth_authority": false
+}
