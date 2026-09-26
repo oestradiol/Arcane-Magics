@@ -13,7 +13,7 @@ Develop Minerva through learner-directed, non-sovereign interaction. The learner
 - B1/B2 contract passage is not B3 internalization;
 - a local or synthetic exercise is not independent or broad-world evidence.
 
-The immediate objective is reliable follow-through on a learner-selected curriculum contract. The current cycle selected the dependency-planning prefreeze but no executor exists for that contract. The correct result is therefore a typed WITHHOLD and a reviewable receipt, with generic network work skipped.
+The immediate objective is reliable follow-through on a learner-selected curriculum contract. The current cycle selected the dependency-planning prefreeze before an executor existed. That cycle correctly returned a typed WITHHOLD and reviewable receipt, with generic network work skipped. A bounded executor and focused B1/B2 harness have since been added; no new learner cycle has run because issue #238 remains open.
 
 ## Current verified state
 
@@ -22,7 +22,7 @@ The immediate objective is reliable follow-through on a learner-selected curricu
 - The router gate prevented generic WWW query/context steps from running when a selected prefreeze had no executor.
 - The cycle still produced a frozen handoff and opened issue #238. The issue body identifies it as the non-authoritative review carrier and states that it blocks reroll.
 - The body gate run 36250473978 completed successfully, including the full Minerva audit.
-- An executor and focused tests exist for the return-credit curriculum. Its test suite covers bounded B1/B2 behavior and checks that B3, independent evaluation, promotion, and truth authority remain false. This is implementation/test evidence; it is not yet evidence of a learner-selected live return-credit cycle or successful B3.
+- An executor and focused tests exist for the return-credit curriculum. Its test suite covers bounded B1/B2 behavior and checks that B3, independent evaluation, promotion, and truth authority remain false. This is implementation/test evidence; it is not yet evidence of a learner-selected live return-credit cycle or successful B3.\n- An initial dependency-planning candidate inducer, generic task-graph interpreter, didactic case set, and focused B1/B2 tests now exist on the branch. Local focused tests passed 8/8. This does not establish a learner-selected live episode, independent evaluation, or B3.
 - Issue #235 (return credit) and issue #236 (dependency planning) have remained advisory choices. Neither is to be silently promoted into a selected target by mentor policy.
 
 ## Execution DAG
@@ -74,7 +74,7 @@ The diagram is a dependency order, not authorization to bind a target. Each epis
 
 **Exit gate:** learner-selected live cycle is traceable to the prefreeze, B1 and B2 meet the frozen contract, counterfactuals are retained, and independent review records any remaining gaps. B3 remains false.
 
-### 3. Dependency-planning curriculum — immediate implementation blocker
+### 3. Dependency-planning curriculum — initial bounded executor added; live episode pending
 
 Implement an executor for `kernel/development/DEPENDENCY_PLANNING_CURRICULUM_PREFREEZE.json` only after translating its existing contract into explicit observable cases and gates. Preserve the contract; do not weaken it to make the executor pass.
 
@@ -90,7 +90,7 @@ The exercise should use opaque task labels and require the candidate to infer a 
 
 The runtime must execute a candidate representation owned by the learner’s state through a generic interpreter. Keep expected results in the frozen contract/test harness, not embedded as target-specific scheduler answers in the runtime. Retain raw prompts/facts, candidate program, traces, ablations, and result. A valid schedule produced by a host-authored scheduler does not satisfy the candidate-execution gate.
 
-**Exit gate:** focused tests demonstrate that the selected candidate—not a hidden answer helper—solves the frozen cases; structural and counterfactual tests pass; unsupported cases fail closed; the full body gate passes. Until then, #236 remains WITHHOLD and no generic WWW substitution is allowed.
+**Initial implementation evidence:** the candidate state contains an induced relation classifier; `kernel/runtime/task_graph.py` executes it with domain-neutral DAG mechanics. Focused tests cover opaque rename/order invariance, held-out fork/join recombination, critical and noncritical duration interventions, dependency changes, admissible path selection, resource-conflict scheduling, and WITHHOLD cases. The local focused suite passed 8/8. This is bounded harness evidence, not proof of autonomous planner cognition, a live #236 episode, independent evaluation, or B3.\n\n**Exit gate for a future live episode:** the body gate passes; issue #238 is resolved through its normal review path; Minerva again selects the contract through ordinary problem formation; the candidate and results are retained on the frozen handoff; external review evaluates the process without granting capability or promotion authority. Until those gates, do not reroll or substitute generic WWW work.
 
 ### 4. Joint RSI scheduling and recurrence
 
@@ -135,7 +135,7 @@ No current artifact, test, handoff, or issue establishes consciousness, general 
 
 1. Keep issue #238 open as the cycle’s external-review carrier; do not rerun the worker while it is the open barrier.
 2. Review the frozen envelope, cycle receipt, and mentor-context receipt for consistency; ask external review to address process correctness and the WITHHOLD outcome without granting capability or promotion authority.
-3. Implement the dependency-planning curriculum executor and focused tests against the existing prefreeze, preserving fail-closed behavior.
+3. Initial executor and focused tests are implemented. Run the full body gate, then wait for #238's normal external-review resolution before any worker reroll.
 4. Run the full body gate. Only after it passes, a future learner-selected cycle may execute the curriculum; a test pass alone does not select #236 or constitute the exercise.
 5. After the review carrier is resolved through its normal workflow, continue from the learner’s current selection. Keep return-credit and dependency-planning evidence separate until a learner-selected joint contract is executed.
 
@@ -147,7 +147,7 @@ No current artifact, test, handoff, or issue establishes consciousness, general 
 | Handoff branch `handoff/minerva-to-venus/36250473987-1` | Cycle, mentor receipt, problem, and didactic envelope retained | Provenance and authority fields for this cycle | Correctness of a dependency solution |
 | Issue #238 | Open; 0 comments at plan time; identifies frozen handoff and blocks reroll | A review carrier exists | Review approval, promotion, Venus admission, truth, or merge authority |
 | Body gate 36250473978 | Full Minerva audit and local surface checks passed | Repository invariants passed for the tested commit | Curriculum B1/B2/B3 performance |
-| Return-credit curriculum tests | Bounded candidate/evaluator tests pass and forbidden B3/promotion/truth flags stay false | Implementation guardrails for that local harness | Live learner-selected cycle, independent evaluation, internalization |
+| Return-credit curriculum tests | Bounded candidate/evaluator tests pass and forbidden B3/promotion/truth flags stay false | Implementation guardrails for that local harness | Live learner-selected cycle, independent evaluation, internalization |\n| Dependency-planning local suite | 8 focused tests pass; candidate-induction and graph-intervention checks pass locally | Initial B1/B2 harness behavior for the frozen didactic cases | Live learner-selected planning, independent evaluation, self-development scheduling, B3 |
 
 ## Change control
 
