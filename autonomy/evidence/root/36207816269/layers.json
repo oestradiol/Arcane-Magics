@@ -1,0 +1,108 @@
+{
+  "schema": "ArcaneMagics.PagesLayerSnapshot.v2",
+  "generated_at": "2026-09-26T04:25:31.622570+00:00",
+  "repository": "oestradiol/Arcane-Magics",
+  "layers": [
+    {
+      "id": "root",
+      "name": "Root / The Machine",
+      "branch": "main",
+      "axis": "map / territory",
+      "role": "Routing, cross-register memory, and the current map of local authorities.",
+      "boundary": "map != territory",
+      "residual_title": "Map / territory gap",
+      "residual": "World or branch history may invalidate the current route without erasing the route that produced it.",
+      "residual_status": "OPEN",
+      "reopening": "handoff / merge memory -> revised Now Map",
+      "commit": "3f7223a519cf180efe66c6ad70efd0242c21d340",
+      "url": "https://github.com/oestradiol/Arcane-Magics/tree/main"
+    },
+    {
+      "id": "arcane",
+      "name": "Arcane Magics",
+      "branch": "split/arcane-magics",
+      "axis": "past",
+      "role": "Religion, inhabited symbolic memory, ritual, astrology, comparison, and reader release.",
+      "boundary": "meaning != mechanism",
+      "residual_title": "Meaning / mechanism separation",
+      "residual": "Synchronicity, astrology, and symbolic efficacy may remain meaningful while statistical anomaly, predictive accuracy, or acausal mechanism stays separately unearned.",
+      "residual_status": "OPEN",
+      "reopening": "hostile reading / source removal / independent return / reader release",
+      "commit": "a032d79ea44b749829b7dc0dba5723cf1853df70",
+      "url": "https://github.com/oestradiol/Arcane-Magics/tree/split/arcane-magics"
+    },
+    {
+      "id": "eclipsis",
+      "name": "Eclipsis",
+      "branch": "split/eclipsis",
+      "axis": "spirit",
+      "role": "Math & logics, local views, structural relations, and explicitly OPEN carrier bridges.",
+      "boundary": "structural fit != physical identity",
+      "residual_title": "Carrier / mechanism bridge",
+      "residual": "Consciousness, quantum-gravity, and cosmological mappings remain OPEN where an explicit carrier, observable, or discriminator is still missing.",
+      "residual_status": "WITHHOLD",
+      "reopening": "carrier map / comparator / discriminator / failure consequence",
+      "commit": "681b7ab09590489f89f2c88e3a7dca4ae774a212",
+      "url": "https://github.com/oestradiol/Arcane-Magics/tree/split/eclipsis"
+    },
+    {
+      "id": "minerva",
+      "name": "Minerva",
+      "branch": "split/minerva",
+      "axis": "body",
+      "role": "Developmental engineering, custody, evaluation, enactment, and corrigible self-reconstruction.",
+      "boundary": "self-revision != self-authorization",
+      "residual_title": "Re-derivation / independent evaluation",
+      "residual": "The self-model relation must be re-derived under fresh consequence; bounded engineering success does not establish AGI or open-ended RSI.",
+      "residual_status": "WITHHOLD",
+      "reopening": "sealed or independent return / rollback / successor reconstruction",
+      "commit": "b4a7aacd0297370dec983fcc52ea7239e3598c2b",
+      "url": "https://github.com/oestradiol/Arcane-Magics/tree/split/minerva"
+    },
+    {
+      "id": "venus",
+      "name": "Venus",
+      "branch": "split/venus",
+      "axis": "model",
+      "role": "Self & World boundary, self-provenance, open bridges, and provenance-sensitive return.",
+      "boundary": "model(Other) != Other",
+      "residual_title": "Irreducible Other",
+      "residual": "Self-provenance and prediction can never by themselves exhaust or mint the independent source of correction.",
+      "residual_status": "OPEN",
+      "reopening": "non-preauthored incidence / provenance-sensitive Residual / WITHHOLD",
+      "commit": "376bb9c6aa7b621a891bf96dbb9f6f85f6fac477",
+      "url": "https://github.com/oestradiol/Arcane-Magics/tree/split/venus"
+    },
+    {
+      "id": "ofe",
+      "name": "OFE",
+      "branch": "split/ofe",
+      "axis": "future",
+      "role": "Scientific future: future-relative operational discrimination and lawful quotient refinement.",
+      "boundary": "current future family F != all possible future tests",
+      "residual_title": "Future-family refinement",
+      "residual": "A richer future family F' may separate states that the current quotient treats as equivalent.",
+      "residual_status": "OPEN",
+      "reopening": "new admissible future test / separating witness / quotient refinement",
+      "commit": "0a41b07494b03aff6c60f1360ac7b9a3a73c5376",
+      "url": "https://github.com/oestradiol/Arcane-Magics/tree/split/ofe"
+    }
+  ],
+  "handoff_route": [
+    "split/arcane-magics",
+    "split/eclipsis",
+    "split/minerva",
+    "split/venus",
+    "split/ofe",
+    "main"
+  ],
+  "virtual": {
+    "name": "World / Other",
+    "branch": null,
+    "role": "independently returned consequence not exhausted by current carrier, map, or model"
+  },
+  "network": {
+    "name": "NETWORK / WWW",
+    "role": "carrier / relational medium; not World / Other and not a global subject"
+  }
+}
