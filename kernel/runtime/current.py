@@ -1,5 +1,15 @@
 from __future__ import annotations
 
+"""Hydrate the admitted WorldMirror/VMK2 runtime from persisted state.
+
+This module is the persistence boundary between files on disk and the live
+``VMK2Reference`` object. It reconstructs the hot/cold JSON snapshot, verifies
+payload hashes and state roots, and refuses silent state drift.
+
+It is not developmental cognition and does not decide what the learner should
+work on. See ``docs/WORLDMIRROR_VM.md``.
+"""
+
 from hashlib import sha256
 import json
 from pathlib import Path
