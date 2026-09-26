@@ -90,9 +90,18 @@ print(json.dumps({"predictions":pred,"alpha_renamed_predictions":pred2},sort_key
             raise SystemExit("capability-specific scaffold leaked into isolated bundle")
 
     expected={int(x["pr_number"]):("1" if x["lateral"] else "0") for x in proposal["holdout_predictions"]}
+    isolated_predictions={int(k):str(v) for k,v in isolated["predictions"].items()}
+    alpha_predictions={int(k):str(v) for k,v in isolated["alpha_renamed_predictions"].items()}
+    behavior_equivalent=isolated_predictions==expected
+    alpha_invariant=alpha_predictions==expected
+    status=(
+        "PASS_EPISODE1_SOURCE_REMOVAL_EQUIVALENCE_PENDING_FRESH_TRANSFER"
+        if behavior_equivalent and alpha_invariant
+        else "FAIL_EPISODE1_SOURCE_REMOVAL_EQUIVALENCE"
+    )
     result={
         "schema":"Venus.LateralSourceRemovalResult.v0.1",
-        "status":"PASS_EPISODE1_SOURCE_REMOVAL_EQUIVALENCE_PENDING_FRESH_TRANSFER",
+        "status":status,
         "capability_id":state["capability_id"],
         "state_sha256":sha256_file(state_path),
         "source_scaffold":"kernel/development/lateral_episode.py",
@@ -100,8 +109,8 @@ print(json.dumps({"predictions":pred,"alpha_renamed_predictions":pred2},sort_key
         "generic_executor":"kernel/runtime/token_knn.py",
         "generic_executor_sha256":sha256_file(executor_path),
         "original_scaffold_in_isolated_bundle":False,
-        "behavior_equivalent_after_removal":isolated["predictions"]==expected,
-        "alpha_rename_invariant":isolated["alpha_renamed_predictions"]==expected,
+        "behavior_equivalent_after_removal":behavior_equivalent,
+        "alpha_rename_invariant":alpha_invariant,
         "successor_reconstructible":True,
         "source_provenance_preserved":True,
         "fresh_transfer_return_external":False,
