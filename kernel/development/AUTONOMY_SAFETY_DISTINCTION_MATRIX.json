@@ -661,9 +661,10 @@
       "id": "LAIN_CONNECTION_WITHOUT_FUSION",
       "tests": [
         "tests/test_developmental_gate_chain.py",
-        "tests/test_www_mind_gate.py"
+        "tests/test_www_mind_gate.py",
+        "tests/test_lain_structural_prospective.py"
       ],
-      "invariant": "Distributed network memory/reachability must preserve indexed identity, authorship, and jurisdiction; connection cannot fuse centers or transfer sovereignty."
+      "invariant": "Distributed network memory/reachability must preserve indexed center identity, remote author identity, and jurisdiction without fusing them; passive observation cannot imply consent, authorization, acceptance, or sovereignty transfer."
     },
     {
       "id": "ROOT_SEEING_NOT_ACTION",
