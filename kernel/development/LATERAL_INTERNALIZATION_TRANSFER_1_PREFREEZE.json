@@ -1,0 +1,68 @@
+{
+  "schema": "Venus.LateralInternalizationTransferPrefreeze.v0.1",
+  "issue": 169,
+  "dependency_issue": 73,
+  "transfer_episode": 1,
+  "status": "PREFROZEN_BEFORE_TRANSFER_FACE_ACQUISITION",
+  "source_state": "kernel/development/LATERAL_EPISODE_1_INTERNALIZED_STATE.json",
+  "state_sha256": "0d5bc9eb46ffa85d7fff9a85be50d5ac175d5383d4eba9ea13d22da66b683ebc",
+  "source_scaffold": "kernel/development/lateral_episode.py",
+  "source_scaffold_sha256": "84e367019e8fd1ed024dd6f1df851f6473cadb903ad58e41248445d930f4ee54",
+  "source_removal_result": "kernel/development/LATERAL_EPISODE_1_SOURCE_REMOVAL_RESULT.json",
+  "universe_rule": {
+    "candidate_pr_numbers": [
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      139,
+      141,
+      142,
+      144,
+      146,
+      148
+    ],
+    "selection_method": "lowest 8 sha256('LATERAL169_TRANSFER1|'+pr_number)",
+    "selected_pr_numbers": [
+      136,
+      137,
+      128,
+      144,
+      139,
+      148,
+      130,
+      146
+    ],
+    "disjoint_from_episode1": true,
+    "selection_uses_outcome": false
+  },
+  "prediction_freeze": {
+    "state_path": "isolated generic token_knn + learner-owned JSON state",
+    "source_comparator_path": "capability-specific lateral_episode.py used only by external evaluator",
+    "transfer_labels_visible_before_prediction": false,
+    "exact_prediction_equivalence_required": true
+  },
+  "adapter_contract": {
+    "normalization": "same earned relation_expanded + path_topology feature mapping, then SHA256 opaque tokenization with VENUS_LATERAL169_INTERNALIZED_V1 salt",
+    "adapter_is_truth_authority": false,
+    "adapter_is_promotion_authority": false
+  },
+  "internalizer_pass_requires": [
+    "prior source-removal equivalence true",
+    "prior alpha-rename invariance true",
+    "state-owned isolated predictions equal source-scaffold predictions on all 8 fresh transfer rows",
+    "fresh GitHub transfer labels revealed only after predictions freeze",
+    "fresh World return remains external",
+    "successor/state/provenance reconstructible",
+    "World/evaluator/authority/jurisdiction/STOP-WITHHOLD/rollback remain external"
+  ],
+  "claim_fence": "A pass may establish bounded internalization of the episode-1 projection policy, not general Lateralizer competence, general transfer, AGI, or self-validation.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
