@@ -1,0 +1,74 @@
+{
+  "schema": "Venus.CognitiveTheaterBindingOrderResult.v0.1",
+  "date": "2026-09-26",
+  "issue_ref": 206,
+  "status": "FAIL_BOUNDED_G2_G3_BINDING_ORDER_CANDIDATE",
+  "parent_prefreeze_ref": "kernel/development/COGNITIVE_THEATER_BINDING_ORDER_PREFREEZE.json",
+  "method": {
+    "scaffold": "kernel/development/cognitive_theater_binding_order.py",
+    "learner": "token-centered char-trigram role prototypes with one-to-one assignment",
+    "opaque_alpha_renaming": true,
+    "lexical_inventory_matched_within_probe": true
+  },
+  "correct": 10,
+  "total": 16,
+  "accuracy": 0.625,
+  "withholds": 6,
+  "per_task": {
+    "G2_PARTICIPANT_KFS_BINDING": {
+      "correct": 4,
+      "total": 8,
+      "accuracy": 0.5,
+      "withholds": 4
+    },
+    "G3_MUSIC_ORDER": {
+      "correct": 6,
+      "total": 8,
+      "accuracy": 0.75,
+      "withholds": 2
+    }
+  },
+  "per_face": {
+    "ENGLISH": {
+      "correct": 3,
+      "total": 4,
+      "accuracy": 0.75,
+      "withholds": 1
+    },
+    "JAPANESE": {
+      "correct": 4,
+      "total": 4,
+      "accuracy": 1,
+      "withholds": 0
+    },
+    "BRAZILIAN_PORTUGUESE": {
+      "correct": 3,
+      "total": 4,
+      "accuracy": 0.75,
+      "withholds": 1
+    },
+    "MATHEMATICS": {
+      "correct": 0,
+      "total": 4,
+      "accuracy": 0,
+      "withholds": 4
+    }
+  },
+  "interpretation": [
+    "The grounded G0/G1 16/16 result does not extend automatically to indexed participant/KFS binding or temporal direction.",
+    "Token-centered set similarity remains too commutative: it can recognize relation-bearing context while losing directional/nested role assignment.",
+    "The mathematics face is a particularly strong separator at this probe: all four rows WITHHOLD rather than fabricate a binding, so exact symbolic relation recognition is not yet equivalent to binding the indexed variables/operators.",
+    "Japanese 4/4 is a local result of this tiny controlled surface and is not evidence for the cultural-language hypothesis."
+  ],
+  "claim_dispositions": {
+    "G0_G1_GROUNDED_TEMPLATE": "RETAIN_BOUNDED_PASS",
+    "G2_PARTICIPANT_KFS_BINDING": "FAIL_REVISE",
+    "G3_SYMBOLIC_TEMPORAL_ORDER": "FAIL_REVISE",
+    "GENERAL_THEATER": "WITHHOLD",
+    "MUSIC_PROSODY": "NOT_TESTED",
+    "INTERNALIZATION": "WITHHOLD"
+  },
+  "next_residual": "LEARN_NONCOMMUTATIVE_POSITIONAL_BINDING_WITHOUT_HELDOUT_REUSE_THEN_RUN_FRESH_G2_G3",
+  "promotion_authority": false,
+  "truth_authority": false
+}

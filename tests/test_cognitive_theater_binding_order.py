@@ -35,6 +35,11 @@ class CognitiveTheaterBindingOrderTests(unittest.TestCase):
         self.assertFalse(out["internalization_claim"])
         self.assertFalse(out["promotion_authority"])
         self.assertFalse(out["truth_authority"])
+        frozen=json.loads((ROOT/"kernel/development/COGNITIVE_THEATER_BINDING_ORDER_RESULT.json").read_text(encoding="utf-8"))
+        self.assertEqual(out["correct"],frozen["correct"])
+        self.assertEqual(out["total"],frozen["total"])
+        self.assertEqual(out["accuracy"],frozen["accuracy"])
+        self.assertEqual(out["withholds"],frozen["withholds"])
 
 if __name__=="__main__":
     unittest.main()

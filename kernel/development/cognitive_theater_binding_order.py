@@ -2,7 +2,7 @@ from __future__ import annotations
 
 """Data-driven opaque-center binding scaffold for #206 G2/G3.
 
-The code knows only the benchmark's opaque token syntax (@participant, #event).
+The code is given only the benchmark's opaque token syntax (@participant, #event).
 It contains no English/Japanese/PT-BR/Math grammar and no task-specific semantic
 words. Roles are learned from token-centered teacher contexts.
 """
