@@ -42,6 +42,9 @@ class RelationTrace:
     terms: tuple[str, ...]
     relations: tuple[TraceTerm, ...]
     status: str
+    config_attempts: int = 0
+    config_utility: float = 0.0
+    selection_basis: str = "STRUCTURAL_ONLY"
     future_return_input: bool = False
     hidden_evaluation_input: bool = False
     promotion_authority: bool = False
@@ -56,7 +59,10 @@ def _tokenize(text: str, *, min_length: int, stop: frozenset[str]) -> frozenset[
 
 
 def _validate_program(program: Mapping[str, Any]) -> None:
-    if program.get("schema") != "Venus.StateOwnedRelationTraceSearch.v0.1":
+    if program.get("schema") not in {
+        "Venus.StateOwnedRelationTraceSearch.v0.1",
+        "Venus.StateOwnedRelationTraceSearch.v0.2",
+    }:
         raise RelationTraceError("unsupported relation-trace program")
     if program.get("future_return_input") is not False:
         raise RelationTraceError("future return may not enter relation-trace search")
@@ -135,6 +141,7 @@ def search_relation_trace(
     *,
     anchors: Sequence[str],
     sources: Iterable[Mapping[str, Any]],
+    learning_state: Mapping[str, Any] | None = None,
 ) -> RelationTrace:
     _validate_program(program)
     rows=_relations(program,anchors=anchors,sources=sources)
@@ -159,7 +166,13 @@ def search_relation_trace(
             sum(row.title_support for row in kept),
             -len(kept),
         )
-        candidates.append((score,str(cfg["id"]),tuple(kept)))
+        cid=str(cfg["id"])
+        learning=learning_state or {}
+        success=int((learning.get("trace_config_success") or {}).get(cid,0))
+        failure=int((learning.get("trace_config_failure") or {}).get(cid,0))
+        attempts=success+failure
+        utility=0.0 if attempts==0 else (success-failure)/attempts
+        candidates.append((score,cid,tuple(kept),attempts,utility))
 
     if not candidates:
         body={
@@ -170,6 +183,9 @@ def search_relation_trace(
             "terms":(),
             "relations":(),
             "status":"WITHHOLD_NO_RELATION_TRACE_CANDIDATE",
+            "config_attempts":0,
+            "config_utility":0.0,
+            "selection_basis":"NO_EXPRESSIBLE_CONFIG",
             "future_return_input":False,
             "hidden_evaluation_input":False,
             "promotion_authority":False,
@@ -177,11 +193,22 @@ def search_relation_trace(
         }
         return RelationTrace(trace_id=digest(body),**body)
 
-    best=max(candidates,key=lambda x:(x[0],tuple(-ord(c) for c in x[1])))
-    # Deterministic lexical tie-break after numeric score.
-    top_score=best[0]
-    tied=sorted((cid,kept) for score,cid,kept in candidates if score==top_score)
-    cid,kept=tied[0]
+    returned_policy=program.get("returned_selection") or {}
+    returned_enabled=bool(returned_policy.get("enabled")) and learning_state is not None
+    if returned_enabled:
+        min_attempts=min(row[3] for row in candidates)
+        pool=[row for row in candidates if row[3]==min_attempts]
+        max_utility=max(row[4] for row in pool)
+        pool=[row for row in pool if row[4]==max_utility]
+        top_score=max(row[0] for row in pool)
+        pool=[row for row in pool if row[0]==top_score]
+        score,cid,kept,attempts,utility=sorted(pool,key=lambda x:x[1])[0]
+        selection_basis="RETURNED_UTILITY_EXPLORATION_THEN_STRUCTURAL"
+    else:
+        top_score=max(row[0] for row in candidates)
+        pool=[row for row in candidates if row[0]==top_score]
+        score,cid,kept,attempts,utility=sorted(pool,key=lambda x:x[1])[0]
+        selection_basis="STRUCTURAL_ONLY"
     body={
         "schema":"Venus.StateOwnedRelationTrace.v0.1",
         "program_digest":program_digest,
@@ -190,6 +217,9 @@ def search_relation_trace(
         "terms":tuple(row.term for row in kept),
         "relations":tuple(kept),
         "status":"RELATION_TRACE_CANDIDATE_FROZEN",
+        "config_attempts":attempts,
+        "config_utility":utility,
+        "selection_basis":selection_basis,
         "future_return_input":False,
         "hidden_evaluation_input":False,
         "promotion_authority":False,
