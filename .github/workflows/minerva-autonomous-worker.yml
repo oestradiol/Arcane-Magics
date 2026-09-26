@@ -100,16 +100,23 @@ jobs:
           echo "decision=$decision" >> "$GITHUB_OUTPUT"
 
       - name: Execute curriculum referenced by learner-selected study
-        if: steps.cycle.outputs.decision != 'STOP'
+        if: steps.cycle.outputs.decision != 'STOP' && steps.curriculum.outputs.withhold != 'true'
+        id: curriculum
         run: |
           python scripts/run_selected_didactic_curriculum.py \
             --cycle /tmp/minerva/CYCLE.json \
             --catalog kernel/development/DIDACTIC_CURRICULUM_EXECUTION_CATALOG.json \
             --output-dir /tmp/minerva/DIDACTIC \
             --envelope-output /tmp/minerva/DIDACTIC_CURRICULUM_ENVELOPE.json
+          status="$(python -c 'import json; print(json.load(open("/tmp/minerva/DIDACTIC_CURRICULUM_ENVELOPE.json"))["status"])')"
+          if [[ "$status" == WITHHOLD* ]]; then
+            echo "withhold=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "withhold=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Freeze learner-selected-study network query intent
-        if: steps.cycle.outputs.decision != 'STOP'
+        if: steps.cycle.outputs.decision != 'STOP' && steps.curriculum.outputs.withhold != 'true'
         run: |
           python scripts/freeze_network_query.py \
             --problem /tmp/minerva/FORMED_PROBLEM.json \
@@ -121,7 +128,7 @@ jobs:
 
       - name: Execute learner network query 1
         id: network1
-        if: steps.cycle.outputs.decision != 'STOP'
+        if: steps.cycle.outputs.decision != 'STOP' && steps.curriculum.outputs.withhold != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -136,7 +143,7 @@ jobs:
           fi
 
       - name: Record episode-1 relevance WITHHOLD
-        if: steps.cycle.outputs.decision != 'STOP' && steps.network1.outputs.has_sources == 'false'
+        if: steps.cycle.outputs.decision != 'STOP' && steps.curriculum.outputs.withhold != 'true' && steps.network1.outputs.has_sources == 'false'
         run: |
           python - <<'PY'
           import json
@@ -367,7 +374,7 @@ jobs:
             fi
           done
 
-          if [ -d /tmp/minerva/DIDACTIC ]; then
+          if [ -n "$(find /tmp/minerva/DIDACTIC -maxdepth 1 -type f -print -quit 2>/dev/null)" ]; then
             mkdir -p provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/didactic-curriculum
             cp /tmp/minerva/DIDACTIC/* provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/didactic-curriculum/
           fi
