@@ -241,6 +241,19 @@
         "monographs/04_VENUS/main.tex",
         "kernel/VENUS_INCIDENCE_LAW.tex"
       ]
+    },
+    {
+      "id": "AstrologicalSymbolicIndex",
+      "status": "LIVE_RESIDUAL",
+      "scope": "PHEN/THEOPHEN symbolic celestial indexing: celestial configuration -> indexed symbolic organization -> local interpretation/action; physical/causal astrology separately OPEN",
+      "reduction_issue": 27,
+      "mature_substitute": null,
+      "independent_residual": "OPEN_MATURE_SUBSTITUTION",
+      "genealogy_preserved": true,
+      "evidence": [
+        "docs/ASTROLOGY.md",
+        "monographs/03_ARCANE_MAGICS/main.tex"
+      ]
     }
   ]
 }
