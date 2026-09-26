@@ -282,23 +282,82 @@ def extract_explicit_returns(
                     disposition == "USEFUL",
                 ))
 
-            trace_returns: dict[str, list[tuple[int, str]]] = {}
-            for tindex, tm in enumerate(TRACE_CONFIG_RE.finditer(body)):
-                config_id = tm.group(1).upper()
-                disposition = tm.group(2).upper()
-                trace_returns.setdefault(config_id, []).append((tindex, disposition))
-            for config_id, rows in sorted(trace_returns.items()):
-                dispositions = {disposition for _, disposition in rows}
-                if len(dispositions) != 1:
-                    continue
-                first_index = min(index for index, _ in rows)
-                disposition = next(iter(dispositions))
-                out.append((
-                    f"{return_prefix}:trace:{first_index}:{config_id}",
-                    "TRACE_CONFIG",
-                    config_id,
-                    disposition == "USEFUL",
-                ))
+    return tuple(out)
+
+
+
+def extract_trace_config_returns(
+    carriers: Iterable[Mapping[str, Any]],
+    *,
+    authorized_logins: Iterable[str] | None = None,
+) -> tuple[tuple[str, str, bool], ...]:
+    """Return at most one net trace-config signal per autonomous cycle/config.
+
+    Repeated comments carrying the same disposition are duplicate evidence for
+    the same returned episode and must not amplify learner utility. Conflicting
+    dispositions on one cycle/config yield no signal.
+    """
+    authority = (
+        authorized_return_logins()
+        if authorized_logins is None
+        else frozenset(
+            str(x).strip().lower()
+            for x in authorized_logins
+            if str(x).strip()
+        )
+    )
+    if not authority or "*" in authority:
+        raise ValueError("learning-return authority must be explicit and non-wildcard")
+    if authority & SELF_REVIEW_LOGINS:
+        raise ValueError("self-review identity cannot authorize its own learning return")
+
+    out: list[tuple[str, str, bool]] = []
+    for carrier in carriers:
+        title = str(carrier.get("title", ""))
+        if not _CYCLE_TITLE.match(title):
+            continue
+        carrier_number = int(carrier["number"])
+        carrier_kind = str(carrier.get("_carrier_kind") or "PR").upper()
+        by_config: dict[str, list[tuple[str, str]]] = {}
+        returned_items = carrier.get("reviews") or carrier.get("comments") or ()
+        for review in returned_items:
+            login = _review_login(review)
+            login_l = login.lower()
+            if not login or login_l in SELF_REVIEW_LOGINS or login_l not in authority:
+                continue
+            returned_at = _return_time(review)
+            if not returned_at:
+                continue
+            body = _review_body(review)
+            for match in TRACE_CONFIG_RE.finditer(body):
+                config_id = match.group(1).upper()
+                disposition = match.group(2).upper()
+                fingerprint = _return_fingerprint(
+                    carrier_kind=carrier_kind,
+                    carrier_number=carrier_number,
+                    login=login,
+                    body=body,
+                    returned_at=returned_at,
+                )
+                by_config.setdefault(config_id, []).append((disposition, fingerprint))
+
+        for config_id, rows in sorted(by_config.items()):
+            dispositions = {disposition for disposition, _ in rows}
+            if len(dispositions) != 1:
+                continue
+            disposition = next(iter(dispositions))
+            semantic = {
+                "carrier_kind": carrier_kind,
+                "carrier_number": carrier_number,
+                "config_id": config_id,
+                "disposition": disposition,
+                "review_fingerprints": sorted({fp for _, fp in rows}),
+            }
+            raw = json.dumps(
+                semantic, sort_keys=True, separators=(",", ":")
+            ).encode("utf-8")
+            return_id = "trace-return:" + hashlib.sha256(raw).hexdigest()
+            out.append((return_id, config_id, disposition == "USEFUL"))
     return tuple(out)
 
 
@@ -327,11 +386,19 @@ def update_from_cycle_prs(
             bucket = kind_success if useful else kind_failure
         elif axis == "METHOD":
             bucket = method_success if useful else method_failure
-        elif axis == "TRACE_CONFIG":
-            bucket = trace_config_success if useful else trace_config_failure
         else:
             continue
         bucket[key] = bucket.get(key, 0) + 1
+        seen.add(return_id)
+
+    for return_id, config_id, useful in extract_trace_config_returns(
+        prs,
+        authorized_logins=authorized_logins,
+    ):
+        if return_id in seen:
+            continue
+        bucket = trace_config_success if useful else trace_config_failure
+        bucket[config_id] = bucket.get(config_id, 0) + 1
         seen.add(return_id)
 
     return WorkLearningState(
