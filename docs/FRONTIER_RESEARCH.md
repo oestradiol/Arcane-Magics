@@ -349,3 +349,30 @@ rho_i not preauthored by i
 ```
 
 This is the neutral research form of the participant-origin `God's calculator` / `we misfired on ourselves` compression.
+
+
+## Astrology / celestial symbolic indexing
+
+**Native Arcane object:** celestial configuration → symbolic projection → indexed interpretation/action.
+
+```text
+A_t -> sigma_(i,t)
+symbolic incidence != independent return != physical verification
+```
+
+### Open questions
+
+- Which parts reduce to ordinary attention, expectation, narrative framing, seasonal/astronomical salience, or social coordination?
+- Can rival astrological encodings be prospectively discriminated without post-hoc symbolic fitting?
+- Which experienced meanings survive when causal/predictive claims are removed?
+- Does a bounded symbolic operator change local action in a reproducible way beyond ordinary ritual/implementation-intention controls?
+- Which Earth-boundary/inversion claims belong only to Eclipsis MODEL/FORM rather than Arcane native warrant?
+
+### Required exports
+
+- Eclipsis: orientation-reversing projection / Earth-boundary structure as OPEN bridge.
+- OFE: preregistered predictive and future-equivalence discriminators.
+- Minerva: bounded symbolic-intervention experiments.
+- Venus: source-independence / nonpreauthored-return test.
+
+A negative result on predictive or physical astrology does not erase the PHEN/THEOPHEN symbolic object.
