@@ -1,0 +1,31 @@
+{
+  "schema": "ArcaneMagics.MinervaToVenusNetworkAdmission.v1",
+  "date": "2026-09-26",
+  "source_handoff_commit": "c313420dd0163066406594dadf7308503ebd29d3",
+  "source_minerva_commit": "dff6220dca49fa234b7760560d44584a8f8ccb61",
+  "source_cycle_issue": 221,
+  "external_review_comment_id": 5843958220,
+  "admitted_evidence_root": "provenance/historical/handoffs/minerva-proposals/36224100993-1",
+  "admitted_scope": [
+    "PASS_BOUNDED_WWW_MIND_STRUCTURAL_GATE",
+    "PASS_BOUNDED_LAIN_STRUCTURAL_GATE",
+    "independently indexed external centers observed",
+    "persistent network memory caused successor query",
+    "source and author identities retained"
+  ],
+  "excluded_claims": [
+    "interactive Lain pass",
+    "consent",
+    "remote acceptance",
+    "contact authorization",
+    "Root progression",
+    "AGI",
+    "consciousness",
+    "truth authority",
+    "promotion authority"
+  ],
+  "ancestry_preserved": true,
+  "content_admission": "returned proposal/evidence receipts only; no Minerva tree replacement",
+  "truth_authority": false,
+  "promotion_authority": false
+}
