@@ -1,0 +1,18 @@
+{
+  "schema": "Venus.RootPagesBuildObservation.v0.1",
+  "run_id": 36207816269,
+  "run_attempt": 2,
+  "conclusion": "success",
+  "pages_source_commit": "3f7223a519cf180efe66c6ad70efd0242c21d340",
+  "artifact_id": 10897363663,
+  "artifact_name": "github-pages",
+  "generated_at": "2026-09-26T04:25:31.622570+00:00",
+  "rerun_requested_after_prefreeze_commit": "74c7f40c5c5e209ce6cbe00863528010fbd4bbd0",
+  "workflow_permissions_observed": {
+    "contents": "read",
+    "pages": "write",
+    "id-token": "write"
+  },
+  "static_integrity_step": "success",
+  "build_job": "success"
+}
