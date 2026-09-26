@@ -225,12 +225,13 @@ def analyze_task_graph(candidate: Mapping[str, Any], graph: Mapping[str, Any]) -
             if incoming[node] <= finished and tasks[node].get("admissible", True) is True
         )
         started_any = False
-        for group in _maximal_ready_sets(ready_now, conflicts):
-            selected = next((g for g in group if all(
-                tuple(sorted((g, active))) not in conflicts for active in running
-            )), None)
-            if selected is None:
-                continue
+        available = [
+            node for node in ready_now
+            if all(tuple(sorted((node, active))) not in conflicts for active in running)
+        ]
+        groups = _maximal_ready_sets(available, conflicts)
+        selected_group = groups[0] if groups else []
+        for selected in selected_group:
             remaining.remove(selected)
             end_time = now + durations[selected]
             running[selected] = end_time
@@ -239,7 +240,7 @@ def analyze_task_graph(candidate: Mapping[str, Any], graph: Mapping[str, Any]) -
                 "start": _clean_number(now),
                 "finish": _clean_number(end_time),
             })
-            started_any = True
+        started_any = bool(selected_group)
         if not remaining and not running:
             break
         if running:
