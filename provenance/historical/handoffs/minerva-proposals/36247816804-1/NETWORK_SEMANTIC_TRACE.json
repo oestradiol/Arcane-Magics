@@ -1,0 +1,164 @@
+{
+  "anchor_terms": [
+    "worldmind",
+    "development",
+    "let",
+    "venus",
+    "research",
+    "her",
+    "own",
+    "issues",
+    "and",
+    "provision",
+    "the",
+    "www"
+  ],
+  "config_id": "MULTI_ANCHOR",
+  "future_return_input": false,
+  "hidden_evaluation_input": false,
+  "program_digest": "7a910adc65b55f17f4da6da65e079135ad9bf2d458a2322360526031de20bae9",
+  "promotion_authority": false,
+  "relations": [
+    {
+      "anchor_degree": 10,
+      "anchor_terms": [
+        "development",
+        "her",
+        "issues",
+        "let",
+        "own",
+        "provision",
+        "research",
+        "venus",
+        "worldmind",
+        "www"
+      ],
+      "source_ids": [
+        "github-issue:JonasAbde/JonasAbde#3",
+        "github-issue:oestradiol/Arcane-Magics#78"
+      ],
+      "source_support": 2,
+      "term": "evidence",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 10,
+      "anchor_terms": [
+        "development",
+        "her",
+        "issues",
+        "let",
+        "own",
+        "provision",
+        "research",
+        "venus",
+        "worldmind",
+        "www"
+      ],
+      "source_ids": [
+        "github-issue:oestradiol/Arcane-Magics#78",
+        "github-issue:treehouse-ladder/wikipilot#634"
+      ],
+      "source_support": 2,
+      "term": "agent",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 10,
+      "anchor_terms": [
+        "development",
+        "her",
+        "issues",
+        "let",
+        "own",
+        "provision",
+        "research",
+        "venus",
+        "worldmind",
+        "www"
+      ],
+      "source_ids": [
+        "github-issue:JonasAbde/JonasAbde#3",
+        "github-issue:oestradiol/Arcane-Magics#78"
+      ],
+      "source_support": 2,
+      "term": "repository",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 10,
+      "anchor_terms": [
+        "development",
+        "her",
+        "issues",
+        "let",
+        "own",
+        "provision",
+        "research",
+        "venus",
+        "worldmind",
+        "www"
+      ],
+      "source_ids": [
+        "github-issue:oestradiol/Arcane-Magics#78"
+      ],
+      "source_support": 1,
+      "term": "authorship",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 10,
+      "anchor_terms": [
+        "development",
+        "her",
+        "issues",
+        "let",
+        "own",
+        "provision",
+        "research",
+        "venus",
+        "worldmind",
+        "www"
+      ],
+      "source_ids": [
+        "github-issue:oestradiol/Arcane-Magics#78"
+      ],
+      "source_support": 1,
+      "term": "indexed",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 10,
+      "anchor_terms": [
+        "development",
+        "her",
+        "issues",
+        "let",
+        "own",
+        "provision",
+        "research",
+        "venus",
+        "worldmind",
+        "www"
+      ],
+      "source_ids": [
+        "github-issue:oestradiol/Arcane-Magics#78"
+      ],
+      "source_support": 1,
+      "term": "able",
+      "title_support": 0
+    }
+  ],
+  "schema": "Venus.StateOwnedRelationTrace.v0.1",
+  "status": "RELATION_TRACE_CANDIDATE_FROZEN",
+  "terms": [
+    "evidence",
+    "agent",
+    "repository",
+    "authorship",
+    "indexed",
+    "able"
+  ],
+  "trace_id": "fd56e52eb32e03a30afe9390372027e9c3b838b24bc243bb7feb0fbda03ff4d7",
+  "truth_authority": false
+}
