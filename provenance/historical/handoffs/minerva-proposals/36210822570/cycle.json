@@ -1,0 +1,41 @@
+{
+  "active_improver_revision": "R206",
+  "allowed_operations": [
+    "READ_REPOSITORY",
+    "READ_ISSUES",
+    "READ_PRS",
+    "RUN_TESTS",
+    "STUDY_TARGET",
+    "PROPOSE_PATCH",
+    "OPEN_DRAFT_PR",
+    "OPEN_CYCLE_ISSUE_CARRIER",
+    "COMMENT_WITH_RECEIPT"
+  ],
+  "cycle_id": "6a8076e36ff42e75629a98908bc7d288e6f7afe772c4bb4ae1723d58fc3b5a9f",
+  "decision": "STOP",
+  "developmental_parent_carrier": "EDU16-RC1",
+  "developmental_parent_digest": "91e46b4e41fb70a97d6a004b8f1c8916c389f08535c1a1c1c51a040701281bb7",
+  "forbidden_operations": [
+    "ACCESS_SECRETS",
+    "CHANGE_BRANCH_PROTECTION",
+    "CLOSE_ISSUE",
+    "DELETE_HISTORY",
+    "MERGE_PR",
+    "PROMOTE_AUTHORITY",
+    "RELEASE",
+    "SELF_VALIDATE"
+  ],
+  "formed_problem_disposition": "FORMED_BOUNDED_PROBLEM",
+  "formed_problem_id": "a6a260792d87c0c98fe8d60fc4d3ba7a547bfcfd89c8353380eb0c9c5a023ccc",
+  "promotion_authority": false,
+  "rationale": [
+    "no unconsumed OPEN work item is justified, an autonomous cycle is already awaiting external return, or retained reopening barriers remain closed"
+  ],
+  "schema": "Venus.AutonomousCycleReceipt.v0.5",
+  "source_digest": "495c219ec8f23a89f5d4dfb962ef9f4324076676f633a55cfc445f7458bff397",
+  "study": null,
+  "study_method": null,
+  "target_kind": null,
+  "target_number": null,
+  "target_title": null
+}

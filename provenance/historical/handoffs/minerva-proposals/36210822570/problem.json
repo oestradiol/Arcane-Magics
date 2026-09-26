@@ -1,0 +1,25 @@
+{
+  "carrier_binding_authority": false,
+  "discriminator": "RESOLVE_REFERENCED_INCIDENCE",
+  "disposition": "FORMED_BOUNDED_PROBLEM",
+  "external_return_required": true,
+  "problem_id": "a6a260792d87c0c98fe8d60fc4d3ba7a547bfcfd89c8353380eb0c9c5a023ccc",
+  "promotion_authority": false,
+  "residual_coordinates": [
+    "referenced_incidence_missing"
+  ],
+  "rivals": [
+    {
+      "rival_id": "r0",
+      "statement": "the missing referenced incidence is a consequential dependency"
+    },
+    {
+      "rival_id": "r1",
+      "statement": "the missing reference is non-consequential/stale context"
+    }
+  ],
+  "schema": "Venus.RecompiledProblemFormation.v0.1",
+  "source_stream_ids": [
+    "179cf2e7dc2d0f80e88ec165431051227b6763cb606b8617e2cb58707b8a36ab"
+  ]
+}
