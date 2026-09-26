@@ -56,6 +56,8 @@ dependency DAG / critical path / work-span
 
 The goal is repeated, causally interpretable improvement under an external correction/safety floor, not maximum autonomous activity.
 
+The developmental topology and recurrence live in the [semantic DAG](kernel/development/DEVELOPMENTAL_GATE_CHAIN.json). The [issue roadmap](docs/ISSUE_ROADMAP.md) and [active A–E subgraph](kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json) are projections of that source.
+
 ## Start here
 
 - [Current state](kernel/CURRENT_STATE.md)
