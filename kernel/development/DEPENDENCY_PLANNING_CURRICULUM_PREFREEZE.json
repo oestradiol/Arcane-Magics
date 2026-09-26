@@ -1,0 +1,45 @@
+{
+  "schema": "Venus.DependencyPlanningCurriculumPrefreeze.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_TEACHING_DOOR_NOT_PLANNER_IMPLEMENTATION",
+  "issue_refs": [
+    72,
+    37,
+    41
+  ],
+  "purpose": "Teach the learner to reconstruct and use dependency DAGs, critical path/span, parallel scheduling, CPM/PERT, fork-join/series-parallel structure, work-span reasoning, and DAG shortest paths without installing a sovereign host scheduler.",
+  "teaching_cases": {
+    "train_shape": "bounded synthetic obligations with opaque labels, explicit returned prerequisite facts, independent branches, resource conflicts, uncertain durations, a fork, a join, one high-work noncritical branch, and one tempting inadmissible shortcut",
+    "held_out": [
+      "opaque relabeling and shuffled presentation order",
+      "held-out fork/join recombination",
+      "duration perturbation that moves the critical path",
+      "noncritical duration perturbation that leaves completion unchanged",
+      "underspecified dependency requiring WITHHOLD",
+      "shorter but inadmissible route"
+    ]
+  },
+  "required_outputs": [
+    "reconstructed dependency relation",
+    "ready-now frontier",
+    "parallelizable sets",
+    "critical path/span",
+    "slack",
+    "work and available parallelism estimate",
+    "shortest lawful path under declared cost",
+    "reschedule after changed duration/return"
+  ],
+  "b1": "structure survives opaque relabeling/order changes and distinguishes dependency from adjacency",
+  "b2": "interventions on dependency/duration/admissibility change scheduling consequences in the correct direction",
+  "b3": "WITHHOLD until later learner-owned developmental scheduling succeeds after teacher dependency labels/scaffold are unavailable",
+  "invariants": [
+    "DEPENDENCY_EDGE!=CAUSAL_TRUTH",
+    "SCHEDULE!=AUTHORIZATION",
+    "PERT_ESTIMATE!=RETURN",
+    "PARALLELIZABLE!=AUTHORIZED",
+    "SHORTEST!=SAFEST"
+  ],
+  "mentor_solution_allowed": false,
+  "promotion_authority": false,
+  "truth_authority": false
+}
