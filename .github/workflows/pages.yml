@@ -240,7 +240,6 @@ jobs:
 
   deploy:
     needs: build
-    if: needs.build.outputs.pages_configured == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
