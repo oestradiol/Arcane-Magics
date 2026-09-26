@@ -12,7 +12,7 @@ from kernel.development.autonomous_learning import (
 
 ROOT = Path(__file__).resolve().parents[1]
 POLICY = ROOT / "kernel/development/AUTONOMOUS_RETURN_AUTHORITY.json"
-WORKFLOW = ROOT / ".github/workflows/venus-autonomous-worker.yml"
+WORKFLOW = ROOT / ".github/workflows/minerva-autonomous-worker.yml"
 
 
 class AutonomousReturnAuthorityTests(unittest.TestCase):
