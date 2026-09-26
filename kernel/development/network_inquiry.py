@@ -40,6 +40,19 @@ class NetworkQuery:
 
 
 @dataclass(frozen=True)
+class NetworkExecutionContext:
+    schema: str
+    context_id: str
+    query_id: str
+    source_locators: tuple[str, ...]
+    carrier_keys: tuple[str, ...]
+    role: str = "ADAPTER_ROUTING_CONTEXT_ONLY"
+    target_selection_authority: bool = False
+    truth_authority: bool = False
+    promotion_authority: bool = False
+
+
+@dataclass(frozen=True)
 class WebEncounter:
     source_id: str
     source_url: str
@@ -239,3 +252,35 @@ def form_followup_network_query(
         "truth_authority": False,
     }
     return NetworkQuery(query_id=digest(body), **body)
+
+
+def bind_network_execution_context(
+    *,
+    query: NetworkQuery,
+    carrier_keys: Iterable[tuple[str, int]],
+    repository_full_name: str,
+) -> NetworkExecutionContext:
+    """Bind nonsemantic adapter locators after problem/query formation.
+
+    Carrier location can route the external adapter but may not change the
+    learner's problem, query identity, truth status, or target-selection law.
+    """
+    repo = str(repository_full_name).strip()
+    keys = tuple(sorted((str(kind), int(number)) for kind, number in carrier_keys))
+    if not repo or not keys:
+        raise NetworkInquiryError("execution context requires repository and bound carrier")
+    locators = tuple(
+        f"https://github.com/{repo}/" + ("pull/" if kind == "PR" else "issues/") + str(number)
+        for kind, number in keys
+    )
+    body = {
+        "schema": "Venus.NetworkExecutionContext.v0.1",
+        "query_id": query.query_id,
+        "source_locators": locators,
+        "carrier_keys": tuple(f"{kind}:{number}" for kind, number in keys),
+        "role": "ADAPTER_ROUTING_CONTEXT_ONLY",
+        "target_selection_authority": False,
+        "truth_authority": False,
+        "promotion_authority": False,
+    }
+    return NetworkExecutionContext(context_id=digest(body), **body)
