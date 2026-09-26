@@ -1,10 +1,25 @@
 {
-  "authorship": "LEARNER_DERIVED_FROM_NETWORK_RECONSTRUCTION",
+  "carrier_binding_authority": false,
   "discriminator": "SELECT_CONSEQUENTIAL_DEVELOPMENTAL_LIMITATION",
-  "execution_owner": "EXTERNAL_ADAPTER",
+  "disposition": "FORMED_STANDING_DEVELOPMENTAL_PROBLEM",
+  "external_return_required": false,
   "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
   "promotion_authority": false,
-  "provenance_ids": [
+  "residual_coordinates": [
+    "standing_developmental_orientation_active"
+  ],
+  "rivals": [
+    {
+      "rival_id": "r0",
+      "statement": "one currently reachable developmental carrier contains a consequential limitation worth studying"
+    },
+    {
+      "rival_id": "r1",
+      "statement": "none of the currently reachable carriers clears the learner-side threshold for consequential development"
+    }
+  ],
+  "schema": "Venus.RecompiledProblemFormation.v0.3",
+  "source_stream_ids": [
     "000356b05fee2909372521ddb019bf29fb9ce2356f5d23f9c77cd0bf535bd65f",
     "0d2d05f1340268afe5782f20720b44d6254dd3b76c619bc90ee086e40da4e1de",
     "0ff1d13253aec671cf53beb4a18f857d4b15b7721f40ed9fafb4e1b7e12e35d7",
@@ -56,31 +71,6 @@
     "e407d4266da67704a738cd33e9028ed89f071f827f9141368d83a9de46fa335d",
     "e622b164b4e47043fb36ce875f51db78a51b92df43e2589b910d247d3a434ecf",
     "ec777bf76e1dc3c8dfcc7abfdc76ac55a3ad27de6c2d70e22d32924f146e8736",
-    "f579576f4d623b7c2e5d27a7c2ff2bd22cea63787e3c3e25d96c34b9870ceef1",
-    "selected-study:aff806fb07760d089d8f6657e8cf7f8afdc8427fe6fbd3c2205965c7756ab82c",
-    "network-memory:517800a5ea852734f21f19b15922562ddc6d78f425dd3be9f2e65390a8feb288",
-    "network-memory:5dc8b0a2aa7a3ccbc7d6cea25afc4076ca7e727209f1f0becbfc393512c96712"
-  ],
-  "query_id": "bb71632dea1c4e6961bc36ed1f5182d7d0356757b8e97cb287deb539ec3bfcb2",
-  "query_text": "development lateral reconstruction ablation actions adapters add admitted ahead",
-  "residual_coordinates": [
-    "standing_developmental_orientation_active"
-  ],
-  "schema": "Venus.NetworkQuery.v0.1",
-  "study_context_digest": "aff806fb07760d089d8f6657e8cf7f8afdc8427fe6fbd3c2205965c7756ab82c",
-  "study_terms": [
-    "development",
-    "lateral",
-    "reconstruction",
-    "and",
-    "internalize",
-    "epistemic",
-    "basis",
-    "expansion",
-    "across",
-    "independent",
-    "faces",
-    "noncollapse"
-  ],
-  "truth_authority": false
+    "f579576f4d623b7c2e5d27a7c2ff2bd22cea63787e3c3e25d96c34b9870ceef1"
+  ]
 }

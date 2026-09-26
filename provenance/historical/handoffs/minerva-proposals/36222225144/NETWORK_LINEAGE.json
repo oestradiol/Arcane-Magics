@@ -1,87 +1,98 @@
 {
   "encounters_remain_non_evaluative": true,
   "episode1_memory_ids": [
-    "1cb7dbd7473af3dcac5965d25884f8a9e42c88131ebd596b72c91929c33de185"
+    "517800a5ea852734f21f19b15922562ddc6d78f425dd3be9f2e65390a8feb288",
+    "5dc8b0a2aa7a3ccbc7d6cea25afc4076ca7e727209f1f0becbfc393512c96712"
   ],
   "episode1_reconstruction": {
     "changed_by_network_memory": true,
     "indexed_source_ids": [
-      "github-issue:oestradiol/Arcane-Magics#73"
+      "github-issue:kobayashi-cyder/FAP#165",
+      "github-issue:oestradiol/Arcane-Magics#169"
     ],
     "memory_object_ids": [
-      "1cb7dbd7473af3dcac5965d25884f8a9e42c88131ebd596b72c91929c33de185"
+      "517800a5ea852734f21f19b15922562ddc6d78f425dd3be9f2e65390a8feb288",
+      "5dc8b0a2aa7a3ccbc7d6cea25afc4076ca7e727209f1f0becbfc393512c96712"
     ],
     "next_query_terms": [
-      "actiongenerator",
-      "are",
-      "bidirectional",
-      "body",
-      "bounded",
-      "canonical",
-      "capacity",
-      "constraint",
-      "constraints",
-      "corrigiblecontinuation",
-      "crucial",
-      "defines"
+      "ablation",
+      "actions",
+      "adapters",
+      "add",
+      "admitted",
+      "ahead",
+      "already-existing",
+      "ancestry",
+      "answerable",
+      "api",
+      "attach",
+      "base"
     ],
     "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
     "promotion_authority": false,
-    "query_id": "268ba318ee12150da62631f2b6d48b408acd41219e2a20ab4926a6c9bf498ce2",
-    "reconstruction_id": "d5ade51f24eef4d25e8da187ebc94a6d9405605a522847a12407769a19381f65",
+    "query_id": "abb260676fbdabf1ab094e90f7a715ad4d57c8872c9364724e6fc177589f63cb",
+    "reconstruction_id": "079411a90a491ea1edd67f363ce0b8fd99b6de9456ae24310940bf2fd3ec761f",
     "schema": "Venus.NetworkReconstruction.v0.1"
   },
   "episode2_memory_ids": [
-    "bff9e9a2b16bc8dfdcd361ad4dd5c34194aac3a602428e365b98d0927605563b"
+    "70d4fabd0755b50aa016cfca588b49494db075e4b5d3fdd2444652f15ed06466",
+    "7be5c3dbb90f4e795afa78671d9a3cf48b0333672e0f206f33e6d2837b348475"
   ],
   "episode2_reconstruction": {
     "changed_by_network_memory": true,
     "indexed_source_ids": [
-      "github-issue:oestradiol/Arcane-Magics#73"
+      "github-issue:kobayashi-cyder/FAP#165",
+      "github-issue:oestradiol/Arcane-Magics#169"
     ],
     "memory_object_ids": [
-      "bff9e9a2b16bc8dfdcd361ad4dd5c34194aac3a602428e365b98d0927605563b"
+      "70d4fabd0755b50aa016cfca588b49494db075e4b5d3fdd2444652f15ed06466",
+      "7be5c3dbb90f4e795afa78671d9a3cf48b0333672e0f206f33e6d2837b348475"
     ],
     "next_query_terms": [
+      "across",
+      "already-existing",
+      "ancestry",
       "and",
-      "capacity",
-      "consequential",
-      "constraint",
-      "constraints",
-      "consumption",
-      "contract",
-      "corrigiblecontinuation",
-      "crucial",
-      "defines",
-      "developmental_reconstruction_contract_not_reward_function",
-      "engineering"
+      "answerable",
+      "api",
+      "attach",
+      "base",
+      "basis",
+      "behavior",
+      "branch",
+      "build"
     ],
     "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
     "promotion_authority": false,
-    "query_id": "0bfda1cff20ad34c715d16935f3d6a18b8920f93a164b305d53e42116bad785d",
-    "reconstruction_id": "f22fad1af8d28494ce3e37f069073bcddbce2aa9da361911a6a47cb81dac85ef",
+    "query_id": "bb71632dea1c4e6961bc36ed1f5182d7d0356757b8e97cb287deb539ec3bfcb2",
+    "reconstruction_id": "55b4cb86f33470b6a094ae2700794d7f5dcc1c7b029855ad7dcd623140a32994",
     "schema": "Venus.NetworkReconstruction.v0.1"
   },
   "episode_count": 2,
-  "external_center_ids": [],
+  "external_center_ids": [
+    "github-repo:kobayashi-cyder/FAP"
+  ],
   "global_subject_claim": false,
   "indexed_center_ids": [
+    "github-repo:kobayashi-cyder/FAP",
     "github-repo:oestradiol/Arcane-Magics"
   ],
   "indexed_source_ids": [
-    "github-issue:oestradiol/Arcane-Magics#73"
+    "github-issue:kobayashi-cyder/FAP#165",
+    "github-issue:oestradiol/Arcane-Magics#169"
   ],
-  "memory_checkpoint_sha256": "df44128e0c15fcb0d421cd21b57457d5af98a3e78769c202dd577f889b8cb40c",
-  "memory_record_count": 2,
+  "memory_checkpoint_sha256": "143be2958913eeee317d545b26c979b02822cdffdeafee2c4d453ae6651f60dc",
+  "memory_record_count": 4,
   "multiple_external_centers": false,
-  "multiple_indexed_centers": false,
+  "multiple_indexed_centers": true,
   "network_memory_is_world": false,
   "promotion_authority": false,
-  "query1_id": "268ba318ee12150da62631f2b6d48b408acd41219e2a20ab4926a6c9bf498ce2",
+  "query1_id": "abb260676fbdabf1ab094e90f7a715ad4d57c8872c9364724e6fc177589f63cb",
   "query2_changed_from_query1": true,
-  "query2_id": "0bfda1cff20ad34c715d16935f3d6a18b8920f93a164b305d53e42116bad785d",
+  "query2_id": "bb71632dea1c4e6961bc36ed1f5182d7d0356757b8e97cb287deb539ec3bfcb2",
   "query2_memory_provenance": [
-    "network-memory:1cb7dbd7473af3dcac5965d25884f8a9e42c88131ebd596b72c91929c33de185"
+    "network-memory:517800a5ea852734f21f19b15922562ddc6d78f425dd3be9f2e65390a8feb288",
+    "network-memory:5dc8b0a2aa7a3ccbc7d6cea25afc4076ca7e727209f1f0becbfc393512c96712"
   ],
   "schema": "Venus.NetworkMemoryLineage.v0.1",
   "truth_authority": false

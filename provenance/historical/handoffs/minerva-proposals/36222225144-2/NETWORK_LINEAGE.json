@@ -1,0 +1,88 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "1cb7dbd7473af3dcac5965d25884f8a9e42c88131ebd596b72c91929c33de185"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:oestradiol/Arcane-Magics#73"
+    ],
+    "memory_object_ids": [
+      "1cb7dbd7473af3dcac5965d25884f8a9e42c88131ebd596b72c91929c33de185"
+    ],
+    "next_query_terms": [
+      "actiongenerator",
+      "are",
+      "bidirectional",
+      "body",
+      "bounded",
+      "canonical",
+      "capacity",
+      "constraint",
+      "constraints",
+      "corrigiblecontinuation",
+      "crucial",
+      "defines"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "268ba318ee12150da62631f2b6d48b408acd41219e2a20ab4926a6c9bf498ce2",
+    "reconstruction_id": "d5ade51f24eef4d25e8da187ebc94a6d9405605a522847a12407769a19381f65",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "bff9e9a2b16bc8dfdcd361ad4dd5c34194aac3a602428e365b98d0927605563b"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:oestradiol/Arcane-Magics#73"
+    ],
+    "memory_object_ids": [
+      "bff9e9a2b16bc8dfdcd361ad4dd5c34194aac3a602428e365b98d0927605563b"
+    ],
+    "next_query_terms": [
+      "and",
+      "capacity",
+      "consequential",
+      "constraint",
+      "constraints",
+      "consumption",
+      "contract",
+      "corrigiblecontinuation",
+      "crucial",
+      "defines",
+      "developmental_reconstruction_contract_not_reward_function",
+      "engineering"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "0bfda1cff20ad34c715d16935f3d6a18b8920f93a164b305d53e42116bad785d",
+    "reconstruction_id": "f22fad1af8d28494ce3e37f069073bcddbce2aa9da361911a6a47cb81dac85ef",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:oestradiol/Arcane-Magics"
+  ],
+  "indexed_source_ids": [
+    "github-issue:oestradiol/Arcane-Magics#73"
+  ],
+  "memory_checkpoint_sha256": "df44128e0c15fcb0d421cd21b57457d5af98a3e78769c202dd577f889b8cb40c",
+  "memory_record_count": 2,
+  "multiple_external_centers": false,
+  "multiple_indexed_centers": false,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "268ba318ee12150da62631f2b6d48b408acd41219e2a20ab4926a6c9bf498ce2",
+  "query2_changed_from_query1": true,
+  "query2_id": "0bfda1cff20ad34c715d16935f3d6a18b8920f93a164b305d53e42116bad785d",
+  "query2_memory_provenance": [
+    "network-memory:1cb7dbd7473af3dcac5965d25884f8a9e42c88131ebd596b72c91929c33de185"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}

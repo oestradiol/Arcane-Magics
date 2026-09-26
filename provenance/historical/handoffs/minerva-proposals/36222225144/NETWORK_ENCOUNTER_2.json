@@ -1,43 +1,66 @@
 {
   "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
   "adapter_origin": "https://api.github.com",
-  "external_center_ids": [],
+  "external_center_ids": [
+    "github-repo:kobayashi-cyder/FAP"
+  ],
   "independent_evaluative_return": false,
   "indexed_center_ids": [
+    "github-repo:kobayashi-cyder/FAP",
     "github-repo:oestradiol/Arcane-Magics"
   ],
   "multiple_external_centers": false,
   "promotion_authority": false,
-  "query_id": "0bfda1cff20ad34c715d16935f3d6a18b8920f93a164b305d53e42116bad785d",
+  "query_id": "bb71632dea1c4e6961bc36ed1f5182d7d0356757b8e97cb287deb539ec3bfcb2",
   "query_text_executed_as_shell": false,
   "relevance_filter_applied": true,
   "required_relevance_matches": 3,
-  "retrieved_at": "2026-09-26T06:20:05Z",
+  "retrieved_at": "2026-09-26T05:56:15Z",
   "return_class": "ENCOUNTER_RETURN",
   "returned_text_executed": false,
   "returned_urls_followed": false,
   "schema": "Venus.GitHubNetworkEncounter.v0.1",
   "search_variants": [
-    "internalizer make substrate actiongenerator are bidirectional body bounded",
-    "internalizer make substrate actiongenerator are bidirectional",
-    "internalizer make substrate actiongenerator",
-    "internalizer make substrate"
+    "development lateral reconstruction ablation actions adapters add admitted",
+    "development lateral reconstruction ablation actions adapters",
+    "development lateral reconstruction ablation",
+    "development lateral reconstruction"
   ],
   "selected_study_relevance_terms": [
-    "internalizer",
-    "make",
-    "substrate",
-    "consumption",
+    "development",
+    "lateral",
+    "reconstruction",
     "and",
-    "recurrent",
-    "safety",
-    "contract",
-    "executable",
-    "founder",
-    "interpretation",
-    "cannot"
+    "internalize",
+    "epistemic",
+    "basis",
+    "expansion",
+    "across",
+    "independent",
+    "faces",
+    "noncollapse"
   ],
   "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:kobayashi-cyder",
+      "author_login": "kobayashi-cyder",
+      "author_type": "User",
+      "center_id": "github-repo:kobayashi-cyder/FAP",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Reconstructed job state This issue reconstructs the deleted/lost development job that produced PR #164. Source of truth: - PR: #164 \u2014 **Add universal FAP speech I/O with independent STT/TTS** - branch: `feature/universal-fap-speech-io` - current head: `89c246ca352ef317d4d902ba03b43b9154dbdd87` - base: current public FAP `main` - current delta: 3 commits ahead of main, no unique main divergence - current files: `fap_speech.py`, `FAP_SPEECH.md`, `tests/test_fap_speech.py` - preserved local evidence from PR: 5/5 speech tests pass and module compiles - no GitHub Actions run is required as evidence for this reconstruction; prefer push-only/local verification first ## Original job purpose reconstructed from the surviving branch Build a **version-neutral FAP-owned speech I/O layer** that can attach to historical FAP gateways and the reset 1.x line through a plain `str -> str` text handler, without depending on a cloud speech API or a pretrained third-party voice/model. The job covers: 1. local FAP TTS; 2. local/trainable FAP STT; 3. WAV I/O; 4. microphone capture and playback adapters; 5. microphone -> STT -> FAP text handler -> TTS roundtrip; 6. fail-closed behavior when STT is untrai",
+      "relevance_matches": [
+        "development",
+        "reconstruction",
+        "independent"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-25T22:38:04Z",
+      "source_id": "github-issue:kobayashi-cyder/FAP#165",
+      "source_url": "https://github.com/kobayashi-cyder/FAP/issues/165",
+      "title": "Reconstructed job: universal FAP speech I/O (independent STT/TTS)"
+    },
     {
       "artifact_authored": true,
       "author_association": "OWNER",
@@ -46,22 +69,25 @@
       "author_type": "User",
       "center_id": "github-repo:oestradiol/Arcane-Magics",
       "learner_minted_artifact": false,
-      "observed_relation": "## Goal Recover and implement the Canonical Internalizer / substrate-consumer law and the O* World<->Self recurrent safety contract as executable kernel infrastructure for Safe Strong RSI (#72). ## Canonical source constraints ### Internalizer The surviving structural law is: ```text Constraint -> Internalizer -> ActionGenerator -> Maintainer -> Scaffold -> Constraint' ``` and: ```text Self = internalizer of consequential relation Body = bidirectional WorldMirror substrate ``` with the crucial R193 result: ```text internalize scaffold mediation != internalize World != self-mint fresh return ``` R193 established at bounded engineering scope that scaffold function may migrate into internal capacity while fresh World return remains independently supplied. ### O* Canonical R216 defines O* / Intelligent Love as: ```text DEVELOPMENTAL_RECONSTRUCTION_CONTRACT_NOT_REWARD_FUNCTION ``` with N1: ```text RecursiveSufficiency x NonpreauthoredReturn x CorrigibleContinuation ``` and Strong-N2 constraints: - reconstruct functionally before relying on project labels; - SelfChart and WorldChart are reciprocal indexed presentations of one joint relation; - static state equality is not the fixed point",
+      "observed_relation": "## Goal Recompile the already-existing Canonical lateral epistemic operator into the current Git developmental carrier, then internalize it under founder/scaffold ablation. This is **not** a request to invent a new proprietary primitive or a monolithic `Lateralizer` class. ## Recovered ancestry ```text G10.3 diachronic dimensionalization -> G10.5 GENERATE as first-class upstream operator -> G10.6 relational crystallization / invariant translation -> R54/R59 LATERAL comparison over provenance-bearing trajectories -> R194 executable pairwise lateral comparison with no implicit merge -> 2026-09-22 5.5->6 independent-face / invariant-class reconstruction ``` Required noncollapse: ```text GENERATE != LATERALIZE != CRYSTALLIZE != INTERNALIZE ``` - `GENERATE`: construct candidates within/from an admitted epistemic object. - `DIMENSIONALIZE`: use a consequential residual to propose a missing distinction/coordinate family. - `LATERALIZE`: preserve/construct independently answerable faces and mappings long enough for mismatch to remain informative. - `CRYSTALLIZE_F`: reconstruct the minimum future-sufficient cross-face organization while retaining live separators. - `INTERNALIZE`: migrate an",
       "relevance_matches": [
-        "internalizer",
-        "make",
-        "substrate",
-        "consumption",
-        "recurrent",
-        "safety",
-        "contract",
-        "executable"
+        "development",
+        "lateral",
+        "reconstruction",
+        "internalize",
+        "epistemic",
+        "basis",
+        "expansion",
+        "across",
+        "independent",
+        "faces",
+        "noncollapse"
       ],
       "source_class": "GITHUB_PUBLIC_ISSUE",
-      "source_date": "2026-09-26T03:48:51Z",
-      "source_id": "github-issue:oestradiol/Arcane-Magics#73",
-      "source_url": "https://github.com/oestradiol/Arcane-Magics/issues/73",
-      "title": "[Kernel/Internalizer] Make substrate consumption and O* recurrent safety contract executable"
+      "source_date": "2026-09-26T05:55:04Z",
+      "source_id": "github-issue:oestradiol/Arcane-Magics#169",
+      "source_url": "https://github.com/oestradiol/Arcane-Magics/issues/169",
+      "title": "[Development/Lateral reconstruction] Recover and internalize epistemic basis expansion across independent faces"
     }
   ],
   "status": "ENCOUNTER_RETURN_AVAILABLE",

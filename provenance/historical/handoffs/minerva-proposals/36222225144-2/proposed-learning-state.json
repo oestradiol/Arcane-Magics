@@ -4,7 +4,7 @@
     "PR": 0
   },
   "kind_success": {
-    "ISSUE": 1,
+    "ISSUE": 2,
     "PR": 5
   },
   "merge_authority": false,
@@ -17,7 +17,7 @@
   },
   "method_success": {
     "COMPARATOR_AUDIT": 0,
-    "DEPENDENCY_TRACE": 6,
+    "DEPENDENCY_TRACE": 7,
     "DISCRIMINATOR_DESIGN": 0,
     "REPRODUCTION": 0,
     "RETURN_BOUNDARY_AUDIT": 0
@@ -40,7 +40,9 @@
     "return:934a5f40fad974679b8e3e3844a317091cfa8e834b4c65a3785b6b1540658359:method:0:DEPENDENCY_TRACE",
     "return:9994953fd0b32dbecef7cce4ebeaa68bd8a9ffe14c66bbf0fb10388669cf79ca:method:0:DEPENDENCY_TRACE",
     "return:9994953fd0b32dbecef7cce4ebeaa68bd8a9ffe14c66bbf0fb10388669cf79ca:work",
-    "return:a44091dbba6e54ebc12cf8fa8952604bd5e0070758a365084cb47a253b28ace0:method:0:COMPARATOR_AUDIT"
+    "return:a44091dbba6e54ebc12cf8fa8952604bd5e0070758a365084cb47a253b28ace0:method:0:COMPARATOR_AUDIT",
+    "return:d3dc2a574dfdc7dc1bb0b19a5e067563f751aed449d7e69d3052f523fd03df67:method:0:DEPENDENCY_TRACE",
+    "return:d3dc2a574dfdc7dc1bb0b19a5e067563f751aed449d7e69d3052f523fd03df67:work"
   ],
   "truth_authority": false
 }
