@@ -1,4 +1,4 @@
-.PHONY: test lint custody audit papers clean
+.PHONY: test lint custody audit papers console clean
 
 test:
 	python3 scripts/run_minerva_tests.py
@@ -14,6 +14,9 @@ audit: test lint custody
 	python3 scripts/audit_minerva_causal_distinctions.py
 	python3 scripts/audit_autonomy_safety_matrix.py
 	python3 scripts/audit_minerva_construct_dispositions.py
+
+console:
+	python3 -m apps.worldmirror_console.server
 
 papers:
 	TEXINPUTS=shared//: latexmk -pdf -interaction=nonstopmode -halt-on-error -cd monographs/04_MINERVA/main.tex
