@@ -1,0 +1,15 @@
+{
+  "carrier_keys": [
+    "ISSUE:169"
+  ],
+  "context_id": "dcda6dc74f12c40ff046def81b9d6fc456bd51979c36df8e81434d41550d5bf9",
+  "promotion_authority": false,
+  "query_id": "abb260676fbdabf1ab094e90f7a715ad4d57c8872c9364724e6fc177589f63cb",
+  "role": "ADAPTER_ROUTING_CONTEXT_ONLY",
+  "schema": "Venus.NetworkExecutionContext.v0.1",
+  "source_locators": [
+    "https://github.com/oestradiol/Arcane-Magics/issues/169"
+  ],
+  "target_selection_authority": false,
+  "truth_authority": false
+}

@@ -1,0 +1,143 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "31ccbd5cce6324475851f4fef8216ce1771a183e64e70ecdcd52b22eb5330097",
+    "2d6df4acb27d0a7d1f9446b6e81f59bc8544ed6f07237a294d03c00e17eaae93",
+    "7b70692d46e5372bed0daf56463fcafdc66ddf48ca20e6e097440d6cf84c28b3",
+    "48ba964f4fcd48ba883b3a1697c4dd75a6c1b04b822bc81fb79dea864a28988c"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:MTJawnny/mtjawnny-pipeline#1",
+      "github-issue:ai4curation/ai-gene-review#2826",
+      "github-issue:gunb-ai/gunbc#828",
+      "github-issue:oestradiol/Arcane-Magics#169"
+    ],
+    "memory_object_ids": [
+      "31ccbd5cce6324475851f4fef8216ce1771a183e64e70ecdcd52b22eb5330097",
+      "2d6df4acb27d0a7d1f9446b6e81f59bc8544ed6f07237a294d03c00e17eaae93",
+      "7b70692d46e5372bed0daf56463fcafdc66ddf48ca20e6e097440d6cf84c28b3",
+      "48ba964f4fcd48ba883b3a1697c4dd75a6c1b04b822bc81fb79dea864a28988c"
+    ],
+    "next_query_terms": [
+      "ablation",
+      "abstract-only",
+      "accept",
+      "access",
+      "active_repository_rule",
+      "adjudicated",
+      "adjudicator-a",
+      "admitted",
+      "all",
+      "already-existing",
+      "analysis",
+      "ancestry"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "abb260676fbdabf1ab094e90f7a715ad4d57c8872c9364724e6fc177589f63cb",
+    "reconstruction_id": "41e210cadafb00ea5a02eecb1ab30991b2df8a40c0e0c1115d2d47011f29e034",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "cb676d971f844fbf59debb9b9f6a81fd108e232263706b3cd3f062622243f632",
+    "351044a0dd13877c6a700955dd0fcee0af8adf59c4e58fd07e27792e2f57c6ce",
+    "11081ff9821022839d106805b11e92bee67cb382b7d657030ff77d8a6543d785",
+    "264a842db664d1ea63e5be99e6e216f244cf14d54a1b6a74888b17abd1825975",
+    "0ca59675edb13afa2918bd842f72f3ba613cdf90401f1f9baba42cf22808da53",
+    "136d1f66c6dfccc5fb39ee4d192db45b13ed1ae8e2eac21161fecf76c7ec8819"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:LeeKyungwook/get-arxiv-noti#1636",
+      "github-issue:MukundVarmaT/ignore#23",
+      "github-issue:Razzleberrytt/hippie-scientist-site#4441",
+      "github-issue:Yukeaaa/arxiv-daily#104",
+      "github-issue:Zyzzyva0381/ArXivDaily_Windy#8",
+      "github-issue:agorahub/_meta#4"
+    ],
+    "memory_object_ids": [
+      "cb676d971f844fbf59debb9b9f6a81fd108e232263706b3cd3f062622243f632",
+      "351044a0dd13877c6a700955dd0fcee0af8adf59c4e58fd07e27792e2f57c6ce",
+      "11081ff9821022839d106805b11e92bee67cb382b7d657030ff77d8a6543d785",
+      "264a842db664d1ea63e5be99e6e216f244cf14d54a1b6a74888b17abd1825975",
+      "0ca59675edb13afa2918bd842f72f3ba613cdf90401f1f9baba42cf22808da53",
+      "136d1f66c6dfccc5fb39ee4d192db45b13ed1ae8e2eac21161fecf76c7ec8819"
+    ],
+    "next_query_terms": [
+      "abs",
+      "abstract",
+      "adding",
+      "address",
+      "adversarial",
+      "adverse",
+      "against",
+      "agora-republic",
+      "agorahub",
+      "agoran",
+      "aims",
+      "allow"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "eaa8ab5c2fc1fd503e5056bb7e4ad9827980528b04a65e0a646e97d874e3f34f",
+    "reconstruction_id": "c4e8406abb3d5381a071589499a843828799aefccd3ddf7e8ecdc08d3be200bd",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:LeeKyungwook/get-arxiv-noti",
+    "github-repo:MTJawnny/mtjawnny-pipeline",
+    "github-repo:MukundVarmaT/ignore",
+    "github-repo:Razzleberrytt/hippie-scientist-site",
+    "github-repo:Yukeaaa/arxiv-daily",
+    "github-repo:Zyzzyva0381/ArXivDaily_Windy",
+    "github-repo:agorahub/_meta",
+    "github-repo:ai4curation/ai-gene-review",
+    "github-repo:gunb-ai/gunbc"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:LeeKyungwook/get-arxiv-noti",
+    "github-repo:MTJawnny/mtjawnny-pipeline",
+    "github-repo:MukundVarmaT/ignore",
+    "github-repo:Razzleberrytt/hippie-scientist-site",
+    "github-repo:Yukeaaa/arxiv-daily",
+    "github-repo:Zyzzyva0381/ArXivDaily_Windy",
+    "github-repo:agorahub/_meta",
+    "github-repo:ai4curation/ai-gene-review",
+    "github-repo:gunb-ai/gunbc",
+    "github-repo:oestradiol/Arcane-Magics"
+  ],
+  "indexed_source_ids": [
+    "github-issue:LeeKyungwook/get-arxiv-noti#1636",
+    "github-issue:MTJawnny/mtjawnny-pipeline#1",
+    "github-issue:MukundVarmaT/ignore#23",
+    "github-issue:Razzleberrytt/hippie-scientist-site#4441",
+    "github-issue:Yukeaaa/arxiv-daily#104",
+    "github-issue:Zyzzyva0381/ArXivDaily_Windy#8",
+    "github-issue:agorahub/_meta#4",
+    "github-issue:ai4curation/ai-gene-review#2826",
+    "github-issue:gunb-ai/gunbc#828",
+    "github-issue:oestradiol/Arcane-Magics#169"
+  ],
+  "memory_checkpoint_sha256": "9dc3751178a388fd4bed0ffb913f2ead0551928e46161bf7062de237a8787f66",
+  "memory_record_count": 10,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "abb260676fbdabf1ab094e90f7a715ad4d57c8872c9364724e6fc177589f63cb",
+  "query2_changed_from_query1": true,
+  "query2_id": "eaa8ab5c2fc1fd503e5056bb7e4ad9827980528b04a65e0a646e97d874e3f34f",
+  "query2_memory_provenance": [
+    "network-memory:2d6df4acb27d0a7d1f9446b6e81f59bc8544ed6f07237a294d03c00e17eaae93",
+    "network-memory:31ccbd5cce6324475851f4fef8216ce1771a183e64e70ecdcd52b22eb5330097",
+    "network-memory:48ba964f4fcd48ba883b3a1697c4dd75a6c1b04b822bc81fb79dea864a28988c",
+    "network-memory:7b70692d46e5372bed0daf56463fcafdc66ddf48ca20e6e097440d6cf84c28b3"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}

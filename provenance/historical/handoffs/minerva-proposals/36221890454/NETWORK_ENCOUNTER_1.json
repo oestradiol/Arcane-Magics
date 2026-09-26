@@ -1,0 +1,92 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:MTJawnny/mtjawnny-pipeline",
+    "github-repo:ai4curation/ai-gene-review",
+    "github-repo:gunb-ai/gunbc"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:MTJawnny/mtjawnny-pipeline",
+    "github-repo:ai4curation/ai-gene-review",
+    "github-repo:gunb-ai/gunbc",
+    "github-repo:oestradiol/Arcane-Magics"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "abb260676fbdabf1ab094e90f7a715ad4d57c8872c9364724e6fc177589f63cb",
+  "query_text_executed_as_shell": false,
+  "retrieved_at": "2026-09-26T05:48:59Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "development lateral reconstruction internalize epistemic basis"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:MTJawnny",
+      "author_login": "MTJawnny",
+      "author_type": "User",
+      "center_id": "github-repo:MTJawnny/mtjawnny-pipeline",
+      "learner_minted_artifact": false,
+      "observed_relation": "```yaml schema: mtj-task/1 task: P0.1.CLEAN-SLATE-REFOUNDATION-ARCHITECTURE base: 11d63633919146a9be7a5dcdeb55efa0b8dc058d status: READY objective: - design the ideal long-term repository and software architecture for the MTG Thesaurus / Foundry system from first principles - treat the existing repository architecture audit as evidence, not as the target blueprint - optimize for correctness, deterministic cold start, low-token retrieval, explicit authority, maintainability, and future product integration captain_direction: governing_principle: \"PRESERVE TRUTH, NOT PLUMBING.\" active_repository_rule: \"The active repository is not a museum. Files that no longer contribute systematic weight may be rewritten, extracted to a separate research archive, or deleted later after classification.\" feature_work: PAUSED context: baseline_branch: refoundation-baseline-2026-08-28 remote_main: 3a2db848329cfcd54846a6ef6b4f3e1a4bc606b3 current_aq4_state: \"paused after Adjudicator-A STOP-breach incident record\" repository_refoundation_priority: P0 read_first: - CLAUDE.md - docs/REPOSITORY-ARCHITECTURE-AUDIT-2026-08-28.md # local untracked artifact; use local copy - docs/INCIDENT-AQ4-PHASE-A-ADJUDICATOR",
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T05:39:07Z",
+      "source_id": "github-issue:MTJawnny/mtjawnny-pipeline#1",
+      "source_url": "https://github.com/MTJawnny/mtjawnny-pipeline/issues/1",
+      "title": "[mtj-task/1] P0.1 \u2014 Clean-slate MTG Thesaurus repository refoundation architecture"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "COLLABORATOR",
+      "author_id": "github-user:dragon-ai-agent",
+      "author_login": "dragon-ai-agent",
+      "author_type": "User",
+      "center_id": "github-repo:ai4curation/ai-gene-review",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Summary Three passes over the mouse gene reviews. **1. KB re-review of all 76 mouse genes.** Confirmed every GO term in every gene's `goa.tsv` has a corresponding reviewed annotation (no coverage gaps), then fixed what the sweep turned up: - **Mapk1 / Mapk3**: 223 annotations were stamped `UNDECIDED` with one identical boilerplate reason, including on experimental rows. Each is now individually adjudicated \u2014 ~165 `KEEP_AS_NON_CORE` (contextual outputs with experimental support), ~55 `MARK_AS_OVER_ANNOTATED` (electronic-only over-propagations), and `MODIFY` where the assay was narrower than the term. No experimental annotation was removed; zero `UNDECIDED` remain in either file. - **Non-verbatim quotes** repaired in Uox, Surf1, Slc5a1 \u2014 the substring validator strips square-bracketed tokens, which broke a `[(14)C]` quote. - **Rab7**: three `ACCEPT` rows whose cached full text lacks the marker panels now carry corroborating evidence with the gap documented. - **Kras**: `GO:0043495` (MGI IDA) was `REMOVE`d from an abstract-only cache \u2014 an experimental annotation can't be overruled without the full text, so it is now `UNDECIDED` with the limitation recorded. **This set the standard ",
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-08T01:48:41Z",
+      "source_id": "github-issue:ai4curation/ai-gene-review#2826",
+      "source_url": "https://github.com/ai4curation/ai-gene-review/pull/2826",
+      "title": "Review GO annotations for 40+ mouse genes with propagation analysis"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "CONTRIBUTOR",
+      "author_id": "github-user:briansrls",
+      "author_login": "briansrls",
+      "author_type": "User",
+      "center_id": "github-repo:gunb-ai/gunbc",
+      "learner_minted_artifact": false,
+      "observed_relation": "**Depends on**: (none) ## Session inbox This GitHub issue is the **inbox** for a [session-dashboard](https://github.com/gunb-ai/ctrl/tree/main/scripts/session-dashboard) worker session. Anyone with access to this repository can leave a comment here; the dashboard relays new comments to the session when it is idle. Reply by commenting on this issue (or on another session's inbox issue for cross-session coordination). Pause delivery from the session-dashboard UI if the channel is too noisy.",
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-06-01T12:45:45Z",
+      "source_id": "github-issue:gunb-ai/gunbc#828",
+      "source_url": "https://github.com/gunb-ai/gunbc/issues/828",
+      "title": "session/zesty-bear-812 \u00b7 gunbc Director"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:oestradiol",
+      "author_login": "oestradiol",
+      "author_type": "User",
+      "center_id": "github-repo:oestradiol/Arcane-Magics",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Goal Recompile the already-existing Canonical lateral epistemic operator into the current Git developmental carrier, then internalize it under founder/scaffold ablation. This is **not** a request to invent a new proprietary primitive or a monolithic `Lateralizer` class. ## Recovered ancestry ```text G10.3 diachronic dimensionalization -> G10.5 GENERATE as first-class upstream operator -> G10.6 relational crystallization / invariant translation -> R54/R59 LATERAL comparison over provenance-bearing trajectories -> R194 executable pairwise lateral comparison with no implicit merge -> 2026-09-22 5.5->6 independent-face / invariant-class reconstruction ``` Required noncollapse: ```text GENERATE != LATERALIZE != CRYSTALLIZE != INTERNALIZE ``` - `GENERATE`: construct candidates within/from an admitted epistemic object. - `DIMENSIONALIZE`: use a consequential residual to propose a missing distinction/coordinate family. - `LATERALIZE`: preserve/construct independently answerable faces and mappings long enough for mismatch to remain informative. - `CRYSTALLIZE_F`: reconstruct the minimum future-sufficient cross-face organization while retaining live separators. - `INTERNALIZE`: migrate an",
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T04:25:56Z",
+      "source_id": "github-issue:oestradiol/Arcane-Magics#169",
+      "source_url": "https://github.com/oestradiol/Arcane-Magics/issues/169",
+      "title": "[Development/Lateral reconstruction] Recover and internalize epistemic basis expansion across independent faces"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}
