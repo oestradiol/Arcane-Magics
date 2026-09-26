@@ -1,7 +1,7 @@
 {
   "schema": "Venus.CognitiveTheaterFactorModel.v0.1",
   "date": "2026-09-26",
-  "status": "PREFROZEN_COGNITIVE_DECOMPOSITION_NOT_CAPABILITY_RESULT",
+  "status": "PREFROZEN_FACTOR_MODEL_WITH_RETURNED_G0_G3_EVIDENCE",
   "issue_ref": 206,
   "thesis": "Cognitive-theater competence is decomposed so lexical grounding, symbolic transformation, temporal inhabitation, participant/KFS binding, and returned consequence cannot substitute for one another.",
   "factors": [
@@ -122,5 +122,26 @@
   ],
   "claim_fence": "This factorization is an experimental cognitive architecture, not evidence that languages or cultures determine cognition or that populations possess fixed cognitive traits.",
   "promotion_authority": false,
-  "truth_authority": false
+  "truth_authority": false,
+  "current_evidence": {
+    "G0_G1": {
+      "ref": "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_GROUNDED_CANDIDATE_RESULT.json",
+      "status": "PASS_BOUNDED_G0_GROUNDING_G1_TEMPLATE_RECONSTRUCTION",
+      "accuracy": 1
+    },
+    "G2_G3_initial": {
+      "ref": "kernel/development/COGNITIVE_THEATER_BINDING_ORDER_RESULT.json",
+      "status": "FAIL_BOUNDED_G2_G3_BINDING_ORDER_CANDIDATE",
+      "accuracy": 0.625
+    },
+    "G2_G3_fresh2": {
+      "ref": "kernel/development/COGNITIVE_THEATER_BINDING_ORDER_FRESH2_RESULT.json",
+      "ordered_accuracy": 0.8125,
+      "commutative_accuracy": 0,
+      "G2_indexed_kfs_accuracy": 0.625,
+      "G3_symbolic_order_accuracy": 1,
+      "disposition": "G3_PASS_BOUNDED__G2_FAIL_REVISE"
+    }
+  },
+  "next_residual": "PAIRWISE_RELATIONAL_THEATER_GRAPH_FOR_INDEXED_KFS"
 }
