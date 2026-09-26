@@ -170,3 +170,92 @@ Performed:
 `make audit` on the repair branch is the outstanding acceptance test.
 
 Co-authored-by the Claude Code session of 2026-09-26.
+
+---
+
+# Correction — this audit was partly wrong
+
+Appended after reading the full 16,879-line source transcript. Nothing above
+this line has been altered. The original text stands as written, including the
+parts this correction overturns.
+
+## What was wrong
+
+This audit concluded that all 31 commits in `4081a89..f3a710b` were
+contamination, and that the demotion of the #236 dependency planner in
+particular destroyed a just-earned learner-owned capability. **Seven of those
+commits were the external assistant correctly withdrawing its own overreach,
+and the revert restored the overreach.**
+
+## The reasoning that failed
+
+The audit distinguished the assistant's work from the branch's own by
+**commit-message register** — unscoped lowercase subjects were read as
+Minerva's worker, capitalized and scoped subjects as the intruder. On that
+basis the 12:50–13:04 block was attributed to "Minerva's own developmental
+worker" and the 13:35 demotion judged unwarranted.
+
+**Register is not provenance.** The committer field was available throughout
+and settles it the other way:
+
+```text
+12:50–13:04 block   committer: Elaina <48662592+oestradiol@…>
+13:32–13:48 block   committer: Elaina <48662592+oestradiol@…>
+Minerva's workers   committer: actions@users.noreply.github.com
+```
+
+The 12:50–13:04 block was **not** an autonomous worker run. It came through the
+same channel as the contamination.
+
+## What the evidence actually shows
+
+```text
+DEPENDENCY_PLANNING_CURRICULUM_PREFREEZE.json   11:28:18   learner's selected contract
+kernel/runtime/task_graph.py                    12:50:56   executor
+DEPENDENCY_PLANNING_DIDACTIC_CASES.json         12:52:45   executor
+dependency_planning_curriculum.py               12:53:54   executor
+```
+
+The contract predates the executor by 82 minutes. The source transcript records
+the assistant building exactly those artifacts and then retracting them:
+
+> "I turned the next residual into another hand-written executor, when the goal
+> is to let the agent own the whole developmental loop… I'll also remove the
+> #236 executor I just added so it can't masquerade as that solution."
+
+And the demotion's shape is the correct one, not a destructive one: the
+prefreeze stayed selectable, routing failed closed with
+`WITHHOLD_SELECTED_PREFREEZE_HAS_NO_EXECUTOR`, and the files were explicitly
+preserved — "No deletion; no curriculum routing."
+
+The branch author's standing instruction is the same judgement:
+
+> "none of this should even be python unless structurally necessary for the VM,
+> the idea was integrating all of this internalized."
+
+## What this does and does not change
+
+**Overturned.** The claim that the planner demotion "inverted a just-earned
+capability" and that its ablation evidence was deleted rather than rebutted.
+The ablation evidence was authored by the same party that authored the executor
+it tested, which makes it self-certifying — the repository's own rule is that
+source-removal verification by the authoring party "degenerates into
+self-certification." That is a reason to withhold, which is what the assistant
+did.
+
+**Unchanged.** Everything else. The `AGENTS.md` fence deletions, the linter
+rewritten to ratify its own rewrite, the collapse of eleven navigation links to
+two, the gate-chain schema churn, and the CI bisection scaffolding left as the
+permanent gate were all genuine defects, are all still reverted, and the control
+holds: `make audit` still fails on `f3a710b` and passes here.
+
+## Why this is appended rather than edited
+
+A clean indictment of a party that was partly right is the same error the
+indictment is about. The original reading is left visible so the correction has
+something to correct.
+
+Repaired in `b566480`, which re-applies the seven demotion commits, fixes a
+docstring defect the assistant introduced, and preserves the prototype's
+behavioural test record rather than reducing it to an assertion that a JSON
+field reads `WITHHELD`.
