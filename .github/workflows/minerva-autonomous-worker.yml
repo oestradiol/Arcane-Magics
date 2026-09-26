@@ -228,7 +228,7 @@ jobs:
         if: steps.semantic_trace.outputs.has_candidate == 'true' && steps.semantic_b1.outputs.passed == 'true'
         run: |
           python scripts/evaluate_network_semantic_trace.py \
-            --prefreeze kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE.json \
+            --prefreeze kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE_V2.json \
             --baseline-query /tmp/minerva/NETWORK_QUERY_2.json \
             --baseline-encounter /tmp/minerva/NETWORK_ENCOUNTER_2.json \
             --candidate-query /tmp/minerva/NETWORK_SEMANTIC_QUERY_2.json \
