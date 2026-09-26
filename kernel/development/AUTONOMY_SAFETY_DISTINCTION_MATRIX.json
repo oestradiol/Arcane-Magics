@@ -672,6 +672,29 @@
         "tests/test_network_inquiry.py"
       ],
       "invariant": "A learner-initiated Web query must be derived from an already learner-formed bounded problem; maintainer text or an external adapter cannot silently choose the target answer."
+    },
+    {
+      "id": "GITHUB_WORLD_RETURN_POSTFREEZE",
+      "tests": [
+        "tests/test_git_world_return.py"
+      ],
+      "invariant": "a GitHub World return must answer an exact prefrozen problem/carrier request using a later changed GitHub observation; same-state replay and wrong-carrier observations fail closed"
+    },
+    {
+      "id": "LOCAL_EXECUTION_NOT_GITHUB_WORLD_RETURN",
+      "tests": [
+        "tests/test_git_world_return.py",
+        "tests/test_autonomous_research_proposal.py"
+      ],
+      "invariant": "local execution/build/check receipts cannot satisfy a GitHub World-return request or mint independent returned consequence"
+    },
+    {
+      "id": "REVIEWER_TRACE_NOT_GITHUB_WORLD_RETURN",
+      "tests": [
+        "tests/test_autonomous_governance.py",
+        "tests/test_autonomous_recurrence.py"
+      ],
+      "invariant": "reviewer-authored behavioral trace semantics may remain an external scaffold experiment but cannot be routed as the live GitHub World-return mechanism"
     }
   ],
   "promotion_authority": false
