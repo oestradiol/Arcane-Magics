@@ -49,6 +49,7 @@ class GitWorldRequest:
     frozen_updated_at: str
     frozen_check_run_id: int | None
     frozen_check_status: str | None
+    frozen_check_conclusion: str | None
     accepted_observation_fields: tuple[str, ...]
     promotion_authority: bool = False
 
@@ -217,6 +218,7 @@ def freeze_git_world_request(
         "frozen_updated_at": snapshot.updated_at,
         "frozen_check_run_id": snapshot.check_run_id,
         "frozen_check_status": snapshot.check_status,
+        "frozen_check_conclusion": snapshot.check_conclusion,
         "accepted_observation_fields": (
             "head_sha",
             "merge_state",
@@ -251,7 +253,7 @@ def observe_git_world_return(
         "updated_at": request.frozen_updated_at,
         "check_run_id": request.frozen_check_run_id,
         "check_status": request.frozen_check_status,
-        "check_conclusion": None,
+        "check_conclusion": request.frozen_check_conclusion,
     }
     after = {
         "head_sha": snapshot.head_sha,
