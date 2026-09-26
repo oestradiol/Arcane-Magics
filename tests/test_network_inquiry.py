@@ -9,6 +9,7 @@ from kernel.development.network_inquiry import (
     WebEncounter,
     bind_web_encounters,
     form_network_query,
+    form_followup_network_query,
     reconstruct_from_network,
 )
 from kernel.runtime.memory import VenusMemory
@@ -120,6 +121,43 @@ class NetworkInquiryTests(unittest.TestCase):
                     query=q,
                     memory_object_ids=(oid,),
                 )
+
+    def test_retained_memory_changes_successor_query(self):
+        q = form_network_query(PROBLEM)
+        with tempfile.TemporaryDirectory() as td, VenusMemory(Path(td)) as mem:
+            ids = bind_web_encounters(
+                mem,
+                query=q,
+                encounters=(
+                    WebEncounter(
+                        source_id="source-a",
+                        source_url="https://example.test/a",
+                        source_date="2026-09-25",
+                        retrieved_at="2026-09-25T00:00:00Z",
+                        title="Orthogonal provenance topology",
+                        summary="Noncommuting projection exposes a lateral separator.",
+                        adapter_id="external-web-adapter",
+                    ),
+                ),
+            )
+            r = reconstruct_from_network(
+                mem,
+                problem=PROBLEM,
+                query=q,
+                memory_object_ids=ids,
+            )
+            q2 = form_followup_network_query(prior_query=q, reconstruction=r)
+            self.assertNotEqual(q2.query_id, q.query_id)
+            self.assertNotEqual(q2.query_text, q.query_text)
+            self.assertEqual(
+                q2.authorship,
+                "LEARNER_DERIVED_FROM_NETWORK_RECONSTRUCTION",
+            )
+            self.assertTrue(
+                any(x.startswith("network-memory:") for x in q2.provenance_ids)
+            )
+            self.assertFalse(q2.truth_authority)
+            self.assertFalse(q2.promotion_authority)
 
 
 if __name__ == "__main__":
