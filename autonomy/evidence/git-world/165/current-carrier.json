@@ -1,0 +1,9 @@
+{
+  "schema": "Venus.GitWorldCarrier.v0.1",
+  "issue": 165,
+  "role": "NONSEMANTIC_CURRENT_WORLD_RETURN_CARRIER",
+  "purpose": "Provide one fresh GitHub PR/check continuation state for a prefrozen #165 request.",
+  "future_check_conclusion_included": false,
+  "semantic_repair_included": false,
+  "promotion_authority": false
+}
