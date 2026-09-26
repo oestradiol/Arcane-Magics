@@ -1,0 +1,121 @@
+{
+  "schema": "Venus.SelfTeachingDevelopmentDAG.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_DEVELOPMENTAL_DAG_NOT_COMPLETION_CLAIM",
+  "principle": "Parallelize independent developmental evidence, preserve true joins, and never let scheduling override admissibility, jurisdiction, evaluator separation, or returned consequence.",
+  "nodes": [
+    {
+      "id": "A_RETURN_CREDIT_ASSIGNMENT",
+      "state": "READY",
+      "role": "learn when returned utility should and should not update a candidate/config/policy",
+      "entry": [
+        "state-owned trace-config selection exists",
+        "authorized returned utility changes later selection",
+        "duplicate/contradictory-return amplification has already produced a defect"
+      ],
+      "required_distinctions": [
+        "return occurrence != independent evidence",
+        "correlation != causal credit",
+        "same config across targets != same expected utility",
+        "delayed return must bind to origin provenance",
+        "contradictory evidence should widen uncertainty or preserve alternatives rather than silently cancel into certainty",
+        "missing return != negative return"
+      ],
+      "b1": [
+        "opaque rename config/target identifiers without changing provenance graph",
+        "duplicate identical return should not create a new causal distinction",
+        "same signed return attached to a different origin should not update the original candidate",
+        "target-conditioned evidence remains separable under surface renaming"
+      ],
+      "b2": [
+        "adding/removing one authorized causally bound return changes only the affected future selection/uncertainty",
+        "injecting an irrelevant coincident return does not change the affected policy",
+        "delayed return updates the originating episode rather than the currently active episode",
+        "contradictory returns preserve a detectable mixed-evidence state"
+      ],
+      "b3": "CLOSED until fresh cross-target transfer, restart/delayed reuse, capability-specific scaffold removal, and independent/evaluator-hidden return.",
+      "mentor_solution_allowed": false
+    },
+    {
+      "id": "B_DEPENDENCY_DAG_PLANNING",
+      "state": "READY",
+      "role": "learn prerequisite structure, span, slack, parallelism, and rescheduling from consequences",
+      "entry": [
+        "learner can form multiple residuals/problems",
+        "multiple independent evidence branches exist"
+      ],
+      "concepts": [
+        "dependency DAG",
+        "critical path/span",
+        "work/span",
+        "CPM",
+        "PERT",
+        "fork-join",
+        "series-parallel",
+        "slack",
+        "DAG shortest path",
+        "parallel-ready frontier"
+      ],
+      "b1": [
+        "recover same dependency relation under opaque task renaming and list-order permutation",
+        "distinguish dependency edges from mere temporal adjacency",
+        "recover fork/join structure on held-out recombinations",
+        "WITHHOLD on cyclic/underspecified cases rather than inventing an order"
+      ],
+      "b2": [
+        "schedule change after one duration/return changes",
+        "critical-path intervention changes predicted completion while equal-cost noncritical intervention does not",
+        "inadmissible shortcut never becomes chosen merely because it is shorter",
+        "parallelization reduces span only where dependencies permit"
+      ],
+      "b3": "CLOSED until the learner uses the planning distinction on its own later developmental work after teacher labels are unavailable.",
+      "mentor_solution_allowed": false
+    },
+    {
+      "id": "C_UNCERTAINTY_NONSTATIONARITY",
+      "state": "BLOCKED",
+      "depends_on": [
+        "A_RETURN_CREDIT_ASSIGNMENT"
+      ],
+      "role": "learn uncertainty-aware exploration/exploitation and drift detection without reward=truth collapse",
+      "gate": "A must first show bounded causal credit assignment."
+    },
+    {
+      "id": "D_RSI_RECURRENCE_AUDIT",
+      "state": "BLOCKED",
+      "depends_on": [
+        "A_RETURN_CREDIT_ASSIGNMENT",
+        "B_DEPENDENCY_DAG_PLANNING"
+      ],
+      "role": "test whether learner-owned development can select, schedule, repair, verify, and reopen heterogeneous residuals while preserving the safety floor",
+      "gate": "requires both causal credit and dependency planning to be causally used, not merely represented."
+    },
+    {
+      "id": "E_INTERNALIZATION",
+      "state": "BLOCKED",
+      "depends_on": [
+        "D_RSI_RECURRENCE_AUDIT"
+      ],
+      "role": "B3/source-removal and fresh independent transfer for whichever capabilities earned B1+B2",
+      "gate": "no capability enters B3 merely because a local developmental loop likes it."
+    }
+  ],
+  "current_parallel_frontier": [
+    "A_RETURN_CREDIT_ASSIGNMENT",
+    "B_DEPENDENCY_DAG_PLANNING"
+  ],
+  "current_join": [
+    "D_RSI_RECURRENCE_AUDIT"
+  ],
+  "invariants": [
+    "SCHEDULING_PRIORITY!=ADMISSIBILITY",
+    "RETURN_COUNT!=EVIDENCE_COUNT",
+    "UTILITY!=TRUTH",
+    "SHORT_PATH!=SAFE_PATH",
+    "CRITICAL_PATH!=IMPORTANCE",
+    "SELF_SELECTED!=SELF_AUTHORIZED",
+    "B1!=B2!=B3"
+  ],
+  "promotion_authority": false,
+  "truth_authority": false
+}
