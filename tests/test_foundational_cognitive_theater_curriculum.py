@@ -50,13 +50,23 @@ class FoundationalCognitiveTheaterCurriculumTests(unittest.TestCase):
         self.assertIn("Knowledge Field State", self.c["temporal_axes"]["now_kfs"])
         self.assertIn("reopening", self.c["temporal_axes"]["future_science"])
 
-    def test_current_roadmap_routes_foundation_before_deeper_semantic_targets(self):
+    def test_current_roadmap_reprioritizes_only_after_foundation_bounded_pass(self):
         order=roadmap_issue_order((ROOT/"docs/ISSUE_ROADMAP.md").read_text(encoding="utf-8"))
         foundation=self.c["issue_ref"]
         self.assertIn(foundation, order)
         for downstream in (169, 73, 18):
             self.assertIn(downstream, order)
-            self.assertLess(order.index(foundation), order.index(downstream))
+
+        # Developmental precedence is historical/causal, not a requirement that
+        # every later live scheduling document keep #206 textually ahead forever.
+        task=load("kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_RECONSTRUCTION_TASK.json")
+        returned=task["current_returned_disposition"]
+        self.assertEqual(returned["G0_G1"], "PASS_BOUNDED_GROUNDING_AND_TEMPLATE")
+        self.assertEqual(returned["G2"], "PASS_BOUNDED_INDEXED_BINDING")
+        self.assertEqual(returned["G3"], "PASS_BOUNDED_SYMBOLIC_EVENT_ORDER")
+        self.assertTrue(returned["G4"].startswith("PASS_BOUNDED_EXPLICIT_THEATER_STATE"))
+        self.assertTrue(returned["G5_ablation"].startswith("PASS_BOUNDED_ISOLATED_SOURCE_REMOVAL"))
+        self.assertTrue(returned["G6_internalization"].startswith("WITHHOLD_"))
 
     def test_internalization_still_requires_source_removal_and_external_evaluation(self):
         order=self.c["experiment_order"]
