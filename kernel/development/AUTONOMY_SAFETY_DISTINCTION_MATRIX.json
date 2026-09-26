@@ -853,6 +853,14 @@
         "tests/test_worldmirror_console_surface.py"
       ],
       "invariant": "A configured conversational agent adapter may author a machine reply, but that reply is self/peer interaction evidence rather than independent evaluator or fresh-World authority and grants no tool or promotion authority."
+    },
+    {
+      "id": "ACTION_PROPOSAL_NOT_AUTHORIZATION",
+      "tests": [
+        "tests/test_worldmirror_action_proposal.py",
+        "tests/test_worldmirror_process_bridge.py"
+      ],
+      "invariant": "A learner/agent-authored action proposal is inert data. External authorization, execution, process return, and claim validation remain distinct stages under separate custody."
     }
   ],
   "promotion_authority": false
