@@ -144,15 +144,17 @@ jobs:
           git commit -m "handoff(minerva->venus): crystallize engineering candidate ${GITHUB_RUN_ID}"
           git push origin "$branch"
 
+          pr_body="$(cat <<'EOF'
+This is a target-based crystallization handoff.
+
+The merge commit preserves Minerva as a second parent while retaining the Venus tree. Only explicit proposal receipts are admitted.
+
+Venus must integrate the candidate into the Self/World model. Scientific future discrimination belongs to the subsequent Venus → OFE handoff; Root integration comes only after OFE.
+EOF
+)"
           if ! gh pr create --draft --base split/venus --head "$branch" \
             --title "handoff: Minerva → Venus engineering candidate ${GITHUB_RUN_ID}" \
-            --body 
-            echo "PR creation is unavailable; preserve handoff as an issue carrier"
-            gh issue create \
-              --title "handoff carrier: Minerva → Venus engineering candidate ${GITHUB_RUN_ID}" \
-              --body "Frozen handoff branch: \`$branch\`. GitHub Actions could not create the draft PR. This issue is a non-authoritative external-review carrier only; it grants no merge, promotion, truth, or Venus-admission authority."
-          fi
-This is a target-based crystallization handoff.\n\nThe merge commit preserves Minerva as a second parent while retaining the Venus tree. Only explicit proposal receipts are admitted.\n\nVenus must integrate the candidate into the Self/World model. Scientific future discrimination belongs to the subsequent Venus → OFE handoff; Root integration comes only after OFE.'; then
+            --body "$pr_body"; then
             echo "PR creation is unavailable; preserve handoff as an issue carrier"
             gh issue create \
               --title "handoff carrier: Minerva → Venus engineering candidate ${GITHUB_RUN_ID}" \
