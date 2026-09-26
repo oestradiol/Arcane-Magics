@@ -213,6 +213,14 @@ def evaluate(
             and _withhold_status(candidate, missing_duration) == "WITHHOLD_MISSING_DURATION",
     }
 
+    candidate_ablation = deepcopy(dict(candidate))
+    candidate_ablation["program"] = dict(candidate_ablation["program"])
+    candidate_ablation["program"].pop("relation_classifier", None)
+    candidate_ablation_status = _withhold_status(candidate_ablation, base)
+    b2_checks["candidate_state_ablation_withholds"] = (
+        candidate_ablation_status == "WITHHOLD_MISSING_RELATION_CLASSIFIER"
+    )
+
     b1_pass = all(b1_checks.values())
     b2_pass = b1_pass and all(b2_checks.values())
     return {
@@ -231,6 +239,7 @@ def evaluate(
             "cycle": _withhold_status(candidate, cycle),
             "underspecified": _withhold_status(candidate, underspecified),
             "missing_duration": _withhold_status(candidate, missing_duration),
+            "candidate_state_ablation": candidate_ablation_status,
         },
         "independent_evaluation": False,
         "internalization_claim": False,
