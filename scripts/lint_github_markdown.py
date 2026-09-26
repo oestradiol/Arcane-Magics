@@ -52,6 +52,15 @@ def is_public_surface(path: Path) -> bool:
         return True
     if r.as_posix() in {
         "kernel/README.md",
+        "kernel/runtime/README.md",
+        "kernel/development/README.md",
+        "kernel/state/README.md",
+        "kernel/state/cold/README.md",
+        "autonomy/README.md",
+        "autonomy/evidence/README.md",
+        "autonomy/evidence/network/README.md",
+        "autonomy/evidence/lateral/README.md",
+        "autonomy/evidence/git-world/README.md",
         "kernel/CURRENT_STATE.md",
         "kernel/WORLDMIND.md",
         "provenance/DEVELOPMENTAL_LINEAGE.md",
@@ -232,6 +241,11 @@ def inspect_navigation_contract() -> list[str]:
     required_start_links = (
         "../kernel/CURRENT_STATE.md",
         "../kernel/README.md",
+        "WORLDMIRROR_VM.md",
+        "../kernel/runtime/README.md",
+        "../kernel/development/README.md",
+        "../kernel/state/README.md",
+        "../autonomy/evidence/README.md",
         "EARNED_MILESTONES.md",
         "TEST_COVERAGE_MATRIX.md",
         "../provenance/CANONICAL_RETIREMENT_LEDGER.md",
@@ -250,6 +264,43 @@ def inspect_navigation_contract() -> list[str]:
         text = readme.read_text(encoding="utf-8", errors="replace")
         if "docs/START_HERE.md" not in text:
             errors.append("README.md: does not route through docs/START_HERE.md")
+
+
+    subsystem_routes = {
+        "README.md": (
+            "docs/WORLDMIRROR_VM.md",
+            "kernel/runtime/README.md",
+            "kernel/development/README.md",
+            "kernel/state/README.md",
+            "autonomy/evidence/README.md",
+        ),
+        "kernel/README.md": (
+            "../docs/WORLDMIRROR_VM.md",
+            "runtime/README.md",
+            "development/README.md",
+            "state/README.md",
+        ),
+        "docs/WORLDMIRROR_VM.md": (
+            "../kernel/runtime/README.md",
+            "../kernel/development/README.md",
+            "../kernel/state/README.md",
+            "../autonomy/evidence/README.md",
+        ),
+        "autonomy/evidence/README.md": (
+            "git-world/README.md",
+            "lateral/README.md",
+            "network/README.md",
+        ),
+    }
+    for surface, required in subsystem_routes.items():
+        p = ROOT / surface
+        if not p.exists():
+            errors.append(f"missing navigation surface {surface}")
+            continue
+        text = p.read_text(encoding="utf-8", errors="replace")
+        for link in required:
+            if f"]({link})" not in text:
+                errors.append(f"{surface}: missing subsystem route {link}")
 
     coverage = ROOT / "docs/TEST_COVERAGE_MATRIX.md"
     if coverage.exists():
