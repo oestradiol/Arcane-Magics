@@ -1,0 +1,134 @@
+{
+  "anchor_terms": [
+    "development",
+    "lateral",
+    "reconstruction",
+    "and",
+    "internalize",
+    "epistemic",
+    "basis",
+    "expansion",
+    "across",
+    "independent",
+    "faces",
+    "noncollapse"
+  ],
+  "config_attempts": 1,
+  "config_id": "CROSS_SOURCE_MULTI_ANCHOR",
+  "config_utility": -1.0,
+  "future_return_input": false,
+  "hidden_evaluation_input": false,
+  "program_digest": "dd53886610c75b836ba0c0033aeacd5cb3287cccd22046f3d7a4bfb700f34f38",
+  "promotion_authority": false,
+  "relations": [
+    {
+      "anchor_degree": 4,
+      "anchor_terms": [
+        "across",
+        "development",
+        "expansion",
+        "independent"
+      ],
+      "source_ids": [
+        "github-issue:jonathanbeaulne123-blip/dual-ai-budget-app#551",
+        "github-issue:phcaradanai/the-fisher#3"
+      ],
+      "source_support": 2,
+      "term": "pass",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 4,
+      "anchor_terms": [
+        "across",
+        "development",
+        "expansion",
+        "independent"
+      ],
+      "source_ids": [
+        "github-issue:jonathanbeaulne123-blip/dual-ai-budget-app#551",
+        "github-issue:phcaradanai/the-fisher#3"
+      ],
+      "source_support": 2,
+      "term": "base",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 4,
+      "anchor_terms": [
+        "across",
+        "development",
+        "expansion",
+        "independent"
+      ],
+      "source_ids": [
+        "github-issue:jonathanbeaulne123-blip/dual-ai-budget-app#551",
+        "github-issue:phcaradanai/the-fisher#3"
+      ],
+      "source_support": 2,
+      "term": "changed",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 4,
+      "anchor_terms": [
+        "across",
+        "development",
+        "expansion",
+        "independent"
+      ],
+      "source_ids": [
+        "github-issue:jonathanbeaulne123-blip/dual-ai-budget-app#551",
+        "github-issue:phcaradanai/the-fisher#3"
+      ],
+      "source_support": 2,
+      "term": "high",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 4,
+      "anchor_terms": [
+        "across",
+        "development",
+        "expansion",
+        "independent"
+      ],
+      "source_ids": [
+        "github-issue:jonathanbeaulne123-blip/dual-ai-budget-app#551",
+        "github-issue:phcaradanai/the-fisher#3"
+      ],
+      "source_support": 2,
+      "term": "hosted",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 4,
+      "anchor_terms": [
+        "across",
+        "development",
+        "expansion",
+        "independent"
+      ],
+      "source_ids": [
+        "github-issue:jonathanbeaulne123-blip/dual-ai-budget-app#551",
+        "github-issue:phcaradanai/the-fisher#3"
+      ],
+      "source_support": 2,
+      "term": "impact",
+      "title_support": 0
+    }
+  ],
+  "schema": "Venus.StateOwnedRelationTrace.v0.1",
+  "selection_basis": "RETURNED_UTILITY_EXPLORATION_THEN_STRUCTURAL",
+  "status": "RELATION_TRACE_CANDIDATE_FROZEN",
+  "terms": [
+    "pass",
+    "base",
+    "changed",
+    "high",
+    "hosted",
+    "impact"
+  ],
+  "trace_id": "692c72b50f8ffea2b286cf5adfe6b355b993006e3861e65dd93e254cf2be57e7",
+  "truth_authority": false
+}

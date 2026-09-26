@@ -1,0 +1,60 @@
+{
+  "baseline_metrics": {
+    "anchor_coverage_count": 5,
+    "anchor_total": 12,
+    "covered_anchors": [
+      "across",
+      "development",
+      "expansion",
+      "independent",
+      "lateral"
+    ],
+    "external_center_count": 6,
+    "mean_relevance_matches": 2.1666666666666665,
+    "query_token_count": 9,
+    "source_count": 6
+  },
+  "baseline_query_id": "43e1b463d8c4a0debbbbc015d5e323c46a445f30f20586bc11e8b739d693215e",
+  "baseline_score": [
+    5,
+    2.1666666666666665,
+    6,
+    -9
+  ],
+  "candidate_external_center_floor_met": true,
+  "candidate_metrics": {
+    "anchor_coverage_count": 6,
+    "anchor_total": 12,
+    "covered_anchors": [
+      "across",
+      "development",
+      "expansion",
+      "independent",
+      "lateral",
+      "reconstruction"
+    ],
+    "external_center_count": 6,
+    "mean_relevance_matches": 2.3333333333333335,
+    "query_token_count": 9,
+    "source_count": 6
+  },
+  "candidate_query_id": "0c225e36f0ffba0fb054edb6261976ae4ff1bfe162294a2eb7bc03f132fc5730",
+  "candidate_score": [
+    6,
+    2.3333333333333335,
+    6,
+    -9
+  ],
+  "claim_fence": "A pass shows only bounded returned query-relevance improvement over the frozen lexical reconstruction. It does not establish general semantics, general memory learning, WWW truth, AGI, consciousness, or promotion.",
+  "general_semantics_claim": false,
+  "independent_evaluation": false,
+  "internalization_claim": false,
+  "prefreeze_schema": "Venus.NetworkSemanticTraceProspectiveComparator.v0.1",
+  "promotion_authority": false,
+  "schema": "Venus.NetworkSemanticTraceComparatorResult.v0.1",
+  "status": "PASS_BOUNDED_RELATION_TRACE_QUERY",
+  "strict_returned_gain": true,
+  "trace_config_id": "CROSS_SOURCE_MULTI_ANCHOR",
+  "trace_id": "692c72b50f8ffea2b286cf5adfe6b355b993006e3861e65dd93e254cf2be57e7",
+  "truth_authority": false
+}
