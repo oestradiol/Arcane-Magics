@@ -19,13 +19,6 @@ Do not use old shared Venus-Minerva roadmaps to infer current state.
 11. [Test coverage matrix](TEST_COVERAGE_MATRIX.md)
 12. [Canonical retirement ledger](../provenance/CANONICAL_RETIREMENT_LEDGER.md)
 13. [Repository authority boundary](../REPOSITORY_AUTHORITY_BOUNDARY.md)
-7. [Kernel index](../kernel/README.md)
-8. [Runtime index](../kernel/runtime/README.md)
-9. [Development index](../kernel/development/README.md)
-10. [State index](../kernel/state/README.md)
-11. [Evidence index](../autonomy/evidence/README.md)
-12. [Test coverage matrix](TEST_COVERAGE_MATRIX.md)
-13. [Canonical retirement ledger](../provenance/CANONICAL_RETIREMENT_LEDGER.md)
 
 ## Current one-paragraph state
 
