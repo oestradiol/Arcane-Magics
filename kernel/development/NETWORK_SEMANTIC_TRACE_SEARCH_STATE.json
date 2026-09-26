@@ -1,6 +1,6 @@
 {
-  "schema": "Venus.StateOwnedRelationTraceSearch.v0.1",
-  "status": "PREFROZEN_PUBLIC_DEV_SEARCH_FAMILY",
+  "schema": "Venus.StateOwnedRelationTraceSearch.v0.2",
+  "status": "PREFROZEN_PUBLIC_DEV_SEARCH_FAMILY_WITH_RETURNED_CONFIG_LEARNING",
   "tokenization": {
     "min_length": 3,
     "stop_terms": [
@@ -93,10 +93,9 @@
     }
   ],
   "selection_rule": [
-    "maximize total retained anchor-degree",
-    "then maximize total cross-source support",
-    "then maximize title support",
-    "then prefer fewer retained terms",
+    "among expressible configs prefer the fewest prior authorized returned trials",
+    "then maximize signed authorized returned utility",
+    "then apply the structural tiebreak",
     "then lexicographically smallest config id"
   ],
   "semantics_owner": "LEARNER_STATE",
@@ -104,5 +103,21 @@
   "hidden_evaluation_input": false,
   "promotion_authority": false,
   "truth_authority": false,
-  "claim_fence": "This state defines only a generic relation-trace candidate family over already returned encounter text. It supplies no domain answer, truth label, hidden evaluation, or semantic-success claim."
+  "claim_fence": "This state defines only a generic relation-trace candidate family over already returned encounter text. It supplies no domain answer, truth label, hidden evaluation, or semantic-success claim.",
+  "returned_selection": {
+    "enabled": true,
+    "success_state_key": "trace_config_success",
+    "failure_state_key": "trace_config_failure",
+    "exploration_rule": "LEAST_TRIED_EXPRESSIBLE_CONFIG_FIRST",
+    "exploitation_rule": "MAX_SIGNED_RETURN_UTILITY",
+    "structural_tiebreak": [
+      "maximize total retained anchor-degree",
+      "then maximize total cross-source support",
+      "then maximize title support",
+      "then prefer fewer retained terms",
+      "then lexicographically smallest config id"
+    ],
+    "future_return_input": false,
+    "promotion_authority": false
+  }
 }
