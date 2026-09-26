@@ -1,6 +1,6 @@
 # ◈ MINERVA ◈
 
-### Engineering / body · WorldMirror developmental machine
+### engineering · body · WorldMirror developmental machine
 
 Minerva is the executable developmental body of the Arcane Magics repository.
 
