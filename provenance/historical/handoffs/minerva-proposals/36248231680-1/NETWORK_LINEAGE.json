@@ -1,0 +1,140 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "3437ba2efa43a3126cef0c6a9cb161f85b758e8d633ae55707eda3c597a750fb",
+    "c929b2e856f5fecaf7cd0cb95d5fe5701af5fc968da58a9177ce179c5a4f813d",
+    "0796d326ba4b7253a71fbc308487737bbccab1dcc8cee49636bd9135ecb6c4f7",
+    "e842f0411a711ec877608f8a184f60b15c1ebcf8f9937de4e81f0809388e9c2f",
+    "78a8e058c17599a670eee45872f20beafb61722f0f23be066b61feeae4135608",
+    "5c996218c90e40bcd556ca37cdba1b209510a8ec1356ec607f7c35cc9e8bdfa7"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:jonathanbeaulne123-blip/dual-ai-budget-app#551",
+      "github-issue:phcaradanai/the-fisher#3",
+      "github-repository:Burgesski/Stromatobyte",
+      "github-repository:Denis6-3/Autonomous-Vehicle-Platooning-Lateral-Lane-Change-Control",
+      "github-repository:Pwn3rx0/Pwn3rx0.github.io",
+      "github-repository:inauner/promaster-dev"
+    ],
+    "memory_object_ids": [
+      "3437ba2efa43a3126cef0c6a9cb161f85b758e8d633ae55707eda3c597a750fb",
+      "c929b2e856f5fecaf7cd0cb95d5fe5701af5fc968da58a9177ce179c5a4f813d",
+      "0796d326ba4b7253a71fbc308487737bbccab1dcc8cee49636bd9135ecb6c4f7",
+      "e842f0411a711ec877608f8a184f60b15c1ebcf8f9937de4e81f0809388e9c2f",
+      "78a8e058c17599a670eee45872f20beafb61722f0f23be066b61feeae4135608",
+      "5c996218c90e40bcd556ca37cdba1b209510a8ec1356ec607f7c35cc9e8bdfa7"
+    ],
+    "next_query_terms": [
+      "acceleration",
+      "acceptance",
+      "access",
+      "actions",
+      "adaptive",
+      "adapts",
+      "any",
+      "app",
+      "arc",
+      "arcade",
+      "art",
+      "asset"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "abb260676fbdabf1ab094e90f7a715ad4d57c8872c9364724e6fc177589f63cb",
+    "reconstruction_id": "56dd3250da729849f730b66762b09314515700508a856cdc0a425e7e0643d902",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "a12a59278e6f6447f37d7573966241dc18f280f4ffe7a253fd71d10fb5ed5057",
+    "813e28a6e95aa7ee318ceddd9ca529bd74161584568d4e1dd4047b2600cb08da",
+    "9d8cf31b4b8b4b3791e790d6122335b40945bcca8228d91adb2d9e5e175d5751",
+    "4f27f4c0b9791112955cac46a4be509efb3351adf49d985628efba63becc8aef",
+    "ff6de0a2fd3c0aab181b8663039358f38b5af1cfcac9bb57bb6ff3f266cb874e",
+    "70f8d5b6d7b9408d14f2ebf1c717f5f1ebb8c7ed79e290bfb1a4a95b9056b57a"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:jonathanbeaulne123-blip/dual-ai-budget-app#551",
+      "github-issue:phcaradanai/the-fisher#3",
+      "github-repository:Burgesski/Stromatobyte",
+      "github-repository:Denis6-3/Autonomous-Vehicle-Platooning-Lateral-Lane-Change-Control",
+      "github-repository:Pwn3rx0/Pwn3rx0.github.io",
+      "github-repository:inauner/promaster-dev"
+    ],
+    "memory_object_ids": [
+      "a12a59278e6f6447f37d7573966241dc18f280f4ffe7a253fd71d10fb5ed5057",
+      "813e28a6e95aa7ee318ceddd9ca529bd74161584568d4e1dd4047b2600cb08da",
+      "9d8cf31b4b8b4b3791e790d6122335b40945bcca8228d91adb2d9e5e175d5751",
+      "4f27f4c0b9791112955cac46a4be509efb3351adf49d985628efba63becc8aef",
+      "ff6de0a2fd3c0aab181b8663039358f38b5af1cfcac9bb57bb6ff3f266cb874e",
+      "70f8d5b6d7b9408d14f2ebf1c717f5f1ebb8c7ed79e290bfb1a4a95b9056b57a"
+    ],
+    "next_query_terms": [
+      "across",
+      "and",
+      "any",
+      "app",
+      "arc",
+      "arcade",
+      "art",
+      "asset",
+      "asseturl",
+      "atmospheric",
+      "automated",
+      "autonomous-vehicle-platooning-lateral-lane-change-control"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "5ec564d582564693618175e20a134235a490cff7559a32d2174f0f593fb2a6cd",
+    "reconstruction_id": "a160865bb6c52ac8ac935d64c33225c0ab49bca4d4c079ea97e85a5ba0ad97de",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:Burgesski/Stromatobyte",
+    "github-repo:Denis6-3/Autonomous-Vehicle-Platooning-Lateral-Lane-Change-Control",
+    "github-repo:Pwn3rx0/Pwn3rx0.github.io",
+    "github-repo:inauner/promaster-dev",
+    "github-repo:jonathanbeaulne123-blip/dual-ai-budget-app",
+    "github-repo:phcaradanai/the-fisher"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:Burgesski/Stromatobyte",
+    "github-repo:Denis6-3/Autonomous-Vehicle-Platooning-Lateral-Lane-Change-Control",
+    "github-repo:Pwn3rx0/Pwn3rx0.github.io",
+    "github-repo:inauner/promaster-dev",
+    "github-repo:jonathanbeaulne123-blip/dual-ai-budget-app",
+    "github-repo:phcaradanai/the-fisher"
+  ],
+  "indexed_source_ids": [
+    "github-issue:jonathanbeaulne123-blip/dual-ai-budget-app#551",
+    "github-issue:phcaradanai/the-fisher#3",
+    "github-repository:Burgesski/Stromatobyte",
+    "github-repository:Denis6-3/Autonomous-Vehicle-Platooning-Lateral-Lane-Change-Control",
+    "github-repository:Pwn3rx0/Pwn3rx0.github.io",
+    "github-repository:inauner/promaster-dev"
+  ],
+  "memory_checkpoint_sha256": "74b9fe7b0327a5fd428d5d4ae30d3edc57e5ec6ed1db8feee928d63eeb9733a4",
+  "memory_record_count": 12,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "abb260676fbdabf1ab094e90f7a715ad4d57c8872c9364724e6fc177589f63cb",
+  "query2_changed_from_query1": true,
+  "query2_id": "5ec564d582564693618175e20a134235a490cff7559a32d2174f0f593fb2a6cd",
+  "query2_memory_provenance": [
+    "network-memory:0796d326ba4b7253a71fbc308487737bbccab1dcc8cee49636bd9135ecb6c4f7",
+    "network-memory:3437ba2efa43a3126cef0c6a9cb161f85b758e8d633ae55707eda3c597a750fb",
+    "network-memory:5c996218c90e40bcd556ca37cdba1b209510a8ec1356ec607f7c35cc9e8bdfa7",
+    "network-memory:78a8e058c17599a670eee45872f20beafb61722f0f23be066b61feeae4135608",
+    "network-memory:c929b2e856f5fecaf7cd0cb95d5fe5701af5fc968da58a9177ce179c5a4f813d",
+    "network-memory:e842f0411a711ec877608f8a184f60b15c1ebcf8f9937de4e81f0809388e9c2f"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}

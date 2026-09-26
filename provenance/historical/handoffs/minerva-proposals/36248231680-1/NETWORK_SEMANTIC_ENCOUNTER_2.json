@@ -1,0 +1,173 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:Burgesski/Stromatobyte",
+    "github-repo:Pwn3rx0/Pwn3rx0.github.io",
+    "github-repo:inauner/promaster-dev",
+    "github-repo:jonathanbeaulne123-blip/dual-ai-budget-app",
+    "github-repo:kobayashi-cyder/FAP",
+    "github-repo:phcaradanai/the-fisher"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:Burgesski/Stromatobyte",
+    "github-repo:Pwn3rx0/Pwn3rx0.github.io",
+    "github-repo:inauner/promaster-dev",
+    "github-repo:jonathanbeaulne123-blip/dual-ai-budget-app",
+    "github-repo:kobayashi-cyder/FAP",
+    "github-repo:phcaradanai/the-fisher"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "8568895df1b1840e1e020855eee566edff37f1493651e7884ba9aaf12bd56ffe",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T14:22:24Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "development lateral reconstruction pass vertical codex horizon ride",
+    "development lateral reconstruction pass vertical codex",
+    "development lateral reconstruction pass",
+    "development lateral reconstruction",
+    "development lateral"
+  ],
+  "selected_study_relevance_terms": [
+    "development",
+    "lateral",
+    "reconstruction",
+    "and",
+    "internalize",
+    "epistemic",
+    "basis",
+    "expansion",
+    "across",
+    "independent",
+    "faces",
+    "noncollapse"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:kobayashi-cyder",
+      "author_login": "kobayashi-cyder",
+      "author_type": "User",
+      "center_id": "github-repo:kobayashi-cyder/FAP",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Reconstructed job state This issue reconstructs the deleted/lost development job that produced PR #164. Source of truth: - PR: #164 \u2014 **Add universal FAP speech I/O with independent STT/TTS** - branch: `feature/universal-fap-speech-io` - current head: `89c246ca352ef317d4d902ba03b43b9154dbdd87` - base: current public FAP `main` - current delta: 3 commits ahead of main, no unique main divergence - current files: `fap_speech.py`, `FAP_SPEECH.md`, `tests/test_fap_speech.py` - preserved local evidence from PR: 5/5 speech tests pass and module compiles - no GitHub Actions run is required as evidence for this reconstruction; prefer push-only/local verification first ## Original job purpose reconstructed from the surviving branch Build a **version-neutral FAP-owned speech I/O layer** that can attach to historical FAP gateways and the reset 1.x line through a plain `str -> str` text handler, without depending on a cloud speech API or a pretrained third-party voice/model. The job covers: 1. local FAP TTS; 2. local/trainable FAP STT; 3. WAV I/O; 4. microphone capture and playback adapters; 5. microphone -> STT -> FAP text handler -> TTS roundtrip; 6. fail-closed behavior when STT is untrai",
+      "relevance_matches": [
+        "development",
+        "reconstruction",
+        "independent"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-25T22:38:04Z",
+      "source_id": "github-issue:kobayashi-cyder/FAP#165",
+      "source_url": "https://github.com/kobayashi-cyder/FAP/issues/165",
+      "title": "Reconstructed job: universal FAP speech I/O (independent STT/TTS)"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:phcaradanai",
+      "author_login": "phcaradanai",
+      "author_type": "User",
+      "center_id": "github-repo:phcaradanai/the-fisher",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Mission Overview Upgrade the Chapter 1 Village Canal fishing vertical slice from a functional prototype into an international competition-grade interactive web game: - Immediate visceral feeling: **\"This is clearly a real game.\"** - High tactile feedback, arcade responsiveness, and atmospheric depth without modifying core combat rules or progression contracts. - **Live Deployed URL:** **https://phcaradanai.github.io/the-fisher/** --- ## Live Deployment (Free Public Hosting) - **Hosted on:** GitHub Pages (Automated via GitHub Actions) - **Public URL:** [https://phcaradanai.github.io/the-fisher/](https://phcaradanai.github.io/the-fisher/) - **Protocol:** HTTP/2 over HTTPS with global CDN - **Dynamic Asset Resolution:** Configured `assetUrl` and Vite base path to handle subpath hosting seamlessly across local development and production. --- ## What Changed ### 1. Physical Cast & Line Physics (`src/app/CanalScene.tsx`) - **Parabolic Cast Arc**: Simulated physics trajectory for the flying lure with gravitational acceleration. - **Water Impact Splash**: High-velocity droplet burst and radial expanding ripple rings upon water impact. - **Luminous Tension Dynamics**: Multi-layered fishi",
+      "relevance_matches": [
+        "development",
+        "across"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T13:36:32Z",
+      "source_id": "github-issue:phcaradanai/the-fisher#3",
+      "source_url": "https://github.com/phcaradanai/the-fisher/pull/3",
+      "title": "feat(ui): competition quality execution pass for fishing vertical slice"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:jonathanbeaulne123-blip",
+      "author_login": "jonathanbeaulne123-blip",
+      "author_type": "User",
+      "center_id": "github-repo:jonathanbeaulne123-blip/dual-ai-budget-app",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Delivery state - Branch: - Base SHA: - Head SHA: - Worksession or brief: - Implementing AI or owner: - Risk: Low | Medium | High | Release - Decision owner: ## Household outcome Describe the result for Jonathan and Bianca, not only files. ## Dual Course - Budget delta (weight 5): - Engagement delta (weight 3): - If they conflicted, what was cut so the books won: ## Scope - In scope: - Explicitly out of scope: - Any justified expansion: ## Acceptance evidence - [ ] Every acceptance criterion maps to current code, a current test result, or named manual evidence - [ ] Any `5/5` claim links a passing P0-03 record for this exact SHA/environment with human acceptance; otherwise no `5/5` label is shown - [ ] Focused tests for changed invariants pass - [ ] `pnpm check` passes - [ ] Complete diff reviewed for sensitive or unintended files - [ ] Relevant phone/wide, keyboard, focus, reduced-motion, loading, empty, error, and offline states verified - [ ] Independent books/privacy/trust review completed when required ## Data and environment disclosure - Development impact: - Production impact: - Network calls or data sent: - MCP access: - Hosted rows/schema/secrets/deployments: - Real hous",
+      "relevance_matches": [
+        "development",
+        "expansion",
+        "independent"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T13:25:25Z",
+      "source_id": "github-issue:jonathanbeaulne123-blip/dual-ai-budget-app#551",
+      "source_url": "https://github.com/jonathanbeaulne123-blip/dual-ai-budget-app/pull/551",
+      "title": "Codex/horizon ride"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:inauner",
+      "author_login": "inauner",
+      "author_type": "User",
+      "center_id": "github-repo:inauner/promaster-dev",
+      "learner_minted_artifact": false,
+      "observed_relation": "Experimental RAM ProMaster port development; tester preflight and pinned opendbc lateral diagnostics. Not a validated vehicle release.",
+      "relevance_matches": [
+        "development",
+        "lateral"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-09-21T00:57:16Z",
+      "source_id": "github-repository:inauner/promaster-dev",
+      "source_url": "https://github.com/inauner/promaster-dev",
+      "title": "inauner/promaster-dev"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:Pwn3rx0",
+      "author_login": "Pwn3rx0",
+      "author_type": "User",
+      "center_id": "github-repo:Pwn3rx0/Pwn3rx0.github.io",
+      "learner_minted_artifact": false,
+      "observed_relation": "A deep dive technical blog focusing on Red Team engineering, Windows Internals, and the art of Evasion. Includes modules on WinAPI malware development, shellcode injection, and AD lateral movement.",
+      "relevance_matches": [
+        "development",
+        "lateral"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-05-25T14:36:11Z",
+      "source_id": "github-repository:Pwn3rx0/Pwn3rx0.github.io",
+      "source_url": "https://github.com/Pwn3rx0/Pwn3rx0.github.io",
+      "title": "Pwn3rx0/Pwn3rx0.github.io"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:Burgesski",
+      "author_login": "Burgesski",
+      "author_type": "User",
+      "center_id": "github-repo:Burgesski/Stromatobyte",
+      "learner_minted_artifact": false,
+      "observed_relation": "Stromatobyte3D is a reduced-complexity model designed to simulate microbial mound development on the scale of a few meters for each mound. It was modified and developed from a previous model, Mounds3D in Kozlowski (2016). Stromatobyte3D calculates both vertical and lateral microbialite growth,",
+      "relevance_matches": [
+        "development",
+        "lateral"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-01-24T10:38:09Z",
+      "source_id": "github-repository:Burgesski/Stromatobyte",
+      "source_url": "https://github.com/Burgesski/Stromatobyte",
+      "title": "Burgesski/Stromatobyte"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}

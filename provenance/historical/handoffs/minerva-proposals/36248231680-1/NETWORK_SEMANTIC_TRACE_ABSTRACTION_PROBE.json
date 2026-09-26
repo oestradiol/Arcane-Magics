@@ -1,0 +1,96 @@
+{
+  "claim_fence": "This is a bounded B1 structural probe over one returned encounter. It shows nuisance invariance plus sensitivity to a relevant anchor perturbation; it does not establish general semantic abstraction, B2 downstream causal use, B3 internalization, truth, or promotion.",
+  "cross_language_abstraction_claim": false,
+  "general_semantics_claim": false,
+  "independent_evaluation": false,
+  "internalization_claim": false,
+  "nuisance_invariance_pass": true,
+  "opaque_source_identity_invariant": true,
+  "original_signature": {
+    "config_id": "TITLE_ANCHORED",
+    "relations": [
+      {
+        "anchor_degree": 4,
+        "anchor_terms": [
+          "across",
+          "development",
+          "expansion",
+          "independent"
+        ],
+        "source_support": 2,
+        "term": "pass",
+        "title_support": 1
+      },
+      {
+        "anchor_degree": 3,
+        "anchor_terms": [
+          "across",
+          "development",
+          "lateral"
+        ],
+        "source_support": 2,
+        "term": "vertical",
+        "title_support": 1
+      },
+      {
+        "anchor_degree": 3,
+        "anchor_terms": [
+          "development",
+          "expansion",
+          "independent"
+        ],
+        "source_support": 1,
+        "term": "codex",
+        "title_support": 1
+      },
+      {
+        "anchor_degree": 3,
+        "anchor_terms": [
+          "development",
+          "expansion",
+          "independent"
+        ],
+        "source_support": 1,
+        "term": "horizon",
+        "title_support": 1
+      },
+      {
+        "anchor_degree": 3,
+        "anchor_terms": [
+          "development",
+          "expansion",
+          "independent"
+        ],
+        "source_support": 1,
+        "term": "ride",
+        "title_support": 1
+      },
+      {
+        "anchor_degree": 2,
+        "anchor_terms": [
+          "development",
+          "lateral"
+        ],
+        "source_support": 1,
+        "term": "autonomous-vehicle-platooning-lateral-lane-change-control",
+        "title_support": 1
+      }
+    ],
+    "status": "RELATION_TRACE_CANDIDATE_FROZEN",
+    "terms": [
+      "pass",
+      "vertical",
+      "codex",
+      "horizon",
+      "ride",
+      "autonomous-vehicle-platooning-lateral-lane-change-control"
+    ]
+  },
+  "original_trace_id": "2e04aac0ab819cf1783e2d09bbc86c8d553661b2393d0704ca667d17025c638b",
+  "promotion_authority": false,
+  "relevant_anchor_perturbation_changes_trace": true,
+  "schema": "Venus.NetworkSemanticTraceAbstractionProbeResult.v0.1",
+  "source_order_invariant": true,
+  "status": "PASS_BOUNDED_B1_STRUCTURAL_ABSTRACTION",
+  "truth_authority": false
+}

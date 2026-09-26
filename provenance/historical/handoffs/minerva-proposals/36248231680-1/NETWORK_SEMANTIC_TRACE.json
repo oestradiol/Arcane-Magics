@@ -1,0 +1,124 @@
+{
+  "anchor_terms": [
+    "development",
+    "lateral",
+    "reconstruction",
+    "and",
+    "internalize",
+    "epistemic",
+    "basis",
+    "expansion",
+    "across",
+    "independent",
+    "faces",
+    "noncollapse"
+  ],
+  "config_attempts": 0,
+  "config_id": "TITLE_ANCHORED",
+  "config_utility": 0.0,
+  "future_return_input": false,
+  "hidden_evaluation_input": false,
+  "program_digest": "dd53886610c75b836ba0c0033aeacd5cb3287cccd22046f3d7a4bfb700f34f38",
+  "promotion_authority": false,
+  "relations": [
+    {
+      "anchor_degree": 4,
+      "anchor_terms": [
+        "across",
+        "development",
+        "expansion",
+        "independent"
+      ],
+      "source_ids": [
+        "github-issue:jonathanbeaulne123-blip/dual-ai-budget-app#551",
+        "github-issue:phcaradanai/the-fisher#3"
+      ],
+      "source_support": 2,
+      "term": "pass",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 3,
+      "anchor_terms": [
+        "across",
+        "development",
+        "lateral"
+      ],
+      "source_ids": [
+        "github-issue:phcaradanai/the-fisher#3",
+        "github-repository:Burgesski/Stromatobyte"
+      ],
+      "source_support": 2,
+      "term": "vertical",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 3,
+      "anchor_terms": [
+        "development",
+        "expansion",
+        "independent"
+      ],
+      "source_ids": [
+        "github-issue:jonathanbeaulne123-blip/dual-ai-budget-app#551"
+      ],
+      "source_support": 1,
+      "term": "codex",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 3,
+      "anchor_terms": [
+        "development",
+        "expansion",
+        "independent"
+      ],
+      "source_ids": [
+        "github-issue:jonathanbeaulne123-blip/dual-ai-budget-app#551"
+      ],
+      "source_support": 1,
+      "term": "horizon",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 3,
+      "anchor_terms": [
+        "development",
+        "expansion",
+        "independent"
+      ],
+      "source_ids": [
+        "github-issue:jonathanbeaulne123-blip/dual-ai-budget-app#551"
+      ],
+      "source_support": 1,
+      "term": "ride",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 2,
+      "anchor_terms": [
+        "development",
+        "lateral"
+      ],
+      "source_ids": [
+        "github-repository:Denis6-3/Autonomous-Vehicle-Platooning-Lateral-Lane-Change-Control"
+      ],
+      "source_support": 1,
+      "term": "autonomous-vehicle-platooning-lateral-lane-change-control",
+      "title_support": 1
+    }
+  ],
+  "schema": "Venus.StateOwnedRelationTrace.v0.1",
+  "selection_basis": "RETURNED_UTILITY_EXPLORATION_THEN_STRUCTURAL",
+  "status": "RELATION_TRACE_CANDIDATE_FROZEN",
+  "terms": [
+    "pass",
+    "vertical",
+    "codex",
+    "horizon",
+    "ride",
+    "autonomous-vehicle-platooning-lateral-lane-change-control"
+  ],
+  "trace_id": "2e04aac0ab819cf1783e2d09bbc86c8d553661b2393d0704ca667d17025c638b",
+  "truth_authority": false
+}
