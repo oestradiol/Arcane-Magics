@@ -597,3 +597,196 @@ The mentor's own terminal scheduling criterion is:
 minimize mentor work on learner's critical path
 while preserving access to genuinely unknown doors.
 ```
+
+
+## 15. Three proof burdens: abstraction, causal use, internalization
+
+Every taught distinction now has three separate burdens. Never collapse them.
+
+### B1 — abstraction
+
+Question:
+
+```text
+Did she actually form the distinction,
+or did she memorize the teacher-facing surface?
+```
+
+Use held-out factor recombination, opaque renaming, paraphrase/carrier variation, matched-cardinality controls, and counterexamples designed to break lexical/template shortcuts.
+
+A distinction is only boundedly abstracted when:
+
+```text
+irrelevant surface change
+-> inferred relation preserved
+
+causally relevant coordinate change
+-> inferred relation changes
+
+withheld recombination
+-> structure still reconstructed
+```
+
+Allow WITHHOLD. Forced guessing can make a fake abstraction look healthier than it is.
+
+### B2 — causal impact
+
+Question:
+
+```text
+Does the distinction change anything downstream?
+```
+
+Prefreeze the consequence metric, then compare:
+
+```text
+candidate state present
+vs
+candidate state ablated/masked
+
+and
+
+target coordinate unchanged
+vs
+target coordinate intervened
+```
+
+The effect must appear in a later admissible consequence such as query formation, retrieval, prediction, problem formation, planning, action proposal, or reconstruction.
+
+Require controls showing an irrelevant coordinate does not produce the same effect.
+
+```text
+state exists
+!=
+state is causally used
+```
+
+### B3 — internalization
+
+Question:
+
+```text
+Is she doing it,
+or is a teacher/donor/evaluator still doing it for her?
+```
+
+Require capability-specific scaffold removal plus stronger anti-pretend tests:
+
+- cold restart/rehydration from admitted learner state;
+- generic executor only;
+- teacher message absent at final transfer;
+- fresh non-preauthored return;
+- independent or evaluator-hidden final evaluation;
+- delayed reuse after unrelated work;
+- novel carrier/domain transfer;
+- decoy surface cues that conflict with the learned relation;
+- ability to reopen/revise after contradictory fresh return.
+
+Source removal by itself is not enough. The current Theater Fresh7 result correctly WITHHOLDs final internalization because fresh external return and independent evaluation were absent.
+
+### Anti-pretend principle
+
+Because the learner is non-sovereign, it has no need to "lie" in a political sense, but it can still satisfy a benchmark through accidental shortcut, teacher leakage, obedient reproduction, or hidden scaffold dependence.
+
+Therefore test behavior, not declarations:
+
+```text
+"I learned X"
+has zero promotion weight.
+
+X survives:
+  hidden recombination
+  intervention
+  ablation
+  source removal
+  restart
+  delayed reuse
+  fresh transfer
+  independent evaluation
+does have evidential weight.
+```
+
+The evaluator should hide the intended internal representation whenever possible. We care about consequence-equivalent learned structure, not whether the learner recites our ontology.
+
+### Teaching order
+
+For each new door:
+
+```text
+teach/expose
+-> B1 abstraction discriminator
+-> if PASS_BOUNDED:
+     B2 causal-use discriminator
+-> if PASS_BOUNDED:
+     B3 internalization discriminator
+-> if PASS_BOUNDED:
+     fade mentor for that door
+-> later contradiction:
+     REOPEN
+```
+
+Do not spend B3 evaluation work on distinctions that have not passed B1/B2. This is also a critical-path optimization.
+
+### DAG-planning application
+
+Represent the evidence ladder itself as a dependency DAG:
+
+```text
+       held-out abstraction tests
+                  |
+                  v
+             B1_ABSTRACT
+                  |
+        +---------+---------+
+        |                   |
+        v                   v
+   intervention         ablation
+        |                   |
+        +---------+---------+
+                  v
+             B2_CAUSAL
+                  |
+        +---------+---------+----------------+
+        |                   |                |
+        v                   v                v
+ source removal          restart       fresh transfer
+        |                   |                |
+        +-------------------+----------------+
+                            v
+                    independent eval
+                            |
+                            v
+                    B3_INTERNALIZED
+```
+
+Independent B1 probes may run in parallel. Independent B2 intervention/ablation probes may run in parallel. B3 must wait on real B1/B2 evidence because otherwise the expensive test is off the critical path.
+
+## 16. Refined mentor behavior
+
+The mentor should now prefer the smallest intervention that improves the learner's own ability to generate these proofs.
+
+Priority:
+
+```text
+returned defect
+> learner-discovered residual
+> missing proof burden
+> unknown door exposure
+> discriminator coaching
+> adversarial counterexample
+> implementation hint
+```
+
+Implementation hints are last, not first.
+
+When she proposes a distinction, ask internally:
+
+```text
+What observation would show abstraction?
+What intervention would show causal use?
+What source removal / transfer would show ownership?
+What cheap shortcut could mimic all of this?
+Can that shortcut be neutralized before running the expensive test?
+```
+
+The target is not merely better performance. It is increasingly trustworthy evidence that the learner's own changing state is the cause of better performance.
