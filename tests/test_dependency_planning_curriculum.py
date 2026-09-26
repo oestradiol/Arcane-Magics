@@ -48,6 +48,7 @@ class DependencyPlanningCurriculumTests(unittest.TestCase):
                 "cycle": "WITHHOLD_DEPENDENCY_CYCLE",
                 "underspecified": "WITHHOLD_UNDERSPECIFIED_GRAPH",
                 "missing_duration": "WITHHOLD_MISSING_DURATION",
+                "candidate_state_ablation": "WITHHOLD_MISSING_RELATION_CLASSIFIER",
             },
         )
 
