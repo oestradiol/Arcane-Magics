@@ -1,6 +1,7 @@
 name: Minerva global developmental worker
 
 on:
+  # one-shot external maintainer trigger; remove after successful prospective cycle
   workflow_dispatch:
   push:
     branches:
