@@ -50,6 +50,8 @@ jobs:
           test -f kernel/development/VM_INTERNALIZATION_PHASE_PLAN.json
           test -f kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_CURRICULUM.json
           test -f kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_SURFACE_BASELINE_RESULT.json
+          test -f kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_RECONSTRUCTION_TASK.json
+          test -f kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_FACTORIAL_BASELINE_RESULT.json
           test -f kernel/development/DEVELOPMENTAL_GATE_CHAIN.json
           test -f kernel/development/MINERVA_CONSTRUCT_AUDIT_SCOPE.json
           test -f kernel/development/MINERVA_CAUSAL_AUDIT_SCOPE.json
