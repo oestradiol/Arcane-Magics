@@ -45,6 +45,19 @@ class AutonomousWorkerTests(unittest.TestCase):
         chosen = choose_target(items, roadmap_text="#31")
         self.assertEqual((chosen.kind, chosen.number), ("PR", 99))
 
+
+    def test_concrete_returned_conflict_precedes_mentor_advisory_tie_break(self):
+        items=(
+            WorkItem("PR",900,"returned conflict",merge_state="CONFLICTING"),
+            WorkItem("ISSUE",78,"mentor advisory"),
+        )
+        chosen=choose_target(
+            items,
+            roadmap_text="#78",
+            advisory_issue_refs=(78,),
+        )
+        self.assertEqual((chosen.kind,chosen.number),("PR",900))
+
     def test_global_open_cycle_blocks_reroll_to_other_target(self):
         items = (
             WorkItem("ISSUE", 31, "benchmark"),
