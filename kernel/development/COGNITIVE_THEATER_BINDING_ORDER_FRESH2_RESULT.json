@@ -1,0 +1,120 @@
+{
+  "schema": "Venus.CognitiveTheaterBindingOrderFresh2Result.v0.1",
+  "date": "2026-09-26",
+  "issue_ref": 206,
+  "status": "PASS_BOUNDED_G3_SYMBOLIC_ORDER__FAIL_G2_INDEXED_KFS_BINDING",
+  "parent_prefreeze_ref": "kernel/development/COGNITIVE_THEATER_BINDING_ORDER_FRESH2_PREFREEZE.json",
+  "independent_external_evaluation": false,
+  "commutative": {
+    "correct": 0,
+    "total": 16,
+    "accuracy": 0,
+    "withholds": 15,
+    "per_task": {
+      "G2_THREE_CENTER_KFS": {
+        "correct": 0,
+        "total": 8,
+        "accuracy": 0,
+        "withholds": 7
+      },
+      "G3_THREE_EVENT_ORDER": {
+        "correct": 0,
+        "total": 8,
+        "accuracy": 0,
+        "withholds": 8
+      }
+    },
+    "per_face": {
+      "ENGLISH": {
+        "correct": 0,
+        "total": 4,
+        "accuracy": 0,
+        "withholds": 4
+      },
+      "JAPANESE": {
+        "correct": 0,
+        "total": 4,
+        "accuracy": 0,
+        "withholds": 3
+      },
+      "BRAZILIAN_PORTUGUESE": {
+        "correct": 0,
+        "total": 4,
+        "accuracy": 0,
+        "withholds": 4
+      },
+      "MATHEMATICS": {
+        "correct": 0,
+        "total": 4,
+        "accuracy": 0,
+        "withholds": 4
+      }
+    }
+  },
+  "ordered": {
+    "correct": 13,
+    "total": 16,
+    "accuracy": 0.8125,
+    "withholds": 3,
+    "per_task": {
+      "G2_THREE_CENTER_KFS": {
+        "correct": 5,
+        "total": 8,
+        "accuracy": 0.625,
+        "withholds": 3
+      },
+      "G3_THREE_EVENT_ORDER": {
+        "correct": 8,
+        "total": 8,
+        "accuracy": 1,
+        "withholds": 0
+      }
+    },
+    "per_face": {
+      "ENGLISH": {
+        "correct": 4,
+        "total": 4,
+        "accuracy": 1,
+        "withholds": 0
+      },
+      "JAPANESE": {
+        "correct": 2,
+        "total": 4,
+        "accuracy": 0.5,
+        "withholds": 2
+      },
+      "BRAZILIAN_PORTUGUESE": {
+        "correct": 4,
+        "total": 4,
+        "accuracy": 1,
+        "withholds": 0
+      },
+      "MATHEMATICS": {
+        "correct": 3,
+        "total": 4,
+        "accuracy": 0.75,
+        "withholds": 1
+      }
+    }
+  },
+  "accuracy_delta": 0.8125,
+  "interpretation": [
+    "Replacing commutative centered set similarity with ordered sequence comparison caused a +0.8125 accuracy delta on the exact same fresh rows.",
+    "G3 three-event symbolic temporal order reached 8/8, supporting a bounded order-sensitive temporal reconstruction result at this microtheater scope.",
+    "G2 three-center KFS binding remained incomplete at 5/8, so indexed participant/perspective inhabitation remains the active bottleneck.",
+    "Face-level variation is evidence about this scaffold and tiny curriculum, not a cultural-language trait.",
+    "No prosody, duration, musical expectation, natural coreference, unrestricted language understanding, cultural cognition, general Theater, or Internalizer claim follows."
+  ],
+  "claim_dispositions": {
+    "G0_G1_GROUNDED_TEMPLATE": "PASS_BOUNDED",
+    "G2_INDEXED_KFS_BINDING": "FAIL_REVISE",
+    "G3_SYMBOLIC_TEMPORAL_ORDER": "PASS_BOUNDED_MICROTHEATER",
+    "GENERAL_THEATER": "WITHHOLD",
+    "MUSIC_PROSODY_DURATION_EXPECTATION": "NOT_TESTED",
+    "CULTURAL_LANGUAGE_HYPOTHESES": "WITHHOLD_PENDING_BROADER_TESTS",
+    "INTERNALIZATION": "WITHHOLD"
+  },
+  "next_residual": "LEARN_PAIRWISE_RELATIONAL_THEATER_GRAPH_FOR_INDEXED_KFS_THEN_COMPOSE_WITH_G3_ORDER",
+  "promotion_authority": false,
+  "truth_authority": false
+}
