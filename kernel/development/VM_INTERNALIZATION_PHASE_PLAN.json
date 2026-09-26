@@ -129,6 +129,11 @@
       "path": "kernel/runtime/process_bridge.py",
       "disposition": "KEEP_GENERIC_EXTERNAL_TRANSPORT",
       "reason": "argv/cwd/size/timeout process transport; authorization and strong OS isolation remain external and are not internalized by the learner"
+    },
+    {
+      "path": "kernel/runtime/action_proposal.py",
+      "disposition": "KEEP_GENERIC_INERT_PROPOSAL_CARRIER",
+      "reason": "canonical action proposal/authorization-binding data model; cannot execute and leaves issuer authentication, jurisdiction, authorization and ProcessBridge execution outside the proposing learner"
     }
   ],
   "developmental_targets": [
