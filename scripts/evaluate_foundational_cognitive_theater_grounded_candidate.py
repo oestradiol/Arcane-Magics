@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -10,6 +11,7 @@ SPEC=importlib.util.spec_from_file_location("cognitive_theater_learner",MOD_PATH
 if SPEC is None or SPEC.loader is None:
     raise RuntimeError("cannot load cognitive theater learner")
 mod=importlib.util.module_from_spec(SPEC)
+sys.modules[SPEC.name]=mod
 SPEC.loader.exec_module(mod)
 
 
