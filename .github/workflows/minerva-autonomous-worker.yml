@@ -53,6 +53,7 @@ jobs:
           python -m unittest tests/test_internalization_boundary.py
           python -m unittest tests/test_www_mind_gate.py
           python -m unittest tests/test_developmental_gate_chain.py
+          python -m unittest tests/test_network_inquiry.py
           python scripts/audit_autonomy_safety_matrix.py
           python scripts/audit_custody.py
           python scripts/audit_edu16_custody.py
@@ -86,6 +87,12 @@ jobs:
             --current-state-receipt kernel/custody/R226_CURRENT_STATE_RECEIPT.json \
             --problem-output /tmp/minerva/FORMED_PROBLEM.json \
             --output /tmp/minerva/CYCLE.json
+
+      - name: Freeze learner-derived network query intent
+        run: |
+          python scripts/freeze_network_query.py \
+            --problem /tmp/minerva/FORMED_PROBLEM.json \
+            --output /tmp/minerva/NETWORK_QUERY.json
 
       - name: Crystallize Minerva trajectory into a Venus-based handoff
         env:
@@ -124,6 +131,7 @@ jobs:
           cp /tmp/minerva/CYCLE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/cycle.json
           cp /tmp/minerva/FORMED_PROBLEM.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/problem.json
           cp /tmp/minerva/LEARNING_STATE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/proposed-learning-state.json
+          cp /tmp/minerva/NETWORK_QUERY.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/network-query.json
 
           git add provenance/historical/handoffs
           git commit -m "handoff(minerva->venus): crystallize engineering candidate ${GITHUB_RUN_ID}"
