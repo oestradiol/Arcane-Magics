@@ -1,0 +1,14 @@
+{
+  "schema": "Venus.GitWorldEpisodeDisposition.v0.1",
+  "issue": 165,
+  "episode": 4,
+  "status": "FAIL_PREFREEZE_SCHEMA_DROPPED_CHECK_CONCLUSION",
+  "prefreeze_ref": "autonomy/evidence/git-world/165/episode-4-prefreeze.json",
+  "observed_head": "ea9c4d0407f5abbc49eb325eedfe3fd4e9e94a21",
+  "observed_run_id": 36213280199,
+  "observed_status": "completed",
+  "observed_conclusion": "failure",
+  "reason": "The request schema preserved frozen check run/status but not frozen check conclusion, so exact before/after provenance was incomplete. Do not promote this episode.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
