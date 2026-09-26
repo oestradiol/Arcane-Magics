@@ -19,6 +19,7 @@ def main()->int:
     p.add_argument("--query",required=True)
     p.add_argument("--encounter",required=True)
     p.add_argument("--state",required=True)
+    p.add_argument("--learning-state",required=True)
     p.add_argument("--learning-state",required=False)
     p.add_argument("--trace-output",required=True)
     p.add_argument("--query-output",required=True)
@@ -27,6 +28,7 @@ def main()->int:
     query=json.loads(Path(args.query).read_text(encoding="utf-8"))
     encounter=json.loads(Path(args.encounter).read_text(encoding="utf-8"))
     state=json.loads(Path(args.state).read_text(encoding="utf-8"))
+    learning_state=json.loads(Path(args.learning_state).read_text(encoding="utf-8"))
     learning_state=(
         json.loads(Path(args.learning_state).read_text(encoding="utf-8"))
         if args.learning_state else None
