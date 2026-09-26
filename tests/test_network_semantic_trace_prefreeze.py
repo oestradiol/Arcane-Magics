@@ -31,13 +31,17 @@ class NetworkSemanticTracePrefreezeTests(unittest.TestCase):
     def test_worker_freezes_candidate_before_either_episode2_return(self):
         text=(ROOT/".github/workflows/minerva-autonomous-worker.yml").read_text(encoding="utf-8")
         freeze_at=text.index("Freeze state-owned relation-trace candidate")
+        b1_at=text.index("Probe semantic-trace B1 abstraction")
         baseline_at=text.index("Execute memory-derived network query 2")
         candidate_at=text.index("Execute frozen semantic-trace query 2")
         compare_at=text.index("Compare semantic trace against frozen lexical baseline")
+        self.assertLess(freeze_at, b1_at)
+        self.assertLess(b1_at, candidate_at)
         self.assertLess(freeze_at, baseline_at)
-        self.assertLess(freeze_at, candidate_at)
         self.assertLess(baseline_at, compare_at)
         self.assertLess(candidate_at, compare_at)
+        self.assertIn("steps.semantic_b1.outputs.passed == 'true'", text)
+        self.assertIn("NETWORK_SEMANTIC_TRACE_ABSTRACTION_PROBE.json", text)
         self.assertIn("NETWORK_SEMANTIC_TRACE_RESULT.json", text)
 
     def test_prefreeze_separates_three_burdens(self):
