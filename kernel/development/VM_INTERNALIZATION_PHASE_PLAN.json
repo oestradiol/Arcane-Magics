@@ -224,7 +224,14 @@
     "lateral_episode1_generalization_pass": false,
     "lateral_episode1_fresh_transfer_accuracy": 0.125,
     "u1_founder_source_ablation_pass": true,
-    "ssr4_mature_reduced_to_simple_substitute": true
+    "ssr4_mature_reduced_to_simple_substitute": true,
+    "foundational_cognitive_theater_surface_baseline": {
+      "result_ref": "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_SURFACE_BASELINE_RESULT.json",
+      "native_accuracy": 0.875,
+      "leave_one_face_out_accuracy": 0.3125,
+      "status": "FAIL_SURFACE_ONLY_CROSS_FACE_INVARIANCE",
+      "next_residual": "LEARN_RELATIONAL_THEATER_STATE_BEYOND_SURFACE_SIMILARITY"
+    }
   },
   "promotion_authority": false,
   "truth_authority": false,
