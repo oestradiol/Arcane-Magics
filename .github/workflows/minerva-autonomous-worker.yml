@@ -91,6 +91,7 @@ jobs:
         run: |
           python scripts/freeze_network_query.py \
             --problem /tmp/minerva/FORMED_PROBLEM.json \
+            --cycle /tmp/minerva/CYCLE.json \
             --issues /tmp/minerva/issues.json \
             --prs /tmp/minerva/history-prs.json \
             --output /tmp/minerva/NETWORK_QUERY.json \
