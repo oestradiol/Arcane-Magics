@@ -1,0 +1,158 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "a0ba27cea4efa1d17e3524c2932f35bb4fa4d8c4b95fac5b6752ca941987bc2b",
+    "d91eb262a1bf371cffa51a0e0cd4e861ca5eb550cb5dd9b9cb82ccef8d756b71",
+    "834541000a1ea0273c06acf25d875875027f01fa30cbf83b76b0352a0d96a3f4",
+    "cbc4106a072808bd44d40cd20124870b66856e66050ada23a3015c9d8be5e80a",
+    "cd15e60d0d630f2deba95736d1cf0af92a05932ad4d805c622597f5a2559c07b",
+    "2f5aa1d560529f68b66927472f766aebd7ba0ea41c0a32b67549fa52efd5b102"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:21nCo/super-functions#206",
+      "github-issue:AgiFlow/doompi#206",
+      "github-issue:MUBA-RH/MUBA#206",
+      "github-issue:NISD2/open-isms#206",
+      "github-issue:SourceShift/mini-ork#206",
+      "github-issue:alex-w/fastfetch#206"
+    ],
+    "memory_object_ids": [
+      "a0ba27cea4efa1d17e3524c2932f35bb4fa4d8c4b95fac5b6752ca941987bc2b",
+      "d91eb262a1bf371cffa51a0e0cd4e861ca5eb550cb5dd9b9cb82ccef8d756b71",
+      "834541000a1ea0273c06acf25d875875027f01fa30cbf83b76b0352a0d96a3f4",
+      "cbc4106a072808bd44d40cd20124870b66856e66050ada23a3015c9d8be5e80a",
+      "cd15e60d0d630f2deba95736d1cf0af92a05932ad4d805c622597f5a2559c07b",
+      "2f5aa1d560529f68b66927472f766aebd7ba0ea41c0a32b67549fa52efd5b102"
+    ],
+    "next_query_terms": [
+      "across",
+      "add",
+      "adding",
+      "address",
+      "admin",
+      "aes",
+      "affected",
+      "agb",
+      "agent",
+      "ahead",
+      "alex-w",
+      "alive"
+    ],
+    "problem_id": "a2be526b20d5c8d222eb1d07d1e51f29c56f15e71eb152c884050182790dc4dd",
+    "promotion_authority": false,
+    "query_id": "4a8e7112547bdf8d71110da9da8be96a6f8dcd155594caea45a874814b86f752",
+    "reconstruction_id": "42d3d3b6943ac72b7a8c9f2697fba1b99ac16c2860d91a6f3f3489e4505bd25b",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "78ce847eca318bd5e13e5c869f4fd2a93cc41c6a2451e74535abf6cb53fce7ea",
+    "289b72a6da48313e548b03f16c26ed33ba318b1bfa85be77be3473eb7ad619fb",
+    "81f870fcc4fe668bdb5caec3e75f108ed6771f6d50e7e811e4bce83bc24ce32f",
+    "6d5d3e3c20f6b6b26849a1a1884b854a250a4f38e37546800ac7d6cc0170026e",
+    "97efb2bfe3de2eb063f963e9e4c10a209ab3296606ed1d255e06e8930c0a22e2",
+    "2106c560dfc083496ce1eaa6ae15ccf779d0d20579a86b02c178aea8fec3c203"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:BroMarcus/church-app#28",
+      "github-issue:Keno42/language-learning-audio#52",
+      "github-issue:Oleksii-debug/Accessible-Chess#617",
+      "github-issue:SudKul/cd16201-starter-code#19",
+      "github-issue:TheGreenCedar/CodeStory#2116",
+      "github-issue:UOR-Foundation/uor-r4#973"
+    ],
+    "memory_object_ids": [
+      "78ce847eca318bd5e13e5c869f4fd2a93cc41c6a2451e74535abf6cb53fce7ea",
+      "289b72a6da48313e548b03f16c26ed33ba318b1bfa85be77be3473eb7ad619fb",
+      "81f870fcc4fe668bdb5caec3e75f108ed6771f6d50e7e811e4bce83bc24ce32f",
+      "6d5d3e3c20f6b6b26849a1a1884b854a250a4f38e37546800ac7d6cc0170026e",
+      "97efb2bfe3de2eb063f963e9e4c10a209ab3296606ed1d255e06e8930c0a22e2",
+      "2106c560dfc083496ce1eaa6ae15ccf779d0d20579a86b02c178aea8fec3c203"
+    ],
+    "next_query_terms": [
+      "acceptance",
+      "accepted",
+      "access",
+      "accessible",
+      "accessible-chess",
+      "activate",
+      "active",
+      "activity",
+      "actual",
+      "address-aware",
+      "addressed",
+      "addresses"
+    ],
+    "problem_id": "a2be526b20d5c8d222eb1d07d1e51f29c56f15e71eb152c884050182790dc4dd",
+    "promotion_authority": false,
+    "query_id": "d396205df03f7a82c9aa2fccbaed6c8d7b7da4860ca9741c5578a682e6fab7ff",
+    "reconstruction_id": "af9a3b7ae5a1e34131424a71d04c72d2f2dd7262dc5a207f687e4a503fea79e8",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:21nCo/super-functions",
+    "github-repo:AgiFlow/doompi",
+    "github-repo:BroMarcus/church-app",
+    "github-repo:Keno42/language-learning-audio",
+    "github-repo:MUBA-RH/MUBA",
+    "github-repo:NISD2/open-isms",
+    "github-repo:Oleksii-debug/Accessible-Chess",
+    "github-repo:SourceShift/mini-ork",
+    "github-repo:SudKul/cd16201-starter-code",
+    "github-repo:TheGreenCedar/CodeStory",
+    "github-repo:UOR-Foundation/uor-r4",
+    "github-repo:alex-w/fastfetch"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:21nCo/super-functions",
+    "github-repo:AgiFlow/doompi",
+    "github-repo:BroMarcus/church-app",
+    "github-repo:Keno42/language-learning-audio",
+    "github-repo:MUBA-RH/MUBA",
+    "github-repo:NISD2/open-isms",
+    "github-repo:Oleksii-debug/Accessible-Chess",
+    "github-repo:SourceShift/mini-ork",
+    "github-repo:SudKul/cd16201-starter-code",
+    "github-repo:TheGreenCedar/CodeStory",
+    "github-repo:UOR-Foundation/uor-r4",
+    "github-repo:alex-w/fastfetch"
+  ],
+  "indexed_source_ids": [
+    "github-issue:21nCo/super-functions#206",
+    "github-issue:AgiFlow/doompi#206",
+    "github-issue:BroMarcus/church-app#28",
+    "github-issue:Keno42/language-learning-audio#52",
+    "github-issue:MUBA-RH/MUBA#206",
+    "github-issue:NISD2/open-isms#206",
+    "github-issue:Oleksii-debug/Accessible-Chess#617",
+    "github-issue:SourceShift/mini-ork#206",
+    "github-issue:SudKul/cd16201-starter-code#19",
+    "github-issue:TheGreenCedar/CodeStory#2116",
+    "github-issue:UOR-Foundation/uor-r4#973",
+    "github-issue:alex-w/fastfetch#206"
+  ],
+  "memory_checkpoint_sha256": "6d8656cbedf18d21780a5ac3c0feb2992fb31216850abe20b079235a72807eae",
+  "memory_record_count": 12,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "4a8e7112547bdf8d71110da9da8be96a6f8dcd155594caea45a874814b86f752",
+  "query2_changed_from_query1": true,
+  "query2_id": "d396205df03f7a82c9aa2fccbaed6c8d7b7da4860ca9741c5578a682e6fab7ff",
+  "query2_memory_provenance": [
+    "network-memory:2f5aa1d560529f68b66927472f766aebd7ba0ea41c0a32b67549fa52efd5b102",
+    "network-memory:834541000a1ea0273c06acf25d875875027f01fa30cbf83b76b0352a0d96a3f4",
+    "network-memory:a0ba27cea4efa1d17e3524c2932f35bb4fa4d8c4b95fac5b6752ca941987bc2b",
+    "network-memory:cbc4106a072808bd44d40cd20124870b66856e66050ada23a3015c9d8be5e80a",
+    "network-memory:cd15e60d0d630f2deba95736d1cf0af92a05932ad4d805c622597f5a2559c07b",
+    "network-memory:d91eb262a1bf371cffa51a0e0cd4e861ca5eb550cb5dd9b9cb82ccef8d756b71"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}
