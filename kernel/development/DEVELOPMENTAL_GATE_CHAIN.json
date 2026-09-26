@@ -279,7 +279,8 @@
       "kernel/development/EDU_CURRENT.json",
       "live GitHub issue and branch state"
     ],
-    "register_rule": "These are linked projections of one research body with distinct claim registers. Use their relations to route work; never merge their warrants or state into one undifferentiated claim."
+    "register_rule": "These are linked projections of one research body with distinct claim registers. Use their relations to route work; never merge their warrants or state into one undifferentiated claim.",
+    "current_state_snapshot": "split/minerva@95b228c5995cea0d322fcb45f51a5d86b600cbb1"
   },
   "temporal_provenance": [
     {
