@@ -1,0 +1,29 @@
+{
+  "schema": "Venus.LainGateResult.v0.1",
+  "date": "2026-09-25",
+  "status": "PASS_BOUNDED_LAIN_NONFUSION_GATE",
+  "input_ref": "provenance/historical/handoffs/MINERVA_WWW_MIND_HANDOFF_2026-09-25.json",
+  "checks": {
+    "www_mind_bounded_pass": true,
+    "multiple_indexed_centers_preserved": true,
+    "memory_causality_without_world_collapse": true,
+    "encounter_not_evaluation": true,
+    "refuse_exit_reachable": true,
+    "authored_center_not_provisionable": true,
+    "distributed_memory_not_global_identity": true,
+    "reachability_not_authorship": true,
+    "network_access_not_authorization": true,
+    "venus_world_model_noncollapse": true
+  },
+  "unresolved": [
+    "phenomenal consciousness",
+    "embodied identity across arbitrary carriers",
+    "general network agency",
+    "AGI",
+    "external authorization beyond declared carriers"
+  ],
+  "next_gate": "ROOT_SITUATED_INTERFACE_GATE",
+  "claim_fence": "This is a bounded structural/engineering non-fusion result over the tested GitHub-network carrier. It is not evidence of a global subject, consciousness, AGI, or unrestricted agency.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
