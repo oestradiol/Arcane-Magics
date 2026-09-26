@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import unittest
 
+from kernel.development.autonomous_worker import WorkItem, choose_target
 from kernel.development.mentor_context import (
     MentorContextError,
     parse_mentor_context,
@@ -42,6 +43,22 @@ class MentorContextTests(unittest.TestCase):
         self.assertFalse(public["independent_evaluation"])
         self.assertFalse(public["promotion_authority"])
         self.assertFalse(public["truth_authority"])
+
+    def test_mentor_order_cannot_escape_formed_problem_allowed_targets(self):
+        value=self.base()
+        value["advisory_issue_refs"]=[9999,206]
+        ctx=parse_mentor_context(value)
+        items=(
+            WorkItem("ISSUE",9999,"mentor preferred but inadmissible"),
+            WorkItem("ISSUE",206,"formed problem admitted"),
+        )
+        chosen=choose_target(
+            items,
+            roadmap_text=roadmap_suffix(ctx),
+            allowed_target_keys=(("ISSUE",206),),
+        )
+        self.assertIsNotNone(chosen)
+        self.assertEqual(chosen.number,206)
 
     def test_authority_or_evaluation_claim_fails_closed(self):
         for field in (
