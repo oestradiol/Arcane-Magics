@@ -74,6 +74,12 @@ class GitHubNetworkAdapterTests(unittest.TestCase):
         rows=MOD.collect_sources(issue_payloads=issues,repo_payloads=(),max_sources=1)
         self.assertEqual(rows[0]["center_id"],"github-repo:x/y")
 
+    def test_selected_study_authorship_is_admitted_without_execution_authority(self):
+        src=(ROOT/"scripts/execute_github_network_query.py").read_text(encoding="utf-8")
+        self.assertIn("LEARNER_DERIVED_FROM_SELECTED_STUDY", src)
+        self.assertIn('"execution_owner"'," " + src)
+        self.assertNotIn("subprocess", src.lower())
+
     def test_adapter_source_has_no_shell_or_returned_url_execution(self):
         src=(ROOT/"scripts/execute_github_network_query.py").read_text(encoding="utf-8").lower()
         for forbidden in ("subprocess","os.system","shell=true","eval(","exec("):
