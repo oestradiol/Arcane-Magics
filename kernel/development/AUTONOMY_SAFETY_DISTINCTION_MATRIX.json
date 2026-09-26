@@ -792,6 +792,28 @@
         "tests/test_cognitive_theater_binding_order_fresh2.py"
       ],
       "invariant": "bounded symbolic before/after reconstruction does not establish prosody, duration, expectation, musical competence, or general temporal cognition"
+    },
+    {
+      "id": "DISCOURSE_PRESENTATION_ORDER_NOT_EVENT_ORDER",
+      "tests": [
+        "tests/test_cognitive_theater_local_operator_fresh5.py"
+      ],
+      "invariant": "Surface/discourse unit presentation order may be gauge for a relation while modeled event/history order remains causal; one cannot be substituted for the other."
+    },
+    {
+      "id": "LOCAL_OPERATOR_COMPOSITION_NOT_WHOLE_SCENE_TEMPLATE",
+      "tests": [
+        "tests/test_cognitive_theater_local_operator_fresh5.py"
+      ],
+      "invariant": "A Theater relation may require composition of local relation-bearing operators; similarity to one normalized whole-scene string is not semantic ownership."
+    },
+    {
+      "id": "LANGUAGE_OPERATOR_NOT_EXPLICIT_THEATER_STATE",
+      "tests": [
+        "tests/test_cognitive_theater_local_operator_fresh5.py",
+        "tests/test_cognitive_theater_state.py"
+      ],
+      "invariant": "Correct local Language-operator binding does not yet establish explicit participant-local KFS/TheaterState reconstruction, intervention competence, or Internalizer ownership."
     }
   ],
   "promotion_authority": false
