@@ -38,6 +38,7 @@ This branch is the most radical recrystallization. It is no longer the “soft c
 | Read the monograph | [monographs/03_ARCANE_MAGICS/main.tex](monographs/03_ARCANE_MAGICS/main.tex) |
 | What is Meta-Dynamics? | [docs/META_DYNAMICS.md](docs/META_DYNAMICS.md) |
 | How does the reader remain free of the vocabulary? | [docs/INHABITABLE_READER_PATH.md](docs/INHABITABLE_READER_PATH.md) |
+| How does astrology enter? | [docs/ASTROLOGY.md](docs/ASTROLOGY.md) |
 | What are the research/falsifier lanes? | [docs/FRONTIER_RESEARCH.md](docs/FRONTIER_RESEARCH.md) |
 | What survives mature comparison? | [docs/CREDITS_AND_REDUCTIONS.md](docs/CREDITS_AND_REDUCTIONS.md) |
 | What will this branch become? | [BRANCH_TREE.md](BRANCH_TREE.md) |
@@ -49,6 +50,7 @@ Arcane Magics owns:
 - inhabited relation and Perspective-indexed meaning;
 - Authorship, Spirit/return, symbolic transformation;
 - synchronicity as PHEN/THEOPHEN object;
+- astrology as symbolic celestial indexing, with causal/physical claims separately burdened;
 - chaos-magic comparison and symbolic-operator extraction;
 - bounded ritual / sigil / servitor-like practice as typed intervention;
 - echo-chamber pathology and anti-scripture discipline;
