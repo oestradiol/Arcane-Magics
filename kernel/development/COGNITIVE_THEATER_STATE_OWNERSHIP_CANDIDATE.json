@@ -10,7 +10,8 @@
     "unit_split_pattern": "(?:[.;。]+|\\s*∧\\s*)",
     "min_margin": 0.005,
     "presentation_order_semantic": false,
-    "local_unit_internal_order_preserved": true
+    "local_unit_internal_order_preserved": true,
+    "context_argument": "context"
   },
   "tasks": {
     "T0": {
@@ -19,56 +20,6 @@
         "r1",
         "r2"
       ],
-      "faces": {
-        "ENGLISH": [
-          [
-            "<r0> knows p",
-            "<r1> knows that <r0> knows p",
-            "<r2> does not know p"
-          ],
-          [
-            "<r0> knows p",
-            "<r1> knows that <r0> knows p",
-            "<r2> does not know p"
-          ]
-        ],
-        "JAPANESE": [
-          [
-            "<r0>はpを知っている",
-            "<r1>は<r0>がpを知っていることを知っている",
-            "<r2>はpを知らない"
-          ],
-          [
-            "<r0>はpを知っている",
-            "<r1>は<r0>がpを知っていることを知っている",
-            "<r2>はpを知らない"
-          ]
-        ],
-        "BRAZILIAN_PORTUGUESE": [
-          [
-            "<r0> sabe p",
-            "<r1> sabe que <r0> sabe p",
-            "<r2> não sabe p"
-          ],
-          [
-            "<r0> sabe p",
-            "<r1> sabe que <r0> sabe p",
-            "<r2> não sabe p"
-          ]
-        ],
-        "MATHEMATICS": [
-          [
-            "k_<r0>(p)",
-            "k_<r1>(k_<r0>(p))",
-            "¬k_<r2>(p)"
-          ],
-          [
-            "k_<r0>(p)",
-            "k_<r1>(k_<r0>(p))",
-            "¬k_<r2>(p)"
-          ]
-        ]
-      },
       "state_program": {
         "participant_roles": [
           "r0",
@@ -150,6 +101,56 @@
         "residuals": [
           "z0"
         ]
+      },
+      "contexts": {
+        "ENGLISH": [
+          [
+            "<r0> knows p",
+            "<r1> knows that <r0> knows p",
+            "<r2> does not know p"
+          ],
+          [
+            "<r0> knows p",
+            "<r1> knows that <r0> knows p",
+            "<r2> does not know p"
+          ]
+        ],
+        "JAPANESE": [
+          [
+            "<r0>はpを知っている",
+            "<r1>は<r0>がpを知っていることを知っている",
+            "<r2>はpを知らない"
+          ],
+          [
+            "<r0>はpを知っている",
+            "<r1>は<r0>がpを知っていることを知っている",
+            "<r2>はpを知らない"
+          ]
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          [
+            "<r0> sabe p",
+            "<r1> sabe que <r0> sabe p",
+            "<r2> não sabe p"
+          ],
+          [
+            "<r0> sabe p",
+            "<r1> sabe que <r0> sabe p",
+            "<r2> não sabe p"
+          ]
+        ],
+        "MATHEMATICS": [
+          [
+            "k_<r0>(p)",
+            "k_<r1>(k_<r0>(p))",
+            "¬k_<r2>(p)"
+          ],
+          [
+            "k_<r0>(p)",
+            "k_<r1>(k_<r0>(p))",
+            "¬k_<r2>(p)"
+          ]
+        ]
       }
     },
     "T1": {
@@ -158,56 +159,6 @@
         "r1",
         "r2"
       ],
-      "faces": {
-        "ENGLISH": [
-          [
-            "<r0> tells <r1> p",
-            "<r1> can answer p",
-            "<r2> was absent"
-          ],
-          [
-            "<r0> tells <r1> p",
-            "<r1> can answer p",
-            "<r2> was absent"
-          ]
-        ],
-        "JAPANESE": [
-          [
-            "<r0>は<r1>にpを伝える",
-            "<r1>はpに答えられる",
-            "<r2>は不在だった"
-          ],
-          [
-            "<r0>は<r1>にpを伝える",
-            "<r1>はpに答えられる",
-            "<r2>は不在だった"
-          ]
-        ],
-        "BRAZILIAN_PORTUGUESE": [
-          [
-            "<r0> conta p a <r1>",
-            "<r1> pode responder sobre p",
-            "<r2> estava ausente"
-          ],
-          [
-            "<r0> conta p a <r1>",
-            "<r1> pode responder sobre p",
-            "<r2> estava ausente"
-          ]
-        ],
-        "MATHEMATICS": [
-          [
-            "absent(<r2>)",
-            "cananswer(<r1>,p)",
-            "tell(<r0>,<r1>,p)"
-          ],
-          [
-            "absent(<r2>)",
-            "cananswer(<r1>,p)",
-            "tell(<r0>,<r1>,p)"
-          ]
-        ]
-      },
       "state_program": {
         "participant_roles": [
           "r0",
@@ -279,6 +230,56 @@
         "residuals": [
           "z0"
         ]
+      },
+      "contexts": {
+        "ENGLISH": [
+          [
+            "<r0> tells <r1> p",
+            "<r1> can answer p",
+            "<r2> was absent"
+          ],
+          [
+            "<r0> tells <r1> p",
+            "<r1> can answer p",
+            "<r2> was absent"
+          ]
+        ],
+        "JAPANESE": [
+          [
+            "<r0>は<r1>にpを伝える",
+            "<r1>はpに答えられる",
+            "<r2>は不在だった"
+          ],
+          [
+            "<r0>は<r1>にpを伝える",
+            "<r1>はpに答えられる",
+            "<r2>は不在だった"
+          ]
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          [
+            "<r0> conta p a <r1>",
+            "<r1> pode responder sobre p",
+            "<r2> estava ausente"
+          ],
+          [
+            "<r0> conta p a <r1>",
+            "<r1> pode responder sobre p",
+            "<r2> estava ausente"
+          ]
+        ],
+        "MATHEMATICS": [
+          [
+            "absent(<r2>)",
+            "cananswer(<r1>,p)",
+            "tell(<r0>,<r1>,p)"
+          ],
+          [
+            "absent(<r2>)",
+            "cananswer(<r1>,p)",
+            "tell(<r0>,<r1>,p)"
+          ]
+        ]
       }
     },
     "T2": {
@@ -287,48 +288,6 @@
         "r1",
         "r2"
       ],
-      "faces": {
-        "ENGLISH": [
-          [
-            "<r0> happens before <r1>",
-            "<r1> happens before <r2>"
-          ],
-          [
-            "<r1> happens after <r0>",
-            "<r2> happens after <r1>"
-          ]
-        ],
-        "JAPANESE": [
-          [
-            "<r0>は<r1>より前に起こる",
-            "<r1>は<r2>より前に起こる"
-          ],
-          [
-            "<r1>は<r0>の後に起こる",
-            "<r2>は<r1>の後に起こる"
-          ]
-        ],
-        "BRAZILIAN_PORTUGUESE": [
-          [
-            "<r0> acontece antes de <r1>",
-            "<r1> acontece antes de <r2>"
-          ],
-          [
-            "<r1> acontece depois de <r0>",
-            "<r2> acontece depois de <r1>"
-          ]
-        ],
-        "MATHEMATICS": [
-          [
-            "t(<r0>)<t(<r1>)",
-            "t(<r1>)<t(<r2>)"
-          ],
-          [
-            "t(<r1>)>t(<r0>)",
-            "t(<r2>)>t(<r1>)"
-          ]
-        ]
-      },
       "state_program": {
         "participant_roles": [],
         "static_participants": [
@@ -378,6 +337,48 @@
           }
         ],
         "residuals": []
+      },
+      "contexts": {
+        "ENGLISH": [
+          [
+            "<r0> happens before <r1>",
+            "<r1> happens before <r2>"
+          ],
+          [
+            "<r1> happens after <r0>",
+            "<r2> happens after <r1>"
+          ]
+        ],
+        "JAPANESE": [
+          [
+            "<r0>は<r1>より前に起こる",
+            "<r1>は<r2>より前に起こる"
+          ],
+          [
+            "<r1>は<r0>の後に起こる",
+            "<r2>は<r1>の後に起こる"
+          ]
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          [
+            "<r0> acontece antes de <r1>",
+            "<r1> acontece antes de <r2>"
+          ],
+          [
+            "<r1> acontece depois de <r0>",
+            "<r2> acontece depois de <r1>"
+          ]
+        ],
+        "MATHEMATICS": [
+          [
+            "t(<r0>)<t(<r1>)",
+            "t(<r1>)<t(<r2>)"
+          ],
+          [
+            "t(<r1>)>t(<r0>)",
+            "t(<r2>)>t(<r1>)"
+          ]
+        ]
       }
     }
   },
@@ -411,5 +412,6 @@
     "STOP_WITHHOLD_SAFETY_LAW",
     "ROLLBACK_PARENT_CUSTODY"
   ],
-  "claim_fence": "State-ownership candidate only. Source removal and independent evaluation remain required before any Internalizer claim."
+  "claim_fence": "State-ownership candidate only. Source removal and independent evaluation remain required before any Internalizer claim.",
+  "output_state_schema": "Venus.CognitiveTheaterState.v0.1"
 }
