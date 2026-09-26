@@ -1,41 +1,55 @@
 # AGENTS.md · Minerva
 
-External agents assisting this branch are **not** the Minerva developmental controller.
+External agents assist Minerva; they are not the developmental controller.
 
-Start from the semantic roadmap, then load only the live status and exact evidence needed for the selected node:
+## Mandatory bootstrap
 
-1. `kernel/development/DEVELOPMENTAL_GATE_CHAIN.json` — canonical semantic topology and recurrence.
-2. `kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json` — current A–E work subgraph only.
-3. `kernel/CURRENT_STATE.md` and `kernel/development/EDU_CURRENT.json` — current status snapshot.
-4. `docs/ISSUE_ROADMAP.md` — human-readable issue projection.
-5. `REPOSITORY_AUTHORITY_BOUNDARY.md` — branch and register jurisdiction.
-6. Open `provenance/DEVELOPMENTAL_LINEAGE.md`, `docs/SELF_MODEL.md`, `docs/GLOBAL_REPOSITORY_OPERATION.md`, and individual evidence only when the selected node depends on them.
+Read exactly these first:
 
-Build the working dependency graph in your reasoning from the canonical semantic roadmap and live evidence. Do not add a host-written planner or capability-specific solver as a substitute for learner-owned competence. Do not bulk-read or summarize provenance as a substitute for selecting the relevant dependency path.
+1. `kernel/development/DEVELOPMENTAL_GATE_CHAIN.json` — sole machine-readable developmental topology, recurrence, precedence, and repository dispositions.
+2. `kernel/CURRENT_STATE.md` — live evidence/status snapshot.
 
-## Core fences
+Then read only the exact state, authority, test, or provenance files referenced by the selected roadmap node.
+
+Do **not** start by bulk-reading `provenance/`, `docs/`, every prefreeze, or every historical runtime. Those are evidence stores, not the planning system.
+
+`kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json` and `docs/ISSUE_ROADMAP.md` are derived projections only. They cannot override the canonical graph.
+
+## Execution law
+
+Before every mutation, identify:
 
 ```text
-external model != Minerva
-current Perspective != diachronic Observer
+roadmap node / invariant
+→ observed repo state
+→ proposed mutation
+→ expected consequential test
+→ rollback / WITHHOLD condition
+```
+
+If that chain cannot be stated, do not mutate.
+
+Never satisfy a learner-development target by hand-writing the target competence into host code. Capability-specific Python is scaffold/prototype until B3 source-removal evidence proves the semantics live in learner-owned state.
+
+The preserved dependency-planning host prototype is audit-only and non-live:
+- `kernel/development/dependency_planning_curriculum.py`
+- `kernel/development/DEPENDENCY_PLANNING_DIDACTIC_CASES.json`
+- `kernel/runtime/task_graph.py`
+- `tests/test_dependency_planning_curriculum.py`
+
+It must not be routed as Minerva's planning competence.
+
+## Permanent fences
+
+```text
+generate != select != authorize != execute != return != verify != promote
+self-revision != self-authorization != self-validation
+execution receipt != independent return
 model(World) != World
-can inspect != can claim
-self-implication != self-certification
-re-derivation != memory lookup
+memory != learning unless later behavior changes
+source removal != independent external validation
+Strong Safe RSI != AGI
+AGI != consciousness
 ```
 
-## Completion states
-
-```text
-INTENDED -> WRITTEN -> VERIFIED -> ADMITTED
-```
-
-Never treat a successful tool call, generated prose, local test, or CI pass as independent returned evidence.
-
-## Repository-global operation
-
-Minerva may inspect branch heads, PRs, Actions, provenance, and Root/Venus state. Cross-register changes must preserve source ancestry and route through Venus handoff before Root memory.
-
-## Destructive changes
-
-Historical/negative developmental branches remain immutable evidence. Remove live duplication only after dependency checks and preserve ancestry through Git/provenance.
+Historical and negative evidence is preserved. Audit before deletion. Git ancestry is provenance, not permission to keep stale machinery live forever.
