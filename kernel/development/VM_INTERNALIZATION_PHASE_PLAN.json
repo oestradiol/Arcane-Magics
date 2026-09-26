@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.VMInternalizationPhasePlan.v0.4",
+  "schema": "Venus.VMInternalizationPhasePlan.v0.5",
   "date": "2026-09-26",
   "status": "PREFROZEN_PHASE_PLAN_NOT_INTERNALIZATION_RESULT",
   "objective": "Shrink WorldMirror's capability-specific semantic Python by moving earned consequence-bearing policies into learner-owned state, while retaining or replacing generic execution substrate and preserving external correction/authority relations.",
@@ -24,7 +24,10 @@
     "MATURE_REDUCTION_BEATS_INTERNALIZING_UNNECESSARY_COMPLEXITY",
     "LEXICAL_GROUNDING!=THEATER_BINDING",
     "RELATION_CLASSIFICATION!=PARTICIPANT_KFS_RECONSTRUCTION",
-    "BAG_OF_EVENTS!=MUSIC_ORDER_INHABITATION"
+    "BAG_OF_EVENTS!=MUSIC_ORDER_INHABITATION",
+    "DISCOURSE_PRESENTATION_ORDER!=EVENT_ORDER",
+    "LOCAL_OPERATOR_COMPOSITION!=WHOLE_SCENE_TEMPLATE",
+    "LANGUAGE_OPERATOR_STRUCTURE!=EXPLICIT_THEATER_STATE"
   ],
   "runtime_dispositions": [
     {
@@ -215,7 +218,7 @@
   "phase_order": [
     "P0 repair audit/provenance drift and require full branch audit",
     "P1 retain mature-reduced generic runtime rather than internalizing needless complexity",
-    "P1.5 factor foundational cognition into Language (symbol/grammar), Music (order-sensitive temporal inhabitation), Theater (indexed participant/KFS enactment), and developmental Past/Now/Future; independently ground reusable face atoms before interpreting relation×face failures as Theater failures",
+    "P1.5 factor foundational cognition into Language (local symbolic operators/presentation), Music (causal event/history order), Theater (indexed participant/KFS state), and developmental Past/Now/Future; Fresh5 earned bounded operator separation, but explicit TheaterState composition/intervention remains open",
     "P2 internalize one developmental policy at a time only after the foundational curriculum has a bounded returned disposition; begin with learner problem formation when a fresh discriminator is available",
     "P3 shrink autonomous worker after problem/study/proposal/query policies become state-owned",
     "P4 internalize memory retrieval/crystallization policy while keeping storage and external sources distinct",
@@ -245,8 +248,22 @@
       "fresh2_commutative_accuracy": 0,
       "fresh2_G2_indexed_kfs_accuracy": 0.625,
       "fresh2_G3_symbolic_order_accuracy": 1,
-      "status": "FOUNDATIONAL_GATE_PARTIAL_G3_BOUND_PASS_G2_OPEN",
-      "next_residual": "LEARN_PAIRWISE_RELATIONAL_THEATER_GRAPH_FOR_INDEXED_KFS_THEN_COMPOSE_WITH_G3_ORDER"
+      "status": "LOCAL_OPERATOR_FACTOR_PASS__EXPLICIT_STATE_AND_SOURCE_REMOVAL_OPEN",
+      "next_residual": "COMPILE_LOCAL_OPERATORS_INTO_EXPLICIT_INDEXED_THEATER_STATE_AND_TEST_FRESH_INTERVENTIONS",
+      "canonical_language_extract_ref": "provenance/canonical-extracts/R194_LANGUAGE_TO_COGNITIVE_THEATER_CAUSAL_EXTRACT_2026-09-26.md",
+      "fresh3_ref": "kernel/development/COGNITIVE_THEATER_RELATIONAL_GRAPH_FRESH3_RESULT.json",
+      "fresh3_pairwise_accuracy": 0.4375,
+      "fresh4_ref": "kernel/development/COGNITIVE_THEATER_JOINT_SCENE_FRESH4_RESULT.json",
+      "fresh4_joint_accuracy": 0.4375,
+      "fresh5_ref": "kernel/development/COGNITIVE_THEATER_LOCAL_OPERATOR_FRESH5_RESULT.json",
+      "fresh5_local_operator_accuracy": 1,
+      "fresh5_strongest_nonlocal_accuracy": 0.6666666666666666,
+      "G2_indexed_kfs_status": "PASS_BOUNDED_AT_FRESH5_LOCAL_OPERATOR_SCOPE",
+      "G3_symbolic_order_status": "PASS_BOUNDED_AT_FRESH5_LOCAL_OPERATOR_SCOPE",
+      "G4_explicit_theater_state_status": "OPEN",
+      "general_theater_claim": false,
+      "general_music_claim": false,
+      "internalization_claim": false
     }
   },
   "promotion_authority": false,
