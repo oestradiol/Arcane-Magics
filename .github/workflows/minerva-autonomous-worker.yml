@@ -179,6 +179,23 @@ jobs:
             echo "has_candidate=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Probe semantic-trace B1 abstraction
+        id: semantic_b1
+        if: steps.semantic_trace.outputs.has_candidate == 'true'
+        run: |
+          python scripts/evaluate_network_semantic_trace_abstraction.py \
+            --query /tmp/minerva/NETWORK_QUERY.json \
+            --encounter /tmp/minerva/NETWORK_ENCOUNTER_1.json \
+            --state kernel/development/NETWORK_SEMANTIC_TRACE_SEARCH_STATE.json \
+            --output /tmp/minerva/NETWORK_SEMANTIC_TRACE_ABSTRACTION_PROBE.json
+          status="$(python -c 'import json; print(json.load(open("/tmp/minerva/NETWORK_SEMANTIC_TRACE_ABSTRACTION_PROBE.json"))["status"])')"
+          if [ "$status" = "PASS_BOUNDED_B1_STRUCTURAL_ABSTRACTION" ]; then
+            echo "passed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "passed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+
       - name: Execute memory-derived network query 2
         id: network2
         if: steps.network1.outputs.has_sources == 'true'
@@ -197,7 +214,7 @@ jobs:
 
       - name: Execute frozen semantic-trace query 2
         id: semantic_network2
-        if: steps.semantic_trace.outputs.has_candidate == 'true'
+        if: steps.semantic_trace.outputs.has_candidate == 'true' && steps.semantic_b1.outputs.passed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -206,7 +223,7 @@ jobs:
             --output /tmp/minerva/NETWORK_SEMANTIC_ENCOUNTER_2.json
 
       - name: Compare semantic trace against frozen lexical baseline
-        if: steps.semantic_trace.outputs.has_candidate == 'true'
+        if: steps.semantic_trace.outputs.has_candidate == 'true' && steps.semantic_b1.outputs.passed == 'true'
         run: |
           python scripts/evaluate_network_semantic_trace.py \
             --prefreeze kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE.json \
