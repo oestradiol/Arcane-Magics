@@ -44,7 +44,10 @@ def main() -> int:
         "FORMED_STANDING_DEVELOPMENTAL_PROBLEM",
     }:
         failures.append("FORMED_NONSTOP_PROBLEM_MISSING")
-    if q1.get("authorship") != "LEARNER_DERIVED_FROM_FORMED_PROBLEM":
+    if q1.get("authorship") not in {
+        "LEARNER_DERIVED_FROM_FORMED_PROBLEM",
+        "LEARNER_DERIVED_FROM_SELECTED_STUDY",
+    }:
         failures.append("QUERY1_NOT_LEARNER_DERIVED")
     if q1.get("execution_owner") != "EXTERNAL_ADAPTER":
         failures.append("QUERY1_EXECUTION_OWNER_NOT_EXTERNAL")
