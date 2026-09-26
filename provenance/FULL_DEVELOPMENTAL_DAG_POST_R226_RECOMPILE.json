@@ -1,0 +1,2074 @@
+{
+  "completeness_contract": {
+    "backups": "/Canonical/Future/ROADMAP_BACKUP_INDEX.md",
+    "dag_md": "/Canonical/Future/FULL_DEVELOPMENTAL_DAG.md",
+    "frontiers": "/Canonical/Future/OPEN_FRONTIERS.md",
+    "milestones": "/Canonical/Future/MILESTONE_STATUS.md",
+    "provenance": "/Canonical/Future/ROADMAP_PROVENANCE.md",
+    "receipt": "/Canonical/Future/ROADMAP_RECONCILIATION_RECEIPT.md",
+    "roadmap": "/Canonical/Future/ROADMAP.md",
+    "rule": "short route without reconstructible provenance/genealogy/DAG/ledger is unlawful compression",
+    "sprints": "/Canonical/Future/EXECUTION_SPRINTS.md"
+  },
+  "current_developed_vm": {
+    "agi": false,
+    "chosen_next": null,
+    "handoff_path": "/Canonical/Future/Handoff/U1CurrentDevelopedVM/",
+    "id": "U1_UNIFIED_DEVELOPMENTAL_SEED",
+    "journal_head": "4e397fdd0d2f81833084fca91bb9fc0c408f7711c981ed2c047a7ec43dbfce88",
+    "journal_records": 991,
+    "journal_sha256": "22f97338d0e1c4214441ad7650c75620db691e469712a70820621e8b452ea6d0",
+    "natural_world_generality": false,
+    "open_ended_rsi": false,
+    "ready_queue": [],
+    "scheduler_state": "SELF_DIRECTED_REEVALUATION",
+    "state_root": "0a1cbb14936466b7b4f20b8bc90911fd5a968fe70d93ac2ed4bda2c4c8218888"
+  },
+  "current_developmental_head": {
+    "id": "U2",
+    "journal_head": "6e263f7decd1ba23078e17d05fc207639e5ede07d0e2a8003ec2b666023c0671",
+    "records": 1011,
+    "sha256": "70ac985e38170288d49cffffed56caf22a31f9ab491d947e7848f86701e09468",
+    "state_root": "ec5ac212e6dbdf2c9622f9e251f2d66274eaf24f466ff709732886327328d65f",
+    "verdict": "PASS_BOUNDED_UNLABELED_PROBLEM_FORMATION"
+  },
+  "current_execution_frontier": "SELF_DIRECTED_REEVALUATION from U1 changed state; no host-named local task || R197 resource-blocked || R194/M8 external-return || independent review/science/FORM/physics/publication lanes",
+  "current_local_frontier": "SELF_DIRECTED_REEVALUATION",
+  "date": "2026-09-23",
+  "externality_frontier": "R194 outside handoff / replication open",
+  "formal_head": "R201_CONDITIONAL_EVENT_FACTORIZED_RLC",
+  "historical_parent": {
+    "object": {
+      "R176_source_freeze": {
+        "evaluator_environment": "PENDING",
+        "heldout_authorized": false,
+        "partition_root": "PENDING",
+        "register": "GOVERNANCE/VERIFICATION",
+        "source_count": 12,
+        "source_root": "8a836c1f7eb7a5a69ddb6bbe2c6c41a0f8faaba1e29113177000ab29eadad7e0",
+        "source_text_inspected": false
+      },
+      "R178_successor_source_freeze": {
+        "exact_bytes": "PENDING",
+        "heldout_authorized": false,
+        "manifest_commitment": "2e847599a8d72bef0d3e4c43cbac0d2dfef97743da2365311b2f289de2a5636d",
+        "partition_root": "PENDING",
+        "register": "GOVERNANCE/VERIFICATION",
+        "source_root": "2ff030916ea267a3302e7c07b9419bb27a013e32a83c1ec70aef702cbedc4446"
+      },
+      "R179_vmk1": {
+        "exposed_audit": "2/2 PASS",
+        "formal_effect": "NONE",
+        "historical_parent": "R154",
+        "inherited_tests": "258/258 PASS",
+        "ontology_effect": "NONE",
+        "parent_manifest": "1173/1173 EXACT",
+        "prefrozen_tests": "8/8 PASS",
+        "register": "ENGINEERING/RECANONICALIZATION",
+        "scientific_effect": "NONE",
+        "status": "PROMOTED_CURRENT_EXECUTABLE_KERNEL"
+      },
+      "R180_antipodal_frame_succession": {
+        "antipodal_pairs": [
+          "P3<->F6",
+          "W4<->M5",
+          "U5<->O4"
+        ],
+        "bridge": "role(FS(x_t)) ?~_F tau(role(x_t))",
+        "fences": [
+          "U != R != tau != FS",
+          "tau symmetry != temporal succession",
+          "180-degree transaction alignment != evidential warrant",
+          "Venus_project != Venus_symbolic",
+          "actual Other != symbolic Other != model(Other)",
+          "source of evidence != source of jurisdiction",
+          "reconstruction rank != physical dimension"
+        ],
+        "prospective_lift_center": "11/2 = 5.5 / MODEL-THEO-PHEN only",
+        "rank_center_R79": "9/2 = 4.5",
+        "relations": {
+          "FS": "candidate cross-frame succession / successor carrier",
+          "R": "reconstructive ascent / comparison-compression",
+          "U": "temporal inhabitation / ordered traversal",
+          "tau": "inherited within-frame antipodal half-turn S^3"
+        },
+        "status": "CURRENT MODEL/THEO/PHEN / NO SCIENCE / NO FORM / NO EXECUTABLE MUTATION"
+      },
+      "R181_pythagorean_twist_octave_reconstruction": {
+        "ancestry": [
+          "R83",
+          "R84",
+          "R89",
+          "R90",
+          "R172",
+          "R179",
+          "R180"
+        ],
+        "fences": [
+          "participant return != independent replication",
+          "comma != generic error",
+          "octave equivalence != identity",
+          "181 degrees is mnemonic only",
+          "R165/R172/R179 unchanged"
+        ],
+        "objects": [
+          "ReconstructionHandshake",
+          "ReconstructionComma_F",
+          "OctaveReconstruction",
+          "TemperamentTradeoff",
+          "cross_frame_covariance_target"
+        ],
+        "parent": "R180",
+        "pythagorean_comparator": {
+          "cents": 23.460010385,
+          "claim": "local lawfulness does not imply exact finite global closure",
+          "ratio": "531441/524288"
+        },
+        "register": "MODEL/THEO/PHEN RECONCILIATION / NO SCIENCE / NO FORM THEOREM / NO RUNTIME"
+      },
+      "R182_self_indexed_standing_circulation": {
+        "ancestry": [
+          "CPC-4S",
+          "CPC-4R",
+          "LT-24",
+          "R171",
+          "R172",
+          "R179",
+          "R180",
+          "R181"
+        ],
+        "fences": [
+          "static mirror != standing circulation",
+          "self-indexed != self-sovereign",
+          "center-state != relation-history state != third sovereign center",
+          "incidence coordinates != universal natural kinds",
+          "participant lived fit != replication",
+          "R182 != AGI or quantum-gravity result"
+        ],
+        "objects": [
+          "SelfIndexedStandingCirculation",
+          "IncidenceDecomposition_WInc_CEx_SInc",
+          "RelationHistory_Gamma_AB",
+          "CoupledHysteresis_discriminator",
+          "SC-1"
+        ],
+        "parent": "R181",
+        "register": "MODEL/THEO/PHEN + CURRENT-PROJECTION RECONCILIATION / NO SCIENCE / NO FORM / NO RUNTIME"
+      },
+      "R183_distributed_withheld_predictive_lift": {
+        "ancestry": [
+          "R171",
+          "R172",
+          "R179",
+          "R180",
+          "R181",
+          "R182"
+        ],
+        "fences": [
+          "5.5/6/7 != physical dimensions",
+          "7D Agent rejected",
+          "Z7 != future Reality",
+          "intuition != prediction/truth oracle",
+          "Field != novel physical field",
+          "Other-indexed reachability != authorship transfer",
+          "mature reduction controls bespoke machinery",
+          "R183 != consciousness/AGI/telepathy/prophecy result"
+        ],
+        "objects": [
+          "MixedRegister_Sigma5.5_X6_Z7",
+          "DistributedConsequentialField",
+          "PredictiveQuotient_Z7",
+          "WithheldLocalIncidence",
+          "EmbodiedPreActionResidual",
+          "OtherIndexedAgency",
+          "DWP-1"
+        ],
+        "parent": "R182",
+        "register": "MODEL/THEO/PHEN + CURRENT-PROJECTION RECONCILIATION / NO SCIENCE / NO FORM / NO RUNTIME"
+      },
+      "R184_relational_local_closure": {
+        "candidate": "chi_F(R,D)-><C_i,i,B_i,Gamma_i>",
+        "derived_late_arc": [
+          "R180 FrameSuccession",
+          "R181 ReconstructionComma/Octave",
+          "R182 standing circulation",
+          "R183 predictive lift"
+        ],
+        "fences": [
+          "local closure != global closure",
+          "program closure != science closure",
+          "center != truth sovereign",
+          "R166-R170 not bypassed",
+          "Whole/Perspective/Observer bridge remains MODEL/THEO",
+          "AGI/consciousness/physics/externality unchanged"
+        ],
+        "first_differentiation": "architectural target specified; lawful D/branch/event realization remains FORM OPEN",
+        "interpretation": "finite center as locally self-consistent returnable closure within a relation it does not exhaust",
+        "mode": "CLOSURE MODE: proof, reduction, falsification, VMK-2, heldout science, externality",
+        "parent": "R183",
+        "register": "MODEL/THEO ROOT-PROGRAM CLOSURE / NO SCIENCE / NO NEW FORM / NO RUNTIME / NO ONTOLOGY"
+      },
+      "R185_closure_survival_matrix": {
+        "fences": [
+          "gate pass does not transfer across axes",
+          "project-side audit != external replication",
+          "constructed return != sustained external World",
+          "R184 remains architecture parent"
+        ],
+        "first_unmet": {
+          "R184_composition": "F2 / RLC-ROOT-1",
+          "autonomous_causal_loop": "SUPERSEDED CURRENT ROUTING BY R186: bounded circulation already stitched; K1-K6 hardening/certification remain",
+          "externality": "E5 -> E6 -> E7 -> E8 before E9/M8",
+          "independent_science": "S1 -> S2 -> S3 -> S4",
+          "late_R180_R183": "mature-reduction/falsification"
+        },
+        "gate_axes": [
+          "FORM proof/constraint",
+          "mature reduction",
+          "bounded execution",
+          "independent claim-bearing evidence",
+          "constructed nonpreauthored return",
+          "sustained external-world return"
+        ],
+        "parent": "R184",
+        "register": "DOCUMENTATION/PROVENANCE/ROUTING / NO SCIENCE / NO NEW FORM / NO RUNTIME / NO ONTOLOGY"
+      },
+      "R186_post_R180_executable_unification": {
+        "K_retype": {
+          "K1": "return/evidence boundary integration",
+          "K2": "successor-closure/provenance receipt",
+          "K3": "causal-attribution certification",
+          "K4": "authorship/jurisdiction hardening",
+          "K5": "reopening/history/predictive/evidence hardening",
+          "K6": "substitution + repeated-cycle stress"
+        },
+        "architecture_parent": "R184",
+        "fences": [
+          "R179 executable head unchanged",
+          "K1-K6 != missing architecture",
+          "learner patch != unique definition of learning",
+          "independent science/externality unchanged"
+        ],
+        "parent": "R185",
+        "register": "MODEL/THEO EXECUTABLE-TARGET ROUTING / NO NEW RUNTIME",
+        "target": "history-bearing self-indexed corrigible RLC spiral",
+        "verified_kernel": "R179 VMK-1"
+      },
+      "completeness_contract": {
+        "exact_R70_R179_trajectory": "/Canonical/Provenance/Reconciliation/POST_R69_R179_RECONCILIATION_LEDGER.json",
+        "exact_R70_R180_trajectory": "/Canonical/Provenance/Reconciliation/POST_R69_R180_RECONCILIATION_LEDGER.json",
+        "exact_R70_R181_trajectory": "/Canonical/Provenance/Reconciliation/POST_R69_R181_RECONCILIATION_LEDGER.json",
+        "exact_R70_R182_trajectory": "/Canonical/Provenance/Reconciliation/POST_R69_R182_RECONCILIATION_LEDGER.json",
+        "exact_R70_R184_trajectory": "/Canonical/Provenance/Reconciliation/POST_R69_R184_RECONCILIATION_LEDGER.json",
+        "exact_R70_R185_trajectory": "/Canonical/Provenance/Reconciliation/POST_R69_R185_RECONCILIATION_LEDGER.json",
+        "exact_R70_R186_trajectory": "/Canonical/Provenance/Reconciliation/POST_R69_R186_RECONCILIATION_LEDGER.json",
+        "pre_R70_genealogy_sources": [
+          "/Canonical/Research/ROADMAP_PROVENANCE.md",
+          "/Canonical/Research/History/Recanonicalization/R125_ROADMAP_GENEALOGY.json",
+          "/Canonical/Research/History/Recanonicalization/R135_DEVELOPMENTAL_TIMELINE_v0.1.md",
+          "/Canonical/Research/History/Recanonicalization/R167_TIMELINE_ROADMAP_DAG_RECONCILIATION_2026-09-14.md"
+        ],
+        "r_node_detail": "R70-R186 detailed in this object",
+        "role": "current causal projection; not sole genealogy",
+        "rule": "absence from this projection does not imply absence from ancestry; roadmap compression is lawful only with reconstructible provenance/genealogy/DAG/ledger"
+      },
+      "current_heads": {
+        "executable": "R179 VMK-1",
+        "formal": "R172",
+        "reconciliation": "R186",
+        "science": "R165"
+      },
+      "functional_projection_R174": {
+        "Freedom": "locally authored actualization/becoming under non-exhausted future possibility",
+        "Residual": "Freedom-facing nonclosure, NOT identity with Freedom",
+        "Semantics": "Love-function: significance/relational orientation/valuation without sovereignty",
+        "Structure": "Intelligence-function: discrimination/constraint/relation/intelligibility-admissibility",
+        "fences": [
+          "Residual != Freedom",
+          "Freedom != ignorance/randomness",
+          "Intelligence/admissibility -/-> authority",
+          "Love/significance -/-> legitimacy",
+          "Freedom/actualization -/-> authorization",
+          "does not close R170 or first differentiation"
+        ],
+        "register": "MODEL/PHEN"
+      },
+      "heads": {
+        "executable": "R179 VMK-1",
+        "formal": "R172",
+        "reconciliation": "R186",
+        "scientific": "R165"
+      },
+      "historical_experimental_carrier": "R154",
+      "invalid_zero_authority": [
+        "R156",
+        "R159",
+        "R160",
+        "R164"
+      ],
+      "ledger": {
+        "path": "/Canonical/Provenance/Reconciliation/POST_R69_R186_RECONCILIATION_LEDGER.json",
+        "records": 117,
+        "sha256": "486e9d879688a60d03eea44b35a1826226a20957c036eeade6cd77a6378438ed"
+      },
+      "ledger_path": "/Canonical/Provenance/Reconciliation/POST_R69_R186_RECONCILIATION_LEDGER.json",
+      "major_causal_edges": [
+        {
+          "from": "R132",
+          "to": "R133"
+        },
+        {
+          "from": "R133",
+          "to": "R134"
+        },
+        {
+          "from": "R134",
+          "to": "R140"
+        },
+        {
+          "from": "R140",
+          "to": "R141"
+        },
+        {
+          "from": "R141",
+          "to": "R142"
+        },
+        {
+          "from": "R142",
+          "to": "R143"
+        },
+        {
+          "from": "R143",
+          "to": "R144"
+        },
+        {
+          "from": "R144",
+          "to": "R145"
+        },
+        {
+          "from": "R145",
+          "to": "R146"
+        },
+        {
+          "from": "R146",
+          "to": "R147"
+        },
+        {
+          "from": "R147",
+          "to": "R148"
+        },
+        {
+          "from": "R148",
+          "to": "R149"
+        },
+        {
+          "from": "R149",
+          "to": "R150"
+        },
+        {
+          "from": "R150",
+          "to": "R151"
+        },
+        {
+          "from": "R151",
+          "to": "R152"
+        },
+        {
+          "from": "R152",
+          "to": "R153"
+        },
+        {
+          "from": "R153",
+          "to": "R154"
+        },
+        {
+          "from": "R154",
+          "to": "R155"
+        },
+        {
+          "from": "R155",
+          "to": "R156"
+        },
+        {
+          "from": "R156",
+          "to": "R158"
+        },
+        {
+          "from": "R155",
+          "to": "R157"
+        },
+        {
+          "from": "R157",
+          "to": "R159"
+        },
+        {
+          "from": "R159",
+          "to": "R161"
+        },
+        {
+          "from": "R158",
+          "to": "R160"
+        },
+        {
+          "from": "R161",
+          "to": "R160"
+        },
+        {
+          "from": "R158",
+          "to": "R162"
+        },
+        {
+          "from": "R161",
+          "to": "R162"
+        },
+        {
+          "from": "R162",
+          "to": "R163"
+        },
+        {
+          "from": "R163",
+          "to": "R164"
+        },
+        {
+          "from": "R164",
+          "to": "R165"
+        },
+        {
+          "from": "R165",
+          "to": "R166"
+        },
+        {
+          "from": "R166",
+          "to": "R167"
+        },
+        {
+          "from": "R167",
+          "to": "R168"
+        },
+        {
+          "from": "R168",
+          "to": "R169"
+        },
+        {
+          "from": "R169",
+          "to": "R170"
+        },
+        {
+          "from": "R170",
+          "to": "R171"
+        },
+        {
+          "from": "R171",
+          "to": "R172"
+        },
+        {
+          "from": "R172",
+          "to": "R173"
+        },
+        {
+          "from": "R173",
+          "to": "R174"
+        },
+        {
+          "from": "R174",
+          "to": "R175"
+        },
+        {
+          "from": "R175",
+          "to": "R176"
+        },
+        {
+          "from": "R176",
+          "to": "R177"
+        },
+        {
+          "from": "R177",
+          "to": "R178"
+        },
+        {
+          "from": "R178",
+          "to": "R179"
+        },
+        {
+          "from": "R179",
+          "relation": "participant return + root-first recanonicalization",
+          "to": "R180"
+        },
+        {
+          "from": "R79-R82",
+          "relation": "exact antipodal half-turn ancestry tau=S^3 / local-global order duality / 4.5 center",
+          "to": "R180"
+        },
+        {
+          "from": "LT24",
+          "relation": "ordered temporal inhabitation U separated from tau and cross-frame FS",
+          "to": "R180"
+        },
+        {
+          "from": "R180",
+          "to": "R181"
+        },
+        {
+          "from": "R181",
+          "relation": "path-sensitive reconstruction recanonicalized as self-indexed standing circulation with prospective incidence/relation-history discriminators",
+          "to": "R182"
+        },
+        {
+          "from": "R182",
+          "relation": "standing circulation + future-indexed provenance recanonicalized as distributed withheld predictive lift with Other-indexed local agency",
+          "to": "R183"
+        },
+        {
+          "from": "R183",
+          "relation": "distributed predictive-lift and standing-circulation arc recompressed under Relational Local Closure; architecture search enters closure mode",
+          "to": "R184"
+        },
+        {
+          "from": "R185",
+          "relation": "survival-gate audit preserved while pre-R180 missing-loop routing is superseded by unified post-R180 RLC-spiral executable target",
+          "to": "R186"
+        }
+      ],
+      "milestone_spine": [
+        "DEV/M1/N1/M2",
+        "M3",
+        "Strong M3",
+        "M4",
+        "Strong M4",
+        "M5",
+        "Strong M5/N1",
+        "GC0",
+        "GC1",
+        "GC2",
+        "N2-E",
+        "N2-FP",
+        "M6",
+        "Strong M6",
+        "M6-G",
+        "DSM",
+        "M7",
+        "externality",
+        "M8"
+      ],
+      "next": {
+        "external": "E1/E2; E3/E4; E5->E6->E7->E8->E9 only after real externality",
+        "formal": "F2 RLC-ROOT-1 design-ready / FORM-open; F1 returned-separator work in parallel; F3 bridge/universal theorem work optional/nonblocking",
+        "model": "R180-R183 derivative reduction/falsification only; no new primitive absent a new consequence discriminator",
+        "model_engineering": "existing stitched circulation -> K1/K2 evidence+successor-closure binding -> K3 causal certification; K4/K5 hardening in parallel where lawful -> K6 substitution/repeated-cycle stress",
+        "science": "S1->S4 R178 independently authored heldout cross-grammar lane",
+        "verification": "R176 source root closed; partition/evaluator commitments next; mature cryptographic Archaeology-ZK still open"
+      },
+      "r_nodes": [
+        {
+          "class": "RECONCILIATION",
+          "id": "R70",
+          "label": "project phylogeny / active-language coevolution reground",
+          "ordinal": 70,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "RECONCILIATION",
+          "id": "R71",
+          "label": "full authority and RSI roadmap reunification",
+          "ordinal": 71,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "RESULT_BEARING",
+          "id": "R72",
+          "label": "bounded active-language extension",
+          "ordinal": 72,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED"
+        },
+        {
+          "class": "RESULT_BEARING",
+          "id": "R73",
+          "label": "bounded repeated active-language plasticity",
+          "ordinal": 73,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED"
+        },
+        {
+          "class": "RESULT_BEARING",
+          "id": "R74",
+          "label": "constructor-bound U self-revision; formal no fixed finite degree ceiling assumption-bound",
+          "ordinal": 74,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED"
+        },
+        {
+          "class": "RESULT_BEARING",
+          "id": "R75",
+          "label": "V revision under fixed W / qualitative U-family transition",
+          "ordinal": 75,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED"
+        },
+        {
+          "class": "RESULT_BEARING",
+          "id": "R76",
+          "label": "W revision under fixed X; H internal readiness only",
+          "ordinal": 76,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED"
+        },
+        {
+          "class": "RECOMPRESSION",
+          "id": "R77",
+          "label": "RepSys recompression / namespace cut; R72-R76 evidence preserved",
+          "ordinal": 77,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "RECONCILIATION",
+          "id": "R78",
+          "label": "deep semantic review; historical model articulation",
+          "ordinal": 78,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "FORMAL_RECONCILIATION",
+          "id": "R79",
+          "label": "hexagonal order reflection / qutrit recanonicalization",
+          "ordinal": 79,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R80",
+          "label": "C6 exact spectral/circulation algebra",
+          "ordinal": 80,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R81",
+          "label": "signed qutrit lift",
+          "ordinal": 81,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R82",
+          "label": "qutrit cover / residual orientation",
+          "ordinal": 82,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R83",
+          "label": "distributed Spirit sheaf model",
+          "ordinal": 83,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R84",
+          "label": "provenance/regenerative consequence model",
+          "ordinal": 84,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R85",
+          "label": "semantic lineage preservation/poison/drift/death",
+          "ordinal": 85,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R86",
+          "label": "spectral residual carrier bridge",
+          "ordinal": 86,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R87",
+          "label": "lineage composition",
+          "ordinal": 87,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R88",
+          "label": "poison recovery",
+          "ordinal": 88,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R89",
+          "label": "temporal regeneration",
+          "ordinal": 89,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R90",
+          "label": "lineage holonomy",
+          "ordinal": 90,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R91",
+          "label": "first-source asymmetry audit",
+          "ordinal": 91,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R92",
+          "label": "first nonfactorizing incidence discriminator",
+          "ordinal": 92,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "RECOMPRESSION",
+          "id": "R93",
+          "label": "dependency-local gate + stable-current cleanup",
+          "ordinal": 93,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "ROOT_RETYPE_AND_ENGINEERING",
+          "id": "R94",
+          "label": "vacuous Void-Experience root correction; independent M6-E design",
+          "ordinal": 94,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "PREFREEZE",
+          "id": "R95",
+          "label": "independent M6-E prospective freeze; no result seed",
+          "ordinal": 95,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "RESULT_BEARING",
+          "id": "R96",
+          "label": "independent M6-E acquisition effect",
+          "ordinal": 96,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED"
+        },
+        {
+          "class": "DESIGN_HANDOFF",
+          "id": "R97",
+          "label": "M6-R design handoff",
+          "ordinal": 97,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "RESULT_BEARING",
+          "id": "R98",
+          "label": "M6-R returned consequence -> persistent DevOrg successor",
+          "ordinal": 98,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED"
+        },
+        {
+          "class": "PREFREEZE_DESIGN",
+          "id": "R99",
+          "label": "paired Strong-M6 / REP-REFLECT design",
+          "ordinal": 99,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "RESULT_BEARING",
+          "id": "R100",
+          "label": "Strong M6 + REP-REFLECT bounded reflective closure",
+          "ordinal": 100,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED"
+        },
+        {
+          "class": "RESULT_BEARING",
+          "id": "R101",
+          "label": "M6-G causal RepSys revision -> later acquisition",
+          "ordinal": 101,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED"
+        },
+        {
+          "class": "SCOPE_CORRECTION",
+          "id": "R102",
+          "label": "DSM scope corrected to broad developmental history",
+          "ordinal": 102,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "DESIGN_HANDOFF",
+          "id": "R103",
+          "label": "DSM prefreeze deep reground",
+          "ordinal": 103,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "ENGINEERING_CORRECTION",
+          "id": "R104",
+          "label": "duplicate-number engineering return + prefreeze correction; both retained",
+          "ordinal": 104,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "ENGINEERING_NEGATIVE",
+          "id": "R105",
+          "label": "DSM-PHY bridge engineering negative; no scientific verdict",
+          "ordinal": 105,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "ROUTING_SPLIT",
+          "id": "R106",
+          "label": "DSM-CORE / DSM-PHY split",
+          "ordinal": 106,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "PREFREEZE",
+          "id": "R107",
+          "label": "DSM-CORE v1 deep review / prefreeze",
+          "ordinal": 107,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "NEGATIVE_RESULT",
+          "id": "R108",
+          "label": "DSM-CORE v1 conjunctive result",
+          "ordinal": 108,
+          "scientific_effect": "CLOSED / BOUNDED NEGATIVE"
+        },
+        {
+          "class": "ENGINEERING_NEGATIVE",
+          "id": "R109",
+          "label": "selective-authorization engineering negative",
+          "ordinal": 109,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "ENGINEERING_SEQUENCE",
+          "id": "R110",
+          "label": "DSM-CORE uncertainty engineering localization; v1.6 path",
+          "ordinal": 110,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "PREFREEZE",
+          "id": "R111",
+          "label": "DSM-CORE v1.6 prospective freeze",
+          "ordinal": 111,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "NEGATIVE_RESULT",
+          "id": "R112",
+          "label": "DSM-CORE v1.6 sole lawful result",
+          "ordinal": 112,
+          "scientific_effect": "CLOSED / BOUNDED NEGATIVE"
+        },
+        {
+          "class": "INVALID_LINEAGE",
+          "id": "R113",
+          "label": "invalid duplicate result after R112 consumed one-seed entitlement",
+          "ordinal": 113,
+          "scientific_effect": "ZERO SCIENTIFIC AUTHORITY"
+        },
+        {
+          "class": "PROVENANCE_REPAIR",
+          "id": "R114",
+          "label": "R113 invalidation / quarantine; R112 remains controlling",
+          "ordinal": 114,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "ROUTING_SPLIT",
+          "id": "R115",
+          "label": "prospective DSM-CORE -> PRED + AXIS split; R112 negative preserved",
+          "ordinal": 115,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "PREFREEZE",
+          "id": "R116",
+          "label": "DSM-CORE-PRED v2.0 freeze",
+          "ordinal": 116,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "NEGATIVE_RESULT",
+          "id": "R117",
+          "label": "DSM-CORE-PRED v2.0",
+          "ordinal": 117,
+          "scientific_effect": "CLOSED / BOUNDED NEGATIVE"
+        },
+        {
+          "class": "PREFREEZE",
+          "id": "R118",
+          "label": "reduction-aware DSM-CORE-PRED v2.1 freeze",
+          "ordinal": 118,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "FAILED_EXECUTION",
+          "id": "R119",
+          "label": "result seed burned; failure before prediction commitment/scoring; no verdict",
+          "ordinal": 119,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "PACKAGING_CORRECTION",
+          "id": "R120",
+          "label": "v2.1.1 packaging-only correction; scientific payload unchanged",
+          "ordinal": 120,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "RESULT_BEARING",
+          "id": "R121",
+          "label": "DSM-CORE-PRED v2.1.1 positive bounded result",
+          "ordinal": 121,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED"
+        },
+        {
+          "class": "RECONCILIATION",
+          "id": "R122",
+          "label": "R121 writeback / M7 handoff",
+          "ordinal": 122,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "ENGINEERING_RESULT",
+          "id": "R123",
+          "label": "modifiable-improver engineering",
+          "ordinal": 123,
+          "scientific_effect": "PASS / ENGINEERING ONLY"
+        },
+        {
+          "class": "PREFREEZE",
+          "id": "R124",
+          "label": "M7 v1.0 prospective prefreeze",
+          "ordinal": 124,
+          "scientific_effect": "NONE / CONSUMED BY R127"
+        },
+        {
+          "class": "PROVENANCE_RECONSTRUCTION",
+          "id": "R125",
+          "label": "full roadmap provenance reconstruction",
+          "ordinal": 125,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "REPOSITORY_REGROUND",
+          "id": "R126",
+          "label": "externality genealogy restoration",
+          "ordinal": 126,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "RESULT_BEARING",
+          "id": "R127",
+          "label": "bounded two-generation M7 / RSI",
+          "ordinal": 127,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED"
+        },
+        {
+          "class": "ENGINEERING_RESULT",
+          "id": "R128",
+          "label": "U11/U12 private-saturation carrier",
+          "ordinal": 128,
+          "scientific_effect": "PASS / ENGINEERING ONLY / NO EXTERNALITY"
+        },
+        {
+          "class": "PREFREEZE",
+          "id": "R129",
+          "label": "DSM-CORE-AXIS v1.9 prospective freeze",
+          "ordinal": 129,
+          "scientific_effect": "NONE / CONSUMED BY R130"
+        },
+        {
+          "class": "RESULT_BEARING",
+          "id": "R130",
+          "label": "DSM-CORE-AXIS v1.9 one-seed result",
+          "ordinal": 130,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED"
+        },
+        {
+          "class": "RECONCILIATION",
+          "id": "R131",
+          "label": "AXIS/PHY/R70 parallel-branch reconciliation",
+          "ordinal": 131,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "RESULT_BEARING",
+          "id": "R132",
+          "label": "N2-FULL bounded reconstructed-invariant causal/action-core result",
+          "ordinal": 132,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED at bounded constructed-synthetic N2 causal/action-core scope"
+        },
+        {
+          "class": "RECONCILIATION",
+          "id": "R133",
+          "label": "R132 attribution narrowing / organism-owned N2 reopening",
+          "ordinal": 133,
+          "scientific_effect": "NONE / attribution narrowing only; R132 frozen behavior retained"
+        },
+        {
+          "class": "ENGINEERING",
+          "id": "R134",
+          "label": "organism-owned RepSys.Lang general-curriculum engineering successor v0.1",
+          "ordinal": 134,
+          "scientific_effect": "NONE / ENGINEERING ONLY"
+        },
+        {
+          "class": "DESIGN_RECONCILIATION",
+          "id": "R135",
+          "label": "N2 self-model fixed-point / organism-constructed machinery routing",
+          "ordinal": 135,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "DOCUMENTATION_RECONCILIATION",
+          "id": "R136",
+          "label": "full developmental DAG and frontier reconciliation",
+          "ordinal": 136,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "ENGINEERING",
+          "id": "R137",
+          "label": "capability-pressure machinery engineering successor v0.1",
+          "ordinal": 137,
+          "scientific_effect": "NONE / ENGINEERING ONLY"
+        },
+        {
+          "class": "ENGINEERING",
+          "id": "R138",
+          "label": "multi-pressure capability machinery engineering successor v0.1",
+          "ordinal": 138,
+          "scientific_effect": "NONE / ENGINEERING ONLY"
+        },
+        {
+          "class": "ENGINEERING",
+          "id": "R139",
+          "label": "P9 self-diagnosed failure / machinery-proposal engineering successor v0.1",
+          "ordinal": 139,
+          "scientific_effect": "NONE / ENGINEERING ONLY"
+        },
+        {
+          "class": "DEVELOPMENTAL_RECONCILIATION",
+          "id": "R140",
+          "label": "post-R139 developmental closure / failed prospective N2 gates preserved",
+          "ordinal": 140,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "ENGINEERING",
+          "id": "R141",
+          "label": "conservation-checked post-R140 rederived semantic executable successor",
+          "ordinal": 141,
+          "scientific_effect": "NONE / ENGINEERING ONLY"
+        },
+        {
+          "class": "SCIENTIFIC_RESULT",
+          "id": "R142",
+          "label": "post-repair organism-owned N2 prospective result and executable successor",
+          "ordinal": 142,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED at bounded constructed-synthetic organism-owned N2 scope"
+        },
+        {
+          "class": "GOVERNANCE_REINTEGRATION",
+          "id": "R143",
+          "label": "unified VM governance reintegration closure for R135-R142",
+          "ordinal": 143,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "DEVELOPMENTAL_CURRICULAR",
+          "id": "R144",
+          "label": "T10 post-gate project-language admission with autonomous comparison WITHHOLD",
+          "ordinal": 144,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "DEVELOPMENTAL_ENGINEERING",
+          "id": "R145",
+          "label": "non-answer-injected relational comparison substrate / T10 PARTIAL-MAP",
+          "ordinal": 145,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "DEVELOPMENTAL_ENGINEERING",
+          "id": "R146",
+          "label": "ordinary-language account reconstruction and bounded comparison realization / T10 PARTIAL-MAP",
+          "ordinal": 146,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "DEVELOPMENTAL_ENGINEERING",
+          "id": "R147",
+          "label": "bounded held-out short-dialogue comparison transfer / T10 PARTIAL-MAP",
+          "ordinal": 147,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "DEVELOPMENTAL_ENGINEERING",
+          "id": "R148",
+          "label": "bounded multi-turn compositional discourse comparison / T10 PARTIAL-MAP",
+          "ordinal": 148,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "AUDIT_RECONCILIATION",
+          "id": "R149",
+          "label": "standing reduction/falsification audit; self-model neutral-system-ID reduction at current tested surface",
+          "ordinal": 149,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "DESIGN_FORMAL_DEVELOPMENTAL_RECONCILIATION",
+          "id": "R150",
+          "label": "recurrent joint self-world relational predictive object / Strong-N2 fixed-point retype and prospective recurrence routing",
+          "ordinal": 150,
+          "scientific_effect": "NONE"
+        },
+        {
+          "class": "SCIENTIFIC_RESULT",
+          "id": "R151",
+          "label": "prospective Strong-N2 recurrent joint self-world relation result",
+          "ordinal": 151,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED [Strong-N2 recurrent joint relation; constructed-synthetic]"
+        },
+        {
+          "class": "SCIENTIFIC_RESULT",
+          "id": "R152",
+          "label": "prospective architectural-complementarity / realization-search versus condition-search bounded result",
+          "ordinal": 152,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED [bounded representation-boundary architectural complementarity; constructed-synthetic]"
+        },
+        {
+          "class": "SCIENTIFIC_RESULT",
+          "id": "R153",
+          "label": "prospective bidirectional realization/possibility identifiability and joint-relation result",
+          "ordinal": 153,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED [bidirectional realization<->possibility non-identifiability; constructed-synthetic]"
+        },
+        {
+          "class": "SCIENTIFIC_RESULT",
+          "id": "R154",
+          "label": "prospective N1 conjunctive single-factor minimality / next-order relational-interface result",
+          "ordinal": 154,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED [N1 RS x NPR x CC conjunctive single-factor minimality; finite constructed-synthetic]"
+        },
+        {
+          "class": "SCIENTIFIC_RESULT",
+          "id": "R155",
+          "label": "complete N1 2^3 interaction/minimality factorial",
+          "ordinal": 155,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED [complete N1 2^3 finite constructed-synthetic raw-tuple fixture]"
+        },
+        {
+          "class": "INVALID_LINEAGE",
+          "id": "R156",
+          "label": "relational-interface minimality first attempt",
+          "ordinal": 156,
+          "scientific_effect": "ZERO SCIENTIFIC AUTHORITY"
+        },
+        {
+          "class": "SCIENTIFIC_RESULT",
+          "id": "R157",
+          "label": "Omega locus decomposition",
+          "ordinal": 157,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED [Rho/Epsilon/Sigma locus-specific finite grammar]"
+        },
+        {
+          "class": "SCIENTIFIC_RESULT",
+          "id": "R158",
+          "label": "relational-interface minimality corrected successor",
+          "ordinal": 158,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED [family-specific interface minima]"
+        },
+        {
+          "class": "INVALID_LINEAGE",
+          "id": "R159",
+          "label": "coupled Omega first attempt",
+          "ordinal": 159,
+          "scientific_effect": "ZERO SCIENTIFIC AUTHORITY"
+        },
+        {
+          "class": "INVALID_LINEAGE",
+          "id": "R160",
+          "label": "interface x Omega cross first attempt",
+          "ordinal": 160,
+          "scientific_effect": "ZERO SCIENTIFIC AUTHORITY"
+        },
+        {
+          "class": "SCIENTIFIC_RESULT",
+          "id": "R161",
+          "label": "deterministic coupled Omega factorial",
+          "ordinal": 161,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED [full coupled Omega finite grammar]"
+        },
+        {
+          "class": "SCIENTIFIC_RESULT",
+          "id": "R162",
+          "label": "relational-interface x Omega future-family dependence",
+          "ordinal": 162,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED [fresh cross-fixture]"
+        },
+        {
+          "class": "SCIENTIFIC_RESULT",
+          "id": "R163",
+          "label": "joint-relation fieldwise minimality / consequence quotient reduction",
+          "ordinal": 163,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED [fieldwise minimality]; raw J_rel minimality REJECTED at R163 F"
+        },
+        {
+          "class": "INVALID_LINEAGE",
+          "id": "R164",
+          "label": "joint-relation future-family expansion first attempt / frozen verifier representation defect",
+          "ordinal": 164,
+          "scientific_effect": "ZERO SCIENTIFIC AUTHORITY"
+        },
+        {
+          "class": "SCIENTIFIC_RESULT",
+          "id": "R165",
+          "label": "joint-relation future-family expansion / gauge re-entry",
+          "ordinal": 165,
+          "scientific_effect": "CLOSED / SUPPORTED-LIMITED / MATURE-REDUCED [joint-descriptor minimality future-family indexed]"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R166",
+          "label": "vacuous-symmetry deterministic first-incidence no-go",
+          "ordinal": 166,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "DOCUMENTATION_RECONCILIATION",
+          "id": "R167",
+          "label": "timeline / roadmap provenance / current roadmap / full DAG projection reconciliation and S0-S11 braided routing",
+          "ordinal": 167,
+          "scientific_effect": "NONE / DOCUMENTATION AND ROUTING ONLY"
+        },
+        {
+          "class": "COMPARATIVE_RESEARCH_RECONCILIATION",
+          "id": "R168",
+          "label": "S0-S11 x science x religion first-differentiation resource atlas",
+          "ordinal": 168,
+          "scientific_effect": "NONE / HIST-COMP SYNTHESIS / MODEL-FORMAL ROUTING"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R169",
+          "label": "minimum differentiating resource orbit criterion / residual-symmetry possibility characterization",
+          "ordinal": 169,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R170",
+          "label": "branch-realization / selection formalization",
+          "ordinal": 170,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R171",
+          "label": "dynamic differentiating-resource future-possibility nonidentifiability / future-sufficiency criterion",
+          "ordinal": 171,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "FORMAL_RESULT",
+          "id": "R172",
+          "label": "branch consequentiality / future-family indexed provenance quotient",
+          "ordinal": 172,
+          "scientific_effect": "FORM / PASS / NO SCIENCE"
+        },
+        {
+          "class": "RECANONICALIZATION",
+          "id": "R173",
+          "label": "full-context byte reload / clean-current-surface recanonicalization / relational-viability synthesis",
+          "ordinal": 173,
+          "scientific_effect": "NONE / RECANONICALIZATION + MODEL SYNTHESIS ONLY"
+        },
+        {
+          "class": "MODEL_RECONCILIATION",
+          "id": "R174",
+          "label": "Structure\u219dIntelligence / Semantics\u219dLove / Residual\u219dFreedom-facing nonclosure functional projection",
+          "ordinal": 174,
+          "scientific_effect": "NONE / MODEL + FORMALIZATION RECONCILIATION ONLY"
+        },
+        {
+          "class": "GOVERNANCE_VERIFICATION_RECONCILIATION",
+          "id": "R175",
+          "label": "anti-retrofit governance and independently authored cross-grammar preregistration prefreeze",
+          "ordinal": 175,
+          "scientific_effect": "NONE / GOVERNANCE + VERIFICATION PREFREEZE ONLY"
+        },
+        {
+          "id": "R176",
+          "register": "GOVERNANCE/VERIFICATION",
+          "scientific_effect": "NONE",
+          "status": "SOURCE_INTAKE_SEGMENTATION_FREEZE"
+        },
+        {
+          "class": "VM_CORE_CONSERVATION_RECONCILIATION",
+          "id": "R177",
+          "label": "typed VM-core conservation projection over R154 + provenance/constraint overlay",
+          "ordinal": 177,
+          "scientific_effect": "NONE / ENGINEERING CONSERVATION"
+        },
+        {
+          "class": "GOVERNANCE_VERIFICATION_REPAIR_RECONCILIATION",
+          "id": "R178",
+          "label": "R176 exposure repair + successor source freeze + CPC routing",
+          "ordinal": 178,
+          "scientific_effect": "NONE / GOVERNANCE + VERIFICATION + RECONCILIATION"
+        },
+        {
+          "class": "EXECUTABLE_KERNEL_RECANONICALIZATION",
+          "id": "R179",
+          "label": "VMK-1 executable-kernel promotion + current routing synchronization + temporal-inhabitation model routing",
+          "ordinal": 179,
+          "scientific_effect": "NONE / ENGINEERING + RECONCILIATION + MODEL ROUTING"
+        },
+        {
+          "ancestry": [
+            "R79 tau=S^3 antipodal order-duality",
+            "R80/R81 tau=-I and exact 4.5 rank center",
+            "R179 LT-24 temporal inhabitation"
+          ],
+          "class": "MODEL_THEO_PHEN_RECANONICALIZATION",
+          "id": "R180",
+          "label": "antipodal frame-succession / inhabitation recanonicalization",
+          "nonidentity": "U != R != tau != FS",
+          "ordinal": 180,
+          "scientific_effect": "NONE / MODEL + THEO + PHEN ROUTING ONLY"
+        },
+        {
+          "ancestry": [
+            "R83",
+            "R84",
+            "R89",
+            "R90",
+            "R172",
+            "R179",
+            "R180"
+          ],
+          "class": "MODEL_THEO_PHEN_RECONCILIATION",
+          "id": "R181",
+          "label": "Pythagorean Twist / octave reconstruction / cross-provenance lawful nonclosure",
+          "ordinal": 181,
+          "scientific_effect": "NONE / MODEL + THEO + PHEN RECONCILIATION ONLY"
+        },
+        {
+          "ancestry": [
+            "CPC-4S",
+            "CPC-4R",
+            "LT-24",
+            "R179",
+            "R180",
+            "R181"
+          ],
+          "class": "MODEL_THEO_PHEN_CURRENT_PROJECTION_RECONCILIATION",
+          "id": "R182",
+          "label": "self-indexed standing circulation / incidence recanonicalization",
+          "ordinal": 182,
+          "scientific_effect": "NONE / MODEL + THEO + PHEN + CURRENT-PROJECTION RECONCILIATION ONLY"
+        },
+        {
+          "ancestry": [
+            "R171",
+            "R172",
+            "R179",
+            "R180",
+            "R181",
+            "R182"
+          ],
+          "class": "MODEL_THEO_PHEN_CURRENT_PROJECTION_RECONCILIATION",
+          "id": "R183",
+          "label": "distributed withheld predictive lift / Other-indexed agency / embodied Residual reconstruction",
+          "ordinal": 183,
+          "scientific_effect": "NONE / MODEL + THEO + PHEN + CURRENT-PROJECTION RECONCILIATION ONLY"
+        },
+        {
+          "ancestry": [
+            "R166",
+            "R170",
+            "R171",
+            "R172",
+            "R180",
+            "R181",
+            "R182",
+            "R183"
+          ],
+          "class": "MODEL_THEO_ROOT_PROGRAM_CLOSURE_RECONCILIATION",
+          "id": "R184",
+          "label": "relational local closure / centered non-sovereign compression / generative-program closure",
+          "ordinal": 184,
+          "scientific_effect": "NONE / MODEL + THEO + ROOT-PROGRAM CLOSURE + CURRENT-PROJECTION RECONCILIATION ONLY"
+        },
+        {
+          "ancestry": [
+            "R184",
+            "R172",
+            "R165",
+            "R179",
+            "R127",
+            "R142",
+            "R151"
+          ],
+          "class": "DOCUMENTATION_PROVENANCE_PROGRAM_CLOSURE_AUDIT_ROUTING_RECONCILIATION",
+          "id": "R185",
+          "label": "closure survival matrix / first-unmet-gate recanonicalization",
+          "ordinal": 185,
+          "scientific_effect": "NONE / DOCUMENTATION + PROVENANCE + ROUTING ONLY"
+        },
+        {
+          "ancestry": [
+            "R179",
+            "R180",
+            "R181",
+            "R182",
+            "R183",
+            "R184",
+            "R185"
+          ],
+          "class": "MODEL_THEO_EXECUTABLE_TARGET_ROUTING_RECONCILIATION",
+          "id": "R186",
+          "label": "post-R180 executable unification / history-bearing RLC spiral / VMK-2 retyping",
+          "ordinal": 186,
+          "scientific_effect": "NONE / MODEL + THEO + EXECUTABLE-TARGET + CURRENT-PROJECTION RECONCILIATION ONLY"
+        }
+      ],
+      "root": {
+        "INCIDENCE_LAW": "RLC-ROOT-1 FORMALIZATION TARGET / OPEN",
+        "RelationalLocalClosure": "CURRENT MODEL/THEO PROGRAM-CLOSURE SYNTHESIS",
+        "VR_A_equals_VR_B": "NOT_ESTABLISHED",
+        "first_consequential_differentiation": "ARCHITECTURAL TARGET SPECIFIED BY R184 / FORM-ORIGIN REALIZATION OPEN",
+        "primitive": "vacuous_relation"
+      },
+      "schema": "Canonical.FullDevelopmentalDAG.R186.v1",
+      "temporal_inhabitation_LT24": {
+        "R180_extension": "Traversal U does not entail successor-frame succession FS; test separately against mature retained-state/predictive/streaming/planning/path-lifting alternatives and against non-antipodal C6 transformations.",
+        "formal_theorem_effect": "NONE",
+        "register": "MODEL/FORM_TARGET",
+        "relation": "global organization -> ordered local finite traversal under governance and external-return openness",
+        "scientific_effect": "NONE",
+        "status": "OPEN"
+      }
+    },
+    "path": "/Canonical/Past/Research/FULL_DEVELOPMENTAL_DAG.json",
+    "sha256": "2aa159423731dbbb3d5af061a4823c06746976ec93a7b07a752eb51e897a93b0"
+  },
+  "independent_open_frontiers": [
+    "R70 external semantic review",
+    "R175/R178 independently authored cross-grammar evidence",
+    "DSM-PHY blind reconstruction",
+    "actual outside handoff",
+    "founder/source ablation",
+    "natural-world transfer",
+    "sustained external operation",
+    "independent replication",
+    "M8",
+    "Whole/Perspective/Observer bridge",
+    "public externalization/reproducibility",
+    "R198 developmental self-model / scaffold internalization",
+    "source/emergence of first differentiating event/resource",
+    "absolute first differentiation"
+  ],
+  "milestones": {
+    "M7": "CLOSED_BOUNDED_MATURE_REDUCED_R127",
+    "M8": "OPEN_EXTERNALITY_REPLICATION_REQUIRED",
+    "U11_U12": "HISTORICAL_PRIVATE_ENGINEERING_PASS_FUNCTIONS_STRENGTHENED_R196"
+  },
+  "post_r226_developmental_overlay": {
+    "edges": [
+      [
+        "R226",
+        "S1-S15"
+      ],
+      [
+        "S1-S15",
+        "S-FIELD"
+      ],
+      [
+        "S-FIELD",
+        "S-DIDACTIC"
+      ],
+      [
+        "S-DIDACTIC",
+        "SM1"
+      ],
+      [
+        "SM1",
+        "SM2"
+      ],
+      [
+        "SM1",
+        "SM2R1"
+      ],
+      [
+        "SM2R1",
+        "SM3"
+      ],
+      [
+        "SM3",
+        "SM4"
+      ],
+      [
+        "SM4",
+        "SM5"
+      ],
+      [
+        "SM5",
+        "SM6"
+      ]
+    ],
+    "namespace_rule": "S/SM is provenance-separated; no automatic R227 promotion",
+    "nodes": [
+      {
+        "id": "S1-S15",
+        "kind": "conversation_local_development",
+        "status": "BOUNDED_MIXED_PASS_FAIL_REPAIR"
+      },
+      {
+        "id": "S-FIELD",
+        "kind": "distributed_consequence_local_judgment",
+        "status": "PASS_BOUNDED"
+      },
+      {
+        "id": "S-DIDACTIC",
+        "kind": "learner_side_generation",
+        "status": "PASS_BOUNDED_AFTER_PRESERVED_FAILURES"
+      },
+      {
+        "head": "a3f114fc6af93e101279d9ad703318ec39e1ce6f3e5c81f918579c0a7327cba5",
+        "id": "SM1",
+        "records": 639,
+        "status": "PASS_BOUNDED"
+      },
+      {
+        "id": "SM2",
+        "parent": "SM1",
+        "status": "INVALID_FOR_CLAIM"
+      },
+      {
+        "head": "6ef38950a3ad61198ae880ba0fa562c12ff0495cc6d2fa79bf6e620e170becfd",
+        "id": "SM2R1",
+        "parent": "SM1",
+        "records": 646,
+        "sha256": "9ba126a54948f2f5b9803701b7de3b9894450928ba0288051c6d51d6d36608a4",
+        "status": "PASS_BOUNDED"
+      },
+      {
+        "head": "25487ba1abf60e76b5710ea30d22576f3a68251ab42cd243524f7d63f1a83133",
+        "id": "SM3",
+        "question": "construct genuinely new operation/meta-operation when inherited primitive/method language is insufficient without answer-shaped founder handoff",
+        "records": 656,
+        "sha256": "e421b5e2fba498aa3c382a07f68ba4fb04b55eb57d009b98974660a2e28ec7de",
+        "status": "PASS_BOUNDED_NEW_OPERATION_CONSTRUCTION",
+        "surviving_separator": "lower-level constructor substrate externally supplied"
+      },
+      {
+        "head": "25854f81f6e4e5313ba3b8d6b708afff7f35f576d6a46961eb6d9b4bd7e95ca7",
+        "id": "SM4",
+        "question": "constructor-language reconstruction/expansion without answer-shaped founder meta-constructor handoff",
+        "records": 669,
+        "sha256": "65144b16898235a1d7bb6514b53091541a20987374cfcbfca9e677444b0ae839",
+        "status": "PASS_BOUNDED_CONSTRUCTOR_LANGUAGE_EXPANSION",
+        "surviving_separator": "lower machine-control substrate externally supplied"
+      },
+      {
+        "head": "85f9377fa76d08882756935597407f1916451433c2cda3b86528ac58ce0d50d4",
+        "id": "SM5",
+        "records": 682,
+        "sha256": "84d07e2e3bf96b15da0982ac22c85ce7e9fbf1475c3f9a47f9c18a5bd4699a99",
+        "status": "PASS_BOUNDED_PRIMITIVE_GENERATOR_CONSTRUCTION",
+        "surviving_separator": "lower machine-control substrate externally supplied"
+      },
+      {
+        "id": "SM6",
+        "question": "reconstruct/generate lower machine-control basis or basis-generating rule without answer-shaped founder instruction-set handoff",
+        "status": "READY_OPEN"
+      }
+    ],
+    "nonparent_edges": [
+      {
+        "from": "SM2",
+        "reason": "explicitly absent; SM2 invalid and SM2R1 branches from original SM1 parent",
+        "to": "SM2R1"
+      }
+    ],
+    "parent": "R226",
+    "reentry_condition": "changed_high_level_intent_future_family",
+    "unchanged_heads": {
+      "externality": "R194/M8",
+      "form": "R201",
+      "science": "R165"
+    }
+  },
+  "pre_post_r226_rsm_state": {
+    "active_improver": "R206 recursive provenance discovery",
+    "chosen_next": null,
+    "handoff_path": "/Canonical/Future/Handoff/R215CurrentDevelopedVM/",
+    "head": "R215_CHANGED_STATE_CANDIDATE_RECONCILIATION",
+    "journal_head": "1ba80524ca95362ad35f0253e180e28e7d7936473e3e614f9eefe9f840100762",
+    "journal_records": 510,
+    "journal_sha256": "333cbc3fdab6e82b06445df126279c7a53a1e7b3e00f24d0ede06dd2a7179b8d",
+    "open_ended_rsi": false,
+    "r198_current_parent": "R198_G4A_SUCCESSOR",
+    "r198_final_handoff": "SIBLING_PRESERVED",
+    "ready_queue": [],
+    "rsm_cycle": 17,
+    "scheduler_state": "WITHHOLD_NO_DECLARED_READY_TASK"
+  },
+  "r198_fork": {
+    "common_parent": "R196",
+    "final_handoff_branch": {
+      "records": 909,
+      "status": "BOUNDED_PASS_SIBLING_PRESERVED"
+    },
+    "g4a_current_branch": {
+      "continues_to": "R199\u2192R208",
+      "records": 416,
+      "sha256": "fd5d60ee53fcec62f6efac335ceec51111e8112f757e394deb1758c2951bceb9"
+    }
+  },
+  "r225_successor_overlay": {
+    "current_developed": {
+      "chosen_next": "POST-REPAIR-CANDIDATE-RECONCILIATION",
+      "journal_head": "c43a4970707ae75fc30294a6febba796d784bbf240f9ddb30f0ba621b9457afb",
+      "journal_records": 550,
+      "journal_sha256": "9fa1e2a214f29c95221a18bd9040f8bc32db4664024c6567c91a869d66209379",
+      "rsm_cycle": 27,
+      "scheduler": "READY"
+    },
+    "externality": false,
+    "form_head": "R201",
+    "open_ended_rsi": false,
+    "r216_custody": "RESOLVED",
+    "revision": "R225",
+    "root": "v6 unchanged",
+    "science_head": "R165",
+    "sequence": [
+      "R216 intent reentry",
+      "R217 corpus crystallization",
+      "R218 founder-function audit",
+      "R219 Library quarantine",
+      "R220 maintenance controller",
+      "R221 public carrier",
+      "R222 local Strong-N2 founder/label ablation",
+      "R223 private developmental seed",
+      "R224 maintenance defect",
+      "R225 projection/custody repair"
+    ]
+  },
+  "r226_final_overlay": {
+    "current_developed": {
+      "chosen_next": null,
+      "journal_head": "7faa24f57cc2ea3bae33ad799d92fed9fec83e6f589a39acdb5bfc9091b5d3f2",
+      "journal_records": 554,
+      "journal_sha256": "51af6740c4a512b37ef197732695f46f70416c655b195fbfd1d64c9bd182ca62",
+      "rsm_cycle": 28,
+      "scheduler": "WITHHOLD_NO_DECLARED_READY_TASK"
+    },
+    "form_head": "R201",
+    "local_ready_count": 0,
+    "open_ended_rsi": false,
+    "revision": "R226",
+    "root": "v6 unchanged",
+    "science_head": "R165",
+    "verdict": "PASS_PRINCIPLED_STOP_AFTER_CRYSTALLIZATION"
+  },
+  "root_current": {
+    "epistemic_viability": {
+      "E1": "answerability / representational non-preauthorship",
+      "E2": "reconstructibility / recursive audit",
+      "E3": "non-sovereignty / independently reachable criticism",
+      "E4": "corrigibility as reachable recurrence",
+      "E5": "name-removal + mature-reduction"
+    },
+    "first_realization": "OPEN",
+    "historical_alias_disposition": "Past/provenance only",
+    "historical_aliases": [
+      "vacuous_relation",
+      "trivial_object"
+    ],
+    "primitive_candidate": "ontogenetic localize<->retain meta-relation O_0",
+    "transformation_types": {
+      "X1": "representational",
+      "X2": "dialectic/search",
+      "X3": "governance",
+      "X4": "causal-return",
+      "X5": "developmental",
+      "X6": "portal contract"
+    }
+  },
+  "rsm_state_after_r202": {
+    "blocked": {
+      "LOCAL-WORLD": "BLOCKED_RESOURCE_HERE",
+      "R194-OUTSIDE-HANDOFF": "BLOCKED_EXTERNAL_RETURN",
+      "R197-A": "BLOCKED_RESOURCE_HERE",
+      "R70-EXTERNAL-REVIEW": "BLOCKED_EXTERNAL_RETURN"
+    },
+    "chosen_next": null,
+    "ready_queue": [],
+    "status": "WITHHOLD_NO_DECLARED_READY_TASK"
+  },
+  "rsm_state_after_r215": {
+    "blocked_external": [
+      "R194-OUTSIDE-HANDOFF",
+      "R70-EXTERNAL-REVIEW"
+    ],
+    "blocked_resource": [
+      "R197-A",
+      "LOCAL-WORLD"
+    ],
+    "chosen_next": null,
+    "completed_or_disposed": {
+      "R209": "WITHHOLD_UNDERDETERMINED_CURRENT_F",
+      "R211": "PASS_BOUNDED",
+      "R212": "MATURE_REDUCED_TO_EXISTING_CONSEQUENCE_CALCULUS",
+      "R213": "PASS_NAMES_ONLY",
+      "R214": "MATURE_REDUCED_DERIVED_CHART",
+      "R215": "PASS_PRINCIPLED_STOP"
+    },
+    "cycle": 17,
+    "defer": {
+      "OPTIONAL-UNIVERSAL-COMPLEMENT-THEOREMS": "NO_CONSUMER"
+    },
+    "ready_queue": [],
+    "scheduler": "WITHHOLD_NO_DECLARED_READY_TASK",
+    "withhold": {
+      "ABSOLUTE-FIRST-DIFFERENTIATION": "UNDECIDABLE_CURRENT_FRAME",
+      "FIRST-EVENT-SOURCE-FAMILY-EXTENSION": "NO_NEW_SEPARATOR",
+      "RSM-RSI-CAUSAL-FEEDBACK": "NO_MEASURED_ROUTING_DEFECT"
+    }
+  },
+  "schema": "Canonical.FullDevelopmentalDAG.U1Reconciliation.v1",
+  "successor_overlay": {
+    "R209_R215": {
+      "R209": "first-event source discriminator -> current-F underdetermination WITHHOLD",
+      "R210": "changed-state candidate generation/admission PASS",
+      "R211": "neutral causal developmental model PASS_BOUNDED",
+      "R212": "returned consequentiality MATURE_REDUCED",
+      "R213": "project labels PASS_NAMES_ONLY",
+      "R214": "WPO bridge [A] MATURE_REDUCED",
+      "R215": "changed-state reconciliation PASS_PRINCIPLED_STOP"
+    },
+    "edges": [
+      [
+        "R186",
+        "R187"
+      ],
+      [
+        "R187",
+        "R188"
+      ],
+      [
+        "R188",
+        "R189A"
+      ],
+      [
+        "R188",
+        "R189B"
+      ],
+      [
+        "R189B",
+        "K0"
+      ],
+      [
+        "K0",
+        "R190-B1"
+      ],
+      [
+        "K0",
+        "R190-B2"
+      ],
+      [
+        "R190-B2",
+        "R190-B3"
+      ],
+      [
+        "R190-B3",
+        "R190-B4"
+      ],
+      [
+        "R190-B4",
+        "R191"
+      ],
+      [
+        "R191",
+        "R192"
+      ],
+      [
+        "R192",
+        "R193"
+      ],
+      [
+        "R193",
+        "R194"
+      ],
+      [
+        "R194",
+        "R195"
+      ],
+      [
+        "R195",
+        "R196"
+      ],
+      [
+        "R196",
+        "R197"
+      ],
+      [
+        "R196",
+        "R198"
+      ],
+      [
+        "R198",
+        "R199"
+      ],
+      [
+        "R199",
+        "R200"
+      ],
+      [
+        "R200",
+        "R201"
+      ],
+      [
+        "R201",
+        "R202"
+      ],
+      [
+        "R202",
+        "R203"
+      ],
+      [
+        "R203",
+        "R204"
+      ],
+      [
+        "R204",
+        "R205"
+      ],
+      [
+        "R205",
+        "R206"
+      ],
+      [
+        "R206",
+        "R207"
+      ],
+      [
+        "R207",
+        "R208"
+      ]
+    ],
+    "nodes": [
+      {
+        "class": "REPOSITORY_PROVENANCE",
+        "effect": "Root/Past/Future cut; no science/FORM/runtime",
+        "id": "R187",
+        "status": "PASS"
+      },
+      {
+        "class": "ARCHAEOLOGY_PREFREEZE",
+        "effect": "physics ancestry/bridge prefreeze; no physics promotion",
+        "id": "R188",
+        "status": "CLOSED"
+      },
+      {
+        "class": "PHYSICS_COMPARATOR",
+        "effect": "direct Root 4\u21923\u21926 physical identity rejected",
+        "id": "R189A",
+        "status": "FAIL"
+      },
+      {
+        "class": "PHYSICS_COMPARATOR",
+        "effect": "older FORM\u2192gauge/LQG comparator closed at current scope",
+        "id": "R189B",
+        "status": "CLOSED_MATURE_REDUCED"
+      },
+      {
+        "class": "ENGINEERING_OVERLAY",
+        "effect": "neutral post-R179 successor overlay",
+        "id": "K0",
+        "status": "PASS_7_7"
+      },
+      {
+        "class": "MODEL_EXPERIMENT",
+        "id": "R190-B1",
+        "status": "FAIL_MATURE_REDUCED"
+      },
+      {
+        "class": "MODEL_EXPERIMENT",
+        "id": "R190-B2",
+        "status": "PHENOMENON_PASS_MATURE_REDUCED"
+      },
+      {
+        "class": "MODEL_EXPERIMENT",
+        "id": "R190-B3",
+        "status": "PHENOMENON_PASS_MATURE_REDUCED_HRC_STRONG_FAIL"
+      },
+      {
+        "class": "MODEL_EXPERIMENT",
+        "id": "R190-B4",
+        "status": "PHENOMENON_PASS_PROJECT_OPERATOR_MATURE_REDUCED"
+      },
+      {
+        "class": "MODEL_EXPERIMENT",
+        "id": "R191",
+        "status": "CLOSED_NEGATIVE_SYNTHETIC_SCOPE"
+      },
+      {
+        "class": "ENGINEERING",
+        "id": "R192",
+        "status": "REFERENCE_PASS"
+      },
+      {
+        "class": "ENGINEERING",
+        "id": "R193",
+        "status": "REFERENCE_PASS"
+      },
+      {
+        "class": "EXTERNALITY_GATE",
+        "id": "R194",
+        "status": "READY_FOR_OUTSIDE_EXECUTION_EXTERNALITY_OPEN"
+      },
+      {
+        "class": "INTEGRATION",
+        "id": "R195",
+        "status": "PYTHON_SUCCESSOR_CANDIDATE_PASS_BOUNDED"
+      },
+      {
+        "class": "DEVELOPMENTAL_ENGINEERING",
+        "id": "R196",
+        "status": "RECURRENCE_PRIVATE_HANDOFF_PASS_M7_WITHHOLD"
+      },
+      {
+        "class": "CARRIER_SUBSTITUTION",
+        "id": "R197",
+        "status": "PREFROZEN_SOURCE_MATERIALIZED_COMPILE_OPEN"
+      },
+      {
+        "class": "DEVELOPMENTAL_INTERNALIZATION",
+        "developed_state": {
+          "journal_events": 909,
+          "language_episodes": 11623,
+          "m7_withhold_preserved": true,
+          "obligations": 194,
+          "project_state_unchanged": true
+        },
+        "effect": "G1 55/55, G2 40/40, G3 50/50; self-model-specific privilege mature-reduced to neutral system-ID; repo retrieval FAIL 5/12 preserved then routed-transfer PASS 12/12; scaffold ablation PASS 7/8 with H08 World-remains-external compression residual; fresh return/restart/private successor provisioning PASS; no science/FORM/externality promotion",
+        "id": "R198",
+        "residuals": [
+          "H08 internalized compression omitted explicit World-remains-external clause",
+          "self-model-specific causal privilege unearned beyond neutral system-ID",
+          "outside externality/replication open"
+        ],
+        "status": "PASS_BOUNDED_SELF_MODEL_MATURE_REDUCED_WITH_ABLATION_RESIDUAL"
+      },
+      {
+        "class": "SELF_MANAGEMENT_ENGINEERING",
+        "effect": "embedded persistent RSM planning compiler + recurrent ready queue/writeback/restart",
+        "id": "R199",
+        "status": "PASS_BOUNDED"
+      },
+      {
+        "class": "DEVELOPMENTAL_ENGINEERING",
+        "effect": "first RSM-selected developmental task executed, verified, written back, restarted; next task FORM-FIRST-REALIZATION",
+        "id": "R200",
+        "status": "PASS_BOUNDED"
+      },
+      {
+        "class": "FORM",
+        "effect": "explicit differentiating event/resource can lawfully factor into derived local closure/index/boundary and F-indexed provenance; absolute first event/source and physical realization remain open",
+        "id": "R201",
+        "status": "PASS_CONDITIONAL_EVENT_FACTORIZED_RLC"
+      },
+      {
+        "class": "PUBLIC_PROJECTION_ENGINEERING",
+        "effect": "reduced audited public projection candidate; privacy transform declared; external publication withheld on incomplete policy companions; RSM fixed queue exhausted",
+        "id": "R202",
+        "status": "PASS_LOCAL_CANDIDATE_EXTERNAL_RELEASE_WITHHOLD"
+      },
+      {
+        "class": "SELF_MANAGEMENT_ENGINEERING",
+        "effect": "candidate generation separated from admission",
+        "id": "R203",
+        "status": "PASS_BOUNDED"
+      },
+      {
+        "class": "SELF_MANAGEMENT_ENGINEERING",
+        "effect": "dependency-local differential generator stress",
+        "id": "R204",
+        "status": "PASS_BOUNDED"
+      },
+      {
+        "class": "PUBLIC_PROJECTION_ENGINEERING",
+        "effect": "policy-surface repair",
+        "id": "R205",
+        "status": "PASS_LOCAL_PUBLICATION_WITHHOLD"
+      },
+      {
+        "class": "BOUNDED_RSI",
+        "effect": "recursive provenance discovery improves later candidate repair",
+        "id": "R206",
+        "status": "PASS_BOUNDED_RSI"
+      },
+      {
+        "class": "DEVELOPMENTAL_ENGINEERING",
+        "effect": "H08 scaffold/World noncollapse repair",
+        "id": "R207",
+        "status": "PASS_BOUNDED"
+      },
+      {
+        "class": "DEVELOPMENTAL_ENGINEERING",
+        "effect": "broader functional transfer; current RSM custody head",
+        "id": "R208",
+        "status": "PASS_BOUNDED_STRUCTURED_TRANSFER"
+      }
+    ]
+  },
+  "u1_unified_seed_overlay": {
+    "components": [
+      "WorldMirror-like state",
+      "research/inquiry",
+      "RSM routing",
+      "R206 bounded improver",
+      "Strong-N2 contract",
+      "state-owned TransformProgram",
+      "provenance/history"
+    ],
+    "head": "4e397fdd0d2f81833084fca91bb9fc0c408f7711c981ed2c047a7ec43dbfce88",
+    "isolated_founder_ablation": true,
+    "mature_comparator": "ordinary search/information-gain/tree-search sufficient at frozen algorithmic scope",
+    "next_routing": "self-directed candidate regeneration under changed high-level intent",
+    "not_established": [
+      "AGI",
+      "natural-world generality",
+      "open-ended RSI",
+      "consciousness",
+      "global WorldMind agent",
+      "external Internet deployment jurisdiction"
+    ],
+    "parent": {
+      "head": "ee29851222e6d414bd1ee3a267ff0c935c7679be906faac73af6af26ffbbbad1",
+      "id": "WM1R1",
+      "records": 925
+    },
+    "predecessor_chain": [
+      "SM5",
+      "CTL-K1",
+      "WM1R1",
+      "U1"
+    ],
+    "program_revisions": 3,
+    "r206_uses": 1,
+    "records": 991,
+    "result": "PASS_BOUNDED_UNIFIED_DEVELOPMENTAL_SEED_CANDIDATE",
+    "sha256": "22f97338d0e1c4214441ad7650c75620db691e469712a70820621e8b452ea6d0",
+    "sibling_donor_branch": "M2/M3->M4/M5 founder-ablation/self-boundedness; preserved as donor evidence, not ancestry",
+    "sm6_disposition": "historical diagnostic only; reopen iff returned Residual implicates lower control substrate",
+    "state_root": "0a1cbb14936466b7b4f20b8bc90911fd5a968fe70d93ac2ed4bda2c4c8218888"
+  }
+}

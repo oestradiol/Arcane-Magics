@@ -1,0 +1,92 @@
+{
+  "schema": "Minerva.DagTestCoverageDispositions.v0.1",
+  "status": "CANDIDATE_NOT_ADMITTED",
+  "date": "2026-09-26",
+  "promotion_authority": false,
+  "truth_authority": false,
+  "role": "Dispositions for result-bearing developmental revisions that have no distinction-test row. Repair object 6 from the 2026-09-26 forensic provenance bundle.",
+  "rule": "A result-bearing revision passes coverage with a matrix row, or a NO_TEST_ROW_REQUIRED disposition carrying a rationale, or a declared gap carrying a reopening condition. A declared gap that stops reproducing fails closed: it was closed by compression, not by evidence.",
+  "no_test_row_required": [],
+  "declared_gaps": [
+    {
+      "revision": "R176",
+      "note": "Source-intake segmentation freeze. Also the one confirmed B-EPISTEMIC crossing in the corpus: a held-out source was consulted before partition and evaluator commitments, remediated by R178 without rewriting R176. A row should capture held-out inspection != admissible source substitution.",
+      "reopening_condition": "Draft a distinction-test row for R176 from its source family and remove it from declared_gaps, or record NO_TEST_ROW_REQUIRED with a rationale. Sources for the R195-R208 band are held; R176 and R187 sources are not yet located."
+    },
+    {
+      "revision": "R187",
+      "note": "Repository provenance PASS. Lowest-value of the sixteen; may warrant NO_TEST_ROW_REQUIRED rather than a row.",
+      "reopening_condition": "Draft a distinction-test row for R187 from its source family and remove it from declared_gaps, or record NO_TEST_ROW_REQUIRED with a rationale. Sources for the R195-R208 band are held; R176 and R187 sources are not yet located."
+    },
+    {
+      "revision": "R195",
+      "note": "Integration / Python successor candidate. Note it has NO standalone RESULT or PREFREEZE; binding must point at the R195 reconciliation plus the PythonPrototypeR194 receipt, obligation registry, checksum and regression family.",
+      "reopening_condition": "Draft a distinction-test row for R195 from its source family and remove it from declared_gaps, or record NO_TEST_ROW_REQUIRED with a rationale. Sources for the R195-R208 band are held; R176 and R187 sources are not yet located."
+    },
+    {
+      "revision": "R196",
+      "note": "Recurrence private handoff, PASS with M7 WITHHOLD.",
+      "reopening_condition": "Draft a distinction-test row for R196 from its source family and remove it from declared_gaps, or record NO_TEST_ROW_REQUIRED with a rationale. Sources for the R195-R208 band are held; R176 and R187 sources are not yet located."
+    },
+    {
+      "revision": "R197",
+      "note": "Carrier substitution, COMPILE_OPEN. Prefreeze only, no result; the row must reflect an open substitution rather than a pass.",
+      "reopening_condition": "Draft a distinction-test row for R197 from its source family and remove it from declared_gaps, or record NO_TEST_ROW_REQUIRED with a rationale. Sources for the R195-R208 band are held; R176 and R187 sources are not yet located."
+    },
+    {
+      "revision": "R198",
+      "note": "Developmental internalization. Carries a known custody defect: its 'independent' audit names no auditor and its stdout is byte-identical to the JSON its own verifier wrote.",
+      "reopening_condition": "Draft a distinction-test row for R198 from its source family and remove it from declared_gaps, or record NO_TEST_ROW_REQUIRED with a rationale. Sources for the R195-R208 band are held; R176 and R187 sources are not yet located."
+    },
+    {
+      "revision": "R199",
+      "note": "Self-management engineering, RSM0/RSM1.",
+      "reopening_condition": "Draft a distinction-test row for R199 from its source family and remove it from declared_gaps, or record NO_TEST_ROW_REQUIRED with a rationale. Sources for the R195-R208 band are held; R176 and R187 sources are not yet located."
+    },
+    {
+      "revision": "R200",
+      "note": "RSM routed cycle.",
+      "reopening_condition": "Draft a distinction-test row for R200 from its source family and remove it from declared_gaps, or record NO_TEST_ROW_REQUIRED with a rationale. Sources for the R195-R208 band are held; R176 and R187 sources are not yet located."
+    },
+    {
+      "revision": "R201",
+      "note": "The only FORM-class node in the band. Splits the first-realization burden: absolute/unconditioned differentiation OPEN, conditional RLC realization given an explicit event PASS. Four proved theorem components, 12/12 finite verifier.",
+      "reopening_condition": "Draft a distinction-test row for R201 from its source family and remove it from declared_gaps, or record NO_TEST_ROW_REQUIRED with a rationale. Sources for the R195-R208 band are held; R176 and R187 sources are not yet located."
+    },
+    {
+      "revision": "R202",
+      "note": "Public projection, local candidate PASS with external release WITHHOLD.",
+      "reopening_condition": "Draft a distinction-test row for R202 from its source family and remove it from declared_gaps, or record NO_TEST_ROW_REQUIRED with a rationale. Sources for the R195-R208 band are held; R176 and R187 sources are not yet located."
+    },
+    {
+      "revision": "R203",
+      "note": "Candidate generation / admission separation.",
+      "reopening_condition": "Draft a distinction-test row for R203 from its source family and remove it from declared_gaps, or record NO_TEST_ROW_REQUIRED with a rationale. Sources for the R195-R208 band are held; R176 and R187 sources are not yet located."
+    },
+    {
+      "revision": "R204",
+      "note": "Candidate-set sensitivity and seven-arm differential stress. Self-reports an undeclared optional input as a provenance defect.",
+      "reopening_condition": "Draft a distinction-test row for R204 from its source family and remove it from declared_gaps, or record NO_TEST_ROW_REQUIRED with a rationale. Sources for the R195-R208 band are held; R176 and R187 sources are not yet located."
+    },
+    {
+      "revision": "R205",
+      "note": "Policy-surface repair, local publication WITHHOLD.",
+      "reopening_condition": "Draft a distinction-test row for R205 from its source family and remove it from declared_gaps, or record NO_TEST_ROW_REQUIRED with a rationale. Sources for the R195-R208 band are held; R176 and R187 sources are not yet located."
+    },
+    {
+      "revision": "R206",
+      "note": "The only BOUNDED_RSI node in the graph, still named active improver at R215, surviving live as one prose line with no executable check. Highest-value row in the band. Its V1/V2 validators are unnamed.",
+      "reopening_condition": "Draft a distinction-test row for R206 from its source family and remove it from declared_gaps, or record NO_TEST_ROW_REQUIRED with a rationale. Sources for the R195-R208 band are held; R176 and R187 sources are not yet located."
+    },
+    {
+      "revision": "R207",
+      "note": "Noncollapse repair, with a fully specified nine-gate three-arm ablation protocol.",
+      "reopening_condition": "Draft a distinction-test row for R207 from its source family and remove it from declared_gaps, or record NO_TEST_ROW_REQUIRED with a rationale. Sources for the R195-R208 band are held; R176 and R187 sources are not yet located."
+    },
+    {
+      "revision": "R208",
+      "note": "Broader cross-domain transfer, 1.0000 on four metrics with a working ablation control at 0.0909.",
+      "reopening_condition": "Draft a distinction-test row for R208 from its source family and remove it from declared_gaps, or record NO_TEST_ROW_REQUIRED with a rationale. Sources for the R195-R208 band are held; R176 and R187 sources are not yet located."
+    }
+  ]
+}
