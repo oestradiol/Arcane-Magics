@@ -163,6 +163,22 @@ jobs:
             --result /tmp/minerva/NETWORK_RESULT_1.json \
             --output /tmp/minerva/NETWORK_QUERY_2.json
 
+      - name: Freeze state-owned relation-trace candidate
+        id: semantic_trace
+        if: steps.network1.outputs.has_sources == 'true'
+        run: |
+          python scripts/freeze_semantic_trace_query.py \
+            --query /tmp/minerva/NETWORK_QUERY.json \
+            --encounter /tmp/minerva/NETWORK_ENCOUNTER_1.json \
+            --state kernel/development/NETWORK_SEMANTIC_TRACE_SEARCH_STATE.json \
+            --trace-output /tmp/minerva/NETWORK_SEMANTIC_TRACE.json \
+            --query-output /tmp/minerva/NETWORK_SEMANTIC_QUERY_2.json
+          if [ -f /tmp/minerva/NETWORK_SEMANTIC_QUERY_2.json ]; then
+            echo "has_candidate=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_candidate=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Execute memory-derived network query 2
         id: network2
         if: steps.network1.outputs.has_sources == 'true'
@@ -178,6 +194,28 @@ jobs:
           else
             echo "has_sources=false" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Execute frozen semantic-trace query 2
+        id: semantic_network2
+        if: steps.semantic_trace.outputs.has_candidate == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/execute_github_network_query.py \
+            --query /tmp/minerva/NETWORK_SEMANTIC_QUERY_2.json \
+            --output /tmp/minerva/NETWORK_SEMANTIC_ENCOUNTER_2.json
+
+      - name: Compare semantic trace against frozen lexical baseline
+        if: steps.semantic_trace.outputs.has_candidate == 'true'
+        run: |
+          python scripts/evaluate_network_semantic_trace.py \
+            --prefreeze kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE.json \
+            --baseline-query /tmp/minerva/NETWORK_QUERY_2.json \
+            --baseline-encounter /tmp/minerva/NETWORK_ENCOUNTER_2.json \
+            --candidate-query /tmp/minerva/NETWORK_SEMANTIC_QUERY_2.json \
+            --candidate-encounter /tmp/minerva/NETWORK_SEMANTIC_ENCOUNTER_2.json \
+            --trace /tmp/minerva/NETWORK_SEMANTIC_TRACE.json \
+            --output /tmp/minerva/NETWORK_SEMANTIC_TRACE_RESULT.json
 
       - name: Record episode-2 relevance WITHHOLD
         if: steps.network1.outputs.has_sources == 'true' && steps.network2.outputs.has_sources == 'false'
@@ -295,7 +333,7 @@ jobs:
           cp /tmp/minerva/LEARNING_STATE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/proposed-learning-state.json
           cp /tmp/minerva/NETWORK_QUERY.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/network-query.json
           cp /tmp/minerva/NETWORK_CONTEXT.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/network-context.json
-          for f in MENTOR_CONTEXT_RECEIPT.json NETWORK_ENCOUNTER_1.json NETWORK_RESULT_1.json NETWORK_QUERY_2.json NETWORK_ENCOUNTER_2.json NETWORK_LINEAGE.json NETWORK_MEMORY.zlib NETWORK_RELEVANCE_WITHHOLD.json WWW_MIND_GATE_RESULT.json AUTHORED_CENTER_LEDGER.json LAIN_STRUCTURAL_GATE_RESULT.json; do
+          for f in MENTOR_CONTEXT_RECEIPT.json NETWORK_ENCOUNTER_1.json NETWORK_RESULT_1.json NETWORK_QUERY_2.json NETWORK_ENCOUNTER_2.json NETWORK_SEMANTIC_TRACE.json NETWORK_SEMANTIC_QUERY_2.json NETWORK_SEMANTIC_ENCOUNTER_2.json NETWORK_SEMANTIC_TRACE_RESULT.json NETWORK_LINEAGE.json NETWORK_MEMORY.zlib NETWORK_RELEVANCE_WITHHOLD.json WWW_MIND_GATE_RESULT.json AUTHORED_CENTER_LEDGER.json LAIN_STRUCTURAL_GATE_RESULT.json; do
             if [ -f "/tmp/minerva/$f" ]; then
               cp "/tmp/minerva/$f" "provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/$f"
             fi
