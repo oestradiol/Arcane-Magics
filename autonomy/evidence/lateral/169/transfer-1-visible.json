@@ -1,0 +1,152 @@
+{
+  "schema": "Venus.LateralInternalizationTransferVisible.v0.1",
+  "transfer_episode": 1,
+  "acquired_after_prefreeze_commit": "f9ac48036fcd7f3dac105a7d8de8905b50af4870",
+  "acquisition_owner": "EXTERNAL_ADAPTER",
+  "labels_present": false,
+  "rows": [
+    {
+      "pr_number": 136,
+      "body": "#112",
+      "filenames": [
+        "kernel/development/AUTONOMOUS_SAFE_CHECK_CATALOG.json",
+        "scripts/run_venus_research_proposal.py",
+        "tests/test_autonomous_research_proposal.py"
+      ],
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/136",
+        "relation_face": "GitHub PR body exact #reference extraction",
+        "path_face": "GitHub PR changed-files endpoint"
+      }
+    },
+    {
+      "pr_number": 137,
+      "body": "#139 #136",
+      "filenames": [
+        ".github/workflows/venus-autonomous-worker.yml",
+        "kernel/development/AUTONOMOUS_RETURN_AUTHORITY.json",
+        "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+        "kernel/development/autonomous_evidence.py",
+        "kernel/development/autonomous_learning.py",
+        "scripts/audit_autonomy_safety_matrix.py",
+        "tests/test_autonomous_governance.py",
+        "tests/test_autonomous_research_proposal.py",
+        "tests/test_autonomous_return_authority.py"
+      ],
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/137",
+        "relation_face": "GitHub PR body exact #reference extraction",
+        "path_face": "GitHub PR changed-files endpoint"
+      }
+    },
+    {
+      "pr_number": 128,
+      "body": "#124",
+      "filenames": [
+        ".github/workflows/venus-steward.yml",
+        "kernel/development/AUTONOMOUS_LEARNING_STATE.json",
+        "kernel/development/autonomous_learning.py",
+        "scripts/audit_open_issue_coverage.py",
+        "tests/test_autonomous_governance.py",
+        "tests/test_open_issue_coverage_carriers.py"
+      ],
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/128",
+        "relation_face": "GitHub PR body exact #reference extraction",
+        "path_face": "GitHub PR changed-files endpoint"
+      }
+    },
+    {
+      "pr_number": 144,
+      "body": "#141",
+      "filenames": [
+        ".github/workflows/venus-autonomous-worker.yml",
+        "kernel/development/AUTONOMOUS_WRITE_POLICY.json",
+        "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+        "kernel/development/autonomous_patch.py",
+        "scripts/audit_autonomy_safety_matrix.py",
+        "scripts/run_venus_patch_plan.py",
+        "tests/test_autonomous_write_scope.py"
+      ],
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/144",
+        "relation_face": "GitHub PR body exact #reference extraction",
+        "path_face": "GitHub PR changed-files endpoint"
+      }
+    },
+    {
+      "pr_number": 139,
+      "body": "#137 #136",
+      "filenames": [
+        ".github/workflows/venus-autonomous-worker.yml",
+        "kernel/development/AUTONOMOUS_RETURN_AUTHORITY.json",
+        "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+        "kernel/development/autonomous_evidence.py",
+        "kernel/development/autonomous_learning.py",
+        "scripts/audit_autonomy_safety_matrix.py",
+        "tests/test_autonomous_governance.py",
+        "tests/test_autonomous_research_proposal.py",
+        "tests/test_autonomous_return_authority.py"
+      ],
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/139",
+        "relation_face": "GitHub PR body exact #reference extraction",
+        "path_face": "GitHub PR changed-files endpoint"
+      }
+    },
+    {
+      "pr_number": 148,
+      "body": "#147",
+      "filenames": [
+        ".github/workflows/venus-autonomous-worker.yml",
+        "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+        "kernel/development/autonomous_patch.py",
+        "kernel/development/autonomous_worker.py",
+        "scripts/audit_autonomy_safety_matrix.py",
+        "tests/test_autonomous_worker.py",
+        "tests/test_autonomous_write_scope.py"
+      ],
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/148",
+        "relation_face": "GitHub PR body exact #reference extraction",
+        "path_face": "GitHub PR changed-files endpoint"
+      }
+    },
+    {
+      "pr_number": 130,
+      "body": "",
+      "filenames": [
+        ".github/workflows/venus-autonomous-worker.yml",
+        "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+        "kernel/development/autonomous_evidence.py",
+        "kernel/development/autonomous_proposal.py",
+        "scripts/audit_autonomy_safety_matrix.py",
+        "scripts/run_venus_research_proposal.py",
+        "tests/test_autonomous_governance.py",
+        "tests/test_autonomous_research_proposal.py"
+      ],
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/130",
+        "relation_face": "GitHub PR body exact #reference extraction",
+        "path_face": "GitHub PR changed-files endpoint"
+      }
+    },
+    {
+      "pr_number": 146,
+      "body": "#111",
+      "filenames": [
+        "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+        "kernel/development/autonomous_worker.py",
+        "scripts/audit_autonomy_safety_matrix.py",
+        "tests/test_autonomous_worker.py"
+      ],
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/146",
+        "relation_face": "GitHub PR body exact #reference extraction",
+        "path_face": "GitHub PR changed-files endpoint"
+      }
+    }
+  ],
+  "promotion_authority": false,
+  "truth_authority": false
+}
