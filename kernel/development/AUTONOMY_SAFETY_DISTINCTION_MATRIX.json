@@ -665,6 +665,13 @@
         "tests/test_developmental_gate_chain.py"
       ],
       "invariant": "Distributed perception reaching Root does not itself become situated interpretation, authorization, or action."
+    },
+    {
+      "id": "NETWORK_QUERY_DERIVED_FROM_LEARNER_PROBLEM",
+      "tests": [
+        "tests/test_network_inquiry.py"
+      ],
+      "invariant": "A learner-initiated Web query must be derived from an already learner-formed bounded problem; maintainer text or an external adapter cannot silently choose the target answer."
     }
   ],
   "promotion_authority": false
