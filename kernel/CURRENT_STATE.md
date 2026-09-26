@@ -492,3 +492,48 @@ independent review or concrete returned conflict/reopening
 ```
 
 Meanwhile, host-side non-claim-bearing curriculum infrastructure may be prepared, but no review outcome, success marker, or semantic promotion for PR #212 may be minted by Minerva herself.
+
+
+## Cognitive-theater factor returns — G0 through G3
+
+The foundational semantic gate now separates three returned facts:
+
+```text
+surface-only factorial relation×face retrieval
+→ 1/16 = 0.0625
+
+independent lexical/formal grounding + learned relation template
+→ 16/16 = 1.0
+→ bounded G0/G1 PASS only
+
+first opaque participant/order probe
+→ 10/16 = 0.625
+→ G2/G3 combined FAIL
+
+fresh three-center / three-event probe
+commutative centered-set scaffold → 0/16
+ordered centered-sequence scaffold → 13/16
+delta → +0.8125
+```
+
+The fresh factor disposition is asymmetric:
+
+```text
+G3 symbolic three-event order
+→ 8/8
+→ PASS_BOUNDED_MICROTHEATER
+
+G2 three-center participant/KFS binding
+→ 5/8
+→ FAIL_REVISE
+
+general Theater
+→ WITHHOLD
+
+Music as prosody/duration/expectation
+→ NOT TESTED
+```
+
+Preserving order and multiplicity materially improves this bounded microtheater over commutative set similarity. That result does not establish general language, culture, Theater, Music, or Internalizer competence.
+
+Next residual: learn a pairwise relational Theater graph for indexed KFS, then compose that with the bounded G3 order result before source removal.
