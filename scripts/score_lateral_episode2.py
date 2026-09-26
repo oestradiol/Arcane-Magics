@@ -8,7 +8,7 @@ from pathlib import Path
 
 def git_blob_sha(path: Path) -> str:
     raw=path.read_bytes()
-    return hashlib.sha1(b"blob "+str(len(raw)).encode("ascii")+b"\\0"+raw).hexdigest()
+    return hashlib.sha1(b"blob "+str(len(raw)).encode("ascii")+b"\0"+raw).hexdigest()
 
 
 def evaluate(prefreeze: dict, proposal: dict, reveal: dict, *, proposal_blob_sha: str) -> dict:
