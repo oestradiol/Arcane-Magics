@@ -6,26 +6,13 @@ Do not use old shared Venus-Minerva roadmaps to infer current state.
 
 ## Read first
 
-1. [Current state](../kernel/CURRENT_STATE.md)
-2. [Kernel map](../kernel/README.md)
-3. [WorldMirror VM](WORLDMIRROR_VM.md)
-4. [Runtime substrate](../kernel/runtime/README.md)
-5. [Developmental semantics](../kernel/development/README.md)
-6. [State surfaces](../kernel/state/README.md)
-7. [Autonomy evidence](../autonomy/evidence/README.md)
-8. [Development roadmap](ISSUE_ROADMAP.md)
-9. [Autonomous research contract](AUTONOMOUS_RESEARCH.md)
-10. [Earned milestones](EARNED_MILESTONES.md)
-11. [Test coverage matrix](TEST_COVERAGE_MATRIX.md)
-12. [Canonical retirement ledger](../provenance/CANONICAL_RETIREMENT_LEDGER.md)
-13. [Repository authority boundary](../REPOSITORY_AUTHORITY_BOUNDARY.md)
-7. [Kernel index](../kernel/README.md)
-8. [Runtime index](../kernel/runtime/README.md)
-9. [Development index](../kernel/development/README.md)
-10. [State index](../kernel/state/README.md)
-11. [Evidence index](../autonomy/evidence/README.md)
-12. [Test coverage matrix](TEST_COVERAGE_MATRIX.md)
-13. [Canonical retirement ledger](../provenance/CANONICAL_RETIREMENT_LEDGER.md)
+1. [Semantic developmental DAG](../kernel/development/DEVELOPMENTAL_GATE_CHAIN.json) — the one machine-readable developmental topology and recurrence.
+2. [Current active work subgraph](../kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json) — current readiness and dependencies.
+3. [Current state](../kernel/CURRENT_STATE.md) and [EDU authority](../kernel/development/EDU_CURRENT.json).
+4. [Human issue roadmap](ISSUE_ROADMAP.md) — projection of the graph, not a competing authority.
+5. [Repository authority boundary](../REPOSITORY_AUTHORITY_BOUNDARY.md).
+6. Open [developmental lineage](../provenance/DEVELOPMENTAL_LINEAGE.md), [self-model](SELF_MODEL.md), [WorldMirror VM](WORLDMIRROR_VM.md), runtime, state, and evidence files only along the selected graph path.
+7. [Autonomous research contract](AUTONOMOUS_RESEARCH.md), [earned milestones](EARNED_MILESTONES.md), and [test coverage matrix](TEST_COVERAGE_MATRIX.md) when the chosen node requires them.
 
 ## Current one-paragraph state
 
