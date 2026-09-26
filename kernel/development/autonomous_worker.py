@@ -161,6 +161,8 @@ def choose_target(
         and (item.kind, item.number) not in recent
         and not _blocked_by_barrier(item, barriers)
         and not item.title.lower().startswith("venus: autonomous cycle")
+        and not item.title.lower().startswith("handoff carrier: minerva → venus engineering candidate")
+        and not item.title.lower().startswith("handoff: minerva → venus engineering candidate")
     )
     if not open_items:
         return None
