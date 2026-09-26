@@ -43,6 +43,18 @@ def induce_candidate(cases: Mapping[str, Any]) -> dict[str, Any]:
         "observation_only_label": "OBSERVATION_ONLY",
         "admissibility_field": "admissible",
         "duration_semantics": "PERT_EXPECTED_OR_FIXED_DURATION",
+        "critical_path_policy": "MAX_EXPECTED_PREDECESSOR_FINISH",
+        "parallel_schedule_policy": "MAX_CONFLICT_FREE_READY_SET",
+        "route_policy": "MINIMUM_COST_ADMISSIBLE_ONLY",
+        "planning_operators": [
+            "DEPENDENCY_RECONSTRUCTION",
+            "TOPOLOGICAL_VALIDATION",
+            "READY_FRONTIER",
+            "CRITICAL_PATH_AND_SLACK",
+            "WORK_SPAN_PARALLELISM",
+            "RESOURCE_CONFLICT_SCHEDULE",
+            "ADMISSIBLE_SHORTEST_PATH",
+        ],
     }
     body = {
         "schema": "Venus.DependencyPlanningCandidate.v0.1",
