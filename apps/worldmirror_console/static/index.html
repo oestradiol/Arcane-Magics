@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WorldMirror</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="sigil">WM</div>
+        <div>
+          <strong>WorldMirror</strong>
+          <span>local developmental surface</span>
+        </div>
+      </div>
+      <button id="new-session" class="new-session">＋ New session</button>
+      <div id="sessions" class="sessions"></div>
+      <div class="sidebar-foot">
+        <span id="connection-dot" class="dot"></span>
+        <span id="connection-label">connecting</span>
+      </div>
+    </aside>
+
+    <main class="conversation">
+      <header class="topbar">
+        <div>
+          <h1 id="session-title">WorldMirror Console</h1>
+          <p>raw interaction → provenance → state → consequence</p>
+        </div>
+        <div class="badges">
+          <span id="process-badge" class="badge">process off</span>
+          <span class="badge muted">agent external</span>
+        </div>
+      </header>
+
+      <section id="empty-state" class="empty-state">
+        <div class="orb"></div>
+        <h2>A quiet surface, not a personality shell.</h2>
+        <p>Create a session. Messages are stored raw-first; decoded views and later abstractions stay distinguishable.</p>
+      </section>
+
+      <section id="messages" class="messages hidden"></section>
+
+      <form id="composer" class="composer hidden">
+        <textarea id="message" rows="1" placeholder="Write to the local interaction stream…"></textarea>
+        <button type="submit" title="Send">Send</button>
+      </form>
+      <div id="agent-note" class="agent-note hidden">
+        No cognitive backend is bound by the console itself. Machine replies can be posted by an external adapter without changing event custody.
+      </div>
+    </main>
+
+    <aside class="inspector">
+      <div class="tabs">
+        <button data-tab="event" class="active">Event</button>
+        <button data-tab="state">State</button>
+        <button data-tab="process">Process</button>
+      </div>
+
+      <section id="tab-event" class="panel active">
+        <h3>Selected event</h3>
+        <div id="event-inspector" class="kv empty">Select a message.</div>
+      </section>
+
+      <section id="tab-state" class="panel">
+        <h3>Surface state</h3>
+        <div id="status-inspector" class="kv"></div>
+        <p class="fence">Stored interaction ≠ learning. UI state ≠ World truth.</p>
+      </section>
+
+      <section id="tab-process" class="panel">
+        <h3>Bounded process bridge</h3>
+        <p class="small">Disabled unless the server starts with an explicit process root and executable allowlist. This is not an OS sandbox.</p>
+        <label>argv JSON</label>
+        <textarea id="argv" rows="4">["python3","-c","print('hello from sandbox')"]</textarea>
+        <label>cwd</label>
+        <input id="cwd" value=".">
+        <button id="run-process" class="secondary">Run</button>
+        <pre id="process-output">No process return.</pre>
+      </section>
+    </aside>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
