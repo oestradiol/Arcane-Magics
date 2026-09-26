@@ -60,6 +60,10 @@ class DependencyPlanningCurriculumTests(unittest.TestCase):
             _execution_envelope_status("PASS_BOUNDED_DEPENDENCY_PLANNING_B1_B2"),
             "EXECUTED_SELECTED_PREFROZEN_CURRICULUM",
         )
+        self.assertEqual(
+            _execution_envelope_status("PASS_BOUNDED_LOCAL_ONLY"),
+            "WITHHOLD_CURRICULUM_RESULT",
+        )
         self.assertEqual(_execution_envelope_status(None), "WITHHOLD_CURRICULUM_RESULT")
 
 
