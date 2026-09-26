@@ -2,6 +2,20 @@
 
 This is a reader-facing projection of the live execution plan. GitHub issues remain the authoritative work items.
 
+## Current foundational prefix — #206
+
+Before deeper semantic self-consumption, the standing developmental orientation is:
+
+```text
+#206 cognitive-theater foundation
+→ bounded returned disposition
+→ then resume #169/#73/#18 semantic internalization/generalization work
+```
+
+This is a curriculum constraint, not a claim that #206 is intrinsically more important than every future returned defect. A concrete returned conflict/security/safety defect may still preempt it under the standing scheduling law.
+
+#206 is first because it tests whether learned relations survive English, Japanese, Brazilian-Portuguese, and mathematical theaters before one-language/project-shaped competence is used as evidence for deeper semantic ownership.
+
 ## Scheduling law
 
 Sort work lexicographically by:
