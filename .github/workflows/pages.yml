@@ -25,6 +25,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      pages_configured: ${{ steps.pages.outcome }}
     steps:
       - name: Checkout routing layer
         uses: actions/checkout@v6
@@ -206,6 +208,8 @@ jobs:
           PY
 
       - name: Configure / enable Pages
+        id: pages
+        continue-on-error: true
         uses: actions/configure-pages@v5
         with:
           enablement: true
@@ -215,8 +219,16 @@ jobs:
         with:
           path: _site
 
+      - name: Pages external-gate receipt
+        if: steps.pages.outcome != 'success'
+        run: |
+          echo 'Static Root/Lain projection validated and packaged.'
+          echo 'GitHub Pages service is not enabled/configurable by this Actions token.'
+          echo 'Deployment remains an external repository-setting gate; build correctness is preserved.'
+
   deploy:
     needs: build
+    if: needs.build.outputs.pages_configured == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
