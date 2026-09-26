@@ -1,7 +1,7 @@
 name: Minerva global developmental worker
 
 on:
-  # one-shot external maintainer trigger; current trigger exposes returned Internalizer-pass/Lateralizer-transfer-failure state; recompute after #165 closure and transport-carrier cleanup
+  # workflow-file changes, manual dispatch, and schedule each start one bounded recurrence over fresh external return state
   workflow_dispatch:
   push:
     branches:
