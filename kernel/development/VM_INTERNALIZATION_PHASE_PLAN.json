@@ -305,7 +305,7 @@
     "network_semantic_trace_phase": {
       "prefreeze_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE_V2.json",
       "search_state_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_SEARCH_STATE.json",
-      "status": "V2_PREFROZEN_FOR_FUTURE_B2__B3_CLOSED",
+      "status": "V2_FIRST_FRESH_RETURN_WITHHOLD_MULTI_ANCHOR__B3_CLOSED",
       "lexical_baseline_preserved": true,
       "internalization_claim": false,
       "independent_evaluation": false,
@@ -315,11 +315,13 @@
           "UNHELPFUL_ON_ISSUE_17"
         ],
         "MULTI_ANCHOR": [
-          "UNHELPFUL_ON_ISSUE_78"
+          "UNHELPFUL_ON_ISSUE_78",
+          "UNHELPFUL_ON_ISSUE_35_FIRST_FRESH_V2"
         ],
         "CROSS_SOURCE_MULTI_ANCHOR": [
           "B1_PASS_ON_ISSUE_78",
-          "B2_TIE_UNHELPFUL_ON_CYCLE_230"
+          "B2_TIE_UNHELPFUL_ON_CYCLE_230",
+          "USEFUL_ON_ISSUE_169_V1_CYCLE_233_CONTEXT_DEPENDENT_COUNTEREXAMPLE"
         ],
         "TITLE_ANCHORED": [
           "USEFUL_ON_ISSUE_169",
@@ -327,7 +329,7 @@
         ]
       },
       "relation_trace_runtime_internalization_claim": false,
-      "next_lawful_step": "run fresh learner-selected target/config under B1 then prospective V2 B2; V2 requires non-regression in anchor coverage, mean relevance, external-center diversity, and token budget plus at least one strict gain. Preserve v1 results historically; do not retroactively rescore them. B3 remains closed.",
+      "next_lawful_step": "consume the first fresh V2 MULTI_ANCHOR failure through authorized returned utility; continue only on fresh learner-selected targets/configs under B1 then prospective V2 B2. Treat context-dependent opposite config outcomes as a live credit-assignment residual. B3 remains closed pending source removal/restart/delayed reuse/fresh disjoint transfer and independent or evaluator-hidden return.",
       "title_anchored_replication": {
         "positive_targets": [
           {
@@ -356,11 +358,32 @@
         "rule": "candidate must be non-regressive on anchor coverage, mean relevance, external-center count, and token budget, with at least one strict gain",
         "retroactive_reclassification": false
       },
-      "generic_executor_note": "kernel/runtime/relation_trace.py is classified as a generic interpreter; its continued existence is not itself a B3 failure. B3 remains closed because the capability policy/state family has not survived the full source-removal/restart/delayed-reuse/fresh independent-evaluation burden.",
+      "generic_executor_note": "kernel/runtime/relation_trace.py remains CAPABILITY_SPECIFIC_DEVELOPMENTAL_SCAFFOLD_NOT_YET_INTERNALIZED, matching runtime_dispositions. Its continued existence is a B3 source-removal debt, not a generic-executor exemption.",
       "historical_prefreeze_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE.json",
       "prospective_evaluator": "PARETO_NONREGRESSION_V2",
       "v1_evidence_retained": true,
-      "v2_retroactive_rescoring": false
+      "v2_retroactive_rescoring": false,
+      "v2_first_fresh_return": {
+        "run_id": 36248710796,
+        "carrier_issue": 234,
+        "selected_target_issue": 35,
+        "config_id": "MULTI_ANCHOR",
+        "decision": "WITHHOLD_V2_NONREGRESSION_OR_GAIN_NOT_MET",
+        "baseline": {
+          "anchor_coverage": 4,
+          "mean_relevance": 2,
+          "external_centers": 3,
+          "query_tokens": 9
+        },
+        "candidate": {
+          "anchor_coverage": 3,
+          "mean_relevance": 2,
+          "external_centers": 2,
+          "query_tokens": 9
+        },
+        "returned_config_disposition": "UNHELPFUL",
+        "independent_evaluation": false
+      }
     }
   },
   "promotion_authority": false,
