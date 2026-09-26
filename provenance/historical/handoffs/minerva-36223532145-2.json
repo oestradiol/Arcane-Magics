@@ -1,0 +1,11 @@
+{
+  "schema": "ArcaneMagics.CrossRegisterHandoff.v1",
+  "source_layer": "Minerva",
+  "target_layer": "Venus",
+  "source_commit": "74be9ce99291440a149685dbe49b925ec1496427",
+  "target_parent": "0ee7fae6d699e96e30e18f9308d6f75ab3a28782",
+  "run_id": "36223532145",
+  "run_attempt": "2",
+  "content_admission": "proposal receipts only; no Minerva tree replacement",
+  "authority": "engineering candidate only; no Root promotion"
+}
