@@ -253,7 +253,11 @@ class NetworkInquiryTests(unittest.TestCase):
             self.assertEqual(q2.study_context_digest, q.study_context_digest)
             self.assertEqual(tuple(q2.study_terms), tuple(q.study_terms))
             self.assertTrue(q2.query_text.startswith("curriculum cognitive theater"))
-            self.assertIn("linguistic", q2.query_text)
+            self.assertEqual(
+                tuple(q2.query_text.split()[3:]),
+                tuple(r.next_query_terms[:6]),
+            )
+            self.assertTrue(r.next_query_terms)
             self.assertFalse(any(ch.isdigit() for ch in q2.query_text))
             self.assertEqual(
                 q2.authorship,
