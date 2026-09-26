@@ -861,6 +861,14 @@
         "tests/test_worldmirror_process_bridge.py"
       ],
       "invariant": "A learner/agent-authored action proposal is inert data. External authorization, execution, process return, and claim validation remain distinct stages under separate custody."
+    },
+    {
+      "id": "MENTOR_CONTEXT_NOT_TARGET_BINDING_OR_EVALUATION",
+      "tests": [
+        "tests/test_worldmirror_mentor_context.py",
+        "tests/test_autonomous_governance.py"
+      ],
+      "invariant": "External mentor context may weakly order or inform study only after lawful problem formation; it cannot escape allowed target keys, authorize actions, mint learning reward, establish truth, or count as independent evaluation."
     }
   ],
   "promotion_authority": false
