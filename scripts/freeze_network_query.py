@@ -14,6 +14,17 @@ from kernel.development.autonomous_worker import load_work_items
 from kernel.development.autonomous_problem_formation import snapshot_to_incidence
 
 
+def selected_study_context(cycle: dict | None) -> dict | None:
+    if not cycle:
+        return None
+    study=dict(cycle.get("study") or {})
+    for key in ("target_kind", "target_number", "target_title"):
+        value=cycle.get(key)
+        if value is not None:
+            study[key]=value
+    return study or None
+
+
 def main() -> int:
     p=argparse.ArgumentParser()
     p.add_argument("--problem", required=True)
@@ -30,7 +41,7 @@ def main() -> int:
         json.loads(Path(args.cycle).read_text(encoding="utf-8"))
         if args.cycle else None
     )
-    study=(cycle or {}).get("study") if cycle else None
+    study=selected_study_context(cycle)
     query=form_network_query(problem, study=study)
     Path(args.output).write_text(
         json.dumps(query.__dict__, indent=2, sort_keys=True) + "\n",
