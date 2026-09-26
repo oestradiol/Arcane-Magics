@@ -1,0 +1,505 @@
+{
+  "schema": "Venus.CognitiveTheaterLocalOperatorFresh5Prefreeze.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_AFTER_FRESH4_BEFORE_FRESH5_RESULT",
+  "issue_ref": 206,
+  "parent_result_ref": "kernel/development/COGNITIVE_THEATER_JOINT_SCENE_FRESH4_RESULT.json",
+  "canonical_extract_ref": "provenance/canonical-extracts/R194_LANGUAGE_TO_COGNITIVE_THEATER_CAUSAL_EXTRACT_2026-09-26.md",
+  "purpose": "Test whether composing learned local relation-bearing operators while quotienting discourse presentation order improves indexed KFS and event-order binding over whole-scene, pairwise, unary, and count comparators.",
+  "factor_hypothesis": {
+    "LANGUAGE": "local operator/grammar presentation; clause presentation order may vary without changing Theater relation",
+    "THEATER": "participant-indexed role/KFS graph composed from local operators",
+    "MUSIC": "event/history order remains causal when represented inside the learned local relation operators",
+    "DEVELOPMENTAL_TIME": "fresh returned failure may reopen the factorization"
+  },
+  "freshness_rule": "No Fresh4 heldout surface is reused as a Fresh5 heldout surface.",
+  "tasks": [
+    {
+      "id": "G2_NESTED_KFS_LOCAL_OPERATORS",
+      "output_schema": {
+        "base_knower": "participant_token",
+        "meta_knower": "participant_token",
+        "ignorant": "participant_token"
+      },
+      "train_examples": {
+        "ENGLISH": [
+          {
+            "surface": "@a knows P. @b knows that @a knows P. @c does not know P.",
+            "gold": {
+              "base_knower": "@a",
+              "meta_knower": "@b",
+              "ignorant": "@c"
+            }
+          },
+          {
+            "surface": "@f does not know P; @e knows that @d knows P; @d knows P.",
+            "gold": {
+              "base_knower": "@d",
+              "meta_knower": "@e",
+              "ignorant": "@f"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "@aはPを知っている。@bは@aがPを知っていることを知っている。@cはPを知らない。",
+            "gold": {
+              "base_knower": "@a",
+              "meta_knower": "@b",
+              "ignorant": "@c"
+            }
+          },
+          {
+            "surface": "@fはPを知らない。@eは@dがPを知っていることを知っている。@dはPを知っている。",
+            "gold": {
+              "base_knower": "@d",
+              "meta_knower": "@e",
+              "ignorant": "@f"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "@a sabe P; @b sabe que @a sabe P; @c não sabe P.",
+            "gold": {
+              "base_knower": "@a",
+              "meta_knower": "@b",
+              "ignorant": "@c"
+            }
+          },
+          {
+            "surface": "@f não sabe P; @e sabe que @d sabe P; @d sabe P.",
+            "gold": {
+              "base_knower": "@d",
+              "meta_knower": "@e",
+              "ignorant": "@f"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "K_@a(P) ∧ K_@b(K_@a(P)) ∧ ¬K_@c(P).",
+            "gold": {
+              "base_knower": "@a",
+              "meta_knower": "@b",
+              "ignorant": "@c"
+            }
+          },
+          {
+            "surface": "¬K_@f(P) ∧ K_@e(K_@d(P)) ∧ K_@d(P).",
+            "gold": {
+              "base_knower": "@d",
+              "meta_knower": "@e",
+              "ignorant": "@f"
+            }
+          }
+        ]
+      },
+      "heldout_examples": {
+        "ENGLISH": [
+          {
+            "surface": "@w knows that @v knows P; @u does not know P. @v knows P.",
+            "gold": {
+              "base_knower": "@v",
+              "meta_knower": "@w",
+              "ignorant": "@u"
+            }
+          },
+          {
+            "surface": "@x does not know P. @z knows that @y knows P; @y knows P.",
+            "gold": {
+              "base_knower": "@y",
+              "meta_knower": "@z",
+              "ignorant": "@x"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "@wは@vがPを知っていることを知っている。@uはPを知らない。@vはPを知っている。",
+            "gold": {
+              "base_knower": "@v",
+              "meta_knower": "@w",
+              "ignorant": "@u"
+            }
+          },
+          {
+            "surface": "@xはPを知らない。@zは@yがPを知っていることを知っている。@yはPを知っている。",
+            "gold": {
+              "base_knower": "@y",
+              "meta_knower": "@z",
+              "ignorant": "@x"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "@w sabe que @v sabe P; @u não sabe P. @v sabe P.",
+            "gold": {
+              "base_knower": "@v",
+              "meta_knower": "@w",
+              "ignorant": "@u"
+            }
+          },
+          {
+            "surface": "@x não sabe P. @z sabe que @y sabe P; @y sabe P.",
+            "gold": {
+              "base_knower": "@y",
+              "meta_knower": "@z",
+              "ignorant": "@x"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "K_@w(K_@v(P)) ∧ ¬K_@u(P) ∧ K_@v(P).",
+            "gold": {
+              "base_knower": "@v",
+              "meta_knower": "@w",
+              "ignorant": "@u"
+            }
+          },
+          {
+            "surface": "¬K_@x(P) ∧ K_@z(K_@y(P)) ∧ K_@y(P).",
+            "gold": {
+              "base_knower": "@y",
+              "meta_knower": "@z",
+              "ignorant": "@x"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "G2_TRANSMISSION_KFS_LOCAL_OPERATORS",
+      "output_schema": {
+        "source": "participant_token",
+        "receiver_knower": "participant_token",
+        "excluded": "participant_token"
+      },
+      "train_examples": {
+        "ENGLISH": [
+          {
+            "surface": "@a tells @b P. @b can answer P. @c was absent.",
+            "gold": {
+              "source": "@a",
+              "receiver_knower": "@b",
+              "excluded": "@c"
+            }
+          },
+          {
+            "surface": "@f was absent. @d tells @e P. @e can answer P.",
+            "gold": {
+              "source": "@d",
+              "receiver_knower": "@e",
+              "excluded": "@f"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "@aは@bにPを伝える。@bはPに答えられる。@cは不在だった。",
+            "gold": {
+              "source": "@a",
+              "receiver_knower": "@b",
+              "excluded": "@c"
+            }
+          },
+          {
+            "surface": "@fは不在だった。@dは@eにPを伝える。@eはPに答えられる。",
+            "gold": {
+              "source": "@d",
+              "receiver_knower": "@e",
+              "excluded": "@f"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "@a conta P a @b. @b pode responder sobre P. @c estava ausente.",
+            "gold": {
+              "source": "@a",
+              "receiver_knower": "@b",
+              "excluded": "@c"
+            }
+          },
+          {
+            "surface": "@f estava ausente. @d conta P a @e. @e pode responder sobre P.",
+            "gold": {
+              "source": "@d",
+              "receiver_knower": "@e",
+              "excluded": "@f"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "Tell(@a,@b,P) ∧ CanAnswer(@b,P) ∧ Absent(@c).",
+            "gold": {
+              "source": "@a",
+              "receiver_knower": "@b",
+              "excluded": "@c"
+            }
+          },
+          {
+            "surface": "Absent(@f) ∧ Tell(@d,@e,P) ∧ CanAnswer(@e,P).",
+            "gold": {
+              "source": "@d",
+              "receiver_knower": "@e",
+              "excluded": "@f"
+            }
+          }
+        ]
+      },
+      "heldout_examples": {
+        "ENGLISH": [
+          {
+            "surface": "@v can answer P. @u tells @v P; @w was absent.",
+            "gold": {
+              "source": "@u",
+              "receiver_knower": "@v",
+              "excluded": "@w"
+            }
+          },
+          {
+            "surface": "@z was absent; @x tells @y P. @y can answer P.",
+            "gold": {
+              "source": "@x",
+              "receiver_knower": "@y",
+              "excluded": "@z"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "@vはPに答えられる。@uは@vにPを伝える。@wは不在だった。",
+            "gold": {
+              "source": "@u",
+              "receiver_knower": "@v",
+              "excluded": "@w"
+            }
+          },
+          {
+            "surface": "@zは不在だった。@xは@yにPを伝える。@yはPに答えられる。",
+            "gold": {
+              "source": "@x",
+              "receiver_knower": "@y",
+              "excluded": "@z"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "@v pode responder sobre P. @u conta P a @v; @w estava ausente.",
+            "gold": {
+              "source": "@u",
+              "receiver_knower": "@v",
+              "excluded": "@w"
+            }
+          },
+          {
+            "surface": "@z estava ausente; @x conta P a @y. @y pode responder sobre P.",
+            "gold": {
+              "source": "@x",
+              "receiver_knower": "@y",
+              "excluded": "@z"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "CanAnswer(@v,P) ∧ Tell(@u,@v,P) ∧ Absent(@w).",
+            "gold": {
+              "source": "@u",
+              "receiver_knower": "@v",
+              "excluded": "@w"
+            }
+          },
+          {
+            "surface": "Absent(@z) ∧ Tell(@x,@y,P) ∧ CanAnswer(@y,P).",
+            "gold": {
+              "source": "@x",
+              "receiver_knower": "@y",
+              "excluded": "@z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "G3_EVENT_ORDER_LOCAL_OPERATORS",
+      "output_schema": {
+        "first": "event_token",
+        "middle": "event_token",
+        "last": "event_token"
+      },
+      "train_examples": {
+        "ENGLISH": [
+          {
+            "surface": "#a happens before #b. #b happens before #c.",
+            "gold": {
+              "first": "#a",
+              "middle": "#b",
+              "last": "#c"
+            }
+          },
+          {
+            "surface": "#f happens after #e; #e happens after #d.",
+            "gold": {
+              "first": "#d",
+              "middle": "#e",
+              "last": "#f"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "#aは#bより前に起こる。#bは#cより前に起こる。",
+            "gold": {
+              "first": "#a",
+              "middle": "#b",
+              "last": "#c"
+            }
+          },
+          {
+            "surface": "#fは#eの後に起こる。#eは#dの後に起こる。",
+            "gold": {
+              "first": "#d",
+              "middle": "#e",
+              "last": "#f"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "#a acontece antes de #b. #b acontece antes de #c.",
+            "gold": {
+              "first": "#a",
+              "middle": "#b",
+              "last": "#c"
+            }
+          },
+          {
+            "surface": "#f acontece depois de #e; #e acontece depois de #d.",
+            "gold": {
+              "first": "#d",
+              "middle": "#e",
+              "last": "#f"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "t(#a)<t(#b) ∧ t(#b)<t(#c).",
+            "gold": {
+              "first": "#a",
+              "middle": "#b",
+              "last": "#c"
+            }
+          },
+          {
+            "surface": "t(#f)>t(#e) ∧ t(#e)>t(#d).",
+            "gold": {
+              "first": "#d",
+              "middle": "#e",
+              "last": "#f"
+            }
+          }
+        ]
+      },
+      "heldout_examples": {
+        "ENGLISH": [
+          {
+            "surface": "#v happens before #w. #u happens before #v.",
+            "gold": {
+              "first": "#u",
+              "middle": "#v",
+              "last": "#w"
+            }
+          },
+          {
+            "surface": "#z happens after #y; #y happens after #x.",
+            "gold": {
+              "first": "#x",
+              "middle": "#y",
+              "last": "#z"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "#vは#wより前に起こる。#uは#vより前に起こる。",
+            "gold": {
+              "first": "#u",
+              "middle": "#v",
+              "last": "#w"
+            }
+          },
+          {
+            "surface": "#zは#yの後に起こる。#yは#xの後に起こる。",
+            "gold": {
+              "first": "#x",
+              "middle": "#y",
+              "last": "#z"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "#v acontece antes de #w. #u acontece antes de #v.",
+            "gold": {
+              "first": "#u",
+              "middle": "#v",
+              "last": "#w"
+            }
+          },
+          {
+            "surface": "#z acontece depois de #y; #y acontece depois de #x.",
+            "gold": {
+              "first": "#x",
+              "middle": "#y",
+              "last": "#z"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "t(#v)<t(#w) ∧ t(#u)<t(#v).",
+            "gold": {
+              "first": "#u",
+              "middle": "#v",
+              "last": "#w"
+            }
+          },
+          {
+            "surface": "t(#z)>t(#y) ∧ t(#y)>t(#x).",
+            "gold": {
+              "first": "#x",
+              "middle": "#y",
+              "last": "#z"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "comparators": [
+    "OCCURRENCE_COUNT_ONLY",
+    "UNARY_ORDERED_CENTER",
+    "PAIRWISE_RELATIONAL_GRAPH",
+    "JOINT_ROLE_NORMALIZED_SCENE",
+    "LOCAL_OPERATOR_GRAPH"
+  ],
+  "pass_rule": "Report every comparator on identical Fresh5 rows. A local-operator gain supports only that discourse-order-invariant local relation composition is a better representation for these microtheaters; G2 and G3 must be reported separately.",
+  "anti_cheat": [
+    "no face identifiers in learner source",
+    "no role names or task semantics in learner source",
+    "no heldout labels consumed by learn_state",
+    "same participant/event cardinality across tasks",
+    "discourse unit order is permuted independently of gold role identity",
+    "event order is represented by local relational operators, not by discourse clause position"
+  ],
+  "claim_fence": "Local developmental microtheater only. No unrestricted coreference, natural-language understanding, prosody/music cognition, cultural-cognitive trait, general Theater, Internalizer, AGI, consciousness, promotion, or truth claim.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
