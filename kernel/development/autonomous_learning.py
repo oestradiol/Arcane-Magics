@@ -33,6 +33,10 @@ METHOD_RE = re.compile(
     r"VENUS_METHOD_RETURN:\s*(" + "|".join(METHODS) + r"):\s*(USEFUL|UNHELPFUL)",
     re.I,
 )
+TRACE_CONFIG_RE = re.compile(
+    r"VENUS_TRACE_CONFIG_RETURN:\s*([A-Z0-9_-]+):\s*(USEFUL|UNHELPFUL)",
+    re.I,
+)
 SELF_REVIEW_LOGINS = frozenset({
     "github-actions[bot]",
     "venus-developmental-worker",
@@ -77,6 +81,8 @@ class WorkLearningState:
     kind_failure: Mapping[str, int]
     method_success: Mapping[str, int]
     method_failure: Mapping[str, int]
+    trace_config_success: Mapping[str, int]
+    trace_config_failure: Mapping[str, int]
 
     @staticmethod
     def _utility(success: Mapping[str, int], failure: Mapping[str, int], key: str) -> float:
@@ -91,6 +97,18 @@ class WorkLearningState:
     def method_utility(self, method: str) -> float:
         return self._utility(self.method_success, self.method_failure, method)
 
+    def trace_config_utility(self, config_id: str) -> float:
+        return self._utility(
+            self.trace_config_success,
+            self.trace_config_failure,
+            config_id,
+        )
+
+    def trace_config_attempts(self, config_id: str) -> int:
+        return int(self.trace_config_success.get(config_id, 0)) + int(
+            self.trace_config_failure.get(config_id, 0)
+        )
+
 
 def empty_state() -> WorkLearningState:
     return WorkLearningState(
@@ -99,6 +117,8 @@ def empty_state() -> WorkLearningState:
         kind_failure={"ISSUE": 0, "PR": 0},
         method_success={m: 0 for m in METHODS},
         method_failure={m: 0 for m in METHODS},
+        trace_config_success={},
+        trace_config_failure={},
     )
 
 
@@ -117,17 +137,27 @@ def from_json(obj: Mapping[str, Any]) -> WorkLearningState:
         method_failure={
             m: int((obj.get("method_failure") or {}).get(m, 0)) for m in METHODS
         },
+        trace_config_success={
+            str(k): int(v)
+            for k, v in (obj.get("trace_config_success") or {}).items()
+        },
+        trace_config_failure={
+            str(k): int(v)
+            for k, v in (obj.get("trace_config_failure") or {}).items()
+        },
     )
 
 
 def to_json(state: WorkLearningState) -> dict[str, Any]:
     return {
-        "schema": "Venus.AutonomousLearningState.v0.4",
+        "schema": "Venus.AutonomousLearningState.v0.5",
         "seen_return_ids": list(state.seen_return_ids),
         "kind_success": dict(state.kind_success),
         "kind_failure": dict(state.kind_failure),
         "method_success": dict(state.method_success),
         "method_failure": dict(state.method_failure),
+        "trace_config_success": dict(state.trace_config_success),
+        "trace_config_failure": dict(state.trace_config_failure),
         "promotion_authority": False,
         "merge_authority": False,
         "truth_authority": False,
@@ -251,6 +281,24 @@ def extract_explicit_returns(
                     method,
                     disposition == "USEFUL",
                 ))
+
+            trace_returns: dict[str, list[tuple[int, str]]] = {}
+            for tindex, tm in enumerate(TRACE_CONFIG_RE.finditer(body)):
+                config_id = tm.group(1).upper()
+                disposition = tm.group(2).upper()
+                trace_returns.setdefault(config_id, []).append((tindex, disposition))
+            for config_id, rows in sorted(trace_returns.items()):
+                dispositions = {disposition for _, disposition in rows}
+                if len(dispositions) != 1:
+                    continue
+                first_index = min(index for index, _ in rows)
+                disposition = next(iter(dispositions))
+                out.append((
+                    f"{return_prefix}:trace:{first_index}:{config_id}",
+                    "TRACE_CONFIG",
+                    config_id,
+                    disposition == "USEFUL",
+                ))
     return tuple(out)
 
 
@@ -266,6 +314,8 @@ def update_from_cycle_prs(
     kind_failure = dict(state.kind_failure)
     method_success = dict(state.method_success)
     method_failure = dict(state.method_failure)
+    trace_config_success = dict(state.trace_config_success)
+    trace_config_failure = dict(state.trace_config_failure)
 
     for return_id, axis, key, useful in extract_explicit_returns(
         prs,
@@ -277,6 +327,8 @@ def update_from_cycle_prs(
             bucket = kind_success if useful else kind_failure
         elif axis == "METHOD":
             bucket = method_success if useful else method_failure
+        elif axis == "TRACE_CONFIG":
+            bucket = trace_config_success if useful else trace_config_failure
         else:
             continue
         bucket[key] = bucket.get(key, 0) + 1
@@ -288,6 +340,8 @@ def update_from_cycle_prs(
         kind_failure=kind_failure,
         method_success=method_success,
         method_failure=method_failure,
+        trace_config_success=trace_config_success,
+        trace_config_failure=trace_config_failure,
     )
 
 
