@@ -25,6 +25,29 @@ class RelationTraceTests(unittest.TestCase):
         self.assertFalse(out.hidden_evaluation_input)
         self.assertFalse(out.promotion_authority)
 
+    def test_returned_learning_explores_less_tried_expressible_config(self):
+        sources=(
+            {"source_id":"s1","title":"memory causal abstraction relation","observed_relation":"memory lifelong abstraction relation"},
+            {"source_id":"s2","title":"lifelong memory abstraction bridge","observed_relation":"memory lifelong abstraction bridge"},
+        )
+        learning={
+            "trace_config_success":{"CROSS_SOURCE_BRIDGE":1},
+            "trace_config_failure":{"CROSS_SOURCE_BRIDGE":1},
+        }
+        out=search_relation_trace(
+            STATE,
+            anchors=("memory","lifelong","learning"),
+            sources=sources,
+            learning_state=learning,
+        )
+        self.assertEqual(out.status,"RELATION_TRACE_CANDIDATE_FROZEN")
+        self.assertNotEqual(out.config_id,"CROSS_SOURCE_BRIDGE")
+        self.assertEqual(out.config_attempts,0)
+        self.assertEqual(
+            out.selection_basis,
+            "RETURNED_UTILITY_EXPLORATION_THEN_STRUCTURAL",
+        )
+
     def test_future_return_and_hidden_eval_are_rejected(self):
         bad={**STATE,"future_return_input":True}
         with self.assertRaisesRegex(Exception,"future return"):
