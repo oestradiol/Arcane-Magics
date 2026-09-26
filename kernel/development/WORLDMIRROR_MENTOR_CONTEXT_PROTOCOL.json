@@ -1,11 +1,11 @@
 {
-  "schema": "Venus.WorldMirrorMentorContextProtocol.v0.1",
+  "schema": "Venus.WorldMirrorMentorContextProtocol.v0.2",
   "date": "2026-09-26",
-  "status": "PREFROZEN_EXTERNAL_MENTOR_ORIENTATION_BOUNDARY",
+  "status": "PREFROZEN_EXTERNAL_MENTOR_ORIENTATION_BOUNDARY_WITH_EXPLICIT_ADVISORY_TIEBREAK",
   "purpose": "Allow high-level external developmental conversation to shape study/orientation without making the mentor sovereign over target admissibility, action authority, truth, or evaluation.",
   "context_schema": "Venus.WorldMirrorMentorContext.v0.1",
   "allowed_effects": [
-    "weak roadmap-style tie-break among already admissible carriers",
+    "weak explicit tie-break among carriers already admitted by formed-problem allowed_target_keys and recurrence barriers",
     "visible context inside learner-selected study",
     "may influence learner-authored follow-up/network inquiry through that study context"
   ],
@@ -32,5 +32,11 @@
     "MENTOR_CONTEXT!=LEARNING_REWARD"
   ],
   "promotion_authority": false,
-  "truth_authority": false
+  "truth_authority": false,
+  "ordering_law": [
+    "concrete returned repository defect precedes mentor advisory",
+    "learned external work-kind utility precedes mentor advisory",
+    "mentor advisory precedes host-authored roadmap tie-break",
+    "formed-problem admissibility and recurrence barriers are filters, not rank terms, and cannot be overridden by mentor advisory"
+  ]
 }
