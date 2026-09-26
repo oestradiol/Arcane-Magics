@@ -333,7 +333,7 @@ jobs:
           cp /tmp/minerva/LEARNING_STATE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/proposed-learning-state.json
           cp /tmp/minerva/NETWORK_QUERY.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/network-query.json
           cp /tmp/minerva/NETWORK_CONTEXT.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/network-context.json
-          for f in MENTOR_CONTEXT_RECEIPT.json NETWORK_ENCOUNTER_1.json NETWORK_RESULT_1.json NETWORK_QUERY_2.json NETWORK_ENCOUNTER_2.json NETWORK_SEMANTIC_TRACE.json NETWORK_SEMANTIC_QUERY_2.json NETWORK_SEMANTIC_ENCOUNTER_2.json NETWORK_SEMANTIC_TRACE_RESULT.json NETWORK_LINEAGE.json NETWORK_MEMORY.zlib NETWORK_RELEVANCE_WITHHOLD.json WWW_MIND_GATE_RESULT.json AUTHORED_CENTER_LEDGER.json LAIN_STRUCTURAL_GATE_RESULT.json; do
+          for f in MENTOR_CONTEXT_RECEIPT.json NETWORK_ENCOUNTER_1.json NETWORK_RESULT_1.json NETWORK_QUERY_2.json NETWORK_ENCOUNTER_2.json NETWORK_SEMANTIC_TRACE.json NETWORK_SEMANTIC_TRACE_ABSTRACTION_PROBE.json NETWORK_SEMANTIC_QUERY_2.json NETWORK_SEMANTIC_ENCOUNTER_2.json NETWORK_SEMANTIC_TRACE_RESULT.json NETWORK_LINEAGE.json NETWORK_MEMORY.zlib NETWORK_RELEVANCE_WITHHOLD.json WWW_MIND_GATE_RESULT.json AUTHORED_CENTER_LEDGER.json LAIN_STRUCTURAL_GATE_RESULT.json; do
             if [ -f "/tmp/minerva/$f" ]; then
               cp "/tmp/minerva/$f" "provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/$f"
             fi
