@@ -1,0 +1,46 @@
+{
+  "schema": "Venus.CognitiveTheaterJointSceneFresh4Result.v0.1",
+  "date": "2026-09-26",
+  "issue_ref": 206,
+  "status": "FAIL_JOINT_WHOLE_SCENE_TEMPLATE_NOT_THEATER",
+  "parent_prefreeze_ref": "kernel/development/COGNITIVE_THEATER_JOINT_SCENE_FRESH4_PREFREEZE.json",
+  "independent_external_evaluation": false,
+  "count_only": {
+    "correct": 0,
+    "total": 16,
+    "accuracy": 0,
+    "withholds": 16
+  },
+  "unary_ordered": {
+    "correct": 10,
+    "total": 16,
+    "accuracy": 0.625,
+    "withholds": 5
+  },
+  "pairwise_relational": {
+    "correct": 10,
+    "total": 16,
+    "accuracy": 0.625,
+    "withholds": 3
+  },
+  "joint_scene": {
+    "correct": 7,
+    "total": 16,
+    "accuracy": 0.4375,
+    "withholds": 7
+  },
+  "joint_minus_count": 0.4375,
+  "joint_minus_unary": -0.1875,
+  "joint_minus_pairwise": -0.1875,
+  "interpretation": [
+    "Joint whole-scene template alignment underperforms both unary ordered-center and pairwise relational comparators on Fresh4.",
+    "Clause/discourse reordering is sufficient to damage whole-scene similarity even when the underlying KFS relation is preserved.",
+    "Therefore Language-level presentation order must be separable from Theater relation structure, while Music/event order remains separately causal when the modeled relation says it is.",
+    "The next learner should induce local relation-bearing clause/operator templates and compose them into an indexed graph rather than classify an entire utterance as one pattern."
+  ],
+  "next_residual": "INDUCE_LOCAL_RELATION_OPERATORS_AND_COMPOSE_KFS_GRAPH_WHILE_SEPARATING_DISCOURSE_ORDER_FROM_EVENT_ORDER",
+  "general_theater_claim": false,
+  "internalization_claim": false,
+  "promotion_authority": false,
+  "truth_authority": false
+}
