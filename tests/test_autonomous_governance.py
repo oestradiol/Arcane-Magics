@@ -22,7 +22,7 @@ from kernel.development.autonomous_worker import (
 
 
 ROOT = Path(__file__).resolve().parents[1]
-WORKFLOW = ROOT / ".github/workflows/venus-autonomous-worker.yml"
+WORKFLOW = ROOT / ".github/workflows/minerva-autonomous-worker.yml"
 
 
 def external_review(body: str, *, login: str = "oestradiol", review_id: int = 1):
