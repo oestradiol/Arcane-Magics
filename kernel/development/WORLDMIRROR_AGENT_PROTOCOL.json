@@ -1,0 +1,53 @@
+{
+  "schema": "Venus.WorldMirrorAgentProtocol.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_EXTERNAL_ADAPTER_PROTOCOL",
+  "transport": "STDIO_JSON_ONE_REQUEST_ONE_REPLY",
+  "request": {
+    "visible": [
+      "session_id",
+      "trigger_event",
+      "recent_events",
+      "capabilities"
+    ],
+    "recent_event_fields": [
+      "event_id",
+      "actor",
+      "kind",
+      "decoded_text",
+      "raw_sha256",
+      "semantic_digest"
+    ]
+  },
+  "response": {
+    "required": [
+      "text"
+    ],
+    "optional": [
+      "media_type",
+      "metadata"
+    ],
+    "forbidden": [
+      "tool_calls",
+      "promotion",
+      "truth_claim_binding",
+      "jurisdiction_change"
+    ]
+  },
+  "constraints": [
+    "adapter is operator configured",
+    "adapter receives no process-bridge authority from this protocol",
+    "reply is appended as a raw machine interaction event",
+    "adapter failure does not erase the triggering human event",
+    "self-dialogue is not independent evaluation",
+    "agent reply does not directly rewrite admitted learner policy"
+  ],
+  "noncollapse": [
+    "AGENT_ADAPTER!=LEARNER_IDENTITY",
+    "AGENT_REPLY!=WORLD_TRUTH",
+    "AGENT_REPLY!=INDEPENDENT_RETURN",
+    "AGENT_REPLY!=TOOL_AUTHORIZATION"
+  ],
+  "promotion_authority": false,
+  "truth_authority": false
+}
