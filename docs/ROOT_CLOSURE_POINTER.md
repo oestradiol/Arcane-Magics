@@ -115,3 +115,25 @@ meta-routing mechanism != literal ontology of comparator
 ```
 
 Root must preserve both sides.
+
+
+## Current Arcane admission: Astrology
+
+Astrology is currently owned by Arcane Magics as symbolic celestial indexing:
+
+```text
+celestial configuration
+→ symbolic projection
+→ indexed interpretation / action
+```
+
+Its stronger residues route outward:
+
+- structural Earth-boundary/inversion candidate → Eclipsis;
+- predictive/causal discriminator → OFE;
+- bounded intervention candidate → Minerva;
+- independence-of-return check → Venus.
+
+```text
+symbolic incidence != independent return != physical verification
+```
