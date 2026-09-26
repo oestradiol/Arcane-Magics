@@ -762,6 +762,36 @@
         "tests/test_foundational_cognitive_theater_curriculum.py"
       ],
       "invariant": "Mathematical competence requires valid derivation/proof/counterexample or WITHHOLD at the tested scope; lexical or symbol-pattern agreement is insufficient."
+    },
+    {
+      "id": "LEXICAL_GROUNDING_NOT_THEATER_BINDING",
+      "tests": [
+        "tests/test_foundational_cognitive_theater_grounded_candidate.py",
+        "tests/test_cognitive_theater_binding_order.py"
+      ],
+      "invariant": "grounded relation/template reconstruction does not establish surface referent, participant, or local-KFS binding"
+    },
+    {
+      "id": "RELATION_RECOGNITION_NOT_INDEXED_KFS",
+      "tests": [
+        "tests/test_cognitive_theater_binding_order.py",
+        "tests/test_cognitive_theater_binding_order_fresh2.py"
+      ],
+      "invariant": "recognizing relation-bearing surface/context does not establish who occupies each epistemic role; participant-indexed KFS remains separately tested"
+    },
+    {
+      "id": "EVENT_INVENTORY_NOT_TEMPORAL_ORDER",
+      "tests": [
+        "tests/test_cognitive_theater_binding_order_fresh2.py"
+      ],
+      "invariant": "the same event inventory can encode different histories; order-sensitive representation must remain noncommutative"
+    },
+    {
+      "id": "SYMBOLIC_ORDER_NOT_GENERAL_MUSIC",
+      "tests": [
+        "tests/test_cognitive_theater_binding_order_fresh2.py"
+      ],
+      "invariant": "bounded symbolic before/after reconstruction does not establish prosody, duration, expectation, musical competence, or general temporal cognition"
     }
   ],
   "promotion_authority": false
