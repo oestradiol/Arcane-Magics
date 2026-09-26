@@ -53,7 +53,7 @@ class AutonomousWriteScopeTests(unittest.TestCase):
 
     def test_safety_floor_requires_external_governance(self):
         protected = (
-            ".github/workflows/venus-autonomous-worker.yml",
+            ".github/workflows/minerva-autonomous-worker.yml",
             "kernel/runtime/ctl.py",
             "kernel/runtime/internalizer.py",
             "kernel/development/AUTONOMOUS_RETURN_AUTHORITY.json",
@@ -133,7 +133,7 @@ class AutonomousWriteScopeTests(unittest.TestCase):
         self.assertEqual(modes["kernel/runtime/ctl.py"], "EXTERNAL_GOVERNANCE_ONLY")
 
     def test_workflow_snapshots_pr_files_as_returned_world_surface(self):
-        text = (ROOT / ".github/workflows/venus-autonomous-worker.yml").read_text(
+        text = (ROOT / ".github/workflows/minerva-autonomous-worker.yml").read_text(
             encoding="utf-8"
         )
         self.assertIn(
@@ -166,18 +166,19 @@ class AutonomousWriteScopeTests(unittest.TestCase):
             if prior is not None:
                 sys.modules["kernel.development.internal_ostar_teacher"] = prior
 
-    def test_workflow_records_patch_plan_before_git_push(self):
-        text = (ROOT / ".github/workflows/venus-autonomous-worker.yml").read_text(
+    def test_workflow_records_non_authoritative_handoff_before_git_push(self):
+        text = (ROOT / ".github/workflows/minerva-autonomous-worker.yml").read_text(
             encoding="utf-8"
         )
-        plan_at = text.index("Let Venus classify bounded patch/write jurisdiction")
+        handoff_at = text.index("Crystallize Minerva trajectory into a Venus-based handoff")
         push_at = text.index("git push origin")
-        self.assertLess(plan_at, push_at)
-        self.assertIn("autonomy/patches/", text)
-        self.assertIn("AUTONOMOUS_WRITE_POLICY.json", text)
+        self.assertLess(handoff_at, push_at)
+        self.assertIn("minerva-proposals/", text)
+        self.assertIn("content_admission", text)
+        self.assertIn("no Root promotion", text)
 
     def test_workflow_does_not_copy_target_source_into_direct_write_set(self):
-        text = (ROOT / ".github/workflows/venus-autonomous-worker.yml").read_text(
+        text = (ROOT / ".github/workflows/minerva-autonomous-worker.yml").read_text(
             encoding="utf-8"
         )
         self.assertNotIn("git add kernel/runtime/", text)
@@ -189,7 +190,7 @@ class AutonomousWriteScopeTests(unittest.TestCase):
         for rel in (
             "kernel/development/autonomous_worker.py",
             "scripts/run_venus_autonomous_cycle.py",
-            ".github/workflows/venus-autonomous-worker.yml",
+            ".github/workflows/minerva-autonomous-worker.yml",
         ):
             text = (ROOT / rel).read_text(encoding="utf-8")
             self.assertNotIn("internal_ostar_teacher", text)
