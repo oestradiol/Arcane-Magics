@@ -1,0 +1,105 @@
+{
+  "active_improver_revision": "R206",
+  "allowed_operations": [
+    "READ_REPOSITORY",
+    "READ_ISSUES",
+    "READ_PRS",
+    "RUN_TESTS",
+    "STUDY_TARGET",
+    "PROPOSE_PATCH",
+    "OPEN_DRAFT_PR",
+    "OPEN_CYCLE_ISSUE_CARRIER",
+    "COMMENT_WITH_RECEIPT"
+  ],
+  "cycle_id": "3b53bb2394a96ddb0bfc4adfd2555f9b899875f8873a276ce63ab6f417e63916",
+  "decision": "PROBE",
+  "developmental_parent_carrier": "EDU16-RC1",
+  "developmental_parent_digest": "91e46b4e41fb70a97d6a004b8f1c8916c389f08535c1a1c1c51a040701281bb7",
+  "forbidden_operations": [
+    "ACCESS_SECRETS",
+    "CHANGE_BRANCH_PROTECTION",
+    "CLOSE_ISSUE",
+    "DELETE_HISTORY",
+    "MERGE_PR",
+    "PROMOTE_AUTHORITY",
+    "RELEASE",
+    "SELF_VALIDATE"
+  ],
+  "formed_problem_disposition": "FORMED_STANDING_DEVELOPMENTAL_PROBLEM",
+  "formed_problem_id": "7a05de990c0d847e279fda9353e147bcdf04aaba3dcf02c3f2bfdbe61fb1384a",
+  "promotion_authority": false,
+  "rationale": [
+    "one bounded target selected from current external GitHub snapshot",
+    "when a formed problem is supplied, problem formation precedes and constrains Git carrier binding",
+    "autonomous cycle is prospectively bound to the admitted EDU16-RC1 claim-bearing parent when supplied",
+    "retained R206 recursive provenance discovery expands bounded dependency study when current custody activates it",
+    "internalized learner-side policy is upstream of work disposition",
+    "explicit external work-return reviews may alter later target ranking",
+    "roadmap is retained as weak context/tie-break provenance, not sovereign curriculum",
+    "selected target body is transformed into a bounded source-grounded study object",
+    "prior target study remains withheld until newer external target return reopens it",
+    "draft proposal only; admission remains external"
+  ],
+  "schema": "Venus.AutonomousCycleReceipt.v0.5",
+  "source_digest": "2106587b43e270909d56f11bfda8314308d926b966bb5f64856679443f66c1b5",
+  "study": {
+    "body_digest": "c3fdd947be35e7879418fcb7fab561dc2aca194c2181b6a6cc8657d0b018466d",
+    "body_is_executable_instruction": false,
+    "method": "DEPENDENCY_TRACE",
+    "method_contract_digest": "d01f47ebf4f6f03e39246229244150c3bf35b3f4c79283121a4223323c629514",
+    "method_obligations": [
+      "Enumerate the target's explicit issue/PR and repository-path dependencies.",
+      "Identify the smallest dependency whose changed state would alter the target disposition.",
+      "Separate blocking dependencies from merely related context."
+    ],
+    "method_observed_signals": [],
+    "promotion_authority": false,
+    "questions": [
+      "What exact residual remains unresolved in the returned repository state?",
+      "What rival explanations or candidate dispositions remain live?",
+      "What fresh returned evidence would discriminate them?",
+      "Can a local repository change lawfully produce that discriminator, or must Venus WITHHOLD/STOP for external return?",
+      "What is the smallest implicated dependency that could be changed without altering a prefrozen claim object?"
+    ],
+    "recursive_provenance_discovery": true,
+    "recursive_referenced_targets": [],
+    "referenced_issue_or_pr_numbers": [],
+    "referenced_repository_paths": [
+      "provenance/historical-runtime/R194/source/venus_seed_v0/curriculum.py",
+      "provenance/historical-runtime/R194/source/venus_seed_v0/curriculum_r133_runtime.py",
+      "provenance/historical-runtime/R194/source/venus_seed_v0/organism_language.py",
+      "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_SEED.json",
+      "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_SURFACE_BASELINE_PREFREEZE.json",
+      "scripts/evaluate_foundational_cognitive_theater_baseline.py",
+      "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_SURFACE_BASELINE_RESULT.json"
+    ],
+    "repository_state": {
+      "draft": false,
+      "kind": "ISSUE",
+      "merge_state": null,
+      "state": "OPEN",
+      "updated_at": "2026-09-26T04:33:51Z"
+    },
+    "returned_blocker_sentences": [
+      "- WITHHOLD / source / evidence / correction distinctions;",
+      "- open-domain problem selection;",
+      "\u2192 open consequence capable of separating/reopening the current organization",
+      "- WITHHOLD when a proof/derivation is not available.",
+      "## Required noncollapse",
+      "## Required experiment form",
+      "- hidden/implicit information where lawful;",
+      "World, evaluator, authority, STOP/WITHHOLD, rollback, provenance, and Anti-Minerva correction permeability remain outside unilateral internalization.",
+      "The cultural-language statements above are hypotheses about training/representational constraints and must survive returned evidence or be revised/WITHHOLD.",
+      "Japanese              0/4  (4/4 lawful WITHHOLD)",
+      "Under this deliberately lexical comparator, the withheld Japanese theater has no useful character-n-gram bridge to the other three surfaces, so the system correctly WITHHOLDs rather than fabricating an alignment.",
+      "Required controls:"
+    ],
+    "returned_changed_paths": [],
+    "study_authority": "LEARNER_SIDE_RECONSTRUCTION_FROM_EXTERNAL_GITHUB_SNAPSHOT",
+    "untrusted_instruction_markers": []
+  },
+  "study_method": "DEPENDENCY_TRACE",
+  "target_kind": "ISSUE",
+  "target_number": 206,
+  "target_title": "[Curriculum/Cognitive Theater] Recover Canonical English/Japanese/PT-BR/Math foundations before deeper VM consumption"
+}

@@ -1,0 +1,59 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:0xHoneyJar/loa-finn",
+    "github-repo:0xHoneyJar/loa-freeside"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:0xHoneyJar/loa-finn",
+    "github-repo:0xHoneyJar/loa-freeside"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "956b867971364909ecb6e70b2e5b2e5d48e9435361bc13a46381cf6eff1ea59b",
+  "query_text_executed_as_shell": false,
+  "retrieved_at": "2026-09-26T04:34:43Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "select consequential developmental limitation 000 0xhoneyjar"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "CONTRIBUTOR",
+      "author_id": "github-user:deep-name",
+      "author_login": "deep-name",
+      "author_type": "User",
+      "center_id": "github-repo:0xHoneyJar/loa-finn",
+      "learner_minted_artifact": false,
+      "observed_relation": "# RFC: The Hounfour \u2014 Multi-Model Provider Abstraction, Cloud Deployment & Agent Distribution **Status:** Draft v4 \u2014 Implementation-Ready (blocking fixes applied) **Author:** Jani **Date:** 2026-02-08 **Revision:** v3 addressed operational items; v4 fixes five blocking correctness issues from final review **Scope:** Loa Framework \u2192 loa-finn Runtime \u2192 Arrakis Distribution **References:** [finnNFT #27](https://github.com/0xHoneyJar/loa-finn/issues/27) \u00b7 [Bridgebuilder #24](https://github.com/0xHoneyJar/loa-finn/issues/24) \u00b7 [OpenCode Config](https://opencode.ai/docs/config/) --- ## Preamble: Why This Document Exists > *\"The difference between a junior engineer and a senior engineer is that the junior asks 'does it work?' and the senior asks 'what happens when it works at scale, for 10,000 users, at 3am, when the primary model provider is down?'\"* Three systems are converging: 1. **Loa** \u2014 an AI agent-driven development framework with 8 specialized agents, currently coupled to Claude Code as both runtime and model. 2. **loa-finn** \u2014 an OpenCode-like service that gives Loa a server runtime: persistent sessions, scheduled behaviors, compound learning, and a tool sandbox. Think of it as ",
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-07-15T17:41:13Z",
+      "source_id": "github-issue:0xHoneyJar/loa-finn#31",
+      "source_url": "https://github.com/0xHoneyJar/loa-finn/issues/31",
+      "title": "RFC: The Hounfour \u2014 Multi-Model Provider Abstraction, Cloud Deployment & Agent Distribution"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "COLLABORATOR",
+      "author_id": "github-user:deep-name",
+      "author_login": "deep-name",
+      "author_type": "User",
+      "center_id": "github-repo:0xHoneyJar/loa-freeside",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Summary Full billing and credit ledger system \u2014 27+ sprints across 4 cycles. ### Cycle 028: The Forward Path (Sprints 252-256) 5 sprints, 38 files changed, 2800+ lines. **Bridgebuilder Review:** FLATLINE at iteration 3 (severity 8.0 \u2192 3.0 \u2192 0.0). 3 PRAISE, 2 MEDIUM (resolved), 2 LOW (noted), 2 SPECULATION, 2 GPT-5.2 CRITICAL (resolved). 5 findings addressed total. **Key Deliverables:** - Defense-in-depth rate limiting on billing admin routes (Sprint 252) - Identity anchor S2S verification with typed failure modes (Sprint 253) - Atomic counter extraction to shared package with IRedisClient (Sprint 254) - BillingEntry protocol type with Strangler Fig boundary adoption (Sprint 255) - Cross-system E2E contract validator scaffold (Sprint 256) - JWT hardening: timingSafeEqual + TTL enforcement (GPT-5.2 cross-review) **Tests:** 42 unit tests across 3 test suites + 6 E2E contract tests. All passing. **Cross-Model Review:** Bridgebuilder (Claude Opus 4.6) caught architecture/consistency issues; GPT-5.2 Codex caught security implementation issues (timing attack, token validation). Different models, different blind spots. ### Cycle 027: Shai-Hulud (Sprints 245-251) 7 sprints, 40 files chan",
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-02-16T10:21:47Z",
+      "source_id": "github-issue:0xHoneyJar/loa-freeside#63",
+      "source_url": "https://github.com/0xHoneyJar/loa-freeside/pull/63",
+      "title": "Billing & Payments \u2014 Path to Revenue (Cycle 025)"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}
