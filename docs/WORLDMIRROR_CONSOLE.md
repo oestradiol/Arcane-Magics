@@ -151,3 +151,38 @@ interaction
 ```
 
 A chat log alone is not learning.
+
+
+## Action proposal boundary
+
+Conversational authorship is kept separate from computer authority.
+
+Machine-readable protocol:
+
+`kernel/development/WORLDMIRROR_ACTION_PROPOSAL_PROTOCOL.json`
+
+Generic inert carrier:
+
+`kernel/runtime/action_proposal.py`
+
+```text
+learner / external agent
+→ ActionProposal
+→ external authorization or WITHHOLD
+→ ProcessBridge
+→ ProcessReceipt
+→ later consequence
+```
+
+The proposal carrier cannot invoke `ProcessBridge` itself.
+
+```text
+PROPOSE != AUTHORIZE
+AUTHORIZE != EXECUTE
+EXECUTE != RETURN_SUCCESS
+PROCESS_SUCCESS != CLAIM_VALIDATION
+```
+
+Issuer authentication and jurisdiction remain outside the proposal module. In a
+future autonomous local deployment, authorization should be held by the outer
+container/VM/capability boundary rather than by the learner process itself.
