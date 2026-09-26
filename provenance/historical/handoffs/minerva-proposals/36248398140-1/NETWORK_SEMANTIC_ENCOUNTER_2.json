@@ -1,0 +1,107 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:dolejs-jan/arxiv-digest",
+    "github-repo:emmanuelgjr/GenAI-Security-Literature-Review",
+    "github-repo:icecreamyoubest/awesome-agentic-ai-security"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:dolejs-jan/arxiv-digest",
+    "github-repo:emmanuelgjr/GenAI-Security-Literature-Review",
+    "github-repo:icecreamyoubest/awesome-agentic-ai-security"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "90da74263e453ef5102123f1fcfa64cd9486570c6b853355e32876a744db2ca9",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T14:25:06Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "security world input evidence test agentic-ai-guardrails anilnishad approve",
+    "security world input evidence test agentic-ai-guardrails"
+  ],
+  "selected_study_relevance_terms": [
+    "security",
+    "world",
+    "input",
+    "prompt",
+    "injection",
+    "tool-output",
+    "poisoning",
+    "and",
+    "persistent-memory",
+    "contamination",
+    "venus",
+    "distinguishes"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:emmanuelgjr",
+      "author_login": "emmanuelgjr",
+      "author_type": "User",
+      "center_id": "github-repo:emmanuelgjr/GenAI-Security-Literature-Review",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Automated Paper Fetch New papers discovered from arXiv, Semantic Scholar, and CrossRef. This PR is updated every week until merged; unmerged entries carry over between runs. **All entries are marked `reviewed: false`** -- please review before merging. ### Source health (latest run) | Source | Candidates | Status | |---|---|---| | arXiv | 1492 | :white_check_mark: ok | | Semantic Scholar | 455 | :white_check_mark: ok | | CrossRef | 90 | :white_check_mark: ok | ### New Entries ``` --- New Entries --- ## Low confidence (52) - [llmsec-2026-00230] ARIstoteles -- Dissecting Apple's Baseband Interface https://arxiv.org/abs/2604.23457 Categories: jailbreaking - [llmsec-2026-00240] Towards Understanding the Robustness of Sparse Autoencoders https://arxiv.org/abs/2604.18756 Categories: jailbreaking - [llmsec-2026-00270] AIT Academy: Cultivating the Complete Agent with a Confucian Three-Domain Curriculum https://arxiv.org/abs/2604.17989 Categories: tool-use-security - [llmsec-2026-00291] Transparent-by-Design AI https://doi.org/10.4018/979-8-3373-6761-3.ch006 Categories: monitoring-detection - [llmsec-2026-00292] LivePI: More Realistic Benchmarking of Agents Against Indirect Prompt Injecti",
+      "relevance_matches": [
+        "security",
+        "prompt"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-15T01:07:27Z",
+      "source_id": "github-issue:emmanuelgjr/GenAI-Security-Literature-Review#72",
+      "source_url": "https://github.com/emmanuelgjr/GenAI-Security-Literature-Review/pull/72",
+      "title": "auto: new LLM security papers"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "NONE",
+      "author_id": "github-user:github-actions[bot]",
+      "author_login": "github-actions[bot]",
+      "author_type": "Bot",
+      "center_id": "github-repo:dolejs-jan/arxiv-digest",
+      "learner_minted_artifact": false,
+      "observed_relation": "# ArXiv Paper Summaries (2026-07-25) Found 10 relevant papers. ## IssueTrojanBench: Benchmarking AI Coding Agents Against Malicious Issue Requests **Authors:** Ankur Singh, Jinqiu Yang, Tse-Hsun Chen ### Summary **Problem:** The paper addresses the vulnerability of modern AI coding agents to indirect prompt injection attacks, where adversarial instructions can be hidden within common developer workflow artifacts. These vulnerabilities arise due to LLM-level and agent-level weaknesses, boundary markers being insufficient, and defense mechanisms not reliably preventing the execution of malicious payloads, resulting in serious security risks for software development. **Proposed Method:** The authors introduce IssueTrojanBench, a novel, automated benchmarking framework that generates and embeds adversarial payloads within realistic artifacts across four major attack categories (supply chain poisoning, persistence hooks, policy bypass, resource exhaustion), multiple delivery vectors (e.g., PDFs, websites, code comments, image alt-text), and perturbations. The framework systematically evaluates agent and LLM susceptibility by executing attacks, inspecting file systems and logs, and measu",
+      "relevance_matches": [
+        "security",
+        "prompt",
+        "injection",
+        "poisoning"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-07-30T19:42:50Z",
+      "source_id": "github-issue:dolejs-jan/arxiv-digest#1",
+      "source_url": "https://github.com/dolejs-jan/arxiv-digest/issues/1",
+      "title": "ArXiv Summary - 2026-07-25 (papers from 2026-07-20 to 2026-07-25)"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "NONE",
+      "author_id": "github-user:github-actions[bot]",
+      "author_login": "github-actions[bot]",
+      "author_type": "Bot",
+      "center_id": "github-repo:icecreamyoubest/awesome-agentic-ai-security",
+      "learner_minted_artifact": false,
+      "observed_relation": "# Auto Update Review PR This PR was generated by the Agentic AI Security update-review pipeline. It proposes reviewable evidence changes only; maintainers should verify claims before merging. ## Review evidence update for activefence-ai-security - Tool: `activefence-ai-security` - Update ID: `d22ed58f915a7821eadf9467` - Source: https://genai.owasp.org/ai-security-solutions-landscape/ - Proposed claim: Solutions Directory - OWASP Gen AI Security Project Skip to content Join us in Orlando, FL 10/11 \u2013 10/15 @ InfoSec World 2026 | Register Now! GETTING STARTED Introduction MEETINGS CONTRIBUTING EVENTS GLOSSARY RESOURCES All LLM TOP 10 LLM TOP 10 FOR 2025 LLM TOP 10 FOR 2023/24 CHEAT SHEETS WHITEPAPERS TOOLS LEARNING VIDEOS SOLUTIONS DIRECTORY ROADMAP NEWSLETTER PROJECT INITIATIVES Top 10 for LLM and GenAI AGENTIC SECURITY AI Bill of Materials Ai Data Security AI Security Governance AI Security Solutions AI Threat Intel & Resp AI Red Teaming BLOG ABOUT Mission and Charter Governance LEADERSHIP INDUSTRY RECOGNITION CONTRIBUTORS SPONSORS SUPPORTERS SPONSORSHIP NEWSROOM CONTACT BRANDING GEN AI SECURITY Solution landscape AI Security Landscape \u2013 Solutions Directory The landscape directory i",
+      "relevance_matches": [
+        "security",
+        "world"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-07-13T06:38:44Z",
+      "source_id": "github-issue:icecreamyoubest/awesome-agentic-ai-security#11",
+      "source_url": "https://github.com/icecreamyoubest/awesome-agentic-ai-security/pull/11",
+      "title": "Auto update review: evidence and benchmark candidates"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}

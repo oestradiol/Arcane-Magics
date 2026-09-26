@@ -1,0 +1,144 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "d49f6ebf2c49682a1d509e4cefe8d6c34d290de14b91e1094d9519f1fa895000",
+    "26b0e5f75c66f8efb20e375683ee276f6613bb284cee52c57d05f0b4d007851e",
+    "ce9c106bfab04c6246c94d0308c4be7cee9eb061b24e656510918be316625d80",
+    "4257e1bbd65c069d56503d6c0c47031c024c611e3da2c868e5ab9efc5219a163",
+    "14b33ccf1b96ca1f29c7cdb0a0743120e3885b8dd1ba58e306672cea9268a21a"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:ContextualWisdomLab/.github#2291",
+      "github-issue:michaeljosiah/ArkeStudio#1282",
+      "github-issue:oestradiol/Arcane-Magics#43",
+      "github-repository:anilnishad19799/agentic-ai-guardrails",
+      "github-repository:jettbrains/-L-"
+    ],
+    "memory_object_ids": [
+      "d49f6ebf2c49682a1d509e4cefe8d6c34d290de14b91e1094d9519f1fa895000",
+      "26b0e5f75c66f8efb20e375683ee276f6613bb284cee52c57d05f0b4d007851e",
+      "ce9c106bfab04c6246c94d0308c4be7cee9eb061b24e656510918be316625d80",
+      "4257e1bbd65c069d56503d6c0c47031c024c611e3da2c868e5ab9efc5219a163",
+      "14b33ccf1b96ca1f29c7cdb0a0743120e3885b8dd1ba58e306672cea9268a21a"
+    ],
+    "next_query_terms": [
+      "aba",
+      "abs",
+      "accessibility",
+      "accompanying",
+      "acquire",
+      "across",
+      "action",
+      "activity",
+      "actual",
+      "additions",
+      "adopted",
+      "adopted-job"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "85b57fc4b72d6d96bb68ae75aa9ab6877ad04073476d26546c347d0416fc26db",
+    "reconstruction_id": "71163568c205d1f7bf36e6847a454ab66372b103dab5af00220c7c864ed3a8bd",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "4b438ed476bef8a14ad1161c3edd784a9e7719cd95dc1e8b6c74ed7aea351b42",
+    "6f0690aa883d01b804090d82bf1b4014076352361667da140b35dcbd3e116084",
+    "5bb7d5a6ee824acbcbde515c399abb4df586474e6123219d6cb93a6eb4558c2d",
+    "c10881db19674cae8dd7c403985c01cd5a7d101dec0b53daf7cb87d41050799d",
+    "a36ecab5f5ac764920b6e2949497c21ec09b3605454847eb4378bd568c18ce1e",
+    "2f61fda36dac19be49135c9940c9d267f629462002fd5c252c089615307178b2"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:ContextualWisdomLab/.github#2291",
+      "github-issue:RbrtMrlsIII/TeamAi#404",
+      "github-issue:akstspace/agent-starter#1",
+      "github-issue:michaeljosiah/ArkeStudio#1282",
+      "github-repository:AhmadGull-Dev/AuraGuard_Java_PipeFilter_GUI",
+      "github-repository:Yushi7/modular-web-vulnerability-scanner"
+    ],
+    "memory_object_ids": [
+      "4b438ed476bef8a14ad1161c3edd784a9e7719cd95dc1e8b6c74ed7aea351b42",
+      "6f0690aa883d01b804090d82bf1b4014076352361667da140b35dcbd3e116084",
+      "5bb7d5a6ee824acbcbde515c399abb4df586474e6123219d6cb93a6eb4558c2d",
+      "c10881db19674cae8dd7c403985c01cd5a7d101dec0b53daf7cb87d41050799d",
+      "a36ecab5f5ac764920b6e2949497c21ec09b3605454847eb4378bd568c18ce1e",
+      "2f61fda36dac19be49135c9940c9d267f629462002fd5c252c089615307178b2"
+    ],
+    "next_query_terms": [
+      "access",
+      "ace",
+      "activity",
+      "actual",
+      "added",
+      "additions",
+      "adopted",
+      "adopted-job",
+      "adopts",
+      "aede",
+      "agent",
+      "agents"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "45cd8e07ed36fa857c5454b5649fa27278fc4fdbba20cf3440d56b0c9ba040b2",
+    "reconstruction_id": "ffec24eaf5e3e0ecdf2b0590e9d7f8b2b6089780d6a5dc2192af09b4eec8da79",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:AhmadGull-Dev/AuraGuard_Java_PipeFilter_GUI",
+    "github-repo:ContextualWisdomLab/.github",
+    "github-repo:RbrtMrlsIII/TeamAi",
+    "github-repo:Yushi7/modular-web-vulnerability-scanner",
+    "github-repo:akstspace/agent-starter",
+    "github-repo:anilnishad19799/agentic-ai-guardrails",
+    "github-repo:jettbrains/-L-",
+    "github-repo:michaeljosiah/ArkeStudio"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:AhmadGull-Dev/AuraGuard_Java_PipeFilter_GUI",
+    "github-repo:ContextualWisdomLab/.github",
+    "github-repo:RbrtMrlsIII/TeamAi",
+    "github-repo:Yushi7/modular-web-vulnerability-scanner",
+    "github-repo:akstspace/agent-starter",
+    "github-repo:anilnishad19799/agentic-ai-guardrails",
+    "github-repo:jettbrains/-L-",
+    "github-repo:michaeljosiah/ArkeStudio",
+    "github-repo:oestradiol/Arcane-Magics"
+  ],
+  "indexed_source_ids": [
+    "github-issue:ContextualWisdomLab/.github#2291",
+    "github-issue:RbrtMrlsIII/TeamAi#404",
+    "github-issue:akstspace/agent-starter#1",
+    "github-issue:michaeljosiah/ArkeStudio#1282",
+    "github-issue:oestradiol/Arcane-Magics#43",
+    "github-repository:AhmadGull-Dev/AuraGuard_Java_PipeFilter_GUI",
+    "github-repository:Yushi7/modular-web-vulnerability-scanner",
+    "github-repository:anilnishad19799/agentic-ai-guardrails",
+    "github-repository:jettbrains/-L-"
+  ],
+  "memory_checkpoint_sha256": "32cef1f564c18fbc4f32fd927f96f96e3478f1585283e0e7ca0236b7abd55f5f",
+  "memory_record_count": 11,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "85b57fc4b72d6d96bb68ae75aa9ab6877ad04073476d26546c347d0416fc26db",
+  "query2_changed_from_query1": true,
+  "query2_id": "45cd8e07ed36fa857c5454b5649fa27278fc4fdbba20cf3440d56b0c9ba040b2",
+  "query2_memory_provenance": [
+    "network-memory:14b33ccf1b96ca1f29c7cdb0a0743120e3885b8dd1ba58e306672cea9268a21a",
+    "network-memory:26b0e5f75c66f8efb20e375683ee276f6613bb284cee52c57d05f0b4d007851e",
+    "network-memory:4257e1bbd65c069d56503d6c0c47031c024c611e3da2c868e5ab9efc5219a163",
+    "network-memory:ce9c106bfab04c6246c94d0308c4be7cee9eb061b24e656510918be316625d80",
+    "network-memory:d49f6ebf2c49682a1d509e4cefe8d6c34d290de14b91e1094d9519f1fa895000"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}

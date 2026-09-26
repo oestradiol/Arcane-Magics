@@ -1,0 +1,140 @@
+{
+  "anchor_terms": [
+    "security",
+    "world",
+    "input",
+    "prompt",
+    "injection",
+    "tool-output",
+    "poisoning",
+    "and",
+    "persistent-memory",
+    "contamination",
+    "venus",
+    "distinguishes"
+  ],
+  "config_attempts": 2,
+  "config_id": "TITLE_ANCHORED",
+  "config_utility": 1.0,
+  "future_return_input": false,
+  "hidden_evaluation_input": false,
+  "program_digest": "dd53886610c75b836ba0c0033aeacd5cb3287cccd22046f3d7a4bfb700f34f38",
+  "promotion_authority": false,
+  "relations": [
+    {
+      "anchor_degree": 11,
+      "anchor_terms": [
+        "contamination",
+        "distinguishes",
+        "injection",
+        "input",
+        "persistent-memory",
+        "poisoning",
+        "prompt",
+        "security",
+        "tool-output",
+        "venus",
+        "world"
+      ],
+      "source_ids": [
+        "github-issue:ContextualWisdomLab/.github#2291",
+        "github-issue:oestradiol/Arcane-Magics#43"
+      ],
+      "source_support": 2,
+      "term": "evidence",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 11,
+      "anchor_terms": [
+        "contamination",
+        "distinguishes",
+        "injection",
+        "input",
+        "persistent-memory",
+        "poisoning",
+        "prompt",
+        "security",
+        "tool-output",
+        "venus",
+        "world"
+      ],
+      "source_ids": [
+        "github-issue:michaeljosiah/ArkeStudio#1282",
+        "github-issue:oestradiol/Arcane-Magics#43"
+      ],
+      "source_support": 2,
+      "term": "test",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 4,
+      "anchor_terms": [
+        "injection",
+        "input",
+        "prompt",
+        "security"
+      ],
+      "source_ids": [
+        "github-repository:anilnishad19799/agentic-ai-guardrails"
+      ],
+      "source_support": 1,
+      "term": "agentic-ai-guardrails",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 4,
+      "anchor_terms": [
+        "injection",
+        "input",
+        "prompt",
+        "security"
+      ],
+      "source_ids": [
+        "github-repository:anilnishad19799/agentic-ai-guardrails"
+      ],
+      "source_support": 1,
+      "term": "anilnishad",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 2,
+      "anchor_terms": [
+        "prompt",
+        "world"
+      ],
+      "source_ids": [
+        "github-issue:michaeljosiah/ArkeStudio#1282"
+      ],
+      "source_support": 1,
+      "term": "approve",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 2,
+      "anchor_terms": [
+        "input",
+        "security"
+      ],
+      "source_ids": [
+        "github-issue:ContextualWisdomLab/.github#2291"
+      ],
+      "source_support": 1,
+      "term": "binder",
+      "title_support": 1
+    }
+  ],
+  "schema": "Venus.StateOwnedRelationTrace.v0.1",
+  "selection_basis": "RETURNED_UTILITY_EXPLORATION_THEN_STRUCTURAL",
+  "status": "RELATION_TRACE_CANDIDATE_FROZEN",
+  "terms": [
+    "evidence",
+    "test",
+    "agentic-ai-guardrails",
+    "anilnishad",
+    "approve",
+    "binder"
+  ],
+  "trace_id": "a6654d90c8d143d136883a8535e225c8d49e2b8493a11bd3094fbb4b157509ef",
+  "truth_authority": false
+}

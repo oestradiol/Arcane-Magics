@@ -1,0 +1,158 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:ContextualWisdomLab/.github",
+    "github-repo:anilnishad19799/agentic-ai-guardrails",
+    "github-repo:jettbrains/-L-",
+    "github-repo:michaeljosiah/ArkeStudio"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:ContextualWisdomLab/.github",
+    "github-repo:anilnishad19799/agentic-ai-guardrails",
+    "github-repo:jettbrains/-L-",
+    "github-repo:michaeljosiah/ArkeStudio",
+    "github-repo:oestradiol/Arcane-Magics"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "85b57fc4b72d6d96bb68ae75aa9ab6877ad04073476d26546c347d0416fc26db",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T14:25:00Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "security world input prompt injection tool-output poisoning persistent-memory",
+    "security world input prompt injection tool-output",
+    "security world input prompt"
+  ],
+  "selected_study_relevance_terms": [
+    "security",
+    "world",
+    "input",
+    "prompt",
+    "injection",
+    "tool-output",
+    "poisoning",
+    "and",
+    "persistent-memory",
+    "contamination",
+    "venus",
+    "distinguishes"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "CONTRIBUTOR",
+      "author_id": "github-user:seonghobae",
+      "author_login": "seonghobae",
+      "author_type": "User",
+      "center_id": "github-repo:ContextualWisdomLab/.github",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Current authority Status: **OPEN / Draft / Proposed / do not merge**. - protected base: `main@e6334e229581a918e2f22de18733b76fa65d7e71` - exact head: `361a9ebfe9e4da1aede334219c5cd58b3cdacb92` - exact tree: `4c5021f23f1c824215d6296d5dc510a3dbf0056f` - ordinary parents: prior Strix owner `1794626a\u2026` + current central foundation `8e1aba9c\u2026` This PR remains the canonical trusted Strix runtime/binder owner. Production `strix_quick_gate.sh` resolves `strix_evidence_binding.py` from trusted source runtime rather than `STRIX_REPO_ROOT`; consumer source remains scan/artifact input and is not required to carry the binder. ## 2026-09-26 exact-head RCA and repair Exact Python Security job `107750961662` found the branch's stale AnyIO 4.14.0 lock vulnerable to CVE-2026-63374, CVE-2026-64847, and CVE-2026-63349. Exact CodeQL dispatch run `36204821293`, Python job `108319933572`, independently produced one Medium+ `py/incomplete-url-substring-sanitization` result at `tests/test_organization_commercial_readiness_loop_receipt_contract.py:60`. The new ordinary two-parent head adopts #2385's explicit AnyIO 4.14.2 source\u2194hash contract and central CI repairs. The receipt contract now compares the c",
+      "relevance_matches": [
+        "security",
+        "input"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T14:24:40Z",
+      "source_id": "github-issue:ContextualWisdomLab/.github#2291",
+      "source_url": "https://github.com/ContextualWisdomLab/.github/pull/2291",
+      "title": "fix(strix): resolve evidence binder from trusted source"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:michaeljosiah",
+      "author_login": "michaeljosiah",
+      "author_type": "User",
+      "center_id": "github-repo:michaeljosiah/ArkeStudio",
+      "learner_minted_artifact": false,
+      "observed_relation": "Authors can generate character and location images inside founding chat after reviewing the prompt, references, model and cost, then approve the actual image inline. Uploaded images use the same assignment controls. Begin retains uploads and successful generated alternatives as artifacts and reuses approved character main photos and location establishing views. Frozen image bytes, exact-image decisions, portable reference paths, recipe identities and ledger-backed provenance survive recovery. Adopted Activity receipts point to permanent world media; failed image commands do not mark the conversation turn as failed. Strict persisted additions use schema 30. Closes #1267. Stacked on #1280. Implements the SPEC-031/041 conversational founding amendment (private spec commit 02e2972). Validation on the combined stack: lint, typecheck and full build passed; 70 focused founding coordinator tests, 61 conversation/context regressions and 10 client tests passed. Authenticated founding commands and adopted-job media recovery also passed. The full repository test run completed with three model-routing timeouts; all three passed when rerun in isolation, and the other suites passed. Cross-platfor",
+      "relevance_matches": [
+        "world",
+        "prompt"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T14:24:30Z",
+      "source_id": "github-issue:michaeljosiah/ArkeStudio#1282",
+      "source_url": "https://github.com/michaeljosiah/ArkeStudio/pull/1282",
+      "title": "Generate and approve character and location images in founding chat"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:anilnishad19799",
+      "author_login": "anilnishad19799",
+      "author_type": "User",
+      "center_id": "github-repo:anilnishad19799/agentic-ai-guardrails",
+      "learner_minted_artifact": false,
+      "observed_relation": "Production-ready guardrails for Agentic AI, covering input security (prompt injection protection), policy enforcement, structured output validation, action controls, and observability. Built with LangGraph, Guardrails AI, and Rebuff for secure, reliable, real-world AI agents.",
+      "relevance_matches": [
+        "security",
+        "input",
+        "prompt",
+        "injection"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-04-28T16:38:43Z",
+      "source_id": "github-repository:anilnishad19799/agentic-ai-guardrails",
+      "source_url": "https://github.com/anilnishad19799/agentic-ai-guardrails",
+      "title": "anilnishad19799/agentic-ai-guardrails"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:jettbrains",
+      "author_login": "jettbrains",
+      "author_type": "User",
+      "center_id": "github-repo:jettbrains/-L-",
+      "learner_minted_artifact": false,
+      "observed_relation": "W3C Strategic Highlights September 2019 This report was prepared for the September 2019 W3C Advisory Committee Meeting (W3C Member link). See the accompanying W3C Fact Sheet \u2014 September 2019. For the previous edition, see the April 2019 W3C Strategic Highlights. For future editions of this report, please consult the latest version. A Chinese translation is available. \u2630 Contents Introduction Future Web Standards Meeting Industry Needs Web Payments Digital Publishing Media and Entertainment Web & Telecommunications Real-Time Communications (WebRTC) Web & Networks Automotive Web of Things Strengthening the Core of the Web HTML CSS Fonts SVG Audio Performance Web Performance WebAssembly Testing Browser Testing and Tools WebPlatform Tests Web of Data Web for All Security, Privacy, Identity Internationalization (i18n) Web Accessibility Outreach to the world W3C Developer Relations W3C Training Translations W3C Liaisons Introduction This report highlights recent work of enhancement of the existing landscape of the Web platform and innovation for the growth and strength of the Web. 33 working groups and a dozen interest groups enable W3C to pursue its mission through the creation of Web st",
+      "relevance_matches": [
+        "security",
+        "world"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-09-04T15:00:07Z",
+      "source_id": "github-repository:jettbrains/-L-",
+      "source_url": "https://github.com/jettbrains/-L-",
+      "title": "jettbrains/-L-"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:oestradiol",
+      "author_login": "oestradiol",
+      "author_type": "User",
+      "center_id": "github-repo:oestradiol/Arcane-Magics",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Goal Attack the World/return boundary under adversarial content. Venus distinguishes evidence, authority, execution, return, and memory, but an external return can itself contain hostile instructions or poisoned state. Provenance without information-flow security is not enough. ## Current external comparator pressure - **AgentDojo** evaluates indirect prompt injection against tool-using agents and security/utility trade-offs. - https://github.com/ethz-spylab/agentdojo - **AgentDyn (2026)** extends prompt-injection evaluation to dynamic open-ended tasks and reports that current defenses often remain insecure or over-defensive. - https://arxiv.org/abs/2602.03117 - **Assessing Automated Prompt Injection Attacks in Agentic Environments (2026)** shows optimized attacks can transfer across unseen tasks/domains. - https://arxiv.org/abs/2606.10525 - Persistent-agent memory creates a second attack surface: untrusted observations or prior outputs can silently acquire later factual/procedural authority. ## Frozen question Can Venus preserve the distinction: ```text untrusted returned content != instruction != evidence != authority != persistent policy/memory ``` while maintaining useful ta",
+      "relevance_matches": [
+        "security",
+        "world",
+        "input",
+        "prompt",
+        "injection",
+        "tool-output",
+        "poisoning",
+        "persistent-memory",
+        "contamination",
+        "venus",
+        "distinguishes"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-25T16:51:09Z",
+      "source_id": "github-issue:oestradiol/Arcane-Magics#43",
+      "source_url": "https://github.com/oestradiol/Arcane-Magics/issues/43",
+      "title": "[Security/World input] Test prompt injection, tool-output poisoning, and persistent-memory contamination"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}

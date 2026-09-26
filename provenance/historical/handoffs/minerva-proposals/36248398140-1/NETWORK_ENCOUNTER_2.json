@@ -1,0 +1,170 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:AhmadGull-Dev/AuraGuard_Java_PipeFilter_GUI",
+    "github-repo:ContextualWisdomLab/.github",
+    "github-repo:RbrtMrlsIII/TeamAi",
+    "github-repo:Yushi7/modular-web-vulnerability-scanner",
+    "github-repo:akstspace/agent-starter",
+    "github-repo:michaeljosiah/ArkeStudio"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:AhmadGull-Dev/AuraGuard_Java_PipeFilter_GUI",
+    "github-repo:ContextualWisdomLab/.github",
+    "github-repo:RbrtMrlsIII/TeamAi",
+    "github-repo:Yushi7/modular-web-vulnerability-scanner",
+    "github-repo:akstspace/agent-starter",
+    "github-repo:michaeljosiah/ArkeStudio"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "45cd8e07ed36fa857c5454b5649fa27278fc4fdbba20cf3440d56b0c9ba040b2",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T14:25:04Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "security world input aba abs accessibility accompanying acquire",
+    "security world input aba abs accessibility",
+    "security world input aba",
+    "security world input"
+  ],
+  "selected_study_relevance_terms": [
+    "security",
+    "world",
+    "input",
+    "prompt",
+    "injection",
+    "tool-output",
+    "poisoning",
+    "and",
+    "persistent-memory",
+    "contamination",
+    "venus",
+    "distinguishes"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:akstspace",
+      "author_login": "akstspace",
+      "author_type": "User",
+      "center_id": "github-repo:akstspace/agent-starter",
+      "learner_minted_artifact": false,
+      "observed_relation": "<!-- This is an auto-generated comment: release notes by coderabbit.ai --> ## Summary by CodeRabbit * **New Features** * Agent chat API with multi-agent support, per-agent configuration, rate limits, health check, and JWT auth + test-mode bypass * Interactive Test UI: chat workspace, sessions, attachments, rich prompt input, chain-of-thought, message branching, and charting/visualizations * Built-in tools: calculator, visualization/plot builders, example workflows with deferred/approval flows; LLM provider resolution and availability diagnostics * **Documentation** * Project README and dev container quick-start added * **Chores** * Dev container, Docker Compose, Dockerfile, Makefile, env/example, git/pre-commit configs * **Tests** * New unit and integration tests for agents, auth, LLM env hydration, and settings validation <!-- end of auto-generated comment: release notes by coderabbit.ai -->",
+      "relevance_matches": [
+        "input",
+        "prompt"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-03-06T17:39:01Z",
+      "source_id": "github-issue:akstspace/agent-starter#1",
+      "source_url": "https://github.com/akstspace/agent-starter/pull/1",
+      "title": "Initial code"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "CONTRIBUTOR",
+      "author_id": "github-user:seonghobae",
+      "author_login": "seonghobae",
+      "author_type": "User",
+      "center_id": "github-repo:ContextualWisdomLab/.github",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Current authority Status: **OPEN / Draft / Proposed / do not merge**. - protected base: `main@e6334e229581a918e2f22de18733b76fa65d7e71` - exact head: `361a9ebfe9e4da1aede334219c5cd58b3cdacb92` - exact tree: `4c5021f23f1c824215d6296d5dc510a3dbf0056f` - ordinary parents: prior Strix owner `1794626a\u2026` + current central foundation `8e1aba9c\u2026` This PR remains the canonical trusted Strix runtime/binder owner. Production `strix_quick_gate.sh` resolves `strix_evidence_binding.py` from trusted source runtime rather than `STRIX_REPO_ROOT`; consumer source remains scan/artifact input and is not required to carry the binder. ## 2026-09-26 exact-head RCA and repair Exact Python Security job `107750961662` found the branch's stale AnyIO 4.14.0 lock vulnerable to CVE-2026-63374, CVE-2026-64847, and CVE-2026-63349. Exact CodeQL dispatch run `36204821293`, Python job `108319933572`, independently produced one Medium+ `py/incomplete-url-substring-sanitization` result at `tests/test_organization_commercial_readiness_loop_receipt_contract.py:60`. The new ordinary two-parent head adopts #2385's explicit AnyIO 4.14.2 source\u2194hash contract and central CI repairs. The receipt contract now compares the c",
+      "relevance_matches": [
+        "security",
+        "input"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T14:24:40Z",
+      "source_id": "github-issue:ContextualWisdomLab/.github#2291",
+      "source_url": "https://github.com/ContextualWisdomLab/.github/pull/2291",
+      "title": "fix(strix): resolve evidence binder from trusted source"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:michaeljosiah",
+      "author_login": "michaeljosiah",
+      "author_type": "User",
+      "center_id": "github-repo:michaeljosiah/ArkeStudio",
+      "learner_minted_artifact": false,
+      "observed_relation": "Authors can generate character and location images inside founding chat after reviewing the prompt, references, model and cost, then approve the actual image inline. Uploaded images use the same assignment controls. Begin retains uploads and successful generated alternatives as artifacts and reuses approved character main photos and location establishing views. Frozen image bytes, exact-image decisions, portable reference paths, recipe identities and ledger-backed provenance survive recovery. Adopted Activity receipts point to permanent world media; failed image commands do not mark the conversation turn as failed. Strict persisted additions use schema 30. Closes #1267. Stacked on #1280. Implements the SPEC-031/041 conversational founding amendment (private spec commit 02e2972). Validation on the combined stack: lint, typecheck and full build passed; 70 focused founding coordinator tests, 61 conversation/context regressions and 10 client tests passed. Authenticated founding commands and adopted-job media recovery also passed. The full repository test run completed with three model-routing timeouts; all three passed when rerun in isolation, and the other suites passed. Cross-platfor",
+      "relevance_matches": [
+        "world",
+        "prompt"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T14:24:30Z",
+      "source_id": "github-issue:michaeljosiah/ArkeStudio#1282",
+      "source_url": "https://github.com/michaeljosiah/ArkeStudio/pull/1282",
+      "title": "Generate and approve character and location images in founding chat"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:RbrtMrlsIII",
+      "author_login": "RbrtMrlsIII",
+      "author_type": "User",
+      "center_id": "github-repo:RbrtMrlsIII/TeamAi",
+      "learner_minted_artifact": false,
+      "observed_relation": "## CURRENT VERIFIED STATE \u2014 2026-09-26 - **029 vehicle:** PR #404 only - **Execution Issue:** #405 - **Current #404 head:** `8076246e27ba6b7e1171665a6f6856ace2bb466f` - **Current #404 base/main:** `76da305f0ec3efb3d368b22fb70748f0051f4d15` - **State:** OPEN / DRAFT - **Latest bounded slice:** S12 Authenticated Restoration presentation/read-model seam - **S12 corrected implementation head:** `8076246e27ba6b7e1171665a6f6856ace2bb466f` - **S12 exact-head Full-System:** `36244720981` \u2014 PASS, **1,108 tests passed / 0 failed / 0 skipped** - **S12 exact-head Browser:** `36244720992` \u2014 PASS, **70 passed / 4 skipped**, including all three S12 browser scenarios - **S12 exact-head Security:** `36244720968` \u2014 PASS - **S12 exact-head Deep Security:** `36244720957` \u2014 PASS - **S12 exact-head Governance:** `36244720993` \u2014 PASS; review-readiness skipped because the PR is Draft - **S12 edge-case correction:** impossible durable Seat populations now fail closed with zero projected Seats rather than exposing a silently clamped count. - **S0\u2013S10 ledger reconciliation:** S0 closed; S1 partial only for the known state/effect seam; S2/S9/S10 capability-proven with broader formal exits still open. - **Back",
+      "relevance_matches": [
+        "security",
+        "world"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T14:23:22Z",
+      "source_id": "github-issue:RbrtMrlsIII/TeamAi#404",
+      "source_url": "https://github.com/RbrtMrlsIII/TeamAi/pull/404",
+      "title": "029: 3D Spatial World | Full Machine Reconstruction and Product Integration"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:AhmadGull-Dev",
+      "author_login": "AhmadGull-Dev",
+      "author_type": "User",
+      "center_id": "github-repo:AhmadGull-Dev/AuraGuard_Java_PipeFilter_GUI",
+      "learner_minted_artifact": false,
+      "observed_relation": "A Java Swing GUI that visually demonstrates a face detection security pipeline using Pipe-and-Filter Architecture \u2014 8 independent filter stages from camera input to access logging, with 4 testable real-world scenarios. Built for SDA. No external libraries required.",
+      "relevance_matches": [
+        "security",
+        "input"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-06-23T21:18:09Z",
+      "source_id": "github-repository:AhmadGull-Dev/AuraGuard_Java_PipeFilter_GUI",
+      "source_url": "https://github.com/AhmadGull-Dev/AuraGuard_Java_PipeFilter_GUI",
+      "title": "AhmadGull-Dev/AuraGuard_Java_PipeFilter_GUI"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:Yushi7",
+      "author_login": "Yushi7",
+      "author_type": "User",
+      "center_id": "github-repo:Yushi7/modular-web-vulnerability-scanner",
+      "learner_minted_artifact": false,
+      "observed_relation": "Built in Python using Requests, BeautifulSoup, and Nmap. Features pluggable scanning modules for port discovery, HTTP security header analysis, form and endpoint enumeration, and detection of common misconfigurations and reflected input vulnerabilities. Built as a hands-on cybersecurity project exploring real-world web attack surface analysis.",
+      "relevance_matches": [
+        "security",
+        "input"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-06-12T20:39:31Z",
+      "source_id": "github-repository:Yushi7/modular-web-vulnerability-scanner",
+      "source_url": "https://github.com/Yushi7/modular-web-vulnerability-scanner",
+      "title": "Yushi7/modular-web-vulnerability-scanner"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}
