@@ -1,0 +1,41 @@
+{
+  "schema": "Venus.WorldMirrorConsolePolicy.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_LOCAL_INTERACTION_SURFACE",
+  "purpose": "Provide a minimal inspectable human/machine interaction surface with raw-first evidence custody and an optional bounded process transport.",
+  "interaction": {
+    "raw_bytes_preserved": true,
+    "decoded_view_is_derivative": true,
+    "semantic_memory_is_derivative": true,
+    "storage_counts_as_learning": false,
+    "chronology_preserved": true
+  },
+  "process_bridge": {
+    "enabled_by_default": false,
+    "shell_allowed": false,
+    "root_must_be_explicit": true,
+    "executable_allowlist_required": true,
+    "default_timeout_seconds": 15,
+    "max_stdin_bytes": 262144,
+    "max_output_bytes": 1048576,
+    "security_claim": "ARGV_CWD_SIZE_TIMEOUT_BOUNDARY_ONLY_NOT_OS_SANDBOX",
+    "untrusted_machine_execution_requires_external_sandbox": true
+  },
+  "interface": {
+    "fabricated_agent_reply_when_unbound": false,
+    "agent_backend_is_external_adapter": true,
+    "conversation_event_is_not_world_truth": true,
+    "interaction_event_is_not_learning": true
+  },
+  "permanent_noncollapse": [
+    "RAW_BYTES!=DECODED_VIEW",
+    "DECODED_VIEW!=INTERPRETATION",
+    "INTERACTION_LOG!=LEARNING",
+    "PROCESS_EXECUTION!=AUTHORIZATION",
+    "PROCESS_BRIDGE!=OS_SANDBOX",
+    "AGENT_RESPONSE!=WORLD_TRUTH",
+    "UI_CONTROL!=PROMOTION_AUTHORITY"
+  ],
+  "promotion_authority": false,
+  "truth_authority": false
+}
