@@ -1,6 +1,6 @@
 {
-  "alpha_rename_invariant": false,
-  "behavior_equivalent_after_removal": false,
+  "alpha_rename_invariant": true,
+  "behavior_equivalent_after_removal": true,
   "capability_id": "LATERAL169_EPISODE1_PROJECTION_POLICY",
   "fresh_transfer_return_external": false,
   "generic_executor": "kernel/runtime/token_knn.py",
