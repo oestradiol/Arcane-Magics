@@ -58,11 +58,21 @@ jobs:
             --encounter2 autonomy/evidence/network/36210844736/followup-encounter.json \
             --output autonomy/evidence/network/36210844736/lineage-result.json
 
+      - name: Evaluate bounded WWW Mind gate
+        run: |
+          python -m unittest tests/test_network_center_policy.py
+          python -m unittest tests/test_www_mind_gate_result.py
+          python scripts/evaluate_www_mind_gate.py \
+            --gate kernel/development/WWW_MIND_GATE.json \
+            --lineage autonomy/evidence/network/36210844736/lineage-result.json \
+            --center-policy kernel/development/NETWORK_CENTER_POLICY.json \
+            --output kernel/development/WWW_MIND_GATE_RESULT.json
+
       - name: Persist reconstruction receipt
         run: |
           git config user.name 'Minerva network-memory worker'
           git config user.email 'actions@users.noreply.github.com'
-          git add autonomy/evidence/network/36210844736/result.json autonomy/evidence/network/36210844736/followup-query.json autonomy/evidence/network/36210844736/lineage-result.json
+          git add autonomy/evidence/network/36210844736/result.json autonomy/evidence/network/36210844736/followup-query.json autonomy/evidence/network/36210844736/lineage-result.json kernel/development/WWW_MIND_GATE_RESULT.json
           if git diff --cached --quiet; then
             echo 'No network reconstruction change.'
             exit 0
