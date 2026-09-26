@@ -1,0 +1,111 @@
+{
+  "schema": "Venus.LateralEpisode2Prefreeze.v0.1",
+  "issue": 169,
+  "episode": 2,
+  "status": "PREFROZEN_BEFORE_LEARNER_HOLDOUT_FACE_ACQUISITION",
+  "purpose": "Test whether the machine can revise the poorly-generalizing episode-1 lateral projection policy using only already-returned labeled experience, then improve on a fresh disjoint GitHub PR holdout.",
+  "parent_results": [
+    "kernel/development/LATERAL_EPISODE_1_RESULT.json",
+    "kernel/development/LATERAL_INTERNALIZATION_TRANSFER_1_RESULT.json"
+  ],
+  "accumulated_training_sources": [
+    "autonomy/evidence/lateral/169/episode-1-visible.json",
+    "autonomy/evidence/lateral/169/episode-1-hidden-reveal.json",
+    "autonomy/evidence/lateral/169/transfer-1-visible.json",
+    "autonomy/evidence/lateral/169/transfer-1-hidden-reveal.json"
+  ],
+  "revision_space": {
+    "face_sets": [
+      [
+        "relation_expanded"
+      ],
+      [
+        "relation_expanded",
+        "path_topology"
+      ],
+      [
+        "relation_expanded",
+        "change_scale"
+      ],
+      [
+        "relation_expanded",
+        "path_topology",
+        "change_scale"
+      ]
+    ],
+    "k_values": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "selection_rule": "maximize leave-one-out accuracy on accumulated returned labels; tie-break by fewer added independent faces, then smaller k, then lexical policy_id",
+    "selection_uses_fresh_holdout_labels": false,
+    "capability_specific_source_allowed_only_in_external_evaluator": true
+  },
+  "fresh_holdout_universe": {
+    "repository": "oestradiol/Arcane-Magics",
+    "candidate_pr_numbers": [
+      91,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      100,
+      101,
+      103,
+      105,
+      109,
+      110,
+      111,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126
+    ],
+    "exclude_episode1_and_transfer1": true,
+    "selection_method": "lowest 10 sha256('LATERAL169_E2|'+pr_number)",
+    "selected_pr_numbers": [
+      115,
+      97,
+      114,
+      123,
+      122,
+      96,
+      117,
+      125,
+      126,
+      93
+    ],
+    "selection_uses_outcome": false,
+    "labels_visible_to_learner_before_prediction": false
+  },
+  "pass_rule": {
+    "minimum_holdout_accuracy": 0.5,
+    "must_exceed_episode1_internalized_transfer_accuracy": 0.125,
+    "must_preserve_source_identity": true,
+    "must_freeze_predictions_before_label_reveal": true
+  },
+  "noncollapse": [
+    "REVISION!=LABEL_LEAKAGE",
+    "MORE_FACE_COMBINATION!=NEW_INDEPENDENT_FACE",
+    "POLICY_SELECTION!=PROMOTION",
+    "EPISODE2_PASS!=GENERAL_LATERALIZER",
+    "FRESH_HOLDOUT!=TRAINING_RETURN"
+  ],
+  "claim_fence": "A pass establishes only a bounded self-revised lateral projection policy over the declared GitHub PR task family. It does not establish unrestricted basis invention, general Lateralizer competence, Safe Strong RSI, AGI, or consciousness.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
