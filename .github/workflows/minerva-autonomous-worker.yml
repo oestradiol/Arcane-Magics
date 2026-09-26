@@ -47,6 +47,7 @@ jobs:
           test -f docs/SELF_MODEL.md
           test -f docs/GLOBAL_REPOSITORY_OPERATION.md
           test -f docs/SELF_CORRECTION_OPERATOR.md
+          test -f kernel/development/VM_INTERNALIZATION_PHASE_PLAN.json
 
       - name: Snapshot repository World model
         env:
