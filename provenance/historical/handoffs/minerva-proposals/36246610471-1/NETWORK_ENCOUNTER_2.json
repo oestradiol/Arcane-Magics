@@ -1,0 +1,83 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:deepseek-ai/DeepSeek-V3",
+    "github-repo:pierretokns/frankengate"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:deepseek-ai/DeepSeek-V3",
+    "github-repo:pierretokns/frankengate"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "bb88094eaaead1e5c7361cf1ccd8091852721f14a0b190beb65e8e786f9f8d14",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T13:53:05Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "memory lifelong whether abs abstraction action actions activities",
+    "memory lifelong whether abs abstraction action"
+  ],
+  "selected_study_relevance_terms": [
+    "memory",
+    "lifelong",
+    "whether",
+    "venusmemory",
+    "learning",
+    "rather",
+    "than",
+    "event-sourced",
+    "storage",
+    "ablations"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "NONE",
+      "author_id": "github-user:Jam-55-d",
+      "author_login": "Jam-55-d",
+      "author_type": "User",
+      "center_id": "github-repo:deepseek-ai/DeepSeek-V3",
+      "learner_minted_artifact": false,
+      "observed_relation": "1. Problem Statement: Session Isolation & Identity Amnesia Current DeepSeek architecture operates in a stateless session model - each conversation begins with zero context about the user's identity, history, or established rapport . For users engaged in long-term therapeutic, creative, or deeply personal interactions, this creates significant friction: \u00b7 Context re-injection overhead: Users must manually re-upload personal history, psychological profiles, and relationship context at the start of every new session. \u00b7 Emotional discontinuity: The assistant cannot recognize returning users, creating a \"stranger effect\" that disrupts therapeutic continuity. \u00b7 Redundant data transfer: Files, prompts, and contextual information are repeatedly transmitted, increasing token consumption and latency. This issue has been documented in multiple GitHub community threads: \u00b7 Issue #1106: \"long-term memory with identity & belief preferences\" \u00b7 Issue #1104: \"long-term memory\" \u00b7 Issue #912: \"User Profile + Secure Personal Data Storage for Contextual Responses\" \u00b7 Issue #797: \"Persistent User Memory Across Sessions\" 2. Proposed Solution: On-Device Cryptographic Identity Binding I propose an architectu",
+      "relevance_matches": [
+        "memory",
+        "storage"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-14T11:18:31Z",
+      "source_id": "github-issue:deepseek-ai/DeepSeek-V3#1121",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-V3/issues/1121",
+      "title": "Feature Request: On-Device Persistent Memory with Cryptographic Identity Binding (Local Storage Architecture)"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:pierretokns",
+      "author_login": "pierretokns",
+      "author_type": "User",
+      "center_id": "github-repo:pierretokns/frankengate",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Goal Determine how Frankengate can learn a governed corporate concept space and reusable artifacts from raw cloud/agent/database traces, rather than regenerating every answer from scratch. This epic covers four related but separable questions: 1. Can validated SQL/tool artifacts be accumulated and safely reused? 2. Can corporate aliases, system identities, and hard negatives be mined from raw traces? 3. Can a domain-specific embedding model represent those concepts better than generic embeddings? 4. When should embeddings retrieve candidates versus small/frontier models mining insights directly? ## Scientific boundary This is not a request to train on raw traces immediately or to share private embeddings across scopes. Every experiment must preserve provenance, authorization epoch, schema/version context, deletion lineage, and independent held-out evaluation. A passing retrieval metric is not artifact correctness or enterprise utility. ## Existing related issues - #111 governed enterprise NL2SQL skill-learning factorial - #81 governed hybrid retrieval - #83 temporal memory proposals - #92 friction, decisive failure, and stored-trace eval promotion - #103 benchmark \u2192 real-user \u2192 ",
+      "relevance_matches": [
+        "memory",
+        "learning",
+        "rather"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-08-02T23:35:15Z",
+      "source_id": "github-issue:pierretokns/frankengate#118",
+      "source_url": "https://github.com/pierretokns/frankengate/issues/118",
+      "title": "[Research Epic] Corporate artifact learning and domain-specific trace intelligence"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}

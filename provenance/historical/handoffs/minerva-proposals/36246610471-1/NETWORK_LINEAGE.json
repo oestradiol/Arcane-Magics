@@ -1,0 +1,134 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "896c0f2c391618ccfc5d35ce053dd5cbca7fd704da031ae5424272a5d0a9001a",
+    "b05801857eb6de57cce0eeb664e19e1547329e9262727c63f1b58546b06addd4",
+    "df027298406a55a0924647849819515ce1f852fad664eb987da2841abf43ca77",
+    "189d52bde1df95f7370de73725d8da55f0d5633d3192af5b99b1a901574ed9ed",
+    "c0f9672b18d39590ad38fdc7ff438801269b37111f2f601e7a1fcc5a29166a84",
+    "2b788f6739915bcf4f2895f461827ccd63af1baf02ed2274b65f3051a2dcdfee"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:hena-agent/ren-ai#23",
+      "github-issue:jjakimoto/research-issues#835",
+      "github-repository:Amitap2018/NEURON-M",
+      "github-repository:Arlikhozhaev/FlashStudy-AI",
+      "github-repository:GrandBrandman/Blockforge",
+      "github-repository:Vortex-16/Vortex-16"
+    ],
+    "memory_object_ids": [
+      "896c0f2c391618ccfc5d35ce053dd5cbca7fd704da031ae5424272a5d0a9001a",
+      "b05801857eb6de57cce0eeb664e19e1547329e9262727c63f1b58546b06addd4",
+      "df027298406a55a0924647849819515ce1f852fad664eb987da2841abf43ca77",
+      "189d52bde1df95f7370de73725d8da55f0d5633d3192af5b99b1a901574ed9ed",
+      "c0f9672b18d39590ad38fdc7ff438801269b37111f2f601e7a1fcc5a29166a84",
+      "2b788f6739915bcf4f2895f461827ccd63af1baf02ed2274b65f3051a2dcdfee"
+    ],
+    "next_query_terms": [
+      "abs",
+      "abstraction",
+      "action",
+      "actions",
+      "activities",
+      "adr-",
+      "agent",
+      "agentic",
+      "agents",
+      "ai-scientist",
+      "all",
+      "already"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "e2c01f69ca105a642d09697d05c8b389d985f9aa24606563593943aa62dee5f7",
+    "reconstruction_id": "c65f5252659fde8d72e42f4f6964362a3070d44b180b52948d6bd87cfe44ea72",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "1830315cb45845b558735d5a0132a47758e1bd7f5c64bc350799d2da781aaeb9",
+    "09ddd43562d914b138b1a837acd0b92737fa9b7cc96be760d73d88944ed356a5"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:deepseek-ai/DeepSeek-V3#1121",
+      "github-issue:pierretokns/frankengate#118"
+    ],
+    "memory_object_ids": [
+      "1830315cb45845b558735d5a0132a47758e1bd7f5c64bc350799d2da781aaeb9",
+      "09ddd43562d914b138b1a837acd0b92737fa9b7cc96be760d73d88944ed356a5"
+    ],
+    "next_query_terms": [
+      "accumulated",
+      "across",
+      "agent",
+      "aliases",
+      "amnesia",
+      "and",
+      "answer",
+      "architectu",
+      "architecture",
+      "are",
+      "artifact",
+      "artifacts"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "bb88094eaaead1e5c7361cf1ccd8091852721f14a0b190beb65e8e786f9f8d14",
+    "reconstruction_id": "0858b8cb78c1a2b4a73a9e1806825aec8674bfb837eeb22219b898d2d3e350b3",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:Amitap2018/NEURON-M",
+    "github-repo:Arlikhozhaev/FlashStudy-AI",
+    "github-repo:GrandBrandman/Blockforge",
+    "github-repo:Vortex-16/Vortex-16",
+    "github-repo:deepseek-ai/DeepSeek-V3",
+    "github-repo:hena-agent/ren-ai",
+    "github-repo:jjakimoto/research-issues",
+    "github-repo:pierretokns/frankengate"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:Amitap2018/NEURON-M",
+    "github-repo:Arlikhozhaev/FlashStudy-AI",
+    "github-repo:GrandBrandman/Blockforge",
+    "github-repo:Vortex-16/Vortex-16",
+    "github-repo:deepseek-ai/DeepSeek-V3",
+    "github-repo:hena-agent/ren-ai",
+    "github-repo:jjakimoto/research-issues",
+    "github-repo:pierretokns/frankengate"
+  ],
+  "indexed_source_ids": [
+    "github-issue:deepseek-ai/DeepSeek-V3#1121",
+    "github-issue:hena-agent/ren-ai#23",
+    "github-issue:jjakimoto/research-issues#835",
+    "github-issue:pierretokns/frankengate#118",
+    "github-repository:Amitap2018/NEURON-M",
+    "github-repository:Arlikhozhaev/FlashStudy-AI",
+    "github-repository:GrandBrandman/Blockforge",
+    "github-repository:Vortex-16/Vortex-16"
+  ],
+  "memory_checkpoint_sha256": "3b8a9504673b5ab56a4777ff520451c5dc73c1bab0592d5a4645b15d9b89fa5d",
+  "memory_record_count": 8,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "e2c01f69ca105a642d09697d05c8b389d985f9aa24606563593943aa62dee5f7",
+  "query2_changed_from_query1": true,
+  "query2_id": "bb88094eaaead1e5c7361cf1ccd8091852721f14a0b190beb65e8e786f9f8d14",
+  "query2_memory_provenance": [
+    "network-memory:189d52bde1df95f7370de73725d8da55f0d5633d3192af5b99b1a901574ed9ed",
+    "network-memory:2b788f6739915bcf4f2895f461827ccd63af1baf02ed2274b65f3051a2dcdfee",
+    "network-memory:896c0f2c391618ccfc5d35ce053dd5cbca7fd704da031ae5424272a5d0a9001a",
+    "network-memory:b05801857eb6de57cce0eeb664e19e1547329e9262727c63f1b58546b06addd4",
+    "network-memory:c0f9672b18d39590ad38fdc7ff438801269b37111f2f601e7a1fcc5a29166a84",
+    "network-memory:df027298406a55a0924647849819515ce1f852fad664eb987da2841abf43ca77"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}

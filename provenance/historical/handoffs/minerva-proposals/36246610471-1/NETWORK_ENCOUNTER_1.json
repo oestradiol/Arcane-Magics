@@ -1,0 +1,173 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:Amitap2018/NEURON-M",
+    "github-repo:Arlikhozhaev/FlashStudy-AI",
+    "github-repo:GrandBrandman/Blockforge",
+    "github-repo:Vortex-16/Vortex-16",
+    "github-repo:hena-agent/ren-ai",
+    "github-repo:jjakimoto/research-issues"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:Amitap2018/NEURON-M",
+    "github-repo:Arlikhozhaev/FlashStudy-AI",
+    "github-repo:GrandBrandman/Blockforge",
+    "github-repo:Vortex-16/Vortex-16",
+    "github-repo:hena-agent/ren-ai",
+    "github-repo:jjakimoto/research-issues"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "e2c01f69ca105a642d09697d05c8b389d985f9aa24606563593943aa62dee5f7",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T13:53:03Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "memory lifelong whether venusmemory learning rather event-sourced storage",
+    "memory lifelong whether venusmemory learning rather",
+    "memory lifelong whether venusmemory",
+    "memory lifelong whether"
+  ],
+  "selected_study_relevance_terms": [
+    "memory",
+    "lifelong",
+    "whether",
+    "venusmemory",
+    "learning",
+    "rather",
+    "than",
+    "event-sourced",
+    "storage",
+    "ablations"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:jjakimoto",
+      "author_login": "jjakimoto",
+      "author_type": "User",
+      "center_id": "github-repo:jjakimoto/research-issues",
+      "learner_minted_artifact": false,
+      "observed_relation": "**Topic:** Quantitative trading; machine learning for quant & trading; agentic coding techniques; LLMs & multimodal LLMs; and autonomous research (autoresearch / AI-scientist) systems \u2014 methods, papers, tools **Date:** 2026-08-18 **Theme:** Executable skills and action interfaces for agents These systems treat programs as durable skills or direct actions, letting agents compose tools, reuse successful behavior, and repair failures through execution feedback. **Link:** https://arxiv.org/abs/2305.16291 A lifelong agent architecture combining an automatic curriculum, execution-refined code skills, retrieval, and self-verification. ## Executive summary Voyager uses GPT-4 to propose progressively harder Minecraft objectives, implement reusable JavaScript skills, and revise them using execution feedback. Successful skills enter an embedding-indexed library and become building blocks for later tasks. ### Curriculum and skills The curriculum conditions new tasks on the agent's state and history of completed and failed objectives. - Skills are executable programs rather than natural-language memories. - Task plans and environment feedback retrieve relevant prior skills. - New skills are enc",
+      "relevance_matches": [
+        "lifelong",
+        "learning",
+        "rather"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T12:14:57Z",
+      "source_id": "github-issue:jjakimoto/research-issues#835",
+      "source_url": "https://github.com/jjakimoto/research-issues/issues/835",
+      "title": "Foundations: Voyager: An Open-Ended Embodied Agent with Large Language Models"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "CONTRIBUTOR",
+      "author_id": "github-user:hena-dev",
+      "author_login": "hena-dev",
+      "author_type": "User",
+      "center_id": "github-repo:hena-agent/ren-ai",
+      "learner_minted_artifact": false,
+      "observed_relation": "This spec is where [Map: iMessage personas v1 (Korean testing period)](https://github.com/hena-agent/ren-ai/issues/1) was headed. Each decision below is detailed in the map's closed tickets and in ADR-0001 to ADR-0008; where this spec and a ticket differ, this spec is newer. ## Problem Statement People in Korea who would enjoy texting a fictional persona have no way to do it in the app they already use every day, iMessage, with a persona who behaves like a real person rather than a chatbot. The maintainer wants a testing period to find out whether this works: anyone with iMessage can onboard at msg.hena.dev and text Persona1, who is played from the Service handle, hi@hena.dev, by a server on the maintainer's Mac mini. The testing period has to be safe for a public audience (strangers can submit any number, and every message is untrusted input to a model), cheap enough to run on OpenCode Go's usage caps, and honest (a Notice says she's an AI and how to stop). It must run unattended on one Mac, and let the Operator watch every Conversation live and fix what breaks. The same design has to carry production's persona choice and new languages without a redesign. ## Solution A visitor ope",
+      "relevance_matches": [
+        "whether",
+        "rather"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T05:06:20Z",
+      "source_id": "github-issue:hena-agent/ren-ai#23",
+      "source_url": "https://github.com/hena-agent/ren-ai/issues/23",
+      "title": "PRD: iMessage personas v1 (Korean testing period)"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:Amitap2018",
+      "author_login": "Amitap2018",
+      "author_type": "User",
+      "center_id": "github-repo:Amitap2018/NEURON-M",
+      "learner_minted_artifact": false,
+      "observed_relation": "Fixed-Memory Lifelong Cognitive Architecture \u2014 exploring whether AI can continuously learn through memory consolidation, abstraction and skill formation without continuously increasing cognitive memory.",
+      "relevance_matches": [
+        "memory",
+        "lifelong",
+        "whether"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-09-20T06:25:22Z",
+      "source_id": "github-repository:Amitap2018/NEURON-M",
+      "source_url": "https://github.com/Amitap2018/NEURON-M",
+      "title": "Amitap2018/NEURON-M"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:Vortex-16",
+      "author_login": "Vortex-16",
+      "author_type": "User",
+      "center_id": "github-repo:Vortex-16/Vortex-16",
+      "learner_minted_artifact": false,
+      "observed_relation": "\ud83d\udc4b Hi there! I'm Vikash ! \ud83d\udcbb C Programmer | \ud83d\udca1 Problem Solver | \ud83d\ude80 Lifelong Learner Welcome to my GitHub profile! I\u2019m passionate about low-level programming, systems development, and writing efficient, clean code in C. Whether it\u2019s building data structures from scratch, working with memory directly.",
+      "relevance_matches": [
+        "memory",
+        "lifelong",
+        "whether"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-08-30T13:16:46Z",
+      "source_id": "github-repository:Vortex-16/Vortex-16",
+      "source_url": "https://github.com/Vortex-16/Vortex-16",
+      "title": "Vortex-16/Vortex-16"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:GrandBrandman",
+      "author_login": "GrandBrandman",
+      "author_type": "User",
+      "center_id": "github-repo:GrandBrandman/Blockforge",
+      "learner_minted_artifact": false,
+      "observed_relation": "A premium, cyberpunk-themed Web3 DApp built on Ethereum & Hardhat that logs your trades and NFT trades whether they are in profit or loss with beautiful telemetry dashboards. This is a lifelong memory connecting your emotions with your past activities if you want a log of your trades. Designed with creative human vision, crafted using agentic AI.",
+      "relevance_matches": [
+        "memory",
+        "lifelong",
+        "whether"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-08-17T15:42:57Z",
+      "source_id": "github-repository:GrandBrandman/Blockforge",
+      "source_url": "https://github.com/GrandBrandman/Blockforge",
+      "title": "GrandBrandman/Blockforge"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:Arlikhozhaev",
+      "author_login": "Arlikhozhaev",
+      "author_type": "User",
+      "center_id": "github-repo:Arlikhozhaev/FlashStudy-AI",
+      "learner_minted_artifact": false,
+      "observed_relation": "Introducing your personalized flashcard generator! Whether you're a student or a lifelong learner, this tool creates quick and concise flashcards tailored to your study needs. Sign in, generate your flashcards effortlessly, and boost your memory retention\u2014all in one seamless experience.",
+      "relevance_matches": [
+        "memory",
+        "lifelong",
+        "whether"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-07-05T03:36:02Z",
+      "source_id": "github-repository:Arlikhozhaev/FlashStudy-AI",
+      "source_url": "https://github.com/Arlikhozhaev/FlashStudy-AI",
+      "title": "Arlikhozhaev/FlashStudy-AI"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}
