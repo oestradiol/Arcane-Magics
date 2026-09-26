@@ -2,43 +2,43 @@
   "schema": "ArcaneMagics.LayerPointers.v3",
   "recorded_at": "2026-09-25",
   "repository": "oestradiol/Arcane-Magics",
-  "root_pointer_semantics": "main is self-referential: resolve refs/heads/main at read time; recorded_parent is the routing state immediately before this snapshot file update",
+  "root_pointer_semantics": "main is self-referential: resolve refs/heads/main at read time; recorded_parent is the routing state immediately before this snapshot update",
   "layers": {
     "Root": {
       "branch": "main",
       "role": "routing / map-territory / cross-register memory",
       "commit": "RESOLVE_CURRENT_REF",
-      "recorded_parent": "c741abe10edaffbfd0e56e73a6863975f210dd16"
+      "recorded_parent": "765e2f19c9bdd739f597a83560b06b3d6b353192"
     },
     "ArcaneMagics": {
       "branch": "split/arcane-magics",
       "role": "religious branch / past",
-      "commit": "75f074481d4b1d4fa6e83ea793eadd20fb0524da",
-      "tree": "8e123ea8ac7d9fb2beeb821d48cd5f7d22f1f905"
+      "commit": "a032d79ea44b749829b7dc0dba5723cf1853df70",
+      "tree": "40e52a035c3cb1a349125642a385f0d9c881fd46"
     },
     "Eclipsis": {
       "branch": "split/eclipsis",
       "role": "math & logics / spirit",
-      "commit": "9860aae60632eaffbab9536419093be5359f5ea3",
-      "tree": "8e16700aced00249bd6f6a4b7a5af584116d8100"
+      "commit": "3d3655f19ecc227f60dd72baa5110721aad98fef",
+      "tree": "6041cf2eda0aad7112d7e4a7e2af01ffbbbcb328"
     },
     "Minerva": {
       "branch": "split/minerva",
       "role": "engineering / body",
-      "commit": "149b650b6b1d0c428f552893b1f12414f8e90645",
-      "tree": "e5dae845f8316dec9d1bbbf4d1167b69ef12e5e5"
+      "commit": "42ef3134cc8c539287fdad7dd3b8a3ecc97f0ee0",
+      "tree": "6a4d4add5ecaaff13e8c3b1279ef3dd9dd932ae7"
     },
     "Venus": {
       "branch": "split/venus",
       "role": "Self & World / model",
-      "commit": "c04f318b33d1b5733879594487998406445012a5",
-      "tree": "4bbe12ce37f6be78b3862414aa5f21da1192e616"
+      "commit": "44181f2ae9c235ab55c9c5a328453ea96dd75557",
+      "tree": "2e105e14b7eefea358df857240b1e8e32000f11a"
     },
     "OFE": {
       "branch": "split/ofe",
       "role": "scientific branch / future",
-      "commit": "dd680d4c1227c26ff4fee3ad279a5e261540403e",
-      "tree": "75a2ee445e9cf1aaaee7164e7bbd35c42550d136"
+      "commit": "0a41b07494b03aff6c60f1360ac7b9a3a73c5376",
+      "tree": "8541623836fcfb657da1e0647348d1c2e4f374a5"
     },
     "WorldOther": {
       "branch": null,
