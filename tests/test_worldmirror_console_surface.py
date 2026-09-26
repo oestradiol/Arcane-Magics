@@ -13,7 +13,13 @@ class WorldMirrorConsoleSurfaceTests(unittest.TestCase):
         server = (ROOT / "apps/worldmirror_console/server.py").read_text(encoding="utf-8")
         html = (ROOT / "apps/worldmirror_console/static/index.html").read_text(encoding="utf-8")
         js = (ROOT / "apps/worldmirror_console/static/app.js").read_text(encoding="utf-8")
-        agent_protocol = json.loads(\n            (ROOT / "kernel/development/WORLDMIRROR_AGENT_PROTOCOL.json").read_text(encoding="utf-8")\n        )\n        policy = json.loads(\n            (ROOT / "kernel/development/WORLDMIRROR_CONSOLE_POLICY.json").read_text(
+        agent_protocol = json.loads(
+            (ROOT / "kernel/development/WORLDMIRROR_AGENT_PROTOCOL.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        policy = json.loads(
+            (ROOT / "kernel/development/WORLDMIRROR_CONSOLE_POLICY.json").read_text(
                 encoding="utf-8"
             )
         )
@@ -27,7 +33,9 @@ class WorldMirrorConsoleSurfaceTests(unittest.TestCase):
         self.assertTrue(policy["interaction"]["raw_bytes_preserved"])
         self.assertFalse(policy["interaction"]["storage_counts_as_learning"])
         self.assertFalse(policy["process_bridge"]["enabled_by_default"])
-        self.assertFalse(policy["interface"]["fabricated_agent_reply_when_unbound"])\n        self.assertIn("AGENT_REPLY!=INDEPENDENT_RETURN", agent_protocol["noncollapse"])\n
+        self.assertFalse(policy["interface"]["fabricated_agent_reply_when_unbound"])
+        self.assertIn("AGENT_REPLY!=INDEPENDENT_RETURN", agent_protocol["noncollapse"])
+
     def test_interaction_development_contract_blocks_log_equals_learning(self):
         contract = json.loads(
             (ROOT / "kernel/development/INTERACTION_DEVELOPMENT_CONTRACT.json").read_text(
