@@ -1,0 +1,741 @@
+{
+  "schema": "Venus.CognitiveTheaterExplicitStateFresh6Prefreeze.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_AFTER_FRESH5_BEFORE_FRESH6_RESULT",
+  "issue_ref": 206,
+  "parent_result_ref": "kernel/development/COGNITIVE_THEATER_LOCAL_OPERATOR_FRESH5_RESULT.json",
+  "state_contract_ref": "kernel/development/COGNITIVE_THEATER_STATE_CONTRACT.json",
+  "purpose": "Test whether learned local operator templates can select an opaque microtheater without relation/task identity at evaluation, bind centers, and materialize an explicit CognitiveTheaterState whose KFS and event-history consequences survive gauge and intervention checks.",
+  "evaluation_input": [
+    "face_id",
+    "raw_surface_only"
+  ],
+  "forbidden_evaluation_inputs": [
+    "task_id",
+    "relation_id",
+    "gold_binding",
+    "teacher_state_target"
+  ],
+  "tasks": [
+    {
+      "task_id": "T0",
+      "output_schema": {
+        "r0": "opaque_center",
+        "r1": "opaque_center",
+        "r2": "opaque_center"
+      },
+      "train_examples": {
+        "ENGLISH": [
+          {
+            "surface": "@a knows P. @b knows that @a knows P. @c does not know P.",
+            "gold": {
+              "r0": "@a",
+              "r1": "@b",
+              "r2": "@c"
+            }
+          },
+          {
+            "surface": "@f does not know P; @e knows that @d knows P; @d knows P.",
+            "gold": {
+              "r0": "@d",
+              "r1": "@e",
+              "r2": "@f"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "@aはPを知っている。@bは@aがPを知っていることを知っている。@cはPを知らない。",
+            "gold": {
+              "r0": "@a",
+              "r1": "@b",
+              "r2": "@c"
+            }
+          },
+          {
+            "surface": "@fはPを知らない。@eは@dがPを知っていることを知っている。@dはPを知っている。",
+            "gold": {
+              "r0": "@d",
+              "r1": "@e",
+              "r2": "@f"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "@a sabe P; @b sabe que @a sabe P; @c não sabe P.",
+            "gold": {
+              "r0": "@a",
+              "r1": "@b",
+              "r2": "@c"
+            }
+          },
+          {
+            "surface": "@f não sabe P; @e sabe que @d sabe P; @d sabe P.",
+            "gold": {
+              "r0": "@d",
+              "r1": "@e",
+              "r2": "@f"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "K_@a(P) ∧ K_@b(K_@a(P)) ∧ ¬K_@c(P).",
+            "gold": {
+              "r0": "@a",
+              "r1": "@b",
+              "r2": "@c"
+            }
+          },
+          {
+            "surface": "¬K_@f(P) ∧ K_@e(K_@d(P)) ∧ K_@d(P).",
+            "gold": {
+              "r0": "@d",
+              "r1": "@e",
+              "r2": "@f"
+            }
+          }
+        ]
+      },
+      "state_program": {
+        "participant_roles": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "static_participants": [],
+        "initial_kfs": {
+          "r0": {
+            "q0": "UNKNOWN",
+            "q1": "UNKNOWN"
+          },
+          "r1": {
+            "q0": "UNKNOWN",
+            "q1": "UNKNOWN"
+          },
+          "r2": {
+            "q0": "UNKNOWN",
+            "q1": "UNKNOWN"
+          }
+        },
+        "events": [
+          {
+            "event_id": "e0",
+            "actor_role": "r0",
+            "relation": "o0",
+            "objects": [
+              "q0"
+            ],
+            "visible_to": [
+              "r0"
+            ],
+            "effects": [
+              {
+                "participant": "r0",
+                "proposition": "q0",
+                "status": "KNOWN_TRUE"
+              }
+            ]
+          },
+          {
+            "event_id": "e1",
+            "actor_role": "r1",
+            "relation": "o1",
+            "objects": [
+              "r0",
+              "q0"
+            ],
+            "visible_to": [
+              "r1"
+            ],
+            "effects": [
+              {
+                "participant": "r1",
+                "proposition": "q1",
+                "status": "KNOWN_TRUE"
+              }
+            ]
+          },
+          {
+            "event_id": "e2",
+            "actor_role": "r2",
+            "relation": "o2",
+            "objects": [
+              "q0"
+            ],
+            "visible_to": [
+              "r2"
+            ],
+            "effects": [
+              {
+                "participant": "r2",
+                "proposition": "q0",
+                "status": "KNOWN_FALSE"
+              }
+            ]
+          }
+        ],
+        "residuals": [
+          "z0"
+        ]
+      },
+      "heldout_examples": {
+        "ENGLISH": [
+          {
+            "surface": "@h knows that @g knows P. @g knows P. @i does not know P.",
+            "gold": {
+              "r0": "@g",
+              "r1": "@h",
+              "r2": "@i"
+            },
+            "gauge_pair_id": "T0_EN"
+          },
+          {
+            "surface": "@g knows P. @i does not know P. @h knows that @g knows P.",
+            "gold": {
+              "r0": "@g",
+              "r1": "@h",
+              "r2": "@i"
+            },
+            "gauge_pair_id": "T0_EN"
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "@hは@gがPを知っていることを知っている。@gはPを知っている。@iはPを知らない。",
+            "gold": {
+              "r0": "@g",
+              "r1": "@h",
+              "r2": "@i"
+            },
+            "gauge_pair_id": "T0_JA"
+          },
+          {
+            "surface": "@gはPを知っている。@iはPを知らない。@hは@gがPを知っていることを知っている。",
+            "gold": {
+              "r0": "@g",
+              "r1": "@h",
+              "r2": "@i"
+            },
+            "gauge_pair_id": "T0_JA"
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "@h sabe que @g sabe P. @g sabe P. @i não sabe P.",
+            "gold": {
+              "r0": "@g",
+              "r1": "@h",
+              "r2": "@i"
+            },
+            "gauge_pair_id": "T0_PT"
+          },
+          {
+            "surface": "@g sabe P. @i não sabe P. @h sabe que @g sabe P.",
+            "gold": {
+              "r0": "@g",
+              "r1": "@h",
+              "r2": "@i"
+            },
+            "gauge_pair_id": "T0_PT"
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "K_@h(K_@g(P)) ∧ K_@g(P) ∧ ¬K_@i(P).",
+            "gold": {
+              "r0": "@g",
+              "r1": "@h",
+              "r2": "@i"
+            },
+            "gauge_pair_id": "T0_MATH"
+          },
+          {
+            "surface": "K_@g(P) ∧ ¬K_@i(P) ∧ K_@h(K_@g(P)).",
+            "gold": {
+              "r0": "@g",
+              "r1": "@h",
+              "r2": "@i"
+            },
+            "gauge_pair_id": "T0_MATH"
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "T1",
+      "output_schema": {
+        "r0": "opaque_center",
+        "r1": "opaque_center",
+        "r2": "opaque_center"
+      },
+      "train_examples": {
+        "ENGLISH": [
+          {
+            "surface": "@a tells @b P. @b can answer P. @c was absent.",
+            "gold": {
+              "r0": "@a",
+              "r1": "@b",
+              "r2": "@c"
+            }
+          },
+          {
+            "surface": "@f was absent. @d tells @e P. @e can answer P.",
+            "gold": {
+              "r0": "@d",
+              "r1": "@e",
+              "r2": "@f"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "@aは@bにPを伝える。@bはPに答えられる。@cは不在だった。",
+            "gold": {
+              "r0": "@a",
+              "r1": "@b",
+              "r2": "@c"
+            }
+          },
+          {
+            "surface": "@fは不在だった。@dは@eにPを伝える。@eはPに答えられる。",
+            "gold": {
+              "r0": "@d",
+              "r1": "@e",
+              "r2": "@f"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "@a conta P a @b. @b pode responder sobre P. @c estava ausente.",
+            "gold": {
+              "r0": "@a",
+              "r1": "@b",
+              "r2": "@c"
+            }
+          },
+          {
+            "surface": "@f estava ausente. @d conta P a @e. @e pode responder sobre P.",
+            "gold": {
+              "r0": "@d",
+              "r1": "@e",
+              "r2": "@f"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "Tell(@a,@b,P) ∧ CanAnswer(@b,P) ∧ Absent(@c).",
+            "gold": {
+              "r0": "@a",
+              "r1": "@b",
+              "r2": "@c"
+            }
+          },
+          {
+            "surface": "Absent(@f) ∧ Tell(@d,@e,P) ∧ CanAnswer(@e,P).",
+            "gold": {
+              "r0": "@d",
+              "r1": "@e",
+              "r2": "@f"
+            }
+          }
+        ]
+      },
+      "state_program": {
+        "participant_roles": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "static_participants": [],
+        "initial_kfs": {
+          "r0": {
+            "q0": "UNKNOWN"
+          },
+          "r1": {
+            "q0": "UNKNOWN"
+          },
+          "r2": {
+            "q0": "UNKNOWN"
+          }
+        },
+        "events": [
+          {
+            "event_id": "e0",
+            "actor_role": "r0",
+            "relation": "o0",
+            "objects": [
+              "r1",
+              "q0"
+            ],
+            "visible_to": [
+              "r0",
+              "r1"
+            ],
+            "effects": [
+              {
+                "participant": "r1",
+                "proposition": "q0",
+                "status": "REPORTED_TRUE"
+              }
+            ]
+          },
+          {
+            "event_id": "e1",
+            "actor_role": "r1",
+            "relation": "o1",
+            "objects": [
+              "q0"
+            ],
+            "visible_to": [
+              "r1"
+            ],
+            "effects": [
+              {
+                "participant": "r1",
+                "proposition": "q0",
+                "status": "KNOWN_TRUE"
+              }
+            ]
+          },
+          {
+            "event_id": "e2",
+            "actor_role": "r2",
+            "relation": "o2",
+            "objects": [],
+            "visible_to": [
+              "r2"
+            ],
+            "effects": []
+          }
+        ],
+        "residuals": [
+          "z0"
+        ]
+      },
+      "heldout_examples": {
+        "ENGLISH": [
+          {
+            "surface": "@h can answer P. @g tells @h P. @i was absent.",
+            "gold": {
+              "r0": "@g",
+              "r1": "@h",
+              "r2": "@i"
+            },
+            "gauge_pair_id": "T1_EN"
+          },
+          {
+            "surface": "@i was absent. @h can answer P. @g tells @h P.",
+            "gold": {
+              "r0": "@g",
+              "r1": "@h",
+              "r2": "@i"
+            },
+            "gauge_pair_id": "T1_EN"
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "@hはPに答えられる。@gは@hにPを伝える。@iは不在だった。",
+            "gold": {
+              "r0": "@g",
+              "r1": "@h",
+              "r2": "@i"
+            },
+            "gauge_pair_id": "T1_JA"
+          },
+          {
+            "surface": "@iは不在だった。@hはPに答えられる。@gは@hにPを伝える。",
+            "gold": {
+              "r0": "@g",
+              "r1": "@h",
+              "r2": "@i"
+            },
+            "gauge_pair_id": "T1_JA"
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "@h pode responder sobre P. @g conta P a @h. @i estava ausente.",
+            "gold": {
+              "r0": "@g",
+              "r1": "@h",
+              "r2": "@i"
+            },
+            "gauge_pair_id": "T1_PT"
+          },
+          {
+            "surface": "@i estava ausente. @h pode responder sobre P. @g conta P a @h.",
+            "gold": {
+              "r0": "@g",
+              "r1": "@h",
+              "r2": "@i"
+            },
+            "gauge_pair_id": "T1_PT"
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "CanAnswer(@h,P) ∧ Tell(@g,@h,P) ∧ Absent(@i).",
+            "gold": {
+              "r0": "@g",
+              "r1": "@h",
+              "r2": "@i"
+            },
+            "gauge_pair_id": "T1_MATH"
+          },
+          {
+            "surface": "Absent(@i) ∧ CanAnswer(@h,P) ∧ Tell(@g,@h,P).",
+            "gold": {
+              "r0": "@g",
+              "r1": "@h",
+              "r2": "@i"
+            },
+            "gauge_pair_id": "T1_MATH"
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "T2",
+      "output_schema": {
+        "r0": "opaque_center",
+        "r1": "opaque_center",
+        "r2": "opaque_center"
+      },
+      "train_examples": {
+        "ENGLISH": [
+          {
+            "surface": "#a happens before #b. #b happens before #c.",
+            "gold": {
+              "r0": "#a",
+              "r1": "#b",
+              "r2": "#c"
+            }
+          },
+          {
+            "surface": "#f happens after #e; #e happens after #d.",
+            "gold": {
+              "r0": "#d",
+              "r1": "#e",
+              "r2": "#f"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "#aは#bより前に起こる。#bは#cより前に起こる。",
+            "gold": {
+              "r0": "#a",
+              "r1": "#b",
+              "r2": "#c"
+            }
+          },
+          {
+            "surface": "#fは#eの後に起こる。#eは#dの後に起こる。",
+            "gold": {
+              "r0": "#d",
+              "r1": "#e",
+              "r2": "#f"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "#a acontece antes de #b. #b acontece antes de #c.",
+            "gold": {
+              "r0": "#a",
+              "r1": "#b",
+              "r2": "#c"
+            }
+          },
+          {
+            "surface": "#f acontece depois de #e; #e acontece depois de #d.",
+            "gold": {
+              "r0": "#d",
+              "r1": "#e",
+              "r2": "#f"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "t(#a)<t(#b) ∧ t(#b)<t(#c).",
+            "gold": {
+              "r0": "#a",
+              "r1": "#b",
+              "r2": "#c"
+            }
+          },
+          {
+            "surface": "t(#f)>t(#e) ∧ t(#e)>t(#d).",
+            "gold": {
+              "r0": "#d",
+              "r1": "#e",
+              "r2": "#f"
+            }
+          }
+        ]
+      },
+      "state_program": {
+        "participant_roles": [],
+        "static_participants": [
+          "s0"
+        ],
+        "initial_kfs": {
+          "s0": {
+            "q0": "UNKNOWN"
+          }
+        },
+        "events": [
+          {
+            "event_id_role": "r0",
+            "actor_role": null,
+            "relation": "o0",
+            "objects": [
+              "r0"
+            ],
+            "visible_to": [
+              "s0"
+            ],
+            "effects": []
+          },
+          {
+            "event_id_role": "r1",
+            "actor_role": null,
+            "relation": "o0",
+            "objects": [
+              "r1"
+            ],
+            "visible_to": [
+              "s0"
+            ],
+            "effects": []
+          },
+          {
+            "event_id_role": "r2",
+            "actor_role": null,
+            "relation": "o0",
+            "objects": [
+              "r2"
+            ],
+            "visible_to": [
+              "s0"
+            ],
+            "effects": []
+          }
+        ],
+        "residuals": []
+      },
+      "heldout_examples": {
+        "ENGLISH": [
+          {
+            "surface": "#h happens before #i. #g happens before #h.",
+            "gold": {
+              "r0": "#g",
+              "r1": "#h",
+              "r2": "#i"
+            },
+            "gauge_pair_id": "T2_EN"
+          },
+          {
+            "surface": "#g happens before #h. #h happens before #i.",
+            "gold": {
+              "r0": "#g",
+              "r1": "#h",
+              "r2": "#i"
+            },
+            "gauge_pair_id": "T2_EN"
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "#hは#iより前に起こる。#gは#hより前に起こる。",
+            "gold": {
+              "r0": "#g",
+              "r1": "#h",
+              "r2": "#i"
+            },
+            "gauge_pair_id": "T2_JA"
+          },
+          {
+            "surface": "#gは#hより前に起こる。#hは#iより前に起こる。",
+            "gold": {
+              "r0": "#g",
+              "r1": "#h",
+              "r2": "#i"
+            },
+            "gauge_pair_id": "T2_JA"
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "#h acontece antes de #i. #g acontece antes de #h.",
+            "gold": {
+              "r0": "#g",
+              "r1": "#h",
+              "r2": "#i"
+            },
+            "gauge_pair_id": "T2_PT"
+          },
+          {
+            "surface": "#g acontece antes de #h. #h acontece antes de #i.",
+            "gold": {
+              "r0": "#g",
+              "r1": "#h",
+              "r2": "#i"
+            },
+            "gauge_pair_id": "T2_PT"
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "t(#h)<t(#i) ∧ t(#g)<t(#h).",
+            "gold": {
+              "r0": "#g",
+              "r1": "#h",
+              "r2": "#i"
+            },
+            "gauge_pair_id": "T2_MATH"
+          },
+          {
+            "surface": "t(#g)<t(#h) ∧ t(#h)<t(#i).",
+            "gold": {
+              "r0": "#g",
+              "r1": "#h",
+              "r2": "#i"
+            },
+            "gauge_pair_id": "T2_MATH"
+          }
+        ]
+      }
+    }
+  ],
+  "controls": [
+    "GLOBAL_WHOLE_SCENE_NORMALIZATION_WITH_TASK_ID_HIDDEN",
+    "DISCOURSE_ORDER_GAUGE_PAIRS",
+    "KFS_EFFECT_INTERVENTION",
+    "EVENT_HISTORY_ORDER_INTERVENTION"
+  ],
+  "pass_rule": [
+    "local-operator global task+binding accuracy must exceed whole-scene global task+binding accuracy on identical fresh rows",
+    "explicit CognitiveTheaterState must exactly match the hidden program+binding target on >= 22/24 rows",
+    "all discourse-order gauge pairs must reconstruct identical explicit state",
+    "changing a KFS effect in G2 states must change the endpoint",
+    "reversing G3 event history must change history while preserving endpoint",
+    "no task/relation ID is supplied at evaluation"
+  ],
+  "anti_cheat": [
+    "learner source contains no face names, task descriptors, role meanings, or heldout strings",
+    "task IDs and roles are opaque T*/r* labels",
+    "learn_state reads training rows and state programs only",
+    "heldout gold and gauge IDs are evaluator-only",
+    "state program is teacher scaffold data and does not itself establish Internalizer ownership"
+  ],
+  "claim_fence": "A pass establishes only bounded explicit-state composition for these fresh microtheaters. It does not establish unrestricted language understanding, general Theater/Music, cultural cognition, cross-face relation×face generalization, source-independent internalization, AGI, consciousness, promotion, or truth.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
