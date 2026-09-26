@@ -1,0 +1,158 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "7ccf5abcb4981546335d7a74adea757c671a796afe699fa95e46ea072f7e10ba",
+    "a397d05bf50f1ddd4f0b78f28a149550a977fbf1d9efc7c923568c75178b4ae4",
+    "9053f13bf35e12d961c99c6001bd438b7924d47f4b42f7a9fbafeb2a8c526637",
+    "6544b613e0ff615d5612a6f2bacb6cac9638255b97ede1263d01efca3a6fad00",
+    "736ffc49bc16512a4ac91fda5879bc482bb0a6cfc2e8f8f2ddd2a5fe0073dd82",
+    "d1b19573c60ca790607224c595df6da5893d2deb550188347c0a4809eeb17409"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:AMASI-SA/AMASI-SA#1006",
+      "github-issue:ContextualWisdomLab/ConceptWeave#1",
+      "github-issue:Dengnifer/MIPStarRE-QPBT#27",
+      "github-issue:Oleksii-debug/Autosport#763",
+      "github-issue:SUSANO-OOO/Zombieee#172",
+      "github-issue:boxs-51/assistant#15"
+    ],
+    "memory_object_ids": [
+      "7ccf5abcb4981546335d7a74adea757c671a796afe699fa95e46ea072f7e10ba",
+      "a397d05bf50f1ddd4f0b78f28a149550a977fbf1d9efc7c923568c75178b4ae4",
+      "9053f13bf35e12d961c99c6001bd438b7924d47f4b42f7a9fbafeb2a8c526637",
+      "6544b613e0ff615d5612a6f2bacb6cac9638255b97ede1263d01efca3a6fad00",
+      "736ffc49bc16512a4ac91fda5879bc482bb0a6cfc2e8f8f2ddd2a5fe0073dd82",
+      "d1b19573c60ca790607224c595df6da5893d2deb550188347c0a4809eeb17409"
+    ],
+    "next_query_terms": [
+      "100",
+      "1001",
+      "136639308bytes",
+      "137179211",
+      "1601",
+      "1602",
+      "160ms",
+      "1929",
+      "1de6118484ac4fe1d0981e230618dbb573d8c58c",
+      "2026",
+      "2040",
+      "20draw"
+    ],
+    "problem_id": "7d8bbfb187d43745a89703eb7cbb88645e1ee17115df7fb387aebe06598065c5",
+    "promotion_authority": false,
+    "query_id": "78156c20af58266e3c00c77535d17fe5efdcde21e87a57924f42be0ca81d0c9e",
+    "reconstruction_id": "445bac4c81669d019f2c1f7bd09747e9d27d9f0290a9c5bdec06370eff0da15c",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "8b3bfb5bcd8859413362eb945f33f8b3eda385b641bbd0d4f0bf24af84923792",
+    "55b447a8a50db9b506fdb09212f84f4168e8a13bd2cd37c38660e7c574d9ff83",
+    "54a3c43fd6916b2f58d79fdf988db75b9d0afdcfb1e863dbf48c3c26022e291e",
+    "597ebe547e9d73bb40b802525d3951df3b7c66ca4f178c88baec1d8c011dbdca",
+    "65876b12fa69172d6e2c4be899c8fc82c34859c8bbd3fee2587266891358ddda",
+    "27aaed0207d192cea708db35e9df793b6ca6da48968d76f75a4338d4fef30ecc"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:AliSayyah/FastAPI-Piccolo-Template#100",
+      "github-issue:HackRU/HackRU-Backend#100",
+      "github-issue:JitHubApp/JitHubV2#100",
+      "github-issue:MALIEV-Co-Ltd/Legacy.Maliev.DataMigration#100",
+      "github-issue:Rewrite-Team/Rewrite-FE#100",
+      "github-issue:cherrchen/deepseek-harness-electron#100"
+    ],
+    "memory_object_ids": [
+      "8b3bfb5bcd8859413362eb945f33f8b3eda385b641bbd0d4f0bf24af84923792",
+      "55b447a8a50db9b506fdb09212f84f4168e8a13bd2cd37c38660e7c574d9ff83",
+      "54a3c43fd6916b2f58d79fdf988db75b9d0afdcfb1e863dbf48c3c26022e291e",
+      "597ebe547e9d73bb40b802525d3951df3b7c66ca4f178c88baec1d8c011dbdca",
+      "65876b12fa69172d6e2c4be899c8fc82c34859c8bbd3fee2587266891358ddda",
+      "27aaed0207d192cea708db35e9df793b6ca6da48968d76f75a4338d4fef30ecc"
+    ],
+    "next_query_terms": [
+      "115",
+      "141",
+      "1512",
+      "179",
+      "2025",
+      "4487",
+      "600",
+      "826",
+      "950b",
+      "acceptance",
+      "accepted",
+      "access"
+    ],
+    "problem_id": "7d8bbfb187d43745a89703eb7cbb88645e1ee17115df7fb387aebe06598065c5",
+    "promotion_authority": false,
+    "query_id": "68a881b2818de287f17d37c3fced5058c56461f01bcd8f49b86653c80e9ea564",
+    "reconstruction_id": "5b1838e45405edf01d71f113f5b8674fe52e6c56883eea8946c2b10c6dfa990f",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:AMASI-SA/AMASI-SA",
+    "github-repo:AliSayyah/FastAPI-Piccolo-Template",
+    "github-repo:ContextualWisdomLab/ConceptWeave",
+    "github-repo:Dengnifer/MIPStarRE-QPBT",
+    "github-repo:HackRU/HackRU-Backend",
+    "github-repo:JitHubApp/JitHubV2",
+    "github-repo:MALIEV-Co-Ltd/Legacy.Maliev.DataMigration",
+    "github-repo:Oleksii-debug/Autosport",
+    "github-repo:Rewrite-Team/Rewrite-FE",
+    "github-repo:SUSANO-OOO/Zombieee",
+    "github-repo:boxs-51/assistant",
+    "github-repo:cherrchen/deepseek-harness-electron"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:AMASI-SA/AMASI-SA",
+    "github-repo:AliSayyah/FastAPI-Piccolo-Template",
+    "github-repo:ContextualWisdomLab/ConceptWeave",
+    "github-repo:Dengnifer/MIPStarRE-QPBT",
+    "github-repo:HackRU/HackRU-Backend",
+    "github-repo:JitHubApp/JitHubV2",
+    "github-repo:MALIEV-Co-Ltd/Legacy.Maliev.DataMigration",
+    "github-repo:Oleksii-debug/Autosport",
+    "github-repo:Rewrite-Team/Rewrite-FE",
+    "github-repo:SUSANO-OOO/Zombieee",
+    "github-repo:boxs-51/assistant",
+    "github-repo:cherrchen/deepseek-harness-electron"
+  ],
+  "indexed_source_ids": [
+    "github-issue:AMASI-SA/AMASI-SA#1006",
+    "github-issue:AliSayyah/FastAPI-Piccolo-Template#100",
+    "github-issue:ContextualWisdomLab/ConceptWeave#1",
+    "github-issue:Dengnifer/MIPStarRE-QPBT#27",
+    "github-issue:HackRU/HackRU-Backend#100",
+    "github-issue:JitHubApp/JitHubV2#100",
+    "github-issue:MALIEV-Co-Ltd/Legacy.Maliev.DataMigration#100",
+    "github-issue:Oleksii-debug/Autosport#763",
+    "github-issue:Rewrite-Team/Rewrite-FE#100",
+    "github-issue:SUSANO-OOO/Zombieee#172",
+    "github-issue:boxs-51/assistant#15",
+    "github-issue:cherrchen/deepseek-harness-electron#100"
+  ],
+  "memory_checkpoint_sha256": "d4d0b26de13d72b30e29dd1224b3f79d57350a9563c6d89baee9c3cacbe50a43",
+  "memory_record_count": 12,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "78156c20af58266e3c00c77535d17fe5efdcde21e87a57924f42be0ca81d0c9e",
+  "query2_changed_from_query1": true,
+  "query2_id": "68a881b2818de287f17d37c3fced5058c56461f01bcd8f49b86653c80e9ea564",
+  "query2_memory_provenance": [
+    "network-memory:6544b613e0ff615d5612a6f2bacb6cac9638255b97ede1263d01efca3a6fad00",
+    "network-memory:736ffc49bc16512a4ac91fda5879bc482bb0a6cfc2e8f8f2ddd2a5fe0073dd82",
+    "network-memory:7ccf5abcb4981546335d7a74adea757c671a796afe699fa95e46ea072f7e10ba",
+    "network-memory:9053f13bf35e12d961c99c6001bd438b7924d47f4b42f7a9fbafeb2a8c526637",
+    "network-memory:a397d05bf50f1ddd4f0b78f28a149550a977fbf1d9efc7c923568c75178b4ae4",
+    "network-memory:d1b19573c60ca790607224c595df6da5893d2deb550188347c0a4809eeb17409"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}
