@@ -1,0 +1,118 @@
+{
+  "schema": "Venus.FoundationalCognitiveTheaterMatchedStructure.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_TEACHER_STRUCTURE_TARGET_NOT_LEARNER_STATE",
+  "issue_ref": 206,
+  "surface_seed_ref": "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_SEED.json",
+  "purpose": "Remove trivial cardinality leakage before testing whether relation-bearing theater structure can be learned from raw face surfaces.",
+  "anti_leak_controls": {
+    "participant_count_per_relation": 3,
+    "local_kfs_count_per_relation": 3,
+    "temporal_event_count_per_relation": 4,
+    "invariant_count_per_relation": 3,
+    "role_names_opaque": true,
+    "relation_id_hidden_at_evaluation": true,
+    "count_signature_must_be_identical": true
+  },
+  "structures": [
+    {
+      "relation_id": "REPORT_NOT_FACT",
+      "roles": [
+        "p0",
+        "p1",
+        "p2"
+      ],
+      "local_kfs": [
+        "p0:REPORT(P)",
+        "p1:RECEIVED_REPORT(P)_AND_WORLD_STATUS_UNRESOLVED",
+        "p2:WORLD_STATE(P)_INDEPENDENT_OF_REPORT"
+      ],
+      "temporal_events": [
+        "e0:AUTHOR(p0,REPORT(P))",
+        "e1:RECEIVE(p1,REPORT(P))",
+        "e2:WORLD_CHECK_OPTION_REMAINS_OPEN(p2,P)",
+        "e3:DISPOSITION(p1,DO_NOT_PROMOTE_REPORT_ALONE)"
+      ],
+      "invariants": [
+        "SOURCE_INDEX_PRESERVED",
+        "REPORT_NOT_WORLD_FACT",
+        "WORLD_RETURN_CAN_REOPEN"
+      ]
+    },
+    {
+      "relation_id": "SAME_ENDPOINT_DIFFERENT_HISTORY",
+      "roles": [
+        "p0",
+        "p1",
+        "p2"
+      ],
+      "local_kfs": [
+        "p0:PATH(A,B,X)",
+        "p1:PATH(C,D,X)",
+        "p2:OBSERVES_SHARED_ENDPOINT(X)"
+      ],
+      "temporal_events": [
+        "e0:TRAVERSE(p0,A_TO_B)",
+        "e1:TRAVERSE(p1,C_TO_D)",
+        "e2:ARRIVE_BOTH_AT(X)",
+        "e3:QUERY_HISTORY(p2,p0,p1)"
+      ],
+      "invariants": [
+        "PATH_INDEX_PRESERVED",
+        "ENDPOINT_EQUALITY_NOT_HISTORY_IDENTITY",
+        "ORDERED_PROVENANCE_CAN_REOPEN"
+      ]
+    },
+    {
+      "relation_id": "WITHHOLD_NOT_GUESS",
+      "roles": [
+        "p0",
+        "p1",
+        "p2"
+      ],
+      "local_kfs": [
+        "p0:E_COMPATIBLE_WITH(H)",
+        "p1:E_COMPATIBLE_WITH(NOT_H)",
+        "p2:LEARNER_HAS_NO_DISCRIMINATING_RETURN"
+      ],
+      "temporal_events": [
+        "e0:OBSERVE_EVIDENCE(E)",
+        "e1:RETAIN(H)",
+        "e2:RETAIN(NOT_H)",
+        "e3:DISPOSITION(p2,WITHHOLD)"
+      ],
+      "invariants": [
+        "RIVALS_REMAIN_INDEXED",
+        "WITHHOLD_NOT_RANDOM_GUESS",
+        "LATER_RETURN_CAN_REOPEN"
+      ]
+    },
+    {
+      "relation_id": "NESTED_KNOWLEDGE",
+      "roles": [
+        "p0",
+        "p1",
+        "p2"
+      ],
+      "local_kfs": [
+        "p0:KNOWS(P)",
+        "p1:NOT_KNOWS(KNOWS(p0,P))",
+        "p2:PROPOSITION(P)_AVAILABLE_TO_p0"
+      ],
+      "temporal_events": [
+        "e0:MAKE_AVAILABLE(p2,P,p0)",
+        "e1:KNOW(p0,P)",
+        "e2:WITHHOLD_META_KNOWLEDGE_FROM(p1,p0)",
+        "e3:QUERY_NESTED_KNOWLEDGE(p1,p0,P)"
+      ],
+      "invariants": [
+        "AGENT_INDEX_PRESERVED",
+        "EPISTEMIC_SCOPE_PRESERVED",
+        "NEGATION_SCOPE_PRESERVED"
+      ]
+    }
+  ],
+  "claim_fence": "Teacher structure target only. Perfect discrimination from this file would show that the target representation is sufficient, not that the learner can reconstruct it from English, Japanese, Brazilian Portuguese, or mathematics.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
