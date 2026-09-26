@@ -1,0 +1,44 @@
+{
+  "schema": "Venus.WebEncounter.v0.1",
+  "ingress_class": "LEARNER_INITIATED_WEB_STUDY",
+  "query_id": "f7564e3c60c1ebd12c815a63289b1fe9ac22a0468c140cc720d64dc3592bb261",
+  "problem_id": "a6a260792d87c0c98fe8d60fc4d3ba7a547bfcfd89c8353380eb0c9c5a023ccc",
+  "execution_context_ref": "autonomy/evidence/network/36210844736/execution-context.json",
+  "return_class": "ENCOUNTER_RETURN",
+  "adapter_id": "CHATGPT_GITHUB_EXTERNAL_ADAPTER",
+  "retrieved_at": "2026-09-26T02:16:30Z",
+  "sources": [
+    {
+      "source_id": "github:pr:153",
+      "source_url": "https://github.com/oestradiol/Arcane-Magics/pull/153",
+      "source_date": "2026-09-24T23:32:00Z",
+      "title": "development: map and restore Canonical capability continuity",
+      "observed_state": "merged",
+      "observed_relation": "PR #153 mapped Canonical capability continuity and identified U2-style unlabeled problem formation as the next nontrivial recovery.",
+      "semantic_verdict_by_adapter": null
+    },
+    {
+      "source_id": "github:pr:156",
+      "source_url": "https://github.com/oestradiol/Arcane-Magics/pull/156",
+      "source_date": "2026-09-24T23:49:00Z",
+      "title": "development: recompile U2 problem formation before Git target selection",
+      "observed_state": "merged",
+      "observed_relation": "PR #156 continued issue #154 and admitted problem formation before carrier binding with STOP and source-binding controls.",
+      "semantic_verdict_by_adapter": null
+    },
+    {
+      "source_id": "github:pr:157",
+      "source_url": "https://github.com/oestradiol/Arcane-Magics/pull/157",
+      "source_date": "2026-09-24T23:49:00Z",
+      "title": "development: recompile U1 recurrence over admitted U2 problem formation",
+      "observed_state": "merged",
+      "observed_relation": "PR #157 continued the recovered U2 problem-former into bounded U1 recurrence under external return, CTL/O*, rollback, and causal routing constraints.",
+      "semantic_verdict_by_adapter": null
+    }
+  ],
+  "search_rank_is_authority": false,
+  "returned_page_is_truth": false,
+  "independent_evaluative_return": false,
+  "promotion_authority": false,
+  "truth_authority": false
+}
