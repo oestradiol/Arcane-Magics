@@ -30,6 +30,12 @@ STUDY_QUERY_STOP = frozenset({
     "selected", "split", "test", "tests", "that", "this", "with", "without",
 })
 
+NETWORK_MEMORY_STOP = STUDY_QUERY_STOP | frozenset({
+    "also", "been", "being", "does", "each", "have", "more", "only", "other",
+    "over", "same", "some", "such", "than", "their", "there", "these", "they",
+    "using", "were", "when", "where", "which", "will", "would", "github",
+})
+
 
 def study_query_terms(study: Mapping[str, Any], *, limit: int = 12) -> tuple[str, ...]:
     """Extract bounded inert lexical cues from a learner-selected study.
@@ -83,6 +89,7 @@ class NetworkQuery:
     discriminator: str
     provenance_ids: tuple[str, ...]
     study_context_digest: str | None = None
+    study_terms: tuple[str, ...] = ()
     authorship: str = "LEARNER_DERIVED_FROM_FORMED_PROBLEM"
     execution_owner: str = "EXTERNAL_ADAPTER"
     promotion_authority: bool = False
@@ -127,11 +134,18 @@ class NetworkReconstruction:
 
 
 def _tokens(value: str) -> tuple[str, ...]:
-    return tuple(
-        token.lower()
-        for token in re.findall(r"[A-Za-z0-9_]+", value)
-        if len(token) > 2
-    )
+    """Generic lexical terms for returned-network reconstruction.
+
+    Numeric ids, hashes, and punctuation-heavy artifacts are deliberately
+    excluded: persistent memory must change inquiry through lexical relation
+    cues, not through accidental issue numbers or object identifiers.
+    """
+    out: list[str] = []
+    for token in re.findall(r"[A-Za-z][A-Za-z_-]{2,}", value.lower()):
+        if token in NETWORK_MEMORY_STOP or token in out:
+            continue
+        out.append(token)
+    return tuple(out)
 
 
 def form_network_query(
@@ -162,6 +176,7 @@ def form_network_query(
         *[r.replace("_", " ").lower() for r in residuals],
     )
     study_digest: str | None = None
+    terms: tuple[str, ...] = ()
     authorship = "LEARNER_DERIVED_FROM_FORMED_PROBLEM"
     if study is not None:
         terms = study_query_terms(study)
@@ -183,6 +198,7 @@ def form_network_query(
         "discriminator": discriminator,
         "provenance_ids": provenance,
         "study_context_digest": study_digest,
+        "study_terms": terms,
         "authorship": authorship,
         "execution_owner": "EXTERNAL_ADAPTER",
         "promotion_authority": False,
@@ -299,12 +315,18 @@ def form_followup_network_query(
     if not terms:
         raise NetworkInquiryError("follow-up query requires retained network terms")
 
-    query_text = " ".join(
-        (
-            prior_query.discriminator.replace("_", " ").lower(),
-            " ".join(terms),
-        )
-    ).strip()
+    anchors = tuple(prior_query.study_terms[:3])
+    if anchors:
+        # Make returned memory causally affect the *executed* search variants,
+        # while retaining enough selected-study context to avoid topic drift.
+        query_text = " ".join((*anchors, *terms[:6])).strip()
+    else:
+        query_text = " ".join(
+            (
+                prior_query.discriminator.replace("_", " ").lower(),
+                " ".join(terms),
+            )
+        ).strip()
     body = {
         "schema": "Venus.NetworkQuery.v0.1",
         "problem_id": prior_query.problem_id,
@@ -314,6 +336,7 @@ def form_followup_network_query(
         "provenance_ids": tuple(prior_query.provenance_ids)
             + tuple(f"network-memory:{x}" for x in reconstruction.memory_object_ids),
         "study_context_digest": prior_query.study_context_digest,
+        "study_terms": prior_query.study_terms,
         "authorship": "LEARNER_DERIVED_FROM_NETWORK_RECONSTRUCTION",
         "execution_owner": "EXTERNAL_ADAPTER",
         "promotion_authority": False,
