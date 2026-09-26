@@ -1,0 +1,64 @@
+{
+  "baseline_metrics": {
+    "anchor_coverage_count": 4,
+    "anchor_total": 12,
+    "covered_anchors": [
+      "collapse",
+      "credit",
+      "development",
+      "learn"
+    ],
+    "external_center_count": 3,
+    "mean_relevance_matches": 2.0,
+    "query_token_count": 9,
+    "source_count": 3
+  },
+  "baseline_query_id": "247d8e37a768653e01eefd0b40ab659c2179ee06c2d7660fabcb227bcdc5ac7a",
+  "baseline_score": [
+    4,
+    2.0,
+    3,
+    -9
+  ],
+  "candidate_external_center_floor_met": true,
+  "candidate_metrics": {
+    "anchor_coverage_count": 3,
+    "anchor_total": 12,
+    "covered_anchors": [
+      "credit",
+      "development",
+      "learn"
+    ],
+    "external_center_count": 6,
+    "mean_relevance_matches": 2.0,
+    "query_token_count": 9,
+    "source_count": 6
+  },
+  "candidate_query_id": "05c57e41cc4364fa185eadc88f8a91ee32f644dd0228328ea51cdfb5bf21c173",
+  "candidate_score": [
+    3,
+    2.0,
+    6,
+    -9
+  ],
+  "claim_fence": "A pass shows only bounded returned query-relevance improvement over the frozen lexical reconstruction. It does not establish general semantics, general memory learning, WWW truth, AGI, consciousness, or promotion.",
+  "decision_mode": "PARETO_NONREGRESSION_V2",
+  "general_semantics_claim": false,
+  "independent_evaluation": false,
+  "internalization_claim": false,
+  "nonregression_checks": {
+    "anchor_coverage_nonregression": false,
+    "external_center_nonregression": true,
+    "mean_relevance_nonregression": true,
+    "query_token_nonregression": true
+  },
+  "prefreeze_schema": "Venus.NetworkSemanticTraceProspectiveComparator.v0.2",
+  "promotion_authority": false,
+  "schema": "Venus.NetworkSemanticTraceComparatorResult.v0.1",
+  "status": "WITHHOLD_V2_NONREGRESSION_OR_GAIN_NOT_MET",
+  "strict_gain_condition_met": true,
+  "strict_returned_gain": false,
+  "trace_config_id": "TITLE_ANCHORED",
+  "trace_id": "dccca64845508ce7230e878ccec893a344548f2861f04db754913311b5e32f78",
+  "truth_authority": false
+}

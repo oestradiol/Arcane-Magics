@@ -1,0 +1,170 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:Ayoub7802/Mini-Project-of-Machine-Learning",
+    "github-repo:Shaik-Aasha/CodSoft",
+    "github-repo:Shantakee/Credit-Risk-Prediction-Using-Explainable-Machine-Learning",
+    "github-repo:birkuadera21-cyber/Birku-data-science-and-machine-learning-portfolio",
+    "github-repo:iamdgarcia/claude-code-litellm-digitalocean",
+    "github-repo:thanhzbin-cmyk/Credit-Card-Fraud-Detection-Machine-Learning-Python"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:Ayoub7802/Mini-Project-of-Machine-Learning",
+    "github-repo:Shaik-Aasha/CodSoft",
+    "github-repo:Shantakee/Credit-Risk-Prediction-Using-Explainable-Machine-Learning",
+    "github-repo:birkuadera21-cyber/Birku-data-science-and-machine-learning-portfolio",
+    "github-repo:iamdgarcia/claude-code-litellm-digitalocean",
+    "github-repo:thanhzbin-cmyk/Credit-Card-Fraud-Detection-Machine-Learning-Python"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "05c57e41cc4364fa185eadc88f8a91ee32f644dd0228328ea51cdfb5bf21c173",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T14:40:13Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "development credit learn claude-code-litellm-digitalocean iamdgarcia ayoub birku-data-science-and-machine-learning-portfolio birkuadera",
+    "development credit learn claude-code-litellm-digitalocean iamdgarcia ayoub",
+    "development credit learn claude-code-litellm-digitalocean",
+    "development credit learn"
+  ],
+  "selected_study_relevance_terms": [
+    "development",
+    "credit",
+    "learn",
+    "causal",
+    "return-credit",
+    "assignment",
+    "reward",
+    "truth",
+    "collapse",
+    "the",
+    "missing",
+    "distinction"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:iamdgarcia",
+      "author_login": "iamdgarcia",
+      "author_type": "User",
+      "center_id": "github-repo:iamdgarcia/claude-code-litellm-digitalocean",
+      "learner_minted_artifact": false,
+      "observed_relation": "Learn how to run Claude Code practically for free by leveraging a $200 DigitalOcean credit. Discover how to deploy LiteLLM as an intermediate gateway to take full control of your API costs, monitor token usage, and swap AI providers without changing your development workflow.",
+      "relevance_matches": [
+        "development",
+        "learn"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-05-14T19:28:01Z",
+      "source_id": "github-repository:iamdgarcia/claude-code-litellm-digitalocean",
+      "source_url": "https://github.com/iamdgarcia/claude-code-litellm-digitalocean",
+      "title": "iamdgarcia/claude-code-litellm-digitalocean"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:birkuadera21-cyber",
+      "author_login": "birkuadera21-cyber",
+      "author_type": "User",
+      "center_id": "github-repo:birkuadera21-cyber/Birku-data-science-and-machine-learning-portfolio",
+      "learner_minted_artifact": false,
+      "observed_relation": "A portfolio of data science, machine learning, deep learning, and web development projects, including credit risk prediction, crop yield prediction, tuberculosis detection, weather prediction, and a student registration system.",
+      "relevance_matches": [
+        "development",
+        "credit"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-09-26T02:53:07Z",
+      "source_id": "github-repository:birkuadera21-cyber/Birku-data-science-and-machine-learning-portfolio",
+      "source_url": "https://github.com/birkuadera21-cyber/Birku-data-science-and-machine-learning-portfolio",
+      "title": "birkuadera21-cyber/Birku-data-science-and-machine-learning-portfolio"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:Shantakee",
+      "author_login": "Shantakee",
+      "author_type": "User",
+      "center_id": "github-repo:Shantakee/Credit-Risk-Prediction-Using-Explainable-Machine-Learning",
+      "learner_minted_artifact": false,
+      "observed_relation": "This Project Contains The Development Of Machine Learning Models Like Logistic Regression, Random Forest, XGBoost And Their Evaluation For Credit Risk Assesment.",
+      "relevance_matches": [
+        "development",
+        "credit"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-07-29T17:00:36Z",
+      "source_id": "github-repository:Shantakee/Credit-Risk-Prediction-Using-Explainable-Machine-Learning",
+      "source_url": "https://github.com/Shantakee/Credit-Risk-Prediction-Using-Explainable-Machine-Learning",
+      "title": "Shantakee/Credit-Risk-Prediction-Using-Explainable-Machine-Learning"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:thanhzbin-cmyk",
+      "author_login": "thanhzbin-cmyk",
+      "author_type": "User",
+      "center_id": "github-repo:thanhzbin-cmyk/Credit-Card-Fraud-Detection-Machine-Learning-Python",
+      "learner_minted_artifact": false,
+      "observed_relation": "This project builds a machine learning pipeline to detect fraudulent credit card transactions. It covers data exploration, preprocessing, feature engineering, model development, and evaluation using appropriate metrics for imbalanced data, helping improve fraud detection and support risk management.",
+      "relevance_matches": [
+        "development",
+        "credit"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-07-16T09:55:03Z",
+      "source_id": "github-repository:thanhzbin-cmyk/Credit-Card-Fraud-Detection-Machine-Learning-Python",
+      "source_url": "https://github.com/thanhzbin-cmyk/Credit-Card-Fraud-Detection-Machine-Learning-Python",
+      "title": "thanhzbin-cmyk/Credit-Card-Fraud-Detection-Machine-Learning-Python"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:Ayoub7802",
+      "author_login": "Ayoub7802",
+      "author_type": "User",
+      "center_id": "github-repo:Ayoub7802/Mini-Project-of-Machine-Learning",
+      "learner_minted_artifact": false,
+      "observed_relation": "Development of a good classification model The goal of this mini project is to explore, clean, prepare the data, and develop a good model of classification for assessing the risk of granting credit to a client.",
+      "relevance_matches": [
+        "development",
+        "credit"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-06-08T10:21:18Z",
+      "source_id": "github-repository:Ayoub7802/Mini-Project-of-Machine-Learning",
+      "source_url": "https://github.com/Ayoub7802/Mini-Project-of-Machine-Learning",
+      "title": "Ayoub7802/Mini-Project-of-Machine-Learning"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:Shaik-Aasha",
+      "author_login": "Shaik-Aasha",
+      "author_type": "User",
+      "center_id": "github-repo:Shaik-Aasha/CodSoft",
+      "learner_minted_artifact": false,
+      "observed_relation": "Completed a Machine Learning Internship at **CodSoft**, working on real-world projects such as Customer Churn Prediction, Credit Card Fraud Detection, and Spam SMS Detection. Applied Python, Pandas, NumPy, and Scikit-learn for data preprocessing, model development, evaluation, and predictive analytics.",
+      "relevance_matches": [
+        "development",
+        "credit"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-06-03T08:17:14Z",
+      "source_id": "github-repository:Shaik-Aasha/CodSoft",
+      "source_url": "https://github.com/Shaik-Aasha/CodSoft",
+      "title": "Shaik-Aasha/CodSoft"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}

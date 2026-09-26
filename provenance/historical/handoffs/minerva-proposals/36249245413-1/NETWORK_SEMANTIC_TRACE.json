@@ -1,0 +1,118 @@
+{
+  "anchor_terms": [
+    "development",
+    "credit",
+    "learn",
+    "causal",
+    "return-credit",
+    "assignment",
+    "reward",
+    "truth",
+    "collapse",
+    "the",
+    "missing",
+    "distinction"
+  ],
+  "config_attempts": 2,
+  "config_id": "TITLE_ANCHORED",
+  "config_utility": 1.0,
+  "future_return_input": false,
+  "hidden_evaluation_input": false,
+  "program_digest": "dd53886610c75b836ba0c0033aeacd5cb3287cccd22046f3d7a4bfb700f34f38",
+  "promotion_authority": false,
+  "relations": [
+    {
+      "anchor_degree": 3,
+      "anchor_terms": [
+        "credit",
+        "development",
+        "learn"
+      ],
+      "source_ids": [
+        "github-repository:iamdgarcia/claude-code-litellm-digitalocean"
+      ],
+      "source_support": 1,
+      "term": "claude-code-litellm-digitalocean",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 3,
+      "anchor_terms": [
+        "credit",
+        "development",
+        "learn"
+      ],
+      "source_ids": [
+        "github-repository:iamdgarcia/claude-code-litellm-digitalocean"
+      ],
+      "source_support": 1,
+      "term": "iamdgarcia",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 2,
+      "anchor_terms": [
+        "credit",
+        "development"
+      ],
+      "source_ids": [
+        "github-repository:Ayoub7802/Mini-Project-of-Machine-Learning"
+      ],
+      "source_support": 1,
+      "term": "ayoub",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 2,
+      "anchor_terms": [
+        "credit",
+        "development"
+      ],
+      "source_ids": [
+        "github-repository:birkuadera21-cyber/Birku-data-science-and-machine-learning-portfolio"
+      ],
+      "source_support": 1,
+      "term": "birku-data-science-and-machine-learning-portfolio",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 2,
+      "anchor_terms": [
+        "credit",
+        "development"
+      ],
+      "source_ids": [
+        "github-repository:birkuadera21-cyber/Birku-data-science-and-machine-learning-portfolio"
+      ],
+      "source_support": 1,
+      "term": "birkuadera",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 2,
+      "anchor_terms": [
+        "credit",
+        "development"
+      ],
+      "source_ids": [
+        "github-repository:Shaik-Aasha/CodSoft"
+      ],
+      "source_support": 1,
+      "term": "codsoft",
+      "title_support": 1
+    }
+  ],
+  "schema": "Venus.StateOwnedRelationTrace.v0.1",
+  "selection_basis": "RETURNED_UTILITY_EXPLORATION_THEN_STRUCTURAL",
+  "status": "RELATION_TRACE_CANDIDATE_FROZEN",
+  "terms": [
+    "claude-code-litellm-digitalocean",
+    "iamdgarcia",
+    "ayoub",
+    "birku-data-science-and-machine-learning-portfolio",
+    "birkuadera",
+    "codsoft"
+  ],
+  "trace_id": "dccca64845508ce7230e878ccec893a344548f2861f04db754913311b5e32f78",
+  "truth_authority": false
+}

@@ -1,0 +1,106 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:ConductionNL/learniq",
+    "github-repo:Shaik-Aasha/CodSoft",
+    "github-repo:tutur3u/platform"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:ConductionNL/learniq",
+    "github-repo:Shaik-Aasha/CodSoft",
+    "github-repo:tutur3u/platform"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "247d8e37a768653e01eefd0b40ab659c2179ee06c2d7660fabcb227bcdc5ac7a",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T14:40:08Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "development credit learn analytics api applied appropriate assesment",
+    "development credit learn analytics api applied",
+    "development credit learn analytics"
+  ],
+  "selected_study_relevance_terms": [
+    "development",
+    "credit",
+    "learn",
+    "causal",
+    "return-credit",
+    "assignment",
+    "reward",
+    "truth",
+    "collapse",
+    "the",
+    "missing",
+    "distinction"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "CONTRIBUTOR",
+      "author_id": "github-user:rubenvdlinde",
+      "author_login": "rubenvdlinde",
+      "author_type": "User",
+      "center_id": "github-repo:ConductionNL/learniq",
+      "learner_minted_artifact": false,
+      "observed_relation": "## What this changes `openspec/parity/capabilities.json` only. Wave 5 re-drive of learniq's six competitor columns, read at learniq `development` 0b3c8977. No page or code is touched, so the product's suites cannot be affected; they were not run. - **Moodle LMS, ILIAS, Chamilo**: every row re-rated from the source at the release tag (moodle/moodle v5.2.3, ILIAS-eLearning/ILIAS v11.4, chamilo/chamilo-lms v3.0.1) with root-relative `path:line` evidence, then the lab instance at the same version booted and driven as admin for the rows the code could not settle (48 cells carry a `driven 2026-09-26` prefix). - **Moodle Workplace, Totara, iSpring Learn**: public vendor documents only, no trial accounts; every cell cites its URL, all status-checked today (`readHow` on each system). - **30 demand-signal rows** (230 rated rows now), each with `origin` and `originUrl`, rated in every column including ours. - A `sources` object on every competitor, absent fields `null` with `sources.nullReasons`. ## Grades per system | system | before | after | |---|---|---| | moodle | docs-only (docs 2026-09-23) | driven (source v5.2.3 + lab 5.2.3) | | ilias | driven (demo.ilias.de 10.11, teacher only) | dri",
+      "relevance_matches": [
+        "development",
+        "learn"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T14:27:18Z",
+      "source_id": "github-issue:ConductionNL/learniq#943",
+      "source_url": "https://github.com/ConductionNL/learniq/pull/943",
+      "title": "feat(parity): wave 5 re-drive of learniq's competitor columns, demand-signal rows and sources"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "MEMBER",
+      "author_id": "github-user:vhpx",
+      "author_login": "vhpx",
+      "author_type": "User",
+      "center_id": "github-repo:tutur3u/platform",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Summary - Show short gallery labels, image thumbnails, and fullscreen image/video previews in the Assistant composer and transcript. - Add a searchable mobile model picker using the same model catalog and credit restrictions as the Assistant shell. - Keep the composer visible during Turnstile, try invisible verification first, and retain the interactive challenge fallback. - Collapse tool calls into a compact summary with an expandable detail sheet and prioritize task-creation prerequisites in Mira tool discovery. ## Verification - `bun check:mobile` passed (969 Flutter tests, analyzer, formatting, iOS settings) before the final composer-state refactor. - Focused model picker/composer tests and Mira tool discovery tests passed before the refactor. - Final focused Flutter tests, analyzer, and `bun check` are queued in the shared resource manager; CI will verify this exact head. ## Limits - Device-level gallery and Turnstile behavior awaits a TestFlight build. The iPhone simulator has no current app installation. <!-- This is an auto-generated description by cubic. --> --- ## Summary by cubic Streamlines the mobile Assistant composer and transcript with media previews, a model pic",
+      "relevance_matches": [
+        "credit",
+        "collapse"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T14:07:08Z",
+      "source_id": "github-issue:tutur3u/platform#5539",
+      "source_url": "https://github.com/tutur3u/platform/pull/5539",
+      "title": "fix(mobile): streamline assistant media and model selection"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:Shaik-Aasha",
+      "author_login": "Shaik-Aasha",
+      "author_type": "User",
+      "center_id": "github-repo:Shaik-Aasha/CodSoft",
+      "learner_minted_artifact": false,
+      "observed_relation": "Completed a Machine Learning Internship at **CodSoft**, working on real-world projects such as Customer Churn Prediction, Credit Card Fraud Detection, and Spam SMS Detection. Applied Python, Pandas, NumPy, and Scikit-learn for data preprocessing, model development, evaluation, and predictive analytics.",
+      "relevance_matches": [
+        "development",
+        "credit"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-06-03T08:17:14Z",
+      "source_id": "github-repository:Shaik-Aasha/CodSoft",
+      "source_url": "https://github.com/Shaik-Aasha/CodSoft",
+      "title": "Shaik-Aasha/CodSoft"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}

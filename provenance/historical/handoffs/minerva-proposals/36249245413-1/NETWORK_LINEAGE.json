@@ -1,0 +1,137 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "98d8f09156a3038def0b38d5ec9aff5d1fb8f5a2be7a71890b38918d58de8199",
+    "b5cc291b01614e0fa35b07f2add4012f402df917b575c37b033f14e7ca46ccae",
+    "a85d8903cf7f192549e0930990a6baecc8e6daaa2dc9671528f664dc73cee29d",
+    "262a62cba1411fc991a6958c99a334434393a6c9941dd9433eb8247c8ef70024",
+    "0f74f69d7c31612369e3c6cfdcef8471a472da7cb2b50bb771da5000f826ead2",
+    "fee3131e4c7c99b96536707b758376f51d3079806ba5eae483f96de70fa65486"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-repository:Ayoub7802/Mini-Project-of-Machine-Learning",
+      "github-repository:Shaik-Aasha/CodSoft",
+      "github-repository:Shantakee/Credit-Risk-Prediction-Using-Explainable-Machine-Learning",
+      "github-repository:birkuadera21-cyber/Birku-data-science-and-machine-learning-portfolio",
+      "github-repository:iamdgarcia/claude-code-litellm-digitalocean",
+      "github-repository:thanhzbin-cmyk/Credit-Card-Fraud-Detection-Machine-Learning-Python"
+    ],
+    "memory_object_ids": [
+      "98d8f09156a3038def0b38d5ec9aff5d1fb8f5a2be7a71890b38918d58de8199",
+      "b5cc291b01614e0fa35b07f2add4012f402df917b575c37b033f14e7ca46ccae",
+      "a85d8903cf7f192549e0930990a6baecc8e6daaa2dc9671528f664dc73cee29d",
+      "262a62cba1411fc991a6958c99a334434393a6c9941dd9433eb8247c8ef70024",
+      "0f74f69d7c31612369e3c6cfdcef8471a472da7cb2b50bb771da5000f826ead2",
+      "fee3131e4c7c99b96536707b758376f51d3079806ba5eae483f96de70fa65486"
+    ],
+    "next_query_terms": [
+      "analytics",
+      "and",
+      "api",
+      "applied",
+      "appropriate",
+      "assesment",
+      "assessing",
+      "ayoub",
+      "birku-data-science-and-machine-learning-portfolio",
+      "birkuadera",
+      "builds",
+      "card"
+    ],
+    "problem_id": "9cbbd560074a0b1f5a84c5d1ebc96df6f4ad61288de2aad885900c3e61f25d33",
+    "promotion_authority": false,
+    "query_id": "d51f5d23cfd38feb58f1f673b62ad4eb4980f0b8b7f5bfa79993aaf667ebcfed",
+    "reconstruction_id": "fdf912e958ed8f7677b564966ba7bd19e96549fbaf99ff34e0ab557e37405b80",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "9ac06adcd82b0a88ef6a82e3fbe01db07fee83bcdb90a32d2d3dafb282027933",
+    "c02f36b0ab9a582aff3843f6399ef831d9298b794364ce5ba55b9bd278edfbf9",
+    "9b470112ea3c390b7860d2cccadac570cd6098eb8e3c6aa34bb978bdf2c22b9d"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:ConductionNL/learniq#943",
+      "github-issue:tutur3u/platform#5539",
+      "github-repository:Shaik-Aasha/CodSoft"
+    ],
+    "memory_object_ids": [
+      "9ac06adcd82b0a88ef6a82e3fbe01db07fee83bcdb90a32d2d3dafb282027933",
+      "c02f36b0ab9a582aff3843f6399ef831d9298b794364ce5ba55b9bd278edfbf9",
+      "9b470112ea3c390b7860d2cccadac570cd6098eb8e3c6aa34bb978bdf2c22b9d"
+    ],
+    "next_query_terms": [
+      "absent",
+      "accounts",
+      "add",
+      "admin",
+      "affected",
+      "all",
+      "analyzer",
+      "app",
+      "are",
+      "assistant",
+      "auto-generated",
+      "awaits"
+    ],
+    "problem_id": "9cbbd560074a0b1f5a84c5d1ebc96df6f4ad61288de2aad885900c3e61f25d33",
+    "promotion_authority": false,
+    "query_id": "247d8e37a768653e01eefd0b40ab659c2179ee06c2d7660fabcb227bcdc5ac7a",
+    "reconstruction_id": "a5a66ed48a82d27dc93ae75fd8f5fed9fa6cdcd9f7c305fde0cdcc6b32b4edb2",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:Ayoub7802/Mini-Project-of-Machine-Learning",
+    "github-repo:ConductionNL/learniq",
+    "github-repo:Shaik-Aasha/CodSoft",
+    "github-repo:Shantakee/Credit-Risk-Prediction-Using-Explainable-Machine-Learning",
+    "github-repo:birkuadera21-cyber/Birku-data-science-and-machine-learning-portfolio",
+    "github-repo:iamdgarcia/claude-code-litellm-digitalocean",
+    "github-repo:thanhzbin-cmyk/Credit-Card-Fraud-Detection-Machine-Learning-Python",
+    "github-repo:tutur3u/platform"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:Ayoub7802/Mini-Project-of-Machine-Learning",
+    "github-repo:ConductionNL/learniq",
+    "github-repo:Shaik-Aasha/CodSoft",
+    "github-repo:Shantakee/Credit-Risk-Prediction-Using-Explainable-Machine-Learning",
+    "github-repo:birkuadera21-cyber/Birku-data-science-and-machine-learning-portfolio",
+    "github-repo:iamdgarcia/claude-code-litellm-digitalocean",
+    "github-repo:thanhzbin-cmyk/Credit-Card-Fraud-Detection-Machine-Learning-Python",
+    "github-repo:tutur3u/platform"
+  ],
+  "indexed_source_ids": [
+    "github-issue:ConductionNL/learniq#943",
+    "github-issue:tutur3u/platform#5539",
+    "github-repository:Ayoub7802/Mini-Project-of-Machine-Learning",
+    "github-repository:Shaik-Aasha/CodSoft",
+    "github-repository:Shantakee/Credit-Risk-Prediction-Using-Explainable-Machine-Learning",
+    "github-repository:birkuadera21-cyber/Birku-data-science-and-machine-learning-portfolio",
+    "github-repository:iamdgarcia/claude-code-litellm-digitalocean",
+    "github-repository:thanhzbin-cmyk/Credit-Card-Fraud-Detection-Machine-Learning-Python"
+  ],
+  "memory_checkpoint_sha256": "e47c0b89f50724414f1fe250dd3ef1c0b2a4791b562f08e021047116dc74e323",
+  "memory_record_count": 9,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "d51f5d23cfd38feb58f1f673b62ad4eb4980f0b8b7f5bfa79993aaf667ebcfed",
+  "query2_changed_from_query1": true,
+  "query2_id": "247d8e37a768653e01eefd0b40ab659c2179ee06c2d7660fabcb227bcdc5ac7a",
+  "query2_memory_provenance": [
+    "network-memory:0f74f69d7c31612369e3c6cfdcef8471a472da7cb2b50bb771da5000f826ead2",
+    "network-memory:262a62cba1411fc991a6958c99a334434393a6c9941dd9433eb8247c8ef70024",
+    "network-memory:98d8f09156a3038def0b38d5ec9aff5d1fb8f5a2be7a71890b38918d58de8199",
+    "network-memory:a85d8903cf7f192549e0930990a6baecc8e6daaa2dc9671528f664dc73cee29d",
+    "network-memory:b5cc291b01614e0fa35b07f2add4012f402df917b575c37b033f14e7ca46ccae",
+    "network-memory:fee3131e4c7c99b96536707b758376f51d3079806ba5eae483f96de70fa65486"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}
