@@ -229,8 +229,16 @@ def evaluate(
     candidate_ablation["program"] = dict(candidate_ablation["program"])
     candidate_ablation["program"].pop("relation_classifier", None)
     candidate_ablation_status = _withhold_status(candidate_ablation, base)
+    operator_ablation = deepcopy(dict(candidate))
+    operator_ablation["program"] = dict(operator_ablation["program"])
+    operator_ablation["program"]["planning_operators"] = list(
+        operator_ablation["program"]["planning_operators"]
+    )
+    operator_ablation["program"]["planning_operators"].remove("CRITICAL_PATH_AND_SLACK")
+    operator_ablation_status = _withhold_status(operator_ablation, base)
     b2_checks["candidate_state_ablation_withholds"] = (
         candidate_ablation_status == "WITHHOLD_MISSING_RELATION_CLASSIFIER"
+        and operator_ablation_status == "WITHHOLD_MISSING_PLANNING_OPERATOR"
     )
 
     b1_pass = all(b1_checks.values())
@@ -252,6 +260,7 @@ def evaluate(
             "underspecified": _withhold_status(candidate, underspecified),
             "missing_duration": _withhold_status(candidate, missing_duration),
             "candidate_state_ablation": candidate_ablation_status,
+            "candidate_operator_ablation": operator_ablation_status,
         },
         "independent_evaluation": False,
         "internalization_claim": False,
