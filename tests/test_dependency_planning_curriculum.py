@@ -28,6 +28,8 @@ class DependencyPlanningCurriculumTests(unittest.TestCase):
     def test_candidate_representation_is_learner_state_without_authority(self):
         self.assertEqual(self.candidate["semantics_owner"], "LEARNER_STATE_CANDIDATE")
         self.assertEqual(self.candidate["generic_executor"], "kernel/runtime/task_graph.py")
+        self.assertIn("CRITICAL_PATH_AND_SLACK", self.candidate["program"]["planning_operators"])
+        self.assertEqual(self.candidate["program"]["critical_path_policy"], "MAX_EXPECTED_PREDECESSOR_FINISH")
         self.assertFalse(self.candidate["independent_evaluation"])
         self.assertFalse(self.candidate["internalization_claim"])
         self.assertFalse(self.candidate["promotion_authority"])
@@ -49,6 +51,7 @@ class DependencyPlanningCurriculumTests(unittest.TestCase):
                 "underspecified": "WITHHOLD_UNDERSPECIFIED_GRAPH",
                 "missing_duration": "WITHHOLD_MISSING_DURATION",
                 "candidate_state_ablation": "WITHHOLD_MISSING_RELATION_CLASSIFIER",
+                "candidate_operator_ablation": "WITHHOLD_MISSING_PLANNING_OPERATOR",
             },
         )
 
