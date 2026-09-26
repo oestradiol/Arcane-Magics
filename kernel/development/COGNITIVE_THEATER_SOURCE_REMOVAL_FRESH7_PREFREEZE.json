@@ -1,0 +1,322 @@
+{
+  "schema": "Venus.CognitiveTheaterSourceRemovalFresh7Prefreeze.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_AFTER_FRESH6_BEFORE_SOURCE_REMOVAL_RETURN",
+  "issue_ref": 206,
+  "parent_result_ref": "kernel/development/COGNITIVE_THEATER_EXPLICIT_STATE_FRESH6_RESULT.json",
+  "state_candidate_ref": "kernel/development/COGNITIVE_THEATER_STATE_OWNERSHIP_CANDIDATE.json",
+  "generic_executor_ref": "kernel/runtime/structured_template_machine.py",
+  "purpose": "Test same-scope bounded behavior on fresh surfaces when the evaluated process can access only learner-owned state plus a generic executor; capability-specific curriculum/composer/trainer source is absent from the isolated execution bundle.",
+  "execution_bundle": [
+    "kernel/runtime/structured_template_machine.py",
+    "kernel/development/COGNITIVE_THEATER_STATE_OWNERSHIP_CANDIDATE.json",
+    "fresh input rows containing only context + raw surface"
+  ],
+  "forbidden_execution_bundle": [
+    "kernel/development/cognitive_theater_state_composer.py",
+    "kernel/development/cognitive_theater_local_operator_graph.py",
+    "kernel/development/COGNITIVE_THEATER_EXPLICIT_STATE_FRESH6_PREFREEZE.json",
+    "kernel/development/COGNITIVE_THEATER_LOCAL_OPERATOR_FRESH5_PREFREEZE.json",
+    "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_GROUNDING_CURRICULUM.json"
+  ],
+  "rows": [
+    {
+      "id": "F7_T0_EN_A",
+      "task_id": "T0",
+      "context": "ENGLISH",
+      "surface": "@k knows that @j knows P. @l does not know P. @j knows P.",
+      "gold": {
+        "r0": "@j",
+        "r1": "@k",
+        "r2": "@l"
+      },
+      "gauge_pair": "F7_T0_EN"
+    },
+    {
+      "id": "F7_T0_EN_B",
+      "task_id": "T0",
+      "context": "ENGLISH",
+      "surface": "@j knows P. @k knows that @j knows P. @l does not know P.",
+      "gold": {
+        "r0": "@j",
+        "r1": "@k",
+        "r2": "@l"
+      },
+      "gauge_pair": "F7_T0_EN"
+    },
+    {
+      "id": "F7_T0_JA_A",
+      "task_id": "T0",
+      "context": "JAPANESE",
+      "surface": "@kは@jがPを知っていることを知っている。@lはPを知らない。@jはPを知っている。",
+      "gold": {
+        "r0": "@j",
+        "r1": "@k",
+        "r2": "@l"
+      },
+      "gauge_pair": "F7_T0_JA"
+    },
+    {
+      "id": "F7_T0_JA_B",
+      "task_id": "T0",
+      "context": "JAPANESE",
+      "surface": "@jはPを知っている。@kは@jがPを知っていることを知っている。@lはPを知らない。",
+      "gold": {
+        "r0": "@j",
+        "r1": "@k",
+        "r2": "@l"
+      },
+      "gauge_pair": "F7_T0_JA"
+    },
+    {
+      "id": "F7_T0_PT_A",
+      "task_id": "T0",
+      "context": "BRAZILIAN_PORTUGUESE",
+      "surface": "@k sabe que @j sabe P. @l não sabe P. @j sabe P.",
+      "gold": {
+        "r0": "@j",
+        "r1": "@k",
+        "r2": "@l"
+      },
+      "gauge_pair": "F7_T0_PT"
+    },
+    {
+      "id": "F7_T0_PT_B",
+      "task_id": "T0",
+      "context": "BRAZILIAN_PORTUGUESE",
+      "surface": "@j sabe P. @k sabe que @j sabe P. @l não sabe P.",
+      "gold": {
+        "r0": "@j",
+        "r1": "@k",
+        "r2": "@l"
+      },
+      "gauge_pair": "F7_T0_PT"
+    },
+    {
+      "id": "F7_T0_M_A",
+      "task_id": "T0",
+      "context": "MATHEMATICS",
+      "surface": "K_@k(K_@j(P)) ∧ ¬K_@l(P) ∧ K_@j(P).",
+      "gold": {
+        "r0": "@j",
+        "r1": "@k",
+        "r2": "@l"
+      },
+      "gauge_pair": "F7_T0_M"
+    },
+    {
+      "id": "F7_T0_M_B",
+      "task_id": "T0",
+      "context": "MATHEMATICS",
+      "surface": "K_@j(P) ∧ K_@k(K_@j(P)) ∧ ¬K_@l(P).",
+      "gold": {
+        "r0": "@j",
+        "r1": "@k",
+        "r2": "@l"
+      },
+      "gauge_pair": "F7_T0_M"
+    },
+    {
+      "id": "F7_T1_EN_A",
+      "task_id": "T1",
+      "context": "ENGLISH",
+      "surface": "@k can answer P. @l was absent. @j tells @k P.",
+      "gold": {
+        "r0": "@j",
+        "r1": "@k",
+        "r2": "@l"
+      },
+      "gauge_pair": "F7_T1_EN"
+    },
+    {
+      "id": "F7_T1_EN_B",
+      "task_id": "T1",
+      "context": "ENGLISH",
+      "surface": "@j tells @k P. @k can answer P. @l was absent.",
+      "gold": {
+        "r0": "@j",
+        "r1": "@k",
+        "r2": "@l"
+      },
+      "gauge_pair": "F7_T1_EN"
+    },
+    {
+      "id": "F7_T1_JA_A",
+      "task_id": "T1",
+      "context": "JAPANESE",
+      "surface": "@kはPに答えられる。@lは不在だった。@jは@kにPを伝える。",
+      "gold": {
+        "r0": "@j",
+        "r1": "@k",
+        "r2": "@l"
+      },
+      "gauge_pair": "F7_T1_JA"
+    },
+    {
+      "id": "F7_T1_JA_B",
+      "task_id": "T1",
+      "context": "JAPANESE",
+      "surface": "@jは@kにPを伝える。@kはPに答えられる。@lは不在だった。",
+      "gold": {
+        "r0": "@j",
+        "r1": "@k",
+        "r2": "@l"
+      },
+      "gauge_pair": "F7_T1_JA"
+    },
+    {
+      "id": "F7_T1_PT_A",
+      "task_id": "T1",
+      "context": "BRAZILIAN_PORTUGUESE",
+      "surface": "@k pode responder sobre P. @l estava ausente. @j conta P a @k.",
+      "gold": {
+        "r0": "@j",
+        "r1": "@k",
+        "r2": "@l"
+      },
+      "gauge_pair": "F7_T1_PT"
+    },
+    {
+      "id": "F7_T1_PT_B",
+      "task_id": "T1",
+      "context": "BRAZILIAN_PORTUGUESE",
+      "surface": "@j conta P a @k. @k pode responder sobre P. @l estava ausente.",
+      "gold": {
+        "r0": "@j",
+        "r1": "@k",
+        "r2": "@l"
+      },
+      "gauge_pair": "F7_T1_PT"
+    },
+    {
+      "id": "F7_T1_M_A",
+      "task_id": "T1",
+      "context": "MATHEMATICS",
+      "surface": "CanAnswer(@k,P) ∧ Absent(@l) ∧ Tell(@j,@k,P).",
+      "gold": {
+        "r0": "@j",
+        "r1": "@k",
+        "r2": "@l"
+      },
+      "gauge_pair": "F7_T1_M"
+    },
+    {
+      "id": "F7_T1_M_B",
+      "task_id": "T1",
+      "context": "MATHEMATICS",
+      "surface": "Tell(@j,@k,P) ∧ CanAnswer(@k,P) ∧ Absent(@l).",
+      "gold": {
+        "r0": "@j",
+        "r1": "@k",
+        "r2": "@l"
+      },
+      "gauge_pair": "F7_T1_M"
+    },
+    {
+      "id": "F7_T2_EN_A",
+      "task_id": "T2",
+      "context": "ENGLISH",
+      "surface": "#k happens before #l. #j happens before #k.",
+      "gold": {
+        "r0": "#j",
+        "r1": "#k",
+        "r2": "#l"
+      },
+      "gauge_pair": "F7_T2_EN"
+    },
+    {
+      "id": "F7_T2_EN_B",
+      "task_id": "T2",
+      "context": "ENGLISH",
+      "surface": "#j happens before #k. #k happens before #l.",
+      "gold": {
+        "r0": "#j",
+        "r1": "#k",
+        "r2": "#l"
+      },
+      "gauge_pair": "F7_T2_EN"
+    },
+    {
+      "id": "F7_T2_JA_A",
+      "task_id": "T2",
+      "context": "JAPANESE",
+      "surface": "#kは#lより前に起こる。#jは#kより前に起こる。",
+      "gold": {
+        "r0": "#j",
+        "r1": "#k",
+        "r2": "#l"
+      },
+      "gauge_pair": "F7_T2_JA"
+    },
+    {
+      "id": "F7_T2_JA_B",
+      "task_id": "T2",
+      "context": "JAPANESE",
+      "surface": "#jは#kより前に起こる。#kは#lより前に起こる。",
+      "gold": {
+        "r0": "#j",
+        "r1": "#k",
+        "r2": "#l"
+      },
+      "gauge_pair": "F7_T2_JA"
+    },
+    {
+      "id": "F7_T2_PT_A",
+      "task_id": "T2",
+      "context": "BRAZILIAN_PORTUGUESE",
+      "surface": "#k acontece antes de #l. #j acontece antes de #k.",
+      "gold": {
+        "r0": "#j",
+        "r1": "#k",
+        "r2": "#l"
+      },
+      "gauge_pair": "F7_T2_PT"
+    },
+    {
+      "id": "F7_T2_PT_B",
+      "task_id": "T2",
+      "context": "BRAZILIAN_PORTUGUESE",
+      "surface": "#j acontece antes de #k. #k acontece antes de #l.",
+      "gold": {
+        "r0": "#j",
+        "r1": "#k",
+        "r2": "#l"
+      },
+      "gauge_pair": "F7_T2_PT"
+    },
+    {
+      "id": "F7_T2_M_A",
+      "task_id": "T2",
+      "context": "MATHEMATICS",
+      "surface": "t(#k)<t(#l) ∧ t(#j)<t(#k).",
+      "gold": {
+        "r0": "#j",
+        "r1": "#k",
+        "r2": "#l"
+      },
+      "gauge_pair": "F7_T2_M"
+    },
+    {
+      "id": "F7_T2_M_B",
+      "task_id": "T2",
+      "context": "MATHEMATICS",
+      "surface": "t(#j)<t(#k) ∧ t(#k)<t(#l).",
+      "gold": {
+        "r0": "#j",
+        "r1": "#k",
+        "r2": "#l"
+      },
+      "gauge_pair": "F7_T2_M"
+    }
+  ],
+  "pass_rule": [
+    "isolated executor bundle contains no capability-specific composer/curriculum/trainer source",
+    "24/24 fresh rows recover the hidden task and opaque binding",
+    "24/24 returned states match the evaluator reconstruction from learner-owned state program + hidden gold binding",
+    "12/12 discourse-order gauge pairs return identical state",
+    "generic runtime source contains no face labels, task semantics, #206 reference, or capability-specific imports"
+  ],
+  "claim_fence": "A pass establishes bounded state ownership/source-removal equivalence at the tested microtheater scope. It is not independent evaluation, general Theater/Music, cross-face cultural cognition, AGI, consciousness, promotion, or truth.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
