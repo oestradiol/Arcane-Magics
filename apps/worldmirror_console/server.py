@@ -255,7 +255,10 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
-    args = build_parser().parse_args(argv)\n    if args.host not in {"127.0.0.1", "localhost", "::1"}:\n        raise SystemExit("WorldMirror Console v0.1 is loopback-only")\n    if args.process_root and not args.allow_exec:
+    args = build_parser().parse_args(argv)
+    if args.host not in {"127.0.0.1", "localhost", "::1"}:
+        raise SystemExit("WorldMirror Console v0.1 is loopback-only")
+    if args.process_root and not args.allow_exec:
         raise SystemExit("--process-root requires at least one --allow-exec")
     if args.allow_exec and not args.process_root:
         raise SystemExit("--allow-exec requires --process-root")
