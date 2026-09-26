@@ -62,6 +62,7 @@ jobs:
           gh issue list --state all --limit 200 --json number,title,state,updatedAt,closedAt,comments > /tmp/minerva/history-issues.json
 
       - name: Form bounded Minerva repository proposal
+        id: cycle
         run: |
           python scripts/run_venus_autonomous_cycle.py \
             --issues /tmp/minerva/issues.json \
@@ -76,8 +77,11 @@ jobs:
             --current-state-receipt kernel/custody/R226_CURRENT_STATE_RECEIPT.json \
             --problem-output /tmp/minerva/FORMED_PROBLEM.json \
             --output /tmp/minerva/CYCLE.json
+          decision="$(python -c 'import json; print(json.load(open("/tmp/minerva/CYCLE.json"))["decision"])')"
+          echo "decision=$decision" >> "$GITHUB_OUTPUT"
 
       - name: Freeze learner-derived network query intent
+        if: steps.cycle.outputs.decision != 'STOP'
         run: |
           python scripts/freeze_network_query.py \
             --problem /tmp/minerva/FORMED_PROBLEM.json \
@@ -85,6 +89,74 @@ jobs:
             --prs /tmp/minerva/history-prs.json \
             --output /tmp/minerva/NETWORK_QUERY.json \
             --context-output /tmp/minerva/NETWORK_CONTEXT.json
+
+      - name: Execute learner network query 1
+        id: network1
+        if: steps.cycle.outputs.decision != 'STOP'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/execute_github_network_query.py \
+            --query /tmp/minerva/NETWORK_QUERY.json \
+            --output /tmp/minerva/NETWORK_ENCOUNTER_1.json
+          count="$(python -c 'import json; print(len(json.load(open("/tmp/minerva/NETWORK_ENCOUNTER_1.json"))["sources"]))')"
+          if [ "$count" -gt 0 ]; then
+            echo "has_sources=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_sources=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Reconstruct network memory and freeze follow-up query
+        if: steps.network1.outputs.has_sources == 'true'
+        run: |
+          python scripts/reconstruct_network_return.py \
+            --query /tmp/minerva/NETWORK_QUERY.json \
+            --encounter /tmp/minerva/NETWORK_ENCOUNTER_1.json \
+            --output /tmp/minerva/NETWORK_RESULT_1.json
+          python scripts/freeze_followup_network_query.py \
+            --result /tmp/minerva/NETWORK_RESULT_1.json \
+            --output /tmp/minerva/NETWORK_QUERY_2.json
+
+      - name: Execute memory-derived network query 2
+        id: network2
+        if: steps.network1.outputs.has_sources == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/execute_github_network_query.py \
+            --query /tmp/minerva/NETWORK_QUERY_2.json \
+            --output /tmp/minerva/NETWORK_ENCOUNTER_2.json
+          count="$(python -c 'import json; print(len(json.load(open("/tmp/minerva/NETWORK_ENCOUNTER_2.json"))["sources"]))')"
+          if [ "$count" -gt 0 ]; then
+            echo "has_sources=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_sources=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Reconstruct persistent two-episode network lineage
+        if: steps.network2.outputs.has_sources == 'true'
+        run: |
+          python scripts/reconstruct_network_lineage.py \
+            --query1 /tmp/minerva/NETWORK_QUERY.json \
+            --encounter1 /tmp/minerva/NETWORK_ENCOUNTER_1.json \
+            --query2 /tmp/minerva/NETWORK_QUERY_2.json \
+            --encounter2 /tmp/minerva/NETWORK_ENCOUNTER_2.json \
+            --checkpoint-output /tmp/minerva/NETWORK_MEMORY.zlib \
+            --output /tmp/minerva/NETWORK_LINEAGE.json
+
+      - name: Evaluate prefrozen WWW Mind structural gate
+        if: steps.cycle.outputs.decision != 'STOP'
+        run: |
+          python scripts/evaluate_www_mind_episode.py \
+            --prefreeze kernel/development/WWW_MIND_PROSPECTIVE_1_PREFREEZE.json \
+            --problem /tmp/minerva/FORMED_PROBLEM.json \
+            --query1 /tmp/minerva/NETWORK_QUERY.json \
+            --encounter1 /tmp/minerva/NETWORK_ENCOUNTER_1.json \
+            --query2 /tmp/minerva/NETWORK_QUERY_2.json \
+            --encounter2 /tmp/minerva/NETWORK_ENCOUNTER_2.json \
+            --lineage /tmp/minerva/NETWORK_LINEAGE.json \
+            --memory-checkpoint /tmp/minerva/NETWORK_MEMORY.zlib \
+            --output /tmp/minerva/WWW_MIND_GATE_RESULT.json
 
       - name: Crystallize Minerva trajectory into a Venus-based handoff
         env:
@@ -131,6 +203,11 @@ jobs:
           cp /tmp/minerva/LEARNING_STATE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/proposed-learning-state.json
           cp /tmp/minerva/NETWORK_QUERY.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/network-query.json
           cp /tmp/minerva/NETWORK_CONTEXT.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/network-context.json
+          for f in NETWORK_ENCOUNTER_1.json NETWORK_RESULT_1.json NETWORK_QUERY_2.json NETWORK_ENCOUNTER_2.json NETWORK_LINEAGE.json NETWORK_MEMORY.zlib WWW_MIND_GATE_RESULT.json; do
+            if [ -f "/tmp/minerva/$f" ]; then
+              cp "/tmp/minerva/$f" "provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/$f"
+            fi
+          done
 
           git add provenance/historical/handoffs
           git commit -m "handoff(minerva->venus): crystallize engineering candidate ${GITHUB_RUN_ID}"
