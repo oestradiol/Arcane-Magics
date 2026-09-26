@@ -1,7 +1,7 @@
 name: Minerva global developmental worker
 
 on:
-  # one-shot external maintainer trigger; remove after successful prospective cycle
+  # one-shot external maintainer trigger; retry after active/history World-surface repair
   workflow_dispatch:
   push:
     branches:
@@ -146,7 +146,13 @@ jobs:
 
           if ! gh pr create --draft --base split/venus --head "$branch" \
             --title "handoff: Minerva → Venus engineering candidate ${GITHUB_RUN_ID}" \
-            --body This is a target-based crystallization handoff.\n\nThe merge commit preserves Minerva as a second parent while retaining the Venus tree. Only explicit proposal receipts are admitted.\n\nVenus must integrate the candidate into the Self/World model. Scientific future discrimination belongs to the subsequent Venus → OFE handoff; Root integration comes only after OFE.'; then
+            --body 
+            echo "PR creation is unavailable; preserve handoff as an issue carrier"
+            gh issue create \
+              --title "handoff carrier: Minerva → Venus engineering candidate ${GITHUB_RUN_ID}" \
+              --body "Frozen handoff branch: \`$branch\`. GitHub Actions could not create the draft PR. This issue is a non-authoritative external-review carrier only; it grants no merge, promotion, truth, or Venus-admission authority."
+          fi
+This is a target-based crystallization handoff.\n\nThe merge commit preserves Minerva as a second parent while retaining the Venus tree. Only explicit proposal receipts are admitted.\n\nVenus must integrate the candidate into the Self/World model. Scientific future discrimination belongs to the subsequent Venus → OFE handoff; Root integration comes only after OFE.'; then
             echo "PR creation is unavailable; preserve handoff as an issue carrier"
             gh issue create \
               --title "handoff carrier: Minerva → Venus engineering candidate ${GITHUB_RUN_ID}" \
