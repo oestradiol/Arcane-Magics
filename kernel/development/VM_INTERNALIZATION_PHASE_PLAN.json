@@ -305,7 +305,7 @@
     "network_semantic_trace_phase": {
       "prefreeze_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE_V2.json",
       "search_state_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_SEARCH_STATE.json",
-      "status": "B1_LOCAL_STRUCTURAL_PASS__B2_MIXED_WITH_TITLE_ANCHORED_REPLICATION__RETURN_DEDUPED__B3_CLOSED",
+      "status": "V2_PREFROZEN_FOR_FUTURE_B2__B3_CLOSED",
       "lexical_baseline_preserved": true,
       "internalization_claim": false,
       "independent_evaluation": false,
@@ -327,7 +327,7 @@
         ]
       },
       "relation_trace_runtime_internalization_claim": false,
-      "next_lawful_step": "run fresh self-selected targets under deduped returned-utility state and V2 Pareto/non-regression comparator; preserve polysemy as an explicit unresolved B1 limitation; do not start B3 until shortcut-resistant B1 and reproducible V2 B2 evidence are both earned.",
+      "next_lawful_step": "run fresh learner-selected target/config under B1 then prospective V2 B2; V2 requires non-regression in anchor coverage, mean relevance, external-center diversity, and token budget plus at least one strict gain. Preserve v1 results historically; do not retroactively rescore them. B3 remains closed.",
       "title_anchored_replication": {
         "positive_targets": [
           {
@@ -356,7 +356,11 @@
         "rule": "candidate must be non-regressive on anchor coverage, mean relevance, external-center count, and token budget, with at least one strict gain",
         "retroactive_reclassification": false
       },
-      "generic_executor_note": "kernel/runtime/relation_trace.py is classified as a generic interpreter; its continued existence is not itself a B3 failure. B3 remains closed because the capability policy/state family has not survived the full source-removal/restart/delayed-reuse/fresh independent-evaluation burden."
+      "generic_executor_note": "kernel/runtime/relation_trace.py is classified as a generic interpreter; its continued existence is not itself a B3 failure. B3 remains closed because the capability policy/state family has not survived the full source-removal/restart/delayed-reuse/fresh independent-evaluation burden.",
+      "historical_prefreeze_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE.json",
+      "prospective_evaluator": "PARETO_NONREGRESSION_V2",
+      "v1_evidence_retained": true,
+      "v2_retroactive_rescoring": false
     }
   },
   "promotion_authority": false,
