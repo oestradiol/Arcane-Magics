@@ -93,7 +93,10 @@ jobs:
         run: |
           python scripts/freeze_network_query.py \
             --problem /tmp/minerva/FORMED_PROBLEM.json \
-            --output /tmp/minerva/NETWORK_QUERY.json
+            --issues /tmp/minerva/issues.json \
+            --prs /tmp/minerva/history-prs.json \
+            --output /tmp/minerva/NETWORK_QUERY.json \
+            --context-output /tmp/minerva/NETWORK_CONTEXT.json
 
       - name: Crystallize Minerva trajectory into a Venus-based handoff
         env:
@@ -139,6 +142,7 @@ jobs:
           cp /tmp/minerva/FORMED_PROBLEM.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/problem.json
           cp /tmp/minerva/LEARNING_STATE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/proposed-learning-state.json
           cp /tmp/minerva/NETWORK_QUERY.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/network-query.json
+          cp /tmp/minerva/NETWORK_CONTEXT.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/network-context.json
 
           git add provenance/historical/handoffs
           git commit -m "handoff(minerva->venus): crystallize engineering candidate ${GITHUB_RUN_ID}"
