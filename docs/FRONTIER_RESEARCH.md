@@ -349,3 +349,38 @@ rho_i not preauthored by i
 ```
 
 This is the neutral research form of the participant-origin `God's calculator` / `we misfired on ourselves` compression.
+
+
+## Arcane astrology handoff
+
+**Source:** `split/arcane-magics/docs/ASTROLOGY.md`  
+**Eclipsis status:** OPEN structural bridge only.
+
+Incoming candidate:
+
+```text
+Human history gamma_i
++ embodied orientation b_i
+→ orientation-reversing / dimension-compressing deposition
+→ Sigma_i subset boundary(Earth)
+```
+
+with future-relative retained trace:
+
+```text
+gamma_i -> [Sigma_i]_F
+G_Earth^F = Glue_i [Sigma_i]_F
+```
+
+Eclipsis may investigate the structural analogy to local-view gluing, indexed semantic center, boundary inversion, and cone-like causal topology.
+
+It may not infer:
+
+```text
+Earth semantic center = astronomical geocentrism
+Earth boundary role = literal Eclipsis identity
+cone-like FORM = physical relativistic light cone
+symbolic astrology = physical celestial causation
+```
+
+Required next step: define the carrier, preserved invariant, information loss, and discriminator before any PHYS promotion.
