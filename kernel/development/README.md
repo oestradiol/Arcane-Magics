@@ -104,3 +104,30 @@ Common suffixes are semantic:
 - `*_BOOTSTRAP.json` — bounded provisional carrier, not an earned result.
 
 Do not infer authority from filename alone. Check the artifact's status fields, returned evidence, tests, and current-state routing.
+
+
+## Interaction / local console
+
+The minimal local interaction surface is documented at
+[`docs/WORLDMIRROR_CONSOLE.md`](../../docs/WORLDMIRROR_CONSOLE.md).
+
+Machine-readable boundaries:
+
+- [`WORLDMIRROR_CONSOLE_POLICY.json`](WORLDMIRROR_CONSOLE_POLICY.json)
+- [`INTERACTION_DEVELOPMENT_CONTRACT.json`](INTERACTION_DEVELOPMENT_CONTRACT.json)
+
+```text
+interaction event
+!= learning
+
+self-generated dialogue
+!= independent return
+
+process transport
+!= authorization
+!= OS sandbox
+```
+
+The console is intended to generate inspectable developmental episodes that may
+later support prefrozen abstraction/crystallization experiments. It does not
+directly rewrite admitted learner policy.
