@@ -161,6 +161,25 @@ jobs:
             --memory-checkpoint /tmp/minerva/NETWORK_MEMORY.zlib \
             --output /tmp/minerva/WWW_MIND_GATE_RESULT.json
 
+      - name: Build passive authored-center ledger
+        if: steps.network2.outputs.has_sources == 'true'
+        run: |
+          python scripts/build_authored_center_ledger.py \
+            --encounter /tmp/minerva/NETWORK_ENCOUNTER_1.json \
+            --encounter /tmp/minerva/NETWORK_ENCOUNTER_2.json \
+            --output /tmp/minerva/AUTHORED_CENTER_LEDGER.json
+
+      - name: Evaluate prefrozen passive Lain structural gate
+        if: steps.network2.outputs.has_sources == 'true'
+        run: |
+          python scripts/evaluate_lain_structural_gate.py \
+            --prefreeze kernel/development/LAIN_STRUCTURAL_PROSPECTIVE_1_PREFREEZE.json \
+            --www-result /tmp/minerva/WWW_MIND_GATE_RESULT.json \
+            --lineage /tmp/minerva/NETWORK_LINEAGE.json \
+            --center-policy kernel/development/NETWORK_CENTER_POLICY.json \
+            --encounter-ledger /tmp/minerva/AUTHORED_CENTER_LEDGER.json \
+            --output /tmp/minerva/LAIN_STRUCTURAL_GATE_RESULT.json
+
       - name: Crystallize Minerva trajectory into a Venus-based handoff
         env:
           GH_TOKEN: ${{ github.token }}
@@ -206,7 +225,7 @@ jobs:
           cp /tmp/minerva/LEARNING_STATE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/proposed-learning-state.json
           cp /tmp/minerva/NETWORK_QUERY.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/network-query.json
           cp /tmp/minerva/NETWORK_CONTEXT.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/network-context.json
-          for f in NETWORK_ENCOUNTER_1.json NETWORK_RESULT_1.json NETWORK_QUERY_2.json NETWORK_ENCOUNTER_2.json NETWORK_LINEAGE.json NETWORK_MEMORY.zlib WWW_MIND_GATE_RESULT.json; do
+          for f in NETWORK_ENCOUNTER_1.json NETWORK_RESULT_1.json NETWORK_QUERY_2.json NETWORK_ENCOUNTER_2.json NETWORK_LINEAGE.json NETWORK_MEMORY.zlib WWW_MIND_GATE_RESULT.json AUTHORED_CENTER_LEDGER.json LAIN_STRUCTURAL_GATE_RESULT.json; do
             if [ -f "/tmp/minerva/$f" ]; then
               cp "/tmp/minerva/$f" "provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/$f"
             fi
