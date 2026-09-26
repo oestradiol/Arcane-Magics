@@ -710,6 +710,14 @@
         "tests/test_network_center_policy.py"
       ],
       "invariant": "An encountered authored center cannot be silently retyped as an unclaimed/provisionable field, even when reachable or writable."
+    },
+    {
+      "id": "LATERAL_INDEPENDENT_FACE_HELDOUT_GAIN",
+      "tests": [
+        "tests/test_lateral_episode.py",
+        "tests/test_lateral_episode_result.py"
+      ],
+      "invariant": "A bounded lateral pass requires an independently answerable face selected before hidden reveal to improve held-out consequence over both the initial relation basis and a more-context same-basis control; the pass does not imply Internalizer credit."
     }
   ],
   "promotion_authority": false
