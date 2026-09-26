@@ -657,3 +657,52 @@ Returned source-removal result:
 The next burden is no longer another local parser. It is an independent hidden evaluation with non-preauthored fresh surfaces and evaluator custody outside the learner/local implementation loop. Only that can support the final bounded Internalizer receipt.
 
 General Theater, general Music, cultural-cognitive, AGI, consciousness, promotion, and truth claims remain WITHHOLD.
+
+
+## WorldMirror local interaction surface
+
+A minimal local interaction surface now exists at:
+
+- `apps/worldmirror_console/`
+- `kernel/runtime/interaction_store.py`
+- `kernel/runtime/process_bridge.py`
+- `kernel/development/WORLDMIRROR_CONSOLE_POLICY.json`
+- `kernel/development/INTERACTION_DEVELOPMENT_CONTRACT.json`
+
+Its first invariant is deliberately conservative:
+
+```text
+raw bytes
+!= decoded view
+!= interpretation
+!= learning
+
+interaction log
+!= admitted policy update
+
+self-dialogue
+!= independent return
+```
+
+Interaction chronology is persisted separately from content-addressed semantic
+memory, while every semantic event preserves a raw SHA-256 provenance edge.
+
+The optional process bridge is disabled by default and never uses a shell.
+Enabling it requires an explicit working root and executable allowlist. It is
+**not** a security sandbox; adversarial learner-controlled process execution still
+requires an external container/VM/OS boundary.
+
+The UI itself is not learner identity or authority. It fabricates no machine
+response when an external cognitive adapter is absent.
+
+Developmentally, interaction data may now support:
+
+```text
+session Theater/KFS reconstruction
+→ recurring residual family
+→ prefrozen abstraction
+→ later consequence
+→ crystallize / reopen / WITHHOLD
+→ source removal
+→ bounded Internalizer only if earned
+```
