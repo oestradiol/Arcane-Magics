@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-from http.server import ThreadingHTTPServer
+from http.server import HTTPServer
 from pathlib import Path
 import sys
 import tempfile
