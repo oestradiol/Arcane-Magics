@@ -7,6 +7,7 @@ import unittest
 from kernel.development.network_inquiry import (
     NetworkInquiryError,
     WebEncounter,
+    bind_network_execution_context,
     bind_web_encounters,
     form_network_query,
     form_followup_network_query,
@@ -158,6 +159,24 @@ class NetworkInquiryTests(unittest.TestCase):
             )
             self.assertFalse(q2.truth_authority)
             self.assertFalse(q2.promotion_authority)
+
+    def test_execution_context_routes_adapter_without_rewriting_query(self):
+        q = form_network_query(PROBLEM)
+        ctx = bind_network_execution_context(
+            query=q,
+            carrier_keys=(("PR", 155),),
+            repository_full_name="oestradiol/Arcane-Magics",
+        )
+        self.assertEqual(ctx.query_id, q.query_id)
+        self.assertEqual(q.query_text, "resolve referenced incidence referenced incidence missing")
+        self.assertEqual(ctx.role, "ADAPTER_ROUTING_CONTEXT_ONLY")
+        self.assertIn(
+            "https://github.com/oestradiol/Arcane-Magics/pull/155",
+            ctx.source_locators,
+        )
+        self.assertFalse(ctx.target_selection_authority)
+        self.assertFalse(ctx.truth_authority)
+        self.assertFalse(ctx.promotion_authority)
 
 
 if __name__ == "__main__":
