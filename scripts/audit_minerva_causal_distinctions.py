@@ -18,6 +18,18 @@ MATRIX=ROOT/"provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json"
 COVERAGE=ROOT/"docs/TEST_COVERAGE_MATRIX.md"
 SCOPE=ROOT/"kernel/development/MINERVA_CAUSAL_AUDIT_SCOPE.json"
 
+def classify_source_ref(rel: str, foreign: dict[str, str]) -> tuple[str, str]:
+    # Branch-qualified provenance references are already explicit custody:
+    # split/venus:path, split/eclipsis:path, etc.
+    if rel.startswith("split/") and ":" in rel:
+        branch, inner = rel.split(":", 1)
+        if branch == "split/minerva":
+            return ("local", inner)
+        return ("foreign", rel)
+    if rel in foreign:
+        return ("foreign", rel)
+    return ("local", rel)
+
 def main()->int:
     errors=[]
     data=json.loads(MATRIX.read_text(encoding="utf-8"))
@@ -51,10 +63,11 @@ def main()->int:
         for rel in shared.source_paths(row["source_artifact"]):
             if rel.startswith(("issue ","issues/","review +","historical ","Canonical","R191_")):
                 continue
-            if (ROOT/rel).exists():
-                local_sources+=1
-            elif rel in foreign:
-                foreign_sources+=1
+            custody, resolved = classify_source_ref(rel, foreign)
+            if custody == "foreign":
+                foreign_sources += 1
+            elif (ROOT/resolved).exists():
+                local_sources += 1
             else:
                 errors.append(f"{rid}: unscoped missing source artifact: {rel}")
 
