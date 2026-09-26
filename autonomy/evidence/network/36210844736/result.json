@@ -1,0 +1,56 @@
+{
+  "encounter_digest_ids": [
+    "3c0d0caef868766ef76a58a6c043b6c79de84a1089a60a4cb0f4501fde8cb834"
+  ],
+  "encounter_return_remains_non_evaluative": true,
+  "memory_checkpoint_sha256": "4d2e41a3cc4d79d34f9c326a9bfd396d3065b4034baa4925ed4389439bb2d95f",
+  "memory_record_count": 1,
+  "promotion_authority": false,
+  "query": {
+    "authorship": "LEARNER_DERIVED_FROM_FORMED_PROBLEM",
+    "discriminator": "RESOLVE_REFERENCED_INCIDENCE",
+    "execution_owner": "EXTERNAL_ADAPTER",
+    "problem_id": "a6a260792d87c0c98fe8d60fc4d3ba7a547bfcfd89c8353380eb0c9c5a023ccc",
+    "promotion_authority": false,
+    "provenance_ids": [
+      "179cf2e7dc2d0f80e88ec165431051227b6763cb606b8617e2cb58707b8a36ab"
+    ],
+    "query_id": "1a591ae6bbf2c53bbc9cabfbd6d4911a423b1efa6e3d410b302658a94feaf8fc",
+    "query_text": "resolve referenced incidence referenced incidence missing",
+    "residual_coordinates": [
+      "referenced_incidence_missing"
+    ],
+    "schema": "Venus.NetworkQuery.v0.1",
+    "truth_authority": false
+  },
+  "reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github:issue:154"
+    ],
+    "memory_object_ids": [
+      "3c0d0caef868766ef76a58a6c043b6c79de84a1089a60a4cb0f4501fde8cb834"
+    ],
+    "next_query_terms": [
+      "154",
+      "155",
+      "admitted",
+      "and",
+      "before",
+      "begins",
+      "body",
+      "completed",
+      "formation",
+      "git",
+      "issue",
+      "its"
+    ],
+    "problem_id": "a6a260792d87c0c98fe8d60fc4d3ba7a547bfcfd89c8353380eb0c9c5a023ccc",
+    "promotion_authority": false,
+    "query_id": "1a591ae6bbf2c53bbc9cabfbd6d4911a423b1efa6e3d410b302658a94feaf8fc",
+    "reconstruction_id": "4896455827a19cc62466fe45793a10a55a43c338b1d7d8f4922cfb648d4492e3",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "schema": "Venus.NetworkEpisodeResult.v0.1",
+  "truth_authority": false
+}
