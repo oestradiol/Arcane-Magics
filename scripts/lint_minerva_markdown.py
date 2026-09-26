@@ -2,9 +2,15 @@
 from __future__ import annotations
 
 from pathlib import Path
-import scripts.lint_github_markdown as shared
+import importlib.util
 
 ROOT = Path(__file__).resolve().parents[1]
+_SHARED_PATH = Path(__file__).with_name("lint_github_markdown.py")
+_SPEC = importlib.util.spec_from_file_location("lint_github_markdown_shared", _SHARED_PATH)
+if _SPEC is None or _SPEC.loader is None:
+    raise RuntimeError("cannot load shared Markdown linter")
+shared = importlib.util.module_from_spec(_SPEC)
+_SPEC.loader.exec_module(shared)
 
 LOCAL_STATE_CHECKS = {
     "kernel/CURRENT_STATE.md": ("R226", "IG10", "EDU16"),
