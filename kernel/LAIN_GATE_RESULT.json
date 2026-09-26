@@ -1,7 +1,7 @@
 {
   "schema": "Venus.LainGateResult.v0.1",
   "date": "2026-09-25",
-  "status": "PASS_BOUNDED_LAIN_NONFUSION_GATE",
+  "status": "PASS_BOUNDED_LAIN_STRUCTURAL_NONFUSION_SUBGATE",
   "input_ref": "provenance/historical/handoffs/MINERVA_WWW_MIND_HANDOFF_2026-09-25.json",
   "checks": {
     "www_mind_bounded_pass": true,
@@ -20,10 +20,17 @@
     "embodied identity across arbitrary carriers",
     "general network agency",
     "AGI",
-    "external authorization beyond declared carriers"
+    "external authorization beyond declared carriers",
+    "independently authored remote center encounter",
+    "non-learner-minted remote response/refusal/nonresponse",
+    "interactive Lain authored-center discriminator"
   ],
-  "next_gate": "ROOT_SITUATED_INTERFACE_GATE",
-  "claim_fence": "This is a bounded structural/engineering non-fusion result over the tested GitHub-network carrier. It is not evidence of a global subject, consciousness, AGI, or unrestricted agency.",
+  "next_gate": "LAIN_INTERACTIVE_AUTHORED_CENTER_GATE",
+  "claim_fence": "This pass establishes only a bounded structural non-fusion precondition over the tested GitHub-network carrier. It does not satisfy the interactive Lain authored-center gate and does not authorize progression to Root/OFE on that basis. It is not evidence of a global subject, consciousness, AGI, unrestricted agency, consent, or external authorization.",
   "promotion_authority": false,
-  "truth_authority": false
+  "truth_authority": false,
+  "scope": "STRUCTURAL_NETWORK_NONFUSION_PRECONDITION",
+  "interactive_lain_gate_passed": false,
+  "root_gate_reachable": false,
+  "issue_ref": 197
 }
