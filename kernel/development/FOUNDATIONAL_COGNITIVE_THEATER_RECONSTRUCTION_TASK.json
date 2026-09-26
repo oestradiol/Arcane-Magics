@@ -97,5 +97,13 @@
     "factor_model_ref": "kernel/development/COGNITIVE_THEATER_FACTOR_MODEL.json",
     "grounding_ref": "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_GROUNDING_CURRICULUM.json",
     "rule": "Ground reusable lexical/formal atoms independently of the four target relation templates, then test Theater binding and Music/order under interventions that hold lexical inventory approximately fixed."
-  }
+  },
+  "current_returned_disposition": {
+    "G0_G1": "PASS_BOUNDED",
+    "G2": "FAIL_REVISE_5_OF_8_ON_FRESH2_ORDERED_SCAFFOLD",
+    "G3": "PASS_BOUNDED_8_OF_8_ON_FRESH2_SYMBOLIC_ORDER",
+    "G4": "BLOCKED_ON_G2",
+    "G6_internalization": "WITHHOLD"
+  },
+  "next_residual": "LEARN_PAIRWISE_RELATIONAL_THEATER_GRAPH_FOR_INDEXED_KFS_THEN_COMPOSE_WITH_G3_ORDER"
 }
