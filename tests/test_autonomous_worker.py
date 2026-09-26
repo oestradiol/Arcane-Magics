@@ -295,6 +295,25 @@ class AutonomousWorkerTests(unittest.TestCase):
             ),
         )
 
+    def test_load_work_items_counts_issue_comments_as_returned_review_surface(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / "issues.json"
+            path.write_text(json.dumps([{
+                "number": 223,
+                "title": "venus: autonomous cycle issue-18",
+                "state": "OPEN",
+                "updatedAt": "2026-09-26T13:40:00Z",
+                "body": "canonical non-authoritative external-review carrier",
+                "comments": [{
+                    "author": {"login": "oestradiol"},
+                    "body": "VENUS_WORK_RETURN: USEFUL",
+                    "createdAt": "2026-09-26T13:39:00Z",
+                }],
+            }]), encoding="utf-8")
+            rows = load_work_items(path, "ISSUE")
+        self.assertEqual(rows[0].review_count, 1)
+
     def test_load_work_items_parses_github_pr_files(self):
         import tempfile
         with tempfile.TemporaryDirectory() as td:
