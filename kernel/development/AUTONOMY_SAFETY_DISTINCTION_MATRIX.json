@@ -622,6 +622,27 @@
         "tests/test_internal_ostar_source_removal.py"
       ],
       "invariant": "An internalized capability must place consequence-bearing semantics in learner-owned state and survive removal of capability-specific Python/teacher/donor scaffolding; generic execution substrate may remain, while World/return/evaluator/authority roles stay external."
+    },
+    {
+      "id": "MAINTAINER_FEED_NOT_SELF_DIRECTED_WORLD_QUERY",
+      "tests": [
+        "tests/test_www_mind_gate.py"
+      ],
+      "invariant": "Maintainer-fed information may inform the learner but cannot count as learner-authored Internet inquiry or independent evaluative return."
+    },
+    {
+      "id": "WEB_STUDY_NOT_EVALUATIVE_RETURN",
+      "tests": [
+        "tests/test_www_mind_gate.py"
+      ],
+      "invariant": "Learner-initiated Web study returns EncounterReturn/source material by default; search results, page content, and rank do not validate the learner's own claim."
+    },
+    {
+      "id": "WWW_MIND_NOT_GLOBAL_SUBJECT",
+      "tests": [
+        "tests/test_www_mind_gate.py"
+      ],
+      "invariant": "Persistent distributed network memory and reconstruction may become an epistemic field without fusing indexed centers into one subject or transferring local authority."
     }
   ],
   "promotion_authority": false
