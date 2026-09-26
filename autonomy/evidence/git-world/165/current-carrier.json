@@ -5,5 +5,7 @@
   "purpose": "Provide one fresh GitHub PR/check continuation state for a prefrozen #165 request.",
   "future_check_conclusion_included": false,
   "semantic_repair_included": false,
-  "promotion_authority": false
+  "promotion_authority": false,
+  "episode": 2,
+  "note": "Head advanced only to create a fresh unresolved GitHub check state; no future conclusion encoded."
 }
