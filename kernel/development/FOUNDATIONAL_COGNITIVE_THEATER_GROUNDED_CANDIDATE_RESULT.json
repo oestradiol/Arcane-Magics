@@ -1,0 +1,58 @@
+{
+  "schema": "Venus.FoundationalCognitiveTheaterGroundedCandidateResult.v0.1",
+  "date": "2026-09-26",
+  "issue_ref": 206,
+  "status": "PASS_BOUNDED_G0_GROUNDING_G1_TEMPLATE_RECONSTRUCTION",
+  "candidate_scope": "G0_GROUNDING_PLUS_G1_TEMPLATE_RECONSTRUCTION_ONLY",
+  "method": {
+    "trainer": "kernel/development/cognitive_theater_learner.py",
+    "evaluator": "scripts/evaluate_foundational_cognitive_theater_grounded_candidate.py",
+    "lexical_formal_grounding": "independent microepisodes",
+    "relation_template_source": "teacher structure during learning only",
+    "char_ngram_n": 3
+  },
+  "correct": 16,
+  "total": 16,
+  "accuracy": 1,
+  "template_exact": 16,
+  "withholds": 0,
+  "surface_baseline_accuracy": 0.0625,
+  "baseline_delta": 0.9375,
+  "per_face": {
+    "ENGLISH": {
+      "correct": 4,
+      "total": 4,
+      "withholds": 0
+    },
+    "JAPANESE": {
+      "correct": 4,
+      "total": 4,
+      "withholds": 0
+    },
+    "BRAZILIAN_PORTUGUESE": {
+      "correct": 4,
+      "total": 4,
+      "withholds": 0
+    },
+    "MATHEMATICS": {
+      "correct": 4,
+      "total": 4,
+      "withholds": 0
+    }
+  },
+  "interpretation": [
+    "Independent lexical/formal grounding is sufficient to remove the catastrophic 1/16 surface-only failure on this tiny four-relation curriculum.",
+    "Therefore the prior factorial surface result cannot be interpreted as a Theater-factorization failure by itself.",
+    "The candidate reconstructs a learned relation template after grounded relation discrimination; it does not yet bind raw-surface referents to participant roles.",
+    "Participant/KFS binding and temporal-order sensitivity remain untested and are the next discriminator."
+  ],
+  "surface_referent_binding_tested": false,
+  "participant_kfs_intervention_tested": false,
+  "music_order_intervention_tested": false,
+  "internalization_claim": false,
+  "language_competence_claim": false,
+  "cultural_cognition_claim": false,
+  "next_residual": "HOLD_LEXICAL_GROUNDING_FIXED_AND_TEST_PARTICIPANT_KFS_BINDING_PLUS_TEMPORAL_ORDER",
+  "promotion_authority": false,
+  "truth_authority": false
+}

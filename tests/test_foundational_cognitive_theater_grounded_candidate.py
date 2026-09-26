@@ -46,6 +46,9 @@ class FoundationalCognitiveTheaterGroundedCandidateTests(unittest.TestCase):
         self.assertFalse(out["cultural_cognition_claim"])
         self.assertFalse(out["promotion_authority"])
         self.assertFalse(out["truth_authority"])
+        frozen=json.loads((ROOT/"kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_GROUNDED_CANDIDATE_RESULT.json").read_text(encoding="utf-8"))
+        for key in ("correct","total","accuracy","template_exact","withholds","surface_baseline_accuracy","baseline_delta"):
+            self.assertEqual(out[key],frozen[key])
 
 if __name__=="__main__":
     unittest.main()

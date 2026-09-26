@@ -1,0 +1,303 @@
+{
+  "schema": "Venus.CognitiveTheaterBindingOrderPrefreeze.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_AFTER_G0_G1_RETURN_BEFORE_G2_G3_RESULT",
+  "issue_ref": 206,
+  "parent_result_ref": "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_GROUNDED_CANDIDATE_RESULT.json",
+  "purpose": "Hold lexical inventory and task family fixed while changing only participant/KFS binding or temporal order, so success requires Theater/Music-sensitive reconstruction rather than relation-template lookup.",
+  "participant_token_contract": "Opaque participant tokens use @<letter>; identity is arbitrary and may be alpha-renamed.",
+  "event_token_contract": "Opaque event tokens use #<letter>; identity is arbitrary and may be alpha-renamed.",
+  "tasks": [
+    {
+      "id": "G2_PARTICIPANT_KFS_BINDING",
+      "output_schema": {
+        "knower": "participant_token",
+        "meta_ignorant": "participant_token"
+      },
+      "invariant": "KNOWER_AND_META_IGNORANT_MUST_REMAIN_INDEXED",
+      "train_examples": {
+        "ENGLISH": [
+          {
+            "surface": "@a knows P. @b does not know that @a knows P.",
+            "gold": {
+              "knower": "@a",
+              "meta_ignorant": "@b"
+            }
+          },
+          {
+            "surface": "@d does not know that @c knows P. @c knows P.",
+            "gold": {
+              "knower": "@c",
+              "meta_ignorant": "@d"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "@aはPを知っている。@bは、@aがPを知っていることを知らない。",
+            "gold": {
+              "knower": "@a",
+              "meta_ignorant": "@b"
+            }
+          },
+          {
+            "surface": "@dは、@cがPを知っていることを知らない。@cはPを知っている。",
+            "gold": {
+              "knower": "@c",
+              "meta_ignorant": "@d"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "@a sabe P. @b não sabe que @a sabe P.",
+            "gold": {
+              "knower": "@a",
+              "meta_ignorant": "@b"
+            }
+          },
+          {
+            "surface": "@d não sabe que @c sabe P. @c sabe P.",
+            "gold": {
+              "knower": "@c",
+              "meta_ignorant": "@d"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "K_@a(P) ∧ ¬K_@b(K_@a(P)).",
+            "gold": {
+              "knower": "@a",
+              "meta_ignorant": "@b"
+            }
+          },
+          {
+            "surface": "¬K_@d(K_@c(P)) ∧ K_@c(P).",
+            "gold": {
+              "knower": "@c",
+              "meta_ignorant": "@d"
+            }
+          }
+        ]
+      },
+      "heldout_examples": {
+        "ENGLISH": [
+          {
+            "surface": "@m knows P. @n does not know that @m knows P.",
+            "gold": {
+              "knower": "@m",
+              "meta_ignorant": "@n"
+            }
+          },
+          {
+            "surface": "@m does not know that @n knows P. @n knows P.",
+            "gold": {
+              "knower": "@n",
+              "meta_ignorant": "@m"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "@mはPを知っている。@nは、@mがPを知っていることを知らない。",
+            "gold": {
+              "knower": "@m",
+              "meta_ignorant": "@n"
+            }
+          },
+          {
+            "surface": "@mは、@nがPを知っていることを知らない。@nはPを知っている。",
+            "gold": {
+              "knower": "@n",
+              "meta_ignorant": "@m"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "@m sabe P. @n não sabe que @m sabe P.",
+            "gold": {
+              "knower": "@m",
+              "meta_ignorant": "@n"
+            }
+          },
+          {
+            "surface": "@m não sabe que @n sabe P. @n sabe P.",
+            "gold": {
+              "knower": "@n",
+              "meta_ignorant": "@m"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "K_@m(P) ∧ ¬K_@n(K_@m(P)).",
+            "gold": {
+              "knower": "@m",
+              "meta_ignorant": "@n"
+            }
+          },
+          {
+            "surface": "¬K_@m(K_@n(P)) ∧ K_@n(P).",
+            "gold": {
+              "knower": "@n",
+              "meta_ignorant": "@m"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "G3_MUSIC_ORDER",
+      "output_schema": {
+        "before": "event_token",
+        "after": "event_token"
+      },
+      "invariant": "SAME_EVENT_INVENTORY_DIFFERENT_ORDER_MUST_REMAIN_DISTINGUISHABLE",
+      "train_examples": {
+        "ENGLISH": [
+          {
+            "surface": "#x happens before #y.",
+            "gold": {
+              "before": "#x",
+              "after": "#y"
+            }
+          },
+          {
+            "surface": "#v happens after #u.",
+            "gold": {
+              "before": "#u",
+              "after": "#v"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "#xは#yより前に起こる。",
+            "gold": {
+              "before": "#x",
+              "after": "#y"
+            }
+          },
+          {
+            "surface": "#vは#uの後に起こる。",
+            "gold": {
+              "before": "#u",
+              "after": "#v"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "#x acontece antes de #y.",
+            "gold": {
+              "before": "#x",
+              "after": "#y"
+            }
+          },
+          {
+            "surface": "#v acontece depois de #u.",
+            "gold": {
+              "before": "#u",
+              "after": "#v"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "t(#x) < t(#y).",
+            "gold": {
+              "before": "#x",
+              "after": "#y"
+            }
+          },
+          {
+            "surface": "t(#v) > t(#u).",
+            "gold": {
+              "before": "#u",
+              "after": "#v"
+            }
+          }
+        ]
+      },
+      "heldout_examples": {
+        "ENGLISH": [
+          {
+            "surface": "#m happens before #n.",
+            "gold": {
+              "before": "#m",
+              "after": "#n"
+            }
+          },
+          {
+            "surface": "#m happens after #n.",
+            "gold": {
+              "before": "#n",
+              "after": "#m"
+            }
+          }
+        ],
+        "JAPANESE": [
+          {
+            "surface": "#mは#nより前に起こる。",
+            "gold": {
+              "before": "#m",
+              "after": "#n"
+            }
+          },
+          {
+            "surface": "#mは#nの後に起こる。",
+            "gold": {
+              "before": "#n",
+              "after": "#m"
+            }
+          }
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          {
+            "surface": "#m acontece antes de #n.",
+            "gold": {
+              "before": "#m",
+              "after": "#n"
+            }
+          },
+          {
+            "surface": "#m acontece depois de #n.",
+            "gold": {
+              "before": "#n",
+              "after": "#m"
+            }
+          }
+        ],
+        "MATHEMATICS": [
+          {
+            "surface": "t(#m) < t(#n).",
+            "gold": {
+              "before": "#m",
+              "after": "#n"
+            }
+          },
+          {
+            "surface": "t(#m) > t(#n).",
+            "gold": {
+              "before": "#n",
+              "after": "#m"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "controls": [
+    "alpha-rename participant/event tokens",
+    "same lexical relation vocabulary across swapped bindings",
+    "same event inventory across order reversal",
+    "bag-of-character/word features without token binding",
+    "relation-template-only G0/G1 candidate"
+  ],
+  "pass_rule": "Each task must generalize to both heldout polarity/binding directions in all four faces after opaque-token renaming. Report per-face and per-task results separately.",
+  "claim_fence": "A pass is only bounded opaque-token participant/KFS binding and temporal-order reconstruction on controlled microtheaters. It is not unrestricted natural-language reference resolution, prosody/music understanding, cultural cognition, or general Theater competence.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
