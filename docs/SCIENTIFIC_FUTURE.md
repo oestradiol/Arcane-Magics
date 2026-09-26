@@ -30,3 +30,37 @@ formal discriminability != observed difference
 ## Exit to Root
 
 Only a typed scientific consequence is handed to Root through `handoff/ofe-to-root/*`, where it can revise the routing map without erasing which layer earned it.
+
+
+## Astrology discriminator lane
+
+**Source object:** Arcane symbolic celestial indexing.  
+**OFE ownership:** discriminator only; no inherited symbolic or physical warrant.
+
+Candidate tests should separate at least:
+
+```text
+symbolic usefulness
+vs predictive accuracy
+
+post-hoc fit
+vs preregistered prediction
+
+shared cultural source
+vs independent return
+
+seasonal / astronomical salience
+vs astrology-specific residual
+```
+
+For histories or encodings (x,y):
+
+```text
+x ~_F y
+iff
+Future_F(x) = Future_F(y)
+```
+
+If a richer test family separates two astrological encodings that were previously treated as equivalent, the quotient must reopen.
+
+A negative predictive result may consume a causal/predictive astrology claim without consuming Arcane's PHEN/THEOPHEN symbolic object.
