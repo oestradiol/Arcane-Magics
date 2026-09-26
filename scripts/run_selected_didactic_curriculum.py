@@ -14,6 +14,15 @@ class DidacticExecutionError(ValueError):
     pass
 
 
+def _execution_envelope_status(result_status: Any) -> str:
+    status = str(result_status or "")
+    return (
+        "EXECUTED_SELECTED_PREFROZEN_CURRICULUM"
+        if status.startswith("PASS_BOUNDED_")
+        else "WITHHOLD_CURRICULUM_RESULT"
+    )
+
+
 def load(path: str | Path) -> dict[str, Any]:
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
@@ -131,7 +140,7 @@ def main() -> int:
 
     envelope = {
         "schema": "Venus.DidacticCurriculumExecutionEnvelope.v0.1",
-        "status": "EXECUTED_SELECTED_PREFROZEN_CURRICULUM",
+        "status": _execution_envelope_status(result.get("status")),
         "executed": True,
         "curriculum_id": row["curriculum_id"],
         "prefreeze_path": row["prefreeze_path"],
