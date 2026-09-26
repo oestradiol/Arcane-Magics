@@ -1,0 +1,254 @@
+{
+  "schema": "Venus.LateralEpisode2VisibleData.v0.1",
+  "episode": 2,
+  "prefrozen_by": "kernel/development/LATERAL_EPISODE_2_PREFREEZE.json",
+  "acquisition_owner": "EXTERNAL_GITHUB_ADAPTER",
+  "rows": [
+    {
+      "pr_number": 115,
+      "body": "",
+      "filenames": [
+        ".github/workflows/venus-autonomous-worker.yml",
+        "kernel/development/AUTONOMY_REOPENING_PREFREEZE.json",
+        "kernel/development/autonomous_learning.py",
+        "kernel/development/autonomous_worker.py",
+        "scripts/run_venus_autonomous_cycle.py",
+        "tests/test_autonomous_governance.py",
+        "tests/test_autonomous_worker.py",
+        "tests/test_autonomous_workflow_syntax.py"
+      ],
+      "commits": 1,
+      "additions": 238,
+      "deletions": 41,
+      "changed_files": 8,
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/115",
+        "relation_face": "GitHub PR body reduced to exact #reference tokens",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
+      }
+    },
+    {
+      "pr_number": 97,
+      "body": "#31 #98",
+      "filenames": [
+        "benchmarks/edu17r1_mention_incidence/CONDITION_IMPLEMENTATIONS.json",
+        "benchmarks/edu17r1_mention_incidence/README.md",
+        "benchmarks/edu17r1_mention_incidence/prepare_blind.py",
+        "benchmarks/edu17r1_mention_incidence/protocol.json",
+        "benchmarks/edu17r1_mention_incidence/run_sealed_conditions.py",
+        "benchmarks/edu17r1_mention_incidence/seal_hidden.py",
+        "tests/test_edu17r1_blind_adjudication.py",
+        "tests/test_edu17r1_sealed_execution_custody.py"
+      ],
+      "commits": 13,
+      "additions": 397,
+      "deletions": 3,
+      "changed_files": 8,
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/97",
+        "relation_face": "GitHub PR body reduced to exact #reference tokens",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
+      }
+    },
+    {
+      "pr_number": 114,
+      "body": "#113",
+      "filenames": [
+        ".github/workflows/venus-autonomous-worker.yml",
+        "kernel/development/AUTONOMOUS_LEARNING_STATE.json",
+        "kernel/development/AUTONOMY_STUDY_GATE_PREFREEZE.json",
+        "kernel/development/autonomous_learning.py",
+        "kernel/development/autonomous_study.py",
+        "kernel/development/autonomous_worker.py",
+        "scripts/run_venus_autonomous_cycle.py",
+        "scripts/run_venus_autonomous_study.py",
+        "tests/test_autonomous_governance.py",
+        "tests/test_autonomous_study.py",
+        "tests/test_autonomous_worker.py"
+      ],
+      "commits": 17,
+      "additions": 870,
+      "deletions": 323,
+      "changed_files": 11,
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/114",
+        "relation_face": "GitHub PR body reduced to exact #reference tokens",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
+      }
+    },
+    {
+      "pr_number": 123,
+      "body": "",
+      "filenames": [
+        "kernel/development/autonomous_worker.py",
+        "scripts/run_venus_autonomous_cycle.py",
+        "tests/test_autonomous_entrypoint.py",
+        "tests/test_autonomous_worker.py"
+      ],
+      "commits": 4,
+      "additions": 59,
+      "deletions": 16,
+      "changed_files": 4,
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/123",
+        "relation_face": "GitHub PR body reduced to exact #reference tokens",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
+      }
+    },
+    {
+      "pr_number": 122,
+      "body": "",
+      "filenames": [
+        "scripts/run_venus_autonomous_cycle.py",
+        "tests/test_autonomous_governance.py"
+      ],
+      "commits": 2,
+      "additions": 18,
+      "deletions": 1,
+      "changed_files": 2,
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/122",
+        "relation_face": "GitHub PR body reduced to exact #reference tokens",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
+      }
+    },
+    {
+      "pr_number": 96,
+      "body": "#69 #31 #89 #91 #73 #18 #84 #82 #90",
+      "filenames": [
+        "README.md",
+        "REPOSITORY_AUTHORITY_BOUNDARY.md",
+        "benchmarks/edu17r1_mention_incidence/README.md",
+        "docs/AUTONOMOUS_RESEARCH.md",
+        "docs/EARNED_MILESTONES.md",
+        "docs/FRONTIER_RESEARCH.md",
+        "docs/ISSUE_ROADMAP.md",
+        "docs/PUBLIC_VALUE.md",
+        "docs/REPRODUCE.md",
+        "docs/START_HERE.md",
+        "docs/TESTS.md",
+        "docs/TEST_COVERAGE_MATRIX.md",
+        "kernel/CURRENT_STATE.md",
+        "kernel/README.md",
+        "monographs/04_VENUS/README.md",
+        "provenance/CANONICAL_RETIREMENT_LEDGER.md",
+        "provenance/DEVELOPMENTAL_LINEAGE.md",
+        "provenance/MARKDOWN_RECONCILIATION_2026-09-24.md"
+      ],
+      "commits": 49,
+      "additions": 486,
+      "deletions": 44,
+      "changed_files": 18,
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/96",
+        "relation_face": "GitHub PR body reduced to exact #reference tokens",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
+      }
+    },
+    {
+      "pr_number": 117,
+      "body": "",
+      "filenames": [
+        ".github/workflows/venus-autonomous-worker.yml",
+        "tests/test_autonomous_governance.py"
+      ],
+      "commits": 2,
+      "additions": 21,
+      "deletions": 18,
+      "changed_files": 2,
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/117",
+        "relation_face": "GitHub PR body reduced to exact #reference tokens",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
+      }
+    },
+    {
+      "pr_number": 125,
+      "body": "#106",
+      "filenames": [
+        "kernel/development/AUTONOMOUS_LEARNING_STATE.json",
+        "kernel/development/autonomous_worker.py",
+        "tests/test_autonomous_governance.py",
+        "tests/test_autonomous_worker.py"
+      ],
+      "commits": 4,
+      "additions": 105,
+      "deletions": 2,
+      "changed_files": 4,
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/125",
+        "relation_face": "GitHub PR body reduced to exact #reference tokens",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
+      }
+    },
+    {
+      "pr_number": 126,
+      "body": "",
+      "filenames": [
+        ".github/workflows/venus-autonomous-worker.yml",
+        "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+        "kernel/development/autonomous_learning.py",
+        "kernel/development/autonomous_worker.py",
+        "scripts/audit_autonomy_safety_matrix.py",
+        "scripts/run_venus_autonomous_cycle.py",
+        "tests/test_autonomous_entrypoint.py",
+        "tests/test_autonomous_governance.py",
+        "tests/test_autonomous_worker.py"
+      ],
+      "commits": 9,
+      "additions": 199,
+      "deletions": 20,
+      "changed_files": 9,
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/126",
+        "relation_face": "GitHub PR body reduced to exact #reference tokens",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
+      }
+    },
+    {
+      "pr_number": 93,
+      "body": "#89 #69 #31 #88",
+      "filenames": [
+        ".github/workflows/venus-steward.yml",
+        "benchmarks/edu17r1_mention_incidence/condition_b.py",
+        "kernel/development/EDU17R1_BINDER_CANDIDATE.json",
+        "kernel/development/EDU17R1_BINDER_CAPABILITY_GRAPH.json",
+        "kernel/development/EDU17R1_REPAIR_AUTHORSHIP_STATUS.json",
+        "kernel/development/EDU17R1_REPAIR_CANDIDATE_FROZEN.json",
+        "kernel/development/EDU17R1_REPAIR_OWNERSHIP_RECEIPT.json",
+        "kernel/development/EDU17R1_SEMANTIC_INGRESS_METHOD_FAMILY.json",
+        "kernel/development/EDU17R1_SEMANTIC_INGRESS_SELECTED_METHOD.json",
+        "kernel/development/capability_path_search.py",
+        "kernel/runtime/calibrated_retrieval.py",
+        "scripts/audit_edu17r1_repair_authorship.py",
+        "scripts/audit_edu17r1_semantic_ingress.py",
+        "scripts/run_edu17r1_semantic_ingress_search.py",
+        "tests/test_capability_path_search.py",
+        "tests/test_edu17r1_semantic_ingress.py"
+      ],
+      "commits": 19,
+      "additions": 949,
+      "deletions": 18,
+      "changed_files": 16,
+      "provenance": {
+        "pr": "https://github.com/oestradiol/Arcane-Magics/pull/93",
+        "relation_face": "GitHub PR body reduced to exact #reference tokens",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
+      }
+    }
+  ],
+  "labels_present": false,
+  "merged_state_present": false,
+  "promotion_authority": false,
+  "truth_authority": false
+}
