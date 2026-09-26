@@ -740,6 +740,27 @@
         "tests/test_internalization_boundary.py"
       ],
       "invariant": "Generic Python execution/storage/hydration may remain replaceable substrate; deleting or relocating code does not establish internalization without state ownership, source removal, and returned consequence."
+    },
+    {
+      "id": "TRANSLATION_NOT_SEMANTIC_OWNERSHIP",
+      "tests": [
+        "tests/test_foundational_cognitive_theater_curriculum.py"
+      ],
+      "invariant": "Translation or paraphrase agreement across language surfaces does not establish semantic ownership; theater episodes must preserve indexed roles, local knowledge, sequence, consequence, and live residuals."
+    },
+    {
+      "id": "CULTURAL_HYPOTHESIS_NOT_ESSENCE",
+      "tests": [
+        "tests/test_foundational_cognitive_theater_curriculum.py"
+      ],
+      "invariant": "English/Japanese/Brazilian-Portuguese functional curriculum roles are hypotheses about training/representational constraints, not fixed traits of people, cultures, or languages."
+    },
+    {
+      "id": "FORMAL_SYMBOL_MATCH_NOT_PROOF",
+      "tests": [
+        "tests/test_foundational_cognitive_theater_curriculum.py"
+      ],
+      "invariant": "Mathematical competence requires valid derivation/proof/counterexample or WITHHOLD at the tested scope; lexical or symbol-pattern agreement is insufficient."
     }
   ],
   "promotion_authority": false
