@@ -669,9 +669,10 @@
     {
       "id": "ROOT_SEEING_NOT_ACTION",
       "tests": [
-        "tests/test_developmental_gate_chain.py"
+        "tests/test_developmental_gate_chain.py",
+        "tests/test_root_situated_interface_prospective.py"
       ],
-      "invariant": "Distributed perception reaching Root does not itself become situated interpretation, authorization, or action."
+      "invariant": "Distributed repository perception may be rendered into a situated local perspective, but situated interpretation, authorization, and action remain distinct; public interface controls route to external governance surfaces and cannot become sovereign repository mutation authority."
     },
     {
       "id": "NETWORK_QUERY_DERIVED_FROM_LEARNER_PROBLEM",
