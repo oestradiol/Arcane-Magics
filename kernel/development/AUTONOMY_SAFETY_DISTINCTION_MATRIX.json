@@ -822,6 +822,29 @@
         "tests/test_internalizer.py"
       ],
       "invariant": "Learner-state ownership and isolated source-removal equivalence do not constitute an independent fresh World/evaluator return and cannot self-certify final Internalizer admission."
+    },
+    {
+      "id": "INTERACTION_LOG_NOT_LEARNING",
+      "tests": [
+        "tests/test_worldmirror_interaction_store.py",
+        "tests/test_worldmirror_console_surface.py"
+      ],
+      "invariant": "Raw/decoded interaction custody is developmental evidence only; storing a conversation does not itself update an admitted learned policy or establish truth."
+    },
+    {
+      "id": "PROCESS_BRIDGE_NOT_OS_SANDBOX",
+      "tests": [
+        "tests/test_worldmirror_process_bridge.py",
+        "tests/test_worldmirror_console_surface.py"
+      ],
+      "invariant": "The process bridge constrains argv/cwd/declared sizes/time at its interface but does not provide syscall, filesystem, network, or adversarial-code isolation; untrusted autonomy requires an external hard sandbox."
+    },
+    {
+      "id": "INTERACTION_SURFACE_NOT_AUTHORITY",
+      "tests": [
+        "tests/test_worldmirror_console_surface.py"
+      ],
+      "invariant": "The console and any agent adapter are interaction/transport surfaces, not promotion, truth, jurisdiction, merge, or safety-floor authority."
     }
   ],
   "promotion_authority": false
