@@ -464,8 +464,9 @@ class AutonomousGovernanceTests(unittest.TestCase):
     def test_world_snapshot_retains_issue_body_and_pr_state(self):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("gh issue list --state open --limit 200 --json number,title,body,state,updatedAt", text)
-        self.assertIn("gh pr list --state all --limit 200 --json number,title,body,state,isDraft,mergeStateStatus,updatedAt", text)
+        self.assertIn("gh pr list --state open --limit 200 --json number,title,body,state,isDraft,mergeStateStatus,updatedAt", text)
         self.assertIn("files > /tmp/minerva/prs.json", text)
+        self.assertIn("gh pr list --state all --limit 200 --json number,title,state,updatedAt,mergedAt,closedAt,reviews > /tmp/minerva/history-prs.json", text)
 
 
     def test_active_pr_incidence_is_separate_from_historical_pr_returns(self):
