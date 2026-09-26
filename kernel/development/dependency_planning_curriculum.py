@@ -1,5 +1,10 @@
 from __future__ import annotations
 
+# NON-LIVE HOST PROTOTYPE. Preserved for audit only; excluded from executable
+# curriculum routing. Local harness success is not learner-owned planning and
+# cannot close issue #236 or review barrier #238.
+NON_LIVE_HOST_PROTOTYPE = True
+
 """Bounded learner-state curriculum for dependency planning.
 
 Teacher rows provide returned observations. The learned classifier is candidate
