@@ -1,4 +1,4 @@
-.PHONY: routing-check memory-check handoff-check audit
+.PHONY: routing-check memory-check branch-policy-check handoff-check audit
 
 routing-check:
 	test -f docs/NOW_MAP.md
@@ -12,8 +12,14 @@ memory-check:
 	test -f provenance/historical/LAYER_POINTERS.json
 	test -f provenance/historical/ROOT_PRE_RECRYSTALLIZATION.json
 
+branch-policy-check:
+	test -f provenance/historical/BRANCH_NAMESPACE_POLICY.json
+	grep -q 'split/venus-minerva' provenance/historical/BRANCH_NAMESPACE_POLICY.json
+	grep -q 'HISTORICAL_NONROUTING' provenance/historical/BRANCH_NAMESPACE_POLICY.json
+	! grep -q 'split/venus-minerva' docs/NOW_MAP.md
+
 handoff-check:
 	test -f docs/CROSS_REGISTER_HANDOFF.md
 	grep -q 'merge != fusion' provenance/historical/BRANCH_MEMORY.md
 
-audit: routing-check memory-check handoff-check
+audit: routing-check memory-check branch-policy-check handoff-check
