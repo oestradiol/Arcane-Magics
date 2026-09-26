@@ -19,7 +19,7 @@ Strong Safe RSI
 → AGI remains an external empirical discriminator
 ```
 
-Machine-readable route: [`DEVELOPMENTAL_GATE_CHAIN.json`](DEVELOPMENTAL_GATE_CHAIN.json).
+Canonical semantic roadmap and recurrence: [`DEVELOPMENTAL_GATE_CHAIN.json`](DEVELOPMENTAL_GATE_CHAIN.json).  Current A–E work subgraph: [`SELF_TEACHING_DEVELOPMENT_DAG.json`](SELF_TEACHING_DEVELOPMENT_DAG.json).
 
 ## Core state/policy objects
 
