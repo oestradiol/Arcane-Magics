@@ -36,6 +36,10 @@ class CognitiveTheaterFresh2Tests(unittest.TestCase):
         self.assertFalse(out["internalization_claim"])
         self.assertFalse(out["promotion_authority"])
         self.assertFalse(out["truth_authority"])
+        frozen=json.loads((ROOT/"kernel/development/COGNITIVE_THEATER_BINDING_ORDER_FRESH2_RESULT.json").read_text(encoding="utf-8"))
+        self.assertEqual(out["commutative"]["correct"],frozen["commutative"]["correct"])
+        self.assertEqual(out["ordered"]["correct"],frozen["ordered"]["correct"])
+        self.assertEqual(out["accuracy_delta"],frozen["accuracy_delta"])
 
 if __name__=="__main__":
     unittest.main()
