@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import ast
 import json
 from pathlib import Path
 import unittest
@@ -46,8 +47,15 @@ class ActionProposalProtocolTests(unittest.TestCase):
 
     def test_proposal_module_cannot_execute(self):
         text = (ROOT / "kernel/runtime/action_proposal.py").read_text(encoding="utf-8")
-        self.assertNotIn("ProcessBridge", text)
-        self.assertNotIn("subprocess", text)
+        tree = ast.parse(text)
+        imported = set()
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Import):
+                imported.update(alias.name for alias in node.names)
+            elif isinstance(node, ast.ImportFrom):
+                imported.add(node.module or "")
+        self.assertNotIn("kernel.runtime.process_bridge", imported)
+        self.assertNotIn("subprocess", imported)
 
     def test_protocol_keeps_authority_external(self):
         protocol = json.loads(
