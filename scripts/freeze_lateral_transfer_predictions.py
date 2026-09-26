@@ -21,16 +21,27 @@ from scripts.compile_lateral_internalized_state import combined_tokens
 
 def main() -> int:
     p=argparse.ArgumentParser()
+    p.add_argument("--prefreeze",required=True)
     p.add_argument("--train",required=True)
     p.add_argument("--transfer",required=True)
     p.add_argument("--state",required=True)
     p.add_argument("--output",required=True)
     args=p.parse_args()
 
+    pre=json.loads((ROOT/args.prefreeze).read_text(encoding="utf-8"))
     train_obj=json.loads((ROOT/args.train).read_text(encoding="utf-8"))
     transfer_obj=json.loads((ROOT/args.transfer).read_text(encoding="utf-8"))
     state_path=ROOT/args.state
     state=json.loads(state_path.read_text(encoding="utf-8"))
+
+    if pre.get("status")!="PREFROZEN_BEFORE_TRANSFER_FACE_ACQUISITION":
+        raise SystemExit("fresh-transfer prefreeze required")
+    expected=[int(x) for x in pre["universe_rule"]["selected_pr_numbers"]]
+    got=[int(x["pr_number"]) for x in transfer_obj.get("rows",())]
+    if got!=expected:
+        raise SystemExit(f"transfer rows differ from prefrozen universe: {got} != {expected}")
+    if transfer_obj.get("labels_present") is not False or transfer_obj.get("merged_state_present") is not False:
+        raise SystemExit("transfer labels leaked before prediction freeze")
 
     source_predictions={
         int(row["pr_number"]):bool(_predict(train_obj["train"],row,_combined("path_topology")))
@@ -69,6 +80,7 @@ print(json.dumps(pred,sort_keys=True))
     result={
         "schema":"Venus.LateralInternalizationTransferPredictions.v0.1",
         "transfer_episode":1,
+        "prefreeze_ref":args.prefreeze,
         "state_sha256":hashlib.sha256(state_path.read_bytes()).hexdigest(),
         "source_scaffold_sha256":hashlib.sha256((ROOT/"kernel/development/lateral_episode.py").read_bytes()).hexdigest(),
         "source_predictions":{str(k):v for k,v in sorted(source_predictions.items())},
