@@ -19,6 +19,7 @@ def main()->int:
     p.add_argument("--query",required=True)
     p.add_argument("--encounter",required=True)
     p.add_argument("--state",required=True)
+    p.add_argument("--learning-state",required=False)
     p.add_argument("--trace-output",required=True)
     p.add_argument("--query-output",required=True)
     args=p.parse_args()
@@ -26,12 +27,21 @@ def main()->int:
     query=json.loads(Path(args.query).read_text(encoding="utf-8"))
     encounter=json.loads(Path(args.encounter).read_text(encoding="utf-8"))
     state=json.loads(Path(args.state).read_text(encoding="utf-8"))
+    learning_state=(
+        json.loads(Path(args.learning_state).read_text(encoding="utf-8"))
+        if args.learning_state else None
+    )
     if encounter.get("return_class")!="ENCOUNTER_RETURN":
         raise SystemExit("episode-1 input must remain ENCOUNTER_RETURN")
     if encounter.get("query_id")!=query.get("query_id"):
         raise SystemExit("query/encounter identity mismatch")
     anchors=tuple(str(x) for x in query.get("study_terms",()) if str(x).strip())
-    trace=search_relation_trace(state,anchors=anchors,sources=encounter.get("sources",()))
+    trace=search_relation_trace(
+        state,
+        anchors=anchors,
+        sources=encounter.get("sources",()),
+        learning_state=learning_state,
+    )
     trace_obj=asdict(trace)
     Path(args.trace_output).write_text(json.dumps(trace_obj,indent=2,sort_keys=True)+"\n",encoding="utf-8")
     if trace.status!="RELATION_TRACE_CANDIDATE_FROZEN":
