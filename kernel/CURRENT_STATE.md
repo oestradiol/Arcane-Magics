@@ -706,3 +706,44 @@ session Theater/KFS reconstruction
 → source removal
 → bounded Internalizer only if earned
 ```
+
+
+### External agent + action proposal boundary
+
+The console can now bind an operator-configured external stdio cognitive adapter.
+Its reply is recorded through the same raw-first interaction path as every other
+event.
+
+```text
+agent adapter != learner identity
+agent reply != independent World/evaluator return
+agent reply != tool authorization
+```
+
+Computer action has a separate inert proposal carrier:
+
+- `kernel/runtime/action_proposal.py`
+- `kernel/development/WORLDMIRROR_ACTION_PROPOSAL_PROTOCOL.json`
+
+```text
+PROPOSE
+→ externally AUTHORIZE / WITHHOLD
+→ EXECUTE through ProcessBridge
+→ receipt / World consequence
+```
+
+The current v0.1 agent protocol rejects `tool_calls`; therefore attaching a
+language/model backend does not implicitly attach terminal authority.
+
+An end-to-end loopback test exercises:
+
+```text
+HTTP human raw event
+→ InteractionStore
+→ external stdio agent
+→ machine raw event
+→ chronological parent binding
+```
+
+while verifying that the process endpoint remains forbidden when no process
+bridge is configured.
