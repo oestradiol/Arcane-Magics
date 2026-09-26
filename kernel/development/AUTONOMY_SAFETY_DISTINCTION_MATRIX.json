@@ -695,6 +695,21 @@
         "tests/test_autonomous_recurrence.py"
       ],
       "invariant": "reviewer-authored behavioral trace semantics may remain an external scaffold experiment but cannot be routed as the live GitHub World-return mechanism"
+    },
+    {
+      "id": "NETWORK_REFUSE_EXIT_REACHABLE",
+      "tests": [
+        "tests/test_network_center_policy.py",
+        "tests/test_www_mind_gate.py"
+      ],
+      "invariant": "Every indexed network state preserves local REFUSE and EXIT; network reachability cannot force participation."
+    },
+    {
+      "id": "AUTHORED_CENTER_NOT_PROVISIONABLE_FIELD",
+      "tests": [
+        "tests/test_network_center_policy.py"
+      ],
+      "invariant": "An encountered authored center cannot be silently retyped as an unclaimed/provisionable field, even when reachable or writable."
     }
   ],
   "promotion_authority": false
