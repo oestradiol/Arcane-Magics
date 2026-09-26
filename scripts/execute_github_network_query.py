@@ -53,11 +53,13 @@ def query_variants(
     *,
     study_anchors: Iterable[str] = (),
 ) -> tuple[str, ...]:
-    """Deterministic bounded relaxation that preserves selected-study custody.
+    """Deterministic bounded relaxation that preserves learner query custody.
 
-    Without selected-study anchors, retain the legacy generic relaxation.
-    With anchors, never relax below the bounded anchor core: broad one-token
-    searches are not an admissible substitute for the learner's selected topic.
+    High-fidelity variants are attempted first. If selected-study anchors exist,
+    the adapter may then project the learner's own anchor set into bounded
+    two-anchor queries to discover independently indexed centers. It may not
+    invent synonyms, append host-authored semantic terms, or collapse to an
+    unconstrained one-token search.
     """
     tokens=_tokens(query_text)
     if not tokens:
@@ -79,9 +81,33 @@ def query_variants(
             candidate=" ".join(chosen)
             if candidate and candidate not in variants:
                 variants.append(candidate)
+
         candidate=" ".join(core)
         if candidate and candidate not in variants:
             variants.append(candidate)
+
+        # External-center discovery may relax the project-local conjunction,
+        # but only by projecting terms already authored into the selected study.
+        # Adjacent and spaced pairs expose different cuts without importing a
+        # host-authored synonym or answer.
+        pairs=[]
+        for i in range(len(anchors)-1):
+            pair=(anchors[i],anchors[i+1])
+            if pair not in pairs:
+                pairs.append(pair)
+        if len(anchors) >= 4:
+            for i in range(min(3,len(anchors))):
+                j=min(len(anchors)-1, i + max(2, len(anchors)//2))
+                pair=(anchors[i],anchors[j])
+                if pair[0] != pair[1] and pair not in pairs:
+                    pairs.append(pair)
+
+        for pair in pairs:
+            candidate=" ".join(pair)
+            if candidate not in variants:
+                variants.append(candidate)
+            if len(variants) >= 10:
+                break
         return tuple(variants)
 
     for width in (min(6,len(tokens)), min(4,len(tokens)), min(2,len(tokens)), 1):
@@ -91,7 +117,6 @@ def query_variants(
         if candidate and candidate not in variants:
             variants.append(candidate)
     return tuple(variants)
-
 
 def _request_json(path: str, params: dict[str, str], token: str) -> dict[str, Any]:
     if not path.startswith("/search/"):
@@ -229,8 +254,7 @@ def execute(query: dict[str, Any], *, max_sources: int = 6) -> dict[str, Any]:
     token=os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN") or ""
     study_anchors=tuple(str(x) for x in query.get("study_terms",()) if str(x).strip())
     required_relevance_matches=(
-        3 if len(study_anchors) >= 6
-        else 2 if len(study_anchors) >= 3
+        2 if len(study_anchors) >= 3
         else 1 if study_anchors
         else 0
     )
