@@ -139,6 +139,11 @@
       "path": "kernel/runtime/relation_trace.py",
       "disposition": "CAPABILITY_SPECIFIC_DEVELOPMENTAL_SCAFFOLD_NOT_YET_INTERNALIZED",
       "reason": "Although thresholds/config family live in learner-owned state, relation_trace.py still performs capability-specific relation construction/search. Current evidence is B1 bounded PASS with mixed/tied B2 and no B3; keep as scaffold until reproduced causal usefulness, source removal, restart/transfer, and independent evaluation are earned."
+    },
+    {
+      "path": "kernel/runtime/contextual_evidence.py",
+      "disposition": "KEEP_GENERIC_INTERPRETER",
+      "reason": "generic context-key induction and evidence-program executor; admission/update semantics are supplied as learner-owned program data, and the module has no issue-specific credit or promotion policy"
     }
   ],
   "developmental_targets": [
