@@ -7,7 +7,6 @@
   "role": "Formal specifications for Generator, Lateralizer, Internalizer and the WorldMirror VM target, recovered from the archive. These are the only formal statements of these components that exist anywhere; nothing live implements them.",
   "provenance": "Recovered from canonical_structural_semantic_lateral_compression.md, a compression of a 16,879-line transcript. That document is assistant-authored conversation provenance, NOT authority. It is evidence of design intent. Adopting its formalism uncritically would repeat the ATTESTED-mislabel error already made once this session; see RECOVERED_D_R3.",
   "why_recorded_separately": "The open residual register carried these as prose inside a table cell. A specification that exists only as commentary in a register is not reachable by anything that would implement it. They are the specifications for three of the components the branch author named as needed.",
-
   "specs": [
     {
       "id": "SPEC-GENERATOR",
@@ -59,9 +58,24 @@
       ],
       "live_concession_source": "kernel/development/WORLDMIRROR_CONSOLE_POLICY.json",
       "gap": "The sandbox intent is specified and the policy already admits the boundary is argv/cwd/size/timeout only, not an OS sandbox. The missing artifact is the OS-level sandbox, not the design. Nothing measures the two derivatives."
+    },
+    {
+      "id": "SPEC-CRYSTALLIZER",
+      "component": "Crystallizer",
+      "live_implementation": "ROLE STATED, NO ADMISSIBILITY CONDITION",
+      "live_role_verbatim": [
+        "Compress only relations that remain future-sufficient across the declared face/test family; preserve face-specific live separators.  [FOUNDATIONAL_COGNITIVE_THEATER_CURRICULUM.json crystallizer_role]",
+        "RETAIN_FUTURE_RELEVANT_STRUCTURE_WITHOUT_ERASING_LIVE_SEPARATOR  [CANONICAL_TELIC_RECOVERY_BOOTSTRAP.json crystallization_role]"
+      ],
+      "admissibility_from_root": "Compress_F(x) may erase exactly what F cannot distinguish. Equivalently: distinctions that are gauge under F may be consumed; distinctions that still separate lawful futures must remain preserved or withheld from premature compression.",
+      "admissibility_source": "Canonical/Root.md section 1.4",
+      "reading": "The live roles say what to preserve but never state the condition under which a compression is admissible, so nothing can refuse one. Root section 1.4 supplies the condition and is not cited by either role. Joined with the residual law -- a residual is by construction a distinction that still separates admitted futures, so mu_F(residual) != 0 and no admissible compression may absorb one -- this yields a decidable test rather than an exhortation.",
+      "proposed_condition": "admissible(CRYSTALLIZE_F(C)) <=> for every d in F(scope): separable(d) before => separable(d) after, AND no residual of C is absorbed",
+      "why_it_matters": "This is the operator the 2026-09-26 episode misused. It compressed eleven navigation links to two and demoted live planning surfaces to derived projections, and every existing check passed, because the roles describe good practice without supplying a refusal condition.",
+      "relation_to_node_architecture": "Same condition as the Strong-N2 compression rule in docs/RECURSIVE_NODE_ARCHITECTURE.md -- a node may compress its children iff a return arriving at any leaf can still propagate up and revise the compressed parent. The node rule and the Crystallizer rule are the same rule at two scales.",
+      "gap": "No check anywhere evaluates a proposed compression against F. ADMITTED_FUTURE_FAMILY_CANDIDATE.json declares F for three scopes; nothing consumes it."
     }
   ],
-
   "residuals": [
     {
       "id": "SPEC_R1",
@@ -77,6 +91,57 @@
       "id": "SPEC_R3",
       "statement": "SPEC-INTERNALIZER-REDUCTION would be the gate governing scaffold removal, which is the operation the 2026-09-26 contamination performed without warrant when it redispositioned task_graph.py.",
       "reopening_condition": "Implement the rule as a check over VM_INTERNALIZATION_PHASE_PLAN.json dispositions, so a path cannot move to a reduced disposition without both conjuncts evidenced."
+    },
+    {
+      "id": "SPEC_R4",
+      "statement": "The operator inventory counts lexical occurrences, not semantic presence. An operator enforced under a different name would be scored absent, and a token used loosely in prose inflates its count.",
+      "reopening_condition": "Re-derive the inventory from executable references -- which operators are actually invoked by code in kernel/runtime and scripts/ -- rather than from token frequency."
     }
-  ]
+  ],
+  "operator_inventory": {
+    "note": "Measured 2026-09-26 by counting operator tokens across kernel/ and docs/ on this branch, and by collecting every *_role field the kernel uses to name its own components. Recorded because the machine's operator set was never enumerated in one place, and because what is heavily used turns out to differ from what is specified.",
+    "usage_counts_live": {
+      "WITHHOLD": 726,
+      "PROBE": 481,
+      "REFUSE": 382,
+      "GENERATE": 157,
+      "SELECT": 137,
+      "RETAIN": 109,
+      "STOP": 95,
+      "CONSUME": 65,
+      "REOPEN": 39,
+      "RETURN": 33,
+      "INTERNALIZE": 15,
+      "LATERALIZE": 14,
+      "CRYSTALLIZE_F": 11,
+      "ADMIT": 5,
+      "REDUCE": 1
+    },
+    "findings": [
+      {
+        "id": "OP-F1",
+        "finding": "The four disposition verbs are the most-used tokens in the kernel and are never typed as a set.",
+        "evidence": "WITHHOLD 726, PROBE 481, REFUSE 382, CONSUME 65, RETAIN 109 occurrences. The recovered quadruple UNKNOWN -> WITHHOLD/PROBE, INCOMPATIBLE -> REFUSE, GAUGE -> CONSUME, RESIDUAL -> RETAIN maps exactly onto them.",
+        "consequence": "The routing verbs are already the working vocabulary; what is missing is only the typing that says which epistemic disposition each verb serves. Adopting D-RECOVERED-DISPOSITION-QUADRUPLE would therefore be a labelling of existing practice, not a new mechanism. That makes it unusually cheap for its value."
+      },
+      {
+        "id": "OP-F2",
+        "finding": "Generator is the only one of the four named components with NO live role statement.",
+        "evidence": "crystallizer_role, crystallization_role, lateralizer_role and internalizer_role all appear in kernel/development/. No generator_role exists anywhere. GENERATE appears 157 times as a verb, but nothing defines what a generator is or what a proposal must carry.",
+        "consequence": "SPEC-GENERATOR is not filling a gap in documentation; it is the only statement of that component in existence. The 157 GENERATE usages are operating without a definition of what they produce."
+      },
+      {
+        "id": "OP-F3",
+        "finding": "REDUCE had zero presence in the kernel before this session.",
+        "evidence": "Exactly one occurrence, inside RECOVERED_COMPONENT_SPECS_CANDIDATE.json, which this session authored. Before today the reduction operator did not appear in the repository at all.",
+        "consequence": "Confirms precisely that there is no live scaffold-reduction gate. The operator that governs when machinery may be removed -- the deletion half of B3, and the operation the 2026-09-26 contamination performed without warrant -- was not merely ungated but unnamed."
+      },
+      {
+        "id": "OP-F4",
+        "finding": "Crystallizer has a live role and no formal specification.",
+        "evidence": "Two role statements exist, quoted in the spec below. Neither states an admissibility condition, so there is nothing that decides whether a given compression is lawful.",
+        "consequence": "Crystallization is the operator most directly implicated in the 2026-09-26 contamination, which compressed live planning surfaces into derived projections. A role without an admissibility condition cannot refuse a compression."
+      }
+    ]
+  }
 }
