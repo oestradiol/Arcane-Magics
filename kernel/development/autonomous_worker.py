@@ -96,21 +96,32 @@ def _rank(
     item: WorkItem,
     issue_order: tuple[int, ...],
     kind_utility: Mapping[str, float],
-) -> tuple[float, float, float, float, int]:
+    advisory_issue_refs: frozenset[int] = frozenset(),
+) -> tuple[float, float, float, float, float, int]:
     # A conflicted/blocked PR is an immediately returned repository residual.
     conflict = 0.0 if item.kind == "PR" and item.merge_state in {"DIRTY", "BLOCKED", "CONFLICTING"} else 1.0
 
     # Learned external work-return utility precedes host-authored roadmap order.
     utility = -float(kind_utility.get(item.kind, 0.0))
 
-    # Roadmap remains one weak context/tie-break signal, not a controller.
+    # External mentor orientation is a weak tie-break only among targets that
+    # have already survived formed-problem admissibility and recurrence barriers.
+    # It cannot create admissibility and remains downstream of returned defects
+    # and learned external work-kind utility.
+    mentor_advisory = (
+        0.0
+        if item.kind == "ISSUE" and item.number in advisory_issue_refs
+        else 1.0
+    )
+
+    # Roadmap remains weaker host-authored context/provenance.
     if item.kind == "ISSUE" and item.number in issue_order:
         roadmap = float(issue_order.index(item.number))
     else:
         roadmap = float(len(issue_order) + 1)
 
     draft = 0.0 if item.kind == "PR" and item.draft else 1.0
-    return (conflict, utility, roadmap, draft, item.number)
+    return (conflict, utility, mentor_advisory, roadmap, draft, item.number)
 
 
 def _parse_github_time(value: str | None) -> datetime | None:
@@ -169,6 +180,7 @@ def choose_target(
     recent_targets: Iterable[tuple[str, int]] = (),
     kind_utility: Mapping[str, float] | None = None,
     allowed_target_keys: Iterable[tuple[str, int]] | None = None,
+    advisory_issue_refs: Iterable[int] = (),
 ) -> WorkItem | None:
     if active_cycle:
         return None
@@ -190,7 +202,11 @@ def choose_target(
         return None
     order = roadmap_issue_order(roadmap_text)
     utility = kind_utility or {}
-    return sorted(open_items, key=lambda item: _rank(item, order, utility))[0]
+    advisory = frozenset(int(x) for x in advisory_issue_refs if int(x) > 0)
+    return sorted(
+        open_items,
+        key=lambda item: _rank(item, order, utility, advisory),
+    )[0]
 
 
 def _sentences(text: str) -> tuple[str, ...]:
@@ -456,6 +472,7 @@ def make_cycle(
     current_state_receipt: Mapping[str, Any] | None = None,
     formed_problem: Mapping[str, Any] | None = None,
     allowed_target_keys: Iterable[tuple[str, int]] | None = None,
+    advisory_issue_refs: Iterable[int] = (),
 ) -> AutonomousCycleReceipt:
     items = tuple(issues) + tuple(prs)
     parent_carrier, parent_digest = _validate_developmental_parent(
@@ -472,6 +489,7 @@ def make_cycle(
         recent_targets=recent_targets,
         kind_utility=kind_utility,
         allowed_target_keys=allowed_target_keys,
+        advisory_issue_refs=advisory_issue_refs,
     )
     source = {
         "items": [asdict(item) for item in items],
@@ -487,6 +505,7 @@ def make_cycle(
         "formed_problem_id": problem_id,
         "formed_problem_disposition": problem_disposition,
         "allowed_target_keys": tuple(sorted(allowed_target_keys or ())),
+        "advisory_issue_refs": tuple(sorted(set(int(x) for x in advisory_issue_refs if int(x) > 0))),
     }
 
     if target is None:
