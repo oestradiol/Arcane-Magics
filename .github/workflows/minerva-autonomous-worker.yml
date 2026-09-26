@@ -48,6 +48,7 @@ jobs:
           test -f docs/GLOBAL_REPOSITORY_OPERATION.md
           test -f docs/SELF_CORRECTION_OPERATOR.md
           test -f kernel/development/VM_INTERNALIZATION_PHASE_PLAN.json
+          test -f kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_CURRICULUM.json
           test -f kernel/development/MINERVA_CONSTRUCT_AUDIT_SCOPE.json
           test -f kernel/development/MINERVA_CAUSAL_AUDIT_SCOPE.json
           test -f kernel/development/MINERVA_TEST_SCOPE.json
