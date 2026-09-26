@@ -102,9 +102,15 @@ def run_isolated(state, public_rows):
         (root / "state.json").write_text(json.dumps(state, ensure_ascii=False), encoding="utf-8")
         (root / "rows.json").write_text(json.dumps(public_rows, ensure_ascii=False), encoding="utf-8")
         driver = """from __future__ import annotations
+import importlib.util
 import json
 from pathlib import Path
-import structured_template_machine as machine
+
+spec=importlib.util.spec_from_file_location("isolated_machine",Path("structured_template_machine.py"))
+if spec is None or spec.loader is None:
+    raise RuntimeError("isolated executor unavailable")
+machine=importlib.util.module_from_spec(spec)
+spec.loader.exec_module(machine)
 
 state=json.loads(Path("state.json").read_text(encoding="utf-8"))
 rows=json.loads(Path("rows.json").read_text(encoding="utf-8"))
