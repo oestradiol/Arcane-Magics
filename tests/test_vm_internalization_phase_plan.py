@@ -63,5 +63,18 @@ class VMInternalizationPhasePlanTests(unittest.TestCase):
             self.plan["source_constraints"],
         )
 
+    def test_foundational_cognitive_theater_precedes_p2(self):
+        prereq=self.plan["foundational_semantic_prerequisite"]
+        self.assertEqual(
+            prereq["ref"],
+            "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_CURRICULUM.json",
+        )
+        self.assertFalse(prereq.get("promotion_authority", False))
+        phase="\n".join(self.plan["phase_order"])
+        self.assertLess(phase.index("P1.5"), phase.index("P2 "))
+        for row in self.plan["developmental_targets"]:
+            if row["priority"] <= 7:
+                self.assertTrue(row["requires_foundational_cognitive_theater"])
+
 if __name__ == "__main__":
     unittest.main()
