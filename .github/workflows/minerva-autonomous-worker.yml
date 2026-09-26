@@ -66,9 +66,9 @@ jobs:
         run: |
           mkdir -p /tmp/minerva
           git for-each-ref --format='%(refname:short) %(objectname)' refs/remotes/origin > /tmp/minerva/branches.txt
-          gh pr list --state all --limit 200 --json number,title,state,headRefName,baseRefName,mergedAt,mergeCommit > /tmp/minerva/prs.json
+          gh pr list --state all --limit 200 --json number,title,body,state,isDraft,mergeStateStatus,updatedAt,headRefName,baseRefName,mergedAt,closedAt,files > /tmp/minerva/prs.json
           gh run list --limit 100 --json databaseId,workflowName,headBranch,headSha,status,conclusion,event,createdAt > /tmp/minerva/actions.json
-          gh issue list --state open --limit 200 --json number,title,updatedAt > /tmp/minerva/issues.json
+          gh issue list --state open --limit 200 --json number,title,body,state,updatedAt > /tmp/minerva/issues.json
           gh issue list --state all --limit 200 --json number,title,state,updatedAt,closedAt,comments > /tmp/minerva/history-issues.json
 
       - name: Form bounded Minerva repository proposal
