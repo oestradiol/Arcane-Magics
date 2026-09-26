@@ -13,10 +13,6 @@ class SelectedCurriculumRouterTests(unittest.TestCase):
                     "curriculum_id": "RETURN_CREDIT_ASSIGNMENT_V1",
                     "prefreeze_path": "kernel/development/RETURN_CREDIT_ASSIGNMENT_PREFREEZE.json",
                 },
-                {
-                    "curriculum_id": "DEPENDENCY_PLANNING_V1",
-                    "prefreeze_path": "kernel/development/DEPENDENCY_PLANNING_CURRICULUM_PREFREEZE.json",
-                },
             ]
         }
 
@@ -28,13 +24,16 @@ class SelectedCurriculumRouterTests(unittest.TestCase):
         self.assertEqual(route["status"], "READY")
         self.assertEqual(route["rows"][0]["curriculum_id"], "RETURN_CREDIT_ASSIGNMENT_V1")
 
-    def test_selected_dependency_planning_prefreeze_routes_to_its_executor(self):
+    def test_selected_dependency_planning_prefreeze_withholds_without_learner_owned_executor(self):
         cycle = {"study": {"referenced_repository_paths": [
             "kernel/development/DEPENDENCY_PLANNING_CURRICULUM_PREFREEZE.json"
         ]}}
         route = resolve_selected_curricula(cycle, self.catalog)
-        self.assertEqual(route["status"], "READY")
-        self.assertEqual(route["rows"][0]["curriculum_id"], "DEPENDENCY_PLANNING_V1")
+        self.assertEqual(route["status"], "WITHHOLD_SELECTED_PREFREEZE_HAS_NO_EXECUTOR")
+        self.assertEqual(
+            route["unresolved_prefreezes"],
+            frozenset({"kernel/development/DEPENDENCY_PLANNING_CURRICULUM_PREFREEZE.json"}),
+        )
 
     def test_unknown_selected_prefreeze_withholds(self):
         cycle = {"study": {"referenced_repository_paths": [

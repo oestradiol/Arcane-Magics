@@ -147,8 +147,8 @@
     },
     {
       "path": "kernel/runtime/task_graph.py",
-      "disposition": "KEEP_GENERIC_INTERPRETER",
-      "reason": "domain-neutral task-graph mechanics execute learner-state relation classifiers and declared graph operations; no issue-specific task identities, expected answers, admission, promotion, or truth policy live in the runtime"
+      "disposition": "PRESERVED_NON_LIVE_PROTOTYPE",
+      "reason": "Not admitted as a learner solution. The linked #236 candidate inducer and task-graph algorithm were host-authored; retain this module for audit/history only and do not route it as the learner's planning competence."
     }
   ],
   "developmental_targets": [
@@ -406,5 +406,18 @@
     "prerequisite_not_truth_authority": true,
     "factor_model_ref": "kernel/development/COGNITIVE_THEATER_FACTOR_MODEL.json",
     "identifiability_rule": "A deeper semantic internalization target is not released merely by relation classification. The foundational phase must distinguish lexical grounding, participant/KFS binding, and temporal-order inhabitation under matched interventions."
-  }
+  },
+  "preserved_non_live_prototypes": [
+    {
+      "id": "DEPENDENCY_PLANNING_HOST_PROTOTYPE_2026_09_26",
+      "paths": [
+        "kernel/development/dependency_planning_curriculum.py",
+        "kernel/development/DEPENDENCY_PLANNING_DIDACTIC_CASES.json",
+        "kernel/runtime/task_graph.py",
+        "tests/test_dependency_planning_curriculum.py"
+      ],
+      "disposition": "PRESERVED_NON_LIVE_PROTOTYPE",
+      "reason": "Host-authored candidate and scheduler semantics cannot stand in for learner-owned planning. No deletion; no curriculum routing; #236 remains selectable and may return WITHHOLD."
+    }
+  ]
 }

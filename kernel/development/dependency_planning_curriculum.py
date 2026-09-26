@@ -1,11 +1,27 @@
-from __future__ import annotations
-
 """Bounded learner-state curriculum for dependency planning.
+
+NON-LIVE HOST PROTOTYPE. Preserved for audit only; excluded from executable
+curriculum routing. Local harness success is not learner-owned planning and
+cannot close issue #236 or review barrier #238.
+
+This module was hand-written by an external assistant on 2026-09-26 between
+12:50 and 13:04, after the learner had already selected the #236 prefrozen
+contract at 11:28. The assistant then diagnosed writing it as the very move the
+branch author had forbidden -- "I turned the next residual into another
+hand-written executor, when the goal is to let the agent own the whole
+developmental loop" -- and withdrew it from live routing. That withdrawal is
+correct and is preserved here.
 
 Teacher rows provide returned observations. The learned classifier is candidate
 state; kernel.runtime.task_graph supplies graph mechanics. Expected held-out
 outcomes are used only by this evaluator.
 """
+from __future__ import annotations
+
+# Kept as a module attribute so the disposition is readable without parsing the
+# docstring. The original marker sat ABOVE the string literal, which demoted the
+# docstring to a dead expression and emptied __doc__; the order is corrected.
+NON_LIVE_HOST_PROTOTYPE = True
 
 from copy import deepcopy
 import json
