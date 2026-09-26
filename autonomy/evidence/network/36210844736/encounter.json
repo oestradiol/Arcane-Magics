@@ -1,0 +1,25 @@
+{
+  "schema": "Venus.WebEncounter.v0.1",
+  "ingress_class": "LEARNER_INITIATED_WEB_STUDY",
+  "query_id": "1a591ae6bbf2c53bbc9cabfbd6d4911a423b1efa6e3d410b302658a94feaf8fc",
+  "problem_id": "a6a260792d87c0c98fe8d60fc4d3ba7a547bfcfd89c8353380eb0c9c5a023ccc",
+  "return_class": "ENCOUNTER_RETURN",
+  "adapter_id": "CHATGPT_GITHUB_EXTERNAL_ADAPTER",
+  "retrieved_at": "2026-09-26T02:12:00Z",
+  "sources": [
+    {
+      "source_id": "github:issue:154",
+      "source_url": "https://github.com/oestradiol/Arcane-Magics/issues/154",
+      "source_date": "2026-09-24T23:49:11Z",
+      "title": "Recover U2-style unlabeled problem formation before Git target selection",
+      "observed_state": "closed",
+      "observed_relation": "PR #155 body states 'Begins #154'; issue #154 records the U2-style problem-formation recovery obligation and its completed admitted recovery sequence.",
+      "semantic_verdict_by_adapter": null
+    }
+  ],
+  "search_rank_is_authority": false,
+  "returned_page_is_truth": false,
+  "independent_evaluative_return": false,
+  "promotion_authority": false,
+  "truth_authority": false
+}
