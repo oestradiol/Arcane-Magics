@@ -814,6 +814,14 @@
         "tests/test_cognitive_theater_state.py"
       ],
       "invariant": "Correct local Language-operator binding does not yet establish explicit participant-local KFS/TheaterState reconstruction, intervention competence, or Internalizer ownership."
+    },
+    {
+      "id": "STATE_OWNERSHIP_SOURCE_REMOVAL_NOT_INDEPENDENT_RETURN",
+      "tests": [
+        "tests/test_cognitive_theater_source_removal_fresh7.py",
+        "tests/test_internalizer.py"
+      ],
+      "invariant": "Learner-state ownership and isolated source-removal equivalence do not constitute an independent fresh World/evaluator return and cannot self-certify final Internalizer admission."
     }
   ],
   "promotion_authority": false
