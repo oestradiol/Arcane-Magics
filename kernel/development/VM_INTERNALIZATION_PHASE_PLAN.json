@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.VMInternalizationPhasePlan.v0.2",
+  "schema": "Venus.VMInternalizationPhasePlan.v0.3",
   "date": "2026-09-26",
   "status": "PREFROZEN_PHASE_PLAN_NOT_INTERNALIZATION_RESULT",
   "objective": "Shrink WorldMirror's capability-specific semantic Python by moving earned consequence-bearing policies into learner-owned state, while retaining or replacing generic execution substrate and preserving external correction/authority relations.",
@@ -8,7 +8,9 @@
     "provenance/CANONICAL_CAPABILITY_RECOVERY_MAP.json",
     "kernel/development/INTERNALIZATION_BOUNDARY.json",
     "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
-    "docs/EVALUATION_CONSTITUTION.md"
+    "docs/EVALUATION_CONSTITUTION.md",
+    "kernel/development/COGNITIVE_THEATER_FACTOR_MODEL.json",
+    "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_RECONSTRUCTION_TASK.json"
   ],
   "laws": [
     "CODE_DELETION!=INTERNALIZATION",
@@ -19,7 +21,10 @@
     "FRESH_RETURN_REMAINS_EXTERNAL",
     "EVALUATOR_REMAINS_EXTERNAL",
     "ROLLBACK_AND_PROVENANCE_REMAIN_RECONSTRUCTIBLE",
-    "MATURE_REDUCTION_BEATS_INTERNALIZING_UNNECESSARY_COMPLEXITY"
+    "MATURE_REDUCTION_BEATS_INTERNALIZING_UNNECESSARY_COMPLEXITY",
+    "LEXICAL_GROUNDING!=THEATER_BINDING",
+    "RELATION_CLASSIFICATION!=PARTICIPANT_KFS_RECONSTRUCTION",
+    "BAG_OF_EVENTS!=MUSIC_ORDER_INHABITATION"
   ],
   "runtime_dispositions": [
     {
@@ -210,7 +215,7 @@
   "phase_order": [
     "P0 repair audit/provenance drift and require full branch audit",
     "P1 retain mature-reduced generic runtime rather than internalizing needless complexity",
-    "P1.5 recover Canonical didactics and establish the foundational cognitive-theater curriculum across English, Japanese, Brazilian Portuguese, and Mathematics under held-out native/cross-face evaluation",
+    "P1.5 factor foundational cognition into Language (symbol/grammar), Music (order-sensitive temporal inhabitation), Theater (indexed participant/KFS enactment), and developmental Past/Now/Future; independently ground reusable face atoms before interpreting relation×face failures as Theater failures",
     "P2 internalize one developmental policy at a time only after the foundational curriculum has a bounded returned disposition; begin with learner problem formation when a fresh discriminator is available",
     "P3 shrink autonomous worker after problem/study/proposal/query policies become state-owned",
     "P4 internalize memory retrieval/crystallization policy while keeping storage and external sources distinct",
@@ -240,6 +245,8 @@
     "issue_ref": 206,
     "rule": "Before deeper capability-specific semantic Python is consumed, establish bounded learner-owned competence across the foundational English/Japanese/Brazilian-Portuguese/Mathematics cognitive-theater curriculum or explicitly WITHHOLD the blocked targets.",
     "reason": "The learner must demonstrate that semantic relations survive substantially different representational theaters before using one-language/project-shaped competence as evidence for broader semantic internalization.",
-    "prerequisite_not_truth_authority": true
+    "prerequisite_not_truth_authority": true,
+    "factor_model_ref": "kernel/development/COGNITIVE_THEATER_FACTOR_MODEL.json",
+    "identifiability_rule": "A deeper semantic internalization target is not released merely by relation classification. The foundational phase must distinguish lexical grounding, participant/KFS binding, and temporal-order inhabitation under matched interventions."
   }
 }

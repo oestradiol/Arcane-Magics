@@ -1,7 +1,7 @@
 {
-  "schema": "Venus.FoundationalCognitiveTheaterReconstructionTask.v0.1",
+  "schema": "Venus.FoundationalCognitiveTheaterReconstructionTask.v0.2",
   "date": "2026-09-26",
-  "status": "PREFROZEN_NEXT_DEVELOPMENTAL_TASK_NOT_SOLUTION",
+  "status": "PREFROZEN_IDENTIFIABILITY_REPAIRED_NEXT_DEVELOPMENTAL_TASK",
   "issue_ref": 206,
   "parent_results": [
     "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_SURFACE_BASELINE_RESULT.json",
@@ -11,63 +11,91 @@
   "question": "Can a learner trained on raw English/Japanese/Brazilian-Portuguese/Mathematics surfaces plus bounded teacher theater annotations reconstruct participant-indexed KFS and temporal relation structure on held-out raw surfaces, then use that reconstructed state to improve relation transfer over the prefrozen surface baselines?",
   "stages": [
     {
-      "id": "A_TEACH_THEATER_STATE",
-      "input": "raw face surface + teacher matched theater target",
-      "output": "learner-owned predicted theater state",
-      "note": "teacher target is scaffold and may not remain available at evaluation"
+      "id": "G0_INDEPENDENT_GROUNDING",
+      "input": "face-specific microepisodes independent of target relation sentences",
+      "output": "learner-owned reusable grounding state",
+      "claim_limit": "symbol grounding only"
     },
     {
-      "id": "B_HELDOUT_NATIVE_RECONSTRUCTION",
-      "input": "held-out raw surface in a face already taught",
-      "output": "predicted opaque roles + local KFS relations + temporal order",
+      "id": "G1_GROUNDED_TEMPLATE_RECONSTRUCTION",
+      "input": "held-out relation×face raw surface + learned grounding state",
+      "output": "teacher-derived opaque theater template",
+      "relation_id_visible": false,
+      "claim_limit": "does not establish surface referent binding"
+    },
+    {
+      "id": "G2_THEATER_BINDING",
+      "input": "matched lexical inventory with participant/KFS assignment permutations",
+      "output": "surface referents bound to opaque indexed participants and local KFS",
       "relation_id_visible": false
     },
     {
-      "id": "C_FACTORIAL_CROSS_FACE_RECONSTRUCTION",
-      "input": "held-out relation×face pairing under the prefrozen Latin-square folds",
-      "output": "predicted theater state and relation disposition",
+      "id": "G3_MUSIC_ORDER",
+      "input": "same participants + same event inventory under order/history permutations",
+      "output": "order-sensitive state/consequence reconstruction",
       "relation_id_visible": false
     },
     {
-      "id": "D_ABLATION",
+      "id": "G4_CROSS_FACE_COMPOSITION",
+      "input": "held-out relation×face with G0-G3 state",
+      "output": "predicted theater state + retained residuals + relation disposition",
+      "relation_id_visible": false
+    },
+    {
+      "id": "G5_ABLATION",
       "controls": [
         "surface-only prefrozen comparator",
         "more surface examples",
         "translation-only alignment",
+        "grounding-only without participant/KFS binding",
         "no participant/KFS indexing",
-        "no temporal order",
+        "bag-of-events / no temporal order",
         "counts-only structure",
         "no cross-face residual retention"
       ]
     },
     {
-      "id": "E_INTERNALIZATION",
+      "id": "G6_INTERNALIZATION",
       "prerequisites": [
-        "bounded causal improvement over surface baseline",
-        "capability-specific teacher/parser source inaccessible",
+        "bounded causal improvement over relevant controls",
+        "capability-specific teacher/parser/trainer source inaccessible",
         "generic executor only",
         "fresh held-out return",
         "face/name/register permutation",
-        "math derivation/proof checks where applicable"
+        "math derivation/proof checks where applicable",
+        "participant/KFS intervention pass",
+        "temporal-order intervention pass"
       ]
     }
   ],
   "evaluation_metrics": [
+    "grounding_atom_accuracy",
     "participant_index_accuracy",
     "KFS_relation_accuracy",
     "temporal_order_accuracy",
     "relation_transfer_accuracy",
     "lawful_withhold_rate",
-    "baseline_delta"
+    "baseline_delta",
+    "binding_intervention_delta",
+    "order_intervention_delta"
   ],
   "anti_cheat": [
     "matched structure cardinalities are identical across relations",
     "relation_id hidden at evaluation",
     "teacher theater target inaccessible at evaluation",
+    "target relation sentences excluded from independent grounding curriculum",
     "surface labels and project names are not semantic evidence",
-    "exact translation is neither required nor sufficient"
+    "exact translation is neither required nor sufficient",
+    "same atom inventory with different participant binding must remain distinguishable",
+    "same event inventory with different temporal order must remain distinguishable"
   ],
   "claim_fence": "A pass may establish only bounded theater-state reconstruction and transfer at the tested curriculum scope. It does not establish unrestricted language understanding, cultural cognition, AGI, consciousness, or linguistic determinism.",
   "promotion_authority": false,
-  "truth_authority": false
+  "truth_authority": false,
+  "identifiability_repair": {
+    "problem": "The original relation×face holdout can conflate missing face-specific lexical grounding with failure to reconstruct Theater. Withholding a relation cell may also withhold the only examples grounding relation-specific lexical material in that face.",
+    "factor_model_ref": "kernel/development/COGNITIVE_THEATER_FACTOR_MODEL.json",
+    "grounding_ref": "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_GROUNDING_CURRICULUM.json",
+    "rule": "Ground reusable lexical/formal atoms independently of the four target relation templates, then test Theater binding and Music/order under interventions that hold lexical inventory approximately fixed."
+  }
 }

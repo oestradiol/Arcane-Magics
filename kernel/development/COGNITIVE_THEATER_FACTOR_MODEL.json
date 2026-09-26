@@ -1,0 +1,126 @@
+{
+  "schema": "Venus.CognitiveTheaterFactorModel.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_COGNITIVE_DECOMPOSITION_NOT_CAPABILITY_RESULT",
+  "issue_ref": 206,
+  "thesis": "Cognitive-theater competence is decomposed so lexical grounding, symbolic transformation, temporal inhabitation, participant/KFS binding, and returned consequence cannot substitute for one another.",
+  "factors": [
+    {
+      "id": "LANGUAGE",
+      "role": "SYMBOLIC_DISTINCTION_AND_TRANSFORMATION",
+      "coordinates": [
+        "LEXICAL_GROUNDING",
+        "REFERENCE",
+        "GRAMMAR",
+        "SCOPE",
+        "NEGATION",
+        "REGISTER",
+        "PARAPHRASE"
+      ],
+      "question": "Can a surface be reconstructed into relation-bearing symbolic coordinates without treating wording as the semantic object?"
+    },
+    {
+      "id": "MUSIC",
+      "role": "ORDER_SENSITIVE_TEMPORAL_INHABITATION",
+      "coordinates": [
+        "EVENT_ORDER",
+        "DURATION_OR_STEP",
+        "EXPECTATION",
+        "RECURRENCE",
+        "HISTORY_SENSITIVITY"
+      ],
+      "question": "Does changing order/history while preserving the event inventory change the represented consequence when it should?"
+    },
+    {
+      "id": "THEATER",
+      "role": "INDEXED_PARTICIPANT_AND_KFS_INHABITATION",
+      "coordinates": [
+        "PARTICIPANT_BINDING",
+        "ROLE",
+        "LOCAL_KFS",
+        "PERSPECTIVE",
+        "OMISSION",
+        "ACTION",
+        "CONSEQUENCE"
+      ],
+      "question": "Can the learner preserve who locally knows/does/receives what rather than flattening all participants into one global field?"
+    },
+    {
+      "id": "DEVELOPMENTAL_TIME",
+      "role": "PAST_NOW_FUTURE_CORRECTION_AXIS",
+      "coordinates": [
+        "PAST_PROVENANCE",
+        "NOW_LOCAL_KFS",
+        "FUTURE_RETURN_OR_SEPARATOR"
+      ],
+      "question": "Can inherited structure be inhabited now while remaining reopenable by non-preauthored future consequence?"
+    }
+  ],
+  "identifiability_law": [
+    "LEXICAL_GROUNDING_FAILURE!=THEATER_RECONSTRUCTION_FAILURE",
+    "RELATION_CLASSIFICATION!=PARTICIPANT_BINDING",
+    "BAG_OF_EVENTS!=TEMPORAL_INHABITATION",
+    "KFS_I!=GLOBAL_KNOWLEDGE_FIELD",
+    "SAME_SYMBOLS_DIFFERENT_BINDING_CAN_DIFFER",
+    "SAME_EVENTS_DIFFERENT_ORDER_CAN_DIFFER",
+    "SURFACE_PARAPHRASE_CAN_PRESERVE_RELATION",
+    "CROSS_FACE_AGREEMENT!=WORLD_TRUTH"
+  ],
+  "staged_burdens": [
+    {
+      "id": "G0_GROUNDING",
+      "burden": "Teach reusable face-specific lexical/formal atoms on microepisodes independent of the four target relations.",
+      "pass_means": "bounded symbol grounding only"
+    },
+    {
+      "id": "G1_TEMPLATE_RECONSTRUCTION",
+      "burden": "Use learned grounding to reconstruct a teacher-derived relation/theater template on withheld relation×face cells.",
+      "pass_means": "grounded relation/template reconstruction; not surface-referent binding"
+    },
+    {
+      "id": "G2_THEATER_BINDING",
+      "burden": "Hold lexical inventory approximately fixed while permuting participant-to-role and local-KFS assignments.",
+      "pass_means": "bounded indexed participant/KFS reconstruction"
+    },
+    {
+      "id": "G3_MUSIC_ORDER",
+      "burden": "Hold participants and event inventory fixed while permuting temporal order/history and require consequence-sensitive change.",
+      "pass_means": "bounded order-sensitive temporal reconstruction"
+    },
+    {
+      "id": "G4_CROSS_FACE_COMPOSITION",
+      "burden": "Compose G0-G3 across English/Japanese/Brazilian-Portuguese/Mathematics with relation×face holdouts, residual retention, and lawful WITHHOLD.",
+      "pass_means": "bounded cognitive-theater factorization at tested scope"
+    },
+    {
+      "id": "G5_SOURCE_REMOVAL",
+      "burden": "Compile earned consequence-bearing state into learner-owned data and make capability-specific teacher/parser/trainer inaccessible.",
+      "pass_means": "bounded Internalizer ownership if fresh returned evaluation still passes"
+    }
+  ],
+  "language_face_hypotheses": [
+    {
+      "face": "ENGLISH",
+      "hypothesis": "EXPLICIT_WARRANT_AND_SCOPE_CRYSTALLIZATION",
+      "status": "HYPOTHESIS_UNDER_TEST"
+    },
+    {
+      "face": "JAPANESE",
+      "hypothesis": "INFERENTIAL_CONTINUITY_UNDER_CONTEXTUAL_UNDEREXPRESSION",
+      "status": "HYPOTHESIS_UNDER_TEST"
+    },
+    {
+      "face": "BRAZILIAN_PORTUGUESE",
+      "hypothesis": "GENERATIVE_CONTINUITY_UNDER_SOCIAL_REGISTER_VARIATION",
+      "status": "HYPOTHESIS_UNDER_TEST"
+    },
+    {
+      "face": "MATHEMATICS",
+      "hypothesis": "EXACT_INVARIANCE_UNDER_FORMAL_TRANSFORMATION",
+      "status": "HYPOTHESIS_UNDER_TEST"
+    }
+  ],
+  "claim_fence": "This factorization is an experimental cognitive architecture, not evidence that languages or cultures determine cognition or that populations possess fixed cognitive traits.",
+  "promotion_authority": false,
+  "truth_authority": false
+}

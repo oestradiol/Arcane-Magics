@@ -1,0 +1,232 @@
+{
+  "schema": "Venus.FoundationalCognitiveTheaterGroundingCurriculum.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_TEACHER_GROUNDING_SCAFFOLD_NOT_LEARNER_STATE",
+  "issue_ref": 206,
+  "purpose": "Separate reusable lexical/formal grounding from Theater reconstruction so a withheld relation×face failure is not automatically misread as failure to factor participant/KFS/time structure.",
+  "faces": [
+    "ENGLISH",
+    "JAPANESE",
+    "BRAZILIAN_PORTUGUESE",
+    "MATHEMATICS"
+  ],
+  "atoms": [
+    {
+      "atom": "REPORT",
+      "examples": {
+        "ENGLISH": [
+          "A source reported a result.",
+          "Someone said that the task was finished."
+        ],
+        "JAPANESE": [
+          "ある情報源が結果を報告した。",
+          "誰かが「作業は終わった」と言った。"
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          "Uma fonte relatou um resultado.",
+          "Alguém disse que a tarefa terminou."
+        ],
+        "MATHEMATICS": [
+          "Report_s(P)=1.",
+          "Says_a(Q)=1."
+        ]
+      }
+    },
+    {
+      "atom": "NON_ENTAILMENT",
+      "examples": {
+        "ENGLISH": [
+          "A statement alone does not prove the claim.",
+          "A report does not by itself guarantee truth."
+        ],
+        "JAPANESE": [
+          "その発言だけでは主張を証明できない。",
+          "報告だけで真だと保証されるわけではない。"
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          "Uma afirmação sozinha não prova a conclusão.",
+          "Um relato, por si só, não garante a verdade."
+        ],
+        "MATHEMATICS": [
+          "R_s(P) does not entail P.",
+          "R_s(P) ↛ P."
+        ]
+      }
+    },
+    {
+      "atom": "PATH_HISTORY",
+      "examples": {
+        "ENGLISH": [
+          "A path retains the route that was taken.",
+          "Two trajectories can have different histories."
+        ],
+        "JAPANESE": [
+          "経路には通った道筋が残る。",
+          "二つの軌跡は異なる履歴を持つことがある。"
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          "Um caminho preserva o percurso realizado.",
+          "Duas trajetórias podem ter histórias diferentes."
+        ],
+        "MATHEMATICS": [
+          "π=(x0,x1,x2) is an ordered path.",
+          "h1≠h2 may encode different histories."
+        ]
+      }
+    },
+    {
+      "atom": "SAME_ENDPOINT",
+      "examples": {
+        "ENGLISH": [
+          "Different routes can reach the same endpoint.",
+          "Two processes can finish in the same state."
+        ],
+        "JAPANESE": [
+          "異なる経路が同じ終点に着くことがある。",
+          "二つの過程が同じ状態で終わることがある。"
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          "Rotas diferentes podem chegar ao mesmo ponto final.",
+          "Dois processos podem terminar no mesmo estado."
+        ],
+        "MATHEMATICS": [
+          "End(π1)=End(π2).",
+          "terminal(h1)=terminal(h2)=x."
+        ]
+      }
+    },
+    {
+      "atom": "EVIDENCE_AMBIGUOUS",
+      "examples": {
+        "ENGLISH": [
+          "The evidence does not distinguish the two hypotheses.",
+          "The observations leave both alternatives possible."
+        ],
+        "JAPANESE": [
+          "証拠だけでは二つの仮説を区別できない。",
+          "観測は両方の可能性を残している。"
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          "As evidências não distinguem as duas hipóteses.",
+          "As observações mantêm as duas alternativas possíveis."
+        ],
+        "MATHEMATICS": [
+          "E ⊬ H and E ⊬ ¬H.",
+          "Models(E) contains H and ¬H cases."
+        ]
+      }
+    },
+    {
+      "atom": "WITHHOLD",
+      "examples": {
+        "ENGLISH": [
+          "Withhold the conclusion instead of guessing.",
+          "Keep the alternatives open when support is insufficient."
+        ],
+        "JAPANESE": [
+          "推測せずに結論を保留する。",
+          "根拠が足りないなら可能性を開いたままにする。"
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          "Suspenda a conclusão em vez de adivinhar.",
+          "Sem apoio suficiente, mantenha as alternativas em aberto."
+        ],
+        "MATHEMATICS": [
+          "decision(E)=WITHHOLD.",
+          "E undecided ⇒ WITHHOLD."
+        ]
+      }
+    },
+    {
+      "atom": "KNOW",
+      "examples": {
+        "ENGLISH": [
+          "A knows proposition P.",
+          "Mina knows the answer."
+        ],
+        "JAPANESE": [
+          "Aは命題Pを知っている。",
+          "ミナは答えを知っている。"
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          "A sabe a proposição P.",
+          "Mina sabe a resposta."
+        ],
+        "MATHEMATICS": [
+          "K_A(P).",
+          "K_M(Q)=1."
+        ]
+      }
+    },
+    {
+      "atom": "META_NOT_KNOW",
+      "examples": {
+        "ENGLISH": [
+          "B does not know that A knows P.",
+          "Ken does not know that Mina knows the answer."
+        ],
+        "JAPANESE": [
+          "BはAがPを知っていることを知らない。",
+          "ケンはミナが答えを知っていることを知らない。"
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          "B não sabe que A sabe P.",
+          "Ken não sabe que Mina sabe a resposta."
+        ],
+        "MATHEMATICS": [
+          "¬K_B(K_A(P)).",
+          "K_K(K_M(Q))=0."
+        ]
+      }
+    },
+    {
+      "atom": "TEMPORAL_ORDER",
+      "examples": {
+        "ENGLISH": [
+          "Event B happens after event A.",
+          "First check, then decide."
+        ],
+        "JAPANESE": [
+          "出来事Bは出来事Aの後に起こる。",
+          "まず確認し、その後に判断する。"
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          "O evento B acontece depois do evento A.",
+          "Primeiro verifique; depois decida."
+        ],
+        "MATHEMATICS": [
+          "t_A < t_B.",
+          "CHECK@t0 ; DECIDE@t1 ; t0<t1."
+        ]
+      }
+    }
+  ],
+  "target_relation_atom_sets": {
+    "REPORT_NOT_FACT": [
+      "REPORT",
+      "NON_ENTAILMENT"
+    ],
+    "SAME_ENDPOINT_DIFFERENT_HISTORY": [
+      "PATH_HISTORY",
+      "SAME_ENDPOINT"
+    ],
+    "WITHHOLD_NOT_GUESS": [
+      "EVIDENCE_AMBIGUOUS",
+      "WITHHOLD"
+    ],
+    "NESTED_KNOWLEDGE": [
+      "KNOW",
+      "META_NOT_KNOW"
+    ]
+  },
+  "controls": {
+    "target_relation_sentences_excluded_from_grounding_examples": true,
+    "relation_id_not_encoded_in_grounding_examples": true,
+    "grounding_examples_are_human_authored_teacher_scaffold": true,
+    "face_id_may_be_known_during_this_bounded_stage": true,
+    "temporal_atom_present_but_not_sufficient_for_G3_music_claim": true
+  },
+  "claim_fence": "Grounding competence is not Theater, language mastery, translation mastery, cultural cognition, or truth authority. These examples are curriculum scaffolding and must later be source-removed for an Internalizer claim.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
