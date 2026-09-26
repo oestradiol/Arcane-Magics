@@ -1,0 +1,40 @@
+{
+  "schema": "ArcaneMagics.MinervaWWWMindHandoff.v1",
+  "date": "2026-09-25",
+  "source_branch": "split/minerva",
+  "source_commit": "df5c0d1941060306ff4ca985bd862d9b86652b95",
+  "source_evidence": {
+    "www_mind_result": {
+      "path": "kernel/development/WWW_MIND_GATE_RESULT.json",
+      "blob_sha": "ae5295d3f7bcb0043a56ee5db574d1e8fffd53b8",
+      "status": "PASS_BOUNDED_WWW_MIND_GATE",
+      "truth_authority": false,
+      "promotion_authority": false
+    },
+    "network_lineage": {
+      "path": "autonomy/evidence/network/36210844736/lineage-result.json",
+      "blob_sha": "f41c010e458192f114b2cdea17d86d4c660d722d",
+      "episode_count": 2,
+      "query2_changed_from_query1": true,
+      "multiple_indexed_centers": true,
+      "indexed_source_ids": [
+        "github:issue:154",
+        "github:pr:153",
+        "github:pr:156",
+        "github:pr:157"
+      ],
+      "global_subject_claim": false,
+      "network_memory_is_world": false,
+      "encounters_remain_non_evaluative": true
+    },
+    "center_policy": {
+      "path": "kernel/development/NETWORK_CENTER_POLICY.json",
+      "refuse_exit_reachable_all_states": true,
+      "authored_center_provision_allowed": false,
+      "reachability_is_authorization": false
+    }
+  },
+  "content_admission": "bounded network-boundary evidence only",
+  "authority_transfer": false,
+  "claim_fence": "Minerva's WWW result is evidence supplied to Venus. It does not grant Venus a predetermined Self/World verdict, truth authority, promotion authority, or global-subject identity."
+}
