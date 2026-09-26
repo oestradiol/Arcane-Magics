@@ -1,0 +1,305 @@
+{
+  "schema": "ArcaneMagics.NodeGraph.v0.1",
+  "status": "CANDIDATE_NOT_ADMITTED",
+  "date": "2026-09-26",
+  "branch": "main",
+  "layer": "routing / map-territory",
+  "promotion_authority": false,
+  "truth_authority": false,
+  "spec": "docs/RECURSIVE_NODE_ARCHITECTURE.md",
+  "axiom": "NO_FILE_IS_LIVE_AUTHORITY_BY_LOCATION_RECENCY_NAME_OR_SEMANTIC_SIMILARITY",
+  "note": "A second declared structure over the existing tree. It moves, renames, merges and deletes nothing.",
+  "nodes": [
+    {
+      "id": "root",
+      "scope": [
+        ".gitignore",
+        "AGENTS.md",
+        "CITATION.cff",
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "Makefile",
+        "NxRxI_VOCABULARY_CENTER.md",
+        "PUBLICATION_CONSTITUTION.md",
+        "README.md",
+        "REPOSITORY_AUTHORITY_BOUNDARY.md",
+        "NODE_GRAPH.json"
+      ],
+      "parent": null,
+      "expands_as_root": true,
+      "authors": "the routing layer's own constitution, vocabulary centre, and map of the six-layer body",
+      "boundary": [
+        "does not author branch-local truth",
+        "does not promote a branch claim merely by being able to see or integrate it",
+        "does not become the territory it maps"
+      ],
+      "inherits_future_family": null,
+      "evidence": [
+        "REPOSITORY_AUTHORITY_BOUNDARY.md",
+        "PUBLICATION_CONSTITUTION.md"
+      ],
+      "compression": {
+        "admissible": false,
+        "justification": "Root is already minimal. Compressing the constitution into the README would make the fences reachable only through a surface that also carries promotional prose, which is how fences get quietly dropped."
+      },
+      "residuals": [
+        {
+          "id": "ROOT_R1",
+          "statement": "Root residuals should equal the union of unclosed leaf residuals, per the sixth-order return. That union is currently assembled by hand rather than derived.",
+          "reopening_condition": "The auditor derives the union and this field is generated rather than authored."
+        }
+      ],
+      "provenance": "Routing layer since the 2026-09-25 recrystallization."
+    },
+    {
+      "id": "docs",
+      "scope": [
+        "docs/"
+      ],
+      "parent": "root",
+      "expands_as_root": true,
+      "authors": "reader-facing routing surfaces: layer identity, now-map, cross-register handoff, closure pointer, visual and UI meta-theory",
+      "boundary": [
+        "does not author the branch state it describes",
+        "a description of a branch claim is not an admission of it",
+        "NOW_MAP currency is asserted here but earned on the branches"
+      ],
+      "inherits_future_family": "docs",
+      "evidence": [
+        "docs/NOW_MAP.md",
+        "docs/LAYER_IDENTITY.md",
+        "docs/CROSS_REGISTER_HANDOFF.md"
+      ],
+      "compression": {
+        "admissible": true,
+        "justification": "Duplicate pointers across reader surfaces are gauge under F(docs): removing a repeated link does not change whether a fresh reader can reach live state. The one-paragraph state summaries are NOT gauge and may not be compressed; deleting one is what made the 2026-09-26 START_HERE rewrite inadmissible."
+      },
+      "residuals": [
+        {
+          "id": "DOCS_R1",
+          "statement": "CAUSAL_CHAIN_TRACE.md and RECURSIVE_NODE_ARCHITECTURE.md are assistant-derived candidates sitting beside admitted routing docs, distinguished only by a header line.",
+          "reopening_condition": "Either admit them through the gate chain, or move candidates to a declared candidate subtree so register is structural rather than typographic."
+        },
+        {
+          "id": "DOCS_R2",
+          "statement": "NOW_MAP.md asserts current branch heads. Nothing verifies that assertion against the actual refs.",
+          "reopening_condition": "A check comparing NOW_MAP's claimed heads against git ls-remote, or an explicit statement that it is a snapshot with a date."
+        }
+      ],
+      "provenance": "Reader surfaces for the routing layer."
+    },
+    {
+      "id": "provenance",
+      "scope": [
+        "provenance/"
+      ],
+      "parent": "root",
+      "expands_as_root": true,
+      "authors": "branch memory, namespace policy, layer pointers, epistemic anti-meme, pre-recrystallization record",
+      "boundary": [
+        "historical evidence is immutable and is not current authority",
+        "presence in provenance does not mint live status",
+        "a recorded claim is not a verified claim"
+      ],
+      "inherits_future_family": "provenance",
+      "evidence": [
+        "provenance/historical/BRANCH_MEMORY.md",
+        "provenance/historical/LAYER_POINTERS.json"
+      ],
+      "compression": {
+        "admissible": false,
+        "justification": "F(provenance) requires that the exact prior state be reconstructible and that deliberate retirement be distinguishable from incidental loss. Almost nothing here is gauge under that family."
+      },
+      "residuals": [
+        {
+          "id": "PROV_R1",
+          "statement": "Canonical.zip pins three contaminated git blobs as verified live state. The routing layer has no record of this.",
+          "reopening_condition": "Repin the package against the repaired head, or record here that it is non-authoritative for VM_INTERNALIZATION_PHASE_PLAN.json, DEVELOPMENTAL_GATE_CHAIN.json and SELF_TEACHING_DEVELOPMENT_DAG.json."
+        },
+        {
+          "id": "PROV_R2",
+          "statement": "The externalized payload root /Backup/CanonicalExternalPayloads/2026-09-26/ is unreachable from this machine, so byte-level custody is asserted rather than verified.",
+          "reopening_condition": "Mount or relocate the payload root and verify the manifest hashes."
+        }
+      ],
+      "provenance": "Historical custody for the routing layer."
+    },
+    {
+      "id": "review",
+      "scope": [
+        "review/"
+      ],
+      "parent": "root",
+      "expands_as_root": true,
+      "authors": "the reviewer and researcher protocol",
+      "boundary": [
+        "defines how external parties may review; does not grant them authority to promote",
+        "does not author the claims under review"
+      ],
+      "inherits_future_family": "docs",
+      "evidence": [
+        "review/REVIEWER_AND_RESEARCHER_PROTOCOL.md"
+      ],
+      "compression": {
+        "admissible": false,
+        "justification": "Single document; nothing to compress."
+      },
+      "residuals": [
+        {
+          "id": "REVIEW_R1",
+          "statement": "The protocol describes external review, but no external reviewer is currently independent of the author. This is the V-not-independent-of-A weakness at the routing layer.",
+          "reopening_condition": "A completed review by a party with no authorship relation to the branch under review."
+        }
+      ],
+      "provenance": "Public review surface."
+    },
+    {
+      "id": "site",
+      "scope": [
+        "site/"
+      ],
+      "parent": "root",
+      "expands_as_root": true,
+      "authors": "the published routing surface (GitHub Pages)",
+      "boundary": [
+        "a public control surface is not a sovereign controller",
+        "what is rendered publicly is not thereby admitted",
+        "does not author any claim it displays"
+      ],
+      "inherits_future_family": "docs",
+      "evidence": [
+        "site/index.html",
+        "site/README.md"
+      ],
+      "compression": {
+        "admissible": true,
+        "justification": "Presentation markup is gauge under F(docs) so long as every distinction reachable in docs remains reachable on the site."
+      },
+      "residuals": [
+        {
+          "id": "SITE_R1",
+          "statement": "The site renders routing claims but has no check that what it displays matches the docs it derives from.",
+          "reopening_condition": "A check that every live pointer on the site resolves to a surface that still makes that claim."
+        }
+      ],
+      "provenance": "Public projection of the routing layer."
+    },
+    {
+      "id": "github",
+      "scope": [
+        ".github/"
+      ],
+      "parent": "root",
+      "expands_as_root": true,
+      "authors": "CI workflows, issue templates, funding metadata",
+      "boundary": [
+        "CI pass is not independent returned evidence",
+        "a workflow may gate a merge but may not promote a claim",
+        "automation acts within jurisdiction; it does not extend it"
+      ],
+      "inherits_future_family": "kernel/development",
+      "evidence": [
+        ".github/workflows/root-memory.yml",
+        ".github/workflows/prepare-handoff.yml"
+      ],
+      "compression": {
+        "admissible": false,
+        "justification": "Workflow steps are individually consequential; collapsing them is what replaced make audit with bisection globs on split/minerva."
+      },
+      "residuals": [
+        {
+          "id": "GH_R1",
+          "statement": "No workflow on this branch runs the node-graph auditor, so the declared structure is unenforced.",
+          "reopening_condition": "Wire scripts/audit_node_graph.py into a workflow, once the branch author has admitted the graph."
+        }
+      ],
+      "provenance": "Automation surface."
+    },
+    {
+      "id": "licenses",
+      "scope": [
+        "licenses/"
+      ],
+      "parent": "root",
+      "expands_as_root": false,
+      "authors": "license texts and third-party notices",
+      "boundary": [
+        "licensing is not epistemic authority",
+        "does not author any claim about the work it licenses"
+      ],
+      "inherits_future_family": null,
+      "evidence": [
+        "licenses/README.md",
+        "licenses/THIRD_PARTY_NOTICES.md"
+      ],
+      "compression": {
+        "admissible": false,
+        "justification": "License texts are reproduced verbatim by obligation."
+      },
+      "residuals": [],
+      "residuals_absence_justification": "Terminal legal surface with no open distinctions. Per RNA_R3 this absence is justified rather than defaulted.",
+      "provenance": "Licensing surface."
+    },
+    {
+      "id": "scripts",
+      "scope": [
+        "scripts/"
+      ],
+      "parent": "root",
+      "expands_as_root": true,
+      "authors": "routing-layer auditors",
+      "boundary": [
+        "an auditor checks structure, not correctness",
+        "a passing audit is not evidence a change is right",
+        "does not author the declarations it validates"
+      ],
+      "inherits_future_family": "kernel/development",
+      "evidence": [
+        "scripts/audit_node_graph.py"
+      ],
+      "compression": {
+        "admissible": false,
+        "justification": "Checkers are individually consequential."
+      },
+      "residuals": [
+        {
+          "id": "SCRIPTS_R1",
+          "statement": "The node-graph auditor and the node graph it validates were introduced together by the same author in one episode. That is bootstrap rather than self-sealing, but it means neither has yet been checked by a party that did not write it.",
+          "reopening_condition": "An independent review of the auditor against the graph, or a second graph authored by someone else that the auditor is run against."
+        }
+      ],
+      "provenance": "Introduced 2026-09-26 with the node architecture candidate."
+    },
+    {
+      "id": "tests",
+      "scope": ["tests/"],
+      "parent": "root",
+      "expands_as_root": true,
+      "authors": "negative suites demonstrating that the routing-layer auditors can fail",
+      "boundary": [
+        "a passing test is not independent returned evidence",
+        "tests demonstrate the checker is non-vacuous; they do not validate the declaration it checks",
+        "does not author the structure under test"
+      ],
+      "inherits_future_family": "kernel/development",
+      "evidence": ["tests/test_node_graph.py"],
+      "compression": {
+        "admissible": false,
+        "justification": "Each negative case pins a distinct rule. Collapsing them would leave a rule unexercised, which is how an auditor becomes vacuous without anyone noticing."
+      },
+      "residuals": [
+        {
+          "id": "TESTS_R1",
+          "statement": "N5 REACHABLE is the only rule with no isolated negative test. It currently cannot be violated without also violating N4, so it is untested rather than unfalsifiable.",
+          "reopening_condition": "Construct a graph where a residual sits on a node unreachable from root while the parent links still form a valid tree, or prove that state is unconstructible and record N5 as implied by N4."
+        },
+        {
+          "id": "TESTS_R2",
+          "statement": "No test runner is wired on this branch, so these tests run only when invoked by hand.",
+          "reopening_condition": "A workflow step running python3 -m unittest discover tests, once the branch author admits the graph."
+        }
+      ],
+      "provenance": "Introduced 2026-09-26 with the node architecture candidate."
+    }
+  ]
+}
