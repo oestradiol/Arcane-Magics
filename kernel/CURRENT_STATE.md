@@ -262,3 +262,32 @@ Executable carrier:
 - `kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json`
 
 This adds an admitted operator route. It does not itself establish a successful lateral-reconstruction episode, internalization event, Safe Strong RSI, or fresh World return.
+
+
+## WWW Mind gate — recovered ordering
+
+Recovered from the prior architecture and Library correlation record:
+
+```text
+Ethics
+→ Internet / WWW Mind
+→ Lain
+→ Person of Interest / The Machine + Root
+→ contextual reconstruction
+→ Canonical / Git / GitHub / Actions
+→ recurrent developmental worker
+```
+
+The Internet stage is not merely a transport adapter. It is the bounded developmental transition where distributed relation can become persistent technological memory and a learner-initiated epistemic field.
+
+Ingress classes must remain distinct:
+
+```text
+MAINTAINER_FED
+!= LEARNER_INITIATED_WEB_STUDY
+!= INDEPENDENT_EVALUATIVE_RETURN
+```
+
+The current executable research TransformProgram now includes a self-initiated Web-study route, but the gate is not yet passed. Passing requires a prospective episode where the learner chooses a consequential residual, authors the query, receives provenance-bearing Web material, retains it in developmental memory, and later reconstruction/query choice changes because of it without treating search result/rank as truth or evaluator return.
+
+Only after that does the Lain gate become the relevant next network discriminator: distributed memory/identity/embodiment/reachability must remain related without fusion, with seeing distinct from situated interpretation, authorization, and action.
