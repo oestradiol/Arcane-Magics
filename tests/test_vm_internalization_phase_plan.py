@@ -57,6 +57,17 @@ class VMInternalizationPhasePlanTests(unittest.TestCase):
         self.assertEqual(result["fresh_transfer_correct"], 1)
         self.assertEqual(result["fresh_transfer_total"], 8)
 
+    def test_relation_trace_remains_scaffold_until_b2_b3(self):
+        by_path = {r["path"]: r for r in self.plan["runtime_dispositions"]}
+        row = by_path["kernel/runtime/relation_trace.py"]
+        self.assertEqual(
+            row["disposition"],
+            "CAPABILITY_SPECIFIC_DEVELOPMENTAL_SCAFFOLD_NOT_YET_INTERNALIZED",
+        )
+        phase = self.plan["current_evidence"]["network_semantic_trace_phase"]
+        self.assertFalse(phase["relation_trace_runtime_internalization_claim"])
+        self.assertIn("B3_CLOSED", phase["status"])
+
     def test_canonical_r193_is_explicit_source_constraint(self):
         self.assertIn(
             "provenance/canonical-extracts/R193_SCAFFOLD_INTERNALIZATION_REFERENCE.md",
