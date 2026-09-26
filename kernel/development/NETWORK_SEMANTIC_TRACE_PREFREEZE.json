@@ -38,5 +38,21 @@
   "independent_evaluation": false,
   "promotion_authority": false,
   "truth_authority": false,
-  "claim_fence": "A pass shows only bounded returned query-relevance improvement over the frozen lexical reconstruction. It does not establish general semantics, general memory learning, WWW truth, AGI, consciousness, or promotion."
+  "claim_fence": "A pass shows only bounded returned query-relevance improvement over the frozen lexical reconstruction. It does not establish general semantics, general memory learning, WWW truth, AGI, consciousness, or promotion.",
+  "burden_scope": {
+    "B1_ABSTRACTION": "requires bounded nuisance-invariance probe before returned comparator may count as B1 evidence",
+    "B2_CAUSAL_USE": "returned baseline-vs-candidate consequence may count only as bounded downstream causal comparison after B1 probe passes",
+    "B3_INTERNALIZATION": "explicitly out of scope; requires later source removal, restart/delayed reuse, fresh disjoint transfer, and independent/evaluator-hidden return"
+  },
+  "required_b1_probes": [
+    "source-order permutation must preserve trace signature",
+    "opaque source-identity renaming plus irrelevant metadata must preserve trace signature",
+    "removing relevant anchor incidence must change or WITHHOLD the trace"
+  ],
+  "noncollapse": [
+    "B1_STRUCTURAL_PROBE!=GENERAL_SEMANTICS",
+    "B2_RETURNED_GAIN!=B3_INTERNALIZATION",
+    "QUERY_DIFFERENCE!=LEARNER_OWNERSHIP",
+    "LOCAL_EVALUATION!=INDEPENDENT_EVALUATION"
+  ]
 }
