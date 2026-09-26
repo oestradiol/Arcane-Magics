@@ -1,0 +1,48 @@
+{
+  "claim_fence": "A pass establishes bounded ownership/internalization of the episode-1 projection policy only. Poor fresh-transfer accuracy remains a separate negative generalization result and blocks any general Lateralizer claim.",
+  "external_labels": {
+    "128": true,
+    "130": true,
+    "136": true,
+    "137": false,
+    "139": true,
+    "144": true,
+    "146": true,
+    "148": true
+  },
+  "failed_ownership_checks": [],
+  "fresh_transfer_accuracy": 0.125,
+  "fresh_transfer_correct": 1,
+  "fresh_transfer_total": 8,
+  "general_lateralizer_claim": false,
+  "generalization_status": "FAIL_FRESH_TRANSFER_GENERALIZATION",
+  "internalization_receipt_minted": true,
+  "next_residual": "GENERALIZE_OR_REVISE_LATERAL_POLICY_ON_FRESH_TRANSFER",
+  "ownership_checks": {
+    "capability_specific_python_runtime_dependency_absent": true,
+    "external_label_reveal": true,
+    "external_roles_preserved": true,
+    "fresh_transfer_exact_source_state_equivalence": true,
+    "labels_not_accessed_before_prediction": true,
+    "prior_alpha_rename_invariance": true,
+    "prior_source_removal_equivalence": true,
+    "source_scaffold_absent_from_state_runtime": true,
+    "state_semantics_owned": true
+  },
+  "ownership_status": "PASS_BOUNDED_INTERNALIZATION_EPISODE1_PROJECTION_POLICY",
+  "prediction_file_sha256": "d507d0b589e42a1e510418b413d9940c94ce43eea1e060965425e069230f85ee",
+  "promotion_authority": false,
+  "schema": "Venus.LateralInternalizationTransferResult.v0.1",
+  "state_predictions": {
+    "128": false,
+    "130": false,
+    "136": false,
+    "137": true,
+    "139": true,
+    "144": false,
+    "146": false,
+    "148": false
+  },
+  "state_sha256": "0d5bc9eb46ffa85d7fff9a85be50d5ac175d5383d4eba9ea13d22da66b683ebc",
+  "truth_authority": false
+}
