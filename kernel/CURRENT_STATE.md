@@ -384,3 +384,60 @@ Current returned facts constrain the phase:
 Therefore the next reduction target is developmental semantic policy still encoded in capability-specific modules, not indiscriminate consumption of the generic VMK2/runtime carrier.
 
 The required Minerva branch gate and autonomous worker now run `make audit` before admission/handoff so the full current test surface, not a curated subset, is binding.
+
+
+## Foundational cognitive-theater curriculum — 2026-09-26
+
+Before deeper capability-specific semantic Python is consumed, the learner must now traverse a bounded foundational curriculum recovered from Canonical and generalized across four representational theaters:
+
+```text
+English
+→ explicit warrant / scope crystallization
+
+Japanese
+→ inferential continuity under contextual underexpression
+
+Brazilian Portuguese
+→ generative continuity under social/register variation
+
+Mathematics
+→ exact invariance under formal transformation
+```
+
+These are **functional curriculum hypotheses**, not cultural essences or claims of linguistic determinism.
+
+The deeper didactic unit is:
+
+```text
+Vocabulary
+→ distinctions
+
+Grammar
+→ admissible transformations
+
+Music
+→ temporal/prosodic unfolding and expectation
+
+Theater
+→ indexed participants + local knowledge + sequence + enactment + consequence
+```
+
+and the temporal/developmental axes remain orthogonal:
+
+```text
+Past / Religion
+→ inherited symbolic/provenance structure
+
+Now / Knowledge Field State
+→ locally available and inhabited state
+
+Future / Science
+→ open consequence capable of reopening the organization
+```
+
+Machine-readable custody:
+- `kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_CURRICULUM.json`
+- issue #206
+- `tests/test_foundational_cognitive_theater_curriculum.py`
+
+This gate precedes deeper P2 semantic VM internalization. Existing bounded WWW/Lain structural evidence remains valid at its tested scope; it is not retroactively promoted into semantic competence.
