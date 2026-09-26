@@ -1,0 +1,120 @@
+{
+  "schema": "Venus.CognitiveTheaterLocalOperatorFresh5Result.v0.1",
+  "date": "2026-09-26",
+  "issue_ref": 206,
+  "status": "PASS_BOUNDED_LOCAL_OPERATOR_COMPOSITION__WITHHOLD_GENERAL_THEATER_AND_INTERNALIZATION",
+  "parent_prefreeze_ref": "kernel/development/COGNITIVE_THEATER_LOCAL_OPERATOR_FRESH5_PREFREEZE.json",
+  "canonical_extract_ref": "provenance/canonical-extracts/R194_LANGUAGE_TO_COGNITIVE_THEATER_CAUSAL_EXTRACT_2026-09-26.md",
+  "evaluation_owner": "MINERVA_BRANCH_LOCAL_PREFROZEN_COMPARATOR",
+  "independent_external_evaluation": false,
+  "count_only": {
+    "correct": 0,
+    "total": 24,
+    "accuracy": 0,
+    "withholds": 24
+  },
+  "unary_ordered": {
+    "correct": 14,
+    "total": 24,
+    "accuracy": 0.5833333333333334,
+    "withholds": 7
+  },
+  "pairwise_relational": {
+    "correct": 16,
+    "total": 24,
+    "accuracy": 0.6666666666666666,
+    "withholds": 6
+  },
+  "joint_scene": {
+    "correct": 15,
+    "total": 24,
+    "accuracy": 0.625,
+    "withholds": 8
+  },
+  "local_operator_graph": {
+    "correct": 24,
+    "total": 24,
+    "accuracy": 1,
+    "withholds": 0,
+    "per_task": {
+      "G2_NESTED_KFS_LOCAL_OPERATORS": {
+        "correct": 8,
+        "total": 8,
+        "accuracy": 1,
+        "withholds": 0
+      },
+      "G2_TRANSMISSION_KFS_LOCAL_OPERATORS": {
+        "correct": 8,
+        "total": 8,
+        "accuracy": 1,
+        "withholds": 0
+      },
+      "G3_EVENT_ORDER_LOCAL_OPERATORS": {
+        "correct": 8,
+        "total": 8,
+        "accuracy": 1,
+        "withholds": 0
+      }
+    },
+    "per_face": {
+      "ENGLISH": {
+        "correct": 6,
+        "total": 6,
+        "accuracy": 1,
+        "withholds": 0
+      },
+      "JAPANESE": {
+        "correct": 6,
+        "total": 6,
+        "accuracy": 1,
+        "withholds": 0
+      },
+      "BRAZILIAN_PORTUGUESE": {
+        "correct": 6,
+        "total": 6,
+        "accuracy": 1,
+        "withholds": 0
+      },
+      "MATHEMATICS": {
+        "correct": 6,
+        "total": 6,
+        "accuracy": 1,
+        "withholds": 0
+      }
+    }
+  },
+  "deltas": {
+    "over_count": 1,
+    "over_unary": 0.41666666666666663,
+    "over_pairwise": 0.33333333333333337,
+    "over_joint": 0.375
+  },
+  "returned_distinctions": [
+    "DISCOURSE_PRESENTATION_ORDER!=EVENT_ORDER",
+    "LOCAL_OPERATOR_COMPOSITION!=WHOLE_SCENE_TEMPLATE",
+    "PARTICIPANT_KFS_BINDING!=CLAUSE_POSITION",
+    "LANGUAGE_OPERATOR_STRUCTURE!=THEATER_STATE",
+    "BOUNDED_LOCAL_OPERATOR_PASS!=GENERAL_THEATER",
+    "SYMBOLIC_EVENT_ORDER!=GENERAL_MUSIC"
+  ],
+  "interpretation": [
+    "On the exact prefrozen 24 Fresh5 rows, the local-operator graph scored 24/24 while the strongest nonlocal comparator scored 16/24.",
+    "Quotienting discourse-unit presentation order while preserving relation-internal argument direction repaired the Fresh4 whole-scene failure at this microtheater scope.",
+    "The result supports separating Language presentation/operator structure from Theater participant-local KFS structure and from Music/event-history order.",
+    "The result does not yet show that the learner reconstructs an explicit CognitiveTheaterState, that the learned operators survive source removal, or that they generalize beyond the frozen microtheaters."
+  ],
+  "claim_dispositions": {
+    "G2_INDEXED_KFS_BINDING": "PASS_BOUNDED_OPERATOR_BINDING_AT_FRESH5_SCOPE",
+    "G3_SYMBOLIC_EVENT_ORDER": "PASS_BOUNDED_OPERATOR_ORDER_AT_FRESH5_SCOPE",
+    "G4_EXPLICIT_THEATER_STATE_COMPOSITION": "OPEN",
+    "G5_SOURCE_REMOVAL": "OPEN",
+    "GENERAL_THEATER": "WITHHOLD",
+    "GENERAL_MUSIC": "WITHHOLD",
+    "CULTURAL_LANGUAGE_HYPOTHESES": "WITHHOLD_PENDING_BROADER_NATIVE_TESTS",
+    "INTERNALIZATION": "WITHHOLD"
+  },
+  "next_residual": "COMPILE_LOCAL_OPERATORS_INTO_EXPLICIT_INDEXED_THEATER_STATE_AND_TEST_KFS_AND_ORDER_INTERVENTIONS_ON_FRESH_CROSS_FACE_SCENES",
+  "promotion_authority": false,
+  "truth_authority": false,
+  "claim_fence": "A pass establishes only bounded local-operator composition on the prefrozen Fresh5 microtheater family. It does not establish unrestricted language understanding, cultural cognition, general Theater, general Music, source-independent internalization, AGI, consciousness, promotion, or truth."
+}
