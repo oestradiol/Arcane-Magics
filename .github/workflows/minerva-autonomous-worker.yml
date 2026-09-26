@@ -51,6 +51,7 @@ jobs:
           gh pr list --state all --limit 200 --json number,title,state,headRefName,baseRefName,mergedAt,mergeCommit > /tmp/minerva/prs.json
           gh run list --limit 100 --json databaseId,workflowName,headBranch,headSha,status,conclusion,event,createdAt > /tmp/minerva/actions.json
           gh issue list --state open --limit 200 --json number,title,updatedAt > /tmp/minerva/issues.json
+          gh issue list --state all --limit 200 --json number,title,state,updatedAt,closedAt,comments > /tmp/minerva/history-issues.json
 
       - name: Form bounded Minerva repository proposal
         run: |
@@ -58,7 +59,7 @@ jobs:
             --issues /tmp/minerva/issues.json \
             --prs /tmp/minerva/prs.json \
             --history-prs /tmp/minerva/prs.json \
-            --history-issues /tmp/minerva/issues.json \
+            --history-issues /tmp/minerva/history-issues.json \
             --roadmap docs/ISSUE_ROADMAP.md \
             --policy kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json \
             --learning-state kernel/development/AUTONOMOUS_LEARNING_STATE.json \
