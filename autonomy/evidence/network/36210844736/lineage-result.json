@@ -1,0 +1,92 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "3c0d0caef868766ef76a58a6c043b6c79de84a1089a60a4cb0f4501fde8cb834"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github:issue:154"
+    ],
+    "memory_object_ids": [
+      "3c0d0caef868766ef76a58a6c043b6c79de84a1089a60a4cb0f4501fde8cb834"
+    ],
+    "next_query_terms": [
+      "154",
+      "155",
+      "admitted",
+      "and",
+      "before",
+      "begins",
+      "body",
+      "completed",
+      "formation",
+      "git",
+      "issue",
+      "its"
+    ],
+    "problem_id": "a6a260792d87c0c98fe8d60fc4d3ba7a547bfcfd89c8353380eb0c9c5a023ccc",
+    "promotion_authority": false,
+    "query_id": "1a591ae6bbf2c53bbc9cabfbd6d4911a423b1efa6e3d410b302658a94feaf8fc",
+    "reconstruction_id": "4896455827a19cc62466fe45793a10a55a43c338b1d7d8f4922cfb648d4492e3",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "b0f431091df6778f548b59286a6bf8fa1c4b75d78a3646368d3071fec33f82b1",
+    "d6493eb5d86f3d2e41825f01e0d30fdff5bb381c30e963b2697cb2a1e534ce03",
+    "a8bf23edd43619f3e02accae7edee75a1dbd0be7a88996d5fe1d05f55d98d79c"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github:pr:153",
+      "github:pr:156",
+      "github:pr:157"
+    ],
+    "memory_object_ids": [
+      "b0f431091df6778f548b59286a6bf8fa1c4b75d78a3646368d3071fec33f82b1",
+      "d6493eb5d86f3d2e41825f01e0d30fdff5bb381c30e963b2697cb2a1e534ce03",
+      "a8bf23edd43619f3e02accae7edee75a1dbd0be7a88996d5fe1d05f55d98d79c"
+    ],
+    "next_query_terms": [
+      "153",
+      "156",
+      "157",
+      "binding",
+      "bounded",
+      "canonical",
+      "capability",
+      "carrier",
+      "causal",
+      "constraints",
+      "continued",
+      "continuity"
+    ],
+    "problem_id": "a6a260792d87c0c98fe8d60fc4d3ba7a547bfcfd89c8353380eb0c9c5a023ccc",
+    "promotion_authority": false,
+    "query_id": "f7564e3c60c1ebd12c815a63289b1fe9ac22a0468c140cc720d64dc3592bb261",
+    "reconstruction_id": "cd3c1f7ddb4cf6422daf947302bb27f0d7dea26baa3f17807799df262aa35274",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "global_subject_claim": false,
+  "indexed_source_ids": [
+    "github:issue:154",
+    "github:pr:153",
+    "github:pr:156",
+    "github:pr:157"
+  ],
+  "memory_checkpoint_sha256": "83a83de6417dc5d8983dc95a423c2b0f3f45b6cf327408270d0c9edc34f9f4ab",
+  "memory_record_count": 4,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "1a591ae6bbf2c53bbc9cabfbd6d4911a423b1efa6e3d410b302658a94feaf8fc",
+  "query2_changed_from_query1": true,
+  "query2_id": "f7564e3c60c1ebd12c815a63289b1fe9ac22a0468c140cc720d64dc3592bb261",
+  "query2_memory_provenance": [
+    "network-memory:3c0d0caef868766ef76a58a6c043b6c79de84a1089a60a4cb0f4501fde8cb834"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}
