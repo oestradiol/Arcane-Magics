@@ -1,0 +1,72 @@
+{
+  "cross_face_residual_ids": [
+    153,
+    162,
+    170,
+    172
+  ],
+  "dataset_ref": "autonomy/evidence/lateral/169/episode-1-visible.json",
+  "holdout_label_accessed": false,
+  "holdout_predictions": [
+    {
+      "lateral": false,
+      "pr_number": 157,
+      "relation_basic": true,
+      "relation_expanded": true
+    },
+    {
+      "lateral": true,
+      "pr_number": 158,
+      "relation_basic": true,
+      "relation_expanded": true
+    },
+    {
+      "lateral": true,
+      "pr_number": 187,
+      "relation_basic": true,
+      "relation_expanded": true
+    },
+    {
+      "lateral": true,
+      "pr_number": 166,
+      "relation_basic": true,
+      "relation_expanded": true
+    },
+    {
+      "lateral": false,
+      "pr_number": 155,
+      "relation_basic": true,
+      "relation_expanded": true
+    },
+    {
+      "lateral": true,
+      "pr_number": 167,
+      "relation_basic": true,
+      "relation_expanded": true
+    },
+    {
+      "lateral": false,
+      "pr_number": 152,
+      "relation_basic": true,
+      "relation_expanded": true
+    }
+  ],
+  "internalization_claim": false,
+  "prefreeze_ref": "kernel/development/LATERAL_EPISODE_1_PREFREEZE.json",
+  "preserved_face_sources": {
+    "path_topology": "GitHub PR changed-files endpoint",
+    "relation": "GitHub PR body/reference face"
+  },
+  "promotion_authority": false,
+  "schema": "Venus.LateralProposal.v0.1",
+  "selected_face": "path_topology",
+  "selected_train_gain": 0.25,
+  "status": "PROJECTION_AND_HOLDOUT_PREDICTIONS_FROZEN",
+  "train_scores": {
+    "change_scale": 0.3125,
+    "path_topology": 0.75,
+    "relation_basic": 0.625,
+    "relation_expanded": 0.5
+  },
+  "truth_authority": false
+}
