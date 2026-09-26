@@ -10,6 +10,7 @@ Arcane Magics is authoritative for its native PHEN / THEOPHEN / symbolic / compa
 - Authorship and Spirit/return;
 - ritual / symbolic intervention models;
 - synchronicity as meaningful-coincidence object;
+- astrology as symbolic celestial indexing;
 - comparative religion, philosophy, phenomenology, myth, and occult practice;
 - echo-chamber / anti-scripture analysis;
 - reader transformation and release;
@@ -24,7 +25,8 @@ Arcane does not mint:
 - acausal physical mechanism;
 - Eclipsis physical bridge closure;
 - Minerva engineering capability;
-- supernatural causation from symbolic usefulness.
+- supernatural causation from symbolic usefulness;
+- physical or predictive astrology from symbolic fit alone.
 
 ## Cross-register export law
 
