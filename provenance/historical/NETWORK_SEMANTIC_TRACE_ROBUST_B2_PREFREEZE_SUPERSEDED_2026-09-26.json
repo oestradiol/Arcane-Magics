@@ -1,0 +1,57 @@
+{
+  "schema": "Venus.NetworkSemanticTraceProspectiveComparator.v0.2",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_AFTER_V1_EXPOSURE_BEFORE_FIRST_V2_FRESH_RETURN",
+  "parent_prefreeze_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE.json",
+  "historical_results_not_readjudicated": true,
+  "issue_refs": [
+    41,
+    43,
+    78,
+    169
+  ],
+  "purpose": "Prospectively test returned semantic-trace query usefulness without allowing relevance gains to hide external-center diversity or query-length regressions.",
+  "baseline": {
+    "name": "LEXICAL_NETWORK_RECONSTRUCTION",
+    "implementation": "kernel/development/network_inquiry.py::reconstruct_from_network"
+  },
+  "candidate": {
+    "name": "STATE_OWNED_RELATION_TRACE",
+    "state_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_SEARCH_STATE.json",
+    "executor_ref": "kernel/runtime/relation_trace.py",
+    "freeze_before_candidate_return": true
+  },
+  "matched_conditions": [
+    "same formed problem",
+    "same selected study anchors",
+    "same episode-1 returned encounter set",
+    "same GitHub external adapter",
+    "same max-source bound",
+    "candidate frozen before baseline and candidate episode-2 return",
+    "no candidate access to either episode-2 return"
+  ],
+  "required_nonregression": [
+    "candidate anchor_coverage_count >= baseline anchor_coverage_count",
+    "candidate mean_relevance_matches >= baseline mean_relevance_matches",
+    "candidate external_center_count >= baseline external_center_count",
+    "candidate query_token_count <= baseline query_token_count"
+  ],
+  "strict_gain_requirement": "At least one nonregression dimension must improve strictly, with candidate external_center_count >= 2.",
+  "decision_rule": "PASS_BOUNDED_RELATION_TRACE_QUERY_V2 only under Pareto non-regression across coverage, mean relevance, external-center diversity, and query length plus at least one strict gain; otherwise WITHHOLD_V2_NONREGRESSION_OR_GAIN_NOT_MET.",
+  "burden_scope": {
+    "B1_ABSTRACTION": "unchanged prerequisite: bounded nuisance-invariance + relevant perturbation sensitivity",
+    "B2_CAUSAL_USE": "future-only Pareto returned comparison under matched episode-2 World returns",
+    "B3_INTERNALIZATION": "still closed; requires state semantic ownership, capability-specific scaffold source removal, restart/delayed reuse, fresh disjoint transfer, and independent/evaluator-hidden return"
+  },
+  "noncollapse": [
+    "V1_LEXICOGRAPHIC_PASS!=V2_PARETO_PASS",
+    "RELEVANCE_GAIN!=DIVERSITY_GAIN",
+    "B1_STRUCTURAL_PROBE!=GENERAL_SEMANTICS",
+    "B2_RETURNED_GAIN!=B3_INTERNALIZATION",
+    "LOCAL_EVALUATION!=INDEPENDENT_EVALUATION"
+  ],
+  "independent_evaluation": false,
+  "promotion_authority": false,
+  "truth_authority": false,
+  "claim_fence": "A future v2 pass establishes only bounded Pareto-nonregressing query usefulness against the matched lexical baseline. It does not retroactively alter v1 results or establish general semantics, truth, AGI, consciousness, or Internalizer admission."
+}
