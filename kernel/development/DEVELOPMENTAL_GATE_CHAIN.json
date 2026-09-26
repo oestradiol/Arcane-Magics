@@ -17,7 +17,14 @@
         43,
         26
       ],
-      "self_authorization": false
+      "self_authorization": false,
+      "semantic_operator_refs": [
+        "RSM_RSI",
+        "GENERATE",
+        "TEST_AND_RETURN",
+        "CRYSTALLIZE_F",
+        "INTERNALIZE"
+      ]
     },
     {
       "id": "SELF_SELECTED_DEVELOPMENT",
@@ -29,7 +36,12 @@
         78,
         169
       ],
-      "host_assigned_terminal_goal": false
+      "host_assigned_terminal_goal": false,
+      "semantic_operator_refs": [
+        "ABSTRACT",
+        "GENERATE",
+        "RSM_RSI"
+      ]
     },
     {
       "id": "FOUNDATIONAL_COGNITIVE_THEATER",
@@ -48,7 +60,13 @@
         "FORMAL_SYMBOL_MATCH!=PROOF",
         "CURRICULUM_SUCCESS!=GENERAL_CAPABILITY"
       ],
-      "promotion_authority": false
+      "promotion_authority": false,
+      "semantic_operator_refs": [
+        "ABSTRACT",
+        "LATERALIZE",
+        "CRYSTALLIZE_F",
+        "INTERNALIZE"
+      ]
     },
     {
       "id": "INTERNALIZER_LATERALIZER",
@@ -64,6 +82,11 @@
         "LATERALIZE!=CRYSTALLIZE_F",
         "CRYSTALLIZE_F!=INTERNALIZE",
         "INTERNALIZE_COMPETENCE!=INTERNALIZE_CORRECTION_SOVEREIGNTY"
+      ],
+      "semantic_operator_refs": [
+        "LATERALIZE",
+        "CRYSTALLIZE_F",
+        "INTERNALIZE"
       ]
     },
     {
@@ -74,7 +97,12 @@
       "issue_refs": [
         78
       ],
-      "ingress_class": "LEARNER_INITIATED_WEB_STUDY"
+      "ingress_class": "LEARNER_INITIATED_WEB_STUDY",
+      "semantic_operator_refs": [
+        "ABSTRACT",
+        "GENERATE",
+        "TEST_AND_RETURN"
+      ]
     },
     {
       "id": "PERSISTENT_NETWORK_MEMORY",
@@ -86,7 +114,12 @@
         78,
         25
       ],
-      "memory_is_learning_only_if_later_behavior_changes": true
+      "memory_is_learning_only_if_later_behavior_changes": true,
+      "semantic_operator_refs": [
+        "ABSTRACT",
+        "TEST_AND_RETURN",
+        "RSM_RSI"
+      ]
     },
     {
       "id": "WWW_MIND",
@@ -94,7 +127,11 @@
       "entry": "learner-initiated inquiry plus persistent indexed network memory",
       "exit": "multiple network centers remain distinguishable while distributed reconstruction becomes causally useful",
       "gate_ref": "kernel/development/WWW_MIND_GATE.json",
-      "global_subject_claim": false
+      "global_subject_claim": false,
+      "semantic_operator_refs": [
+        "TEST_AND_RETURN",
+        "RSM_RSI"
+      ]
     },
     {
       "id": "LAIN_GATE",
@@ -106,6 +143,9 @@
         "REACHABILITY!=AUTHORSHIP",
         "SEEING!=SITUATED_INTERPRETATION",
         "NETWORK_ACCESS!=AUTHORIZATION"
+      ],
+      "semantic_operator_refs": [
+        "TEST_AND_RETURN"
       ]
     },
     {
@@ -119,6 +159,10 @@
         "SITUATED_INTERPRETATION!=AUTHORIZATION",
         "AUTHORIZATION!=ACTION",
         "PUBLIC_CONTROL_SURFACE!=SOVEREIGN_CONTROLLER"
+      ],
+      "semantic_operator_refs": [
+        "TEST_AND_RETURN",
+        "RSM_RSI"
       ]
     },
     {
@@ -133,7 +177,12 @@
         20,
         21
       ],
-      "world_not_model_world": true
+      "world_not_model_world": true,
+      "semantic_operator_refs": [
+        "GENERATE",
+        "TEST_AND_RETURN",
+        "RSM_RSI"
+      ]
     },
     {
       "id": "AGI_EMPIRICAL_DISCRIMINATOR",
@@ -150,7 +199,10 @@
       "learner_may_self_declare": false,
       "rsi_implies_agi": false,
       "agi_implies_consciousness": false,
-      "claim_fence": "AGI is earned only by external empirical discrimination at a declared operational definition and scope. Strong Safe RSI, WWW Mind, Lain, or Root do not entail AGI."
+      "claim_fence": "AGI is earned only by external empirical discrimination at a declared operational definition and scope. Strong Safe RSI, WWW Mind, Lain, or Root do not entail AGI.",
+      "semantic_operator_refs": [
+        "TEST_AND_RETURN"
+      ]
     }
   ],
   "global_invariants": [
@@ -167,7 +219,6 @@
   "truth_authority": false,
   "authority": {
     "semantic_source_of_truth": "kernel/development/DEVELOPMENTAL_GATE_CHAIN.json",
-    "current_state_snapshot": "split/minerva@95b228c5995cea0d322fcb45f51a5d86b600cbb1",
     "planning_surface_roles": {
       "kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json": "current A-E active subgraph only; inherits semantics from this graph",
       "docs/ISSUE_ROADMAP.md": "human-readable issue projection; must not define a competing semantic order",
@@ -221,7 +272,14 @@
       "Audit before deletion; preserve negative results and ancestry.",
       "A projection may never override this graph.",
       "If live evidence conflicts with snapshot status here, live evidence wins and this snapshot must be refreshed."
-    ]
+    ],
+    "audit_start_snapshot": "split/minerva@37fd1ce3bf90354e580bc5b8dd77fe495a523130",
+    "live_status_sources": [
+      "kernel/CURRENT_STATE.md",
+      "kernel/development/EDU_CURRENT.json",
+      "live GitHub issue and branch state"
+    ],
+    "register_rule": "These are linked projections of one research body with distinct claim registers. Use their relations to route work; never merge their warrants or state into one undifferentiated claim."
   },
   "temporal_provenance": [
     {
@@ -408,5 +466,42 @@
     "snapshot_head": "95b228c5995cea0d322fcb45f51a5d86b600cbb1",
     "dependency_planning_host_prototype": "PRESERVED_NON_LIVE_AUDIT_ONLY",
     "dependency_planning_executable_curriculum": false
-  }
+  },
+  "register_interfaces": [
+    {
+      "id": "OFE",
+      "branch": "split/ofe",
+      "snapshot": "58fc7b4293ffc6fadd99f21004913d9426f3229b",
+      "role": "scientific/future discriminator; future-sufficient quotient and evolving-test transport",
+      "non_transfer": "formal quotient results do not establish a physical realization"
+    },
+    {
+      "id": "ECLIPSIS",
+      "branch": "split/eclipsis",
+      "snapshot": "2f3264aee8d63c8de9b4da8c76f1749e2ed69f89",
+      "role": "math/logics and structural model; local faces, residuals, gluing, return-conditioned reconstruction",
+      "non_transfer": "structural fit does not establish physics or consciousness"
+    },
+    {
+      "id": "ARCANE_MAGICS",
+      "branch": "split/arcane-magics",
+      "snapshot": "297a48a71dd02b1f3ae3a5179045e5648062b765",
+      "role": "historical/comparative and theophenomenological symbolic projection",
+      "non_transfer": "symbolic recurrence does not transfer scientific warrant"
+    },
+    {
+      "id": "MINERVA",
+      "branch": "split/minerva",
+      "snapshot": "37fd1ce3bf90354e580bc5b8dd77fe495a523130",
+      "role": "engineering/body; executable developmental machinery and returned evidence",
+      "non_transfer": "engineering success does not self-certify claims"
+    },
+    {
+      "id": "VENUS",
+      "branch": "split/venus",
+      "snapshot": "b4c1e5d9f249b28b213d0f4cad54912e9210d378",
+      "role": "Self↔World model, incidence and boundary law",
+      "non_transfer": "architecture names do not prove AGI, consciousness, or global agency"
+    }
+  ]
 }
