@@ -411,3 +411,35 @@ Lain != identity fusion
 Root seeing != authorization != action
 AGI != consciousness
 ```
+
+
+## 2026-09-26 foundational cognitive-theater prefix
+
+Before the next semantic internalization targets are consumed, route through #206:
+
+```text
+recover Canonical didactics
+→ English + Math donor baselines
+→ native Japanese face
+→ native Brazilian-Portuguese face
+→ matched cognitive-theater episodes
+→ held-out native + cross-face reconstruction
+→ mathematical derivation/proof or WITHHOLD
+→ source removal
+→ external evaluation
+→ bounded curriculum receipt or WITHHOLD
+→ resume P2 semantic internalization
+```
+
+Scheduling law still applies: a concrete returned defect may preempt this curriculum. Otherwise #206 is the current foundation for deeper semantic self-consumption because one-language/project-shaped competence is insufficient evidence of general relational ownership.
+
+Theater here means indexed role/perspective/knowledge/sequence/consequence, not performance aesthetics alone.
+
+Permanent fences:
+
+```text
+translation != understanding
+cultural hypothesis != cultural essence
+formal symbol match != proof
+curriculum success != general capability
+```
