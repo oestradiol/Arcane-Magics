@@ -35,8 +35,14 @@ jobs:
           python3 -m unittest tests/test_developmental_gate_chain.py
           python3 -m unittest tests/test_selected_curriculum_router.py
           python3 -m unittest tests/test_vm_internalization_phase_plan.py
-      - name: Minerva tests
-        run: make test
+      - name: Minerva tests A-F
+        run: python3 -m unittest tests/test_[a-f]*.py
+      - name: Minerva tests G-L
+        run: python3 -m unittest tests/test_[g-l]*.py
+      - name: Minerva tests M-R
+        run: python3 -m unittest tests/test_[m-r]*.py
+      - name: Minerva tests S-Z
+        run: python3 -m unittest tests/test_[s-z]*.py
       - name: Reader/navigation audit
         run: make lint
       - name: Custody audits
