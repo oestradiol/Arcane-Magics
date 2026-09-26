@@ -52,19 +52,24 @@ def main()->int:
     p.add_argument("--query",required=True)
     p.add_argument("--encounter",required=True)
     p.add_argument("--state",required=True)
+    p.add_argument("--learning-state",required=False)
     p.add_argument("--output",required=True)
     args=p.parse_args()
 
     query=json.loads(Path(args.query).read_text(encoding="utf-8"))
     encounter=json.loads(Path(args.encounter).read_text(encoding="utf-8"))
     state=json.loads(Path(args.state).read_text(encoding="utf-8"))
+    learning_state=(
+        json.loads(Path(args.learning_state).read_text(encoding="utf-8"))
+        if args.learning_state else None
+    )
     anchors=tuple(str(x) for x in query.get("study_terms",()) if str(x).strip())
     sources=[dict(x) for x in encounter.get("sources",())]
 
-    original=search_relation_trace(state,anchors=anchors,sources=sources)
+    original=search_relation_trace(state,anchors=anchors,learning_state=learning_state,sources=sources)
     original_sig=signature(original)
 
-    reversed_trace=search_relation_trace(state,anchors=anchors,sources=list(reversed(sources)))
+    reversed_trace=search_relation_trace(state,anchors=anchors,learning_state=learning_state,sources=list(reversed(sources)))
     order_invariant=signature(reversed_trace)==original_sig
 
     renamed=[]
@@ -73,11 +78,11 @@ def main()->int:
         row["source_id"]=f"opaque-source-{i:03d}"
         row["irrelevant_probe_metadata"]={"slot":len(sources)-i}
         renamed.append(row)
-    renamed_trace=search_relation_trace(state,anchors=anchors,sources=renamed)
+    renamed_trace=search_relation_trace(state,anchors=anchors,learning_state=learning_state,sources=renamed)
     source_identity_invariant=signature(renamed_trace)==original_sig
 
     scrubbed=scrub_anchor_tokens(sources,original.anchor_terms)
-    scrubbed_trace=search_relation_trace(state,anchors=anchors,sources=scrubbed)
+    scrubbed_trace=search_relation_trace(state,anchors=anchors,learning_state=learning_state,sources=scrubbed)
     relevant_perturbation_changes=signature(scrubbed_trace)!=original_sig
 
     nuisance_pass=order_invariant and source_identity_invariant
