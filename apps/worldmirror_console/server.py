@@ -17,6 +17,7 @@ import json
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
+from apps.worldmirror_console.agent_bridge import AgentBridge, AgentBridgeError, request_from_events
 from kernel.runtime.interaction_store import InteractionStore
 from kernel.runtime.process_bridge import ProcessBridge, ProcessBridgeError, ProcessPolicy
 
@@ -31,10 +32,12 @@ class ConsoleContext:
         data_root: Path,
         static_root: Path,
         process_bridge: ProcessBridge | None,
+        agent_bridge: AgentBridge | None,
     ):
         self.store = InteractionStore(data_root)
         self.static_root = static_root
         self.process_bridge = process_bridge
+        self.agent_bridge = agent_bridge
 
     def close(self) -> None:
         self.store.close()
@@ -91,7 +94,7 @@ class Handler(SimpleHTTPRequestHandler):
                 {
                     "schema": "Venus.WorldMirrorConsoleStatus.v0.1",
                     "process_bridge_enabled": self.ctx.process_bridge is not None,
-                    "agent_backend_bound": False,
+                    "agent_backend_bound": self.ctx.agent_bridge is not None,
                     "fabricated_agent_reply": False,
                     "latest_session": sessions[0] if sessions else None,
                     "claim_fence": "console surface != learner != World truth != authorization",
@@ -142,7 +145,56 @@ class Handler(SimpleHTTPRequestHandler):
                     raw=raw,
                     parent_event_id=parent,
                 )
-                self._json(HTTPStatus.CREATED, {"event": event.to_dict()})
+
+                machine_event = None
+                agent_error = None
+                if (
+                    self.ctx.agent_bridge is not None
+                    and actor == "human"
+                    and kind == "CHAT_MESSAGE"
+                    and event.decoded_text is not None
+                ):
+                    recent = [x.to_dict() for x in self.ctx.store.events(sid)][-32:]
+                    public_recent = [
+                        {
+                            "event_id": x["event_id"],
+                            "actor": x["actor"],
+                            "kind": x["kind"],
+                            "decoded_text": x["decoded_text"],
+                            "raw_sha256": x["raw_sha256"],
+                            "semantic_digest": x["semantic_digest"],
+                        }
+                        for x in recent
+                    ]
+                    try:
+                        reply = self.ctx.agent_bridge.reply(
+                            request_from_events(
+                                session_id=sid,
+                                trigger_event=event.to_dict(),
+                                recent_events=public_recent,
+                            )
+                        )
+                        machine_event = self.ctx.store.append(
+                            session_id=sid,
+                            actor="machine",
+                            kind="CHAT_MESSAGE",
+                            media_type=reply["media_type"],
+                            raw=reply["text"].encode("utf-8"),
+                            parent_event_id=event.event_id,
+                        )
+                    except AgentBridgeError as exc:
+                        agent_error = str(exc)
+
+                self._json(
+                    HTTPStatus.CREATED,
+                    {
+                        "event": event.to_dict(),
+                        "machine_event": (
+                            machine_event.to_dict() if machine_event is not None else None
+                        ),
+                        "agent_error": agent_error,
+                    },
+                )
                 return
 
             if parsed.path == "/api/process":
@@ -194,6 +246,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--process-root")
     p.add_argument("--allow-exec", action="append", default=[])
     p.add_argument("--process-timeout", type=float, default=15.0)
+    p.add_argument(
+        "--agent-command-json",
+        help='JSON argv array for an external stdio agent adapter, e.g. ["python3","adapter.py"]',
+    )
+    p.add_argument("--agent-timeout", type=float, default=60.0)
     return p
 
 
@@ -212,11 +269,22 @@ def main(argv: list[str] | None = None) -> int:
         )
         bridge = ProcessBridge(policy)
 
+    agent = None
+    if args.agent_command_json:
+        try:
+            command = json.loads(args.agent_command_json)
+        except json.JSONDecodeError as exc:
+            raise SystemExit("--agent-command-json must be valid JSON") from exc
+        if not isinstance(command, list) or not command or not all(isinstance(x, str) for x in command):
+            raise SystemExit("--agent-command-json must be a non-empty JSON string array")
+        agent = AgentBridge.build(command, timeout_seconds=args.agent_timeout)
+
     static_root = Path(__file__).resolve().parent / "static"
     ctx = ConsoleContext(
         data_root=Path(args.data_root),
         static_root=static_root,
         process_bridge=bridge,
+        agent_bridge=agent,
     )
     server = ThreadingHTTPServer((args.host, args.port), Handler)
     server.ctx = ctx  # type: ignore[attr-defined]
@@ -225,6 +293,7 @@ def main(argv: list[str] | None = None) -> int:
         print("Process bridge: disabled")
     else:
         print("Process bridge: enabled; this is not an OS sandbox")
+    print("Agent adapter: " + ("bound" if agent is not None else "unbound"))
     try:
         server.serve_forever()
     except KeyboardInterrupt:
