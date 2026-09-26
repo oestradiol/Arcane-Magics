@@ -34,6 +34,14 @@ class WWWMindProspectivePrefreezeTests(unittest.TestCase):
         self.assertIn("relevance_filter_applied",src)
         self.assertIn("relevance_matches",src)
 
+    def test_worker_preserves_relevance_withhold_receipt(self):
+        workflow=(ROOT/".github/workflows/minerva-autonomous-worker.yml").read_text(encoding="utf-8")
+        self.assertIn("Record episode-1 relevance WITHHOLD",workflow)
+        self.assertIn("Record episode-2 relevance WITHHOLD",workflow)
+        self.assertIn("NETWORK_RELEVANCE_WITHHOLD.json",workflow)
+        self.assertIn("WITHHOLD_NO_RELEVANT_EXTERNAL_SOURCES",workflow)
+        self.assertIn("steps.network2.outputs.has_sources == 'true'",workflow)
+
     def test_structural_evaluator_cannot_promote(self):
         src=(ROOT/"scripts/evaluate_www_mind_episode.py").read_text(encoding="utf-8")
         self.assertIn('"promotion_authority":False',src)
