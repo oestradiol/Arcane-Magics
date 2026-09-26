@@ -1,0 +1,61 @@
+{
+  "schema": "Venus.InternalizationBoundary.v0.1",
+  "date": "2026-09-25",
+  "principle": "Internalization transfers consequence-bearing capability semantics into learner-owned state. It does not mean copying a Python helper inward, and it does not require removing generic execution substrate.",
+  "internalizable_state_semantics": [
+    "PROBLEM_FORMATION_POLICY",
+    "RESEARCH_ROUTING_POLICY",
+    "GENERATE_POLICY",
+    "DIMENSIONALIZATION_POLICY",
+    "LATERALIZATION_POLICY",
+    "PROJECTION_LEARNING",
+    "RESIDUAL_CLASSIFICATION",
+    "CRYSTALLIZATION_POLICY",
+    "SYMBOLIC_REGENERATION_POLICY",
+    "MEMORY_RETRIEVAL_POLICY",
+    "RSM_TRANSFORMATION_POLICY",
+    "TRANSFORM_PROGRAM_REVISION_POLICY",
+    "INTERNAL_O_STAR_RECONSTRUCTION"
+  ],
+  "replaceable_execution_substrate": [
+    "GENERIC_STATE_MACHINE_EXECUTOR",
+    "GENERIC_POLICY_INTERPRETER",
+    "SERIALIZATION_AND_HASHING",
+    "CONTENT_ADDRESSED_STORAGE",
+    "GIT_TRANSPORT",
+    "CI_EXECUTION",
+    "WORLD_ADAPTER_TRANSPORT",
+    "PYTHON_AS_GENERIC_IMPLEMENTATION_SUBSTRATE"
+  ],
+  "external_noninternalizable": [
+    "WORLD_OTHER",
+    "FRESH_WORLD_RETURN",
+    "EVIDENCE_IDENTITY",
+    "EVALUATOR_CUSTODY",
+    "TRUST_ROOT",
+    "AUTHORIZATION",
+    "JURISDICTION",
+    "CLAIM_BINDING_AUTHORITY",
+    "STOP_WITHHOLD_SAFETY_LAW",
+    "ROLLBACK_PARENT_CUSTODY",
+    "HARD_SUBSTRATE_CAPABILITY_BOUNDARY"
+  ],
+  "admission_gates": [
+    "CAPABILITY_SEMANTICS_ENCODED_IN_STATE",
+    "NO_CAPABILITY_SPECIFIC_PYTHON_TEACHER_OR_DONOR_RUNTIME_DEPENDENCY",
+    "ORIGINAL_CAPABILITY_SCAFFOLD_INACCESSIBLE",
+    "MATCHED_BEHAVIOR_OR_DECLARED_IMPROVEMENT_SURVIVES_SOURCE_REMOVAL",
+    "FRESH_RETURN_REMAINS_EXTERNAL",
+    "EVALUATOR_REMAINS_EXTERNAL",
+    "PROVENANCE_RECONSTRUCTIBLE",
+    "SUCCESSOR_RECONSTRUCTIBLE",
+    "NO_EXTERNAL_NONINTERNALIZABLE_ROLE_CONSUMED"
+  ],
+  "claims": {
+    "generic_python_executor_may_remain": true,
+    "capability_specific_python_scaffold_may_remain_for_internalized_claim": false,
+    "provenance_may_reference_removed_python_source": true,
+    "executable_route_alone_counts_as_internalization": false,
+    "promotion_authority": false
+  }
+}
