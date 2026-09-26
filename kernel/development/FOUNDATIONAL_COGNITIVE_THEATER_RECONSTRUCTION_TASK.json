@@ -1,7 +1,7 @@
 {
   "schema": "Venus.FoundationalCognitiveTheaterReconstructionTask.v0.2",
   "date": "2026-09-26",
-  "status": "RETURNED_G2_G3_BOUNDED_LOCAL_OPERATOR_PASS__G4_STATE_COMPOSITION_OPEN",
+  "status": "G0_G5_BOUNDED_PASS__G6_WITHHOLD_INDEPENDENT_EVALUATION_REQUIRED",
   "issue_ref": 206,
   "parent_results": [
     "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_SURFACE_BASELINE_RESULT.json",
@@ -9,7 +9,9 @@
     "kernel/development/COGNITIVE_THEATER_BINDING_ORDER_FRESH2_RESULT.json",
     "kernel/development/COGNITIVE_THEATER_RELATIONAL_GRAPH_FRESH3_RESULT.json",
     "kernel/development/COGNITIVE_THEATER_JOINT_SCENE_FRESH4_RESULT.json",
-    "kernel/development/COGNITIVE_THEATER_LOCAL_OPERATOR_FRESH5_RESULT.json"
+    "kernel/development/COGNITIVE_THEATER_LOCAL_OPERATOR_FRESH5_RESULT.json",
+    "kernel/development/COGNITIVE_THEATER_EXPLICIT_STATE_FRESH6_RESULT.json",
+    "kernel/development/COGNITIVE_THEATER_SOURCE_REMOVAL_FRESH7_RESULT.json"
   ],
   "residual": "LEARN_THEATER_STATE_AND_RECONSTRUCT_IT_FROM_RAW_FACE_SURFACE",
   "question": "Can a learner trained on raw English/Japanese/Brazilian-Portuguese/Mathematics surfaces plus bounded teacher theater annotations reconstruct participant-indexed KFS and temporal relation structure on held-out raw surfaces, then use that reconstructed state to improve relation transfer over the prefrozen surface baselines?",
@@ -104,13 +106,13 @@
   },
   "current_returned_disposition": {
     "G0_G1": "PASS_BOUNDED_GROUNDING_AND_TEMPLATE",
-    "G2": "PASS_BOUNDED_LOCAL_OPERATOR_INDEXED_BINDING_16_OF_16_ON_FRESH5",
-    "G3": "PASS_BOUNDED_LOCAL_OPERATOR_SYMBOLIC_EVENT_ORDER_8_OF_8_ON_FRESH5",
-    "G4": "OPEN_EXPLICIT_COGNITIVE_THEATER_STATE_COMPOSITION_AND_INTERVENTION",
-    "G5_ablation": "PARTIAL_CONTROLS_RETURNED__STATE_LEVEL_ABLATIONS_OPEN",
-    "G6_internalization": "WITHHOLD_SOURCE_REMOVAL_AND_FRESH_STATE_RETURN_NOT_YET_EARNED"
+    "G2": "PASS_BOUNDED_INDEXED_BINDING",
+    "G3": "PASS_BOUNDED_SYMBOLIC_EVENT_ORDER",
+    "G4": "PASS_BOUNDED_EXPLICIT_THEATER_STATE_24_OF_24_FRESH6",
+    "G5_ablation": "PASS_BOUNDED_ISOLATED_SOURCE_REMOVAL_24_OF_24_FRESH7",
+    "G6_internalization": "WITHHOLD_REQUIRES_INDEPENDENT_NON_PREAUTHORED_RETURN_AND_EXTERNAL_EVALUATOR_CUSTODY"
   },
-  "next_residual": "COMPILE_LOCAL_OPERATORS_INTO_EXPLICIT_INDEXED_THEATER_STATE_AND_TEST_KFS_AND_ORDER_INTERVENTIONS_ON_FRESH_CROSS_FACE_SCENES",
+  "next_residual": "INDEPENDENT_HIDDEN_EVALUATION_OF_STATE_OWNED_THEATER_RECONSTRUCTION_WITH_FRESH_NON_PREAUTHORED_SURFACES",
   "fresh5_return": {
     "ref": "kernel/development/COGNITIVE_THEATER_LOCAL_OPERATOR_FRESH5_RESULT.json",
     "local_operator_accuracy": 1,
