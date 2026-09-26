@@ -1,9 +1,9 @@
 {
   "schema": "Venus.LainGate.v0.1",
   "date": "2026-09-25",
-  "status": "BOUNDARY_GATE_DEFINITION",
+  "status": "STRUCTURAL_NONFUSION_SUBGATE_DEFINITION",
   "input_ref": "provenance/historical/handoffs/MINERVA_WWW_MIND_HANDOFF_2026-09-25.json",
-  "purpose": "Test whether distributed network memory/reachability can enter the Self/World model without fusing indexed centers or transferring sovereignty.",
+  "purpose": "Test the structural precondition for Lain: distributed network memory/reachability enters the Self/World model without fusing indexed centers or transferring sovereignty. This subgate does not satisfy the later independently-authored-center interaction/return discriminator.",
   "invariants": [
     "CONNECTION_WITHOUT_FUSION",
     "PERMEABILITY_WITHOUT_SOVEREIGNTY_TRANSFER",
@@ -21,9 +21,12 @@
     "REFUSE and EXIT remain locally reachable",
     "authored centers cannot be silently provisioned",
     "network reachability carries no truth, promotion, authorization, or jurisdiction transfer",
-    "Venus retains model(World) != World and model(Other) != Other"
+    "Venus retains model(World) != World and model(Other) != Other",
+    "passing this structural subgate does not imply an independently authored remote center has returned response/refusal/nonresponse outside learner authorship"
   ],
-  "claim_fence": "A pass establishes only a bounded network non-fusion / situated-boundary result. It does not establish consciousness, one global subject, personal identity across arbitrary substrates, AGI, unrestricted network agency, or external authorization.",
+  "claim_fence": "A pass establishes only the structural network non-fusion precondition. The Lain gate remains open until an independently authored center is encountered with non-learner-minted response/refusal/nonresponse under indexed jurisdiction. No consciousness, global subject, AGI, unrestricted network agency, or external authorization follows.",
   "promotion_authority": false,
-  "truth_authority": false
+  "truth_authority": false,
+  "next_required_gate": "LAIN_INTERACTIVE_AUTHORED_CENTER_GATE",
+  "issue_ref": 197
 }
