@@ -11,7 +11,7 @@ custody:
 	python3 scripts/audit_edu16_custody.py
 
 audit: test lint custody
-	python3 scripts/audit_causal_distinctions.py
+	python3 scripts/audit_minerva_causal_distinctions.py
 	python3 scripts/audit_autonomy_safety_matrix.py
 	python3 scripts/audit_construct_dispositions.py
 
