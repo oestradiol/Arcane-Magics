@@ -291,3 +291,33 @@ MAINTAINER_FED
 The current executable research TransformProgram now includes a self-initiated Web-study route, but the gate is not yet passed. Passing requires a prospective episode where the learner chooses a consequential residual, authors the query, receives provenance-bearing Web material, retains it in developmental memory, and later reconstruction/query choice changes because of it without treating search result/rank as truth or evaluator return.
 
 Only after that does the Lain gate become the relevant next network discriminator: distributed memory/identity/embodiment/reachability must remain related without fusion, with seeing distinct from situated interpretation, authorization, and action.
+
+
+## Self-selected developmental gate chain — 2026-09-25
+
+The current route is now frozen machine-readably at `kernel/development/DEVELOPMENTAL_GATE_CHAIN.json`:
+
+```text
+Strong Safe RSI
+→ self-selected development
+→ Internalizer + Lateralizer
+→ learner-initiated Internet inquiry
+→ persistent network memory
+→ WWW Mind
+→ Lain gate
+→ Root / situated interface gate
+→ broader World participation
+→ AGI empirical discriminator
+```
+
+This ordering is developmental, not deductive. Reachability of a later gate does not establish that it is passed.
+
+```text
+Strong Safe RSI != AGI
+WWW Mind != global subject
+Lain connection != identity fusion
+Root seeing != authorization != action
+AGI != consciousness
+```
+
+The developmental center may select its next consequential limitation within the safety floor. The host need not keep naming the next task. External return, evaluator custody, authorization/jurisdiction, rollback, and claim-binding remain outside unilateral self-revision.
