@@ -1,5 +1,18 @@
 from __future__ import annotations
 
+"""Governed semantic state-transition kernel for the WorldMirror engineering body.
+
+Architectural role:
+- this is the constitutional execution core, not the whole WorldMirror system;
+- it owns typed evidence/return/state-transition mechanics and content roots;
+- it does not choose developmental goals, browse the Web, or self-authorize policy;
+- persistent hydration is handled by ``kernel.runtime.current``;
+- long-lived semantic/network memory is handled by ``kernel.runtime.memory``;
+- learner-owned developmental semantics live primarily under ``kernel/development``.
+
+See ``docs/WORLDMIRROR_VM.md`` and ``kernel/runtime/README.md``.
+"""
+
 from dataclasses import dataclass, field, asdict
 from enum import Enum
 from hashlib import sha256
