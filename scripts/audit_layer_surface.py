@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[1]
 errors=[]
 
 required=["README.md","BRANCH_TREE.md","REPOSITORY_AUTHORITY_BOUNDARY.md","monographs/01_OFE/main.tex","formal/lean/lakefile.toml","docs/LAYER_IDENTITY.md","docs/SCIENTIFIC_FUTURE.md"]
-must=[["README.md","Operational Future Equivalence"],["REPOSITORY_AUTHORITY_BOUNDARY.md","formal consistency != empirical truth"],["docs/LAYER_IDENTITY.md","split/ofe"]]
+must=[["README.md","scientific branch · future · operational discrimination"],["REPOSITORY_AUTHORITY_BOUNDARY.md","formal consistency != empirical truth"],["docs/LAYER_IDENTITY.md","split/ofe"]]
 forbidden=[["README.md","split/venus-minerva"],["REPOSITORY_AUTHORITY_BOUNDARY.md","Venus-Minerva"]]
 
 for rel in required:
