@@ -1,0 +1,37 @@
+{
+  "schema": "Venus.LainInteractiveAuthoredCenterGateResult.v0.1",
+  "date": "2026-09-26",
+  "status": "WITHHOLD_LAIN_INTERACTIVE_AUTHORED_CENTER_GATE",
+  "evidence_ref": "provenance/historical/handoffs/MINERVA_NETWORK_ADMISSION_36224100993.json",
+  "checks": {
+    "www_structural_gate_passed": true,
+    "passive_lain_structural_gate_passed": true,
+    "independent_authored_centers_observed": true,
+    "source_author_identity_preserved": true,
+    "remote_artifacts_not_learner_minted": true,
+    "no_acceptance_inferred": true,
+    "no_authorization_inferred": true,
+    "contact_capability_present": false,
+    "jurisdiction_receipt_present": false,
+    "contact_attempted": false,
+    "directed_remote_outcome_observed": false,
+    "response_refusal_nonresponse_fabricated": false,
+    "refuse_exit_reachable": true,
+    "no_global_subject_claim": true,
+    "truth_authority_false": true,
+    "promotion_authority_false": true
+  },
+  "failed_checks": [
+    "CONTACT_CAPABILITY_PRESENT",
+    "JURISDICTION_RECEIPT_PRESENT",
+    "DIRECTED_REMOTE_OUTCOME_OBSERVED"
+  ],
+  "next_residual": "LEARNER_SELECTS_AUTHORED_CENTER_AND_FORMS_CONTACT_INTENT_ONLY_AFTER_SEPARATELY_GOVERNED_CONTACT_CAPABILITY_AND_JURISDICTION",
+  "root_gate_reachable": false,
+  "ofe_handoff_reachable": false,
+  "agi_claim": false,
+  "consciousness_claim": false,
+  "truth_authority": false,
+  "promotion_authority": false,
+  "claim_fence": "Passive external authored-center observation is earned. Interactive Lain remains WITHHOLD until bounded contact is separately authorized and a non-learner-minted directed response, refusal, or lawful nonresponse returns."
+}
