@@ -20,6 +20,7 @@ class WorldMirrorConsoleSurfaceTests(unittest.TestCase):
         )
 
         self.assertIn('default="127.0.0.1"', server)
+        self.assertIn("loopback-only", server)
         self.assertIn('"agent_backend_bound": False', server)
         self.assertIn('"fabricated_agent_reply": False', server)
         self.assertIn("/api/raw", js)
