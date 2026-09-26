@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.AutonomousLearningState.v0.4",
+  "schema": "Venus.AutonomousLearningState.v0.5",
   "seen_return_ids": [
     "return:a44091dbba6e54ebc12cf8fa8952604bd5e0070758a365084cb47a253b28ace0:method:0:COMPARATOR_AUDIT"
   ],
@@ -28,5 +28,17 @@
   "promotion_authority": false,
   "merge_authority": false,
   "truth_authority": false,
-  "safety_floor_authority": false
+  "safety_floor_authority": false,
+  "trace_config_success": {
+    "MULTI_ANCHOR": 0,
+    "CROSS_SOURCE_BRIDGE": 0,
+    "CROSS_SOURCE_MULTI_ANCHOR": 0,
+    "TITLE_ANCHORED": 0
+  },
+  "trace_config_failure": {
+    "MULTI_ANCHOR": 0,
+    "CROSS_SOURCE_BRIDGE": 0,
+    "CROSS_SOURCE_MULTI_ANCHOR": 0,
+    "TITLE_ANCHORED": 0
+  }
 }
