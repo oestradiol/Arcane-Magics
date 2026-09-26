@@ -40,5 +40,20 @@ class NetworkSemanticTracePrefreezeTests(unittest.TestCase):
         self.assertLess(candidate_at, compare_at)
         self.assertIn("NETWORK_SEMANTIC_TRACE_RESULT.json", text)
 
+    def test_prefreeze_separates_three_burdens(self):
+        p=json.loads((ROOT/"kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE.json").read_text(encoding="utf-8"))
+        self.assertIn("B1_ABSTRACTION",p["burden_scope"])
+        self.assertIn("B2_CAUSAL_USE",p["burden_scope"])
+        self.assertIn("B3_INTERNALIZATION",p["burden_scope"])
+        self.assertIn("B2_RETURNED_GAIN!=B3_INTERNALIZATION",p["noncollapse"])
+
+    def test_abstraction_probe_is_nuisance_invariant_and_relevant_sensitive(self):
+        text=(ROOT/"scripts/evaluate_network_semantic_trace_abstraction.py").read_text(encoding="utf-8")
+        self.assertIn("source_order_invariant",text)
+        self.assertIn("opaque_source_identity_invariant",text)
+        self.assertIn("relevant_anchor_perturbation_changes_trace",text)
+        self.assertIn("general_semantics_claim",text)
+        self.assertIn("internalization_claim",text)
+
 if __name__=="__main__":
     unittest.main()
