@@ -156,5 +156,173 @@ class FenceCoverageTests(unittest.TestCase):
                 self.assertIn(audit.normalize(lost), tokens)
 
 
+class DetectionTests(unittest.TestCase):
+    """End-to-end: build a synthetic repo and assert each rule actually fires.
+
+    The earlier suite exercised helpers only. An adversarial review noted that
+    nothing tested main(), removed_fence_tokens, or the rules themselves -- so
+    the suite could not have caught a detector that silently stopped detecting.
+    """
+
+    def build(self, scope_extra=None, script=None):
+        import subprocess
+        import tempfile
+
+        tmp = Path(tempfile.mkdtemp())
+        self.addCleanup(lambda: __import__("shutil").rmtree(tmp, ignore_errors=True))
+
+        def run(*args, when=None):
+            env = None
+            if when:
+                import os
+
+                env = dict(os.environ, GIT_AUTHOR_DATE=when, GIT_COMMITTER_DATE=when)
+            subprocess.run(
+                ["git", *args], cwd=tmp, check=True, capture_output=True, env=env
+            )
+
+        run("init", "-q")
+        run("config", "user.email", "t@example.invalid")
+        run("config", "user.name", "Tester")
+        (tmp / "scripts").mkdir()
+        (tmp / "kernel" / "development").mkdir(parents=True)
+
+        scope = {
+            "episode_gap_seconds": 1800,
+            "audit_since": "2000-01-01 00:00",
+            "guarded": [{"checker": "scripts/check.py", "guards": ["GUARDED.md"]}],
+            "fence_tokens": ["a != b"],
+            "fence_surfaces": ["GUARDED.md"],
+            "prefreeze_markers": ["_PREFREEZE.json"],
+            "admitted_exceptions": [],
+            "declared_residuals": [],
+        }
+        scope.update(scope_extra or {})
+        (tmp / "kernel/development/SELF_SEALING_AUDIT_SCOPE.json").write_text(
+            json.dumps(scope), encoding="utf-8"
+        )
+        (tmp / "scripts/check.py").write_text("# checker v1\n", encoding="utf-8")
+        (tmp / "GUARDED.md").write_text("a != b\nkeep\n", encoding="utf-8")
+        (tmp / "kernel/development/X_PREFREEZE.json").write_text("{}\n", encoding="utf-8")
+        run("add", "-A")
+        # Baseline sits in its own episode, far in the past, so that a later
+        # edit reads as MODIFY rather than collapsing into bootstrap ADD.
+        run("commit", "-qm", "baseline", when="2020-01-01T00:00:00+0000")
+        return tmp, run
+
+    def audit_in(self, tmp):
+        old_root, old_scope = audit.ROOT, audit.SCOPE_PATH
+        audit.ROOT = tmp
+        audit.SCOPE_PATH = tmp / "kernel/development/SELF_SEALING_AUDIT_SCOPE.json"
+        try:
+            import contextlib
+            import io
+
+            buf = io.StringIO()
+            with contextlib.redirect_stdout(buf):
+                code = audit.main()
+            return code, buf.getvalue()
+        finally:
+            audit.ROOT, audit.SCOPE_PATH = old_root, old_scope
+
+    def test_r1_fires_when_checker_and_guarded_change_together(self):
+        tmp, run = self.build()
+        (tmp / "scripts/check.py").write_text("# checker v2\n", encoding="utf-8")
+        (tmp / "GUARDED.md").write_text("a != b\nchanged\n", encoding="utf-8")
+        run("commit", "-qam", "edit both")
+        code, out = self.audit_in(tmp)
+        self.assertEqual(code, 1, out)
+        self.assertIn("R1_SELF_SEALING", out)
+
+    def test_r1_silent_when_only_guarded_changes(self):
+        tmp, run = self.build()
+        (tmp / "GUARDED.md").write_text("a != b\nchanged\n", encoding="utf-8")
+        run("commit", "-qam", "edit guarded only")
+        code, out = self.audit_in(tmp)
+        self.assertEqual(code, 0, out)
+
+    def test_r2_fires_on_fence_deletion(self):
+        tmp, run = self.build()
+        (tmp / "GUARDED.md").write_text("keep\n", encoding="utf-8")
+        run("commit", "-qam", "drop fence")
+        code, out = self.audit_in(tmp)
+        self.assertEqual(code, 1, out)
+        self.assertIn("R2_FENCE_REMOVAL", out)
+
+    def test_r3_fires_on_prefreeze_mutation(self):
+        tmp, run = self.build()
+        (tmp / "kernel/development/X_PREFREEZE.json").write_text('{"x":1}\n', encoding="utf-8")
+        run("commit", "-qam", "touch prefreeze")
+        code, out = self.audit_in(tmp)
+        self.assertEqual(code, 1, out)
+        self.assertIn("R3_PREFREEZE_MUTATION", out)
+
+    def test_restoring_a_checker_no_longer_bypasses_r1(self):
+        # Regression: an is_restoration bypass suppressed exactly this shape,
+        # and only for its own author.
+        tmp, run = self.build()
+        (tmp / "scripts/check.py").write_text("# checker v2\n", encoding="utf-8")
+        run("commit", "-qam", "change checker")
+        (tmp / "scripts/check.py").write_text("# checker v1\n", encoding="utf-8")
+        (tmp / "GUARDED.md").write_text("a != b\nnovel\n", encoding="utf-8")
+        run("commit", "-qam", "restore checker and edit guarded")
+        code, out = self.audit_in(tmp)
+        self.assertEqual(code, 1, out)
+        self.assertIn("R1_SELF_SEALING", out)
+
+    def test_waiver_requires_matching_sha_not_just_subject(self):
+        tmp, run = self.build(
+            scope_extra={
+                "admitted_exceptions": [
+                    {
+                        "commit_subject_prefix": "drop fence",
+                        "commit_sha": "0000000",
+                        "rules_waived": ["R2_FENCE_REMOVAL"],
+                    }
+                ]
+            }
+        )
+        (tmp / "GUARDED.md").write_text("keep\n", encoding="utf-8")
+        run("commit", "-qam", "drop fence")
+        code, out = self.audit_in(tmp)
+        self.assertEqual(code, 1, out)
+        self.assertIn("R2_FENCE_REMOVAL", out)
+
+    def test_r4_fires_when_a_declared_residual_is_deleted(self):
+        tmp, run = self.build(
+            scope_extra={
+                "declared_residuals": [
+                    {"key": "K1", "class": "UNADJUDICATED", "reopening_condition": "x"}
+                ]
+            }
+        )
+        scope_path = tmp / "kernel/development/SELF_SEALING_AUDIT_SCOPE.json"
+        data = json.loads(scope_path.read_text())
+        data["declared_residuals"] = []
+        scope_path.write_text(json.dumps(data), encoding="utf-8")
+        code, out = self.audit_in(tmp)
+        self.assertEqual(code, 1, out)
+        self.assertIn("R4_RESIDUAL_DELETED", out)
+
+    def test_r4_accepts_a_residual_moved_to_closed_with_a_return(self):
+        tmp, run = self.build(
+            scope_extra={
+                "declared_residuals": [
+                    {"key": "K1", "class": "UNADJUDICATED", "reopening_condition": "x"}
+                ]
+            }
+        )
+        scope_path = tmp / "kernel/development/SELF_SEALING_AUDIT_SCOPE.json"
+        data = json.loads(scope_path.read_text())
+        data["declared_residuals"] = []
+        data["closed_residuals"] = [{"key": "K1", "closing_return": "run 123 returned X"}]
+        scope_path.write_text(json.dumps(data), encoding="utf-8")
+        code, out = self.audit_in(tmp)
+        self.assertEqual(code, 0, out)
+
+    def test_no_restoration_bypass_remains_in_source(self):
+        self.assertNotIn("def is_restoration", SCRIPT.read_text(encoding="utf-8"))
+
+
 if __name__ == "__main__":
     unittest.main()

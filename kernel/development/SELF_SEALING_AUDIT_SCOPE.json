@@ -36,6 +36,12 @@
       "statement": "An episode must not modify a prefrozen artifact.",
       "rationale": "A prefreeze exists to make post-hoc metric selection unavailable. Editing it after returns are visible is adversarial Goodhart.",
       "fence": "INTENDED -> WRITTEN -> VERIFIED -> ADMITTED"
+    },
+    {
+      "id": "R4_RESIDUAL_DELETED",
+      "statement": "A declared residual may never be removed from this scope file without a closing return recorded in closed_residuals.",
+      "rationale": "This declaration is the auditor's control plane. Editing it alone changes what the auditor reports without touching the auditor, and R1 keys on the checker being modified, so scope-only edits fired nothing. An adversarial review identified that as an unguarded path by which the stated law -- residuals are never gauge -- could be broken by the one edit that would break it. R4 compares the working declaration against its own last committed state.",
+      "fence": "silent corruption == illegitimate compression of a residual"
     }
   ],
   "guarded": [
@@ -139,12 +145,20 @@
       "rules_waived": [
         "R2_FENCE_REMOVAL"
       ],
-      "reason": "Restores files to last-good 37fd1ce. The fence tokens removed by this commit were themselves introduced by the contaminating episode being reverted; the branch's original fences are restored by the same commit, and the removed tokens remain present in kernel/development/DEVELOPMENTAL_GATE_CHAIN.json global_invariants. Verified by: git diff 37fd1ce <commit> is empty.",
-      "independent_check": "git diff 37fd1ce 6b84d1c -- . must be empty"
+      "reason": "Restores files to last-good 37fd1ce. The fence tokens removed by this commit were themselves introduced by the contaminating episode being reverted; the branch's original fences are restored by the same commit, and the removed tokens remain present in kernel/development/DEVELOPMENTAL_GATE_CHAIN.json global_invariants. Verified by: git diff 37fd1ce <commit> is empty. Pinned to an exact SHA after an adversarial review noted that matching on commit_subject_prefix alone is forgeable: any future commit reusing this subject would inherit the waiver.",
+      "independent_check": "git diff 37fd1ce 6b84d1c -- . must be empty",
+      "commit_sha": "6b84d1c"
     }
   ],
   "declared_residuals_note": "These reproduce against existing history and are NOT adjudicated. They are recorded because a residual is by construction a distinction that still separates admitted futures, and therefore may never be compressed away. Silent disappearance of any entry below fails the audit closed. Adjudication belongs to the branch author, not to the auditor and not to any assistant.",
+  "closed_residuals": [],
   "declared_residuals": [
+    {
+      "key": "R1_SELF_SEALING|scripts/lint_github_markdown.py|6b84d1cf",
+      "class": "UNADJUDICATED",
+      "note": "The repair episode itself. It restored lint_github_markdown.py to its pre-contamination blob AND made a novel edit to docs/START_HERE.md, a surface that checker guards, in the same episode. An earlier version of this auditor suppressed this finding via an is_restoration bypass. An adversarial review established that across 501 commits that bypass suppressed exactly one finding -- this one -- and that it was unsound twice over: it inspected only the checker while ignoring novel edits to guarded artifacts, and it treated corrupt ancestor blobs as valid restorations, so re-applying a known corruption verbatim would have passed. The bypass is removed and this finding stands.",
+      "reopening_condition": "The partial return already on record: the restored checker was authored by neither the repair author nor the contaminating episode, and it validated the START_HERE edit when make audit passed. That is weaker than an independent return. Close it properly by having a party who did not author the repair confirm the START_HERE dedup against the restored navigation contract."
+    },
     {
       "key": "R2_FENCE_REMOVAL|AGENTS.md|3d9dc269",
       "class": "CONTAMINATION_ATTESTED_AND_REVERTED",
@@ -205,5 +219,11 @@
     "SELF_SEALING_DETECTED != CHANGE_IS_WRONG",
     "AUDIT_PASS != CHANGE_IS_CORRECT",
     "structural_reachability != semantic_correctness"
+  ],
+  "known_limitations": [
+    "R1 precision is poor for long sessions. Episodes group by author and a 1800s gap, so the largest episode on this branch is 308 commits and R1 can fire on a checker and a guarded file touched hours apart for unrelated reasons. R1 is a prompt to look, not a verdict.",
+    "R1 and R3 key on status M, so deleting a checker or deleting a prefrozen artifact fires nothing.",
+    "R2 follows the post-rename path only, so renaming a fence surface evades it.",
+    "audit_since is a hard floor at 2026-09-26 00:00 and hides all earlier history. It never advances, so it is forward-safe, but history before that date has never been scanned by this tool."
   ]
 }
