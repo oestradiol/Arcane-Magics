@@ -7,11 +7,11 @@ This ledger distinguishes historical claim-bearing authority from the live execu
 ## Historical / reconstructible anchors
 
 - R226 remains a required ancestry anchor in the developmental lineage (`R226 → S/SM → CTL-K1 → WM1R1 → U* → RB1 → IG1…IG10 → EDU*`).
-- IG10 remains the exact Git-reconstructible VMK2 runtime checkpoint.
+- IG10 remains the exact Git-reconstructible runtime checkpoint for the VMK2 carrier.
 - EDU16 remains the current historical positive developmental authority at its admitted scope.
 - EDU16-RC1 remains the deterministic reconstructed claim-bearing carrier; it is not a recovered 1703-event historical journal.
-- EDU17 remains a preserved negative.
-- EDU17R1 / its repair artifacts remain bounded historical/prospective evidence, not today's whole developmental state.
+- EDU17 remains a preserved negative with disposition `INVALID_FOR_PROMOTION`.
+- EDU17R1 retains the measured separator `MENTION != INCIDENCE`; its repair artifacts remain bounded historical/prospective evidence, not today's whole developmental state.
 
 These anchors matter for provenance and rollback. They do not imply that the live Minerva branch is still only at EDU16 functionality.
 
