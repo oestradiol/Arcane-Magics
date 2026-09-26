@@ -44,6 +44,13 @@ class NetworkSemanticTracePrefreezeTests(unittest.TestCase):
         self.assertIn("NETWORK_SEMANTIC_TRACE_ABSTRACTION_PROBE.json", text)
         self.assertIn("NETWORK_SEMANTIC_TRACE_RESULT.json", text)
 
+    def test_worker_supplies_current_learning_state_to_trace_freeze_and_b1(self):
+        text=(ROOT/".github/workflows/minerva-autonomous-worker.yml").read_text(encoding="utf-8")
+        freeze=text.split("Freeze state-owned relation-trace candidate",1)[1].split("Probe semantic-trace B1 abstraction",1)[0]
+        b1=text.split("Probe semantic-trace B1 abstraction",1)[1].split("Execute memory-derived network query 2",1)[0]
+        self.assertIn("--learning-state /tmp/minerva/LEARNING_STATE.json",freeze)
+        self.assertIn("--learning-state /tmp/minerva/LEARNING_STATE.json",b1)
+
     def test_prefreeze_separates_three_burdens(self):
         p=json.loads((ROOT/"kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE.json").read_text(encoding="utf-8"))
         self.assertIn("B1_ABSTRACTION",p["burden_scope"])
