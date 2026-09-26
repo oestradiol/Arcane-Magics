@@ -1,7 +1,7 @@
 name: Minerva global developmental worker
 
 on:
-  # one-shot external maintainer trigger; retry after active/history World-surface repair
+  # one-shot external maintainer trigger; current trigger exposes returned Lain WITHHOLD carrier without selecting it
   workflow_dispatch:
   push:
     branches:
