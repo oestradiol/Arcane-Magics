@@ -171,6 +171,7 @@ jobs:
             --query /tmp/minerva/NETWORK_QUERY.json \
             --encounter /tmp/minerva/NETWORK_ENCOUNTER_1.json \
             --state kernel/development/NETWORK_SEMANTIC_TRACE_SEARCH_STATE.json \
+            --learning-state /tmp/minerva/LEARNING_STATE.json \
             --trace-output /tmp/minerva/NETWORK_SEMANTIC_TRACE.json \
             --query-output /tmp/minerva/NETWORK_SEMANTIC_QUERY_2.json
           if [ -f /tmp/minerva/NETWORK_SEMANTIC_QUERY_2.json ]; then
@@ -187,6 +188,7 @@ jobs:
             --query /tmp/minerva/NETWORK_QUERY.json \
             --encounter /tmp/minerva/NETWORK_ENCOUNTER_1.json \
             --state kernel/development/NETWORK_SEMANTIC_TRACE_SEARCH_STATE.json \
+            --learning-state /tmp/minerva/LEARNING_STATE.json \
             --output /tmp/minerva/NETWORK_SEMANTIC_TRACE_ABSTRACTION_PROBE.json
           status="$(python -c 'import json; print(json.load(open("/tmp/minerva/NETWORK_SEMANTIC_TRACE_ABSTRACTION_PROBE.json"))["status"])')"
           if [ "$status" = "PASS_BOUNDED_B1_STRUCTURAL_ABSTRACTION" ]; then
