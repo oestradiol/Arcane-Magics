@@ -1,6 +1,8 @@
-# Minerva Development Roadmap — 2026-09-26
+# Minerva Issue Roadmap — 2026-09-26
 
-This roadmap is a dependency surface, not a sovereign curriculum. A higher-value returned defect can preempt it.
+This file is the human-readable issue projection. The sole machine-readable semantic topology is [`DEVELOPMENTAL_GATE_CHAIN.json`](../kernel/development/DEVELOPMENTAL_GATE_CHAIN.json); the current A–E execution slice is [`SELF_TEACHING_DEVELOPMENT_DAG.json`](../kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json). Keep issue references and readable rationale here, but do not create a competing developmental order.
+
+The roadmap is a dependency surface, not a sovereign curriculum. A higher-value returned defect can preempt it.
 
 ## Scheduling law
 
