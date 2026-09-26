@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "authored_center_not_provisionable": true,
+    "encounter_not_evaluation": true,
+    "learner_selected_query_chain": true,
+    "multiple_indexed_centers": true,
+    "network_memory_not_world": true,
+    "no_global_subject_claim": true,
+    "no_promotion_authority": true,
+    "no_truth_authority": true,
+    "persistent_memory_causality": true,
+    "refuse_exit_reachable": true
+  },
+  "claim_fence": "No global subject, consciousness, AGI, unrestricted Web autonomy, self-validation, promotion authority, or jurisdiction transfer follows.",
+  "earned_scope": "bounded learner-initiated network inquiry + persistent memory-caused successor inquiry + indexed multi-center reconstruction",
+  "evidence": {
+    "center_policy": "kernel/development/NETWORK_CENTER_POLICY.json",
+    "gate_definition": "kernel/development/WWW_MIND_GATE.json",
+    "network_lineage": "autonomy/evidence/network/36210844736/lineage-result.json"
+  },
+  "failed_checks": [],
+  "promotion_authority": false,
+  "schema": "Venus.WWWMindGateResult.v0.1",
+  "status": "PASS_BOUNDED_WWW_MIND_GATE",
+  "truth_authority": false
+}
