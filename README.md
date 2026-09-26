@@ -35,6 +35,7 @@ World / Other
 
 Start here:
 
+- [Start here](docs/START_HERE.md)
 - [WorldMirror VM architecture](docs/WORLDMIRROR_VM.md)
 - [runtime index](kernel/runtime/README.md)
 - [developmental state/operator index](kernel/development/README.md)
