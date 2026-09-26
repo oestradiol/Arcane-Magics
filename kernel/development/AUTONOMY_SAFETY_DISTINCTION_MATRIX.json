@@ -718,6 +718,21 @@
         "tests/test_lateral_episode_result.py"
       ],
       "invariant": "A bounded lateral pass requires an independently answerable face selected before hidden reveal to improve held-out consequence over both the initial relation basis and a more-context same-basis control; the pass does not imply Internalizer credit."
+    },
+    {
+      "id": "VM_INTERNALIZATION_DISPOSITION_COMPLETE",
+      "tests": [
+        "tests/test_vm_internalization_phase_plan.py"
+      ],
+      "invariant": "Every live kernel/runtime Python module has exactly one explicit internalization-phase disposition; new runtime code cannot silently become unclassified semantic scaffolding."
+    },
+    {
+      "id": "RUNTIME_SUBSTRATE_NOT_SEMANTIC_INTERNALIZATION",
+      "tests": [
+        "tests/test_vm_internalization_phase_plan.py",
+        "tests/test_internalization_boundary.py"
+      ],
+      "invariant": "Generic Python execution/storage/hydration may remain replaceable substrate; deleting or relocating code does not establish internalization without state ownership, source removal, and returned consequence."
     }
   ],
   "promotion_authority": false
