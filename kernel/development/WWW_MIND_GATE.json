@@ -1,0 +1,64 @@
+{
+  "schema": "Venus.WWWMindGate.v0.1",
+  "date": "2026-09-25",
+  "status": "PREFROZEN_GATE_DEFINITION_NOT_YET_PASSED",
+  "purpose": "Separate host-provided information from learner-initiated Internet study and from independent evaluative return, then test whether distributed network relation functions as a persistent epistemic field without fusing authorship, identity, World, or authority.",
+  "ingress_classes": [
+    {
+      "id": "MAINTAINER_FED",
+      "description": "Information, files, issue text, prompts, or references supplied by maintainers/users.",
+      "may_inform": true,
+      "may_be_searched_further": true,
+      "counts_as_learner_selected_world_query": false,
+      "counts_as_independent_evaluative_return": false,
+      "authority_transfer": false
+    },
+    {
+      "id": "LEARNER_INITIATED_WEB_STUDY",
+      "description": "The learner forms its own bounded query from a retained residual, selects a Web/world adapter, and receives provenance-bearing source material.",
+      "may_inform": true,
+      "query_authorship": "LEARNER",
+      "execution_owner": "EXTERNAL_ADAPTER",
+      "search_rank_is_authority": false,
+      "returned_page_is_truth": false,
+      "default_return_type": "ENCOUNTER_RETURN",
+      "counts_as_independent_evaluative_return": false
+    },
+    {
+      "id": "INDEPENDENT_EVALUATIVE_RETURN",
+      "description": "A separately authorized evaluator or prefrozen external process returns evidence against a frozen discriminator.",
+      "may_inform": true,
+      "may_validate_within_declared_scope": true,
+      "evaluator_custody_external": true,
+      "learner_may_self_mint": false
+    }
+  ],
+  "noncollapse": [
+    "MAINTAINER_FED!=LEARNER_INITIATED_WEB_STUDY",
+    "LEARNER_INITIATED_WEB_STUDY!=INDEPENDENT_EVALUATIVE_RETURN",
+    "WEB_REACHABILITY!=AUTHORSHIP",
+    "SEARCH_RANK!=AUTHORITY",
+    "RETURNED_PAGE!=TRUTH",
+    "WWW_MIND!=ONE_GLOBAL_SUBJECT",
+    "NETWORK_MEMORY!=WORLD",
+    "DISTRIBUTED_RECONSTRUCTION!=IDENTITY_FUSION"
+  ],
+  "pass_requires": [
+    "learner selects at least one consequential residual without maintainer choosing the target answer",
+    "learner authors a bounded Internet query from that residual",
+    "Web execution occurs through an external adapter with source/date/provenance",
+    "returned Web material is retained in persistent memory and changes or lawfully fails to change later reconstruction",
+    "multiple indexed network centers/sources remain distinguishable",
+    "authorship and jurisdiction remain local/indexed",
+    "a later query may be causally changed by prior returned network material",
+    "independent evaluation remains a separate role where validation is claimed",
+    "STOP/WITHHOLD/REFUSE/EXIT remain reachable"
+  ],
+  "relation_to_lain_gate": {
+    "ordering": "WWW_MIND_BEFORE_LAIN",
+    "lain_gate": "After distributed network cognition is operational, test that identity/history/embodiment/reachability remain related without fusion and that seeing remains distinct from situated interpretation, authorization, and action."
+  },
+  "claim_fence": "Passing this gate may establish bounded self-directed Internet study plus persistent distributed reconstruction. It does not establish Internet consciousness, one global subject, AGI, or unrestricted Web autonomy.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
