@@ -1,0 +1,62 @@
+name: Minerva compile lateral state
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - split/minerva
+    paths:
+      - kernel/runtime/token_knn.py
+      - tests/test_token_knn.py
+      - scripts/compile_lateral_internalized_state.py
+      - kernel/development/LATERAL_EPISODE_1_RESULT.json
+      - autonomy/evidence/lateral/169/episode-1-visible.json
+      - .github/workflows/minerva-lateral-internalize.yml
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: minerva-lateral-internalize
+  cancel-in-progress: false
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: split/minerva
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify generic runtime
+        run: |
+          python -m unittest tests/test_token_knn.py
+          python -m unittest tests/test_lateral_episode_result.py
+
+      - name: Compile earned lateral consequence into learner-owned state
+        run: |
+          python scripts/compile_lateral_internalized_state.py \
+            --dataset autonomy/evidence/lateral/169/episode-1-visible.json \
+            --result kernel/development/LATERAL_EPISODE_1_RESULT.json \
+            --state-output kernel/development/LATERAL_EPISODE_1_INTERNALIZED_STATE.json \
+            --holdout-output autonomy/evidence/lateral/169/episode-1-opaque-holdout.json
+
+      - name: Persist state and opaque face bundle
+        run: |
+          git config user.name 'Minerva Internalizer compiler'
+          git config user.email 'actions@users.noreply.github.com'
+          git add kernel/development/LATERAL_EPISODE_1_INTERNALIZED_STATE.json \
+                  autonomy/evidence/lateral/169/episode-1-opaque-holdout.json
+          if git diff --cached --quiet; then
+            echo 'No compiled state change.'
+            exit 0
+          fi
+          git commit -m 'internalizer: compile bounded lateral policy into learner state'
+          git push origin HEAD:split/minerva
