@@ -57,6 +57,7 @@ class WorkItem:
     updated_at: str | None = None
     body: str = ""
     changed_paths: tuple[str, ...] = ()
+    review_count: int = 0
 
 
 @dataclass(frozen=True)
@@ -139,6 +140,26 @@ def _blocked_by_barrier(item: WorkItem, barriers: Iterable[TargetBarrier]) -> bo
     return item_time <= max(resolved)
 
 
+def _unreturned_handoff_carrier(item: WorkItem) -> bool:
+    """Fail closed on learner-authored transport until the World changes it.
+
+    A handoff carrier is not a fresh developmental residual merely because it is
+    open. Concrete merge conflict or an independently supplied review reopens it.
+    Fallback issue carriers remain transport/provenance and are never targets.
+    """
+    title=item.title.strip().lower()
+    body=item.body.lower()
+    if title.startswith("handoff carrier:"):
+        return True
+    if not title.startswith("handoff:"):
+        return False
+    if "external-review carrier" not in body and "external review carrier" not in body:
+        return False
+    if item.kind == "PR" and item.merge_state in {"DIRTY","BLOCKED","CONFLICTING"}:
+        return False
+    return item.review_count <= 0
+
+
 def choose_target(
     items: Iterable[WorkItem],
     *,
@@ -161,6 +182,7 @@ def choose_target(
         and (item.kind, item.number) not in recent
         and not _blocked_by_barrier(item, barriers)
         and not item.title.lower().startswith("venus: autonomous cycle")
+        and not _unreturned_handoff_carrier(item)
         and not item.title.lower().startswith("handoff carrier: minerva → venus engineering candidate")
         and not item.title.lower().startswith("handoff: minerva → venus engineering candidate")
     )
@@ -549,6 +571,7 @@ def load_work_items(path: str | Path, kind: str) -> tuple[WorkItem, ...]:
                     for file_row in (row.get("files") or ())
                     if isinstance(file_row, Mapping) and file_row.get("path")
                 ),
+                review_count=len(tuple(row.get("reviews") or ())),
             )
         )
     return tuple(out)
