@@ -1,0 +1,115 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "400d6ab01ded914c4e0dde5327e7c47eeaf58e532709a6ab738fa04152deccb8",
+    "6ff5eae8b5e752d650be56b1169e2c58b2e114c38426b9a83174e1fff4508816",
+    "d3a045ac8e3f20d6ff05b3ecaa9ed9317d4d4bf172923c359a14db033348f93e"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:4way4eva/3V30OStudios#71",
+      "github-issue:Oleksii-debug/Autosport#368",
+      "github-issue:oestradiol/Arcane-Magics#206"
+    ],
+    "memory_object_ids": [
+      "400d6ab01ded914c4e0dde5327e7c47eeaf58e532709a6ab738fa04152deccb8",
+      "6ff5eae8b5e752d650be56b1169e2c58b2e114c38426b9a83174e1fff4508816",
+      "d3a045ac8e3f20d6ff05b3ecaa9ed9317d4d4bf172923c359a14db033348f93e"
+    ],
+    "next_query_terms": [
+      "academies",
+      "academy",
+      "across",
+      "administrative",
+      "all",
+      "and",
+      "any",
+      "apis",
+      "architect",
+      "are",
+      "assistants",
+      "association"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "771919c7dbc5769f000868b1bb8c756aba69ec68778df4fa5b842d107d035a5f",
+    "reconstruction_id": "32b6ef4be313a9255b8a8d005f39ea09e0fb4a176c46ed18786aac422776dad0",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "e57bfd2c3f8a5a48145fa6ed19c91ecc519f8ad39aa4d338b85472c48cde9f36",
+    "1c3a2c85cb9b2c75a61dc66a7294ce6abb7994bf6c4cf994ffb19854ea993c04",
+    "6fcfa7e1faf075064fd9becffad5d95418d3973d1d3e888f95e48e92a3644d6e",
+    "c96f98e22a20a62f8476b8c68fbdd8876900d8ab925d6c2b84b98d1377dfbd97"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:4way4eva/3V30OStudios#71",
+      "github-issue:Oleksii-debug/Autosport#368",
+      "github-issue:Svyable/desk#354",
+      "github-issue:oestradiol/Arcane-Magics#206"
+    ],
+    "memory_object_ids": [
+      "e57bfd2c3f8a5a48145fa6ed19c91ecc519f8ad39aa4d338b85472c48cde9f36",
+      "1c3a2c85cb9b2c75a61dc66a7294ce6abb7994bf6c4cf994ffb19854ea993c04",
+      "6fcfa7e1faf075064fd9becffad5d95418d3973d1d3e888f95e48e92a3644d6e",
+      "c96f98e22a20a62f8476b8c68fbdd8876900d8ab925d6c2b84b98d1377dfbd97"
+    ],
+    "next_query_terms": [
+      "accessibility",
+      "accountable",
+      "advantages",
+      "answers",
+      "any",
+      "apis",
+      "apprenticeship",
+      "architect",
+      "are",
+      "around",
+      "assistants",
+      "association"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "4147481b5e92c0d955d1694d6cbd0142744ec26a359fe058330d0027f452b9f0",
+    "reconstruction_id": "dec7a3dcf14c0743615aafa56818c9d7b77ced6e3c31126660830650e8e2504f",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:4way4eva/3V30OStudios",
+    "github-repo:Oleksii-debug/Autosport",
+    "github-repo:Svyable/desk"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:4way4eva/3V30OStudios",
+    "github-repo:Oleksii-debug/Autosport",
+    "github-repo:Svyable/desk",
+    "github-repo:oestradiol/Arcane-Magics"
+  ],
+  "indexed_source_ids": [
+    "github-issue:4way4eva/3V30OStudios#71",
+    "github-issue:Oleksii-debug/Autosport#368",
+    "github-issue:Svyable/desk#354",
+    "github-issue:oestradiol/Arcane-Magics#206"
+  ],
+  "memory_checkpoint_sha256": "3aabbefd8e5a9ad09eb9c7ad439b5c9dd547e8987efa6f9fcd61a4354a750f71",
+  "memory_record_count": 7,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "771919c7dbc5769f000868b1bb8c756aba69ec68778df4fa5b842d107d035a5f",
+  "query2_changed_from_query1": true,
+  "query2_id": "4147481b5e92c0d955d1694d6cbd0142744ec26a359fe058330d0027f452b9f0",
+  "query2_memory_provenance": [
+    "network-memory:400d6ab01ded914c4e0dde5327e7c47eeaf58e532709a6ab738fa04152deccb8",
+    "network-memory:6ff5eae8b5e752d650be56b1169e2c58b2e114c38426b9a83174e1fff4508816",
+    "network-memory:d3a045ac8e3f20d6ff05b3ecaa9ed9317d4d4bf172923c359a14db033348f93e"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}
