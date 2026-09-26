@@ -1,0 +1,42 @@
+{
+  "schema": "Venus.NetworkSemanticTraceProspectiveComparator.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_BEFORE_CANDIDATE_EPISODE2_RETURN",
+  "issue_refs": [
+    15,
+    78,
+    73
+  ],
+  "baseline": {
+    "name": "LEXICAL_NETWORK_RECONSTRUCTION",
+    "implementation": "kernel/development/network_inquiry.py::reconstruct_from_network",
+    "rule": "alphabetically bounded returned lexical difference"
+  },
+  "candidate": {
+    "name": "STATE_OWNED_RELATION_TRACE",
+    "state_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_SEARCH_STATE.json",
+    "executor_ref": "kernel/runtime/relation_trace.py",
+    "freeze_before_candidate_return": true
+  },
+  "matched_conditions": [
+    "same formed problem",
+    "same selected study anchors",
+    "same episode-1 returned encounter set",
+    "same GitHub external adapter",
+    "same max-source bound",
+    "candidate frozen before episode-2 external return",
+    "no candidate access to baseline or candidate episode-2 return"
+  ],
+  "returned_metrics": [
+    "distinct study-anchor coverage across admitted sources",
+    "mean relevance matches per admitted source",
+    "external center count",
+    "query token count"
+  ],
+  "decision_rule": "PASS_BOUNDED_RELATION_TRACE_QUERY only if candidate returns >=2 external centers and lexicographically improves (anchor_coverage, mean_relevance_matches, external_center_count, -query_token_count) over lexical baseline. Otherwise FAIL_OR_WITHHOLD.",
+  "internalization_rule": "A public-development pass is insufficient for source removal. Internalization requires later fresh disjoint recurrence plus capability-specific source removal under the Internalizer boundary.",
+  "independent_evaluation": false,
+  "promotion_authority": false,
+  "truth_authority": false,
+  "claim_fence": "A pass shows only bounded returned query-relevance improvement over the frozen lexical reconstruction. It does not establish general semantics, general memory learning, WWW truth, AGI, consciousness, or promotion."
+}
