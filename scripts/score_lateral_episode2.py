@@ -44,12 +44,17 @@ def evaluate(prefreeze: dict, proposal: dict, reveal: dict, *, proposal_blob_sha
     minimum=float(rule["minimum_holdout_accuracy"])
     prior=float(rule["must_exceed_episode1_internalized_transfer_accuracy"])
     revision_pass=accuracy>=minimum and accuracy>prior
+    constant_true_accuracy=sum(int(labels[n] is True) for n in expected)/total if total else 0.0
+    constant_false_accuracy=sum(int(labels[n] is False) for n in expected)/total if total else 0.0
+    best_constant_accuracy=max(constant_true_accuracy,constant_false_accuracy)
+    delta_over_best_constant=accuracy-best_constant_accuracy
+    constant_prediction_holdout=len(set(predictions.values()))<=1
 
     selected=dict(proposal["selected_policy"])
     faces=tuple(str(x) for x in selected.get("faces",()))
     lateral_faces=tuple(x for x in faces if x!="relation_expanded")
     status=(
-        "PASS_BOUNDED_EPISODE2_POLICY_REVISION"
+        "PASS_PREFROZEN_EPISODE2_THRESHOLD__WITHHOLD_GENERALIZATION"
         if revision_pass else "WITHHOLD_EPISODE2_POLICY_REVISION"
     )
     lateral_status=(
@@ -79,11 +84,23 @@ def evaluate(prefreeze: dict, proposal: dict, reveal: dict, *, proposal_blob_sha
         "minimum_holdout_accuracy":minimum,
         "minimum_accuracy_met":accuracy>=minimum,
         "prior_transfer_exceeded":accuracy>prior,
+        "constant_true_accuracy":constant_true_accuracy,
+        "constant_false_accuracy":constant_false_accuracy,
+        "best_constant_accuracy":best_constant_accuracy,
+        "delta_over_best_constant":delta_over_best_constant,
+        "constant_prediction_holdout":constant_prediction_holdout,
+        "post_reveal_discriminator_status":(
+            "PASS_GAIN_OVER_CONSTANT_CONTROL"
+            if delta_over_best_constant>0
+            else "WITHHOLD_NO_GAIN_OVER_CONSTANT_CONTROL"
+        ),
         "predictions":{str(n):predictions[n] for n in expected},
         "external_labels":{str(n):labels[n] for n in expected},
         "proposal_blob_sha":proposal_blob_sha,
         "evaluation_owner":"PREFROZEN_EXTERNAL_GITHUB_MERGED_STATE_EVALUATOR",
+        "prefrozen_threshold_pass":revision_pass,
         "bounded_policy_revision_claim":revision_pass,
+        "generalization_claim":False,
         "general_lateralizer_claim":False,
         "internalization_claim":False,
         "promotion_authority":False,
@@ -91,9 +108,9 @@ def evaluate(prefreeze: dict, proposal: dict, reveal: dict, *, proposal_blob_sha
         "next_residual":next_residual,
         "claim_fence":(
             "A PASS establishes only that one prefrozen revision chosen from prior returned labels "
-            "reached the declared bounded episode-2 holdout threshold and improved over the 1/8 transfer. "
-            "Because the selected policy retained no independent lateral face, this result does not establish "
-            "general Lateralizer competence or generalization of the episode-1 lateral coordinate."
+            "reached the declared episode-2 holdout threshold and improved over the 1/8 transfer. "
+            "Post-reveal, the frozen all-positive predictions match the best constant control on the balanced holdout, "
+            "and the selected policy retained no independent lateral face. Therefore no lateral-generalization claim follows."
         ),
     }
 
