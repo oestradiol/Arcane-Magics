@@ -67,7 +67,8 @@ jobs:
         run: |
           mkdir -p /tmp/minerva
           git for-each-ref --format='%(refname:short) %(objectname)' refs/remotes/origin > /tmp/minerva/branches.txt
-          gh pr list --state all --limit 200 --json number,title,body,state,isDraft,mergeStateStatus,updatedAt,headRefName,baseRefName,mergedAt,closedAt,files > /tmp/minerva/prs.json
+          gh pr list --state open --limit 200 --json number,title,body,state,isDraft,mergeStateStatus,updatedAt,headRefName,baseRefName,files > /tmp/minerva/prs.json
+          gh pr list --state all --limit 200 --json number,title,state,updatedAt,mergedAt,closedAt,reviews > /tmp/minerva/history-prs.json
           gh run list --limit 100 --json databaseId,workflowName,headBranch,headSha,status,conclusion,event,createdAt > /tmp/minerva/actions.json
           gh issue list --state open --limit 200 --json number,title,body,state,updatedAt > /tmp/minerva/issues.json
           gh issue list --state all --limit 200 --json number,title,state,updatedAt,closedAt,comments > /tmp/minerva/history-issues.json
@@ -77,7 +78,7 @@ jobs:
           python scripts/run_venus_autonomous_cycle.py \
             --issues /tmp/minerva/issues.json \
             --prs /tmp/minerva/prs.json \
-            --history-prs /tmp/minerva/prs.json \
+            --history-prs /tmp/minerva/history-prs.json \
             --history-issues /tmp/minerva/history-issues.json \
             --roadmap docs/ISSUE_ROADMAP.md \
             --policy kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json \
@@ -98,6 +99,12 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          decision="$(python -c 'import json; print(json.load(open("/tmp/minerva/CYCLE.json"))["decision"])')"
+          if [ "$decision" = "STOP" ]; then
+            echo "Learner retained STOP; no cross-register handoff is licensed."
+            exit 0
+          fi
+
           source_sha="$(git rev-parse HEAD)"
           target_sha="$(git rev-parse origin/split/venus)"
           branch="handoff/minerva-to-venus/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
