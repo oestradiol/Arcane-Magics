@@ -136,10 +136,9 @@ class AutonomousWriteScopeTests(unittest.TestCase):
         text = (ROOT / ".github/workflows/minerva-autonomous-worker.yml").read_text(
             encoding="utf-8"
         )
-        self.assertIn(
-            "--json number,title,body,state,isDraft,mergeStateStatus,updatedAt,files",
-            text,
-        )
+        self.assertIn("gh pr list --state open", text)
+        for field in ("body", "mergeStateStatus", "updatedAt", "headRefName", "baseRefName", "files"):
+            self.assertIn(field, text)
 
     def test_internalized_policy_drives_autonomous_cycle_with_teacher_blocked(self):
         blocker = _TeacherBlocker()
