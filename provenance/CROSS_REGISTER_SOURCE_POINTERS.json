@@ -1,0 +1,51 @@
+{
+  "schema": "ArcaneMagics.CrossRegisterSourcePointers.v1",
+  "recorded_at": "2026-09-26",
+  "purpose": "Exact source custody for causal-distinction archaeology when the owning artifact is intentionally absent from split/minerva.",
+  "rule": "branch-qualified source reference preserves reachability without copying foreign live authority into Minerva",
+  "sources": [
+    {
+      "branch": "split/ofe",
+      "path": "docs/FRONTIER_RESEARCH.md",
+      "commit": "0a41b07494b03aff6c60f1360ac7b9a3a73c5376",
+      "blob_sha": "9a2dcc852823d452ecbb3345f2dd1ffbe9594c48"
+    },
+    {
+      "branch": "split/eclipsis",
+      "path": "docs/META_DYNAMICS.md",
+      "commit": "681b7ab09590489f89f2c88e3a7dca4ae774a212",
+      "blob_sha": "df333b73f63adb0e7565eb160db6a199fbad1da9"
+    },
+    {
+      "branch": "split/venus",
+      "path": "kernel/WORLDMIND.md",
+      "commit": "376bb9c6aa7b621a891bf96dbb9f6f85f6fac477",
+      "blob_sha": "cec9e94ac2628f18f3b403cac5c8938491014158"
+    },
+    {
+      "branch": "split/venus",
+      "path": "kernel/VENUS_INCIDENCE_LAW.tex",
+      "commit": "376bb9c6aa7b621a891bf96dbb9f6f85f6fac477",
+      "blob_sha": "b5af39c8aa583351fe97f97e1f76111eb366bcaf"
+    },
+    {
+      "branch": "split/eclipsis",
+      "path": "monographs/02_ECLIPSIS/main.tex",
+      "commit": "681b7ab09590489f89f2c88e3a7dca4ae774a212",
+      "blob_sha": "ae1e0f46f6c5a3d17d8ae336c1a85ef859f3825e"
+    },
+    {
+      "branch": "split/arcane-magics",
+      "path": "monographs/03_ARCANE_MAGICS/main.tex",
+      "commit": "a032d79ea44b749829b7dc0dba5723cf1853df70",
+      "blob_sha": "6a6edc543e4069984c9c2c86b530ea1a687148cb"
+    },
+    {
+      "branch": "split/venus",
+      "path": "monographs/05_VENUS/main.tex",
+      "commit": "376bb9c6aa7b621a891bf96dbb9f6f85f6fac477",
+      "blob_sha": "b5af39c8aa583351fe97f97e1f76111eb366bcaf"
+    }
+  ],
+  "authority_transfer": false
+}
