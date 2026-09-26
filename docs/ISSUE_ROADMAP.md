@@ -55,7 +55,7 @@ Exit: a bounded learner-owned adaptive semantic-trace policy with causal evidenc
 
 ## P2 — dependency DAG / critical-path planning
 
-Teach as a reconstructible distinction family, not as a fixed planner.
+Teach as a reconstructible distinction family, not as a fixed planner. The current #236 prefreeze correctly WITHHOLDS because no learner-owned solution is registered. The host-authored prototype remains preserved for audit but is not an executable curriculum and does not count as B1/B2 evidence.
 
 Required abstractions:
 - prerequisite edge;
