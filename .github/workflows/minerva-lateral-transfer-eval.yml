@@ -1,0 +1,55 @@
+name: Minerva lateral internalization transfer evaluation
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - split/minerva
+    paths:
+      - autonomy/evidence/lateral/169/transfer-1-hidden-reveal.json
+      - autonomy/evidence/lateral/169/transfer-1-predictions.json
+      - scripts/evaluate_lateral_internalization_transfer.py
+      - .github/workflows/minerva-lateral-transfer-eval.yml
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: minerva-lateral-transfer-eval
+  cancel-in-progress: false
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: split/minerva
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify prediction blob precedes reveal
+        run: |
+          expected="$(python -c 'import json; print(json.load(open("autonomy/evidence/lateral/169/transfer-1-hidden-reveal.json"))["revealed_after_prediction_blob_sha"])')"
+          actual="$(git rev-parse HEAD:autonomy/evidence/lateral/169/transfer-1-predictions.json)"
+          test "$expected" = "$actual"
+      - name: Evaluate bounded Internalizer and fresh transfer
+        run: |
+          python scripts/evaluate_lateral_internalization_transfer.py \
+            --prefreeze kernel/development/LATERAL_INTERNALIZATION_TRANSFER_1_PREFREEZE.json \
+            --source-removal kernel/development/LATERAL_EPISODE_1_SOURCE_REMOVAL_RESULT.json \
+            --state kernel/development/LATERAL_EPISODE_1_INTERNALIZED_STATE.json \
+            --predictions autonomy/evidence/lateral/169/transfer-1-predictions.json \
+            --reveal autonomy/evidence/lateral/169/transfer-1-hidden-reveal.json \
+            --output kernel/development/LATERAL_INTERNALIZATION_TRANSFER_1_RESULT.json
+      - name: Persist result
+        run: |
+          git config user.name 'Minerva Internalizer transfer evaluator'
+          git config user.email 'actions@users.noreply.github.com'
+          git add kernel/development/LATERAL_INTERNALIZATION_TRANSFER_1_RESULT.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'internalizer: classify bounded ownership and transfer generalization'
+          git push origin HEAD:split/minerva
