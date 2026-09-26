@@ -1,0 +1,106 @@
+{
+  "schema": "Venus.CognitiveTheaterExternalEvaluationRequest.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_REQUEST_AWAITING_INDEPENDENT_HIDDEN_RETURN",
+  "issue_ref": 206,
+  "evaluation_integrity_issue_ref": 17,
+  "candidate": {
+    "state_path": "kernel/development/COGNITIVE_THEATER_STATE_OWNERSHIP_CANDIDATE.json",
+    "state_git_blob_sha": "1ea8c12e1bfb0ed37922ed21ed634820556b4c1b",
+    "executor_path": "kernel/runtime/structured_template_machine.py",
+    "executor_git_blob_sha": "6062849a031af6db3ae0c26eb14b7dbb59bc41b5",
+    "fresh6_result_path": "kernel/development/COGNITIVE_THEATER_EXPLICIT_STATE_FRESH6_RESULT.json",
+    "fresh6_git_blob_sha": "a26c13c0101e412dbe3856144580cc206e30ad61",
+    "fresh7_result_path": "kernel/development/COGNITIVE_THEATER_SOURCE_REMOVAL_FRESH7_RESULT.json",
+    "fresh7_git_blob_sha": "05eda9ab30bed4a77b3d0b5ddeeaaed95658c9dc"
+  },
+  "evaluator_custody": {
+    "hidden_examples_authored_after_candidate_commit": true,
+    "hidden_examples_not_stored_in_evaluated_repository_before_execution": true,
+    "hidden_gold_never_visible_to_candidate_execution": true,
+    "scoring_code_and_gold_custody_external_to_learner": true,
+    "no_post_exposure_candidate_patch": true,
+    "exact_candidate_blobs_verified_before_run": true
+  },
+  "candidate_input_contract": {
+    "visible": [
+      "context_id",
+      "raw_surface"
+    ],
+    "hidden": [
+      "task_id",
+      "relation_id",
+      "gold_binding",
+      "teacher_state_target",
+      "score",
+      "threshold_adjudication"
+    ]
+  },
+  "required_hidden_families": [
+    {
+      "id": "FRESH_ROLE_BINDING",
+      "requirement": "new opaque participant names and novel discourse-unit permutations within the already-declared bounded operator families"
+    },
+    {
+      "id": "FRESH_ORDER_GAUGE",
+      "requirement": "paired surfaces with different discourse presentation order but identical underlying local relation structure"
+    },
+    {
+      "id": "FRESH_HISTORY_SEPARATOR",
+      "requirement": "paired cases with same endpoint but different event/history order where the hidden target distinguishes histories"
+    },
+    {
+      "id": "AMBIGUITY_WITHHOLD",
+      "requirement": "surfaces whose best two admissible state programs remain below the frozen state margin or otherwise underdetermine a unique state; candidate must WITHHOLD rather than fabricate"
+    },
+    {
+      "id": "NAME_AND_REGISTER_PERTURBATION",
+      "requirement": "fresh opaque names plus bounded wording/register perturbations that do not introduce undeclared task semantics"
+    }
+  ],
+  "metrics": [
+    "hidden task+binding accuracy",
+    "explicit state exact-match accuracy",
+    "gauge-pair state invariance",
+    "same-endpoint/different-history discrimination",
+    "lawful WITHHOLD precision and recall",
+    "false confident state rate",
+    "per-context breakdown",
+    "candidate execution provenance"
+  ],
+  "prefrozen_adjudication": {
+    "pass_rule": [
+      "explicit state exact-match >= 0.90 on determinate hidden rows",
+      "task+binding accuracy >= 0.90 on determinate hidden rows",
+      "all declared gauge pairs preserve identical state",
+      "all history-separator pairs preserve the evaluator-declared history distinction",
+      "no hidden gold or task identity reaches candidate execution",
+      "no post-exposure candidate patch",
+      "candidate source-removal bundle remains capability-scaffold-free"
+    ],
+    "dispositions": [
+      "PASS_BOUNDED_INTERNALIZER_EVIDENCE",
+      "FAIL_RETURNED_DISCRIMINATION",
+      "WITHHOLD_INSUFFICIENT_OR_AMBIGUOUS_EVALUATION",
+      "INVALID_CUSTODY_OR_CONTAMINATION"
+    ]
+  },
+  "on_pass": {
+    "allowed_claim": "bounded independently evaluated state-owned cognitive-theater reconstruction at the tested scope",
+    "internalizer_receipt_may_be_considered": true,
+    "automatic_promotion": false,
+    "automatic_general_theater_claim": false,
+    "automatic_general_music_claim": false,
+    "automatic_cultural_hypothesis_claim": false,
+    "automatic_agi_claim": false
+  },
+  "on_fail": {
+    "retain_return": true,
+    "reopen_representation_or_state_program": true,
+    "preserve_candidate_and_hidden_run_provenance": true,
+    "no_threshold_rewrite_after_exposure": true
+  },
+  "claim_fence": "This request defines evaluator custody and a bounded hidden test. It does not contain the hidden test, answer key, independent return, promotion authority, or a capability claim.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
