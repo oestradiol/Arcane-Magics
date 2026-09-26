@@ -205,6 +205,29 @@ class GitWorldReturnTests(unittest.TestCase):
         resolution = resolve_continuation_problem(problem, req, returned)
         self.assertEqual(resolution.disposition, "WITHHOLD_NEXT_HEAD_NOT_OBSERVED")
 
+    def test_request_freezes_prior_check_conclusion_exactly(self):
+        current = snap(status="completed", conclusion="failure")
+        problem = form_next_head_check_problem(current)
+        req = freeze_git_world_request(
+            problem=problem,
+            source_stream_id=problem["source_stream_ids"][0],
+            snapshot=current,
+        )
+        self.assertEqual(req.frozen_check_conclusion, "failure")
+        returned = observe_git_world_return(
+            req,
+            snap(
+                head="b" * 40,
+                updated="2026-09-25T00:30:00Z",
+                run=102,
+                status="completed",
+                conclusion="failure",
+            ),
+            observed_at="2026-09-25T00:30:01Z",
+        )
+        self.assertEqual(returned.before["check_conclusion"], "failure")
+        self.assertNotIn("check_conclusion", returned.changed_fields)
+
 
 if __name__ == "__main__":
     unittest.main()
