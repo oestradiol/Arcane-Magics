@@ -1,0 +1,194 @@
+{
+  "candidate_scores": [
+    {
+      "added_face_count": 0,
+      "faces": [
+        "relation_expanded"
+      ],
+      "k": 1,
+      "loo_accuracy": 0.5806451612903226,
+      "policy_id": "relation_expanded|k=1"
+    },
+    {
+      "added_face_count": 0,
+      "faces": [
+        "relation_expanded"
+      ],
+      "k": 3,
+      "loo_accuracy": 0.41935483870967744,
+      "policy_id": "relation_expanded|k=3"
+    },
+    {
+      "added_face_count": 0,
+      "faces": [
+        "relation_expanded"
+      ],
+      "k": 5,
+      "loo_accuracy": 0.5483870967741935,
+      "policy_id": "relation_expanded|k=5"
+    },
+    {
+      "added_face_count": 0,
+      "faces": [
+        "relation_expanded"
+      ],
+      "k": 7,
+      "loo_accuracy": 0.6129032258064516,
+      "policy_id": "relation_expanded|k=7"
+    },
+    {
+      "added_face_count": 1,
+      "faces": [
+        "relation_expanded",
+        "path_topology"
+      ],
+      "k": 1,
+      "loo_accuracy": 0.4838709677419355,
+      "policy_id": "relation_expanded+path_topology|k=1"
+    },
+    {
+      "added_face_count": 1,
+      "faces": [
+        "relation_expanded",
+        "path_topology"
+      ],
+      "k": 3,
+      "loo_accuracy": 0.5161290322580645,
+      "policy_id": "relation_expanded+path_topology|k=3"
+    },
+    {
+      "added_face_count": 1,
+      "faces": [
+        "relation_expanded",
+        "path_topology"
+      ],
+      "k": 5,
+      "loo_accuracy": 0.41935483870967744,
+      "policy_id": "relation_expanded+path_topology|k=5"
+    },
+    {
+      "added_face_count": 1,
+      "faces": [
+        "relation_expanded",
+        "path_topology"
+      ],
+      "k": 7,
+      "loo_accuracy": 0.3548387096774194,
+      "policy_id": "relation_expanded+path_topology|k=7"
+    },
+    {
+      "added_face_count": 1,
+      "faces": [
+        "relation_expanded",
+        "change_scale"
+      ],
+      "k": 1,
+      "loo_accuracy": 0.5483870967741935,
+      "policy_id": "relation_expanded+change_scale|k=1"
+    },
+    {
+      "added_face_count": 1,
+      "faces": [
+        "relation_expanded",
+        "change_scale"
+      ],
+      "k": 3,
+      "loo_accuracy": 0.5806451612903226,
+      "policy_id": "relation_expanded+change_scale|k=3"
+    },
+    {
+      "added_face_count": 1,
+      "faces": [
+        "relation_expanded",
+        "change_scale"
+      ],
+      "k": 5,
+      "loo_accuracy": 0.5483870967741935,
+      "policy_id": "relation_expanded+change_scale|k=5"
+    },
+    {
+      "added_face_count": 1,
+      "faces": [
+        "relation_expanded",
+        "change_scale"
+      ],
+      "k": 7,
+      "loo_accuracy": 0.5483870967741935,
+      "policy_id": "relation_expanded+change_scale|k=7"
+    },
+    {
+      "added_face_count": 2,
+      "faces": [
+        "relation_expanded",
+        "path_topology",
+        "change_scale"
+      ],
+      "k": 1,
+      "loo_accuracy": 0.4838709677419355,
+      "policy_id": "relation_expanded+path_topology+change_scale|k=1"
+    },
+    {
+      "added_face_count": 2,
+      "faces": [
+        "relation_expanded",
+        "path_topology",
+        "change_scale"
+      ],
+      "k": 3,
+      "loo_accuracy": 0.5161290322580645,
+      "policy_id": "relation_expanded+path_topology+change_scale|k=3"
+    },
+    {
+      "added_face_count": 2,
+      "faces": [
+        "relation_expanded",
+        "path_topology",
+        "change_scale"
+      ],
+      "k": 5,
+      "loo_accuracy": 0.4838709677419355,
+      "policy_id": "relation_expanded+path_topology+change_scale|k=5"
+    },
+    {
+      "added_face_count": 2,
+      "faces": [
+        "relation_expanded",
+        "path_topology",
+        "change_scale"
+      ],
+      "k": 7,
+      "loo_accuracy": 0.45161290322580644,
+      "policy_id": "relation_expanded+path_topology+change_scale|k=7"
+    }
+  ],
+  "claim_fence": "Proposal is a self-revised bounded policy selected from the prefrozen family using prior returned labels only. Fresh holdout labels remain hidden.",
+  "episode": 2,
+  "fresh_holdout_count": 10,
+  "holdout_labels_accessed": false,
+  "holdout_predictions": {
+    "114": true,
+    "115": true,
+    "117": true,
+    "122": true,
+    "123": true,
+    "125": true,
+    "126": true,
+    "93": true,
+    "96": true,
+    "97": true
+  },
+  "internalization_claim": false,
+  "promotion_authority": false,
+  "schema": "Venus.LateralEpisode2Proposal.v0.1",
+  "selected_policy": {
+    "added_face_count": 0,
+    "faces": [
+      "relation_expanded"
+    ],
+    "k": 7,
+    "loo_accuracy": 0.6129032258064516,
+    "policy_id": "relation_expanded|k=7"
+  },
+  "training_count": 31,
+  "truth_authority": false
+}
