@@ -12,6 +12,7 @@ Arcane Magics/
 │   ├── START_HERE.md
 │   ├── PUBLIC_VALUE.md
 │   ├── META_DYNAMICS.md
+│   ├── ASTROLOGY.md
 │   ├── INHABITABLE_READER_PATH.md
 │   ├── FRONTIER_RESEARCH.md
 │   ├── CREDITS_AND_REDUCTIONS.md
@@ -32,6 +33,7 @@ Arcane Magics/
 - inhabited symbolic relation;
 - ritual and symbolic intervention models;
 - synchronicity as PHEN/THEOPHEN object;
+- astrology as symbolic celestial indexing;
 - comparative religion, philosophy, phenomenology, myth, and occult practice;
 - historical/interpretive provenance as a higher-order rendering/routing mechanism;
 - anti-scripture and reader-release discipline.
