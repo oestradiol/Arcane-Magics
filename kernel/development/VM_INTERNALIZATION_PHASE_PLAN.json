@@ -114,6 +114,11 @@
       "path": "kernel/runtime/internal_ostar.py",
       "disposition": "KEEP_GENERIC_LEARNER_SIDE_INTERPRETER",
       "reason": "learner-side O* reconstruction executes returned state without owning external validation, authority, jurisdiction, rollback, or promotion"
+    },
+    {
+      "path": "kernel/runtime/structured_template_machine.py",
+      "disposition": "KEEP_GENERIC_INTERPRETER",
+      "reason": "domain-neutral state-owned template matching/materialization executor; token/unit patterns, task programs, thresholds, context labels and output schema are supplied as learner state"
     }
   ],
   "developmental_targets": [
