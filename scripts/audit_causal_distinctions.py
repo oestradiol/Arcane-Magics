@@ -9,6 +9,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 MATRIX = ROOT / "provenance" / "HISTORICAL_DISTINCTION_TEST_MATRIX.json"
 COVERAGE = ROOT / "docs" / "TEST_COVERAGE_MATRIX.md"
+FOREIGN_POINTERS = ROOT / "provenance" / "CROSS_REGISTER_SOURCE_POINTERS.json"
 
 ALLOWED_STATUS = {
     "COVERED",
@@ -73,6 +74,27 @@ def source_paths(raw: str) -> list[str]:
 def main() -> int:
     errors: list[str] = []
 
+    foreign_sources: dict[tuple[str, str], dict] = {}
+    if not FOREIGN_POINTERS.exists():
+        errors.append("missing provenance/CROSS_REGISTER_SOURCE_POINTERS.json")
+    else:
+        pobj = json.loads(FOREIGN_POINTERS.read_text(encoding="utf-8"))
+        if pobj.get("schema") != "ArcaneMagics.CrossRegisterSourcePointers.v1":
+            errors.append("cross-register source pointer file has wrong schema")
+        for row in pobj.get("sources", ()):
+            branch = str(row.get("branch") or "")
+            path = str(row.get("path") or "")
+            commit = str(row.get("commit") or "")
+            blob_sha = str(row.get("blob_sha") or "")
+            if not branch.startswith("split/") or not path:
+                errors.append(f"invalid cross-register source pointer: {row}")
+                continue
+            if re.fullmatch(r"[0-9a-f]{40}", commit) is None:
+                errors.append(f"{branch}:{path}: invalid commit identity")
+            if re.fullmatch(r"[0-9a-f]{40}", blob_sha) is None:
+                errors.append(f"{branch}:{path}: invalid blob identity")
+            foreign_sources[(branch, path)] = row
+
     if not MATRIX.exists():
         errors.append("missing provenance/HISTORICAL_DISTINCTION_TEST_MATRIX.json")
         rows = []
@@ -109,6 +131,13 @@ def main() -> int:
             # Their absence from Git is part of the custody/disposition fact, not
             # a malformed matrix row.
             if rel.startswith("Canonical") or rel.startswith("R191_"):
+                continue
+            if rel.startswith("split/") and ":" in rel:
+                owner_branch, owner_path = rel.split(":", 1)
+                if (owner_branch, owner_path) not in foreign_sources:
+                    errors.append(
+                        f"{rid}: foreign source lacks exact branch/blob custody: {rel}"
+                    )
                 continue
             p = ROOT / rel
             if not p.exists():
