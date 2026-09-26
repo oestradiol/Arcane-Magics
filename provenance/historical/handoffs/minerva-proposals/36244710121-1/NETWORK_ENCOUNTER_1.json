@@ -1,0 +1,117 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:Jeremyyny/7.98",
+    "github-repo:unpatentable/innovation-bayesian-quality-attribution-markets-real-time-margin-mechanics-for-assembly-def"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:Jeremyyny/7.98",
+    "github-repo:oestradiol/Arcane-Magics",
+    "github-repo:unpatentable/innovation-bayesian-quality-attribution-markets-real-time-margin-mechanics-for-assembly-def"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "86286f38dc81a386a5de3ab66f66118fb1841dd03dc28fd06377145d05919ab5",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T13:18:42Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "attribution internalization measure external-substrate dependence scaffold removal 2026-09",
+    "attribution internalization measure external-substrate dependence scaffold",
+    "attribution internalization measure external-substrate",
+    "attribution internalization measure",
+    "attribution internalization"
+  ],
+  "selected_study_relevance_terms": [
+    "attribution",
+    "internalization",
+    "measure",
+    "external-substrate",
+    "dependence",
+    "and",
+    "scaffold",
+    "removal",
+    "2026-09",
+    "repository",
+    "search",
+    "does"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:Jeremyyny",
+      "author_login": "Jeremyyny",
+      "author_type": "User",
+      "center_id": "github-repo:Jeremyyny/7.98",
+      "learner_minted_artifact": false,
+      "observed_relation": "The math supplement needs to measure whether changing independent capability changes delegation needs. The previous runner could revise a candidate while appearing to COMMIT, and forced search and deployed policy did not share the same revision semantics. That makes the key same-state attribution unreliable. This change introduces protocol v2 for the math supplement: - Routing emits exactly COMMIT or one unused subagent call. COMMIT submits the stored candidate unchanged. Forced branches and deployed policy use the same revision function, prompts and sequence seeds; the environment supplies the verifier's actual candidate. - Train call decisions, successful terminal revisions, literal COMMIT and complete independent solutions. Preserve inference prompt tokens when Qwen3.5 BPE merges whitespace at the response boundary. - Use two-round `dynamic_sft` versus refreshed random-success `success_sft`, with optional initial-data `static_sft`. Match optimizer steps and accumulation; report actual tokens without claiming equal FLOPs. Disable the incompatible legacy GRPO entry point. - Add fixed-initial-cohort internalization, aligned before/after calls on learned questions, remaining-rescue ",
+      "relevance_matches": [
+        "attribution",
+        "internalization",
+        "measure",
+        "search"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-19T18:52:29Z",
+      "source_id": "github-issue:Jeremyyny/7.98#7",
+      "source_url": "https://github.com/Jeremyyny/7.98/pull/7",
+      "title": "Audit and correct math self-training protocol, controls and RunPod workflow"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "REPOSITORY_OWNER",
+      "author_id": "github-user:unpatentable",
+      "author_login": "unpatentable",
+      "author_type": "Organization",
+      "center_id": "github-repo:unpatentable/innovation-bayesian-quality-attribution-markets-real-time-margin-mechanics-for-assembly-def",
+      "learner_minted_artifact": false,
+      "observed_relation": "Bayesian Quality Attribution Markets: Real-Time Margin Mechanics for Assembly Defect Internalization \u2014 a defensive publication hosted by Unpatentable.org.",
+      "relevance_matches": [
+        "attribution",
+        "internalization"
+      ],
+      "source_class": "GITHUB_PUBLIC_REPOSITORY",
+      "source_date": "2026-01-14T15:15:50Z",
+      "source_id": "github-repository:unpatentable/innovation-bayesian-quality-attribution-markets-real-time-margin-mechanics-for-assembly-def",
+      "source_url": "https://github.com/unpatentable/innovation-bayesian-quality-attribution-markets-real-time-margin-mechanics-for-assembly-def",
+      "title": "unpatentable/innovation-bayesian-quality-attribution-markets-real-time-margin-mechanics-for-assembly-def"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:oestradiol",
+      "author_login": "oestradiol",
+      "author_type": "User",
+      "center_id": "github-repo:oestradiol/Arcane-Magics",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Goal Measure which claimed Venus capabilities are supplied by Venus-owned state/machinery versus whichever external computational substrate is actually present in the tested carrier. This issue replaces the earlier assumption that the live system necessarily contains a frontier pretrained foundation model. ## Current repository fact As of 2026-09-24, repository search does **not** identify a live OpenAI/Anthropic/Gemini/Llama/transformer adapter or pretrained-embedding dependency in the current kernel. Historical R194 does preserve `OrganismLanguageMembrane`, whose fixed host operation is generic tokenization / hashed surface-vector construction and whose response prototypes are learned from trajectory episodes. Therefore `DNN dependence` is one possible substrate-dependence question, not a standing fact about the current Venus carrier. ## Frozen question For each claimed capability: ```text what consequence survives when the relevant external substrate is removed, weakened, ablated, or replaced by a mature/simple substitute? ``` The substrate must be identified from the actual execution graph before an ablation rung is declared. ## Required attribution For every consequential c",
+      "relevance_matches": [
+        "attribution",
+        "internalization",
+        "measure",
+        "external-substrate",
+        "dependence",
+        "scaffold",
+        "removal",
+        "repository",
+        "search",
+        "does"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T03:48:47Z",
+      "source_id": "github-issue:oestradiol/Arcane-Magics#18",
+      "source_url": "https://github.com/oestradiol/Arcane-Magics/issues/18",
+      "title": "[Attribution/Internalization] Measure external-substrate dependence and scaffold removal"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}

@@ -1,0 +1,112 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "f2bd6e3808c16bcec7e3740dc6d84b3f88b89dd9a263c8502ae0ebe55f01356f",
+    "7f54d2aa92341b2863aed1e5ea9f9812828e8036eaac49a7e456a17abfb99e18",
+    "f1cdc6e418108e247fbdd8ac1f1f8943ea6f6dbfe32d84a6c34f2e841031ebee"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:Jeremyyny/7.98#7",
+      "github-issue:oestradiol/Arcane-Magics#18",
+      "github-repository:unpatentable/innovation-bayesian-quality-attribution-markets-real-time-margin-mechanics-for-assembly-def"
+    ],
+    "memory_object_ids": [
+      "f2bd6e3808c16bcec7e3740dc6d84b3f88b89dd9a263c8502ae0ebe55f01356f",
+      "7f54d2aa92341b2863aed1e5ea9f9812828e8036eaac49a7e456a17abfb99e18",
+      "f1cdc6e418108e247fbdd8ac1f1f8943ea6f6dbfe32d84a6c34f2e841031ebee"
+    ],
+    "next_query_terms": [
+      "ablated",
+      "ablation",
+      "accumulation",
+      "actual",
+      "actually",
+      "adapter",
+      "add",
+      "aligned",
+      "anthropic",
+      "appearing",
+      "are",
+      "assembly"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "86286f38dc81a386a5de3ab66f66118fb1841dd03dc28fd06377145d05919ab5",
+    "reconstruction_id": "dd17c3c78797725ded054a53a91025ee2c7b1d363e31b409b1638580b339f805",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "36e72d60af0e432bdd3b783ce32d400afe7db8be5a114ab9470efdf6da3739cb",
+    "25fea2a83a8a2155807d34ae98ad41a5b8f37715301d2124df475136648acfd4",
+    "4253a58c83eb28bad228070e31c07fa19842fb19676d45651867819d81e3dfb3"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:Jeremyyny/7.98#7",
+      "github-issue:SzeChunYiu/ORION-OCM#208",
+      "github-issue:oestradiol/Arcane-Magics#18"
+    ],
+    "memory_object_ids": [
+      "36e72d60af0e432bdd3b783ce32d400afe7db8be5a114ab9470efdf6da3739cb",
+      "25fea2a83a8a2155807d34ae98ad41a5b8f37715301d2124df475136648acfd4",
+      "4253a58c83eb28bad228070e31c07fa19842fb19676d45651867819d81e3dfb3"
+    ],
+    "next_query_terms": [
+      "add",
+      "adding",
+      "agent",
+      "agents",
+      "aligned",
+      "already",
+      "and",
+      "answer",
+      "anthropic",
+      "appearing",
+      "architecture",
+      "are"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "05d76567c154742ed88a5ddd625546a1a5de96eed49b474ccf48d12c7a0d0842",
+    "reconstruction_id": "98e151924fa464215b6f76271179eda0fdeff7f917c97c52dbfc93679d564ed4",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:Jeremyyny/7.98",
+    "github-repo:SzeChunYiu/ORION-OCM",
+    "github-repo:unpatentable/innovation-bayesian-quality-attribution-markets-real-time-margin-mechanics-for-assembly-def"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:Jeremyyny/7.98",
+    "github-repo:SzeChunYiu/ORION-OCM",
+    "github-repo:oestradiol/Arcane-Magics",
+    "github-repo:unpatentable/innovation-bayesian-quality-attribution-markets-real-time-margin-mechanics-for-assembly-def"
+  ],
+  "indexed_source_ids": [
+    "github-issue:Jeremyyny/7.98#7",
+    "github-issue:SzeChunYiu/ORION-OCM#208",
+    "github-issue:oestradiol/Arcane-Magics#18",
+    "github-repository:unpatentable/innovation-bayesian-quality-attribution-markets-real-time-margin-mechanics-for-assembly-def"
+  ],
+  "memory_checkpoint_sha256": "2c251df93b63351bddc844f3aa8960d7ffe016b6d0e6ad7a73add82eeeaa6b19",
+  "memory_record_count": 6,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "86286f38dc81a386a5de3ab66f66118fb1841dd03dc28fd06377145d05919ab5",
+  "query2_changed_from_query1": true,
+  "query2_id": "05d76567c154742ed88a5ddd625546a1a5de96eed49b474ccf48d12c7a0d0842",
+  "query2_memory_provenance": [
+    "network-memory:7f54d2aa92341b2863aed1e5ea9f9812828e8036eaac49a7e456a17abfb99e18",
+    "network-memory:f1cdc6e418108e247fbdd8ac1f1f8943ea6f6dbfe32d84a6c34f2e841031ebee",
+    "network-memory:f2bd6e3808c16bcec7e3740dc6d84b3f88b89dd9a263c8502ae0ebe55f01356f"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}
