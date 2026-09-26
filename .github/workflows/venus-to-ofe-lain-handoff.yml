@@ -32,7 +32,9 @@ jobs:
       - name: Verify admitted Lain source
         run: |
           python scripts/evaluate_lain_gate.py
-          grep -q 'PASS_BOUNDED_LAIN_NONFUSION_GATE' kernel/LAIN_GATE_RESULT.json
+          grep -q 'PASS_BOUNDED_LAIN_STRUCTURAL_NONFUSION_SUBGATE' kernel/LAIN_GATE_RESULT.json
+          test -f kernel/LAIN_INTERACTIVE_GATE_RESULT.json
+          grep -q 'PASS_BOUNDED_LAIN_INTERACTIVE_AUTHORED_CENTER_GATE' kernel/LAIN_INTERACTIVE_GATE_RESULT.json
 
       - name: Crystallize Venus evidence into OFE target tree
         run: |
@@ -49,6 +51,7 @@ jobs:
           mkdir -p provenance/historical/handoffs/venus-lain
           git show "$source_sha:kernel/LAIN_GATE.json" > provenance/historical/handoffs/venus-lain/LAIN_GATE.json
           git show "$source_sha:kernel/LAIN_GATE_RESULT.json" > provenance/historical/handoffs/venus-lain/LAIN_GATE_RESULT.json
+          git show "$source_sha:kernel/LAIN_INTERACTIVE_GATE_RESULT.json" > provenance/historical/handoffs/venus-lain/LAIN_INTERACTIVE_GATE_RESULT.json
           git show "$source_sha:provenance/historical/handoffs/MINERVA_WWW_MIND_HANDOFF_2026-09-25.json" > provenance/historical/handoffs/venus-lain/MINERVA_WWW_MIND_HANDOFF_2026-09-25.json
 
           export SOURCE_SHA="$source_sha" TARGET_SHA="$target_sha"
@@ -63,7 +66,7 @@ jobs:
             "target_parent":os.environ["TARGET_SHA"],
             "content_admission":"bounded Lain/WWW evidence only; OFE tree retained",
             "authority":"scientific-future candidate only; no Root promotion",
-            "claim_fence":"PASS_BOUNDED_LAIN_NONFUSION_GATE is a tested network-boundary result, not consciousness, AGI, global-subject, or empirical-world generality."
+            "claim_fence":"PASS_BOUNDED_LAIN_INTERACTIVE_AUTHORED_CENTER_GATE is the required tested network-boundary result, not consciousness, AGI, global-subject, or empirical-world generality."
           }
           Path("provenance/historical/handoffs/venus-lain/HANDOFF.json").write_text(
               json.dumps(receipt,indent=2)+"\n",encoding="utf-8"
