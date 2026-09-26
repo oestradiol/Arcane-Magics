@@ -20,6 +20,12 @@ Root is the routing layer of the Arcane Magics repository body. Most substantive
 - improve routing UI/UX;
 - expose a contradiction between branch-local claims without stealing ownership of either claim.
 
+## Branch lifecycle
+
+Only `main`, `split/arcane-magics`, `split/eclipsis`, `split/minerva`, `split/venus`, and `split/ofe` route live authority. Temporary carriers must be explicitly bound to an open issue/PR and remain non-authoritative. Superseded, diagnostic, benchmark, fix, tmp, old development, and transitional refs belong under `historical/` once their live obligation is closed.
+
+Do not duplicate a legacy ref under `historical/` while leaving the source ref in place merely for cosmetics; that doubles namespace noise. Preserve the commit, then move the ref when the ref operation is available.
+
 ## Integration rule
 
 Long-lived specialized branches are pruned to their own functions. Do not merge them directly into one another and let Git interpret absent files as deletions.
