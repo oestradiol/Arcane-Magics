@@ -1,0 +1,140 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:Bboy9090/Ultimate-SoulCodex",
+    "github-repo:iamaman11/sing-box",
+    "github-repo:jvhtec/area-tecnica"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:Bboy9090/Ultimate-SoulCodex",
+    "github-repo:iamaman11/sing-box",
+    "github-repo:jvhtec/area-tecnica",
+    "github-repo:oestradiol/Arcane-Magics"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "7269cb4babb30efddf6b9607b26e07d2649c442fbfc0d3e980f7f78af32a667d",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T13:46:20Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "vmk2 trust harden across add aggregate already approved",
+    "vmk2 trust harden across add aggregate",
+    "vmk2 trust harden across",
+    "vmk2 trust harden",
+    "vmk2 trust",
+    "trust harden"
+  ],
+  "selected_study_relevance_terms": [
+    "vmk2",
+    "trust",
+    "harden",
+    "canonical",
+    "state",
+    "authenticated",
+    "authority",
+    "immutable",
+    "evidence",
+    "and",
+    "malicious-backend",
+    "boundaries"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:Bboy9090",
+      "author_login": "Bboy9090",
+      "author_type": "User",
+      "center_id": "github-repo:Bboy9090/Ultimate-SoulCodex",
+      "learner_minted_artifact": false,
+      "observed_relation": "Accuracy hardening and synthesis-governance reconciliation branch. Resolved on this branch: - Strict civil-time resolver rejects nonexistent spring-forward times and repeated fall-back ambiguity. - Production astrology and Human Design fail closed on ambiguous/nonexistent local birth times. - Exact recorded noon is treated as exact, not as missing birth time. - Personal numerology is explicitly calendar-year based; birthday-rollover wording is removed. - Personal Day supports canonical date-only calculation paths so explicit calendar dates are timezone invariant. - Personal Year/Month/Day preserve 11/22/33 consistently, including evidence wrappers and next-cycle transitions. - Canonical name normalization is used across active/offline numerology paths. - Date-only Sun uses ephemeris math across the local day; ingress-day ambiguity remains unresolved rather than guessing. - Sign-boundary verification fails closed when tolerance reaches an adjacent sign. - Exact geographic poles are rejected for Ascendant/Equal House geometry; near-polar finite latitudes remain testable. - Galactic Code requires trusted server evidence context and field-level verified astrology evidence before fields",
+      "relevance_matches": [
+        "canonical",
+        "evidence"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T13:46:15Z",
+      "source_id": "github-issue:Bboy9090/Ultimate-SoulCodex#351",
+      "source_url": "https://github.com/Bboy9090/Ultimate-SoulCodex/pull/351",
+      "title": "Accuracy hardening: time, astronomy, numerology, synthesis integrity"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:iamaman11",
+      "author_login": "iamaman11",
+      "author_type": "User",
+      "center_id": "github-repo:iamaman11/sing-box",
+      "learner_minted_artifact": false,
+      "observed_relation": "# MASTER PLAN \u2014 production convergence, architecture simplification, Gate B and final cutover > **Status:** ACTIVE \u2014 SOLE LIVING EXECUTION PLAN > > Remote `https://github.com/iamaman11/sing-box` is the only canonical source of truth. > > This issue is the **only authority for execution order, current stage and what happens next**. > Other issues may define architecture, functional scope or preserve evidence, but must not define a competing execution sequence. > **Context-loss rule:** only this issue may define the current execution cursor or the immediate next action. If another open issue, closed issue, PR, or historical comment says \u201cstart\u201d, \u201cnext\u201d, \u201cphase\u201d, or \u201ccheckpoint\u201d, treat that wording as local/historical unless this issue explicitly schedules it. ## Context-loss recovery protocol When starting a new chat/session or after losing context, do **not** reconstruct the plan from memory. Read in this order: 1. fresh remote protected `main`; 2. this issue body \u2014 especially **Current canonical checkpoint**, **Issue roles**, and **Immediate next action**; 3. latest factual evidence in #80 for the active Gate B checkpoint; 4. open PRs and relevant CI/control-plane runs only to dete",
+      "relevance_matches": [
+        "canonical",
+        "authority",
+        "evidence"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T13:46:13Z",
+      "source_id": "github-issue:iamaman11/sing-box#26",
+      "source_url": "https://github.com/iamaman11/sing-box/issues/26",
+      "title": "[MASTER \u2014 START HERE] Production convergence, Gate B, simplification and final cutover"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:jvhtec",
+      "author_login": "jvhtec",
+      "author_type": "User",
+      "center_id": "github-repo:jvhtec/area-tecnica",
+      "learner_minted_artifact": false,
+      "observed_relation": "> [!WARNING] > **High-risk database/RPC change.** This PR changes Hoja de Ruta authorization, transactional persistence, optimistic concurrency, publication, and aggregate read projections. It is stacked on #955 and must not merge before #955. ## Summary - Replaces split Hoja persistence with the canonical `get_hoja_de_ruta` / `save_hoja_de_ruta` aggregate boundary. - Preserves stable child identities, rejects foreign child IDs, and prevents stale or concurrent first-create overwrites. - Enforces `draft -> review -> approved -> final`; final documents are immutable across both canonical and compatibility RPCs. - Separates PDF download/preview from explicit publication and limits publication to approved/final documents. - Persists storage paths for images and safely hydrates signed URLs. - Moves the editor to the feature-owned document store and section registry. - Keeps Tour Ops and document exports on authorized aggregate projections. - Stabilizes status, weather, logistics, and realtime flows across job changes and concurrent edits. ## Stack order 1. Merge #955 into `main`. 2. Rebase/retarget this PR from `claude/pr953-operational-review-fbs8gz` to `main`. 3. Wait for the full de",
+      "relevance_matches": [
+        "harden",
+        "canonical",
+        "immutable"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T13:46:07Z",
+      "source_id": "github-issue:jvhtec/area-tecnica#957",
+      "source_url": "https://github.com/jvhtec/area-tecnica/pull/957",
+      "title": "fix(hoja-de-ruta): harden persistence, publishing and integrations"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:oestradiol",
+      "author_login": "oestradiol",
+      "author_type": "User",
+      "center_id": "github-repo:oestradiol/Arcane-Magics",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Goal Attack VMK2 as a trust/custody kernel rather than assuming that typed receipts imply authenticated authority. ## Frozen distinction ```text represented/enforced policy constraint != externally authenticated authority registered immutable-evidence metadata != independently immutable/authentic evidence ``` ## Current residuals to test - jurisdiction and legitimacy receipts can be registered directly without cryptographic issuer/trust-root verification; - source and assessor identifiers are not authenticated principals by themselves; - caller-supplied immutable metadata does not itself prove external custody; - generic canonicalization must define semantics for unordered containers and non-finite numbers; - frozen state wrappers may contain mutable referents; - a backend may mutate prior state by reference. ## Required work - canonicalize unordered containers deterministically; - define strict number semantics for authority-bearing hashes; - add cross-process/cross-language hash fixtures; - enforce deep immutability, defensive copy, or a pure backend contract; - test forged/self-minted jurisdiction and legitimacy receipts; - distinguish internally registered from externally au",
+      "relevance_matches": [
+        "vmk2",
+        "trust",
+        "harden",
+        "canonical",
+        "state",
+        "authenticated",
+        "authority",
+        "immutable",
+        "evidence",
+        "malicious-backend",
+        "boundaries"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-25T19:57:55Z",
+      "source_id": "github-issue:oestradiol/Arcane-Magics#30",
+      "source_url": "https://github.com/oestradiol/Arcane-Magics/issues/30",
+      "title": "[VMK2/Trust] Harden canonical state, authenticated authority, immutable evidence, and malicious-backend boundaries"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}

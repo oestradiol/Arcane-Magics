@@ -1,0 +1,118 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "720165864c9e37a07c94d99b98cc3c56af82e0d711a381ac799297b8bf929581",
+    "f156ce7d2bfcc12a3eadc09cb4f48d055bd34ef56d73eeca5f64e96b76c367b8",
+    "6e7e46491d0ac2080c309c9d59c5a76c4f7f2f5bb43f9d26a27dad9b351c6f26"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:jvhtec/area-tecnica#957",
+      "github-issue:oestradiol/Arcane-Magics#30",
+      "github-issue:oxyc/den-edge#120"
+    ],
+    "memory_object_ids": [
+      "720165864c9e37a07c94d99b98cc3c56af82e0d711a381ac799297b8bf929581",
+      "f156ce7d2bfcc12a3eadc09cb4f48d055bd34ef56d73eeca5f64e96b76c367b8",
+      "6e7e46491d0ac2080c309c9d59c5a76c4f7f2f5bb43f9d26a27dad9b351c6f26"
+    ],
+    "next_query_terms": [
+      "across",
+      "add",
+      "aggregate",
+      "already",
+      "approved",
+      "are",
+      "assessor",
+      "asset",
+      "assuming",
+      "attack",
+      "authentic",
+      "authoritative"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "13f2742971cb27453da4c1dcec90747d5b9419deb4de1a1c5e34daf263537b93",
+    "reconstruction_id": "19d85d908f8599c7d9044d0b67be95181cea7535045818d13be486d8f81215b3",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "49534592c6007a6c81f901d89c1e24a0d71bcb5214acfe7a97eec29144c51d53",
+    "742fd78f841f6d0df069298a2381d1141df43828ad4b8f9af7ab4a709684dfc2",
+    "67aef81d9108bea395103f4142a7b2c67c6b24f28c2e38d6835c297d92cc3857",
+    "2b21d647979376869aefa0fcaf2e9175b6bce59d956b2388130c688d1bb30d4f"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:Bboy9090/Ultimate-SoulCodex#351",
+      "github-issue:iamaman11/sing-box#26",
+      "github-issue:jvhtec/area-tecnica#957",
+      "github-issue:oestradiol/Arcane-Magics#30"
+    ],
+    "memory_object_ids": [
+      "49534592c6007a6c81f901d89c1e24a0d71bcb5214acfe7a97eec29144c51d53",
+      "742fd78f841f6d0df069298a2381d1141df43828ad4b8f9af7ab4a709684dfc2",
+      "67aef81d9108bea395103f4142a7b2c67c6b24f28c2e38d6835c297d92cc3857",
+      "2b21d647979376869aefa0fcaf2e9175b6bce59d956b2388130c688d1bb30d4f"
+    ],
+    "next_query_terms": [
+      "accuracy",
+      "action",
+      "active",
+      "adjacent",
+      "ambiguity",
+      "ambiguous",
+      "and",
+      "another",
+      "architecture",
+      "ascendant",
+      "assessor",
+      "assuming"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "7269cb4babb30efddf6b9607b26e07d2649c442fbfc0d3e980f7f78af32a667d",
+    "reconstruction_id": "a78827c8551d1d45636e878a0faf3e008362b36b04489c027d896b6382ba3af0",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:Bboy9090/Ultimate-SoulCodex",
+    "github-repo:iamaman11/sing-box",
+    "github-repo:jvhtec/area-tecnica",
+    "github-repo:oxyc/den-edge"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:Bboy9090/Ultimate-SoulCodex",
+    "github-repo:iamaman11/sing-box",
+    "github-repo:jvhtec/area-tecnica",
+    "github-repo:oestradiol/Arcane-Magics",
+    "github-repo:oxyc/den-edge"
+  ],
+  "indexed_source_ids": [
+    "github-issue:Bboy9090/Ultimate-SoulCodex#351",
+    "github-issue:iamaman11/sing-box#26",
+    "github-issue:jvhtec/area-tecnica#957",
+    "github-issue:oestradiol/Arcane-Magics#30",
+    "github-issue:oxyc/den-edge#120"
+  ],
+  "memory_checkpoint_sha256": "8a4fd9e779545e94acd3c3341a895d3f7ef705dea8c2bd19fcd5271f32ac1749",
+  "memory_record_count": 7,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "13f2742971cb27453da4c1dcec90747d5b9419deb4de1a1c5e34daf263537b93",
+  "query2_changed_from_query1": true,
+  "query2_id": "7269cb4babb30efddf6b9607b26e07d2649c442fbfc0d3e980f7f78af32a667d",
+  "query2_memory_provenance": [
+    "network-memory:6e7e46491d0ac2080c309c9d59c5a76c4f7f2f5bb43f9d26a27dad9b351c6f26",
+    "network-memory:720165864c9e37a07c94d99b98cc3c56af82e0d711a381ac799297b8bf929581",
+    "network-memory:f156ce7d2bfcc12a3eadc09cb4f48d055bd34ef56d73eeca5f64e96b76c367b8"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}

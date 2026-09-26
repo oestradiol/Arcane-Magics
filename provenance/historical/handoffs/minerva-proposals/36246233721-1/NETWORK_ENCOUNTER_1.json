@@ -1,0 +1,118 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:jvhtec/area-tecnica",
+    "github-repo:oxyc/den-edge"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:jvhtec/area-tecnica",
+    "github-repo:oestradiol/Arcane-Magics",
+    "github-repo:oxyc/den-edge"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "13f2742971cb27453da4c1dcec90747d5b9419deb4de1a1c5e34daf263537b93",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T13:46:16Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "vmk2 trust harden canonical state authenticated authority immutable",
+    "vmk2 trust harden canonical state authenticated",
+    "vmk2 trust harden canonical",
+    "vmk2 trust harden",
+    "vmk2 trust",
+    "trust harden"
+  ],
+  "selected_study_relevance_terms": [
+    "vmk2",
+    "trust",
+    "harden",
+    "canonical",
+    "state",
+    "authenticated",
+    "authority",
+    "immutable",
+    "evidence",
+    "and",
+    "malicious-backend",
+    "boundaries"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:jvhtec",
+      "author_login": "jvhtec",
+      "author_type": "User",
+      "center_id": "github-repo:jvhtec/area-tecnica",
+      "learner_minted_artifact": false,
+      "observed_relation": "> [!WARNING] > **High-risk database/RPC change.** This PR changes Hoja de Ruta authorization, transactional persistence, optimistic concurrency, publication, and aggregate read projections. It is stacked on #955 and must not merge before #955. ## Summary - Replaces split Hoja persistence with the canonical `get_hoja_de_ruta` / `save_hoja_de_ruta` aggregate boundary. - Preserves stable child identities, rejects foreign child IDs, and prevents stale or concurrent first-create overwrites. - Enforces `draft -> review -> approved -> final`; final documents are immutable across both canonical and compatibility RPCs. - Separates PDF download/preview from explicit publication and limits publication to approved/final documents. - Persists storage paths for images and safely hydrates signed URLs. - Moves the editor to the feature-owned document store and section registry. - Keeps Tour Ops and document exports on authorized aggregate projections. - Stabilizes status, weather, logistics, and realtime flows across job changes and concurrent edits. ## Stack order 1. Merge #955 into `main`. 2. Rebase/retarget this PR from `claude/pr953-operational-review-fbs8gz` to `main`. 3. Wait for the full de",
+      "relevance_matches": [
+        "harden",
+        "canonical",
+        "immutable"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T13:46:07Z",
+      "source_id": "github-issue:jvhtec/area-tecnica#957",
+      "source_url": "https://github.com/jvhtec/area-tecnica/pull/957",
+      "title": "fix(hoja-de-ruta): harden persistence, publishing and integrations"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:oxyc",
+      "author_login": "oxyc",
+      "author_type": "User",
+      "center_id": "github-repo:oxyc/den-edge",
+      "learner_minted_artifact": false,
+      "observed_relation": "# Make den-edge's data plane bounded, streaming, and representation-first ## Goal Keep den-edge one self-contained Rust process with a tiny, hard-bounded footprint while making it scale vertically across the six physical cores available to it. There is deliberately no cluster, external database, cache service, or rendering fleet in this plan. The desired hot path serves or forwards bytes whose identity is already known. It should not repeatedly read, hash, parse, build a `serde_json::Value` tree, serialize, and compress the same representation. Cold and high-cardinality results remain on demand: we cannot prebuild 100k person pages, 50k title pages, every upstream object, or every `(library, generation, head, since, limit, encoding)` sync page. Prepared representations therefore mean only: - startup/build metadata for the finite web asset set; - canonical bodies plus validators for upstream objects fetched on demand; - indexed, serialization-friendly authoritative library state; - a very small, strictly byte-bounded in-memory cache for exact responses that prove hot; - bounded streaming for everything else. Optimize as though the origin had a high uplink. Current WAN speed may dete",
+      "relevance_matches": [
+        "canonical",
+        "state"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T13:46:01Z",
+      "source_id": "github-issue:oxyc/den-edge#120",
+      "source_url": "https://github.com/oxyc/den-edge/issues/120",
+      "title": "Make the data plane bounded, streaming, and representation-first"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:oestradiol",
+      "author_login": "oestradiol",
+      "author_type": "User",
+      "center_id": "github-repo:oestradiol/Arcane-Magics",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Goal Attack VMK2 as a trust/custody kernel rather than assuming that typed receipts imply authenticated authority. ## Frozen distinction ```text represented/enforced policy constraint != externally authenticated authority registered immutable-evidence metadata != independently immutable/authentic evidence ``` ## Current residuals to test - jurisdiction and legitimacy receipts can be registered directly without cryptographic issuer/trust-root verification; - source and assessor identifiers are not authenticated principals by themselves; - caller-supplied immutable metadata does not itself prove external custody; - generic canonicalization must define semantics for unordered containers and non-finite numbers; - frozen state wrappers may contain mutable referents; - a backend may mutate prior state by reference. ## Required work - canonicalize unordered containers deterministically; - define strict number semantics for authority-bearing hashes; - add cross-process/cross-language hash fixtures; - enforce deep immutability, defensive copy, or a pure backend contract; - test forged/self-minted jurisdiction and legitimacy receipts; - distinguish internally registered from externally au",
+      "relevance_matches": [
+        "vmk2",
+        "trust",
+        "harden",
+        "canonical",
+        "state",
+        "authenticated",
+        "authority",
+        "immutable",
+        "evidence",
+        "malicious-backend",
+        "boundaries"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-25T19:57:55Z",
+      "source_id": "github-issue:oestradiol/Arcane-Magics#30",
+      "source_url": "https://github.com/oestradiol/Arcane-Magics/issues/30",
+      "title": "[VMK2/Trust] Harden canonical state, authenticated authority, immutable evidence, and malicious-backend boundaries"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}
