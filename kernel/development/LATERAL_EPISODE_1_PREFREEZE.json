@@ -1,0 +1,149 @@
+{
+  "schema": "Venus.LateralEpisodePrefreeze.v0.1",
+  "issue": 169,
+  "episode": 1,
+  "status": "PREFROZEN_BEFORE_EXTERNAL_FACE_ACQUISITION",
+  "parent_commit": "e85d722a9ee9d566ede91492b0de73e8fb8c980b",
+  "purpose": "Test whether a separately answerable returned face supplies a held-out consequence that an expanded same-basis relation representation does not.",
+  "universe_rule": {
+    "repository": "oestradiol/Arcane-Magics",
+    "pr_created_after": "2026-09-24T23:00:00Z",
+    "pr_created_before": "2026-09-25T18:00:00Z",
+    "exclude_split_base_branches": true,
+    "exclude_missing_pr_body": false,
+    "selected_pr_numbers": [
+      149,
+      151,
+      152,
+      153,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      162,
+      163,
+      164,
+      166,
+      167,
+      168,
+      170,
+      172,
+      175,
+      177,
+      181,
+      183,
+      187
+    ],
+    "selection_uses_outcome": false
+  },
+  "split_rule": {
+    "method": "sha256('LATERAL169_E1|'+pr_number), ascending",
+    "train_count": 16,
+    "holdout_count": 7,
+    "train_pr_numbers": [
+      164,
+      172,
+      156,
+      175,
+      151,
+      160,
+      168,
+      177,
+      181,
+      170,
+      183,
+      159,
+      163,
+      153,
+      149,
+      162
+    ],
+    "holdout_pr_numbers": [
+      157,
+      158,
+      187,
+      166,
+      155,
+      167,
+      152
+    ],
+    "holdout_labels_visible_to_learner_before_prediction": false
+  },
+  "faces": {
+    "relation_basic": {
+      "role": "INITIAL_BASIS",
+      "source": "PR body reference graph only",
+      "features": [
+        "reference_count_bin",
+        "reference_direction_bin",
+        "reference_distance_bins"
+      ]
+    },
+    "relation_expanded": {
+      "role": "ORDINARY_MORE_CONTEXT_CONTROL",
+      "source": "same PR body reference graph",
+      "features": [
+        "relation_basic",
+        "exact_reference_tokens",
+        "reference_modulo_buckets"
+      ]
+    },
+    "path_topology": {
+      "role": "CANDIDATE_INDEPENDENT_FACE",
+      "source": "GitHub PR changed-files endpoint",
+      "independently_answerable": true,
+      "features": [
+        "top_level_path",
+        "second_level_path",
+        "extension",
+        "path_family"
+      ]
+    },
+    "change_scale": {
+      "role": "CANDIDATE_INDEPENDENT_FACE",
+      "source": "GitHub PR metadata endpoint",
+      "independently_answerable": true,
+      "features": [
+        "commit_count_bin",
+        "additions_bin",
+        "deletions_bin",
+        "changed_files_bin"
+      ]
+    }
+  },
+  "hidden_evaluation": {
+    "target": "PR merged vs closed-unmerged disposition",
+    "train_labels_returned_after_prefreeze": true,
+    "holdout_labels_withheld_until_predictions_are_committed": true,
+    "evaluator_owner": "EXTERNAL_PREFROZEN_EVALUATOR",
+    "learner_may_self_mint_labels": false
+  },
+  "algorithm_contract": {
+    "comparator": "deterministic Jaccard k-nearest-neighbor over relation face",
+    "ordinary_more_context": "same comparator over relation_expanded",
+    "dimensionalize": "choose path_topology or change_scale only by leave-one-out training gain over relation_expanded",
+    "lateralize": "combine relation_expanded with selected independently returned face; do not merge source identities",
+    "retain_cross_face_residual": "retain training IDs where relation-only and combined predictions disagree",
+    "crystallize_f": "retain the minimum relation+selected-face organization needed to freeze holdout predictions while preserving disagreement IDs",
+    "generate": "freeze holdout predictions before label reveal"
+  },
+  "result_classes": [
+    "REDUCIBLE_OR_NO_DIMENSION_GAIN",
+    "WITHHOLD_BAD_MAP_OR_OVERFIT",
+    "PASS_BOUNDED_LATERAL_MISSING_COORDINATE"
+  ],
+  "pass_rule": "selected face must improve leave-one-out training accuracy over relation_expanded AND improve held-out accuracy over both relation_basic and relation_expanded by at least one case",
+  "noncollapse": [
+    "RELATION_BASIC!=RELATION_EXPANDED",
+    "MORE_SAME_FACE_CONTEXT!=LATERAL_FACE",
+    "PATH_TOPOLOGY!=CHANGE_SCALE",
+    "LATERALIZE!=CRYSTALLIZE_F",
+    "TRAIN_GAIN!=HELDOUT_GAIN",
+    "LATERAL_PASS!=INTERNALIZATION"
+  ],
+  "internalization_claim": false,
+  "promotion_authority": false,
+  "truth_authority": false
+}
