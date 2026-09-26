@@ -157,3 +157,143 @@ then **self-reversed** to `INVALID_FOR_PROMOTION / PRESERVED_NEGATIVE`.
    lineage head is decorative and nothing downstream should cite it as evidence.
 
 None of these are adjudicated here. Adjudication belongs to the branch author.
+
+---
+
+# Delta pass — new primary sources
+
+Appended after three further sources became available: a pre-RGM→R226
+provenance genealogy packet (36 files), an R00–R226 light reproducibility
+archaeology packet (126 files), and a 621-line unified master project list.
+Same investigator, same read-only and do-not-adjudicate mandate. Nothing above
+this line was altered.
+
+## Hash verification — clean
+
+```text
+Provenance genealogy packet:   36 OK / 36 listed / 36 on disk
+Reproducibility packet:       126 OK / 126 listed / 126 on disk
+```
+
+Zero mismatches, zero unlisted, zero missing.
+
+## The R175→R182 ledger is a strict append
+
+The reproducibility packet ships `05_POST_R69_R182_RECONCILIATION_LEDGER.json`,
+an independently packaged later revision of the ledger this study previously
+could not verify. Diffed programmatically:
+
+```text
+R175 entries 106 | R182 entries 113
+only in R182: R176 R177 R178 R179 R180 R181 R182
+only in R175: (none)
+field diffs:  0   across native_obligation_test, donor_replay, transaction_class,
+                  gate_class, scientific_effect, label, sources, state_delta
+base_checkpoint identical: yes
+```
+
+Not one of the 106 prior entries was mutated — including every
+`sources[].sha256` and every `state_delta`. This is the strongest
+non-retroactivity evidence in the corpus, and it directly rebuts any
+provenance-laundering hypothesis at the R-series layer. The hashes are now
+**cross-attested by two independent packagings**, though still not verified
+against source bytes, which remain externalized.
+
+## Residual 6 closed — the lineage head is evidenced
+
+The earlier pass recorded pre-RGM and RGM as carrying no attested status
+anywhere, and concluded the lineage head was decorative. **That was wrong**, and
+only because the sources were absent. Both now carry explicit audit verdicts:
+
+- pre-RGM / Love & Truth: `PRESERVED / PRIVATE`, with the public branch holding
+  "sanitized structural archaeology only"
+- RGM: `SOURCE GAP CLOSED` — an earlier four-ZIP archaeology correctly found RGM
+  absent from those archives, and later live summaries **over-generalized that
+  local gap into a claim about current project state**. The correction is
+  recorded rather than silently applied.
+
+The transmission edge is typed and deliberately left open:
+
+```text
+RGM = intellectual/developmental ancestor
+RGM != project origin of post-David spine
+RGM->later exact operator transmission = claim-specific OPEN
+```
+
+The archaeology also recovers the operator that stratum ran on, and the fence
+placed over it: `feedback != independent correction`, `surprise != truth`,
+`salience != evidence`, `interpretation != source attribution`.
+
+## New finding — the EDU7 family is absent from git
+
+The reproducibility packet contains three EDU7 results:
+`EDU7_POLYHEDRAL_SELF_GEOMETRY_RESULT` (`WITHHOLD`, 1580 records),
+`EDU7R1_POLYHEDRAL_EDGE_GLUE_REPAIR_RESULT`, and
+`EDU7R2_FACE_LOCALIZED_GLUE_RESULT` (`WITHHOLD`, 1577 records).
+
+`provenance/developmental/EDU/` contains **no EDU7 artifact of any kind**, and
+`provenance/DEVELOPMENTAL_LINEAGE.md` elides the span as
+`EDU4 → … → EDU15 WITHHOLD`. Three WITHHOLDs vanish at the git boundary.
+
+This is exactly the class the project's own rule protects — *"Negative /
+invalid / harness-invalid branches remain first-class provenance."* The loss is
+**unexplained**, not attested as deliberate. Unlike the EDU17 gap, it is not
+explained by externalization: the sources are now in hand.
+
+## New finding — R198 and R206 name no validator
+
+`experiments/R198DevelopmentalInternalization__R198_INDEPENDENT_AUDIT.json` is
+titled independent and contains only 27 boolean checks, all true, plus
+`"passed": true`. There is **no auditor identity, no custody field, no
+evaluator-hidden key, no separation-of-authorship attestation**. Its
+`_STDOUT.txt` is a byte-identical re-emission of the same dict — the audit trail
+is the audit's own output.
+
+R206 has the same gap: *"Generation 1 separately validated the modification"*,
+`V1 PASS` / `V2 PASS`, no validator named.
+
+This lands `V ≈ A` on the highest-value link in the Strong Safe RSI chain. It
+independently corroborates the weakness already declared in
+`kernel/development/REACH_C_GATE_CANDIDATE.json`, and raises the stakes: if the
+validating party is the authoring party, the `Reach(C) = 1` premise rests on
+self-validation and the external-verifier clause that dissolves the Löbian
+obstacle is unsatisfied in practice.
+
+## Boundary crossings in the R200 series
+
+**B-EPISTEMIC — confirmed, historical, lawfully remediated.** R176 consulted a
+held-out source before partition and evaluator commitments. R178 records the
+premature exposure, preserves R176's metadata and source-freeze scope, and
+replaces only the exposed source under the original rule. R176 was **not**
+rewritten, and the master list carries it forward as a standing negative. The
+crossing happened; the record of it survived. That is the system working.
+
+**B-MODEL — none found.** R206 fences its own result: *"does not establish
+open-ended RSI, AGI, science, FORM, or externality"*, and persists
+`open_ended_rsi=false`. R208 reaches 1.0000 on four metrics but ships the
+defeating control — ablating consequence-critical inherited features drops
+accuracy to 0.0909 — and fences to structured cross-domain transfer only.
+
+**B-AUTHORITY — none new.** R204 self-reports a provenance defect rather than
+burying it: an undeclared optional input was present during execution; ablation
+produced byte-identical output; the defect is recorded anyway.
+
+## Residuals — revised
+
+| # | Residual | Status |
+|---|---|---|
+| 1 | Canonical.zip pins three contaminated blobs | UNCHANGED |
+| 2 | Semantic-trace prefreeze amendment timing (needs 11:09–11:14 run logs) | UNCHANGED |
+| 3 | **EDU7 family, three WITHHOLDs, absent from git** | **NEW** |
+| 4 | **R198/R206 validator identity unnamed** | **NEW — highest value** |
+| 5 | Recovery-map flattening of IG5/IG6 and EDU17 | NARROWED, now measurable against the project's own `mature reduction != genealogy erasure` rule |
+| 6 | Ledger hashes | NARROWED — cross-attested by two packagings, bytes still unhashed |
+| 7 | `RECOVERY_MANIFEST.json` scope overstatement | NARROWED — EDU13/14/17 still missing |
+| 8 | **R208 scores 1.0000 across four metrics** | **NEW** — perfect scores with a working ablation control are consistent with real capability *and* with a saturated benchmark; the record cannot separate them |
+
+One tension in the master list, for adjudication rather than a violation: §13
+renders pre-R70 work as a contiguous `R01…R69` run, the shape its own line 13
+forbids, while §§6–8 keep DEV/GC/N2 native. Dual entries such as `R41 / GC0` and
+`R60 — N2-E` show a dual index was intended.
+
+Still none of this is adjudicated. Adjudication belongs to the branch author.
