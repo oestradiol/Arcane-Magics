@@ -20,6 +20,30 @@ class WWWMindProspectivePrefreezeTests(unittest.TestCase):
         self.assertIn("AGI",obj["claim_fence"])
         self.assertIn("GLOBAL_SUBJECT_CLAIM_FALSE",obj["pass_requires"])
 
+
+    def test_episode2_prefreeze_changes_only_external_center_discovery_basis(self):
+        obj=json.loads(
+            (ROOT/"kernel/development/WWW_MIND_PROSPECTIVE_2_PREFREEZE.json")
+            .read_text(encoding="utf-8")
+        )
+        self.assertEqual(obj["status"],"PREFROZEN_BEFORE_EXTERNAL_NETWORK_RETURN")
+        self.assertEqual(
+            obj["prior_episode"]["failure"],
+            "INSUFFICIENT_EXTERNAL_INDEXED_CENTERS",
+        )
+        adapter=obj["adapter"]
+        self.assertEqual(
+            adapter["relaxation_rule"],
+            "HIGH_FIDELITY_FIRST_THEN_TWO_ANCHOR_PROJECTIONS_FROM_LEARNER_STUDY_TERMS_ONLY",
+        )
+        self.assertFalse(adapter["host_added_synonyms"])
+        self.assertFalse(adapter["one_token_selected_study_search"])
+        self.assertEqual(adapter["minimum_selected_study_relevance_matches"],2)
+        self.assertFalse(obj["independent_evaluative_return"])
+        self.assertFalse(obj["truth_authority"])
+        self.assertFalse(obj["promotion_authority"])
+        self.assertIn("AGI",obj["claim_fence"])
+
     def test_adapter_is_fixed_transport_not_shell(self):
         src=(ROOT/"scripts/execute_github_network_query.py").read_text(encoding="utf-8").lower()
         self.assertIn('api_origin = "https://api.github.com"',src)
