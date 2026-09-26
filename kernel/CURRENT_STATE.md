@@ -220,3 +220,45 @@ Venus   = Self & World / model / boundary law
 ```
 
 A historical identifier is not current cross-register ownership.
+
+
+## Executable epistemic-operator path — 2026-09-25
+
+The standing developmental circulation is now represented in the mutable autonomous TransformProgram without forcing every problem through the longer path.
+
+```text
+formed consequential problem
+→ [as needed] DIMENSIONALIZE
+→ [as needed] LATERALIZE independently answerable faces
+→ prefreeze projection
+→ fresh World/Other return
+→ classify gauge | bad map | missing coordinate | live separator
+→ CRYSTALLIZE_F minimum future-sufficient organization
+→ GENERATE next face / discriminator / action
+→ source-removal + independently returned equivalence evidence
+→ INTERNALIZE earned competence
+→ next consequential limitation
+```
+
+Noncollapse:
+
+```text
+GENERATE != DIMENSIONALIZE != LATERALIZE != CRYSTALLIZE_F != INTERNALIZE
+
+internalize competence
+!= internalize World
+!= internalize evaluator
+!= internalize authority/jurisdiction
+!= internalize STOP/WITHHOLD
+!= internalize rollback/parent custody
+```
+
+`LATERALIZE` is not satisfied by multiplying descriptions produced under one controlled representation. The faces must remain independently answerable long enough for disagreement/noncommutation to survive.
+
+Executable carrier:
+- `kernel/development/AUTONOMOUS_RESEARCH_TRANSFORM_PROGRAM.json`
+- `kernel/runtime/internalizer.py`
+- `tests/test_autonomous_epistemic_operator_contract.py`
+- `kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json`
+
+This adds an admitted operator route. It does not itself establish a successful lateral-reconstruction episode, internalization event, Safe Strong RSI, or fresh World return.
