@@ -1,0 +1,22 @@
+{
+  "schema": "Minerva.ConstructDispositionAuditJurisdiction.v0.1",
+  "date": "2026-09-26",
+  "branch": "split/minerva",
+  "rule": "Validate every construct disposition structurally. Evidence-path existence is local when Minerva carries the artifact; absent paths require explicit foreign-register ownership. Foreign ownership is not a PASS of the construct.",
+  "foreign_evidence_paths": {
+    "monographs/01_OFE/main.tex": "split/ofe",
+    "docs/META_DYNAMICS.md": "split/eclipsis structural authority",
+    "kernel/WORLDMIND.md": "split/venus",
+    "monographs/02_ECLIPSIS/main.tex": "split/eclipsis",
+    "kernel/VENUS_INCIDENCE_LAW.tex": "split/venus",
+    "docs/FRONTIER_RESEARCH.md": "split/ofe",
+    "monographs/03_ARCANE_MAGICS/main.tex": "split/arcane-magics",
+    "monographs/04_VENUS/main.tex": "split/venus"
+  },
+  "constraints": [
+    "unlisted missing evidence fails",
+    "all construct IDs/status/genealogy/reduction rules remain audited",
+    "foreign mapping is jurisdiction only, not evidence of scientific/operational success",
+    "Minerva must not copy sibling live authority to make an audit green"
+  ]
+}
