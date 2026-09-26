@@ -1,9 +1,20 @@
 {
   "schema": "Venus.LateralInternalizationTransferVisible.v0.1",
+  "issue": 169,
+  "dependency_issue": 73,
   "transfer_episode": 1,
-  "acquired_after_prefreeze_commit": "f9ac48036fcd7f3dac105a7d8de8905b50af4870",
-  "acquisition_owner": "EXTERNAL_ADAPTER",
-  "labels_present": false,
+  "prefrozen_by": "kernel/development/LATERAL_INTERNALIZATION_TRANSFER_1_PREFREEZE.json",
+  "acquisition_owner": "EXTERNAL_GITHUB_ADAPTER",
+  "selected_pr_numbers": [
+    136,
+    137,
+    128,
+    144,
+    139,
+    148,
+    130,
+    146
+  ],
   "rows": [
     {
       "pr_number": 136,
@@ -13,10 +24,15 @@
         "scripts/run_venus_research_proposal.py",
         "tests/test_autonomous_research_proposal.py"
       ],
+      "commits": 3,
+      "additions": 56,
+      "deletions": 3,
+      "changed_files": 3,
       "provenance": {
         "pr": "https://github.com/oestradiol/Arcane-Magics/pull/136",
-        "relation_face": "GitHub PR body exact #reference extraction",
-        "path_face": "GitHub PR changed-files endpoint"
+        "relation_face": "GitHub PR body reduced to exact #reference tokens before learner prediction",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
       }
     },
     {
@@ -33,10 +49,15 @@
         "tests/test_autonomous_research_proposal.py",
         "tests/test_autonomous_return_authority.py"
       ],
+      "commits": 17,
+      "additions": 259,
+      "deletions": 21,
+      "changed_files": 9,
       "provenance": {
         "pr": "https://github.com/oestradiol/Arcane-Magics/pull/137",
-        "relation_face": "GitHub PR body exact #reference extraction",
-        "path_face": "GitHub PR changed-files endpoint"
+        "relation_face": "GitHub PR body reduced to exact #reference tokens before learner prediction",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
       }
     },
     {
@@ -50,10 +71,15 @@
         "tests/test_autonomous_governance.py",
         "tests/test_open_issue_coverage_carriers.py"
       ],
+      "commits": 6,
+      "additions": 182,
+      "deletions": 20,
+      "changed_files": 6,
       "provenance": {
         "pr": "https://github.com/oestradiol/Arcane-Magics/pull/128",
-        "relation_face": "GitHub PR body exact #reference extraction",
-        "path_face": "GitHub PR changed-files endpoint"
+        "relation_face": "GitHub PR body reduced to exact #reference tokens before learner prediction",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
       }
     },
     {
@@ -68,10 +94,15 @@
         "scripts/run_venus_patch_plan.py",
         "tests/test_autonomous_write_scope.py"
       ],
+      "commits": 7,
+      "additions": 489,
+      "deletions": 1,
+      "changed_files": 7,
       "provenance": {
         "pr": "https://github.com/oestradiol/Arcane-Magics/pull/144",
-        "relation_face": "GitHub PR body exact #reference extraction",
-        "path_face": "GitHub PR changed-files endpoint"
+        "relation_face": "GitHub PR body reduced to exact #reference tokens before learner prediction",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
       }
     },
     {
@@ -88,10 +119,15 @@
         "tests/test_autonomous_research_proposal.py",
         "tests/test_autonomous_return_authority.py"
       ],
+      "commits": 9,
+      "additions": 259,
+      "deletions": 21,
+      "changed_files": 9,
       "provenance": {
         "pr": "https://github.com/oestradiol/Arcane-Magics/pull/139",
-        "relation_face": "GitHub PR body exact #reference extraction",
-        "path_face": "GitHub PR changed-files endpoint"
+        "relation_face": "GitHub PR body reduced to exact #reference tokens before learner prediction",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
       }
     },
     {
@@ -106,10 +142,15 @@
         "tests/test_autonomous_worker.py",
         "tests/test_autonomous_write_scope.py"
       ],
+      "commits": 7,
+      "additions": 119,
+      "deletions": 9,
+      "changed_files": 7,
       "provenance": {
         "pr": "https://github.com/oestradiol/Arcane-Magics/pull/148",
-        "relation_face": "GitHub PR body exact #reference extraction",
-        "path_face": "GitHub PR changed-files endpoint"
+        "relation_face": "GitHub PR body reduced to exact #reference tokens before learner prediction",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
       }
     },
     {
@@ -125,10 +166,15 @@
         "tests/test_autonomous_governance.py",
         "tests/test_autonomous_research_proposal.py"
       ],
+      "commits": 10,
+      "additions": 552,
+      "deletions": 3,
+      "changed_files": 8,
       "provenance": {
         "pr": "https://github.com/oestradiol/Arcane-Magics/pull/130",
-        "relation_face": "GitHub PR body exact #reference extraction",
-        "path_face": "GitHub PR changed-files endpoint"
+        "relation_face": "GitHub PR body reduced to exact #reference tokens before learner prediction",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
       }
     },
     {
@@ -140,13 +186,20 @@
         "scripts/audit_autonomy_safety_matrix.py",
         "tests/test_autonomous_worker.py"
       ],
+      "commits": 4,
+      "additions": 60,
+      "deletions": 6,
+      "changed_files": 4,
       "provenance": {
         "pr": "https://github.com/oestradiol/Arcane-Magics/pull/146",
-        "relation_face": "GitHub PR body exact #reference extraction",
-        "path_face": "GitHub PR changed-files endpoint"
+        "relation_face": "GitHub PR body reduced to exact #reference tokens before learner prediction",
+        "path_face": "GitHub PR changed-files endpoint",
+        "scale_face": "GitHub PR metadata endpoint"
       }
     }
   ],
-  "promotion_authority": false,
-  "truth_authority": false
+  "labels_present": false,
+  "merged_state_present": false,
+  "truth_authority": false,
+  "promotion_authority": false
 }
