@@ -869,6 +869,14 @@
         "tests/test_autonomous_governance.py"
       ],
       "invariant": "External mentor context may weakly order or inform study only after lawful problem formation; it cannot escape allowed target keys, authorize actions, mint learning reward, establish truth, or count as independent evaluation."
+    },
+    {
+      "id": "SEMANTIC_TRACE_NOT_FUTURE_RETURN_OR_TRUTH",
+      "tests": [
+        "tests/test_relation_trace.py",
+        "tests/test_network_semantic_trace_prefreeze.py"
+      ],
+      "invariant": "A state-owned relation trace may be induced only from already returned encounter material and selected-study anchors; future return, hidden evaluation, truth authority, and promotion authority remain unavailable to proposal search."
     }
   ],
   "promotion_authority": false
