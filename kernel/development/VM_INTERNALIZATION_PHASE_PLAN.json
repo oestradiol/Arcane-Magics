@@ -305,7 +305,7 @@
     "network_semantic_trace_phase": {
       "prefreeze_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE.json",
       "search_state_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_SEARCH_STATE.json",
-      "status": "B1_BOUNDED_PASS__B2_MIXED_OR_WITHHOLD__B3_CLOSED",
+      "status": "B1_BOUNDED_PASS__B2_REPLICATED_POSITIVE_FOR_TITLE_ANCHORED_WITH_METRIC_TRADEOFF__B3_CLOSED",
       "lexical_baseline_preserved": true,
       "internalization_claim": false,
       "independent_evaluation": false,
@@ -326,7 +326,28 @@
         ]
       },
       "relation_trace_runtime_internalization_claim": false,
-      "next_lawful_step": "continue authorized returned-utility exploration over remaining expressible config(s) without retuning exposed candidates; if family exhausts without reproducible B2 gain, dimensionalize/revise the family prospectively before source removal"
+      "next_lawful_step": "continue fresh-target returned-utility recurrence without hand-picking target/config; prefreeze a diversity/polysemy-sensitive discriminator before using it; keep relation_trace.py as scaffold and B3 closed until shortcut-resistant B1 + reproducible B2 + source removal + restart/delayed reuse + independent evaluation are all earned",
+      "title_anchored_replication": {
+        "positive_targets": [
+          {
+            "issue": 169,
+            "status": "PASS_BOUNDED_RELATION_TRACE_QUERY",
+            "note": "anchor coverage 5→6; mean relevance 2.1667→2.3333; external centers 6→6"
+          },
+          {
+            "issue": 43,
+            "status": "PASS_BOUNDED_RELATION_TRACE_QUERY",
+            "note": "anchor coverage 4→5; mean relevance 2.0→2.6667; external centers 6→3"
+          }
+        ],
+        "unresolved_residuals": [
+          "external-center diversity can fall while lexicographic returned metric still improves",
+          "B1 nuisance invariance does not establish general semantic abstraction",
+          "polysemy/sense errors remain insufficiently penalized",
+          "independent evaluation remains false",
+          "capability-specific relation_trace.py scaffold remains present"
+        ]
+      }
     }
   },
   "promotion_authority": false,
