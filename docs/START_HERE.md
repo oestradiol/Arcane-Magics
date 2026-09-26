@@ -2,10 +2,13 @@
 
 Minerva is the **developmental machine and judging self/world model**.
 
-## Three doors
+## Four doors
 
 ### Run / reconstruct
 [Current state](../kernel/CURRENT_STATE.md) → [Reproduce](REPRODUCE.md)
+
+### Understand WorldMirror
+[WorldMirror VM](WORLDMIRROR_VM.md) → [Runtime index](../kernel/runtime/README.md) → [Development index](../kernel/development/README.md) → [State index](../kernel/state/README.md) → [Evidence index](../autonomy/evidence/README.md)
 
 ### Audit / judge
 [Earned milestones](EARNED_MILESTONES.md) → [Evaluation](EVALUATION_CONSTITUTION.md) → [Tests](TESTS.md)
