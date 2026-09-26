@@ -606,6 +606,13 @@
         "tests/test_prospective_recurrence.py"
       ],
       "invariant": "two fresh formed problems can drive successive learner-authored machinery changes while a contradictory third return is retained as WITHHOLD and does not force a patch"
+    },
+    {
+      "id": "LATERAL_INDEPENDENCE_NOT_SELF_GENERATED",
+      "tests": [
+        "tests/test_autonomous_epistemic_operator_contract.py"
+      ],
+      "invariant": "LATERALIZE must preserve independently answerable faces and their disagreement; multiple faces controlled by one representation do not count as independent return."
     }
   ],
   "promotion_authority": false
