@@ -26,7 +26,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      pages_configured: ${{ steps.pages.outcome }}
+      pages_configured: ${{ steps.pages_gate.outputs.ready }}
     steps:
       - name: Checkout routing layer
         uses: actions/checkout@v6
@@ -219,6 +219,18 @@ jobs:
         with:
           path: _site
 
+      - name: Record Pages deployment gate
+        id: pages_gate
+        if: always()
+        env:
+          PAGES_OUTCOME: ${{ steps.pages.outcome }}
+        run: |
+          if [ "$PAGES_OUTCOME" = "success" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Pages external-gate receipt
         if: steps.pages.outcome != 'success'
         run: |
@@ -228,7 +240,7 @@ jobs:
 
   deploy:
     needs: build
-    if: needs.build.outputs.pages_configured == 'success'
+    if: needs.build.outputs.pages_configured == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
