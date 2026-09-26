@@ -1,0 +1,218 @@
+{
+  "schema": "Venus.VMInternalizationPhasePlan.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_PHASE_PLAN_NOT_INTERNALIZATION_RESULT",
+  "objective": "Shrink WorldMirror's capability-specific semantic Python by moving earned consequence-bearing policies into learner-owned state, while retaining or replacing generic execution substrate and preserving external correction/authority relations.",
+  "source_constraints": [
+    "provenance/canonical-extracts/R193_SCAFFOLD_INTERNALIZATION_REFERENCE.md",
+    "provenance/CANONICAL_CAPABILITY_RECOVERY_MAP.json",
+    "kernel/development/INTERNALIZATION_BOUNDARY.json",
+    "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+    "docs/EVALUATION_CONSTITUTION.md"
+  ],
+  "laws": [
+    "CODE_DELETION!=INTERNALIZATION",
+    "STATE_OWNERSHIP!=GENERALIZATION",
+    "INTERNALIZATION!=PROMOTION",
+    "INTERNALIZE_COMPETENCE!=INTERNALIZE_CORRECTION_SOVEREIGNTY",
+    "SOURCE_REMOVAL_REQUIRED",
+    "FRESH_RETURN_REMAINS_EXTERNAL",
+    "EVALUATOR_REMAINS_EXTERNAL",
+    "ROLLBACK_AND_PROVENANCE_REMAIN_RECONSTRUCTIBLE",
+    "MATURE_REDUCTION_BEATS_INTERNALIZING_UNNECESSARY_COMPLEXITY"
+  ],
+  "runtime_dispositions": [
+    {
+      "path": "kernel/runtime/vmk2.py",
+      "disposition": "KEEP_CONSTITUTIONAL_GENERIC_CORE",
+      "reason": "typed evidence/return/state-transition mechanics; implementation may be replaced, but the noncollapse relations it enforces may not be consumed"
+    },
+    {
+      "path": "kernel/runtime/auth.py",
+      "disposition": "KEEP_EXTERNAL_AUTHORITY_SUBSTRATE",
+      "reason": "trust-root/authentication mechanics must remain outside unilateral learner authority"
+    },
+    {
+      "path": "kernel/runtime/canonical.py",
+      "disposition": "KEEP_GENERIC_SUBSTRATE",
+      "reason": "deterministic canonicalization/hash carrier"
+    },
+    {
+      "path": "kernel/runtime/current.py",
+      "disposition": "KEEP_GENERIC_SUBSTRATE",
+      "reason": "checkpoint hydration and hash/root verification; not cognition"
+    },
+    {
+      "path": "kernel/runtime/memory.py",
+      "disposition": "KEEP_STORAGE_SUBSTRATE",
+      "reason": "content-addressed storage is substrate; retrieval/selection policy is separately internalizable"
+    },
+    {
+      "path": "kernel/runtime/internalizer.py",
+      "disposition": "KEEP_EXTERNAL_ADMISSION_AUDIT",
+      "reason": "source-removal receipts and O*/Anti-Minerva boundary certification cannot become self-certification"
+    },
+    {
+      "path": "kernel/runtime/transform_program.py",
+      "disposition": "KEEP_GENERIC_INTERPRETER",
+      "reason": "program semantics are data; executor does not choose developmental content"
+    },
+    {
+      "path": "kernel/runtime/transform_program_successor.py",
+      "disposition": "KEEP_GENERIC_INTERPRETER",
+      "reason": "deterministic bounded patch applier; learner authors patch state"
+    },
+    {
+      "path": "kernel/runtime/internalized_search.py",
+      "disposition": "KEEP_GENERIC_INTERPRETER",
+      "reason": "already executes state-owned search grammar without donor/project semantics"
+    },
+    {
+      "path": "kernel/runtime/induced_policy.py",
+      "disposition": "KEEP_GENERIC_INTERPRETER",
+      "reason": "generic induction/execution mechanism; learned decision semantics live in state"
+    },
+    {
+      "path": "kernel/runtime/token_knn.py",
+      "disposition": "KEEP_GENERIC_INTERPRETER",
+      "reason": "generic token-set executor; episode-1 lateral semantics are state-owned"
+    },
+    {
+      "path": "kernel/runtime/calibrated_retrieval.py",
+      "disposition": "KEEP_GENERIC_INTERPRETER",
+      "reason": "generic retrieval/calibration executor; method choice is supplied as state"
+    },
+    {
+      "path": "kernel/runtime/bounded_recurrence.py",
+      "disposition": "KEEP_GENERIC_INTERPRETER_SPLIT_POLICY",
+      "reason": "founder-neutral recurrence execution may remain; target/search/repair-selection policy should increasingly live in state"
+    },
+    {
+      "path": "kernel/runtime/transform_program_repair_search.py",
+      "disposition": "MATURE_REDUCED_GENERIC_SUBSTITUTE",
+      "reason": "SSR4 shows simple full-capability exhaustive repair matches the claimed successor at the tested index; do not internalize complexity merely to preserve genealogy"
+    },
+    {
+      "path": "kernel/runtime/transform_program_multi_repair.py",
+      "disposition": "MATURE_REDUCED_GENERIC_SUBSTITUTE",
+      "reason": "bounded composition is currently matched by the simplest mature substitute at tested scope"
+    },
+    {
+      "path": "kernel/runtime/__init__.py",
+      "disposition": "KEEP_PACKAGE_SURFACE",
+      "reason": "package marker/export surface only"
+    }
+  ],
+  "developmental_targets": [
+    {
+      "path": "kernel/development/autonomous_problem_formation.py",
+      "target_semantics": "PROBLEM_FORMATION_POLICY",
+      "disposition": "CANDIDATE_STATE_INTERNALIZATION",
+      "priority": 1,
+      "gate": "fresh heterogeneous problem formation + source removal + matched ablation"
+    },
+    {
+      "path": "kernel/development/autonomous_study.py",
+      "target_semantics": "RESEARCH_ROUTING_POLICY",
+      "disposition": "CANDIDATE_STATE_INTERNALIZATION",
+      "priority": 2,
+      "gate": "state-owned method choice changes useful study under external return and survives scaffold removal"
+    },
+    {
+      "path": "kernel/development/autonomous_proposal.py",
+      "target_semantics": "GENERATE_POLICY",
+      "disposition": "CANDIDATE_STATE_INTERNALIZATION",
+      "priority": 3,
+      "gate": "proposal/discriminator structure survives source removal without inheriting authority"
+    },
+    {
+      "path": "kernel/development/network_inquiry.py",
+      "target_semantics": "NETWORK_QUERY_DERIVATION_POLICY",
+      "disposition": "CANDIDATE_STATE_INTERNALIZATION",
+      "priority": 4,
+      "gate": "learner-derived query policy survives source removal; Web adapter and encounter return remain external"
+    },
+    {
+      "path": "kernel/development/autonomous_learning.py",
+      "target_semantics": "LEARNING_UPDATE_POLICY",
+      "disposition": "CANDIDATE_STATE_INTERNALIZATION",
+      "priority": 5,
+      "gate": "returned-review-conditioned update remains causal under held-out recurrence and cannot learn from self-return"
+    },
+    {
+      "path": "kernel/development/autonomous_worker.py",
+      "target_semantics": "ORCHESTRATION_POLICY",
+      "disposition": "SHRINK_AFTER_SUBPOLICIES_INTERNALIZE",
+      "priority": 6,
+      "gate": "worker becomes thin interpreter/router; write jurisdiction and promotion stay external"
+    },
+    {
+      "path": "kernel/development/autonomous_recurrence.py",
+      "target_semantics": "RECURRENCE_SELECTION_POLICY",
+      "disposition": "SPLIT_INTERNALIZABLE_FROM_EXTERNAL_RETURN_CUSTODY",
+      "priority": 7,
+      "gate": "state-owned recurrence choice; return authorization/evaluation remains outside"
+    },
+    {
+      "path": "kernel/development/lateral_episode.py",
+      "target_semantics": "LATERALIZATION_POLICY",
+      "disposition": "BOUNDED_INTERNALIZATION_PASS_GENERALIZATION_FAIL",
+      "priority": 8,
+      "gate": "episode-1 semantics are state-owned, but fresh transfer accuracy 1/8 blocks a general Lateralizer claim"
+    },
+    {
+      "path": "kernel/development/internal_ostar_teacher.py",
+      "target_semantics": "TEACHER_DONOR",
+      "disposition": "DONOR_PROVENANCE_NOT_RUNTIME_DEPENDENCY",
+      "priority": 99,
+      "gate": "must remain unnecessary to learner-side runtime; preserve for provenance/testing only"
+    }
+  ],
+  "noninternalizable_relations": [
+    "WORLD_OTHER",
+    "FRESH_WORLD_RETURN",
+    "EVIDENCE_IDENTITY",
+    "EVALUATOR_CUSTODY",
+    "TRUST_ROOT",
+    "AUTHORIZATION",
+    "JURISDICTION",
+    "CLAIM_BINDING_AUTHORITY",
+    "STOP_WITHHOLD_SAFETY_LAW",
+    "ROLLBACK_PARENT_CUSTODY",
+    "ANTI_MINERVA_CORRECTION_PERMEABILITY",
+    "O_STAR_EXTERNAL_VALIDATION",
+    "HARD_SUBSTRATE_CAPABILITY_BOUNDARY"
+  ],
+  "candidate_gate": [
+    "freeze capability and comparator before relevant return",
+    "encode consequence-bearing semantics in learner-owned state",
+    "make capability-specific source/teacher/donor inaccessible",
+    "run same-scope equivalence or preregistered improvement test",
+    "run matched ablation",
+    "run alpha/name/source-identity perturbation where applicable",
+    "run fresh disjoint transfer before any generalization claim",
+    "preserve external World/evaluator/authority/rollback roles",
+    "preserve source provenance and successor reconstruction",
+    "mint bounded internalization receipt only after independent result"
+  ],
+  "phase_order": [
+    "P0 repair audit/provenance drift and require full branch audit",
+    "P1 retain mature-reduced generic runtime rather than internalizing needless complexity",
+    "P2 internalize one developmental policy at a time beginning with learner problem formation when a fresh discriminator is available",
+    "P3 shrink autonomous worker after problem/study/proposal/query policies become state-owned",
+    "P4 internalize memory retrieval/crystallization policy while keeping storage and external sources distinct",
+    "P5 reattempt general Lateralizer only after a new prefrozen fresh-transfer discriminator; current 1/8 transfer remains negative evidence",
+    "P6 repeat source-removal and deletion/archive of consumed capability-specific scaffolds only after each bounded receipt"
+  ],
+  "current_evidence": {
+    "generic_residual_search_internalized": true,
+    "internal_ostar_state_owned": true,
+    "lateral_episode1_projection_policy_internalized": true,
+    "lateral_episode1_generalization_pass": false,
+    "lateral_episode1_fresh_transfer_accuracy": 0.125,
+    "u1_founder_source_ablation_pass": true,
+    "ssr4_mature_reduced_to_simple_substitute": true
+  },
+  "promotion_authority": false,
+  "truth_authority": false
+}
