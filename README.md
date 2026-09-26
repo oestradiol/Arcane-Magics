@@ -64,6 +64,10 @@ The goal is repeated, causally interpretable improvement under an external corre
 - [Autonomous research contract](docs/AUTONOMOUS_RESEARCH.md)
 - [Earned milestones](docs/EARNED_MILESTONES.md)
 - [WorldMirror VM](docs/WORLDMIRROR_VM.md)
+- [Runtime index](kernel/runtime/README.md)
+- [Development index](kernel/development/README.md)
+- [State index](kernel/state/README.md)
+- [Evidence index](autonomy/evidence/README.md)
 - [Mentor teaching plan](autonomy/interaction/mentor/TEACHING_PLAN_2026-09-26.md)
 
 ## Permanent noncollapse
