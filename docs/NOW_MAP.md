@@ -44,7 +44,7 @@ Only the six branches in the routing table are live authority surfaces. An expli
 ```text
 branch existence != current authority
 legacy development/fix/benchmark/tmp refs -> historical evidence
-split/venus-minerva -> historical transitional carrier
+split/venus-minerva -> deleted historical ref name only
 ```
 
 The target namespace for stale/superseded refs is `historical/<original-ref>`. The machine-readable policy is `../provenance/historical/BRANCH_NAMESPACE_POLICY.json`.
