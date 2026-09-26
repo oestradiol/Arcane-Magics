@@ -1,7 +1,7 @@
 {
   "schema": "Venus.StateOwnedStructuredTemplateProgram.v0.1",
   "date": "2026-09-26",
-  "status": "LEARNER_OWNED_STATE_CANDIDATE__SOURCE_REMOVAL_NOT_YET_RETURNED",
+  "status": "LEARNER_OWNED_STATE_SOURCE_REMOVAL_PASSED__INDEPENDENT_EVALUATION_WITHHELD",
   "capability_id": "COGNITIVE_THEATER_BOUNDED_LOCAL_OPERATOR_STATE",
   "executor_contract": {
     "module": "kernel/runtime/structured_template_machine.py",
@@ -387,11 +387,12 @@
     "capability_specific_python_runtime_dependency": false,
     "generic_executor_substrate_allowed": true,
     "source_python_reference_is_provenance_only": true,
-    "source_removal_returned": false,
+    "source_removal_returned": true,
     "independent_evaluation_returned": false,
     "internalization_claim": false,
     "promotion_authority": false,
-    "truth_authority": false
+    "truth_authority": false,
+    "source_removal_result_ref": "kernel/development/COGNITIVE_THEATER_SOURCE_REMOVAL_FRESH7_RESULT.json"
   },
   "provenance_sources": [
     "kernel/development/COGNITIVE_THEATER_LOCAL_OPERATOR_FRESH5_RESULT.json",
@@ -413,5 +414,6 @@
     "ROLLBACK_PARENT_CUSTODY"
   ],
   "claim_fence": "State-ownership candidate only. Source removal and independent evaluation remain required before any Internalizer claim.",
-  "output_state_schema": "Venus.CognitiveTheaterState.v0.1"
+  "output_state_schema": "Venus.CognitiveTheaterState.v0.1",
+  "next_residual": "INDEPENDENT_HIDDEN_FRESH_RETURN_WITH_EVALUATOR_CUSTODY_OUTSIDE_LOCAL_LEARNER"
 }
