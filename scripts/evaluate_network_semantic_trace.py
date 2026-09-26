@@ -33,6 +33,45 @@ def score(m:dict)->tuple:
     )
 
 
+
+def decide(pref:dict, baseline:dict, candidate:dict)->dict:
+    eligible=int(candidate["external_center_count"])>=2
+    schema=str(pref.get("schema") or "")
+    if schema=="Venus.NetworkSemanticTraceProspectiveComparator.v0.2":
+        checks={
+            "anchor_coverage_nonregression":int(candidate["anchor_coverage_count"])>=int(baseline["anchor_coverage_count"]),
+            "mean_relevance_nonregression":float(candidate["mean_relevance_matches"])>=float(baseline["mean_relevance_matches"]),
+            "external_center_nonregression":int(candidate["external_center_count"])>=int(baseline["external_center_count"]),
+            "query_token_nonregression":int(candidate["query_token_count"])<=int(baseline["query_token_count"]),
+        }
+        strict=(
+            int(candidate["anchor_coverage_count"])>int(baseline["anchor_coverage_count"])
+            or float(candidate["mean_relevance_matches"])>float(baseline["mean_relevance_matches"])
+            or int(candidate["external_center_count"])>int(baseline["external_center_count"])
+            or int(candidate["query_token_count"])<int(baseline["query_token_count"])
+        )
+        passed=eligible and all(checks.values()) and strict
+        return {
+            "passed":passed,
+            "eligible":eligible,
+            "strict_gain":strict,
+            "checks":checks,
+            "mode":"PARETO_NONREGRESSION_V2",
+            "status":"PASS_BOUNDED_RELATION_TRACE_QUERY_V2" if passed else "WITHHOLD_V2_NONREGRESSION_OR_GAIN_NOT_MET",
+        }
+
+    bs=score(baseline)
+    cs=score(candidate)
+    passed=eligible and cs>bs
+    return {
+        "passed":passed,
+        "eligible":eligible,
+        "strict_gain":passed,
+        "checks":{},
+        "mode":"LEXICOGRAPHIC_V1",
+        "status":"PASS_BOUNDED_RELATION_TRACE_QUERY" if passed else "WITHHOLD_NO_RETURNED_GAIN_OVER_LEXICAL_BASELINE",
+    }
+
 def main()->int:
     p=argparse.ArgumentParser()
     p.add_argument("--prefreeze",required=True)
@@ -52,9 +91,10 @@ def main()->int:
 
     bm=metrics(bq,be); cm=metrics(cq,ce)
     bs=score(bm); cs=score(cm)
-    eligible=cm["external_center_count"]>=2
-    improved=eligible and cs>bs
-    status="PASS_BOUNDED_RELATION_TRACE_QUERY" if improved else "WITHHOLD_NO_RETURNED_GAIN_OVER_LEXICAL_BASELINE"
+    decision=decide(pref,bm,cm)
+    eligible=decision["eligible"]
+    improved=decision["passed"]
+    status=decision["status"]
     out={
         "schema":"Venus.NetworkSemanticTraceComparatorResult.v0.1",
         "prefreeze_schema":pref.get("schema"),
@@ -68,6 +108,9 @@ def main()->int:
         "baseline_score":list(bs),
         "candidate_score":list(cs),
         "candidate_external_center_floor_met":eligible,
+        "decision_mode":decision["mode"],
+        "nonregression_checks":decision["checks"],
+        "strict_gain_condition_met":decision["strict_gain"],
         "strict_returned_gain":improved,
         "independent_evaluation":False,
         "internalization_claim":False,
