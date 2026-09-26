@@ -48,6 +48,25 @@ class RelationTraceTests(unittest.TestCase):
             "RETURNED_UTILITY_EXPLORATION_THEN_STRUCTURAL",
         )
 
+    def test_returned_failure_moves_exploration_off_failed_config(self):
+        sources=(
+            {"source_id":"s1","title":"memory causal abstraction","observed_relation":"memory trace preserves causal relation"},
+            {"source_id":"s2","title":"lifelong memory relation","observed_relation":"memory abstraction changes lifelong retrieval"},
+        )
+        learning={
+            "trace_config_success":{"MULTI_ANCHOR":0},
+            "trace_config_failure":{"MULTI_ANCHOR":1},
+        }
+        out=search_relation_trace(
+            STATE,
+            anchors=("memory","lifelong","learning"),
+            sources=sources,
+            learning_state=learning,
+        )
+        self.assertEqual(out.selection_basis,"RETURNED_UTILITY_EXPLORATION_THEN_STRUCTURAL")
+        self.assertNotEqual(out.config_id,"MULTI_ANCHOR")
+        self.assertEqual(out.config_attempts,0)
+
     def test_future_return_and_hidden_eval_are_rejected(self):
         bad={**STATE,"future_return_input":True}
         with self.assertRaisesRegex(Exception,"future return"):
