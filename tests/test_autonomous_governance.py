@@ -467,6 +467,20 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertIn("gh pr list --state all --limit 200 --json number,title,body,state,isDraft,mergeStateStatus,updatedAt", text)
         self.assertIn("files > /tmp/minerva/prs.json", text)
 
+
+    def test_active_pr_incidence_is_separate_from_historical_pr_returns(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("gh pr list --state open --limit 200", text)
+        self.assertIn("> /tmp/minerva/prs.json", text)
+        self.assertIn("gh pr list --state all --limit 200", text)
+        self.assertIn("reviews > /tmp/minerva/history-prs.json", text)
+        self.assertIn("--history-prs /tmp/minerva/history-prs.json", text)
+
+    def test_stop_cycle_does_not_crystallize_cross_register_handoff(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn('if [ "$decision" = "STOP" ]; then', text)
+        self.assertIn("no cross-register handoff is licensed", text)
+
     def test_handoff_preserves_minerva_as_second_parent(self):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn('git checkout -b "$branch" origin/split/venus', text)
