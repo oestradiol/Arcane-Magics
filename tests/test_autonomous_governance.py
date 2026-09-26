@@ -440,7 +440,14 @@ class AutonomousGovernanceTests(unittest.TestCase):
         verify_at = text.index("Verify Minerva local machine")
         push_at = text.index("git push origin")
         self.assertLess(verify_at, push_at)
-        self.assertIn("python -m unittest discover -s tests -p \u0027test_*.py\u0027", text)
+        self.assertIn("python scripts/audit_layer_surface.py", text)
+        self.assertIn("python -m unittest tests/test_autonomous_governance.py", text)
+        self.assertIn("python -m unittest tests/test_internalizer.py", text)
+        self.assertIn("python -m unittest tests/test_autonomous_epistemic_operator_contract.py", text)
+        self.assertIn("python -m unittest tests/test_internalization_boundary.py", text)
+        self.assertIn("python -m unittest tests/test_www_mind_gate.py", text)
+        self.assertIn("python -m unittest tests/test_developmental_gate_chain.py", text)
+        self.assertNotIn("python -m unittest discover -s tests", text)
         self.assertIn("audit_autonomy_safety_matrix.py", text)
 
     def test_bounded_cycle_occurs_before_handoff_write(self):
