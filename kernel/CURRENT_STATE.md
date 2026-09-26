@@ -537,3 +537,58 @@ Music as prosody/duration/expectation
 Preserving order and multiplicity materially improves this bounded microtheater over commutative set similarity. That result does not establish general language, culture, Theater, Music, or Internalizer competence.
 
 Next residual: learn a pairwise relational Theater graph for indexed KFS, then compose that with the bounded G3 order result before source removal.
+
+
+## Cognitive theater: local operator separation — Fresh5
+
+Returned prefrozen evidence:
+
+```text
+Fresh3 pairwise relational graph
+→ 7/16
+→ insufficient for indexed KFS
+
+Fresh4 whole-scene normalization
+→ 7/16
+→ below unary/pairwise 10/16
+→ discourse presentation order was contaminating Theater comparison
+
+Fresh5 local relation-bearing operators
+→ count-only 0/24
+→ unary ordered 14/24
+→ pairwise 16/24
+→ whole-scene 15/24
+→ local operator graph 24/24
+```
+
+The earned bounded distinction is:
+
+```text
+Language presentation order
+!= Theater participant/KFS relation
+
+local relation operator composition
+!= whole-scene template matching
+
+discourse order may be gauge
+while modeled event/history order remains causal
+```
+
+This is **not** yet explicit Theater-state ownership. The active burden is:
+
+```text
+learned local operators
+→ explicit CognitiveTheaterState
+→ participant-local KFS
+→ event/history structure
+→ binding and order interventions
+→ fresh cross-face return
+→ source removal
+→ only then reconsider Internalizer
+```
+
+Canonical provenance is recorded at
+`provenance/canonical-extracts/R194_LANGUAGE_TO_COGNITIVE_THEATER_CAUSAL_EXTRACT_2026-09-26.md`.
+The extract preserves the older role/deixis/coreference/tense/discourse/history consequences without retroactively claiming that Canonical contained a primitive literally named Theater.
+
+General Theater, general Music, cultural-cognitive, Internalizer, AGI, and consciousness claims remain WITHHOLD.
