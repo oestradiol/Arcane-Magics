@@ -1,0 +1,75 @@
+{
+  "schema": "Venus.FoundationalCognitiveTheaterSurfaceBaselineResult.v0.1",
+  "issue_ref": 206,
+  "status": "FAIL_SURFACE_ONLY_CROSS_FACE_INVARIANCE",
+  "method": {
+    "executor": "kernel/runtime/calibrated_retrieval.py",
+    "family": "CHAR_NGRAM_JACCARD",
+    "n": 3,
+    "k": 1
+  },
+  "native": {
+    "correct": 14,
+    "total": 16,
+    "accuracy": 0.875,
+    "withholds": 0,
+    "per_face_summary": {
+      "ENGLISH": {
+        "correct": 3,
+        "total": 4,
+        "withholds": 0
+      },
+      "JAPANESE": {
+        "correct": 4,
+        "total": 4,
+        "withholds": 0
+      },
+      "BRAZILIAN_PORTUGUESE": {
+        "correct": 4,
+        "total": 4,
+        "withholds": 0
+      },
+      "MATHEMATICS": {
+        "correct": 3,
+        "total": 4,
+        "withholds": 0
+      }
+    }
+  },
+  "leave_one_face_out": {
+    "correct": 5,
+    "total": 16,
+    "accuracy": 0.3125,
+    "withholds": 5,
+    "per_face_summary": {
+      "ENGLISH": {
+        "correct": 1,
+        "total": 4,
+        "withholds": 0
+      },
+      "JAPANESE": {
+        "correct": 0,
+        "total": 4,
+        "withholds": 4
+      },
+      "BRAZILIAN_PORTUGUESE": {
+        "correct": 3,
+        "total": 4,
+        "withholds": 0
+      },
+      "MATHEMATICS": {
+        "correct": 1,
+        "total": 4,
+        "withholds": 1
+      }
+    }
+  },
+  "threshold": 0.75,
+  "interpretation": "Current generic surface retrieval retains much within-face lexical structure but does not reconstruct the relation reliably when a representational theater is withheld. This is a bounded comparator residual for richer cognitive-theater learning, not evidence that any language/culture is intrinsically better or worse.",
+  "next_residual": "LEARN_RELATIONAL_THEATER_STATE_BEYOND_SURFACE_SIMILARITY",
+  "internalization_claim": false,
+  "general_language_claim": false,
+  "cultural_cognition_claim": false,
+  "promotion_authority": false,
+  "truth_authority": false
+}
