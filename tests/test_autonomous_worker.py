@@ -310,12 +310,14 @@ class AutonomousWorkerTests(unittest.TestCase):
                     {"path": "kernel/runtime/vmk2.py"},
                     {"path": "tests/test_vmk2_invariants.py"},
                 ],
+                "reviews": [{"state": "COMMENTED"}],
             }]), encoding="utf-8")
             rows = load_work_items(path, "PR")
         self.assertEqual(
             rows[0].changed_paths,
             ("kernel/runtime/vmk2.py", "tests/test_vmk2_invariants.py"),
         )
+        self.assertEqual(rows[0].review_count, 1)
 
 
     def test_autonomous_cycle_binds_exact_edu16_reconstructed_parent(self):
@@ -443,6 +445,47 @@ class AutonomousWorkerTests(unittest.TestCase):
         self.assertEqual(cycle.decision, "STOP")
         self.assertIsNone(cycle.target_number)
         self.assertEqual(cycle.formed_problem_disposition, "STOP_NO_CONSEQUENTIAL_RESIDUAL")
+
+    def test_unreviewed_handoff_pr_is_not_fresh_world_return(self):
+        handoff=WorkItem(
+            "PR", 212, "handoff: review Minerva learner-selected network inquiry for issue #206",
+            merge_state="CLEAN",
+            body="This draft PR is an external-review carrier only. Merge/admission remains separate.",
+            review_count=0,
+        )
+        actual=WorkItem("ISSUE",206,"actual developmental target")
+        chosen=choose_target(
+            (handoff,actual),
+            roadmap_text="#206",
+            kind_utility={"PR":10.0,"ISSUE":0.0},
+        )
+        self.assertEqual((chosen.kind,chosen.number),("ISSUE",206))
+
+    def test_external_review_reopens_handoff_pr_as_world_return(self):
+        handoff=WorkItem(
+            "PR", 212, "handoff: review Minerva learner-selected network inquiry for issue #206",
+            merge_state="CLEAN",
+            body="This draft PR is an external-review carrier only. Merge/admission remains separate.",
+            review_count=1,
+        )
+        actual=WorkItem("ISSUE",206,"actual developmental target")
+        chosen=choose_target(
+            (handoff,actual),
+            roadmap_text="#206",
+            kind_utility={"PR":10.0,"ISSUE":0.0},
+        )
+        self.assertEqual((chosen.kind,chosen.number),("PR",212))
+
+    def test_concrete_conflict_reopens_unreviewed_handoff_pr(self):
+        handoff=WorkItem(
+            "PR", 212, "handoff: review Minerva learner-selected network inquiry for issue #206",
+            merge_state="CONFLICTING",
+            body="This draft PR is an external-review carrier only. Merge/admission remains separate.",
+            review_count=0,
+        )
+        actual=WorkItem("ISSUE",206,"actual developmental target")
+        chosen=choose_target((handoff,actual),roadmap_text="#206")
+        self.assertEqual((chosen.kind,chosen.number),("PR",212))
 
     def test_generated_handoff_carriers_are_not_reselected(self):
         items = (
