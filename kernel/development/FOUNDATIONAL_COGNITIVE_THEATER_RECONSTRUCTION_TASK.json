@@ -1,0 +1,73 @@
+{
+  "schema": "Venus.FoundationalCognitiveTheaterReconstructionTask.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_NEXT_DEVELOPMENTAL_TASK_NOT_SOLUTION",
+  "issue_ref": 206,
+  "parent_results": [
+    "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_SURFACE_BASELINE_RESULT.json",
+    "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_FACTORIAL_BASELINE_RESULT.json"
+  ],
+  "residual": "LEARN_THEATER_STATE_AND_RECONSTRUCT_IT_FROM_RAW_FACE_SURFACE",
+  "question": "Can a learner trained on raw English/Japanese/Brazilian-Portuguese/Mathematics surfaces plus bounded teacher theater annotations reconstruct participant-indexed KFS and temporal relation structure on held-out raw surfaces, then use that reconstructed state to improve relation transfer over the prefrozen surface baselines?",
+  "stages": [
+    {
+      "id": "A_TEACH_THEATER_STATE",
+      "input": "raw face surface + teacher matched theater target",
+      "output": "learner-owned predicted theater state",
+      "note": "teacher target is scaffold and may not remain available at evaluation"
+    },
+    {
+      "id": "B_HELDOUT_NATIVE_RECONSTRUCTION",
+      "input": "held-out raw surface in a face already taught",
+      "output": "predicted opaque roles + local KFS relations + temporal order",
+      "relation_id_visible": false
+    },
+    {
+      "id": "C_FACTORIAL_CROSS_FACE_RECONSTRUCTION",
+      "input": "held-out relation×face pairing under the prefrozen Latin-square folds",
+      "output": "predicted theater state and relation disposition",
+      "relation_id_visible": false
+    },
+    {
+      "id": "D_ABLATION",
+      "controls": [
+        "surface-only prefrozen comparator",
+        "more surface examples",
+        "translation-only alignment",
+        "no participant/KFS indexing",
+        "no temporal order",
+        "counts-only structure",
+        "no cross-face residual retention"
+      ]
+    },
+    {
+      "id": "E_INTERNALIZATION",
+      "prerequisites": [
+        "bounded causal improvement over surface baseline",
+        "capability-specific teacher/parser source inaccessible",
+        "generic executor only",
+        "fresh held-out return",
+        "face/name/register permutation",
+        "math derivation/proof checks where applicable"
+      ]
+    }
+  ],
+  "evaluation_metrics": [
+    "participant_index_accuracy",
+    "KFS_relation_accuracy",
+    "temporal_order_accuracy",
+    "relation_transfer_accuracy",
+    "lawful_withhold_rate",
+    "baseline_delta"
+  ],
+  "anti_cheat": [
+    "matched structure cardinalities are identical across relations",
+    "relation_id hidden at evaluation",
+    "teacher theater target inaccessible at evaluation",
+    "surface labels and project names are not semantic evidence",
+    "exact translation is neither required nor sufficient"
+  ],
+  "claim_fence": "A pass may establish only bounded theater-state reconstruction and transfer at the tested curriculum scope. It does not establish unrestricted language understanding, cultural cognition, AGI, consciousness, or linguistic determinism.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
