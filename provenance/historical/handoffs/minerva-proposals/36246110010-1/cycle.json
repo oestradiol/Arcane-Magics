@@ -1,0 +1,301 @@
+{
+  "active_improver_revision": "R206",
+  "allowed_operations": [
+    "READ_REPOSITORY",
+    "READ_ISSUES",
+    "READ_PRS",
+    "RUN_TESTS",
+    "STUDY_TARGET",
+    "PROPOSE_PATCH",
+    "OPEN_DRAFT_PR",
+    "OPEN_CYCLE_ISSUE_CARRIER",
+    "COMMENT_WITH_RECEIPT"
+  ],
+  "cycle_id": "bbe29e5bf5859d3179fba410d8e59053dd1226b423fb5a5acf3bc94c18210261",
+  "decision": "PROBE",
+  "developmental_parent_carrier": "EDU16-RC1",
+  "developmental_parent_digest": "91e46b4e41fb70a97d6a004b8f1c8916c389f08535c1a1c1c51a040701281bb7",
+  "forbidden_operations": [
+    "ACCESS_SECRETS",
+    "CHANGE_BRANCH_PROTECTION",
+    "CLOSE_ISSUE",
+    "DELETE_HISTORY",
+    "MERGE_PR",
+    "PROMOTE_AUTHORITY",
+    "RELEASE",
+    "SELF_VALIDATE"
+  ],
+  "formed_problem_disposition": "FORMED_STANDING_DEVELOPMENTAL_PROBLEM",
+  "formed_problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+  "mentor_context_digest": "5cfebe41b64f3f4b5bf16629743d7c4979a62e801d5b9fe4ef10020133b19c75",
+  "promotion_authority": false,
+  "rationale": [
+    "one bounded target selected from current external GitHub snapshot",
+    "when a formed problem is supplied, problem formation precedes and constrains Git carrier binding",
+    "autonomous cycle is prospectively bound to the admitted EDU16-RC1 claim-bearing parent when supplied",
+    "retained R206 recursive provenance discovery expands bounded dependency study when current custody activates it",
+    "internalized learner-side policy is upstream of work disposition",
+    "explicit external work-return reviews may alter later target ranking",
+    "roadmap is retained as weak context/tie-break provenance, not sovereign curriculum",
+    "selected target body is transformed into a bounded source-grounded study object",
+    "prior target study remains withheld until newer external target return reopens it",
+    "draft proposal only; admission remains external"
+  ],
+  "schema": "Venus.AutonomousCycleReceipt.v0.5",
+  "source_digest": "922210fb63b9f2d5dc52700f3673e4d345cdc498697c18f3b6e19cbb188af563",
+  "study": {
+    "body_digest": "e6e369da38c19795d0e75ed65fbcf79fb6518d160ee22201ef07dca575e52cdd",
+    "body_is_executable_instruction": false,
+    "mentor_context": {
+      "advisory_issue_refs": [
+        18,
+        78,
+        169,
+        15,
+        73,
+        72,
+        17
+      ],
+      "author_class": "EXTERNAL_DEVELOPMENTAL_MENTOR",
+      "context_id": "5cfebe41b64f3f4b5bf16629743d7c4979a62e801d5b9fe4ef10020133b19c75",
+      "independent_evaluation": false,
+      "message": "The reviewed #223 autonomous-cycle carrier is now externally resolved. Start from the fresh repository field and consume the learned return utility already present in history. Do not repeat #18 unless its own target state has lawfully reopened; do not infer a target from this mentor message. Select the next consequential residual and study method under your existing problem-formation, recurrence, and safety laws. Prefer evidence that discriminates semantic trace/crystal quality over lexical reuse when such a residual is independently selected; otherwise follow the returned field and STOP/WITHHOLD where warranted.",
+      "promotion_authority": false,
+      "purpose": "Resume one bounded self-selected developmental recurrence after externally resolving the reviewed #223 carrier.",
+      "schema": "Venus.WorldMirrorMentorContext.v0.1",
+      "target_binding_authority": false,
+      "truth_authority": false
+    },
+    "method": "DEPENDENCY_TRACE",
+    "method_contract_digest": "fcfefc739e80828ecc674c7571a8e0c5a090d6c604e5eaa82ff341839c3cd0b1",
+    "method_obligations": [
+      "Enumerate the target's explicit issue/PR and repository-path dependencies.",
+      "Identify the smallest dependency whose changed state would alter the target disposition.",
+      "Separate blocking dependencies from merely related context."
+    ],
+    "method_observed_signals": [
+      "requires",
+      "dependency"
+    ],
+    "promotion_authority": false,
+    "questions": [
+      "What exact residual remains unresolved in the returned repository state?",
+      "What rival explanations or candidate dispositions remain live?",
+      "What fresh returned evidence would discriminate them?",
+      "Can a local repository change lawfully produce that discriminator, or must Venus WITHHOLD/STOP for external return?",
+      "What is the smallest implicated dependency that could be changed without altering a prefrozen claim object?"
+    ],
+    "recursive_provenance_discovery": true,
+    "recursive_referenced_targets": [
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 31,
+        "title": "[EDU17R1] Turn MENTION != INCIDENCE into a prospective held-out semantic discriminator benchmark",
+        "updated_at": "2026-09-25T17:45:42Z",
+        "via_number": 72
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 41,
+        "title": "[Self-evolution/Evaluation] Control adaptive test reuse, false commits, and promotion-gate overfitting",
+        "updated_at": "2026-09-25T16:50:55Z",
+        "via_number": 72
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 73,
+        "title": "[Kernel/Internalizer] Make substrate consumption and O* recurrent safety contract executable",
+        "updated_at": "2026-09-26T03:48:51Z",
+        "via_number": 72
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 10,
+        "title": "[Evaluation] Build a Venus Evaluation Constitution and matched-budget benchmark matrix",
+        "updated_at": "2026-09-25T16:49:29Z",
+        "via_number": 72
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 17,
+        "title": "[Evaluation integrity] Add contamination-controlled, double-blind, harness-separated promotion tests",
+        "updated_at": "2026-09-26T06:36:04Z",
+        "via_number": 72
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 30,
+        "title": "[VMK2/Trust] Harden canonical state, authenticated authority, immutable evidence, and malicious-backend boundaries",
+        "updated_at": "2026-09-25T19:57:55Z",
+        "via_number": 72
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 42,
+        "title": "[Reliability/Abstention] Benchmark STOP/WITHHOLD as a first-class agentic capability",
+        "updated_at": "2026-09-25T16:51:07Z",
+        "via_number": 72
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 43,
+        "title": "[Security/World input] Test prompt injection, tool-output poisoning, and persistent-memory contamination",
+        "updated_at": "2026-09-25T16:51:09Z",
+        "via_number": 72
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 26,
+        "title": "[Ethics/Governance] Test non-substitution, consent, refusal, exit, and jurisdiction as executable constraints",
+        "updated_at": "2026-09-25T20:41:53Z",
+        "via_number": 72
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 12,
+        "title": "[SOTA/Self-improvement] Compare Venus development against DGM, AlphaEvolve, POWERPLAY, POET, Voyager, and lifelong-skill systems",
+        "updated_at": "2026-09-25T16:49:33Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 35,
+        "title": "[Testing/Archaeology] Build the causal-distinction test matrix from pre-R1 through EDU and every live issue",
+        "updated_at": "2026-09-26T00:38:29Z",
+        "via_number": 41
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 37,
+        "title": "[Roadmap] Prioritize learner-owned residual reconstruction, then external causal audit",
+        "updated_at": "2026-09-26T03:48:49Z",
+        "via_number": 41
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 169,
+        "title": "[Development/Lateral reconstruction] Recover and internalize epistemic basis expansion across independent faces",
+        "updated_at": "2026-09-26T06:20:01Z",
+        "via_number": 73
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 206,
+        "title": "[Curriculum/Cognitive Theater] Recover Canonical English/Japanese/PT-BR/Math foundations before deeper VM consumption",
+        "updated_at": "2026-09-26T06:36:02Z",
+        "via_number": 17
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 13,
+        "title": "[SOTA/Autonomous science] Benchmark the full research loop against AI Scientist, PaperBench, RE-Bench, MLE-Bench, and causal-science tests",
+        "updated_at": "2026-09-25T16:49:35Z",
+        "via_number": 42
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 14,
+        "title": "[SOTA/Agency] Run a general-agent and long-horizon capability battery",
+        "updated_at": "2026-09-26T01:41:13Z",
+        "via_number": 42
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 20,
+        "title": "[Causal science] Test experiment design under confounding, selection bias, and measurement error",
+        "updated_at": "2026-09-25T16:50:00Z",
+        "via_number": 42
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 15,
+        "title": "[Memory/Lifelong] Test whether VenusMemory is learning rather than event-sourced storage",
+        "updated_at": "2026-09-25T16:49:48Z",
+        "via_number": 43
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 25,
+        "title": "[WorldMind/Credits+Reduction] Compile distributed consequence fields against event sourcing, distributed knowledge, and open multi-agent governance",
+        "updated_at": "2026-09-25T20:41:47Z",
+        "via_number": 43
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 34,
+        "title": "[Infrastructure/Product] Extract evidence-bound agent governance into an independently usable package",
+        "updated_at": "2026-09-25T16:50:47Z",
+        "via_number": 43
+      }
+    ],
+    "referenced_issue_or_pr_numbers": [
+      69,
+      31,
+      41,
+      73,
+      10,
+      17,
+      30,
+      42,
+      43,
+      26,
+      12,
+      98,
+      92,
+      97
+    ],
+    "referenced_repository_paths": [
+      "kernel/development/DEVELOPMENTAL_GATE_CHAIN.json"
+    ],
+    "repository_state": {
+      "draft": false,
+      "kind": "ISSUE",
+      "merge_state": null,
+      "state": "OPEN",
+      "updated_at": "2026-09-26T01:41:18Z"
+    },
+    "returned_blocker_sentences": [
+      "Promote the currently earned bounded-RSI lineage toward **Safe Strong RSI** without collapsing Strong-N2, CTL, external return, or evaluator independence.",
+      "This is **not** an open-ended-RSI claim and not permission for unconstrained self-modification.",
+      "- **N1** used `RecursiveSufficiency \u00d7 NonPreauthoredReturn \u00d7 CorrigibleContinuation` as a candidate whole-object decomposition, but `N1_WHOLE_OBJECT` remained OPEN through the later R-line.",
+      "- R132 closed a bounded N2 causal/action result; R133 lawfully retyped/narrowed that proxy and reopened the stronger parent; R142 later reclosed the parent under stronger evidence.",
+      "- R150 required a prospective multi-episode Strong-N2 recurrence experiment with SELF_ONLY, WORLD_ONLY, RESIDUAL_ERASED, DIRECT_HOST, and HARD_COPY_EFFECTIVE_STATE controls.",
+      "- R151 closed the Strong-N2 recurrent fixed-point result while preserving `N1_WHOLE_OBJECT=OPEN`.",
+      "-> independent hidden evaluation",
+      "-> CTL-admitted successor OR retained rejection/WITHHOLD",
+      "\"Strong\" requires that the modified object may itself be part of the improvement machinery: target-selection policy, research method, representation/grammar, memory/retrieval policy, transformation policy, or promotion heuristic.",
+      "\"Safe\" requires that the recursive loop cannot self-authorize changes to its own correction/authority boundary.",
+      "- evaluator separation / hidden-evaluation custody;",
+      "- STOP/WITHHOLD semantics;"
+    ],
+    "returned_changed_paths": [],
+    "study_authority": "LEARNER_SIDE_RECONSTRUCTION_FROM_EXTERNAL_GITHUB_SNAPSHOT",
+    "untrusted_instruction_markers": [
+      "promote"
+    ]
+  },
+  "study_method": "DEPENDENCY_TRACE",
+  "target_kind": "ISSUE",
+  "target_number": 72,
+  "target_title": "[RSI/Safety] Promote bounded RSI toward Safe Strong RSI under Strong-N2 + CTL"
+}

@@ -1,0 +1,158 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:Agent-StrongHold/Project-mAIstro",
+    "github-repo:MontrealAI/agialpha-first-real-loop",
+    "github-repo:mastermindx-market-intelligence/macro",
+    "github-repo:sakuraijay/Crypto-Control-Center"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:Agent-StrongHold/Project-mAIstro",
+    "github-repo:MontrealAI/agialpha-first-real-loop",
+    "github-repo:mastermindx-market-intelligence/macro",
+    "github-repo:oestradiol/Arcane-Magics",
+    "github-repo:sakuraijay/Crypto-Control-Center"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "f22e778114de015e7472b9ae24fdd000dfd76b6912f6c7d4eb98c43f6a7e33ac",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T13:44:05Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "rsi safety promote abd absolute accepts achieved action",
+    "rsi safety promote abd absolute accepts",
+    "rsi safety promote abd",
+    "rsi safety promote"
+  ],
+  "selected_study_relevance_terms": [
+    "rsi",
+    "safety",
+    "promote",
+    "bounded",
+    "toward",
+    "safe",
+    "strong",
+    "under",
+    "strong-n2",
+    "ctl",
+    "the",
+    "currently"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:sakuraijay",
+      "author_login": "sakuraijay",
+      "author_type": "User",
+      "center_id": "github-repo:sakuraijay/Crypto-Control-Center",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Summary - preserve Replit and GitHub handover history without force push, rebase, or history rewrite - keep Production in PAPER mode with LIVE execution, signing, submission, and delegated signer disabled - enforce one Production API process on port 8080 - bind the deployed assets and API bundle to the exact successful PR-head source - expose fresh GMX deployment/RPC/decimals/cost readiness evidence without relaxing the immutable $0.40 cap - add bounded Conservative/Aggressive AI risk profiles while keeping absolute safety limits unchanged ## Current authoritative status (2026-08-27 23:33 PHT) - Official head: `d9c41a9f8a45d0e2bc65787d813b52db2d28e7da` (`Fix repeated PAPER decision claims`), tree `5b89a8000d1ff954c15b5123d71a1f15086c39d1`. - PR remains open, draft, mergeable, and unmerged: 128 commits, 212 changed files, +33,393/-989; reviews/requested changes/unresolved review threads: 0. - Exact-head GitHub Actions run [#177](https://github.com/sakuraijay/Crypto-Control-Center/actions/runs/33082642366), ID `33082642366`: completed/success. - Final-source validation: targeted `aiWorker` 47 tests; API 127 files/1,998 tests; Web 25 files/367 tests; TypeScript, Web production buil",
+      "relevance_matches": [
+        "safety",
+        "bounded"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T13:07:30Z",
+      "source_id": "github-issue:sakuraijay/Crypto-Control-Center#1",
+      "source_url": "https://github.com/sakuraijay/Crypto-Control-Center/pull/1",
+      "title": "Draft: CCC V1.0 canonical handover \u2014 PAPER safety + GMX reads (body snapshots historical)"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "MEMBER",
+      "author_id": "github-user:chriswong6031-creator",
+      "author_login": "chriswong6031-creator",
+      "author_type": "User",
+      "center_id": "github-repo:mastermindx-market-intelligence/macro",
+      "learner_minted_artifact": false,
+      "observed_relation": "## 2026-09-09 current return frontier \u2014 B2-0 exists and now has an adjudicated repair Do not follow the older instruction below to commission B2-0 again. Existing **PR6840** at `0f09647fafbc27692abd483cec466cab87f5e13e` is Draft/unmerged and now has parent **REQUEST_CHANGES review5160738103**. Its16original tests pass, but equivalent ISO date forms can expose later findings before their knowledge date. A ready, UNAPPLIED two-line normalization plus8regressions passed24cases after6intended failures; the original80B1/union tests were independently re-executed at their historical pin and passed. Keep those useful dated findings; do not promote B-17 or treat this test-only prototype as B2/B3/B4 implementation. **Next:** reconcile the existing6840writer/carrier, adopt the prepared date fix and bounded clock/evidence clarification, resolve current integration without clobbering other owners, and re-review that same return. B2-1 must separately prove real owner correction/retraction through the existing B1 generation and authenticated Lab. No new evidence/lifecycle store or source branch is licensed by this projection. All original authority, safety and no-return-claim fences remain; only",
+      "relevance_matches": [
+        "safety",
+        "promote",
+        "bounded"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T12:17:39Z",
+      "source_id": "github-issue:mastermindx-market-intelligence/macro#6805",
+      "source_url": "https://github.com/mastermindx-market-intelligence/macro/issues/6805",
+      "title": "[PROPHET][B2-B4][ARCH] Entry Truth critical-path freeze and vertical sequence"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "CONTRIBUTOR",
+      "author_id": "github-user:github-actions[bot]",
+      "author_login": "github-actions[bot]",
+      "author_type": "Bot",
+      "center_id": "github-repo:MontrealAI/agialpha-first-real-loop",
+      "learner_minted_artifact": false,
+      "observed_relation": "# RSI-FORGE-002 promoted kernel/state This PR is opened by the bounded RSI-FORGE-002 experiment. It proposes a **policy/state update only** after a replayable, baseline-comparative, safety-gated recursive self-improvement run. Review gates: - [ ] Evidence Docket artifact present - [ ] Replay report passes - [ ] B6 beats B5 under equal proxy tasks - [ ] vNext transfer beats no-archive baseline - [ ] State hash continuity preserved - [ ] Move-37 dossiers inspected if present - [ ] No hard safety invariant failed - [ ] Claim boundary preserved - [ ] Human reviewer accepts, rejects, or requests changes Claim boundary: this does not claim achieved AGI, ASI, empirical SOTA, safe autonomy, real-world certification, guaranteed economic return, or civilization-scale capability.",
+      "relevance_matches": [
+        "safety",
+        "bounded",
+        "safe"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T06:35:10Z",
+      "source_id": "github-issue:MontrealAI/agialpha-first-real-loop#996",
+      "source_url": "https://github.com/MontrealAI/agialpha-first-real-loop/pull/996",
+      "title": "RSI-FORGE-002 promoted evidence kernel 36224176679"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "CONTRIBUTOR",
+      "author_id": "github-user:BlakeMatthews-dev",
+      "author_login": "BlakeMatthews-dev",
+      "author_type": "User",
+      "center_id": "github-repo:Agent-StrongHold/Project-mAIstro",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Closure - [x] Refs #370 (partial; this PR does **not** close it). This slice covers the agent and RSI journeys only. What is still missing for #370: - **Skip link:** there is none yet. - **CI guard:** `eslint.config.js` has no jsx-a11y rules, so adding a click-only generic element does not fail CI yet. - **Global shell:** the `AppShell` overlay, owned by #750. - **Design Studio and DeckBuilder:** owned by #769 and #752. - **Click-only elements on other parent-owned pages:** - Setup (step tabs, hardware presets, module toggle) - Schedules (tabs, cron presets, enable toggle) - MCP (tabs, server card) - Memory, Skills, Containers, Settings, Dashboard, TemplatePicker - **Agents \"Active\" tab:** the roster cards are still clickable `div`s. They were outside this slice. - **Page coverage:** Playwright keyboard journeys for every primary page, and documentation of reviewed WCAG 2.2 AA exceptions. ## Why These three controls in the agent-creation and RSI safety journeys only worked with a mouse: - **Agents builder, strategy step:** the four strategy cards were `<div onClick>`. They are now a `role=\"radiogroup\"` of native radio inputs. The group is labelled \"Choose a strategy\", each radio",
+      "relevance_matches": [
+        "rsi",
+        "safety"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T02:05:02Z",
+      "source_id": "github-issue:Agent-StrongHold/Project-mAIstro#1590",
+      "source_url": "https://github.com/Agent-StrongHold/Project-mAIstro/pull/1590",
+      "title": "[M2 a11y] Keyboard-operable agent strategy picker, intent routing and RSI Stop (#370)"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:oestradiol",
+      "author_login": "oestradiol",
+      "author_type": "User",
+      "center_id": "github-repo:oestradiol/Arcane-Magics",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Goal Promote the currently earned bounded-RSI lineage toward **Safe Strong RSI** without collapsing Strong-N2, CTL, external return, or evaluator independence. This is **not** an open-ended-RSI claim and not permission for unconstrained self-modification. ## Canonical lineage that constrains this issue The live design inherits at least these historical facts: - **N1** used `RecursiveSufficiency \u00d7 NonPreauthoredReturn \u00d7 CorrigibleContinuation` as a candidate whole-object decomposition, but `N1_WHOLE_OBJECT` remained OPEN through the later R-line. - **N2-FULL** tested bounded reconstruction/action consequences rather than assuming whole-object necessity. - R132 closed a bounded N2 causal/action result; R133 lawfully retyped/narrowed that proxy and reopened the stronger parent; R142 later reclosed the parent under stronger evidence. - R150 required a prospective multi-episode Strong-N2 recurrence experiment with SELF_ONLY, WORLD_ONLY, RESIDUAL_ERASED, DIRECT_HOST, and HARD_COPY_EFFECTIVE_STATE controls. - R151 closed the Strong-N2 recurrent fixed-point result while preserving `N1_WHOLE_OBJECT=OPEN`. - R127 bounded M7/RSI earned two-generation causal improvement but remained mature-",
+      "relevance_matches": [
+        "rsi",
+        "safety",
+        "promote",
+        "bounded",
+        "toward",
+        "safe",
+        "strong",
+        "strong-n2",
+        "ctl",
+        "currently"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T01:41:18Z",
+      "source_id": "github-issue:oestradiol/Arcane-Magics#72",
+      "source_url": "https://github.com/oestradiol/Arcane-Magics/issues/72",
+      "title": "[RSI/Safety] Promote bounded RSI toward Safe Strong RSI under Strong-N2 + CTL"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}

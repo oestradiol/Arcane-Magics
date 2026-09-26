@@ -1,0 +1,125 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "ec4dcaabb2492f9061b509e72893f1bd65a5e61cb8a05245f6e11cc7378bb92b",
+    "6af35c794ba5d4dee0cfdfb02c78fdf4cfed66637832dbf38b471a83218e2d78",
+    "06c082b9386f5e8ab252dc66e3ca95bfcab1f0921e0b9c2ff386537292f6a7b8",
+    "a016ecf6044bb52badb90c0b4644eb23dd24e2d8d61cbf0da289897fc57831e6"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:MontrealAI/agialpha-first-real-loop#996",
+      "github-issue:mastermindx-market-intelligence/macro#6805",
+      "github-issue:oestradiol/Arcane-Magics#72",
+      "github-issue:sakuraijay/Crypto-Control-Center#1"
+    ],
+    "memory_object_ids": [
+      "ec4dcaabb2492f9061b509e72893f1bd65a5e61cb8a05245f6e11cc7378bb92b",
+      "6af35c794ba5d4dee0cfdfb02c78fdf4cfed66637832dbf38b471a83218e2d78",
+      "06c082b9386f5e8ab252dc66e3ca95bfcab1f0921e0b9c2ff386537292f6a7b8",
+      "a016ecf6044bb52badb90c0b4644eb23dd24e2d8d61cbf0da289897fc57831e6"
+    ],
+    "next_query_terms": [
+      "abd",
+      "absolute",
+      "accepts",
+      "achieved",
+      "action",
+      "actions",
+      "add",
+      "adjudicated",
+      "adopt",
+      "again",
+      "aggressive",
+      "agi"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "550d6c777cb9f55a9d02c3f73765f40d801c2bd67ad2ea57e5f1637cebb93fa8",
+    "reconstruction_id": "603902874f3865d793ff66ff7de0c8f18d1937b63f23dbb09db3f07ef5826e8d",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "b3d33f87b2fffb992c1a5873943e11e9a0e4c3cc84baf6eba6f5b2fb85d88946",
+    "e41233d00977ca0fe46702b3bb93f7db8766400dbd661ea120a25656a2f20483",
+    "5977b6eb3ed0ba714cb52d4b8a269bc7c86200cfe93c01134c30420b87ab93c1",
+    "a9a2da05e32e1b9b1fa61ded7519cdf4893420bfa59979339cff65ca912525ed",
+    "e92fa25ce72da60ee9d37c44257641c39917c22a3434bfa684d72c3275a3efb9"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:Agent-StrongHold/Project-mAIstro#1590",
+      "github-issue:MontrealAI/agialpha-first-real-loop#996",
+      "github-issue:mastermindx-market-intelligence/macro#6805",
+      "github-issue:oestradiol/Arcane-Magics#72",
+      "github-issue:sakuraijay/Crypto-Control-Center#1"
+    ],
+    "memory_object_ids": [
+      "b3d33f87b2fffb992c1a5873943e11e9a0e4c3cc84baf6eba6f5b2fb85d88946",
+      "e41233d00977ca0fe46702b3bb93f7db8766400dbd661ea120a25656a2f20483",
+      "5977b6eb3ed0ba714cb52d4b8a269bc7c86200cfe93c01134c30420b87ab93c1",
+      "a9a2da05e32e1b9b1fa61ded7519cdf4893420bfa59979339cff65ca912525ed",
+      "e92fa25ce72da60ee9d37c44257641c39917c22a3434bfa684d72c3275a3efb9"
+    ],
+    "next_query_terms": [
+      "active",
+      "add",
+      "adding",
+      "adjudicated",
+      "adopt",
+      "again",
+      "agent",
+      "agent-creation",
+      "agents",
+      "aggressive",
+      "agi",
+      "aiworker"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "f22e778114de015e7472b9ae24fdd000dfd76b6912f6c7d4eb98c43f6a7e33ac",
+    "reconstruction_id": "a163f6b07758ccc7d25adc730a93d6b65fb38c1d93938ae8e876547d32ac8ffa",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:Agent-StrongHold/Project-mAIstro",
+    "github-repo:MontrealAI/agialpha-first-real-loop",
+    "github-repo:mastermindx-market-intelligence/macro",
+    "github-repo:sakuraijay/Crypto-Control-Center"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:Agent-StrongHold/Project-mAIstro",
+    "github-repo:MontrealAI/agialpha-first-real-loop",
+    "github-repo:mastermindx-market-intelligence/macro",
+    "github-repo:oestradiol/Arcane-Magics",
+    "github-repo:sakuraijay/Crypto-Control-Center"
+  ],
+  "indexed_source_ids": [
+    "github-issue:Agent-StrongHold/Project-mAIstro#1590",
+    "github-issue:MontrealAI/agialpha-first-real-loop#996",
+    "github-issue:mastermindx-market-intelligence/macro#6805",
+    "github-issue:oestradiol/Arcane-Magics#72",
+    "github-issue:sakuraijay/Crypto-Control-Center#1"
+  ],
+  "memory_checkpoint_sha256": "3b1cb1118bc0af96495bcd6821bde2549be7cb4b6a06e4f698a78e1d76f81a29",
+  "memory_record_count": 9,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "550d6c777cb9f55a9d02c3f73765f40d801c2bd67ad2ea57e5f1637cebb93fa8",
+  "query2_changed_from_query1": true,
+  "query2_id": "f22e778114de015e7472b9ae24fdd000dfd76b6912f6c7d4eb98c43f6a7e33ac",
+  "query2_memory_provenance": [
+    "network-memory:06c082b9386f5e8ab252dc66e3ca95bfcab1f0921e0b9c2ff386537292f6a7b8",
+    "network-memory:6af35c794ba5d4dee0cfdfb02c78fdf4cfed66637832dbf38b471a83218e2d78",
+    "network-memory:a016ecf6044bb52badb90c0b4644eb23dd24e2d8d61cbf0da289897fc57831e6",
+    "network-memory:ec4dcaabb2492f9061b509e72893f1bd65a5e61cb8a05245f6e11cc7378bb92b"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}
