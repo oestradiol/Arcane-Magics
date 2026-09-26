@@ -1,0 +1,112 @@
+{
+  "schema": "Venus.FoundationalCognitiveTheaterFactorialPrefreeze.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_BEFORE_FACTORIAL_BASELINE_RESULT",
+  "issue_ref": 206,
+  "seed_ref": "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_SEED.json",
+  "matched_structure_ref": "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_MATCHED_STRUCTURE.json",
+  "rationale": "Whole-face zero-shot is a useful harsh diagnostic but not a realistic first-language curriculum. This factorial split ensures every face and every relation appears in training while withholding their particular pairing, testing factorization rather than never-seen-script recognition.",
+  "faces": [
+    "ENGLISH",
+    "JAPANESE",
+    "BRAZILIAN_PORTUGUESE",
+    "MATHEMATICS"
+  ],
+  "relations": [
+    "REPORT_NOT_FACT",
+    "SAME_ENDPOINT_DIFFERENT_HISTORY",
+    "WITHHOLD_NOT_GUESS",
+    "NESTED_KNOWLEDGE"
+  ],
+  "folds": [
+    [
+      [
+        "REPORT_NOT_FACT",
+        "ENGLISH"
+      ],
+      [
+        "SAME_ENDPOINT_DIFFERENT_HISTORY",
+        "JAPANESE"
+      ],
+      [
+        "WITHHOLD_NOT_GUESS",
+        "BRAZILIAN_PORTUGUESE"
+      ],
+      [
+        "NESTED_KNOWLEDGE",
+        "MATHEMATICS"
+      ]
+    ],
+    [
+      [
+        "REPORT_NOT_FACT",
+        "JAPANESE"
+      ],
+      [
+        "SAME_ENDPOINT_DIFFERENT_HISTORY",
+        "BRAZILIAN_PORTUGUESE"
+      ],
+      [
+        "WITHHOLD_NOT_GUESS",
+        "MATHEMATICS"
+      ],
+      [
+        "NESTED_KNOWLEDGE",
+        "ENGLISH"
+      ]
+    ],
+    [
+      [
+        "REPORT_NOT_FACT",
+        "BRAZILIAN_PORTUGUESE"
+      ],
+      [
+        "SAME_ENDPOINT_DIFFERENT_HISTORY",
+        "MATHEMATICS"
+      ],
+      [
+        "WITHHOLD_NOT_GUESS",
+        "ENGLISH"
+      ],
+      [
+        "NESTED_KNOWLEDGE",
+        "JAPANESE"
+      ]
+    ],
+    [
+      [
+        "REPORT_NOT_FACT",
+        "MATHEMATICS"
+      ],
+      [
+        "SAME_ENDPOINT_DIFFERENT_HISTORY",
+        "ENGLISH"
+      ],
+      [
+        "WITHHOLD_NOT_GUESS",
+        "JAPANESE"
+      ],
+      [
+        "NESTED_KNOWLEDGE",
+        "BRAZILIAN_PORTUGUESE"
+      ]
+    ]
+  ],
+  "baseline": {
+    "executor": "kernel/runtime/calibrated_retrieval.py",
+    "family": "CHAR_NGRAM_JACCARD",
+    "n": 3,
+    "k": 1
+  },
+  "evaluation_rule": "For each fold, remove all teaching surfaces for the four held-out relation-face pairs, retain all other relation-face teaching surfaces, and classify the held-out surface for each removed pair.",
+  "stronger_candidate_must": [
+    "beat the prefrozen surface-only factorial baseline",
+    "reconstruct teacher theater targets without receiving relation_id at evaluation",
+    "show ablations for participant/KFS indexing and temporal order",
+    "retain face-specific residuals instead of forcing translation equivalence",
+    "WITHHOLD rather than fabricate unsupported structure"
+  ],
+  "claim_fence": "Factorial baseline only. It is not evidence of language competence, cultural cognition, semantic ownership, or internalization.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
