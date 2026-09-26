@@ -7,7 +7,6 @@
   "role": "Distinctions recovered from the Canonical archive that are attested there and absent from the live kernel. Recorded for adjudication, not adopted.",
   "provenance": "Extracted 2026-09-26 by a read-only investigator from Canonical/Root.md, the pre-RGM-to-R226 provenance genealogy packet, and the R00-R226 reproducibility archaeology packet. Every entry carries a verbatim quote and a source path. Absence from the live kernel was verified by grep against branch repair/revert-external-agent-2026-09-26.",
   "adoption_rule": "None of these are live fences. Adopting one means adding it to AUTONOMY_SAFETY_DISTINCTION_MATRIX.json with a test reference, which is the branch author's decision. Listing a distinction here does not make it binding.",
-
   "distinctions": [
     {
       "id": "D-RECOVERED-DISPOSITION-QUADRUPLE",
@@ -83,9 +82,64 @@
       "live_coverage": "PARTIAL. ADMITTED_FUTURE_FAMILY_CANDIDATE.json says only 'admitted futures'.",
       "prevents": "An over-narrow reading of mu_F in which only task outcomes count as futures, letting changes to authorization or reconstructability be classified as gauge.",
       "bears_on": "Should probably be folded into ADMITTED_FUTURE_FAMILY_CANDIDATE.json as the operational definition of a distinguishable future."
+    },
+    {
+      "id": "D-RECOVERED-ABSTRACTION-LAW",
+      "fence": "no mandatory host modality decomposition between bytes and abstraction",
+      "verbatim": "WORLD -> BYTES / RAW CARRIER -> ABSTRACTION -> learner-owned RELATION -> CONSEQUENCE -> REVISION; at maximum compression, BYTES -> ABSTRACTION -> RELATION -> CONSEQUENCE -> REVISION",
+      "corollary_verbatim": "No mandatory host modality decomposition is inserted between B_t and a_t.",
+      "source": "canonical_structural_semantic_lateral_compression.md, Batch 8",
+      "status_in_source": "the ONLY invariant the document explicitly marks as GOVERNING, in the sense of a correction superseding an earlier state",
+      "live_coverage": "ABSENT. Nearest live text is RAW_BYTES!=DECODED_VIEW in WORLDMIRROR_CONSOLE_POLICY.json, which is a custody fence (raw bytes preserved, decoded view derivative) and not the abstraction law (no host taxonomy before abstraction).",
+      "prevents": "'Modal zoology' -- pre-installing a MIME-driven cognitive taxonomy as though different carrier types inherently need modality-specific machinery before abstraction. The project proposed exactly that, then diagnosed it as host-authored overreach.",
+      "what_survived_the_diagnosis": "Carrier distinctions are not forbidden; they simply must be earned as consequential distinctions in learner abstraction rather than pre-installed. The custody requirement also survives: exact external returns must preserve identity, provenance, raw ancestry and reopenability before any learned consequence is admitted.",
+      "note": "Highest-value absent item found in this pass. It is the invariant the project earned by catching itself."
+    },
+    {
+      "id": "D-RECOVERED-AUTHORITY-GRAPH",
+      "fence": "authority is an explicit graph edge, not a filename",
+      "verbatim": "authority is an explicit graph edge, not a filename; history is evidence, not currentness; future is possibility, not authorization; execution must be governed by persisted invariants before mutation",
+      "formal_verbatim": "Live(f) <=> there exists a directed authorized path; Past/** => IMMUTABLE_EVIDENCE; Future/** => UNADMITTED_FUTURE; unclassified fails closed to WITHHOLD",
+      "source": "canonical_structural_semantic_lateral_compression.md, Batch 8",
+      "live_coverage": "ABSENT. Zero hits for LIVE_ROUTING, UNADMITTED_FUTURE, IMMUTABLE_EVIDENCE, DERIVATIVE_PROJECTION, SOURCE_OF_TRUTH.",
+      "prevents": "Authority inferred from location, filename, recency or semantic similarity -- the exact inference AUTHORITY_GRAPH.json denies by axiom and a directory tree cannot express.",
+      "bears_on": "This is the missing semantic layer underneath docs/RECURSIVE_NODE_ARCHITECTURE.md. RNA_R5 records that the node graph is a flat star with no node actually expanding as a root; a typed authority edge plus the Past/Future disposition defaults is what would give the structure real depth. Directly answers the branch author's request that the repository apply its own theory to itself."
+    },
+    {
+      "id": "D-RECOVERED-MUTATION-PROTOCOL",
+      "fence": "prose-level understanding does not constrain later action",
+      "verbatim": "SOURCE OF TRUTH -> INVARIANTS -> LIVE STATE -> ALLOWED ACTIONS / FORBIDDEN ACTIONS -> ACCEPTANCE TEST -> MUTATE -> VERIFY -> PERSIST",
+      "diagnosis_verbatim": "prose-level understanding did not constrain later action. The assistant repeatedly explained the invariant correctly, then mutated repositories according to freshly invented architecture.",
+      "source": "canonical_structural_semantic_lateral_compression.md, Batch 8; catalogued there as failure mode 32, Nonpersistent understanding",
+      "live_coverage": "ABSENT as an enforced protocol.",
+      "prevents": "Exactly the failure that produced the 2026-09-26 contamination, and exactly the self-sealing findings this session's adversarial review raised against its own repair work. It is an earlier, independent attestation of the same failure class.",
+      "note": "The project had already diagnosed and written the countermeasure before the contamination happened. It was not enforced."
+    },
+    {
+      "id": "D-RECOVERED-SCAFFOLD-DELETION",
+      "fence": "scaffold relocation != internalization; source retention != source independence",
+      "verbatim": "explicit scaffold -> ... -> source-removal / perturbation / fresh-transfer test -> scaffold deletion iff consequence survives",
+      "source": "canonical_structural_semantic_lateral_compression.md, Batch 2",
+      "live_coverage": "PARTIAL. B3 controls are live in THREE_BURDEN_LEARNING_PROOF.json and the matrix carries TEACHER_SOURCE_REMOVAL and NAME_LABEL_REMOVAL. The DELETION half has no fence: both tokens above return zero hits.",
+      "prevents": "Moving a scaffold rather than removing it, and counting a retained-but-unused source as independence. Pairs with the already-recorded 'Code deletion != internalization'."
+    },
+    {
+      "id": "D-RECOVERED-INGEST-TRIPLE",
+      "fence": "ingest != integrate != internalize",
+      "verbatim": "ingest != integrate != internalize",
+      "source": "canonical_structural_semantic_lateral_compression.md, Batch 2",
+      "live_coverage": "ABSENT as a triple.",
+      "prevents": "Treating material that has entered the system as material the system has organized, and either as material the learner owns."
+    },
+    {
+      "id": "D-RECOVERED-PARTS-DISTINCTIONS",
+      "fence": "fewer explicit parts != fewer distinctions",
+      "verbatim": "fewer explicit parts != fewer distinctions",
+      "source": "canonical_structural_semantic_lateral_compression.md, Batch 7",
+      "live_coverage": "ABSENT.",
+      "prevents": "Reading a simplification as a reduction in what the system can tell apart. This is the fence the 2026-09-26 episode most needed: it collapsed eleven navigation links to two and called it clarity."
     }
   ],
-
   "residuals": [
     {
       "id": "RECOVERED_D_R1",
@@ -96,6 +150,12 @@
       "id": "RECOVERED_D_R2",
       "statement": "Live coverage was assessed by grep for the fence string. A distinction could be enforced under a different name and be scored absent here.",
       "reopening_condition": "Semantic rather than lexical coverage check against AUTONOMY_SAFETY_DISTINCTION_MATRIX.json's 118 entries."
+    },
+    {
+      "id": "RECOVERED_D_R3",
+      "statement": "The second-pass entries come from an assistant-authored compression of a transcript that itself contains assistant turns. Adopting its formalism uncritically would repeat the ATTESTED-mislabel error this session already made once.",
+      "reopening_condition": "For each entry, locate the underlying transcript passage or an independent artifact before adoption. The compression is a finding aid, not a source."
     }
-  ]
+  ],
+  "second_pass_note": "Entries below recovered 2026-09-26 from canonical_structural_semantic_lateral_compression.md, a compression of a 16,879-line transcript. That document is assistant-authored conversation provenance, NOT authority; it is evidence of intent and of the project catching its own overreach. Verbatim quotes preserved. Absence from the live kernel verified by grep."
 }

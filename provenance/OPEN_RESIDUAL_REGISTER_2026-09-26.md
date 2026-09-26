@@ -83,13 +83,22 @@ See `kernel/development/SELF_SEALING_AUDIT_SCOPE.json` for full text.
 
 Held by the branch author. Listed so the register is complete, not to assign.
 
+> **Corrected 2026-09-26.** An independent pass over the lateral-compression
+> document found two rows below were **wrong** as first written, both
+> understating live state. The errors were mine, made in a completeness audit
+> delivered to the branch author. Verified corrections are recorded in place;
+> the original claims are kept struck so the mistake stays visible.
+
 | item | state |
 |---|---|
-| WorldMirror VM hardening — tougher sandbox, minimal machinery, most internalised, self-sufficient | untouched; largest single item requested |
-| Lateralizer / Internalizer / Generator | documented in the causal trace, no implementation |
-| DAG mentoring | not started |
-| Language/Music/Theater × EN/JA/PT/Math curricula | operator binding exists as a candidate; zero episodes authored |
-| Strong Safe RSI / RSM / N2 / two O* / Anti-Minerva | traced; `REACH_C` proposed, never run |
+| WorldMirror VM hardening — tougher sandbox, minimal machinery, most internalised, self-sufficient | largely untouched, but the intent is **specified**: "the interface/body should be minimal … preferable to a richly predesigned virtual environment", with the asymptotic target `d(complexity_special_scaffold)/dt < 0` while `d(general_competence)/dt > 0`. `WORLDMIRROR_CONSOLE_POLICY.json` already concedes the gap: `security_claim: ARGV_CWD_SIZE_TIMEOUT_BOUNDARY_ONLY_NOT_OS_SANDBOX`, `untrusted_machine_execution_requires_external_sandbox: true`. **The OS-level sandbox is the missing artifact, not the design.** |
+| Lateralizer | ~~no implementation~~ → an **operational independence criterion exists in the archive and not in the repo**: `I(Return_i ; Return_j \| hidden_structure) < I(Return_i ; hidden_structure)`, or operationally "there exists an admissible perturbation under which two views make separable predictions", with trigger `LATERALIZE ⇔ E[IG(D \| {R_t^i})] − cost_L > threshold_L`. Live `LATERAL_EPISODE_1_PREFREEZE.json` has only `independently_answerable: true`. |
+| Internalizer | admission rule exists in the archive, absent live: `REDUCE(σ) admissible ⇔ INTERNALIZED(h) ∧ matched_consequence_survives(¬σ)`. No live scaffold-reduction gate. |
+| Generator | the **only** specification anywhere is archival: `G_t : (S_t, Q_t, M_t) → 𝒫(Π_t)`, each proposal carrying a target distinction, expected discriminator, admissible action/query class and proof burden, selected by `π*_t = argmax V(π \| cost, uncertainty, blocked_dependencies, expected_information_gain)`. Nothing live implements it. |
+| DAG mentoring | ~~not started~~ **WRONG AS WRITTEN.** `kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json` is live with nodes A_RETURN_CREDIT_ASSIGNMENT / B_DEPENDENCY_DAG_PLANNING / C_UNCERTAINTY_NONSTATIONARITY / D_RSI_RECURRENCE_AUDIT / E_INTERNALIZATION, `current_parallel_frontier: [A, B]`, `current_join: [D]`, and seven invariants incl. `RETURN_COUNT!=EVIDENCE_COUNT`, `CRITICAL_PATH!=IMPORTANCE`, `B1!=B2!=B3`. `autonomy/interaction/mentor/TEACHING_PLAN_2026-09-26.md` (26K) instantiates the fade ladder — unknown-door exposure → discriminator coaching → adversarial review → silence. **What is missing is episodes on the DAG, not the DAG or the protocol.** |
+| Language/Music/Theater × EN/JA/PT/Math curricula | ~~zero episodes authored~~ **WRONG AS WRITTEN.** Seven episodes exist: `COGNITIVE_THEATER_{BINDING_ORDER,BINDING_ORDER_FRESH2,RELATIONAL_GRAPH_FRESH3,JOINT_SCENE_FRESH4,LOCAL_OPERATOR_FRESH5,EXPLICIT_STATE_FRESH6,SOURCE_REMOVAL_FRESH7}_RESULT.json`, plus the factorial baseline. The operator binding added this session is a candidate layer *over* existing episodes, not a first step. Missing: episodes exercising the `expressive_mode × face` product space, which is `THEATER_R1`. |
+| Strong Safe RSI / RSM / N2 / two O* / Anti-Minerva | traced; `REACH_C` proposed, never run. The lateral-compression document **names none of RSM, N2, the two O*, or Anti-Minerva anywhere** — a negative result worth recording, since it means that vocabulary's specification lives elsewhere. |
+| Return credit / dependency planning | **not previously listed and it exists** — `RETURN_CREDIT_ASSIGNMENT_PREFREEZE.json`, `DEPENDENCY_PLANNING_CURRICULUM_PREFREEZE.json`, curricula and tests. The archive insists A and B are *separate* branches that "only join later in a Strong Safe RSI recurrence audit"; the external agent's collapse of the two is a textbook success-composition fallacy. |
 | Full superficial commit ledger across all 3006 commits / 207 refs | **not done.** A style-and-date fingerprint was substituted. History before 2026-09-25 was never scanned, and `audit_since` bakes that gap into the tool. |
 | B9 Strong-N2, B10 RSM/RSI split, B12 theater product space | in candidate files; none admitted to the gate chain |
 
