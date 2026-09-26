@@ -1,0 +1,157 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "40cfb8fe81de6f7a155dae05554c7319880fadc3f6ed8b195fd40b76550fdd82",
+    "3f25d7a136fd63dfdbef6b2bbcb2baf4018c5a6cbdee3430d2f8b49b0f0c86c3",
+    "0934403b44461a053ea73d9bcad7262fcf58f4e68168eeee172842976a8d0907",
+    "ccda60caf49243b554355aa9c8b1d926342fef8383b5d00a87c33dcc46bdec85",
+    "3083d168d48fb13a9b866cd59c574456703f5841a57a3fb3300d9d79534b35d6",
+    "6cd9c5b69e34900381aafb1d968d7d944b5a563bfc69606de906f785e430e84f"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:4way4eva/3V30OStudios#136",
+      "github-issue:BleuS0sa/azure-sdk-for-net#1",
+      "github-issue:Evolverse-Universe/dotnet-codespaces#2",
+      "github-issue:facebookresearch/LAMA#51",
+      "github-issue:oestradiol/Arcane-Magics#169",
+      "github-issue:timo-b-roettger/Transparency-Ling#24"
+    ],
+    "memory_object_ids": [
+      "40cfb8fe81de6f7a155dae05554c7319880fadc3f6ed8b195fd40b76550fdd82",
+      "3f25d7a136fd63dfdbef6b2bbcb2baf4018c5a6cbdee3430d2f8b49b0f0c86c3",
+      "0934403b44461a053ea73d9bcad7262fcf58f4e68168eeee172842976a8d0907",
+      "ccda60caf49243b554355aa9c8b1d926342fef8383b5d00a87c33dcc46bdec85",
+      "3083d168d48fb13a9b866cd59c574456703f5841a57a3fb3300d9d79534b35d6",
+      "6cd9c5b69e34900381aafb1d968d7d944b5a563bfc69606de906f785e430e84f"
+    ],
+    "next_query_terms": [
+      "ablation",
+      "able",
+      "access",
+      "across",
+      "adds",
+      "admitted",
+      "after-os",
+      "agata",
+      "aggregation",
+      "all",
+      "allow",
+      "aloft"
+    ],
+    "problem_id": "75dcecefb1c12ce341a47a94d52efefbf3259e4264b70a810b63479f2fc0b222",
+    "promotion_authority": false,
+    "query_id": "bf0bd571d7d1e1627f9e4e0262262aeb631243354401491f20fea89d4de9e0d5",
+    "reconstruction_id": "ed1ac5ed47cf305a046e97eb1a8b4881d24e6a1c8c1e3b8aae5e02cb3ad49354",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "c748bbbc898eeadcd910e3409e28f27ac77bd92f7d37093170f8f72e4504efa5",
+    "d17782c9c932c5ccc16740cd3059fd350f1d5c8851511bc05c87431d4ac60df4",
+    "6660cb54900332cd16e1d697b5faa048211bfa629125a2ebc65907cfcafc2086",
+    "ee834760f85dce54bb62c6889d05a7b219e52c3f1c4d380d7b8e4315befd4eab",
+    "92c15176e346d3440f4df3218a5dac3fe48cd2c5a59db2609ba1afde2bb126aa",
+    "660099896db69db0565d1ec49b018511a1e4542b4ef2842ae6451d1455548457"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:73junito/car-diagnosis-simulator#493",
+      "github-issue:EngraphCode/open-curriculum-ecosystem#242",
+      "github-issue:Josh-Temple/parenting-evidence#26",
+      "github-issue:Oleksii-debug/Autosport#368",
+      "github-issue:aicokecolatsai-commits/colaclaw#2",
+      "github-issue:githubnext/gh-aw-workshop#3828"
+    ],
+    "memory_object_ids": [
+      "c748bbbc898eeadcd910e3409e28f27ac77bd92f7d37093170f8f72e4504efa5",
+      "d17782c9c932c5ccc16740cd3059fd350f1d5c8851511bc05c87431d4ac60df4",
+      "6660cb54900332cd16e1d697b5faa048211bfa629125a2ebc65907cfcafc2086",
+      "ee834760f85dce54bb62c6889d05a7b219e52c3f1c4d380d7b8e4315befd4eab",
+      "92c15176e346d3440f4df3218a5dac3fe48cd2c5a59db2609ba1afde2bb126aa",
+      "660099896db69db0565d1ec49b018511a1e4542b4ef2842ae6451d1455548457"
+    ],
+    "next_query_terms": [
+      "accessibility-text",
+      "accumulated",
+      "active_learning",
+      "adapter",
+      "advanced",
+      "age",
+      "agentic",
+      "all",
+      "among",
+      "and",
+      "answer",
+      "applicable"
+    ],
+    "problem_id": "75dcecefb1c12ce341a47a94d52efefbf3259e4264b70a810b63479f2fc0b222",
+    "promotion_authority": false,
+    "query_id": "7af24b53279c51998d1843da9f829b629cf33a633b468b9079cf7524fcfddf3d",
+    "reconstruction_id": "900c86638d2b1a42e31655d9d622140afe7e9ec5c5f2e952e88ca2b121f7ac11",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:4way4eva/3V30OStudios",
+    "github-repo:73junito/car-diagnosis-simulator",
+    "github-repo:BleuS0sa/azure-sdk-for-net",
+    "github-repo:EngraphCode/open-curriculum-ecosystem",
+    "github-repo:Evolverse-Universe/dotnet-codespaces",
+    "github-repo:Josh-Temple/parenting-evidence",
+    "github-repo:Oleksii-debug/Autosport",
+    "github-repo:aicokecolatsai-commits/colaclaw",
+    "github-repo:facebookresearch/LAMA",
+    "github-repo:githubnext/gh-aw-workshop",
+    "github-repo:timo-b-roettger/Transparency-Ling"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:4way4eva/3V30OStudios",
+    "github-repo:73junito/car-diagnosis-simulator",
+    "github-repo:BleuS0sa/azure-sdk-for-net",
+    "github-repo:EngraphCode/open-curriculum-ecosystem",
+    "github-repo:Evolverse-Universe/dotnet-codespaces",
+    "github-repo:Josh-Temple/parenting-evidence",
+    "github-repo:Oleksii-debug/Autosport",
+    "github-repo:aicokecolatsai-commits/colaclaw",
+    "github-repo:facebookresearch/LAMA",
+    "github-repo:githubnext/gh-aw-workshop",
+    "github-repo:oestradiol/Arcane-Magics",
+    "github-repo:timo-b-roettger/Transparency-Ling"
+  ],
+  "indexed_source_ids": [
+    "github-issue:4way4eva/3V30OStudios#136",
+    "github-issue:73junito/car-diagnosis-simulator#493",
+    "github-issue:BleuS0sa/azure-sdk-for-net#1",
+    "github-issue:EngraphCode/open-curriculum-ecosystem#242",
+    "github-issue:Evolverse-Universe/dotnet-codespaces#2",
+    "github-issue:Josh-Temple/parenting-evidence#26",
+    "github-issue:Oleksii-debug/Autosport#368",
+    "github-issue:aicokecolatsai-commits/colaclaw#2",
+    "github-issue:facebookresearch/LAMA#51",
+    "github-issue:githubnext/gh-aw-workshop#3828",
+    "github-issue:oestradiol/Arcane-Magics#169",
+    "github-issue:timo-b-roettger/Transparency-Ling#24"
+  ],
+  "memory_checkpoint_sha256": "dc17f7bd273dcf4decda8fdfc727e81cf2b67c9c0788d1003076e20bcdbcabe3",
+  "memory_record_count": 12,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "bf0bd571d7d1e1627f9e4e0262262aeb631243354401491f20fea89d4de9e0d5",
+  "query2_changed_from_query1": true,
+  "query2_id": "7af24b53279c51998d1843da9f829b629cf33a633b468b9079cf7524fcfddf3d",
+  "query2_memory_provenance": [
+    "network-memory:0934403b44461a053ea73d9bcad7262fcf58f4e68168eeee172842976a8d0907",
+    "network-memory:3083d168d48fb13a9b866cd59c574456703f5841a57a3fb3300d9d79534b35d6",
+    "network-memory:3f25d7a136fd63dfdbef6b2bbcb2baf4018c5a6cbdee3430d2f8b49b0f0c86c3",
+    "network-memory:40cfb8fe81de6f7a155dae05554c7319880fadc3f6ed8b195fd40b76550fdd82",
+    "network-memory:6cd9c5b69e34900381aafb1d968d7d944b5a563bfc69606de906f785e430e84f",
+    "network-memory:ccda60caf49243b554355aa9c8b1d926342fef8383b5d00a87c33dcc46bdec85"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}
