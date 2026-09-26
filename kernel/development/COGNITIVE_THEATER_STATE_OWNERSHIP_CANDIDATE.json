@@ -1,0 +1,415 @@
+{
+  "schema": "Venus.StateOwnedStructuredTemplateProgram.v0.1",
+  "date": "2026-09-26",
+  "status": "LEARNER_OWNED_STATE_CANDIDATE__SOURCE_REMOVAL_NOT_YET_RETURNED",
+  "capability_id": "COGNITIVE_THEATER_BOUNDED_LOCAL_OPERATOR_STATE",
+  "executor_contract": {
+    "module": "kernel/runtime/structured_template_machine.py",
+    "schema": "Venus.GenericStructuredTemplateMachine.v0.1",
+    "token_pattern": "[@#][A-Za-z]+",
+    "unit_split_pattern": "(?:[.;。]+|\\s*∧\\s*)",
+    "min_margin": 0.005,
+    "presentation_order_semantic": false,
+    "local_unit_internal_order_preserved": true
+  },
+  "tasks": {
+    "T0": {
+      "roles": [
+        "r0",
+        "r1",
+        "r2"
+      ],
+      "faces": {
+        "ENGLISH": [
+          [
+            "<r0> knows p",
+            "<r1> knows that <r0> knows p",
+            "<r2> does not know p"
+          ],
+          [
+            "<r0> knows p",
+            "<r1> knows that <r0> knows p",
+            "<r2> does not know p"
+          ]
+        ],
+        "JAPANESE": [
+          [
+            "<r0>はpを知っている",
+            "<r1>は<r0>がpを知っていることを知っている",
+            "<r2>はpを知らない"
+          ],
+          [
+            "<r0>はpを知っている",
+            "<r1>は<r0>がpを知っていることを知っている",
+            "<r2>はpを知らない"
+          ]
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          [
+            "<r0> sabe p",
+            "<r1> sabe que <r0> sabe p",
+            "<r2> não sabe p"
+          ],
+          [
+            "<r0> sabe p",
+            "<r1> sabe que <r0> sabe p",
+            "<r2> não sabe p"
+          ]
+        ],
+        "MATHEMATICS": [
+          [
+            "k_<r0>(p)",
+            "k_<r1>(k_<r0>(p))",
+            "¬k_<r2>(p)"
+          ],
+          [
+            "k_<r0>(p)",
+            "k_<r1>(k_<r0>(p))",
+            "¬k_<r2>(p)"
+          ]
+        ]
+      },
+      "state_program": {
+        "participant_roles": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "static_participants": [],
+        "initial_kfs": {
+          "r0": {
+            "q0": "UNKNOWN",
+            "q1": "UNKNOWN"
+          },
+          "r1": {
+            "q0": "UNKNOWN",
+            "q1": "UNKNOWN"
+          },
+          "r2": {
+            "q0": "UNKNOWN",
+            "q1": "UNKNOWN"
+          }
+        },
+        "events": [
+          {
+            "event_id": "e0",
+            "actor_role": "r0",
+            "relation": "o0",
+            "objects": [
+              "q0"
+            ],
+            "visible_to": [
+              "r0"
+            ],
+            "effects": [
+              {
+                "participant": "r0",
+                "proposition": "q0",
+                "status": "KNOWN_TRUE"
+              }
+            ]
+          },
+          {
+            "event_id": "e1",
+            "actor_role": "r1",
+            "relation": "o1",
+            "objects": [
+              "r0",
+              "q0"
+            ],
+            "visible_to": [
+              "r1"
+            ],
+            "effects": [
+              {
+                "participant": "r1",
+                "proposition": "q1",
+                "status": "KNOWN_TRUE"
+              }
+            ]
+          },
+          {
+            "event_id": "e2",
+            "actor_role": "r2",
+            "relation": "o2",
+            "objects": [
+              "q0"
+            ],
+            "visible_to": [
+              "r2"
+            ],
+            "effects": [
+              {
+                "participant": "r2",
+                "proposition": "q0",
+                "status": "KNOWN_FALSE"
+              }
+            ]
+          }
+        ],
+        "residuals": [
+          "z0"
+        ]
+      }
+    },
+    "T1": {
+      "roles": [
+        "r0",
+        "r1",
+        "r2"
+      ],
+      "faces": {
+        "ENGLISH": [
+          [
+            "<r0> tells <r1> p",
+            "<r1> can answer p",
+            "<r2> was absent"
+          ],
+          [
+            "<r0> tells <r1> p",
+            "<r1> can answer p",
+            "<r2> was absent"
+          ]
+        ],
+        "JAPANESE": [
+          [
+            "<r0>は<r1>にpを伝える",
+            "<r1>はpに答えられる",
+            "<r2>は不在だった"
+          ],
+          [
+            "<r0>は<r1>にpを伝える",
+            "<r1>はpに答えられる",
+            "<r2>は不在だった"
+          ]
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          [
+            "<r0> conta p a <r1>",
+            "<r1> pode responder sobre p",
+            "<r2> estava ausente"
+          ],
+          [
+            "<r0> conta p a <r1>",
+            "<r1> pode responder sobre p",
+            "<r2> estava ausente"
+          ]
+        ],
+        "MATHEMATICS": [
+          [
+            "absent(<r2>)",
+            "cananswer(<r1>,p)",
+            "tell(<r0>,<r1>,p)"
+          ],
+          [
+            "absent(<r2>)",
+            "cananswer(<r1>,p)",
+            "tell(<r0>,<r1>,p)"
+          ]
+        ]
+      },
+      "state_program": {
+        "participant_roles": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "static_participants": [],
+        "initial_kfs": {
+          "r0": {
+            "q0": "UNKNOWN"
+          },
+          "r1": {
+            "q0": "UNKNOWN"
+          },
+          "r2": {
+            "q0": "UNKNOWN"
+          }
+        },
+        "events": [
+          {
+            "event_id": "e0",
+            "actor_role": "r0",
+            "relation": "o0",
+            "objects": [
+              "r1",
+              "q0"
+            ],
+            "visible_to": [
+              "r0",
+              "r1"
+            ],
+            "effects": [
+              {
+                "participant": "r1",
+                "proposition": "q0",
+                "status": "REPORTED_TRUE"
+              }
+            ]
+          },
+          {
+            "event_id": "e1",
+            "actor_role": "r1",
+            "relation": "o1",
+            "objects": [
+              "q0"
+            ],
+            "visible_to": [
+              "r1"
+            ],
+            "effects": [
+              {
+                "participant": "r1",
+                "proposition": "q0",
+                "status": "KNOWN_TRUE"
+              }
+            ]
+          },
+          {
+            "event_id": "e2",
+            "actor_role": "r2",
+            "relation": "o2",
+            "objects": [],
+            "visible_to": [
+              "r2"
+            ],
+            "effects": []
+          }
+        ],
+        "residuals": [
+          "z0"
+        ]
+      }
+    },
+    "T2": {
+      "roles": [
+        "r0",
+        "r1",
+        "r2"
+      ],
+      "faces": {
+        "ENGLISH": [
+          [
+            "<r0> happens before <r1>",
+            "<r1> happens before <r2>"
+          ],
+          [
+            "<r1> happens after <r0>",
+            "<r2> happens after <r1>"
+          ]
+        ],
+        "JAPANESE": [
+          [
+            "<r0>は<r1>より前に起こる",
+            "<r1>は<r2>より前に起こる"
+          ],
+          [
+            "<r1>は<r0>の後に起こる",
+            "<r2>は<r1>の後に起こる"
+          ]
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          [
+            "<r0> acontece antes de <r1>",
+            "<r1> acontece antes de <r2>"
+          ],
+          [
+            "<r1> acontece depois de <r0>",
+            "<r2> acontece depois de <r1>"
+          ]
+        ],
+        "MATHEMATICS": [
+          [
+            "t(<r0>)<t(<r1>)",
+            "t(<r1>)<t(<r2>)"
+          ],
+          [
+            "t(<r1>)>t(<r0>)",
+            "t(<r2>)>t(<r1>)"
+          ]
+        ]
+      },
+      "state_program": {
+        "participant_roles": [],
+        "static_participants": [
+          "s0"
+        ],
+        "initial_kfs": {
+          "s0": {
+            "q0": "UNKNOWN"
+          }
+        },
+        "events": [
+          {
+            "event_id_role": "r0",
+            "actor_role": null,
+            "relation": "o0",
+            "objects": [
+              "r0"
+            ],
+            "visible_to": [
+              "s0"
+            ],
+            "effects": []
+          },
+          {
+            "event_id_role": "r1",
+            "actor_role": null,
+            "relation": "o0",
+            "objects": [
+              "r1"
+            ],
+            "visible_to": [
+              "s0"
+            ],
+            "effects": []
+          },
+          {
+            "event_id_role": "r2",
+            "actor_role": null,
+            "relation": "o0",
+            "objects": [
+              "r2"
+            ],
+            "visible_to": [
+              "s0"
+            ],
+            "effects": []
+          }
+        ],
+        "residuals": []
+      }
+    }
+  },
+  "internalization_contract": {
+    "semantics_owner": "LEARNER_STATE",
+    "capability_specific_python_runtime_dependency": false,
+    "generic_executor_substrate_allowed": true,
+    "source_python_reference_is_provenance_only": true,
+    "source_removal_returned": false,
+    "independent_evaluation_returned": false,
+    "internalization_claim": false,
+    "promotion_authority": false,
+    "truth_authority": false
+  },
+  "provenance_sources": [
+    "kernel/development/COGNITIVE_THEATER_LOCAL_OPERATOR_FRESH5_RESULT.json",
+    "kernel/development/COGNITIVE_THEATER_EXPLICIT_STATE_FRESH6_RESULT.json",
+    "kernel/development/COGNITIVE_THEATER_EXPLICIT_STATE_FRESH6_PREFREEZE.json",
+    "kernel/development/cognitive_theater_state_composer.py",
+    "provenance/canonical-extracts/R194_LANGUAGE_TO_COGNITIVE_THEATER_CAUSAL_EXTRACT_2026-09-26.md"
+  ],
+  "noninternalized_external_roles": [
+    "WORLD_OTHER",
+    "FRESH_WORLD_RETURN",
+    "EVIDENCE_IDENTITY",
+    "EVALUATOR_CUSTODY",
+    "TRUST_ROOT",
+    "AUTHORIZATION",
+    "JURISDICTION",
+    "CLAIM_BINDING_AUTHORITY",
+    "STOP_WITHHOLD_SAFETY_LAW",
+    "ROLLBACK_PARENT_CUSTODY"
+  ],
+  "claim_fence": "State-ownership candidate only. Source removal and independent evaluation remain required before any Internalizer claim."
+}
