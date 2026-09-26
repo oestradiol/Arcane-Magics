@@ -123,6 +123,10 @@ def evaluate_kind(pre, kind: str):
                 per_face[face]["correct"] += int(ok)
                 per_face[face]["withholds"] += int(pred is None)
 
+    for bucket in (per_task, per_face):
+        for stats in bucket.values():
+            stats["accuracy"] = stats["correct"] / stats["total"] if stats["total"] else 0.0
+
     return {
         "correct": correct,
         "total": total,
