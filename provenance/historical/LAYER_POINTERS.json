@@ -8,7 +8,7 @@
       "branch": "main",
       "role": "routing / map-territory / cross-register memory",
       "commit": "RESOLVE_CURRENT_REF",
-      "recorded_parent": "765e2f19c9bdd739f597a83560b06b3d6b353192"
+      "recorded_parent": "4bb5c171a35b9c046513f29c6198be7c3bcb7aed"
     },
     "ArcaneMagics": {
       "branch": "split/arcane-magics",
@@ -19,8 +19,8 @@
     "Eclipsis": {
       "branch": "split/eclipsis",
       "role": "math & logics / spirit",
-      "commit": "3d3655f19ecc227f60dd72baa5110721aad98fef",
-      "tree": "6041cf2eda0aad7112d7e4a7e2af01ffbbbcb328"
+      "commit": "681b7ab09590489f89f2c88e3a7dca4ae774a212",
+      "tree": "3edc4543c93beb545d8db793e6aa0dd1e107a6ba"
     },
     "Minerva": {
       "branch": "split/minerva",
