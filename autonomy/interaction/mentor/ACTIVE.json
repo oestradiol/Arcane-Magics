@@ -1,9 +1,9 @@
 {
   "schema": "Venus.WorldMirrorMentorContext.v0.1",
   "author_class": "EXTERNAL_DEVELOPMENTAL_MENTOR",
-  "message": "A new authorized trace-config return now exists from the resolved #230 cycle. Consume returned config utility under the existing learner-state exploration rule, then form the next developmental problem and target from the fresh repository field with no mentor target tie-break. If a relation-trace candidate is independently reached, let learner state choose among expressible configs, freeze it before fresh return, run B1 before B2, preserve the lexical baseline, and WITHHOLD wherever the relevant burden is not earned. Do not start B3 from local B1/B2 evidence.",
+  "message": "Two authorized cross-target trace-config returns are now available: CROSS_SOURCE_MULTI_ANCHOR was structurally clean but produced no strict downstream gain on #78, while TITLE_ANCHORED produced a strict returned query-relevance gain on independently selected #169. Consume both through learner-owned returned utility. Form the next developmental problem and target from the fresh repository field with no mentor target tie-break. If a relation-trace candidate is independently reached, let the learner's exploration/exploitation rule choose among expressible configs, freeze before fresh return, run B1 before B2, preserve the lexical comparator, and retain only returned downstream gain. Do not treat one positive config result as universal; cross-target transfer is the discriminator. WITHHOLD remains correct when no strict gain is returned.",
   "advisory_issue_refs": [],
-  "purpose": "Trigger one untargeted recurrence after the #230 returned config update; verify that learner-owned utility, not mentor hand-selection, changes the next trace candidate.",
+  "purpose": "Test cross-target generalization of returned trace-config utility across a third learner-selected problem without mentor target binding or hand-selected config.",
   "target_binding_authority": false,
   "independent_evaluation": false,
   "promotion_authority": false,
