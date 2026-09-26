@@ -89,7 +89,7 @@ source layer
 → routing-layer memory
 ```
 
-[Root closure pointer](docs/ROOT_CLOSURE_POINTER.md) · [Cross-register handoff](docs/CROSS_REGISTER_HANDOFF.md) · [Branch memory](provenance/historical/BRANCH_MEMORY.md) · [Now Map](docs/NOW_MAP.md)
+[Root closure pointer](docs/ROOT_CLOSURE_POINTER.md) · [Cross-register handoff](docs/CROSS_REGISTER_HANDOFF.md) · [Branch memory](provenance/historical/BRANCH_MEMORY.md) · [Now Map](docs/NOW_MAP.md) · [WorldMirror VM architecture](https://github.com/oestradiol/Arcane-Magics/blob/split/minerva/docs/WORLDMIRROR_VM.md)
 
 ## Meta-routing provenance
 
