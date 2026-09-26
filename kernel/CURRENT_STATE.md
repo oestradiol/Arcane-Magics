@@ -15,6 +15,13 @@ This ledger distinguishes historical claim-bearing authority from the live execu
 
 These anchors matter for provenance and rollback. They do not imply that the live Minerva branch is still only at EDU16 functionality.
 
+Custody compatibility facts retained explicitly:
+
+- IG10 is the exact **Git-reconstructible runtime checkpoint**.
+- EDU17 disposition remains `INVALID_FOR_PROMOTION`.
+- EDU17R1 preserves the measured separator `MENTION != INCIDENCE`.
+
+
 ## Live executable capability frontier
 
 ### Developmental recurrence
