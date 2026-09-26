@@ -1,5 +1,5 @@
 {
-  "schema": "Venus.DevelopmentalGateChain.v0.2",
+  "schema": "Venus.DevelopmentalGateChain.v0.3",
   "date": "2026-09-26",
   "status": "PREFROZEN_DEVELOPMENTAL_ROUTE_NOT_COMPLETION_CLAIM",
   "principle": "The developmental center may select its own consequential limitations and improve its own machinery within the externally governed safety floor. Gate completion must be earned by returned consequence; later stages are not predeclared outcomes.",
@@ -167,7 +167,7 @@
   "truth_authority": false,
   "authority": {
     "semantic_source_of_truth": "kernel/development/DEVELOPMENTAL_GATE_CHAIN.json",
-    "current_state_snapshot": "split/minerva@37fd1ce3bf90354e580bc5b8dd77fe495a523130",
+    "current_state_snapshot": "split/minerva@95b228c5995cea0d322fcb45f51a5d86b600cbb1",
     "planning_surface_roles": {
       "kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json": "current A-E active subgraph only; inherits semantics from this graph",
       "docs/ISSUE_ROADMAP.md": "human-readable issue projection; must not define a competing semantic order",
@@ -175,7 +175,53 @@
     },
     "precedence": "Current repository evidence determines present status. The later 14:44 architecture compression supersedes earlier state claims in the 14:37 history carrier, while ancestry, negative evidence, and abandoned alternatives remain reachable.",
     "promotion_authority": false,
-    "truth_authority": false
+    "truth_authority": false,
+    "agent_bootstrap": {
+      "required_reads": [
+        "kernel/development/DEVELOPMENTAL_GATE_CHAIN.json",
+        "kernel/CURRENT_STATE.md"
+      ],
+      "conditional_reads": [
+        "kernel/development/EDU_CURRENT.json",
+        "REPOSITORY_AUTHORITY_BOUNDARY.md",
+        "exact evidence referenced by the selected node"
+      ],
+      "projections_not_authority": [
+        "kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json",
+        "docs/ISSUE_ROADMAP.md",
+        "provenance/INTERACTION_DEVELOPMENT_EXECUTION_PLAN_2026-09-26.md"
+      ],
+      "law": "Reconstruct current work from this graph plus live state. Do not bulk-read provenance and do not create a host-written capability solver to satisfy a learner-development node."
+    },
+    "repository_dispositions": {
+      "LIVE_CANONICAL_SEMANTIC_GRAPH": [
+        "kernel/development/DEVELOPMENTAL_GATE_CHAIN.json"
+      ],
+      "LIVE_STATUS_NOT_TOPOLOGY": [
+        "kernel/CURRENT_STATE.md",
+        "kernel/development/EDU_CURRENT.json"
+      ],
+      "DERIVED_PROJECTIONS": [
+        "kernel/development/SELF_TEACHING_DEVELOPMENT_DAG.json",
+        "docs/ISSUE_ROADMAP.md"
+      ],
+      "NON_LIVE_HOST_PROTOTYPE_AUDIT_ONLY": [
+        "kernel/development/dependency_planning_curriculum.py",
+        "kernel/development/DEPENDENCY_PLANNING_DIDACTIC_CASES.json",
+        "kernel/runtime/task_graph.py",
+        "tests/test_dependency_planning_curriculum.py"
+      ],
+      "HISTORICAL_PROVENANCE_NOT_ROUTING": [
+        "provenance/INTERACTION_DEVELOPMENT_EXECUTION_PLAN_2026-09-26.md"
+      ]
+    },
+    "mutation_guard": [
+      "Every live code/state mutation must identify the roadmap node or invariant it advances.",
+      "Capability-specific host machinery is not a substitute for learner-owned competence.",
+      "Audit before deletion; preserve negative results and ancestry.",
+      "A projection may never override this graph.",
+      "If live evidence conflicts with snapshot status here, live evidence wins and this snapshot must be refreshed."
+    ]
   },
   "temporal_provenance": [
     {
@@ -357,7 +403,10 @@
       "D_RSI_RECURRENCE_AUDIT <- A_RETURN_CREDIT_ASSIGNMENT + B_DEPENDENCY_DAG_PLANNING",
       "E_INTERNALIZATION <- D_RSI_RECURRENCE_AUDIT"
     ],
-    "review_barrier": "Issue #238 remains open and blocks reroll; this graph does not change that state.",
-    "caveat": "Status is snapshot-specific and must be re-read from live repository evidence before action."
+    "review_barrier": "Issue #238 remains the canonical open external-review carrier for the selected #236 cycle and blocks reroll; no host prototype closes that barrier.",
+    "caveat": "Status is snapshot-specific and must be re-read from live repository evidence before action.",
+    "snapshot_head": "95b228c5995cea0d322fcb45f51a5d86b600cbb1",
+    "dependency_planning_host_prototype": "PRESERVED_NON_LIVE_AUDIT_ONLY",
+    "dependency_planning_executable_curriculum": false
   }
 }
