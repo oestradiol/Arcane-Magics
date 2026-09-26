@@ -48,12 +48,42 @@ def _tokens(text: str) -> tuple[str, ...]:
     return tuple(out)
 
 
-def query_variants(query_text: str) -> tuple[str, ...]:
-    """Deterministic generic relaxation; never inject a domain answer."""
+def query_variants(
+    query_text: str,
+    *,
+    study_anchors: Iterable[str] = (),
+) -> tuple[str, ...]:
+    """Deterministic bounded relaxation that preserves selected-study custody.
+
+    Without selected-study anchors, retain the legacy generic relaxation.
+    With anchors, never relax below the bounded anchor core: broad one-token
+    searches are not an admissible substitute for the learner's selected topic.
+    """
     tokens=_tokens(query_text)
     if not tokens:
         raise GitHubNetworkAdapterError("learner query has no searchable tokens")
+    anchors=_tokens(" ".join(str(x) for x in study_anchors))
     variants=[]
+    if anchors:
+        core=anchors[:min(3,len(anchors))]
+        widths=(min(8,len(tokens)), min(6,len(tokens)), min(4,len(tokens)))
+        for width in widths:
+            if width <= 0:
+                continue
+            chosen=list(core)
+            for token in tokens:
+                if token not in chosen:
+                    chosen.append(token)
+                if len(chosen) >= max(width,len(core)):
+                    break
+            candidate=" ".join(chosen)
+            if candidate and candidate not in variants:
+                variants.append(candidate)
+        candidate=" ".join(core)
+        if candidate and candidate not in variants:
+            variants.append(candidate)
+        return tuple(variants)
+
     for width in (min(6,len(tokens)), min(4,len(tokens)), min(2,len(tokens)), 1):
         if width <= 0:
             continue
@@ -102,6 +132,8 @@ def collect_sources(
     repo_payloads: Iterable[dict[str, Any]],
     max_sources: int = 6,
     current_repository: str = CURRENT_REPOSITORY,
+    relevance_terms: Iterable[str] = (),
+    min_relevance_matches: int = 0,
 ) -> tuple[dict[str, Any], ...]:
     """Pure reducer used by tests; keep at most one returned source per center."""
     candidates=[]
@@ -152,11 +184,24 @@ def collect_sources(
                 "current_repository":center == current_repository,
             })
 
-    # Prefer centers outside the current repository, then preserve API order.
-    candidates.sort(key=lambda row:(row["current_repository"], row["source_id"]))
+    relevance=tuple(_tokens(" ".join(str(x) for x in relevance_terms)))
+    admitted=[]
+    for row in candidates:
+        haystack=set(_tokens(f'{row["title"]} {row["observed_relation"]}'))
+        matched=tuple(term for term in relevance if term in haystack)
+        row={**row,"relevance_matches":matched}
+        if relevance and len(matched) < min_relevance_matches:
+            continue
+        admitted.append(row)
+
+    # Prefer external centers while preserving GitHub/API encounter order.
+    ordered=(
+        [row for row in admitted if not row["current_repository"]]
+        + [row for row in admitted if row["current_repository"]]
+    )
     seen=set()
     selected=[]
-    for row in candidates:
+    for row in ordered:
         center=row["center_id"]
         if center in seen or not row["source_url"]:
             continue
@@ -182,7 +227,17 @@ def execute(query: dict[str, Any], *, max_sources: int = 6) -> dict[str, Any]:
         raise GitHubNetworkAdapterError("query may not carry truth/promotion authority")
 
     token=os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN") or ""
-    variants=query_variants(str(query.get("query_text") or ""))
+    study_anchors=tuple(str(x) for x in query.get("study_terms",()) if str(x).strip())
+    required_relevance_matches=(
+        3 if len(study_anchors) >= 6
+        else 2 if len(study_anchors) >= 3
+        else 1 if study_anchors
+        else 0
+    )
+    variants=query_variants(
+        str(query.get("query_text") or ""),
+        study_anchors=study_anchors,
+    )
     issue_payloads=[]
     repo_payloads=[]
     attempted=[]
@@ -204,6 +259,8 @@ def execute(query: dict[str, Any], *, max_sources: int = 6) -> dict[str, Any]:
             issue_payloads=issue_payloads,
             repo_payloads=repo_payloads,
             max_sources=max_sources,
+            relevance_terms=study_anchors,
+            min_relevance_matches=required_relevance_matches,
         )
         external_centers={x["center_id"] for x in sources if not x["current_repository"]}
         if len(external_centers) >= 2:
@@ -227,6 +284,9 @@ def execute(query: dict[str, Any], *, max_sources: int = 6) -> dict[str, Any]:
         "returned_text_executed":False,
         "returned_urls_followed":False,
         "search_variants":list(attempted),
+        "selected_study_relevance_terms":list(study_anchors),
+        "required_relevance_matches":required_relevance_matches,
+        "relevance_filter_applied":bool(study_anchors),
         "indexed_center_ids":list(centers),
         "external_center_ids":list(external_centers),
         "multiple_external_centers":len(external_centers) >= 2,
