@@ -45,11 +45,28 @@
       "residuals": [
         {
           "id": "ROOT_R1",
-          "statement": "Root residuals should equal the union of unclosed leaf residuals, per the sixth-order return. That union is currently assembled by hand rather than derived.",
-          "reopening_condition": "The auditor derives the union and this field is generated rather than authored."
+          "statement": "The sixth-order return is declared by enumeration in aggregates_residuals, not derived. The root lists the descendant residuals it carries; nothing yet generates that list from the descendants themselves.",
+          "reopening_condition": "The auditor derives aggregates_residuals from the node set and this field becomes generated output rather than authored input."
+        },
+        {
+          "id": "ROOT_R2",
+          "statement": "The graph is a flat star: nine nodes, all depth one, eight leaves. An adversarial review noted that despite the name, no node actually expands as a root -- there is no second level for a leaf residual to climb through. The recursion is asserted by the spec and not yet instantiated by the declaration.",
+          "reopening_condition": "Declare a node with its own children on a branch that has real depth (split/minerva has kernel/development, kernel/runtime, kernel/state beneath kernel), and show a leaf residual propagating through an intermediate node to root."
         }
       ],
-      "provenance": "Routing layer since the 2026-09-25 recrystallization."
+      "provenance": "Routing layer since the 2026-09-25 recrystallization.",
+      "aggregates_residuals": [
+        "DOCS_R1",
+        "DOCS_R2",
+        "GH_R1",
+        "PROV_R1",
+        "PROV_R2",
+        "REVIEW_R1",
+        "SCRIPTS_R1",
+        "SITE_R1",
+        "TESTS_R1",
+        "TESTS_R2"
+      ]
     },
     {
       "id": "docs",
@@ -272,7 +289,9 @@
     },
     {
       "id": "tests",
-      "scope": ["tests/"],
+      "scope": [
+        "tests/"
+      ],
       "parent": "root",
       "expands_as_root": true,
       "authors": "negative suites demonstrating that the routing-layer auditors can fail",
@@ -282,7 +301,9 @@
         "does not author the structure under test"
       ],
       "inherits_future_family": "kernel/development",
-      "evidence": ["tests/test_node_graph.py"],
+      "evidence": [
+        "tests/test_node_graph.py"
+      ],
       "compression": {
         "admissible": false,
         "justification": "Each negative case pins a distinct rule. Collapsing them would leave a rule unexercised, which is how an auditor becomes vacuous without anyone noticing."

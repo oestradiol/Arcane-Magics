@@ -166,16 +166,27 @@ def main() -> int:
                         f"which is not reachable from root"
                     )
 
+    # N7 — the return must actually close.
+    #
+    # An earlier version accepted any root residual containing the word "union",
+    # which an adversarial reviewer defeated with the literal string "union";
+    # descendant_residuals was computed and never compared to anything. The root
+    # must now enumerate the descendant residual ids it carries, and that
+    # enumeration must equal the real set. Leaves feed the first root, or the
+    # sixth-order loop is decoration.
     root_node = by_id.get(root_id, {})
-    root_res = root_node.get("residuals", [])
-    aggregates = any(
-        "union" in (r.get("statement", "") + r.get("reopening_condition", "")).lower()
-        for r in root_res
-    )
-    if descendant_residuals and not aggregates:
+    claimed = set(root_node.get("aggregates_residuals", []))
+    missing = sorted(descendant_residuals - claimed)
+    phantom = sorted(claimed - descendant_residuals)
+    if missing:
         errors.append(
-            "N7 RETURN_CLOSED: root declares no residual accounting for the union "
-            "of descendant residuals; the sixth-order return does not close"
+            f"N7 RETURN_CLOSED: root does not account for descendant residual(s) "
+            f"{missing}; the sixth-order return does not close"
+        )
+    if phantom:
+        errors.append(
+            f"N7 RETURN_CLOSED: root claims residual(s) {phantom} that no "
+            f"descendant declares"
         )
 
     if errors:

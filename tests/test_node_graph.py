@@ -106,15 +106,33 @@ class RuleFiresTests(unittest.TestCase):
     def test_n6_non_sovereign_fires_on_sibling_scope_overlap(self):
         self.assert_fires("N6", lambda g: node(g, "site")["scope"].append("docs/"))
 
-    def test_n7_return_closed_fires_when_root_drops_the_union(self):
-        # Root keeps a residual, so N3 stays quiet and N7 is isolated.
+    def test_n7_fires_when_root_drops_an_aggregated_residual(self):
+        self.assert_fires(
+            "N7", lambda g: node(g, "root")["aggregates_residuals"].remove("DOCS_R1")
+        )
+
+    def test_n7_fires_when_root_claims_a_phantom_residual(self):
+        self.assert_fires(
+            "N7", lambda g: node(g, "root")["aggregates_residuals"].append("NOPE_R9")
+        )
+
+    def test_n7_fires_when_a_new_leaf_residual_is_unaccounted(self):
+        self.assert_fires(
+            "N7",
+            lambda g: node(g, "site")["residuals"].append(
+                {"id": "SITE_R9", "statement": "new", "reopening_condition": "y"}
+            ),
+        )
+
+    def test_n7_is_not_satisfied_by_the_literal_word_union(self):
+        # Regression. The first implementation checked for the substring
+        # "union" in any root residual, and a reviewer defeated it by writing
+        # exactly that. descendant_residuals was computed and never compared.
         def mutate(g):
-            node(g, "root")["residuals"] = [
-                {
-                    "id": "ROOT_RX",
-                    "statement": "an unrelated local concern",
-                    "reopening_condition": "something local",
-                }
+            root = node(g, "root")
+            root["aggregates_residuals"] = []
+            root["residuals"] = [
+                {"id": "R", "statement": "union", "reopening_condition": "x"}
             ]
 
         self.assert_fires("N7", mutate)

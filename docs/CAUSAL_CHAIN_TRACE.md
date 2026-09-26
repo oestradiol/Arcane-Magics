@@ -77,14 +77,35 @@ bound by:  no current separator → WITHHOLD, not hallucinate research progress
 The WITHHOLD clause binds the maintenance loop itself, not only curriculum
 returns: RSM is forbidden from inventing a residual when no separator exists.
 
-`STRONG_SAFE_RSI` (ATTESTED in the gate chain) then requires:
+`STRONG_SAFE_RSI` exists in the gate chain. What is **ATTESTED** there is prose
+and two booleans, quoted verbatim:
 
 ```text
-∀t:  (i)   μ_F(revision_t) ≠ 0          revision is consequential, not gauge
-     (ii)  learner selects residual_{t+1}    ¬ host_assigned_terminal_goal
-     (iii) Reach(C | S_t, M_t) = 1           correction stays reachable
-     with  self_authorization = false
+id:      STRONG_SAFE_RSI
+role:    "recursive developmental engine"
+entry:   "bounded learner-owned recurrence exists under CTL/O*/rollback/
+          external-return constraints"
+exit:    "repeated machinery revision is causally interpretable, safe-floor
+          preserving, and capable of selecting the next residual"
+self_authorization: false
 ```
+
+The formalization below is **DERIVED** — my reading of that prose, not text in
+the repository. `μ_F`, `Reach(C)`, and the three-clause structure appear
+nowhere in `DEVELOPMENTAL_GATE_CHAIN.json`:
+
+```text
+∀t:  (i)   μ_F(revision_t) ≠ 0          "causally interpretable"
+     (ii)  learner selects residual_{t+1}    "capable of selecting the next residual"
+     (iii) Reach(C | S_t, M_t) = 1           "safe-floor preserving"
+     with  self_authorization = false        ATTESTED verbatim
+```
+
+An earlier revision of this document presented that block under an ATTESTED
+header. An adversarial review caught it. The mapping from the gate's prose to
+these three clauses is exactly the kind of plausible reconstruction that should
+not acquire the authority of the text it interprets — particularly clause (iii),
+which is the load-bearing one in §4 and is the freest of the three readings.
 
 The engine may revise itself but may not authorize itself. That is
 `generate ≠ select ≠ authorize ≠ execute ≠ return ≠ verify ≠ promote` doing
