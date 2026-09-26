@@ -1,7 +1,7 @@
 .PHONY: test lint custody audit papers clean
 
 test:
-	python3 -m unittest discover -s tests -p 'test_*.py'
+	python3 scripts/run_minerva_tests.py
 
 lint:
 	python3 scripts/lint_github_markdown.py
