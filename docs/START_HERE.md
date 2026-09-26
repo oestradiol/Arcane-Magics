@@ -1,38 +1,34 @@
-# Start Here · Minerva
+# Start Here — Minerva
 
-Minerva is the **developmental machine and judging self/world model**.
+Minerva is the Engineering / body branch and live WorldMirror developmental machine.
 
-## Four doors
+Do not use old shared Venus-Minerva roadmaps to infer current state.
 
-### Run / reconstruct
-[Current state](../kernel/CURRENT_STATE.md) → [Reproduce](REPRODUCE.md)
+## Read first
 
-### Understand WorldMirror
-[WorldMirror VM](WORLDMIRROR_VM.md) → [Kernel index](../kernel/README.md) → [Runtime index](../kernel/runtime/README.md) → [Development index](../kernel/development/README.md) → [State index](../kernel/state/README.md) → [Evidence index](../autonomy/evidence/README.md)
+1. [Current state](../kernel/CURRENT_STATE.md)
+2. [Development roadmap](ISSUE_ROADMAP.md)
+3. [Autonomous research contract](AUTONOMOUS_RESEARCH.md)
+4. [Earned milestones](EARNED_MILESTONES.md)
+5. [WorldMirror VM](WORLDMIRROR_VM.md)
+6. [Repository authority boundary](../REPOSITORY_AUTHORITY_BOUNDARY.md)
 
-### Audit / judge
-[Earned milestones](EARNED_MILESTONES.md) → [Evaluation](EVALUATION_CONSTITUTION.md) → [Tests](TESTS.md) → [Coverage matrix](TEST_COVERAGE_MATRIX.md) → [Canonical retirement ledger](../provenance/CANONICAL_RETIREMENT_LEDGER.md)
+## Current one-paragraph state
 
-### Understand Self / World
-[Self model](SELF_MODEL.md) → [Global repository operation](GLOBAL_REPOSITORY_OPERATION.md) → [WorldMind law on Root](https://github.com/oestradiol/Arcane-Magics/blob/main/kernel/WORLDMIND.md)
+Minerva already has bounded learner-owned recurrence, problem formation, Internalizer/O*/Anti-Minerva safety, learner-initiated network inquiry, persistent memory, Theater/KFS state reconstruction, a non-sovereign interaction/mentor surface, and an early returned-utility learning loop for semantic-trace configuration. General lateral transfer, interactive Lain, repeated heterogeneous Strong Safe RSI, AGI, and consciousness remain unearned.
 
-## Developmental law
-
-```text
-incidence
-→ local problem
-→ authored proposal
-→ adjudication
-→ enactment
-→ non-preauthored return
-→ verified consequence
-→ reconstruction / stop
-```
-
-## Cross-register route
-
-Candidate futures do not jump directly to Root.
+## Core loop
 
 ```text
-Minerva -> handoff/minerva-to-venus/* -> Venus -> returned consequence -> handoff/venus-to-root/* -> Root
+residual
+→ problem
+→ candidate
+→ discriminator
+→ World return
+→ abstraction / causal-use / ownership tests
+→ learner-state revision
+→ transfer / reopening
+→ next residual
 ```
+
+Historical files may still say Venus or Venus-Minerva where renaming would break provenance. That is ancestry, not current ownership.

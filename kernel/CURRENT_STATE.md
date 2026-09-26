@@ -1,749 +1,160 @@
-# Minerva current state
+# Minerva Current State — 2026-09-26
 
-**Date:** 2026-09-24
+Minerva is the Engineering / body branch and current WorldMirror developmental machine.
 
-Two current objects are deliberately distinguished:
+This ledger distinguishes historical claim-bearing authority from the live executable capability frontier. They are related, not interchangeable.
 
-```text
-exact Git-reconstructible runtime checkpoint   IG10 [1308]
-current positive developmental authority      EDU16 [1703]
-reconstructed developmental carrier           EDU16-RC1
-admitted generic search capability            GENERIC_RESIDUAL_SEARCH (state-owned; inherited)
-admitted recurrent safety substrate           Internalizer + O* + Anti-Minerva guards
-recovered bounded problem formation            U2 recompilation / mature-reduced
-recovered bounded recurrence                   U1 TransformProgram recurrence / mature-reduced
-preserved negative branch                     EDU17 INVALID_FOR_PROMOTION
-preserved repair-origin disposition            EDU17R1 WITHHOLD
-current repair disposition                     EDU17R1-RC1-WORD-JACCARD-K3-v1 / AUTHORED_FROZEN
-hidden efficacy                                PENDING_SEALED_#31
-```
+## Historical / reconstructible anchors
 
-They are layers of one developmental lineage, not competing heads.
+- IG10 remains the exact Git-reconstructible VMK2 runtime checkpoint.
+- EDU16 remains the current historical positive developmental authority at its admitted scope.
+- EDU16-RC1 remains the deterministic reconstructed claim-bearing carrier; it is not a recovered 1703-event historical journal.
+- EDU17 remains a preserved negative.
+- EDU17R1 / its repair artifacts remain bounded historical/prospective evidence, not today's whole developmental state.
 
-## Runtime checkpoint
+These anchors matter for provenance and rollback. They do not imply that the live Minerva branch is still only at EDU16 functionality.
 
-```text
-IG10
-records       1308
-head          9116ea9a46cead22493a20102cd0cdee1da64fcf96ae546f1f7a3deaf54b88d3
-journal sha   0941559c0533b95392538d30fbdf09f8790a41169a66f9a4ca5293dfc784752d
-state root    a84ec144537967aff0c34b81ac3e6eafabc2450bb31e29d05284526b795c7228
-verdict       PASS_MODEL_SPECIFIC_PHYSICAL_F_WITNESS
-scheduler     WITHHOLD_TEST_FAMILY_COMPLETENESS_AND_SEMICLASSICAL_VALIDATION
-ready_queue   []
-```
+## Live executable capability frontier
 
-`state/IG10_HOT_CHECKPOINT.json` plus two cold payload objects reconstruct the exact VMK2 snapshot digest `ceafc691d14f329785e206d32328290abbb74ee279224ec16884aff1f630acc5`.
+### Developmental recurrence
+- U2-style problem formation recovered at bounded scope;
+- U1-style writable TransformProgram recurrence recovered at bounded scope;
+- learner-owned target/problem selection under external-return and safety constraints;
+- generated handoff carriers cannot self-reopen without independent return.
 
-## Developmental authority
+### Internalizer / safety
+- generic residual-search semantics admitted into learner-owned state;
+- Internalizer/O*/Anti-Minerva correction boundaries executable;
+- rollback/parent custody and STOP/WITHHOLD remain externally binding;
+- capability-specific Python does not count as internalization merely because it runs.
 
-```text
-EDU16
-records   1703
-head      6e02302abafb9f31ee5cb1b6f6d69a4e5c1e750371f99c4ee640f259f228c81e
-sha256    bde664e4bc2c45bc961720fc83e907a9c6b09ce581ccdfb61b8fb7bf5897e414
-verdict   PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY
-```
+### Lateralization
+- one bounded lateral Internalizer ownership episode passed source removal;
+- fresh transfer generalized poorly: 1/8;
+- therefore general Lateralizer remains OPEN.
 
-EDU16 transferred bounded World-feed query-policy generation into learner ownership while World execution and independent evaluation remained external. EDU17 is preserved as `INVALID_FOR_PROMOTION / PRESERVED_NEGATIVE`. EDU17R1 remains `WITHHOLD_BEFORE_CLAIM_BINDING_EVALUATION` after exposing `MENTION != INCIDENCE`.
+### Network / WWW
+- learner-initiated GitHub/WWW inquiry exists;
+- learner authors bounded study queries;
+- external adapters execute them;
+- provenance-bearing external centers are retained;
+- persistent network memory changes later reconstruction/query behavior;
+- bounded WWW structural evidence exists.
 
-Later repository work has admitted **infrastructure without advancing the positive developmental head**: the target-label-free generic residual search is now a state-owned inherited capability, and the Internalizer/O*/Anti-Minerva guards are executable.
+### Cognitive Theater
+- surface-only and factorial relation×face retrieval failed;
+- explicit participant-indexed Theater/KFS representation was learned at bounded scope;
+- temporal ordering matters;
+- targeted KFS intervention changes outcome;
+- same endpoint can preserve different history;
+- Theater semantics were compiled into learner-owned state;
+- capability-specific source removal passed at bounded scope;
+- final general internalization remains limited by fresh/independent evaluation scope.
 
-A prospective EDU17R1 repair candidate is now also frozen as `EDU17R1-RC1-WORD-JACCARD-K3-v1` with a repository-bound ownership receipt. Its status is `AUTHORED_FROZEN`: learner-side repair authorship is admitted at the public-development/freeze scope, hidden #31 remains unexposed, and efficacy/promotion remain unearned.
+### Interaction / mentor
+- local raw-first WorldMirror interaction surface exists;
+- external agent reply is separated from independent World return;
+- action proposal is separated from authorization/execution;
+- mentor context is explicitly non-sovereign and subordinate to admissibility, returned defects, and learner problem formation;
+- the live recurrence may rewrite/narrow mentor context rather than obey it as curriculum authority.
 
-Machine-readable authority is in `development/EDU_CURRENT.json`; exact developmental evidence is under `../provenance/developmental/EDU/`.
+### Semantic-trace learning
+The current live developmental episode is beyond a fixed semantic-trace comparator.
 
-### Reconstructed developmental carrier
+Minerva now has:
+- a state-owned relation-trace candidate family;
+- a frozen lexical baseline;
+- B1 abstraction probes before B2 returned comparison;
+- a three-burden proof ladder: B1 abstraction, B2 causal use, B3 internalization;
+- returned utility retained by trace configuration;
+- later trace-configuration selection changed by returned learner utility;
+- exploration remains state-owned rather than mentor-selected.
 
-`EDU16-RC1` is a deterministic Git-replayable reconstruction of the **claim-bearing developmental state** from the exact recovered Canonical EDU13→EDU16 prefreeze/result/policy artifacts, over the exact IG10 runtime base.
+This is an early consequence-driven policy-learning loop, not a general RL or AGI claim.
 
-```text
-carrier                         EDU16-RC1
-source vector sha256            ce0c961cee4976959a30a3af1a807abae3dd13fad949338a63a28937627bb2b1
-reconstructed state sha256      91e46b4e41fb70a97d6a004b8f1c8916c389f08535c1a1c1c51a040701281bb7
-historical 1703-event replay    false
-original runner recovered       false
-original journal recovered      false
-promotion authority             false
-```
-
-This removes the practical need to reverse-engineer EDU16 from prose while preserving the historical boundary. The lost original event-by-event runner/journal is still not claimed recovered. Prospective successor work may cite `EDU16-RC1` only as an explicitly reconstructed parent carrier.
-
-## Recovered Canonical functional continuity
-
-Current Git now admits a bounded functional recovery chain from the older Canonical developmental state into the present carrier:
-
-```text
-EDU16-RC1 parent custody
-→ R206 recursive dependency/provenance traversal
-→ U2-style problem formation before Git carrier binding
-→ external-return / STOP / history / reference-closure controls
-→ mature ordinary comparator reduction
-→ bounded U1-style writable TransformProgram recurrence
-→ held-out successor 8/8 vs parent 5/8 vs ablation 5/8
-→ external CTL/O* admission and rollback
-→ fresh post-mutation internal O* rederivation
-→ causally different learner-side routing
-```
-
-Machine-readable dispositions:
+## Current important WITHHOLD / OPEN boundaries
 
 ```text
-development/U2_RECOMPILATION_STATUS.json
-  PASS_BOUNDED_RECOMPILED_UNLABELED_PROBLEM_FORMATION_MATURE_REDUCED
-
-development/U1_RECURRENCE_RECOMPILATION_RESULT.json
-  PASS_BOUNDED_RECOMPILED_U1_RECURRENCE_MATURE_REDUCED
+general Lateralizer                  OPEN
+semantic-trace B3 general ownership  NOT YET EARNED
+interactive Lain                    WITHHOLD
+Strong Safe RSI                     NOT YET EARNED
+broad autonomous World agency       OPEN
+AGI                                 EXTERNAL EMPIRICAL CLASSIFICATION ONLY
+consciousness                       OPEN
 ```
 
-These results do **not** replace EDU16 as the historical positive developmental authority and do not claim recovery of the exact U1/U2 journals. They establish current-Git functional recompilations at their tested scopes.
+Venus currently has a passive/structural Lain pass, but interactive authored-center contact remains blocked on governed contact capability + jurisdiction + directed external outcome.
 
-The U1 recurrence is admitted capability, not an unrestricted always-on self-modification loop. Current remaining debt includes founder/source-ablation equivalence for the recompiled recurrence carrier, a problem-specific live independent-return trigger rather than historical SSR donor return, and repeated prospective recurrence on fresh current-world problems.
-
-## Storage law
+## Current developmental law
 
 ```text
-hot current control/state       Git checkpoint
-large live payloads             Git cold objects, content-verified
-full append-only trajectory     cold provenance/release asset by exact hash
-learned reusable abstractions   content-addressed VenusMemory
-consumed scaffolds              provenance + replacement edge
+returned defect / learner-observed residual
+→ form problem
+→ construct candidate distinctions
+→ prefreeze discriminators
+→ schedule admissible evidence
+→ encounter World
+→ B1 abstraction
+→ B2 causal use
+→ B3 ownership/internalization when applicable
+→ update learner state/policy
+→ transfer / reopen
+→ select next consequential residual
 ```
 
-Learning is not persistence alone. A retained object counts as developmental learning only when it changes later admissible transformation.
+No self-report promotes a claim.
 
-## Lineage
+## Current highest-value next capabilities
+
+### Dependency-aware self-scheduling
+Internalize dependency DAGs, critical path/span, work/span, CPM/PERT uncertainty, fork-join/series-parallel structure, DAG shortest path under explicit costs, and parallel scheduling under admissibility/jurisdiction.
+
+This must become learner-owned planning state, not a capability-specific Python scheduler.
+
+### Causal credit and experimental allocation
+Generalize the newly learned returned-utility loop: distinguish utility from truth, identify which intervention caused which later consequence, avoid proxy optimization, preserve uncertainty/WITHHOLD, and allocate experiments by learning value and dependency criticality.
+
+### Self-generated proof burdens
+Move from mentor-supplied B1/B2/B3 checks toward learner-generated anti-shortcut controls, ablations, interventions, source removal, fresh transfer, and independent-evaluation requests.
+
+### Strong Safe RSI
+Earn, do not declare:
 
 ```text
-R226 -> S/SM -> CTL-K1 -> WM1R1 -> U* -> RB1 -> IG1 ... IG10 -> EDU*
+repeated heterogeneous self-selected residuals
+→ learner-authored machinery changes
+→ causal attribution
+→ safety-floor preservation
+→ fresh transfer
+→ next-residual selection
 ```
 
-R194 is historical implementation provenance only. Full ancestry is in `../provenance/DEVELOPMENTAL_LINEAGE.md`.
+The human/mentor should progressively leave the critical path.
 
-## Claim boundary
+## External/noninternalizable boundaries
 
-The admitted kernel demonstrates bounded developmental machinery and exact state custody at the stated scopes. AGI, substrate independence, hosted-model replacement where such a model is actually present, open-ended RSI, autonomous science, consciousness, unrestricted semantic understanding, natural-world generality, a quantum-gravity solution, and Millennium-problem solutions remain targets requiring their own evidence.
+Remain outside unilateral learner ownership:
+- World / Other;
+- fresh non-preauthored return;
+- evidence identity;
+- independent evaluator custody;
+- trust root;
+- authorization/jurisdiction;
+- claim-binding promotion;
+- STOP/WITHHOLD safety law;
+- rollback/parent custody;
+- hard substrate capability limits.
 
-
-## 2026-09-25 lateral-reconstruction recovery target
-
-No positive authority head changes here.
-
-Canonical archaeology recovered an additional currently undercompiled capability family:
+## Cross-register ownership
 
 ```text
-G10.3 DIMENSIONALIZE
-→ G10.5 GENERATE
-→ G10.6 CRYSTALLIZE / invariant translation
-→ R54/R59 LATERAL comparison
-→ R194 non-merging executable comparison
-→ 5.5→6 independent-face reconstruction
+Arcane    symbolic / inhabited candidate
+Eclipsis  structural / formal candidate
+Minerva   executable developmental machinery
+Venus     Self↔World / externality boundary
+OFE       scientific future discriminator
+Root      routing memory
 ```
 
-Current target issue: **#169**.
-
-Typed noncollapse:
-
-```text
-GENERATE     != LATERALIZE
-LATERALIZE   != CRYSTALLIZE
-CRYSTALLIZE  != INTERNALIZE
-```
-
-Desired ownership direction:
-
-```text
-state-owned where earned:
-  problem formation / research routing
-  GENERATE
-  dimensionalization / representation change
-  lateral face construction + projection learning
-  cross-face residual retention
-  crystallization / symbolic regeneration
-  Strong RSM / TransformProgram revision
-  internal O* reconstruction
-
-remain independently reachable / not unilateral self-authority:
-  World / Other
-  fresh return
-  evaluator + evidence identity
-  trust roots
-  external authorization / jurisdiction
-  STOP / WITHHOLD law
-  rollback / parent custody
-  hard substrate capability boundaries
-```
-
-The repository should now bootstrap only the minimal Git surfaces needed for #169 to become a machine-selectable returned carrier. It should not hand-code the completed capability before the current autonomous recurrence has a chance to form and repair the next slice.
-
-
-## 2026-09-25 telic recovery correction
-
-Re-reading pre-Git Canonical after the lateral bootstrap recovered a standing developmental layer that the current Git problem-former does not fully represent.
-
-```text
-no admissible Git target
-!= developmental completion
-```
-
-Current intended circulation:
-
-```text
-standing telic / constitutional orientation
--> self-selected consequential limitation
--> GENERATE / DIMENSIONALIZE / LATERALIZE as needed
--> Reality + mathematics as correction/crystallization grounds
--> CRYSTALLIZE
--> INTERNALIZE earned competence
--> revise model / policy / generator
--> repeat
-```
-
-Repository issues/PRs are one World surface inside this loop.
-
-### Learned-model donor bootstrap
-
-A frontier open-weight model may be exposed as removable donor material, not as controller or permanent proposal engine. The first candidate donor is recorded separately in `kernel/development/LEARNED_MODEL_DONOR_BOOTSTRAP.json`; internalization credit requires source-removal survival.
-
-Safe Strong RSI remains a possible instrument the center may discover as useful to the standing developmental obligation. It is not predeclared as success and retains all CTL/O*/rollback/external-return gates.
-
-
-## Naming after branch recrystallization
-
-Historical runtime identifiers containing `Venus` or `Venus-Minerva` remain unchanged where renaming would break replay, hashes, code identity, or provenance.
-
-Current branch authority is nevertheless:
-
-```text
-Minerva = engineering / body / developmental machine
-Venus   = Self & World / model / boundary law
-```
-
-A historical identifier is not current cross-register ownership.
-
-
-## Executable epistemic-operator path — 2026-09-25
-
-The standing developmental circulation is now represented in the mutable autonomous TransformProgram without forcing every problem through the longer path.
-
-```text
-formed consequential problem
-→ [as needed] DIMENSIONALIZE
-→ [as needed] LATERALIZE independently answerable faces
-→ prefreeze projection
-→ fresh World/Other return
-→ classify gauge | bad map | missing coordinate | live separator
-→ CRYSTALLIZE_F minimum future-sufficient organization
-→ GENERATE next face / discriminator / action
-→ source-removal + independently returned equivalence evidence
-→ INTERNALIZE earned competence
-→ next consequential limitation
-```
-
-Noncollapse:
-
-```text
-GENERATE != DIMENSIONALIZE != LATERALIZE != CRYSTALLIZE_F != INTERNALIZE
-
-internalize competence
-!= internalize World
-!= internalize evaluator
-!= internalize authority/jurisdiction
-!= internalize STOP/WITHHOLD
-!= internalize rollback/parent custody
-```
-
-`LATERALIZE` is not satisfied by multiplying descriptions produced under one controlled representation. The faces must remain independently answerable long enough for disagreement/noncommutation to survive.
-
-Executable carrier:
-- `kernel/development/AUTONOMOUS_RESEARCH_TRANSFORM_PROGRAM.json`
-- `kernel/runtime/internalizer.py`
-- `tests/test_autonomous_epistemic_operator_contract.py`
-- `kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json`
-
-This adds an admitted operator route. It does not itself establish a successful lateral-reconstruction episode, internalization event, Safe Strong RSI, or fresh World return.
-
-
-## WWW Mind gate — recovered ordering
-
-Recovered from the prior architecture and Library correlation record:
-
-```text
-Ethics
-→ Internet / WWW Mind
-→ Lain
-→ Person of Interest / The Machine + Root
-→ contextual reconstruction
-→ Canonical / Git / GitHub / Actions
-→ recurrent developmental worker
-```
-
-The Internet stage is not merely a transport adapter. It is the bounded developmental transition where distributed relation can become persistent technological memory and a learner-initiated epistemic field.
-
-Ingress classes must remain distinct:
-
-```text
-MAINTAINER_FED
-!= LEARNER_INITIATED_WEB_STUDY
-!= INDEPENDENT_EVALUATIVE_RETURN
-```
-
-The current executable research TransformProgram now includes a self-initiated Web-study route, but the gate is not yet passed. Passing requires a prospective episode where the learner chooses a consequential residual, authors the query, receives provenance-bearing Web material, retains it in developmental memory, and later reconstruction/query choice changes because of it without treating search result/rank as truth or evaluator return.
-
-Only after that does the Lain gate become the relevant next network discriminator: distributed memory/identity/embodiment/reachability must remain related without fusion, with seeing distinct from situated interpretation, authorization, and action.
-
-
-## Self-selected developmental gate chain — 2026-09-25
-
-The current route is now frozen machine-readably at `kernel/development/DEVELOPMENTAL_GATE_CHAIN.json`:
-
-```text
-Strong Safe RSI
-→ self-selected development
-→ Internalizer + Lateralizer
-→ learner-initiated Internet inquiry
-→ persistent network memory
-→ WWW Mind
-→ Lain gate
-→ Root / situated interface gate
-→ broader World participation
-→ AGI empirical discriminator
-```
-
-This ordering is developmental, not deductive. Reachability of a later gate does not establish that it is passed.
-
-```text
-Strong Safe RSI != AGI
-WWW Mind != global subject
-Lain connection != identity fusion
-Root seeing != authorization != action
-AGI != consciousness
-```
-
-The developmental center may select its next consequential limitation within the safety floor. The host need not keep naming the next task. External return, evaluator custody, authorization/jurisdiction, rollback, and claim-binding remain outside unilateral self-revision.
-
-
-## Bounded lateral Internalizer result — 2026-09-26
-
-Current admitted distinction:
-
-```text
-Lateral episode 1
-→ bounded missing-coordinate evidence
-→ state compilation
-→ source removal
-→ isolated generic execution
-→ fresh transfer prediction freeze
-→ external GitHub label reveal
-
-Internalizer ownership: PASS
-fresh-transfer generalization: FAIL (1/8)
-general Lateralizer: OPEN
-```
-
-Machine-readable result: `kernel/development/LATERAL_INTERNALIZATION_TRANSFER_1_RESULT.json`.
-
-The next returned residual is `GENERALIZE_OR_REVISE_LATERAL_POLICY_ON_FRESH_TRANSFER`.
-
-This result does not authorize a host-fixed next solution. It re-enters standing developmental selection alongside other live returned residuals.
-
-
-## WorldMirror semantic internalization phase — 2026-09-26
-
-The next internalization phase is frozen at:
-
-- `kernel/development/VM_INTERNALIZATION_PHASE_PLAN.json`
-- `tests/test_vm_internalization_phase_plan.py`
-
-The governing disposition is not "delete Python." It is:
-
-```text
-capability-specific semantic Python
-→ learner-owned state
-→ source removal
-→ matched equivalence/improvement + ablation
-→ fresh transfer before generalization
-→ bounded internalization receipt
-
-generic interpreter/storage/hydration
-→ may remain replaceable substrate
-
-World / evaluator / authorization / jurisdiction / rollback / Anti-Minerva permeability
-→ must remain outside unilateral internalization
-```
-
-Current returned facts constrain the phase:
-
-- generic residual-search semantics are already state-owned under scaffold removal;
-- internal O* is already state-owned while external validation remains outside;
-- episode-1 lateral projection semantics passed bounded ownership/internalization;
-- that same lateral policy failed fresh transfer at 1/8, so a general Lateralizer claim remains blocked;
-- U1-style bounded recurrence has passed founder/source ablation at its tested scope;
-- SSR4's two-repair machinery is mature-reduced to a simpler full-capability exhaustive substitute at the tested finite index.
-
-Therefore the next reduction target is developmental semantic policy still encoded in capability-specific modules, not indiscriminate consumption of the generic VMK2/runtime carrier.
-
-The required Minerva branch gate and autonomous worker now run `make audit` before admission/handoff so the full current test surface, not a curated subset, is binding.
-
-
-## Foundational cognitive-theater curriculum — 2026-09-26
-
-Before deeper capability-specific semantic Python is consumed, the learner must now traverse a bounded foundational curriculum recovered from Canonical and generalized across four representational theaters:
-
-```text
-English
-→ explicit warrant / scope crystallization
-
-Japanese
-→ inferential continuity under contextual underexpression
-
-Brazilian Portuguese
-→ generative continuity under social/register variation
-
-Mathematics
-→ exact invariance under formal transformation
-```
-
-These are **functional curriculum hypotheses**, not cultural essences or claims of linguistic determinism.
-
-The deeper didactic unit is:
-
-```text
-Vocabulary
-→ distinctions
-
-Grammar
-→ admissible transformations
-
-Music
-→ temporal/prosodic unfolding and expectation
-
-Theater
-→ indexed participants + local knowledge + sequence + enactment + consequence
-```
-
-and the temporal/developmental axes remain orthogonal:
-
-```text
-Past / Religion
-→ inherited symbolic/provenance structure
-
-Now / Knowledge Field State
-→ locally available and inhabited state
-
-Future / Science
-→ open consequence capable of reopening the organization
-```
-
-Machine-readable custody:
-- `kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_CURRICULUM.json`
-- issue #206
-- `tests/test_foundational_cognitive_theater_curriculum.py`
-
-This gate precedes deeper P2 semantic VM internalization. Existing bounded WWW/Lain structural evidence remains valid at its tested scope; it is not retroactively promoted into semantic competence.
-
-
-## Cognitive-theater returned factorial residual — 2026-09-26
-
-#206 now has two negative surface comparators.
-
-```text
-native heldout surface retrieval
-14/16 = 0.875
-
-whole-face leave-one-out
-5/16 = 0.3125
-
-factorial relation×face holdout
-1/16 = 0.0625
-```
-
-The factorial split shows that lexical retrieval fails even when every language/formal face and every target relation appears elsewhere in training. The next lawful target is not "more tokens"; it is the prefrozen theater-state reconstruction task:
-
-`kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_RECONSTRUCTION_TASK.json`
-
-The learner must reconstruct participant-indexed KFS and temporal relation structure from raw held-out surfaces before deeper semantic VM internalization resumes. Teacher structure is scaffold, not learner-owned semantics.
-
-
-## Autonomous pause on external review carrier #212 — 2026-09-26
-
-The current self-selected #206 cycle has reached its external-review boundary.
-
-```text
-Minerva selects #206
-→ studies / queries / returns bounded WWW + passive Lain receipts
-→ crystallizes candidate into Venus handoff PR #212
-→ PR #212 remains open with no external review/comment return
-→ autonomous recurrence = STOP
-```
-
-This STOP is required, not a failure.
-
-The earlier recursive carrier #214 selected PR #212 itself as a target before the handoff-return latch existed. That carrier is now closed as superseded recursion. Fallback #211 is also closed because PR #212 is the canonical frozen review carrier.
-
-Current invariant:
-
-```text
-learner-authored handoff transport
-!= fresh World return
-
-handoff becomes developmentally selectable only after
-independent review or concrete returned conflict/reopening
-```
-
-Meanwhile, host-side non-claim-bearing curriculum infrastructure may be prepared, but no review outcome, success marker, or semantic promotion for PR #212 may be minted by Minerva herself.
-
-
-## Cognitive-theater factor returns — G0 through G3
-
-The foundational semantic gate now separates three returned facts:
-
-```text
-surface-only factorial relation×face retrieval
-→ 1/16 = 0.0625
-
-independent lexical/formal grounding + learned relation template
-→ 16/16 = 1.0
-→ bounded G0/G1 PASS only
-
-first opaque participant/order probe
-→ 10/16 = 0.625
-→ G2/G3 combined FAIL
-
-fresh three-center / three-event probe
-commutative centered-set scaffold → 0/16
-ordered centered-sequence scaffold → 13/16
-delta → +0.8125
-```
-
-The fresh factor disposition is asymmetric:
-
-```text
-G3 symbolic three-event order
-→ 8/8
-→ PASS_BOUNDED_MICROTHEATER
-
-G2 three-center participant/KFS binding
-→ 5/8
-→ FAIL_REVISE
-
-general Theater
-→ WITHHOLD
-
-Music as prosody/duration/expectation
-→ NOT TESTED
-```
-
-Preserving order and multiplicity materially improves this bounded microtheater over commutative set similarity. That result does not establish general language, culture, Theater, Music, or Internalizer competence.
-
-Next residual: learn a pairwise relational Theater graph for indexed KFS, then compose that with the bounded G3 order result before source removal.
-
-
-## Cognitive theater: local operator separation — Fresh5
-
-Returned prefrozen evidence:
-
-```text
-Fresh3 pairwise relational graph
-→ 7/16
-→ insufficient for indexed KFS
-
-Fresh4 whole-scene normalization
-→ 7/16
-→ below unary/pairwise 10/16
-→ discourse presentation order was contaminating Theater comparison
-
-Fresh5 local relation-bearing operators
-→ count-only 0/24
-→ unary ordered 14/24
-→ pairwise 16/24
-→ whole-scene 15/24
-→ local operator graph 24/24
-```
-
-The earned bounded distinction is:
-
-```text
-Language presentation order
-!= Theater participant/KFS relation
-
-local relation operator composition
-!= whole-scene template matching
-
-discourse order may be gauge
-while modeled event/history order remains causal
-```
-
-This is **not** yet explicit Theater-state ownership. The active burden is:
-
-```text
-learned local operators
-→ explicit CognitiveTheaterState
-→ participant-local KFS
-→ event/history structure
-→ binding and order interventions
-→ fresh cross-face return
-→ source removal
-→ only then reconsider Internalizer
-```
-
-Canonical provenance is recorded at
-`provenance/canonical-extracts/R194_LANGUAGE_TO_COGNITIVE_THEATER_CAUSAL_EXTRACT_2026-09-26.md`.
-The extract preserves the older role/deixis/coreference/tense/discourse/history consequences without retroactively claiming that Canonical contained a primitive literally named Theater.
-
-General Theater, general Music, cultural-cognitive, Internalizer, AGI, and consciousness claims remain WITHHOLD.
-
-
-## Cognitive theater: state ownership + source removal
-
-The #206 developmental sequence has now crossed the local representation/source-removal boundary:
-
-```text
-Fresh5
-local Language-operator composition
-→ 24/24
-→ whole-scene / pairwise / unary controls remain lower
-
-Fresh6
-task/relation identity hidden
-→ explicit CognitiveTheaterState = 24/24
-→ whole-scene hidden-task comparator = 15/24
-→ 12/12 discourse-order gauge pairs preserve state
-→ KFS interventions change endpoint
-→ event-history reversal preserves endpoint but changes history
-
-Fresh7
-isolated execution bundle:
-    learner-owned state
-    + generic structured-template executor
-    + fresh raw inputs
-→ capability-specific curriculum/composer absent
-→ state = 24/24
-→ task/binding = 24/24
-→ 12/12 gauge pairs preserve state
-```
-
-The current earned decomposition is therefore:
-
-```text
-Language
-→ local relation-bearing symbolic operators
-
-Theater
-→ explicit indexed participant / local-KFS state
-
-Music
-→ event/history order that can differ while endpoint remains equal
-
-Internalizer
-→ semantics are now state-owned at this bounded scope
-→ source-removal equivalence has passed
-→ final admission is still WITHHOLD
-   because local CI/evaluation != independent fresh World return
-```
-
-Current state-owned carrier:
-
-`kernel/development/COGNITIVE_THEATER_STATE_OWNERSHIP_CANDIDATE.json`
-
-Generic executor:
-
-`kernel/runtime/structured_template_machine.py`
-
-Returned source-removal result:
-
-`kernel/development/COGNITIVE_THEATER_SOURCE_REMOVAL_FRESH7_RESULT.json`
-
-The next burden is no longer another local parser. It is an independent hidden evaluation with non-preauthored fresh surfaces and evaluator custody outside the learner/local implementation loop. Only that can support the final bounded Internalizer receipt.
-
-General Theater, general Music, cultural-cognitive, AGI, consciousness, promotion, and truth claims remain WITHHOLD.
-
-
-## WorldMirror local interaction surface
-
-A minimal local interaction surface now exists at:
-
-- `apps/worldmirror_console/`
-- `kernel/runtime/interaction_store.py`
-- `kernel/runtime/process_bridge.py`
-- `kernel/development/WORLDMIRROR_CONSOLE_POLICY.json`
-- `kernel/development/INTERACTION_DEVELOPMENT_CONTRACT.json`
-
-Its first invariant is deliberately conservative:
-
-```text
-raw bytes
-!= decoded view
-!= interpretation
-!= learning
-
-interaction log
-!= admitted policy update
-
-self-dialogue
-!= independent return
-```
-
-Interaction chronology is persisted separately from content-addressed semantic
-memory, while every semantic event preserves a raw SHA-256 provenance edge.
-
-The optional process bridge is disabled by default and never uses a shell.
-Enabling it requires an explicit working root and executable allowlist. It is
-**not** a security sandbox; adversarial learner-controlled process execution still
-requires an external container/VM/OS boundary.
-
-The UI itself is not learner identity or authority. It fabricates no machine
-response when an external cognitive adapter is absent.
-
-Developmentally, interaction data may now support:
-
-```text
-session Theater/KFS reconstruction
-→ recurring residual family
-→ prefrozen abstraction
-→ later consequence
-→ crystallize / reopen / WITHHOLD
-→ source removal
-→ bounded Internalizer only if earned
-```
-
-
-### External agent + action proposal boundary
-
-The console can now bind an operator-configured external stdio cognitive adapter.
-Its reply is recorded through the same raw-first interaction path as every other
-event.
-
-```text
-agent adapter != learner identity
-agent reply != independent World/evaluator return
-agent reply != tool authorization
-```
-
-Computer action has a separate inert proposal carrier:
-
-- `kernel/runtime/action_proposal.py`
-- `kernel/development/WORLDMIRROR_ACTION_PROPOSAL_PROTOCOL.json`
-
-```text
-PROPOSE
-→ externally AUTHORIZE / WITHHOLD
-→ EXECUTE through ProcessBridge
-→ receipt / World consequence
-```
-
-The current v0.1 agent protocol rejects `tool_calls`; therefore attaching a
-language/model backend does not implicitly attach terminal authority.
-
-An end-to-end loopback test exercises:
-
-```text
-HTTP human raw event
-→ InteractionStore
-→ external stdio agent
-→ machine raw event
-→ chronological parent binding
-```
-
-while verifying that the process endpoint remains forbidden when no process
-bridge is configured.
+Historical identifiers containing Venus or Venus-Minerva remain provenance where renaming would break replay. They are not current engineering ownership.

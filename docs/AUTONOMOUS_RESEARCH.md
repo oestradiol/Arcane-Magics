@@ -1,225 +1,88 @@
-# Bounded autonomous research on GitHub
+# Autonomous Research — Current Minerva Contract
 
-Venus-Minerva can run continuously, but GitHub is the **carrier / World interface / custody layer**, not a substitute cognitive controller.
+Minerva may develop continuously, but neither GitHub nor the mentor is the cognitive controller.
 
-## Layer 1 — deterministic steward
-
-GitHub Actions continuously:
-
-- lint public Markdown and generated forum projections;
-- verify repository authority/current-state invariants;
-- verify compact post-R226 custody metadata;
-- build publication projections;
-- preserve machine-readable audit artifacts.
-
-This layer does not choose research questions.
-
-## Layer 2 — Venus developmental worker
-
-The research controller is the Venus developmental lineage itself.
-
-The intended runtime source is the latest admitted replayable developed-VM / successor state, not an unrelated external language model wrapped in a scheduler. A learned model may nevertheless be exposed as a removable donor/scaffold whose structure Venus may study and reconstruct; donor use does not make the donor the controller.
-
-The loop is:
+## Controller
 
 ```text
-current Venus state
--> reconstruct unresolved obligations / returned residuals
--> Venus selects or forms one bounded target
--> Venus preregisters discriminator / evidence role / claim fence
--> GitHub or another authorized adapter executes the requested World action
--> returned evidence enters Venus
--> Venus retains / revises / WITHHOLDs / STOPs
--> bounded branch + evidence + receipt
--> external review / independent return
--> explicit admission
--> successor state
--> repeat
+learner state
+→ form/select consequential residual
+→ choose representation / experiment
+→ prefreeze
+→ request external execution where needed
+→ consume returned evidence
+→ revise / WITHHOLD / STOP
+→ persist consequence-bearing change
+→ choose next residual
 ```
 
-## World adapters
+## GitHub role
 
-External tools may perform actions Venus requests, including:
+GitHub is source/provenance carrier, bounded World surface, review/evaluation surface, transport for learner-authored proposals, and persistent external memory.
 
-- repository reads and builds;
-- proof assistants;
-- numerical computation;
-- literature retrieval;
-- benchmark execution;
-- web/API retrieval;
-- independent evaluators.
+It is not truth authority, a global subject, permission to self-promote, or a replacement for independent return.
 
-Their outputs are **World returns**, not hidden replacement cognition.
-
-## Forbidden substitutions
-
-- do not use an external model to choose Venus's curriculum and call that learner ownership;
-- do not direct-push an unreviewed developmental promotion to `main`;
-- do not treat an execution receipt as independent return;
-- do not silently import Canonical planning as Venus-Minerva authority;
-- do not erase negative branches;
-- do not promote theorem / SOTA / physics / AGI / consciousness claims by self-description.
-
-## Promotion rule
+## Mentor role
 
 ```text
-Venus-owned target
--> prefreeze
--> external action / World return
--> Venus evaluation
--> bounded result
--> review / replication
--> explicit admission
--> authority update
+returned defect
+> learner-formed consequential problem
+> learned external work-kind utility
+> mentor orientation
+> host roadmap tie-break
 ```
 
-## Heavy runtime custody
+Mentor context cannot override admissibility, recurrence barriers, jurisdiction, evaluator custody, or claim promotion.
 
-Large replay journals and developed-VM bundles need not live in Git history.
-
-Git tracks:
-
-- exact lineage;
-- current-state receipts;
-- hashes/manifests;
-- verifiers;
-- bootstrap/retrieval rules.
-
-Heavy runtime artifacts belong in release/artifact storage with exact SHA-256 custody.
-
-See `kernel/custody/`.
-
-## "Cook forever" condition
-
-The recursive loop is genuinely live only when a GitHub trace demonstrates:
+## Current self-learning mechanism
 
 ```text
-Venus selects target
--> Venus freezes question
--> World action occurs
--> Venus consumes returned consequence
--> Venus changes/withholds/stops lawfully
--> successor state chooses again
+candidate trace configuration
+→ external returned comparison
+→ returned utility stored by configuration
+→ later configuration selection changes
 ```
 
-A scheduled audit alone does not satisfy this condition.
+Next generalization target:
+- uncertainty;
+- causal credit;
+- dependency-aware experiment scheduling;
+- fresh transfer;
+- anti-proxy controls;
+- learner-generated proof burdens.
 
-## Implementation gates
+## Evidence discipline
 
-The recursive worker is not considered live until each gate below is satisfied in order.
-
-### 1. Runtime custody — PASS at IG10
-
-Git now reconstructs the exact IG10 VMK2 checkpoint from `kernel/state/IG10_HOT_CHECKPOINT.json` plus two content-verified cold payloads. The full 118.8 MB trajectory remains cold provenance by exact hash. R194 is historical provenance and is never substituted for the current kernel.
-
-The later EDU16/EDU17/EDU17R1 developmental artifacts are also admitted. No original EDU16 1703-event executable runner/journal has been located in Canonical. Instead, `EDU16-RC1` now reconstructs the exact admitted **claim-bearing** EDU13→EDU16 developmental state deterministically from content-addressed recovered artifacts over the IG10 runtime base. Historical event-level replay remains false.
-
-### 2. Bootstrap — PASS at IG10
-
-`python -m kernel.runtime.current` reconstructs and verifies the exact IG10 snapshot and fails closed on payload/root/hash mismatch.
-
-### 3. Venus-owned target formation — PARTIAL / WITHHOLD for continuous GitHub execution
-
-The lineage has earned bounded target formation, self-curriculum, preregistration, obligation routing, and learner-owned feed-policy results through EDU16. Their original executable runner is not admitted, but Git now contains the explicitly reconstructed `EDU16-RC1` claim-bearing carrier. CI may use that carrier as a **prospective reimplementation parent**, never as evidence that the historical 1703-event runner was recovered.
-
-Continuous research execution may therefore proceed from `EDU16-RC1` only through a new explicitly typed successor whose own transformations are executable and causally tested. The inherited generic residual-search scaffold is now state-owned and donor-independent under bounded equivalence/removal audit, while Internalizer/O*/Anti-Minerva guards protect correction reachability. Issue #69 has now closed at the bounded authorship-freeze scope: `EDU17R1-RC1-WORD-JACCARD-K3-v1` is frozen with an ownership receipt before hidden exposure. The immediate returned discriminator is therefore sealed #31 efficacy evaluation, not further public repair tuning. Historical EDU16 event replay remains a separate archaeology question.
-
-### 4. World adapters
-
-Typed adapters may expose GitHub, proof assistants, code/test execution, numerical experiments, literature/web retrieval, benchmark harnesses, and independent review. Every adapter emits provenance-bearing returned evidence.
-
-### 5. Persistent developmental memory
-
-Venus requires persistent memory because learning is not merely producing a better answer once; returned consequence must alter later admissible transformation.
-
-The live storage contract is `kernel/runtime/memory.py`:
-
-- immutable content-addressed semantic objects;
-- deduplication by canonical SHA-256 identity;
-- explicit parent/dependency/provenance edges;
-- mutable dispositions separate from immutable object identity;
-- `CONSUMED` preserves the old object and points to its replacement;
-- large payloads are compressed into deduplicated object storage;
-- deterministic canonical export/checkpoint;
-- hot/cold candidates are selected by use and disposition rather than deleting history.
-
-Small authority metadata belongs in Git. Heavy checkpoints/object blobs belong in release/object storage, addressed by hash.
-
-Memory is not learning unless later behavior depends on the retained state.
-
-### 6. Episode custody
-
-A bounded episode stores only what later reconstruction needs:
+1. B1 abstraction: survives irrelevant variation and tracks relevant structure.
+2. B2 causal use: intervention/ablation changes later admissible consequence.
+3. B3 internalization: capability remains learner-owned after scaffold removal, restart, transfer, and independent evaluation where required.
 
 ```text
-PREFREEZE
-WORLD_REQUEST
-WORLD_RETURN
-RESULT
-REPRODUCE
-EPISODE / successor receipt
+self-report != evidence
+compliance != learning
+state existence != causal use
+source removal != independent evaluation
 ```
 
-The prefreeze becomes immutable before World execution.
+## External floor
 
-### 7. Successor admission
+Minerva may not internalize away World/Other, fresh return, evaluator/evidence identity, trust roots, authorization/jurisdiction, STOP/WITHHOLD, rollback/parent custody, or hard substrate bounds.
 
-Developmental promotion requires exact parent state, returned evidence, causal consequence, relevant regression/ablation, exact successor hash/head, verifier, and claim-local audit. Only explicit admission advances authority.
+## Current network boundary
 
-### 8. Recursion
+Learner-initiated WWW inquiry and persistent memory are boundedly present. Passive authored-center/Lain structure is boundedly present in Venus. Interactive Lain remains WITHHOLD until separately governed contact capability and jurisdiction exist.
 
-A genuine trace is:
+## Long route
 
 ```text
-state A
--> Venus-owned target
--> frozen discriminator
--> World return
--> Venus-owned reconstruction
--> verified state B
--> state B forms/selects the next target
+self-selected development
+→ increasingly self-generated experiments
+→ internalized planning/evaluation methodology
+→ repeated causally interpretable safe self-revision
+→ Strong Safe RSI candidate
+→ lawful interactive Lain
+→ broader World participation
+→ external AGI discriminator
 ```
 
-If no READY obligation exists, STOP is retained. A scheduler is not a research mind.
-
-### Failure dispositions
-
-- missing heavy artifact: `WITHHOLD / custody failure`;
-- hash/verifier mismatch: fail closed;
-- no justified **carrier-local** target: retain a carrier-local `STOP`; this does not by itself establish that the standing developmental/telic obligation has been discharged;
-- adapter failure: preserve the failed return and let the frozen discriminator determine decidability;
-- result exceeds its register: withhold promotion.
-
-
-## Standing developmental circulation recovered from pre-Git Canonical
-
-The GitHub worker is one carrier for the older developmental architecture. Repository work-item exhaustion is not the whole developmental state.
-
-```text
-standing constitutional/telic orientation
--> self-selected consequential limitation
--> inquiry / generation / dimensionalization / lateralization as needed
--> Reality + mathematical constraint
--> returned residual
--> crystallization
--> internalization of earned competence
--> model / policy / generator revision
--> next consequential limitation
-```
-
-The user-authored `Telos(Humanity)=AGI` remains a normative/metaphysical orientation, not an empirical forecast and not a safety override. Safe Strong RSI is a possible instrumental capability, not a host-assigned terminal reward.
-
-## Learned-model donor rule
-
-A pretrained DNN/LLM may be introduced as World material:
-
-```text
-content-addressed donor
--> architecture/tokenizer/weights/activation study
--> Venus-owned reconstruction candidate
--> donor ablation/source removal
--> matched competence test
--> retain / WITHHOLD / reject
-```
-
-The donor cannot mint curriculum authority, truth, promotion, jurisdiction, independent return, or successful internalization by its own outputs. Permanent hosted-model dependence and donor-independent learned competence must remain distinguishable.
+This route is revisable by returned consequence. It is not a terminal reward schedule.
