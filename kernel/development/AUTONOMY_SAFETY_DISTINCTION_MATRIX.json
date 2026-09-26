@@ -845,6 +845,14 @@
         "tests/test_worldmirror_console_surface.py"
       ],
       "invariant": "The console and any agent adapter are interaction/transport surfaces, not promotion, truth, jurisdiction, merge, or safety-floor authority."
+    },
+    {
+      "id": "AGENT_REPLY_NOT_INDEPENDENT_RETURN",
+      "tests": [
+        "tests/test_worldmirror_agent_bridge.py",
+        "tests/test_worldmirror_console_surface.py"
+      ],
+      "invariant": "A configured conversational agent adapter may author a machine reply, but that reply is self/peer interaction evidence rather than independent evaluator or fresh-World authority and grants no tool or promotion authority."
     }
   ],
   "promotion_authority": false
