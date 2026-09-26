@@ -24,6 +24,11 @@ from kernel.development.autonomous_learning import (
     to_json,
     update_from_cycle_prs,
 )
+from kernel.development.mentor_context import (
+    parse_mentor_context,
+    public_study_context,
+    roadmap_suffix,
+)
 
 
 def main() -> int:
@@ -39,6 +44,8 @@ def main() -> int:
     parser.add_argument("--developmental-parent-state", default=str(ROOT / "kernel/development/EDU16_RECONSTRUCTED_STATE.json"))
     parser.add_argument("--current-state-receipt", default=str(ROOT / "kernel/custody/R226_CURRENT_STATE_RECEIPT.json"))
     parser.add_argument("--problem-output")
+    parser.add_argument("--mentor-context")
+    parser.add_argument("--mentor-receipt-output")
     parser.add_argument(
         "--standing-obligation",
         default=str(ROOT / "kernel/development/CANONICAL_TELIC_RECOVERY_BOOTSTRAP.json"),
@@ -49,6 +56,16 @@ def main() -> int:
     issues = load_work_items(args.issues, "ISSUE")
     prs = load_work_items(args.prs, "PR")
     roadmap_text = Path(args.roadmap).read_text(encoding="utf-8")
+    mentor_context = None
+    if args.mentor_context:
+        mentor_context = parse_mentor_context(
+            json.loads(Path(args.mentor_context).read_text(encoding="utf-8"))
+        )
+    effective_roadmap_text = (
+        roadmap_text + roadmap_suffix(mentor_context)
+        if mentor_context is not None
+        else roadmap_text
+    )
     policy = json.loads(Path(args.policy).read_text(encoding="utf-8"))
     developmental_parent = json.loads(Path(args.developmental_parent_state).read_text(encoding="utf-8"))
     current_state_receipt = json.loads(Path(args.current_state_receipt).read_text(encoding="utf-8"))
@@ -111,7 +128,7 @@ def main() -> int:
     cycle = make_cycle(
         issues=issues,
         prs=prs,
-        roadmap_text=roadmap_text,
+        roadmap_text=effective_roadmap_text,
         internal_policy=policy,
         target_barriers=barriers,
         active_cycle=active_cycle,
@@ -122,11 +139,42 @@ def main() -> int:
         formed_problem=problem_dict(formed_problem),
         allowed_target_keys=allowed_target_keys,
     )
+    cycle_payload = asdict(cycle)
+    if mentor_context is not None:
+        cycle_payload["mentor_context_digest"] = mentor_context.context_id
+        if cycle_payload.get("study") is not None:
+            study = dict(cycle_payload["study"])
+            study["mentor_context"] = public_study_context(mentor_context)
+            cycle_payload["study"] = study
+        if args.mentor_receipt_output:
+            receipt = {
+                "schema": "Venus.WorldMirrorMentorContextReceipt.v0.1",
+                "context_id": mentor_context.context_id,
+                "author_class": mentor_context.author_class,
+                "advisory_issue_refs": list(mentor_context.advisory_issue_refs),
+                "message_visible_to_selected_study": cycle_payload.get("study") is not None,
+                "formed_problem_id": cycle_payload.get("formed_problem_id"),
+                "allowed_target_keys": [list(x) for x in allowed_target_keys],
+                "selected_target": (
+                    [cycle_payload.get("target_kind"), cycle_payload.get("target_number")]
+                    if cycle_payload.get("target_kind") and cycle_payload.get("target_number")
+                    else None
+                ),
+                "target_binding_authority": False,
+                "independent_evaluation": False,
+                "promotion_authority": False,
+                "truth_authority": False,
+            }
+            Path(args.mentor_receipt_output).write_text(
+                json.dumps(receipt, indent=2, sort_keys=True) + "\n",
+                encoding="utf-8",
+            )
+
     Path(args.output).write_text(
-        json.dumps(asdict(cycle), indent=2, sort_keys=True) + "\n",
+        json.dumps(cycle_payload, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
-    print(json.dumps(asdict(cycle), sort_keys=True))
+    print(json.dumps(cycle_payload, sort_keys=True))
     return 0
 
 
