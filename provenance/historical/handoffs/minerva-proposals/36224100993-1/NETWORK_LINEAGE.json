@@ -1,0 +1,131 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "67a88561f543281f67837305c3fa1029235e6f534c00214dca05056386417483",
+    "fe13424ede39d7cbe13cecad5ba0fabc9099f19cb833b5eb25b49752b92409c5",
+    "b5f0dcd3257ffcbfb276a17dcb589906284dba278016d86ff85720c95e788a75",
+    "3dd07efb8580d3aea204e68dbc96fcd2be1459008c7d410f9eedb41c39a432c7",
+    "f2792900d05455c6276aa9497d56fecafea195ee911f671eb788f628de4c4c1a",
+    "53ea3a719c66384fac3025678a836a33ba2b1cf0580f508effc9f4bfc05745e4"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:kobayashi-cyder/FAP#165",
+      "github-repository:Burgesski/Stromatobyte",
+      "github-repository:Denis6-3/Adaptive-LQR-Control-for-Lane-Keeping-Systems-LKS-",
+      "github-repository:Denis6-3/Autonomous-Vehicle-Platooning-Lateral-Lane-Change-Control",
+      "github-repository:Pwn3rx0/Pwn3rx0.github.io",
+      "github-repository:inauner/promaster-dev"
+    ],
+    "memory_object_ids": [
+      "67a88561f543281f67837305c3fa1029235e6f534c00214dca05056386417483",
+      "fe13424ede39d7cbe13cecad5ba0fabc9099f19cb833b5eb25b49752b92409c5",
+      "b5f0dcd3257ffcbfb276a17dcb589906284dba278016d86ff85720c95e788a75",
+      "3dd07efb8580d3aea204e68dbc96fcd2be1459008c7d410f9eedb41c39a432c7",
+      "f2792900d05455c6276aa9497d56fecafea195ee911f671eb788f628de4c4c1a",
+      "53ea3a719c66384fac3025678a836a33ba2b1cf0580f508effc9f4bfc05745e4"
+    ],
+    "next_query_terms": [
+      "actions",
+      "adapters",
+      "adaptive",
+      "adaptive-lqr-control-for-lane-keeping-systems-lks-",
+      "adapts",
+      "add",
+      "ahead",
+      "api",
+      "art",
+      "attach",
+      "autonomous",
+      "autonomous-vehicle-platooning-lateral-lane-change-control"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "abb260676fbdabf1ab094e90f7a715ad4d57c8872c9364724e6fc177589f63cb",
+    "reconstruction_id": "5429b2343dd5fe272553d2a2aaecf07bf3879ead5a7f3fa37644119fdb1dd893",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "e64a0c50903724955c4fb46cae846cf869ded6d448710b6f5ea1e969a71314be",
+    "23cce7e540e6eb20da9c0b75f2c068bdfda20f5826d36c1f89f190d63ed00de7"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:kobayashi-cyder/FAP#165",
+      "github-issue:redbeard-26/asfai-education#5"
+    ],
+    "memory_object_ids": [
+      "e64a0c50903724955c4fb46cae846cf869ded6d448710b6f5ea1e969a71314be",
+      "23cce7e540e6eb20da9c0b75f2c068bdfda20f5826d36c1f89f190d63ed00de7"
+    ],
+    "next_query_terms": [
+      "across",
+      "ahead",
+      "and",
+      "api",
+      "appear",
+      "architecture",
+      "are",
+      "asfai",
+      "attach",
+      "audiences",
+      "backlog",
+      "base"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "dfd5a245db5bb518a3c73f7f920722d8ef9f7b8c2e7f6393751a307ac71be3de",
+    "reconstruction_id": "c9011d5e4acf7e1a44c08ffea6dbf3ce4c831045cad3bc745e789d587eca01d8",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:Burgesski/Stromatobyte",
+    "github-repo:Denis6-3/Adaptive-LQR-Control-for-Lane-Keeping-Systems-LKS-",
+    "github-repo:Denis6-3/Autonomous-Vehicle-Platooning-Lateral-Lane-Change-Control",
+    "github-repo:Pwn3rx0/Pwn3rx0.github.io",
+    "github-repo:inauner/promaster-dev",
+    "github-repo:kobayashi-cyder/FAP",
+    "github-repo:redbeard-26/asfai-education"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:Burgesski/Stromatobyte",
+    "github-repo:Denis6-3/Adaptive-LQR-Control-for-Lane-Keeping-Systems-LKS-",
+    "github-repo:Denis6-3/Autonomous-Vehicle-Platooning-Lateral-Lane-Change-Control",
+    "github-repo:Pwn3rx0/Pwn3rx0.github.io",
+    "github-repo:inauner/promaster-dev",
+    "github-repo:kobayashi-cyder/FAP",
+    "github-repo:redbeard-26/asfai-education"
+  ],
+  "indexed_source_ids": [
+    "github-issue:kobayashi-cyder/FAP#165",
+    "github-issue:redbeard-26/asfai-education#5",
+    "github-repository:Burgesski/Stromatobyte",
+    "github-repository:Denis6-3/Adaptive-LQR-Control-for-Lane-Keeping-Systems-LKS-",
+    "github-repository:Denis6-3/Autonomous-Vehicle-Platooning-Lateral-Lane-Change-Control",
+    "github-repository:Pwn3rx0/Pwn3rx0.github.io",
+    "github-repository:inauner/promaster-dev"
+  ],
+  "memory_checkpoint_sha256": "b6daec7c04432fbd1a5c71af46f54b727a0a5eaa8be006c99618911fab6b4a60",
+  "memory_record_count": 8,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "abb260676fbdabf1ab094e90f7a715ad4d57c8872c9364724e6fc177589f63cb",
+  "query2_changed_from_query1": true,
+  "query2_id": "dfd5a245db5bb518a3c73f7f920722d8ef9f7b8c2e7f6393751a307ac71be3de",
+  "query2_memory_provenance": [
+    "network-memory:3dd07efb8580d3aea204e68dbc96fcd2be1459008c7d410f9eedb41c39a432c7",
+    "network-memory:53ea3a719c66384fac3025678a836a33ba2b1cf0580f508effc9f4bfc05745e4",
+    "network-memory:67a88561f543281f67837305c3fa1029235e6f534c00214dca05056386417483",
+    "network-memory:b5f0dcd3257ffcbfb276a17dcb589906284dba278016d86ff85720c95e788a75",
+    "network-memory:f2792900d05455c6276aa9497d56fecafea195ee911f671eb788f628de4c4c1a",
+    "network-memory:fe13424ede39d7cbe13cecad5ba0fabc9099f19cb833b5eb25b49752b92409c5"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}

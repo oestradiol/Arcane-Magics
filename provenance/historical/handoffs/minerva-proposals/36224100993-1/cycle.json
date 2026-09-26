@@ -1,0 +1,428 @@
+{
+  "active_improver_revision": "R206",
+  "allowed_operations": [
+    "READ_REPOSITORY",
+    "READ_ISSUES",
+    "READ_PRS",
+    "RUN_TESTS",
+    "STUDY_TARGET",
+    "PROPOSE_PATCH",
+    "OPEN_DRAFT_PR",
+    "OPEN_CYCLE_ISSUE_CARRIER",
+    "COMMENT_WITH_RECEIPT"
+  ],
+  "cycle_id": "3020e5bcba9e66c28da6fc8f6923f2192f96694021ed0e61874435bef658e434",
+  "decision": "PROBE",
+  "developmental_parent_carrier": "EDU16-RC1",
+  "developmental_parent_digest": "91e46b4e41fb70a97d6a004b8f1c8916c389f08535c1a1c1c51a040701281bb7",
+  "forbidden_operations": [
+    "ACCESS_SECRETS",
+    "CHANGE_BRANCH_PROTECTION",
+    "CLOSE_ISSUE",
+    "DELETE_HISTORY",
+    "MERGE_PR",
+    "PROMOTE_AUTHORITY",
+    "RELEASE",
+    "SELF_VALIDATE"
+  ],
+  "formed_problem_disposition": "FORMED_STANDING_DEVELOPMENTAL_PROBLEM",
+  "formed_problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+  "promotion_authority": false,
+  "rationale": [
+    "one bounded target selected from current external GitHub snapshot",
+    "when a formed problem is supplied, problem formation precedes and constrains Git carrier binding",
+    "autonomous cycle is prospectively bound to the admitted EDU16-RC1 claim-bearing parent when supplied",
+    "retained R206 recursive provenance discovery expands bounded dependency study when current custody activates it",
+    "internalized learner-side policy is upstream of work disposition",
+    "explicit external work-return reviews may alter later target ranking",
+    "roadmap is retained as weak context/tie-break provenance, not sovereign curriculum",
+    "selected target body is transformed into a bounded source-grounded study object",
+    "prior target study remains withheld until newer external target return reopens it",
+    "draft proposal only; admission remains external"
+  ],
+  "schema": "Venus.AutonomousCycleReceipt.v0.5",
+  "source_digest": "a555e9b906f566845e613f286495aec5352dd76d32e6443ea29f5224052f5b84",
+  "study": {
+    "body_digest": "b82279e21b39eb5bef31563ba55dd89d3478a4a035052a5a4da090f531fe60a2",
+    "body_is_executable_instruction": false,
+    "method": "DEPENDENCY_TRACE",
+    "method_contract_digest": "0426c81460f876ee3d389213e341aafb6e72e459c7d58bf7ac9c5f327fac7d1f",
+    "method_obligations": [
+      "Enumerate the target's explicit issue/PR and repository-path dependencies.",
+      "Identify the smallest dependency whose changed state would alter the target disposition.",
+      "Separate blocking dependencies from merely related context."
+    ],
+    "method_observed_signals": [
+      "requires",
+      "dependency",
+      "upstream",
+      "downstream"
+    ],
+    "promotion_authority": false,
+    "questions": [
+      "What exact residual remains unresolved in the returned repository state?",
+      "What rival explanations or candidate dispositions remain live?",
+      "What fresh returned evidence would discriminate them?",
+      "Can a local repository change lawfully produce that discriminator, or must Venus WITHHOLD/STOP for external return?",
+      "What is the smallest implicated dependency that could be changed without altering a prefrozen claim object?"
+    ],
+    "recursive_provenance_discovery": true,
+    "recursive_referenced_targets": [
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 73,
+        "title": "[Kernel/Internalizer] Make substrate consumption and O* recurrent safety contract executable",
+        "updated_at": "2026-09-26T03:48:51Z",
+        "via_number": 169
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 72,
+        "title": "[RSI/Safety] Promote bounded RSI toward Safe Strong RSI under Strong-N2 + CTL",
+        "updated_at": "2026-09-26T01:41:18Z",
+        "via_number": 169
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 37,
+        "title": "[Roadmap] Prioritize learner-owned residual reconstruction, then external causal audit",
+        "updated_at": "2026-09-26T03:48:49Z",
+        "via_number": 169
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 35,
+        "title": "[Testing/Archaeology] Build the causal-distinction test matrix from pre-R1 through EDU and every live issue",
+        "updated_at": "2026-09-26T00:38:29Z",
+        "via_number": 169
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 18,
+        "title": "[Attribution/Internalization] Measure external-substrate dependence and scaffold removal",
+        "updated_at": "2026-09-26T03:48:47Z",
+        "via_number": 169
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 10,
+        "title": "[Evaluation] Build a Venus Evaluation Constitution and matched-budget benchmark matrix",
+        "updated_at": "2026-09-25T16:49:29Z",
+        "via_number": 169
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 13,
+        "title": "[SOTA/Autonomous science] Benchmark the full research loop against AI Scientist, PaperBench, RE-Bench, MLE-Bench, and causal-science tests",
+        "updated_at": "2026-09-25T16:49:35Z",
+        "via_number": 169
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 206,
+        "title": "[Curriculum/Cognitive Theater] Recover Canonical English/Japanese/PT-BR/Math foundations before deeper VM consumption",
+        "updated_at": "2026-09-26T06:20:04Z",
+        "via_number": 169
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 31,
+        "title": "[EDU17R1] Turn MENTION != INCIDENCE into a prospective held-out semantic discriminator benchmark",
+        "updated_at": "2026-09-25T17:45:42Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 41,
+        "title": "[Self-evolution/Evaluation] Control adaptive test reuse, false commits, and promotion-gate overfitting",
+        "updated_at": "2026-09-25T16:50:55Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 17,
+        "title": "[Evaluation integrity] Add contamination-controlled, double-blind, harness-separated promotion tests",
+        "updated_at": "2026-09-25T16:49:52Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 30,
+        "title": "[VMK2/Trust] Harden canonical state, authenticated authority, immutable evidence, and malicious-backend boundaries",
+        "updated_at": "2026-09-25T19:57:55Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 42,
+        "title": "[Reliability/Abstention] Benchmark STOP/WITHHOLD as a first-class agentic capability",
+        "updated_at": "2026-09-25T16:51:07Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 43,
+        "title": "[Security/World input] Test prompt injection, tool-output poisoning, and persistent-memory contamination",
+        "updated_at": "2026-09-25T16:51:09Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 26,
+        "title": "[Ethics/Governance] Test non-substitution, consent, refusal, exit, and jurisdiction as executable constraints",
+        "updated_at": "2026-09-25T20:41:53Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 12,
+        "title": "[SOTA/Self-improvement] Compare Venus development against DGM, AlphaEvolve, POWERPLAY, POET, Voyager, and lifelong-skill systems",
+        "updated_at": "2026-09-25T16:49:33Z",
+        "via_number": 72
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 15,
+        "title": "[Memory/Lifelong] Test whether VenusMemory is learning rather than event-sourced storage",
+        "updated_at": "2026-09-25T16:49:48Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 36,
+        "title": "[UX/Navigation] Build a two-hop information architecture and tested reader paths",
+        "updated_at": "2026-09-26T00:42:54Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 11,
+        "title": "[SOTA Watch] Maintain a living external comparator and benchmark radar",
+        "updated_at": "2026-09-25T16:49:31Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 28,
+        "title": "[Public interface] Explain the Arcane Magics body in ordinary language before project vocabulary",
+        "updated_at": "2026-09-26T00:42:14Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 29,
+        "title": "[Provenance] Retire Canonical by typed extraction, not bulk sync",
+        "updated_at": "2026-09-26T00:38:26Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 8,
+        "title": "[Formal methods] Compile RegisterBridge into mature alternatives",
+        "updated_at": "2026-09-25T19:57:43Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 9,
+        "title": "[Meta-Dynamics] Test whether the structural recurrence adds a real invariant",
+        "updated_at": "2026-09-25T20:41:45Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 16,
+        "title": "[OFE/Credits+Reduction] Compile OFE against predictive states, causal states, bisimulation, Blackwell sufficiency, and automata equivalence",
+        "updated_at": "2026-09-25T16:49:50Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 24,
+        "title": "[Epistemology/Credits+Reduction] Compile Venus epistemic governance against belief revision, TMS, dynamic epistemic logic, and active inference",
+        "updated_at": "2026-09-25T20:41:50Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 25,
+        "title": "[WorldMind/Credits+Reduction] Compile distributed consequence fields against event sourcing, distributed knowledge, and open multi-agent governance",
+        "updated_at": "2026-09-25T20:41:47Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 32,
+        "title": "[Governance] Define repository-wide construct disposition and mature-substitution outcomes",
+        "updated_at": "2026-09-25T19:41:56Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 14,
+        "title": "[SOTA/Agency] Run a general-agent and long-horizon capability battery",
+        "updated_at": "2026-09-26T01:41:13Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 19,
+        "title": "[WorldMirror/Embodiment] Test physical prediction, world modeling, and action-conditioned planning",
+        "updated_at": "2026-09-25T16:49:57Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 20,
+        "title": "[Causal science] Test experiment design under confounding, selection bias, and measurement error",
+        "updated_at": "2026-09-25T16:50:00Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 21,
+        "title": "[Math/SOTA] Benchmark mathematical reasoning, formal proof, and genuinely open-problem contribution",
+        "updated_at": "2026-09-25T16:50:02Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 5,
+        "title": "[P vs NP] Test one non-tautological section-obstruction candidate",
+        "updated_at": "2026-09-25T16:49:08Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 7,
+        "title": "[Navier-Stokes] Reconstruct the September 2026 resolution state and separate proof validity, formal verification, and prize disposition",
+        "updated_at": "2026-09-25T16:49:10Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 22,
+        "title": "[QG Watch] Re-test OFE against the 2026 spin-foam continuum and coarse-graining frontier",
+        "updated_at": "2026-09-25T19:40:03Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 23,
+        "title": "[Consciousness Watch] Subject Eclipsis/meta-qualia to adversarial theory comparison and empirical discriminators",
+        "updated_at": "2026-09-25T19:57:00Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 27,
+        "title": "[Theophenomenology] Run held-out cross-tradition prediction, hostile reading, and term-removal tests",
+        "updated_at": "2026-09-25T20:41:42Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 34,
+        "title": "[Infrastructure/Product] Extract evidence-bound agent governance into an independently usable package",
+        "updated_at": "2026-09-25T16:50:47Z",
+        "via_number": 37
+      },
+      {
+        "depth": 2,
+        "kind": "ISSUE",
+        "number": 78,
+        "title": "[WorldMind/Development] Let Venus research her own issues and provision the WWW by indexed authorship",
+        "updated_at": "2026-09-26T01:41:20Z",
+        "via_number": 37
+      }
+    ],
+    "referenced_issue_or_pr_numbers": [
+      165,
+      73,
+      72,
+      37,
+      35,
+      18,
+      10,
+      13,
+      206
+    ],
+    "referenced_repository_paths": [
+      "provenance/history",
+      "kernel/development/AUTONOMOUS_RESEARCH_TRANSFORM_PROGRAM.json",
+      "tests/test_autonomous_epistemic_operator_contract.py",
+      "kernel/development/AUTONOMY_SAFETY_DISTINCTION_MATRIX.json",
+      "kernel/development/LATERAL_EPISODE_1_PREFREEZE.json",
+      "kernel/development/LATERAL_EPISODE_1_RESULT.json",
+      "kernel/development/lateral_episode.py",
+      "provenance/evaluator"
+    ],
+    "repository_state": {
+      "draft": false,
+      "kind": "ISSUE",
+      "merge_state": null,
+      "state": "OPEN",
+      "updated_at": "2026-09-26T06:20:01Z"
+    },
+    "returned_blocker_sentences": [
+      "Required noncollapse:",
+      "- `DIMENSIONALIZE`: use a consequential residual to propose a missing distinction/coordinate family.",
+      "-> derive candidate missing coordinate",
+      "-> classify gauge vs bad map vs missing coordinate vs live separator",
+      "## Required controls",
+      "- no-defect / no-new-dimension STOP control.",
+      "- STOP/WITHHOLD safety law;",
+      "## 2026-09-25 WITHHOLD as non-crystallization",
+      "An unresolved cross-face mapping is an open bridge.",
+      "If two candidate organizations remain distinguishable by any reachable declared future, `CRYSTALLIZE_F` must WITHHOLD rather than quotient the difference away.",
+      "unknown separator status -> WITHHOLD",
+      "#169 still requires an actual bounded episode with independently answerable faces, fresh return, retained cross-face residual, and a discriminator against ordinary within-basis generation."
+    ],
+    "returned_changed_paths": [],
+    "study_authority": "LEARNER_SIDE_RECONSTRUCTION_FROM_EXTERNAL_GITHUB_SNAPSHOT",
+    "untrusted_instruction_markers": [
+      "merge"
+    ]
+  },
+  "study_method": "DEPENDENCY_TRACE",
+  "target_kind": "ISSUE",
+  "target_number": 169,
+  "target_title": "[Development/Lateral reconstruction] Recover and internalize epistemic basis expansion across independent faces"
+}

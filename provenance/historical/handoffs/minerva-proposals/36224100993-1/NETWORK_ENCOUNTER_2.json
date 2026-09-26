@@ -1,0 +1,86 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:kobayashi-cyder/FAP",
+    "github-repo:redbeard-26/asfai-education"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:kobayashi-cyder/FAP",
+    "github-repo:redbeard-26/asfai-education"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "dfd5a245db5bb518a3c73f7f920722d8ef9f7b8c2e7f6393751a307ac71be3de",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T06:33:52Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "development lateral reconstruction actions adapters adaptive adaptive-lqr-control-for-lane-keeping-systems-lks- adapts",
+    "development lateral reconstruction actions adapters adaptive",
+    "development lateral reconstruction actions"
+  ],
+  "selected_study_relevance_terms": [
+    "development",
+    "lateral",
+    "reconstruction",
+    "and",
+    "internalize",
+    "epistemic",
+    "basis",
+    "expansion",
+    "across",
+    "independent",
+    "faces",
+    "noncollapse"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:redbeard-26",
+      "author_login": "redbeard-26",
+      "author_type": "User",
+      "center_id": "github-repo:redbeard-26/asfai-education",
+      "learner_minted_artifact": false,
+      "observed_relation": "# Roadmap: independent MagicSchool feature-parity options for ASFAI Education ## Purpose and research boundary This issue is a selectable implementation backlog, not a proposal to copy MagicSchool's proprietary prompts, model configurations, source code, or visual design. It describes independently designed ASFAI capabilities that provide comparable educational jobs-to-be-done on top of ASFAI's open, MCP-first, evidence-centered architecture. Inventory snapshot: **2026-08-23**. MagicSchool's public [Master Tools List](https://docs.google.com/spreadsheets/d/1ZTK7X2D8R_uqYW8SF9sejnkpBCQzMz_qVXS9G_Rhag0/edit?usp=sharing) contains 100 educator category rows representing **88 unique educator tools** (12 are cross-listed), plus **51 student tools**. Twenty-one names appear in both lists, producing **118 unique named tools across both audiences**. The matrices below evaluate every unique educator tool and every student-facing tool, including the overlaps because their student delivery and safety requirements differ. The inventory also includes public platform capabilities documented on MagicSchool's [product](https://www.magicschool.ai/magic-tools), [student](https://www.magicschool.ai/ma",
+      "relevance_matches": [
+        "across",
+        "independent"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-08-24T05:07:00Z",
+      "source_id": "github-issue:redbeard-26/asfai-education#5",
+      "source_url": "https://github.com/redbeard-26/asfai-education/issues/5",
+      "title": "Roadmap: independent MagicSchool feature-parity options for ASFAI Education"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:kobayashi-cyder",
+      "author_login": "kobayashi-cyder",
+      "author_type": "User",
+      "center_id": "github-repo:kobayashi-cyder/FAP",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Reconstructed job state This issue reconstructs the deleted/lost development job that produced PR #164. Source of truth: - PR: #164 \u2014 **Add universal FAP speech I/O with independent STT/TTS** - branch: `feature/universal-fap-speech-io` - current head: `89c246ca352ef317d4d902ba03b43b9154dbdd87` - base: current public FAP `main` - current delta: 3 commits ahead of main, no unique main divergence - current files: `fap_speech.py`, `FAP_SPEECH.md`, `tests/test_fap_speech.py` - preserved local evidence from PR: 5/5 speech tests pass and module compiles - no GitHub Actions run is required as evidence for this reconstruction; prefer push-only/local verification first ## Original job purpose reconstructed from the surviving branch Build a **version-neutral FAP-owned speech I/O layer** that can attach to historical FAP gateways and the reset 1.x line through a plain `str -> str` text handler, without depending on a cloud speech API or a pretrained third-party voice/model. The job covers: 1. local FAP TTS; 2. local/trainable FAP STT; 3. WAV I/O; 4. microphone capture and playback adapters; 5. microphone -> STT -> FAP text handler -> TTS roundtrip; 6. fail-closed behavior when STT is untrai",
+      "relevance_matches": [
+        "development",
+        "reconstruction",
+        "independent"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-25T22:38:04Z",
+      "source_id": "github-issue:kobayashi-cyder/FAP#165",
+      "source_url": "https://github.com/kobayashi-cyder/FAP/issues/165",
+      "title": "Reconstructed job: universal FAP speech I/O (independent STT/TTS)"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}
