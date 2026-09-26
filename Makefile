@@ -4,7 +4,7 @@ test:
 	python3 scripts/run_minerva_tests.py
 
 lint:
-	python3 scripts/lint_github_markdown.py
+	python3 scripts/lint_minerva_markdown.py
 
 custody:
 	python3 scripts/audit_custody.py
