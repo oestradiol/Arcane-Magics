@@ -1,7 +1,7 @@
 {
   "schema": "Venus.CognitiveTheaterFactorModel.v0.1",
   "date": "2026-09-26",
-  "status": "RETURNED_LOCAL_OPERATOR_SEPARATION__G2_G3_BOUNDED_PASS_G4_OPEN",
+  "status": "G0_G5_BOUNDED_PASS__INDEPENDENT_EVALUATION_OPEN",
   "issue_ref": 206,
   "thesis": "Cognitive-theater competence is decomposed so lexical grounding, symbolic transformation, temporal inhabitation, participant/KFS binding, and returned consequence cannot substitute for one another.",
   "factors": [
@@ -167,7 +167,26 @@
       "G2_transmission_accuracy": 1,
       "G3_symbolic_event_order_accuracy": 1,
       "status": "PASS_BOUNDED_LOCAL_OPERATOR_COMPOSITION__WITHHOLD_GENERAL_THEATER_AND_INTERNALIZATION"
+    },
+    "G4_explicit_state_fresh6": {
+      "ref": "kernel/development/COGNITIVE_THEATER_EXPLICIT_STATE_FRESH6_RESULT.json",
+      "explicit_state_accuracy": 1,
+      "hidden_task_binding_accuracy": 1,
+      "whole_scene_hidden_task_accuracy": 0.625,
+      "gauge_pair_accuracy": 1,
+      "KFS_intervention_pass": true,
+      "history_intervention_pass": true,
+      "status": "PASS_BOUNDED_EXPLICIT_STATE"
+    },
+    "G5_source_removal_fresh7": {
+      "ref": "kernel/development/COGNITIVE_THEATER_SOURCE_REMOVAL_FRESH7_RESULT.json",
+      "isolated_state_accuracy": 1,
+      "isolated_task_binding_accuracy": 1,
+      "capability_specific_source_in_execution": false,
+      "state_ownership_pass": true,
+      "independent_external_evaluation": false,
+      "status": "PASS_BOUNDED_SOURCE_REMOVAL__WITHHOLD_FINAL_INTERNALIZATION"
     }
   },
-  "next_residual": "COMPILE_LOCAL_OPERATORS_INTO_EXPLICIT_COGNITIVE_THEATER_STATE_AND_TEST_PARTICIPANT_KFS_AND_EVENT_ORDER_INTERVENTIONS"
+  "next_residual": "INDEPENDENT_HIDDEN_FRESH_RETURN_FOR_STATE_OWNED_THEATER_RECONSTRUCTION"
 }
