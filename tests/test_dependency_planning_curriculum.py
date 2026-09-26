@@ -32,7 +32,8 @@ class DependencyPlanningCurriculumTests(unittest.TestCase):
         self.assertFalse(self.candidate["internalization_claim"])
         self.assertFalse(self.candidate["promotion_authority"])
         self.assertFalse(self.candidate["truth_authority"])
-        self.assertNotIn("A", str(self.candidate["program"]))
+        self.assertNotIn("K7", str(self.candidate["program"]))
+        self.assertNotIn("H1", str(self.candidate["program"]))
 
     def test_interventions_are_bounded_and_withhold_on_invalid_graphs(self):
         self.assertEqual(
