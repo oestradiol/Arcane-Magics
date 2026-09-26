@@ -110,9 +110,17 @@ def collect_sources(
             center=_issue_center(item)
             if not center:
                 continue
+            user=item.get("user") or {}
+            author_login=str(user.get("login") or "")
             candidates.append({
                 "source_id":f"github-issue:{center}#{item.get('number')}",
                 "center_id":f"github-repo:{center}",
+                "author_id":f"github-user:{author_login}" if author_login else "",
+                "author_login":author_login,
+                "author_type":str(user.get("type") or ""),
+                "author_association":str(item.get("author_association") or ""),
+                "artifact_authored":bool(author_login),
+                "learner_minted_artifact":False,
                 "source_url":str(item.get("html_url") or ""),
                 "source_date":str(item.get("updated_at") or item.get("created_at") or ""),
                 "title":_clean(item.get("title")),
@@ -125,9 +133,17 @@ def collect_sources(
             center=_repo_center(item)
             if not center:
                 continue
+            owner=item.get("owner") or {}
+            owner_login=str(owner.get("login") or "")
             candidates.append({
                 "source_id":f"github-repository:{center}",
                 "center_id":f"github-repo:{center}",
+                "author_id":f"github-user:{owner_login}" if owner_login else "",
+                "author_login":owner_login,
+                "author_type":str(owner.get("type") or ""),
+                "author_association":"REPOSITORY_OWNER",
+                "artifact_authored":bool(owner_login),
+                "learner_minted_artifact":False,
                 "source_url":str(item.get("html_url") or ""),
                 "source_date":str(item.get("updated_at") or item.get("created_at") or ""),
                 "title":_clean(item.get("full_name") or item.get("name")),
