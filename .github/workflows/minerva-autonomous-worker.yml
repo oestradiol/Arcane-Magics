@@ -144,7 +144,7 @@ jobs:
           git commit -m "handoff(minerva->venus): crystallize engineering candidate ${GITHUB_RUN_ID}"
           git push origin "$branch"
 
-          pr_body="Target-based crystallization handoff. The merge commit preserves Minerva as a second parent while retaining the Venus tree. Only explicit proposal receipts are admitted. Venus must integrate the candidate into the Self/World model; scientific future discrimination remains downstream."
+          pr_body="Target-based crystallization handoff. The merge commit preserves Minerva as a second parent while retaining the Venus tree. Only explicit proposal receipts are admitted. Venus must integrate the candidate into the Self/World model. Scientific future discrimination belongs to the subsequent Venus → OFE handoff; Root integration comes only after OFE."
           if ! gh pr create --draft --base split/venus --head "$branch" \
             --title "handoff: Minerva → Venus engineering candidate ${GITHUB_RUN_ID}" \
             --body "$pr_body"; then
