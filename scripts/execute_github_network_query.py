@@ -197,6 +197,7 @@ def execute(query: dict[str, Any], *, max_sources: int = 6) -> dict[str, Any]:
     external_centers=tuple(sorted({x["center_id"] for x in sources if not x["current_repository"]}))
     return {
         "schema":"Venus.GitHubNetworkEncounter.v0.1",
+        "status":"ENCOUNTER_RETURN_AVAILABLE" if sources else "WITHHOLD_NO_INDEXED_SOURCES",
         "query_id":str(query["query_id"]),
         "adapter_id":ADAPTER_ID,
         "adapter_origin":API_ORIGIN,
@@ -229,8 +230,6 @@ def main() -> int:
         raise SystemExit("--max-sources must be between 1 and 12")
     query=json.loads(Path(args.query).read_text(encoding="utf-8"))
     result=execute(query,max_sources=args.max_sources)
-    if not result["sources"]:
-        raise SystemExit("network adapter returned no indexed sources")
     Path(args.output).write_text(json.dumps(result,indent=2,sort_keys=True)+"\n",encoding="utf-8")
     return 0
 
