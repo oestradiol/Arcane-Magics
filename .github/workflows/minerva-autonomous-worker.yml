@@ -52,6 +52,8 @@ jobs:
           test -f kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_SURFACE_BASELINE_RESULT.json
           test -f kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_RECONSTRUCTION_TASK.json
           test -f kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_FACTORIAL_BASELINE_RESULT.json
+          test -f kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_FACTORIAL_PREFREEZE.json
+          test -f kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_MATCHED_STRUCTURE.json
           test -f kernel/development/DEVELOPMENTAL_GATE_CHAIN.json
           test -f kernel/development/MINERVA_CONSTRUCT_AUDIT_SCOPE.json
           test -f kernel/development/MINERVA_CAUSAL_AUDIT_SCOPE.json
