@@ -1,0 +1,68 @@
+{
+  "carrier_binding_authority": false,
+  "discriminator": "SELECT_CONSEQUENTIAL_DEVELOPMENTAL_LIMITATION",
+  "disposition": "FORMED_STANDING_DEVELOPMENTAL_PROBLEM",
+  "external_return_required": false,
+  "problem_id": "f7295bdd7581fe722142275ffa781dd83938b791daa40c96afabc569eb9444c0",
+  "promotion_authority": false,
+  "residual_coordinates": [
+    "standing_developmental_orientation_active"
+  ],
+  "rivals": [
+    {
+      "rival_id": "r0",
+      "statement": "one currently reachable developmental carrier contains a consequential limitation worth studying"
+    },
+    {
+      "rival_id": "r1",
+      "statement": "none of the currently reachable carriers clears the learner-side threshold for consequential development"
+    }
+  ],
+  "schema": "Venus.RecompiledProblemFormation.v0.3",
+  "source_stream_ids": [
+    "0d2d05f1340268afe5782f20720b44d6254dd3b76c619bc90ee086e40da4e1de",
+    "0ff1d13253aec671cf53beb4a18f857d4b15b7721f40ed9fafb4e1b7e12e35d7",
+    "13c86e16c141439526acf4d3f9166f0aa9ec7f5c0c8dadec0802f5ca7f452bd0",
+    "1ba6eac35458302e6f11600592917fc3dcb8c90c5b930dbd17110270a16dfe53",
+    "1be5deaa2f7409f5a9f92c0eed84fc1c10a7e1b39b0b3e8ccb87f916aa6e0c6c",
+    "1c27d602c67968884c14a9a171464775992a09445ba7a7df4d9a2d375df5c7c5",
+    "205a355fa40ee1105b45af0c5977a9552f6d65ee9b95fca585c87f9d50435d16",
+    "2604621bc286be89fe258a302e9235d01fe340c6ca05c8197eff3b85ec617164",
+    "2e4501c94c7fa997006f1361d2aeb90b29f31b8cda7475e074740ef43dcc5b2f",
+    "32fcb3815dc5b14a4dd2f1748190087089f3833c8f7f62baad10d335ae7dd3d0",
+    "342b393c5713e2587679199931e80f40e325974cba701fe109761f73045c114d",
+    "3c40f3abcd50e9b05828dbd9dea9c401bcadd304c61b3ccd75c85694a966ccd0",
+    "430925a71926368bfba35fdf97d5f706b2b9893da2e8fd7a9c8b5d2553313254",
+    "4ef815c5d9d6d067d771f105273b6f239b4bc95ab6f73e968bac306d6947eb96",
+    "52b123def67938380c698d04e778273c8bea88c22db5d17231ab0e394a79a8dd",
+    "560010c3ef52d3874fd905b9871b4b7f833e5bf3eee98686d866ca883cc9e58a",
+    "5c931f4a00901c10f85d15ce03de2df8f5823367a19054ce7bbfadd8cd3e9018",
+    "5d17d9d16d7fcb4b0dca75b5ff40f2c264cf8fd9867a2a22a77a5f8f3f5a87bc",
+    "655e8f96c4ab2dd56b6f503ecc26ce0121783d651acf0c19c79f0070b0f8d877",
+    "73cbdb09bf2b3cc6045473e9c34d1b71dd1b067db59b5fda447eedc0c9320ec1",
+    "75e605f75b9e315c4a6871ee7c1d7aa7c2a2e0ff2931aa25e81a0432cf9ed482",
+    "7d5c25fbf21ae96a58b823ff3b28c72d7cba074405cd0b7d36ce238ba42da398",
+    "8655adafe074fdaa39e30aadd320f7a44c3e606cdef23a51cecdc21b9ab85976",
+    "8ff2b44dbc82cffd38840ad4a6c66c86af89dc4b13ad5c1e25d37efcf8e8cb34",
+    "962507c25c251b5eb179f6490ef4f563f1b5626fa1ba4d79b15b7031053b03fc",
+    "967185efa5d178273b49f282b884df5f298d92eda339330c7df31be958f8b46f",
+    "9e958cb2c28ac896dbb30131807953fb58a73df364486c30068da9fedb756f52",
+    "a047f9837ef495ede48dac90f7098ee5a97e596d5e9bc53b2d6d03d72fa13ffa",
+    "a8ebdfeefbfc64010fcb43bc736100a2323dbf9922ab28f26e5f47b18ea0b859",
+    "a9a93777eaeb15df70b10eae3a6423abcbebd304030ad1d5e42f6bc2819d8ce9",
+    "ac9340a5f34cd38f9b9da648576247e118df4d745c8164bdb721112799e98808",
+    "b48dca7b17277418997961831735460f38e83c6a98c09740f295e2225454d085",
+    "b4fde58ffdc05c79d2995a3c04437f8974a3fc74391ed5952346bbcff4513ca1",
+    "bd2602863d0da4a11953966511817d82a0c1d34f602999d9010165d7a09a8b8c",
+    "c535f7150dbf259d04b0b3a14ee49f655d2eddbd884f1dfe308048fd800389d0",
+    "c75b023abf2b432aaa34f4e6723245fda96b44150228ddd6617a80729099704d",
+    "c8ab3cf5c7be9a2ba5da14377ebbc377d1ea784219d99471d118659300236f03",
+    "c8eafa2ef49a8455da260e55e313f7101afeb6ff8b476a4b742bb2c57e930580",
+    "ca1da0276cb100ec8fc0c7b1a6099834a165ab06b8fba565999a305d26bdfb40",
+    "d22a1089fb11e39b6278eda9884c69bf98a7bbbc6ee2319f8f48b68c8bde2752",
+    "e407d4266da67704a738cd33e9028ed89f071f827f9141368d83a9de46fa335d",
+    "e622b164b4e47043fb36ce875f51db78a51b92df43e2589b910d247d3a434ecf",
+    "ec777bf76e1dc3c8dfcc7abfdc76ac55a3ad27de6c2d70e22d32924f146e8736",
+    "f579576f4d623b7c2e5d27a7c2ff2bd22cea63787e3c3e25d96c34b9870ceef1"
+  ]
+}
