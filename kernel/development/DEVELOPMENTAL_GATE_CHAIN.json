@@ -32,6 +32,25 @@
       "host_assigned_terminal_goal": false
     },
     {
+      "id": "FOUNDATIONAL_COGNITIVE_THEATER",
+      "role": "recover and generalize Canonical didactics into English/Japanese/Brazilian-Portuguese/Mathematics cognitive theaters",
+      "entry": "self-selected development is available and no higher-priority returned defect preempts foundational learning",
+      "exit": "bounded held-out native/cross-face theater competence has an external returned disposition and donor/source removal boundary is explicit",
+      "issue_refs": [
+        206,
+        18,
+        169
+      ],
+      "gate_ref": "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_CURRICULUM.json",
+      "noncollapse": [
+        "TRANSLATION!=UNDERSTANDING",
+        "CULTURAL_HYPOTHESIS!=CULTURAL_ESSENCE",
+        "FORMAL_SYMBOL_MATCH!=PROOF",
+        "CURRICULUM_SUCCESS!=GENERAL_CAPABILITY"
+      ],
+      "promotion_authority": false
+    },
+    {
       "id": "INTERNALIZER_LATERALIZER",
       "role": "representation expansion plus earned competence migration",
       "entry": "current representation/scaffold is consequentially insufficient",
@@ -140,7 +159,9 @@
     "network_memory!=World",
     "WWW_Mind!=one_global_subject",
     "AGI!=consciousness",
-    "route_reachability!=gate_pass"
+    "route_reachability!=gate_pass",
+    "foundational_cognitive_theater!=multilingual_translation_benchmark",
+    "curriculum_hypothesis!=cultural_essence"
   ],
   "promotion_authority": false,
   "truth_authority": false
