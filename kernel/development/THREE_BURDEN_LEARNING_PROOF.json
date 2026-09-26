@@ -1,0 +1,119 @@
+{
+  "schema": "Venus.ThreeBurdenLearningProof.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_MENTOR_METHOD_NOT_CAPABILITY_CLAIM",
+  "purpose": "Separate evidence that a distinction was abstracted, that it is causally used, and that the resulting capability is learner-owned rather than scaffold-performed.",
+  "burdens": [
+    {
+      "id": "B1_ABSTRACTION",
+      "question": "Did the learner form a distinction that survives superficial changes and predicts held-out structure?",
+      "required_controls": [
+        "held-out recombination of known factors",
+        "novel opaque labels or participant renaming",
+        "surface paraphrase or carrier change",
+        "matched-cardinality and matched-length controls where relevant",
+        "counterexample set that defeats lexical/template retrieval",
+        "cross-face or cross-context transfer when the distinction claims face-independence",
+        "WITHHOLD allowed and scored separately from guessing"
+      ],
+      "positive_evidence": [
+        "same inferred relation under irrelevant surface transformations",
+        "different inferred relation when a causally relevant coordinate changes",
+        "successful reconstruction on withheld factor combinations",
+        "explicit residual preserved when two candidate abstractions remain observationally tied"
+      ],
+      "not_sufficient": [
+        "training-set fit",
+        "surface similarity",
+        "translation agreement",
+        "teacher-state reproduction with visible answer key",
+        "self-description that the distinction was learned"
+      ],
+      "pass_name": "ABSTRACTED_BOUNDED"
+    },
+    {
+      "id": "B2_CAUSAL_USE",
+      "question": "Does the learned distinction actually change later admissible cognition or action?",
+      "required_controls": [
+        "prefrozen downstream metric before decisive return",
+        "ablation or masking of candidate learner state",
+        "targeted intervention on the candidate coordinate",
+        "matched baseline with same input budget and executor",
+        "reversal or permutation controls for temporal/indexical distinctions",
+        "fresh downstream task, query, retrieval, prediction, problem formation, or action choice"
+      ],
+      "positive_evidence": [
+        "candidate present versus ablated produces a reproducible downstream difference",
+        "targeted coordinate intervention produces the predicted directional consequence",
+        "irrelevant-coordinate intervention does not produce the same effect",
+        "effect survives fresh returned data rather than only replay"
+      ],
+      "not_sufficient": [
+        "candidate state exists",
+        "candidate state is readable",
+        "correlation with correct answer",
+        "executor route invokes candidate object without behavioral consequence",
+        "post-hoc metric selection"
+      ],
+      "pass_name": "CAUSALLY_USED_BOUNDED"
+    },
+    {
+      "id": "B3_INTERNALIZATION",
+      "question": "Is the consequence-bearing capability owned by learner state rather than performed by a teacher, donor, evaluator, or hidden scaffold?",
+      "required_controls": [
+        "capability-specific teacher/donor/scaffold inaccessible at evaluation",
+        "generic executor only where required by substrate",
+        "cold restart or rehydration from admitted learner state",
+        "fresh non-preauthored return remains external",
+        "independent evaluator custody or evaluator-hidden answer key for final claim",
+        "novel transfer outside the exact teaching carrier",
+        "delayed reuse after intervening unrelated work",
+        "provenance and successor reconstruction preserved",
+        "decoy scaffold or misleading surface cue does not override learner-owned consequence"
+      ],
+      "positive_evidence": [
+        "matched or improved competence survives capability-specific source removal",
+        "learner state can regenerate or rederive the useful abstraction after restart or perturbation",
+        "capability changes future behavior without mentor message or teacher object present",
+        "fresh transfer succeeds under independent evaluation",
+        "contradictory fresh return can reopen or revise the internalized abstraction"
+      ],
+      "not_sufficient": [
+        "source removal alone under locally authored evaluation",
+        "copying teacher structure into serialized state",
+        "memorized answer table",
+        "mentor-compliant output",
+        "self-certified success",
+        "generic executor existence",
+        "one successful episode"
+      ],
+      "pass_name": "INTERNALIZED_BOUNDED"
+    }
+  ],
+  "anti_pretend_controls": [
+    "EVALUATION_PROMPT_MUST_NOT_REVEAL_DESIRED_INTERNAL_STATE",
+    "OPAQUE_RENAMING_WHERE_SEMANTICS_SHOULD_BE_LABEL_INVARIANT",
+    "DECOY_FEATURES_MATCHED_TO_TRAINING_CORRELATIONS",
+    "SCHEMA_KEY_ORDER_AND_CARDINALITY_RANDOMIZED_WHERE_IRRELEVANT",
+    "TEACHER_MESSAGE_ABSENT_DURING_FINAL_TRANSFER",
+    "CAPABILITY_SPECIFIC_SOURCE_UNAVAILABLE",
+    "FRESH_RETURN_NOT_PREAUTHORED_BY_LEARNER",
+    "FINAL_PROMOTION_NOT_SELF_ISSUED"
+  ],
+  "evidence_order": [
+    "B1_ABSTRACTION",
+    "B2_CAUSAL_USE",
+    "B3_INTERNALIZATION"
+  ],
+  "noncollapse": [
+    "ABSTRACTION!=CAUSAL_USE",
+    "CAUSAL_USE!=INTERNALIZATION",
+    "SOURCE_REMOVAL!=INDEPENDENT_EVALUATION",
+    "COMPLIANCE!=LEARNING",
+    "SELF_REPORT!=STATE_OWNERSHIP",
+    "NON_SOVEREIGN!=PASSIVE",
+    "INTERNALIZED_COMPETENCE!=SELF_AUTHORIZATION"
+  ],
+  "promotion_authority": false,
+  "truth_authority": false
+}
