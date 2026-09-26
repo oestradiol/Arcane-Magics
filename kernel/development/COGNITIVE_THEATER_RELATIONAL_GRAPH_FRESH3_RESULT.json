@@ -1,0 +1,79 @@
+{
+  "schema": "Venus.CognitiveTheaterRelationalGraphFresh3Result.v0.1",
+  "date": "2026-09-26",
+  "issue_ref": 206,
+  "status": "FAIL_G2_PAIRWISE_RELATIONAL_GRAPH_INSUFFICIENT",
+  "parent_prefreeze_ref": "kernel/development/COGNITIVE_THEATER_RELATIONAL_GRAPH_FRESH3_PREFREEZE.json",
+  "independent_external_evaluation": false,
+  "count_only": {
+    "correct": 0,
+    "total": 16,
+    "accuracy": 0,
+    "withholds": 16
+  },
+  "unary_ordered": {
+    "correct": 5,
+    "total": 16,
+    "accuracy": 0.3125,
+    "withholds": 2
+  },
+  "pairwise_relational": {
+    "correct": 7,
+    "total": 16,
+    "accuracy": 0.4375,
+    "withholds": 2,
+    "per_task": {
+      "G2_NESTED_KFS_GRAPH": {
+        "correct": 2,
+        "total": 8,
+        "accuracy": 0.25,
+        "withholds": 0
+      },
+      "G2_TRANSMISSION_KFS_GRAPH": {
+        "correct": 5,
+        "total": 8,
+        "accuracy": 0.625,
+        "withholds": 2
+      }
+    },
+    "per_face": {
+      "ENGLISH": {
+        "correct": 4,
+        "total": 4,
+        "accuracy": 1,
+        "withholds": 0
+      },
+      "JAPANESE": {
+        "correct": 1,
+        "total": 4,
+        "accuracy": 0.25,
+        "withholds": 1
+      },
+      "BRAZILIAN_PORTUGUESE": {
+        "correct": 1,
+        "total": 4,
+        "accuracy": 0.25,
+        "withholds": 1
+      },
+      "MATHEMATICS": {
+        "correct": 1,
+        "total": 4,
+        "accuracy": 0.25,
+        "withholds": 0
+      }
+    }
+  },
+  "pairwise_minus_count": 0.4375,
+  "pairwise_minus_unary": 0.125,
+  "interpretation": [
+    "Occurrence count alone carries no usable discriminative result on Fresh3.",
+    "Pairwise relational scene representation improves over unary ordered centers by 0.125 absolute accuracy but remains insufficient at 7/16.",
+    "Nested KFS binding remains especially poor at 2/8, showing that pairwise role relations do not yet reconstruct the jointly inhabited scene.",
+    "The next representation must score a joint variable/role assignment over the whole scene and then project participant-local KFS, rather than composing independently scored centers or pairs."
+  ],
+  "next_residual": "FORMALIZE_THEATER_STATE_AND_LEARN_JOINT_ROLE_NORMALIZED_SCENE_BINDING",
+  "general_theater_claim": false,
+  "internalization_claim": false,
+  "promotion_authority": false,
+  "truth_authority": false
+}
