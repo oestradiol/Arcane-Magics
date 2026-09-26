@@ -23,14 +23,31 @@ class GitHubNetworkAdapterTests(unittest.TestCase):
         self.assertLessEqual(len(rows),4)
         self.assertTrue(all(len(x.split()) <= 6 for x in rows))
 
-    def test_selected_study_relaxation_never_collapses_to_one_word(self):
-        rows=MOD.query_variants(
-            "development lateral reconstruction internalize epistemic basis expansion",
-            study_anchors=("development","lateral","reconstruction","internalize","epistemic","basis"),
-        )
+    def test_selected_study_relaxation_preserves_learner_lexicon_but_can_escape_local_conjunction(self):
+        query="development lateral reconstruction internalize epistemic basis expansion"
+        anchors=("development","lateral","reconstruction","internalize","epistemic","basis")
+        rows=MOD.query_variants(query,study_anchors=anchors)
         self.assertTrue(rows)
-        self.assertTrue(all(len(row.split()) >= 3 for row in rows))
-        self.assertTrue(all(row.startswith("development lateral reconstruction") for row in rows))
+        self.assertLessEqual(len(rows),10)
+        self.assertTrue(rows[0].startswith("development lateral reconstruction"))
+        self.assertTrue(all(len(row.split()) >= 2 for row in rows))
+        admitted=set(MOD._tokens(query + " " + " ".join(anchors)))
+        self.assertTrue(all(set(row.split()) <= admitted for row in rows))
+        self.assertTrue(
+            any(not row.startswith("development lateral reconstruction") for row in rows)
+        )
+        self.assertTrue(any(len(row.split()) == 2 for row in rows))
+
+    def test_selected_study_relaxation_never_invents_host_synonyms(self):
+        rows=MOD.query_variants(
+            "curriculum cognitive theater canonical english japanese pt-br math",
+            study_anchors=("curriculum","cognitive","theater","canonical","english","japanese","pt-br","math"),
+        )
+        admitted={"curriculum","cognitive","theater","canonical","english","japanese","pt-br","math"}
+        self.assertTrue(rows)
+        self.assertTrue(all(set(row.split()) <= admitted for row in rows))
+        self.assertNotIn("language"," ".join(rows))
+        self.assertNotIn("multilingual"," ".join(rows))
 
     def test_source_collection_keeps_distinct_centers(self):
         issues=[{"items":[
