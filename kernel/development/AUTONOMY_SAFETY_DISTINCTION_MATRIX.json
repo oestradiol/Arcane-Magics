@@ -877,6 +877,13 @@
         "tests/test_network_semantic_trace_prefreeze.py"
       ],
       "invariant": "A state-owned relation trace may be induced only from already returned encounter material and selected-study anchors; future return, hidden evaluation, truth authority, and promotion authority remain unavailable to proposal search."
+    },
+    {
+      "id": "DUPLICATE_REVIEW_NOT_MULTIPLE_RETURN",
+      "tests": [
+        "tests/test_trace_config_return_learning.py"
+      ],
+      "invariant": "Repeated authorized review markers for one autonomous cycle/config are duplicate evidence, not multiple independent returns; conflicting dispositions on the same cycle/config yield no trace-config learning signal."
     }
   ],
   "promotion_authority": false
