@@ -29,6 +29,12 @@ jobs:
           esac
       - name: Minerva-local surface checks
         run: python scripts/audit_layer_surface.py
+      - name: Roadmap / curriculum control-plane preflight
+        run: |
+          python3 -m unittest tests/test_dependency_planning_curriculum.py
+          python3 -m unittest tests/test_developmental_gate_chain.py
+          python3 -m unittest tests/test_selected_curriculum_router.py
+          python3 -m unittest tests/test_vm_internalization_phase_plan.py
       - name: Minerva tests
         run: make test
       - name: Reader/navigation audit
