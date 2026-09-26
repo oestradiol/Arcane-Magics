@@ -1,0 +1,15 @@
+{
+  "schema": "Venus.NetworkExecutionContext.v0.1",
+  "context_id": "c8d3baec97ad10701662950d7ff4bf3e90ba07aee677d1638012b0e2665c5f81",
+  "query_id": "1a591ae6bbf2c53bbc9cabfbd6d4911a423b1efa6e3d410b302658a94feaf8fc",
+  "source_locators": [
+    "https://github.com/oestradiol/Arcane-Magics/pull/155"
+  ],
+  "carrier_keys": [
+    "PR:155"
+  ],
+  "role": "ADAPTER_ROUTING_CONTEXT_ONLY",
+  "target_selection_authority": false,
+  "truth_authority": false,
+  "promotion_authority": false
+}
