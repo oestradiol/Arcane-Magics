@@ -12,7 +12,7 @@ root.
 import argparse
 import base64
 from http import HTTPStatus
-from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+from http.server import SimpleHTTPRequestHandler, HTTPServer
 import json
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
