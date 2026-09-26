@@ -85,6 +85,38 @@ For autonomous untrusted execution, put the whole console/process worker inside 
 
 The console does not fabricate a machine reply when no cognitive backend is attached.
 
+### Automatic external agent adapter
+
+A trusted local adapter can be bound explicitly:
+
+```bash
+python3 -m apps.worldmirror_console.server \
+  --agent-command-json '["python3","/path/to/adapter.py"]'
+```
+
+The adapter receives one UTF-8 JSON object on stdin containing the triggering
+event and recent interaction context. It must return one JSON object such as:
+
+```json
+{"text":"response text"}
+```
+
+The v0.1 protocol rejects `tool_calls`. The adapter gets no process-bridge
+authority merely by being the conversational backend. Its reply is appended as a
+normal raw `machine` event with the triggering event as parent.
+
+Protocol: `kernel/development/WORLDMIRROR_AGENT_PROTOCOL.json`.
+
+```text
+agent adapter
+!= learner identity
+!= tool authority
+!= independent evaluator
+!= World truth
+```
+
+The external event ingress also remains available when no automatic adapter is bound.
+
 The HTTP event ingress can accept a machine-authored event from an external adapter:
 
 ```text
