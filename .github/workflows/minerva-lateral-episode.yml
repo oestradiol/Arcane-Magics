@@ -1,0 +1,59 @@
+name: Minerva lateral episode 1
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - split/minerva
+    paths:
+      - kernel/development/LATERAL_EPISODE_1_PREFREEZE.json
+      - kernel/development/lateral_episode.py
+      - tests/test_lateral_episode.py
+      - scripts/run_lateral_episode.py
+      - autonomy/evidence/lateral/169/episode-1-visible.json
+      - .github/workflows/minerva-lateral-episode.yml
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: minerva-lateral-episode-1
+  cancel-in-progress: false
+
+jobs:
+  propose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: split/minerva
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify lateral harness
+        run: |
+          python -m unittest tests/test_lateral_episode.py
+          python -m unittest tests/test_autonomous_epistemic_operator_contract.py
+
+      - name: Freeze learner-side face selection and holdout predictions
+        run: |
+          python scripts/run_lateral_episode.py \
+            --dataset autonomy/evidence/lateral/169/episode-1-visible.json \
+            --output autonomy/evidence/lateral/169/episode-1-proposal.json
+
+      - name: Persist prefrozen predictions
+        run: |
+          git config user.name 'Minerva lateral reconstruction worker'
+          git config user.email 'actions@users.noreply.github.com'
+          git add autonomy/evidence/lateral/169/episode-1-proposal.json
+          if git diff --cached --quiet; then
+            echo 'No proposal change.'
+            exit 0
+          fi
+          git commit -m 'lateral: freeze episode 1 cross-face proposal'
+          git push origin HEAD:split/minerva
