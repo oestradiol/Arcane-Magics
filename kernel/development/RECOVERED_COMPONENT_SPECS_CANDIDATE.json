@@ -1,0 +1,82 @@
+{
+  "schema": "Minerva.RecoveredComponentSpecsCandidate.v0.1",
+  "status": "CANDIDATE_NOT_ADMITTED",
+  "date": "2026-09-26",
+  "promotion_authority": false,
+  "truth_authority": false,
+  "role": "Formal specifications for Generator, Lateralizer, Internalizer and the WorldMirror VM target, recovered from the archive. These are the only formal statements of these components that exist anywhere; nothing live implements them.",
+  "provenance": "Recovered from canonical_structural_semantic_lateral_compression.md, a compression of a 16,879-line transcript. That document is assistant-authored conversation provenance, NOT authority. It is evidence of design intent. Adopting its formalism uncritically would repeat the ATTESTED-mislabel error already made once this session; see RECOVERED_D_R3.",
+  "why_recorded_separately": "The open residual register carried these as prose inside a table cell. A specification that exists only as commentary in a register is not reachable by anything that would implement it. They are the specifications for three of the components the branch author named as needed.",
+
+  "specs": [
+    {
+      "id": "SPEC-GENERATOR",
+      "component": "Generator",
+      "live_implementation": "NONE",
+      "signature_verbatim": "G_t : (S_t, Q_t, M_t) -> P(Pi_t)",
+      "proposal_contents_verbatim": "each pi in Pi_t contains a target distinction, expected discriminator, admissible action/query class, and proof burden",
+      "selection_verbatim": "pi*_t = argmax V(pi | cost, uncertainty, blocked_dependencies, expected_information_gain)",
+      "reading": "A proposal is not a task. It is a bundle carrying what distinction it would establish, what would discriminate it, what class of action or query is admissible in pursuing it, and what proof burden it incurs. Selection maximises value against cost, uncertainty, what is currently blocked, and expected information gain.",
+      "why_it_matters": "Without the proof-burden field, a generator produces work items rather than candidate claims, and the burden gets attached retroactively -- which is how post-hoc metric selection enters.",
+      "gap": "Nothing in kernel/runtime or kernel/development implements G_t. The dependency-planning curriculum produces candidates but does not carry the four-field proposal structure."
+    },
+    {
+      "id": "SPEC-LATERALIZER-INDEPENDENCE",
+      "component": "Lateralizer",
+      "live_implementation": "PARTIAL",
+      "criterion_verbatim": "I(Return_i ; Return_j | hidden_structure) < I(Return_i ; hidden_structure)",
+      "operational_verbatim": "there exists an admissible perturbation under which two views make separable predictions",
+      "trigger_verbatim": "LATERALIZE <=> E[IG(D | {R_t^i})] - cost_L > threshold_L",
+      "reading": "Two faces are independent enough to be worth lateralizing into when their returns share less information with each other, given the hidden structure, than either shares with the hidden structure itself. Operationally: find a perturbation that makes them disagree. Lateralizing is triggered when expected information gain from holding multiple views exceeds its cost.",
+      "why_it_matters": "This is the quantitative form of the fence that multiple internally generated faces do not cure self-sealing if they share one answer surface. Without a separability criterion, 'independent faces' is asserted rather than measured.",
+      "gap": "kernel/development/LATERAL_EPISODE_1_PREFREEZE.json carries only independently_answerable: true -- a boolean assertion where the archive specifies a measurable relation. threshold_L is itself undeclared, so the trigger is not yet a test."
+    },
+    {
+      "id": "SPEC-INTERNALIZER-REDUCTION",
+      "component": "Internalizer",
+      "live_implementation": "NONE as a gate",
+      "admission_rule_verbatim": "REDUCE(sigma) admissible <=> INTERNALIZED(h) AND matched_consequence_survives(NOT sigma)",
+      "reading": "A scaffold sigma may be reduced only when the capability h is internalized AND matched consequence survives with sigma absent. Both conjuncts are required: internalization without the survival check is a claim, and survival without internalization may just mean the scaffold was never load-bearing.",
+      "why_it_matters": "This is the deletion half of B3, which the live kernel does not fence. THREE_BURDEN_LEARNING_PROOF.json states that source removal alone under locally authored evaluation is not sufficient, but there is no gate governing when a scaffold may actually be removed.",
+      "related_absent_fences": [
+        "scaffold relocation != internalization",
+        "source retention != source independence",
+        "Code deletion != internalization"
+      ],
+      "gap": "No live scaffold-reduction gate. VM_INTERNALIZATION_PHASE_PLAN.json dispositions paths but does not condition their removal on this rule."
+    },
+    {
+      "id": "SPEC-WORLDMIRROR-VM-TARGET",
+      "component": "WorldMirror VM",
+      "live_implementation": "PARTIAL, and the live policy concedes the gap",
+      "design_verbatim": "the interface/body should be minimal. A small console, generic process bridge, inspectable event history, and learner state are preferable to a richly predesigned virtual environment.",
+      "asymptote_verbatim": "The asymptotic VM is not a beautifully factored ever-growing software framework; it becomes less of one as learner-owned organization increases.",
+      "formal_target_verbatim": "d(complexity_special_scaffold)/dt < 0 while d(general_competence)/dt > 0",
+      "reading": "The success condition is a derivative, not a state: special-purpose machinery must be shrinking while general competence grows. This is the same measure-migration statement as B3 (mu_F mass moving from M_cap to S_cap), expressed over time.",
+      "live_concession_verbatim": [
+        "security_claim: ARGV_CWD_SIZE_TIMEOUT_BOUNDARY_ONLY_NOT_OS_SANDBOX",
+        "untrusted_machine_execution_requires_external_sandbox: true"
+      ],
+      "live_concession_source": "kernel/development/WORLDMIRROR_CONSOLE_POLICY.json",
+      "gap": "The sandbox intent is specified and the policy already admits the boundary is argv/cwd/size/timeout only, not an OS sandbox. The missing artifact is the OS-level sandbox, not the design. Nothing measures the two derivatives."
+    }
+  ],
+
+  "residuals": [
+    {
+      "id": "SPEC_R1",
+      "statement": "All four specs come from an assistant-authored compression of a transcript containing assistant turns. None has been traced to an underlying primary artifact.",
+      "reopening_condition": "Locate the transcript passage or an independent artifact for each before implementation. The compression is a finding aid, not a source."
+    },
+    {
+      "id": "SPEC_R2",
+      "statement": "threshold_L in the Lateralizer trigger and the measurement procedure for both WorldMirror derivatives are undeclared, so neither is yet a test.",
+      "reopening_condition": "Declare threshold_L and a complexity measure for special-purpose scaffold, and freeze both before any run that would be scored against them."
+    },
+    {
+      "id": "SPEC_R3",
+      "statement": "SPEC-INTERNALIZER-REDUCTION would be the gate governing scaffold removal, which is the operation the 2026-09-26 contamination performed without warrant when it redispositioned task_graph.py.",
+      "reopening_condition": "Implement the rule as a check over VM_INTERNALIZATION_PHASE_PLAN.json dispositions, so a path cannot move to a reduced disposition without both conjuncts evidenced."
+    }
+  ]
+}
