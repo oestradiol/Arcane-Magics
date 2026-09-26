@@ -118,10 +118,22 @@ IG10
 → EDU3 PASS
 → EDU4 PASS
 → …
+→ EDU7 WITHHOLD_EDU7_POLYHEDRAL_SELF_GEOMETRY [1580] / non-parent
+→ EDU7R1 WITHHOLD_EDU7R1_EDGE_GLUE_REPAIR [1577] / non-parent
+→ EDU7R2 WITHHOLD_EDU7R2_FACE_LOCALIZED_GLUE [1577] / non-parent
+→ …
 → EDU15 WITHHOLD
 → EDU15R1 PASS
 → EDU16 PASS_BOUNDED_LEARNER_OWNED_WORLD_FEED_POLICY [1703]
 ```
+
+The `…` above is an elision, not an absence. The EDU7 family was recovered from
+external payload custody on 2026-09-26 and restored byte-exact; see
+[EDU7 git-boundary disposition](developmental/EDU/EDU7_GIT_BOUNDARY_DISPOSITION_2026-09-26.md).
+The remaining elided spans (EDU5, EDU6, EDU8–EDU14) have artifacts under
+`developmental/EDU/` that this chain does not name. An elision that hides a
+WITHHOLD is how EDU7 went missing, so the remaining ones are tracked as an open
+residual rather than left to the reader.
 
 Preserved later branches:
 
