@@ -1,0 +1,15 @@
+{
+  "carrier_keys": [
+    "PR:212"
+  ],
+  "context_id": "736ec349615c8471e1d1c8045a8f5ae1d957516a1c8b7096f3d34fc87691e844",
+  "promotion_authority": false,
+  "query_id": "70df84d9b652b81e983e90b3bc0f30252520234dcb5da83ad4bfd5597a274d42",
+  "role": "ADAPTER_ROUTING_CONTEXT_ONLY",
+  "schema": "Venus.NetworkExecutionContext.v0.1",
+  "source_locators": [
+    "https://github.com/oestradiol/Arcane-Magics/pull/212"
+  ],
+  "target_selection_authority": false,
+  "truth_authority": false
+}

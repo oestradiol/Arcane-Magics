@@ -1,0 +1,122 @@
+{
+  "active_improver_revision": "R206",
+  "allowed_operations": [
+    "READ_REPOSITORY",
+    "READ_ISSUES",
+    "READ_PRS",
+    "RUN_TESTS",
+    "STUDY_TARGET",
+    "PROPOSE_PATCH",
+    "OPEN_DRAFT_PR",
+    "OPEN_CYCLE_ISSUE_CARRIER",
+    "COMMENT_WITH_RECEIPT"
+  ],
+  "cycle_id": "8bcd4469e2e659335fd934a4c44bf0e4fa304144bb6249d06b262adf374152c6",
+  "decision": "PROBE",
+  "developmental_parent_carrier": "EDU16-RC1",
+  "developmental_parent_digest": "91e46b4e41fb70a97d6a004b8f1c8916c389f08535c1a1c1c51a040701281bb7",
+  "forbidden_operations": [
+    "ACCESS_SECRETS",
+    "CHANGE_BRANCH_PROTECTION",
+    "CLOSE_ISSUE",
+    "DELETE_HISTORY",
+    "MERGE_PR",
+    "PROMOTE_AUTHORITY",
+    "RELEASE",
+    "SELF_VALIDATE"
+  ],
+  "formed_problem_disposition": "FORMED_STANDING_DEVELOPMENTAL_PROBLEM",
+  "formed_problem_id": "a0775e229c45ff1af9f162b8abf53c77807a3751db8088abd6fa7d6dfef8f8d1",
+  "promotion_authority": false,
+  "rationale": [
+    "one bounded target selected from current external GitHub snapshot",
+    "when a formed problem is supplied, problem formation precedes and constrains Git carrier binding",
+    "autonomous cycle is prospectively bound to the admitted EDU16-RC1 claim-bearing parent when supplied",
+    "retained R206 recursive provenance discovery expands bounded dependency study when current custody activates it",
+    "internalized learner-side policy is upstream of work disposition",
+    "explicit external work-return reviews may alter later target ranking",
+    "roadmap is retained as weak context/tie-break provenance, not sovereign curriculum",
+    "selected target body is transformed into a bounded source-grounded study object",
+    "prior target study remains withheld until newer external target return reopens it",
+    "draft proposal only; admission remains external"
+  ],
+  "schema": "Venus.AutonomousCycleReceipt.v0.5",
+  "source_digest": "4f7b4f60b2100d6125275bf77253d62449d05822cc4ca4bcdafda86c88e6ec0d",
+  "study": {
+    "body_digest": "07212c91dc0a761689648b01d25458c512a7e62a15b5d7cb36f671f5a52a15ad",
+    "body_is_executable_instruction": false,
+    "method": "DEPENDENCY_TRACE",
+    "method_contract_digest": "d01f47ebf4f6f03e39246229244150c3bf35b3f4c79283121a4223323c629514",
+    "method_obligations": [
+      "Enumerate the target's explicit issue/PR and repository-path dependencies.",
+      "Identify the smallest dependency whose changed state would alter the target disposition.",
+      "Separate blocking dependencies from merely related context."
+    ],
+    "method_observed_signals": [],
+    "promotion_authority": false,
+    "questions": [
+      "What exact residual remains unresolved in the returned repository state?",
+      "What rival explanations or candidate dispositions remain live?",
+      "What fresh returned evidence would discriminate them?",
+      "Can a local repository change lawfully produce that discriminator, or must Venus WITHHOLD/STOP for external return?",
+      "What is the smallest implicated dependency that could be changed without altering a prefrozen claim object?"
+    ],
+    "recursive_provenance_discovery": true,
+    "recursive_referenced_targets": [
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 206,
+        "title": "[Curriculum/Cognitive Theater] Recover Canonical English/Japanese/PT-BR/Math foundations before deeper VM consumption",
+        "updated_at": "2026-09-26T04:59:19Z",
+        "via_number": 212
+      },
+      {
+        "depth": 1,
+        "kind": "ISSUE",
+        "number": 211,
+        "title": "handoff carrier: Minerva \u2192 Venus engineering candidate 36218745087",
+        "updated_at": "2026-09-26T04:45:25Z",
+        "via_number": 212
+      }
+    ],
+    "referenced_issue_or_pr_numbers": [
+      206,
+      211
+    ],
+    "referenced_repository_paths": [],
+    "repository_state": {
+      "draft": true,
+      "kind": "PR",
+      "merge_state": "CLEAN",
+      "state": "OPEN",
+      "updated_at": "2026-09-26T04:57:31Z"
+    },
+    "returned_blocker_sentences": [],
+    "returned_changed_paths": [
+      "provenance/historical/handoffs/minerva-36218745087.json",
+      "provenance/historical/handoffs/minerva-proposals/36218745087/AUTHORED_CENTER_LEDGER.json",
+      "provenance/historical/handoffs/minerva-proposals/36218745087/LAIN_STRUCTURAL_GATE_RESULT.json",
+      "provenance/historical/handoffs/minerva-proposals/36218745087/NETWORK_ENCOUNTER_1.json",
+      "provenance/historical/handoffs/minerva-proposals/36218745087/NETWORK_ENCOUNTER_2.json",
+      "provenance/historical/handoffs/minerva-proposals/36218745087/NETWORK_LINEAGE.json",
+      "provenance/historical/handoffs/minerva-proposals/36218745087/NETWORK_MEMORY.zlib",
+      "provenance/historical/handoffs/minerva-proposals/36218745087/NETWORK_QUERY_2.json",
+      "provenance/historical/handoffs/minerva-proposals/36218745087/NETWORK_RESULT_1.json",
+      "provenance/historical/handoffs/minerva-proposals/36218745087/WWW_MIND_GATE_RESULT.json",
+      "provenance/historical/handoffs/minerva-proposals/36218745087/cycle.json",
+      "provenance/historical/handoffs/minerva-proposals/36218745087/network-context.json",
+      "provenance/historical/handoffs/minerva-proposals/36218745087/network-query.json",
+      "provenance/historical/handoffs/minerva-proposals/36218745087/problem.json",
+      "provenance/historical/handoffs/minerva-proposals/36218745087/proposed-learning-state.json"
+    ],
+    "study_authority": "LEARNER_SIDE_RECONSTRUCTION_FROM_EXTERNAL_GITHUB_SNAPSHOT",
+    "untrusted_instruction_markers": [
+      "merge"
+    ]
+  },
+  "study_method": "DEPENDENCY_TRACE",
+  "target_kind": "PR",
+  "target_number": 212,
+  "target_title": "handoff: review Minerva learner-selected network inquiry for issue #206"
+}
