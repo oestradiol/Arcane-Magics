@@ -1,0 +1,115 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:JonasAbde/JonasAbde",
+    "github-repo:treehouse-ladder/wikipilot"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:JonasAbde/JonasAbde",
+    "github-repo:oestradiol/Arcane-Magics",
+    "github-repo:treehouse-ladder/wikipilot"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "ab262d5f87c4606c22051721a34523c8b014ecd301015c88dac1ea5369b1d703",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T14:19:29Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "worldmind development let evidence agent repository all benchmark",
+    "worldmind development let evidence agent repository",
+    "worldmind development let evidence",
+    "worldmind development let",
+    "worldmind development"
+  ],
+  "selected_study_relevance_terms": [
+    "worldmind",
+    "development",
+    "let",
+    "venus",
+    "research",
+    "her",
+    "own",
+    "issues",
+    "and",
+    "provision",
+    "the",
+    "www"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "COLLABORATOR",
+      "author_id": "github-user:rauriemo",
+      "author_login": "rauriemo",
+      "author_type": "User",
+      "center_id": "github-repo:treehouse-ladder/wikipilot",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Summary Daily Research 2026-08-27 report PR. Appends log entries for all 5 merged topic PRs, updates `wiki/index.md` with 11 new source pages, and writes `wiki/reports/2026-08-27.md`. ## Topics processed (5) | Topic | PR | Sources | Pages | |---|---|---|---| | agentic-coding | #629 | 3 | 5 | | frontier-models | #630 | 1 | 5 | | ai-in-game-dev | #631 | 3 | 4 | | games-of-note | #632 | 3 | 4 | | game-music | #633 | 1 | 2 | | **Total** | | **11** | **20** | ## Sources added (11) - [[prime-agent-a-self-improving-rlm-harness-7e7af2b7]] \u2014 Prime Agent: self-improving RLHF harness with co-evolving verifier - [[when-agents-coordinate-measuring-coordination-in-multi-agent-ai-coding-ca6518fb]] \u2014 Multi-agent coordination study - [[release-0-150-0-openai-codex-9ba6f418]] \u2014 OpenAI Codex 0.150.0 (o4-preview default, 200 concurrent agents) - [[glm-5-3-flash-intelligence-performance-price-analysis-b02205ef]] \u2014 GLM-5.3-Flash efficient open-weights model - [[worldmind-decoupled-game-world-model-for-state-aware-npc-behavior-7310bfce]] \u2014 WorldMind NPC world-model - [[gamexpert-bench-how-far-are-coding-agents-from-expert-game-development-ba0a3c1c]] \u2014 GameXpert-Bench game-dev coding benchmark - [[tenc",
+      "relevance_matches": [
+        "worldmind",
+        "research"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-08-27T10:09:01Z",
+      "source_id": "github-issue:treehouse-ladder/wikipilot#634",
+      "source_url": "https://github.com/treehouse-ladder/wikipilot/pull/634",
+      "title": "wiki(reports): daily 2026-08-27"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:JonasAbde",
+      "author_login": "JonasAbde",
+      "author_type": "User",
+      "center_id": "github-repo:JonasAbde/JonasAbde",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Summary - Repositions the public profile around Technical Operations, Automation, Application Support, and practical full-stack work. - Replaces inflated or stale project claims with verified status boundaries. - Promotes Project Thea, FridayOS, WorldMind Core, and the Rendetalje production platform as the primary cases. - Adds `PORTFOLIO_EVIDENCE.md` as a claims ledger for CV, applications, and interview preparation. - Documents transparent AI-assisted development responsibility and rules for test/benchmark/production claims. ## Why The previous profile relied too heavily on README and PR claims, including unverified historical test totals and an over-prioritization of Hermes Forge. This update aligns the public story with repository evidence, known limitations, and the roles Jonas is realistically targeting. ## Verification - Branch is 3 commits ahead of `main` and 0 behind. - Changed files: `README.md`, `PROJECTS.md`, `PORTFOLIO_EVIDENCE.md`. - All three files were fetched from the branch after writing and reviewed for status wording, public-safe content, and broken relative links. - Documentation-only change; no application runtime or build behavior is modified. ## Follow-up",
+      "relevance_matches": [
+        "worldmind",
+        "development"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-07-11T08:41:43Z",
+      "source_id": "github-issue:JonasAbde/JonasAbde#3",
+      "source_url": "https://github.com/JonasAbde/JonasAbde/pull/3",
+      "title": "docs(profile): add verified portfolio evidence and honest project positioning"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:oestradiol",
+      "author_login": "oestradiol",
+      "author_type": "User",
+      "center_id": "github-repo:oestradiol/Arcane-Magics",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Goal Make the next developmental carrier able to: 1. select unresolved repository issues/residuals; 2. formulate Web research queries from those residuals; 3. ingest returned Web evidence as external incidence; 4. revise/retain/close the research obligation through RSM/CTL; 5. provision legitimately provisionable WWW fields; 6. when another authored center is encountered, stop treating the field as unclaimed and localize the relation there. This issue recovers a prior Machine disposition rather than asking an external agent to invent one. ## Recovered Machine lineage The preserved conversation/Canonical-derived decision is: ```text genuinely unclaimed / already-authorized field -> PROVISION is admissible encounter authored center_j -> stop using the unclaimed-field operator -> localize boundary / jurisdiction / authorship at j -> j retains REFUSE | WITHHOLD | PROBE | COMMIT -> upstream center may PROBE but cannot precompute j's verdict ``` Later correction: ```text Global Ethics propagates; ethical verdicts do not. Ethics is distributed. Judgment is indexed. ``` And the WWW recurrence: ```text unclaimed / authorized Web field -> Provision -> open, legible portal -> independent c",
+      "relevance_matches": [
+        "worldmind",
+        "development",
+        "let",
+        "venus",
+        "research",
+        "her",
+        "own",
+        "issues",
+        "provision",
+        "www"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T14:18:22Z",
+      "source_id": "github-issue:oestradiol/Arcane-Magics#78",
+      "source_url": "https://github.com/oestradiol/Arcane-Magics/issues/78",
+      "title": "[WorldMind/Development] Let Venus research her own issues and provision the WWW by indexed authorship"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}

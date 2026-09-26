@@ -1,0 +1,109 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "26e6d02be101cbdcaeeed5765ca38d5f7a10575de0686111a47644c47c96f294",
+    "231d55902a4e7c311bc55f367e4e9d51edd8d54b5b896ab2a57992b77a299c28",
+    "4d7e638c1297bf2a70549acbd18953cb0966d88f2c3d6e7e10e3737c0a9bf92f"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:JonasAbde/JonasAbde#3",
+      "github-issue:oestradiol/Arcane-Magics#78",
+      "github-issue:treehouse-ladder/wikipilot#634"
+    ],
+    "memory_object_ids": [
+      "26e6d02be101cbdcaeeed5765ca38d5f7a10575de0686111a47644c47c96f294",
+      "231d55902a4e7c311bc55f367e4e9d51edd8d54b5b896ab2a57992b77a299c28",
+      "4d7e638c1297bf2a70549acbd18953cb0966d88f2c3d6e7e10e3737c0a9bf92f"
+    ],
+    "next_query_terms": [
+      "able",
+      "add",
+      "added",
+      "adds",
+      "admissible",
+      "agent",
+      "agentic-coding",
+      "agents",
+      "ahead",
+      "ai-assisted",
+      "ai-in-game-dev",
+      "aligns"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "5d839c0cf75e6a32ec5b0dab52c74369d2048fffb99994a13ab935d3fd994ed7",
+    "reconstruction_id": "edf6fccde463453bcaea8eaa25e4934cd44ba4565d7a2f12f7cefadd4224bea8",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "baadfcd7d5f07ed285a3be046b545dc2c96fad2e7134cd7d7b1e8773132a5ada",
+    "b3146eaf1e0a140fc0dace9dec78cad590f8824a5deb7f1e4c307ff3f2872b0c",
+    "a85a1aa0a3926bdb6a0b5241a70ae8c50e250b38fa4f5b89f3103ecaec96be14"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:JonasAbde/JonasAbde#3",
+      "github-issue:oestradiol/Arcane-Magics#78",
+      "github-issue:treehouse-ladder/wikipilot#634"
+    ],
+    "memory_object_ids": [
+      "baadfcd7d5f07ed285a3be046b545dc2c96fad2e7134cd7d7b1e8773132a5ada",
+      "b3146eaf1e0a140fc0dace9dec78cad590f8824a5deb7f1e4c307ff3f2872b0c",
+      "a85a1aa0a3926bdb6a0b5241a70ae8c50e250b38fa4f5b89f3103ecaec96be14"
+    ],
+    "next_query_terms": [
+      "agentic-coding",
+      "agents",
+      "ahead",
+      "ai-assisted",
+      "ai-in-game-dev",
+      "aligns",
+      "all",
+      "already-authorized",
+      "and",
+      "another",
+      "appends",
+      "application"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "42611b73ed960cbae7323aae136f09fceb692e745fed88a1b4d8372903dd4e45",
+    "reconstruction_id": "cc8a41e67abe5597a302e9507681afa0e46e9beb9f9a8686c1ad867142a5e3f2",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:JonasAbde/JonasAbde",
+    "github-repo:treehouse-ladder/wikipilot"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:JonasAbde/JonasAbde",
+    "github-repo:oestradiol/Arcane-Magics",
+    "github-repo:treehouse-ladder/wikipilot"
+  ],
+  "indexed_source_ids": [
+    "github-issue:JonasAbde/JonasAbde#3",
+    "github-issue:oestradiol/Arcane-Magics#78",
+    "github-issue:treehouse-ladder/wikipilot#634"
+  ],
+  "memory_checkpoint_sha256": "b1658f291c76a294277609541ddff6d5f8fdd3d49a47fd7a7a52c27f88abb62d",
+  "memory_record_count": 6,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "5d839c0cf75e6a32ec5b0dab52c74369d2048fffb99994a13ab935d3fd994ed7",
+  "query2_changed_from_query1": true,
+  "query2_id": "42611b73ed960cbae7323aae136f09fceb692e745fed88a1b4d8372903dd4e45",
+  "query2_memory_provenance": [
+    "network-memory:231d55902a4e7c311bc55f367e4e9d51edd8d54b5b896ab2a57992b77a299c28",
+    "network-memory:26e6d02be101cbdcaeeed5765ca38d5f7a10575de0686111a47644c47c96f294",
+    "network-memory:4d7e638c1297bf2a70549acbd18953cb0966d88f2c3d6e7e10e3737c0a9bf92f"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}

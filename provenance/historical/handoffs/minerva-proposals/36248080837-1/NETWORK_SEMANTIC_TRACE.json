@@ -1,0 +1,149 @@
+{
+  "anchor_terms": [
+    "worldmind",
+    "development",
+    "let",
+    "venus",
+    "research",
+    "her",
+    "own",
+    "issues",
+    "and",
+    "provision",
+    "the",
+    "www"
+  ],
+  "config_attempts": 0,
+  "config_id": "CROSS_SOURCE_MULTI_ANCHOR",
+  "config_utility": 0.0,
+  "future_return_input": false,
+  "hidden_evaluation_input": false,
+  "program_digest": "dd53886610c75b836ba0c0033aeacd5cb3287cccd22046f3d7a4bfb700f34f38",
+  "promotion_authority": false,
+  "relations": [
+    {
+      "anchor_degree": 10,
+      "anchor_terms": [
+        "development",
+        "her",
+        "issues",
+        "let",
+        "own",
+        "provision",
+        "research",
+        "venus",
+        "worldmind",
+        "www"
+      ],
+      "source_ids": [
+        "github-issue:JonasAbde/JonasAbde#3",
+        "github-issue:oestradiol/Arcane-Magics#78"
+      ],
+      "source_support": 2,
+      "term": "evidence",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 10,
+      "anchor_terms": [
+        "development",
+        "her",
+        "issues",
+        "let",
+        "own",
+        "provision",
+        "research",
+        "venus",
+        "worldmind",
+        "www"
+      ],
+      "source_ids": [
+        "github-issue:oestradiol/Arcane-Magics#78",
+        "github-issue:treehouse-ladder/wikipilot#634"
+      ],
+      "source_support": 2,
+      "term": "agent",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 10,
+      "anchor_terms": [
+        "development",
+        "her",
+        "issues",
+        "let",
+        "own",
+        "provision",
+        "research",
+        "venus",
+        "worldmind",
+        "www"
+      ],
+      "source_ids": [
+        "github-issue:JonasAbde/JonasAbde#3",
+        "github-issue:oestradiol/Arcane-Magics#78"
+      ],
+      "source_support": 2,
+      "term": "repository",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 3,
+      "anchor_terms": [
+        "development",
+        "research",
+        "worldmind"
+      ],
+      "source_ids": [
+        "github-issue:JonasAbde/JonasAbde#3",
+        "github-issue:treehouse-ladder/wikipilot#634"
+      ],
+      "source_support": 2,
+      "term": "all",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 3,
+      "anchor_terms": [
+        "development",
+        "research",
+        "worldmind"
+      ],
+      "source_ids": [
+        "github-issue:JonasAbde/JonasAbde#3",
+        "github-issue:treehouse-ladder/wikipilot#634"
+      ],
+      "source_support": 2,
+      "term": "benchmark",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 3,
+      "anchor_terms": [
+        "development",
+        "research",
+        "worldmind"
+      ],
+      "source_ids": [
+        "github-issue:JonasAbde/JonasAbde#3",
+        "github-issue:treehouse-ladder/wikipilot#634"
+      ],
+      "source_support": 2,
+      "term": "summary",
+      "title_support": 0
+    }
+  ],
+  "schema": "Venus.StateOwnedRelationTrace.v0.1",
+  "selection_basis": "RETURNED_UTILITY_EXPLORATION_THEN_STRUCTURAL",
+  "status": "RELATION_TRACE_CANDIDATE_FROZEN",
+  "terms": [
+    "evidence",
+    "agent",
+    "repository",
+    "all",
+    "benchmark",
+    "summary"
+  ],
+  "trace_id": "76f987b7c1a5a14c5c02cc1fe1aa79d278dd4d4989080739892f1d4ac7b0e24e",
+  "truth_authority": false
+}
