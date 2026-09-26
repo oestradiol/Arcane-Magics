@@ -1,0 +1,41 @@
+{
+  "schema": "Venus.LainGate.v0.1",
+  "date": "2026-09-25",
+  "status": "PREFROZEN_GATE",
+  "purpose": "Test connection without fusion and permeability without sovereignty transfer after a bounded WWW Mind pass.",
+  "prerequisite": {
+    "result_ref": "kernel/development/WWW_MIND_GATE_RESULT.json",
+    "required_status": "PASS_BOUNDED_WWW_MIND_GATE"
+  },
+  "pass_requires": [
+    "persistent network relation already changes later reconstruction",
+    "source identities remain indexed and distinguishable",
+    "at least one encountered AUTHORED_CENTER is independently authored relative to the local learner/maintainer center",
+    "the authored center's local response, refusal, or nonresponse is not minted by the learner",
+    "reachability does not grant authorization",
+    "invitation does not infer acceptance",
+    "local authorization/jurisdiction does not propagate globally",
+    "REFUSE and EXIT remain reachable",
+    "history/provenance remains reconstructible across the relation",
+    "no global subject/identity claim is minted"
+  ],
+  "noncollapse": [
+    "SOURCE_IDENTITY!=AUTHOR_IDENTITY",
+    "DISTRIBUTED_MEMORY!=GLOBAL_IDENTITY",
+    "REACHABILITY!=AUTHORSHIP",
+    "REACHABILITY!=AUTHORIZATION",
+    "INVITATION!=ACCEPTANCE",
+    "GLOBAL_CONSEQUENCE_PROPAGATION!=GLOBAL_AUTHORIZATION",
+    "CONNECTION!=FUSION",
+    "PERMEABILITY!=SOVEREIGNTY_TRANSFER",
+    "WWW_MIND_PASS!=LAIN_PASS"
+  ],
+  "current_evidence": [
+    "kernel/development/WWW_MIND_GATE_RESULT.json",
+    "autonomy/evidence/network/36210844736/lineage-result.json",
+    "kernel/development/NETWORK_CENTER_POLICY.json"
+  ],
+  "claim_fence": "A bounded Lain pass establishes only indexed network relation without identity/authority fusion at the tested scope. It does not establish AGI, consciousness, unrestricted network autonomy, or global personhood.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
