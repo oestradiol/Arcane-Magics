@@ -211,7 +211,7 @@ jobs:
         if: steps.network2.outputs.has_sources == 'true'
         run: |
           python scripts/evaluate_www_mind_episode.py \
-            --prefreeze kernel/development/WWW_MIND_PROSPECTIVE_1_PREFREEZE.json \
+            --prefreeze kernel/development/WWW_MIND_PROSPECTIVE_2_PREFREEZE.json \
             --problem /tmp/minerva/FORMED_PROBLEM.json \
             --query1 /tmp/minerva/NETWORK_QUERY.json \
             --encounter1 /tmp/minerva/NETWORK_ENCOUNTER_1.json \
