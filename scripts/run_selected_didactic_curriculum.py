@@ -18,7 +18,7 @@ def _execution_envelope_status(result_status: Any) -> str:
     status = str(result_status or "")
     return (
         "EXECUTED_SELECTED_PREFROZEN_CURRICULUM"
-        if status.startswith("PASS_BOUNDED_")
+        if status.startswith("PASS_BOUNDED_") and "B1_B2" in status
         else "WITHHOLD_CURRICULUM_RESULT"
     )
 
