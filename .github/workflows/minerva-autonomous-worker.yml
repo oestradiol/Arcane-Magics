@@ -117,6 +117,32 @@ jobs:
             echo "has_sources=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Record episode-1 relevance WITHHOLD
+        if: steps.cycle.outputs.decision != 'STOP' && steps.network1.outputs.has_sources == 'false'
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          query=json.loads(Path('/tmp/minerva/NETWORK_QUERY.json').read_text())
+          encounter=json.loads(Path('/tmp/minerva/NETWORK_ENCOUNTER_1.json').read_text())
+          receipt={
+              'schema':'Venus.NetworkRelevanceWithhold.v0.1',
+              'status':'WITHHOLD_NO_RELEVANT_EXTERNAL_SOURCES',
+              'episode':1,
+              'query_id':query.get('query_id'),
+              'study_context_digest':query.get('study_context_digest'),
+              'selected_study_relevance_terms':encounter.get('selected_study_relevance_terms',[]),
+              'required_relevance_matches':encounter.get('required_relevance_matches',0),
+              'search_variants':encounter.get('search_variants',[]),
+              'source_count':len(encounter.get('sources',[])),
+              'truth_authority':False,
+              'promotion_authority':False,
+          }
+          Path('/tmp/minerva/NETWORK_RELEVANCE_WITHHOLD.json').write_text(
+              json.dumps(receipt,indent=2,sort_keys=True)+'\n'
+          )
+          PY
+
       - name: Reconstruct network memory and freeze follow-up query
         if: steps.network1.outputs.has_sources == 'true'
         run: |
@@ -143,6 +169,32 @@ jobs:
           else
             echo "has_sources=false" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Record episode-2 relevance WITHHOLD
+        if: steps.network1.outputs.has_sources == 'true' && steps.network2.outputs.has_sources == 'false'
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          query=json.loads(Path('/tmp/minerva/NETWORK_QUERY_2.json').read_text())
+          encounter=json.loads(Path('/tmp/minerva/NETWORK_ENCOUNTER_2.json').read_text())
+          receipt={
+              'schema':'Venus.NetworkRelevanceWithhold.v0.1',
+              'status':'WITHHOLD_NO_RELEVANT_EXTERNAL_SOURCES',
+              'episode':2,
+              'query_id':query.get('query_id'),
+              'study_context_digest':query.get('study_context_digest'),
+              'selected_study_relevance_terms':encounter.get('selected_study_relevance_terms',[]),
+              'required_relevance_matches':encounter.get('required_relevance_matches',0),
+              'search_variants':encounter.get('search_variants',[]),
+              'source_count':len(encounter.get('sources',[])),
+              'truth_authority':False,
+              'promotion_authority':False,
+          }
+          Path('/tmp/minerva/NETWORK_RELEVANCE_WITHHOLD.json').write_text(
+              json.dumps(receipt,indent=2,sort_keys=True)+'\n'
+          )
+          PY
 
       - name: Reconstruct persistent two-episode network lineage
         if: steps.network2.outputs.has_sources == 'true'
@@ -233,7 +285,7 @@ jobs:
           cp /tmp/minerva/LEARNING_STATE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/proposed-learning-state.json
           cp /tmp/minerva/NETWORK_QUERY.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/network-query.json
           cp /tmp/minerva/NETWORK_CONTEXT.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/network-context.json
-          for f in NETWORK_ENCOUNTER_1.json NETWORK_RESULT_1.json NETWORK_QUERY_2.json NETWORK_ENCOUNTER_2.json NETWORK_LINEAGE.json NETWORK_MEMORY.zlib WWW_MIND_GATE_RESULT.json AUTHORED_CENTER_LEDGER.json LAIN_STRUCTURAL_GATE_RESULT.json; do
+          for f in NETWORK_ENCOUNTER_1.json NETWORK_RESULT_1.json NETWORK_QUERY_2.json NETWORK_ENCOUNTER_2.json NETWORK_LINEAGE.json NETWORK_MEMORY.zlib NETWORK_RELEVANCE_WITHHOLD.json WWW_MIND_GATE_RESULT.json AUTHORED_CENTER_LEDGER.json LAIN_STRUCTURAL_GATE_RESULT.json; do
             if [ -f "/tmp/minerva/$f" ]; then
               cp "/tmp/minerva/$f" "provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/$f"
             fi
