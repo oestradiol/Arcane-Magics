@@ -1,0 +1,56 @@
+name: Minerva lateral episode 1 evaluation
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - split/minerva
+    paths:
+      - autonomy/evidence/lateral/169/episode-1-hidden-reveal.json
+      - scripts/score_lateral_episode.py
+      - .github/workflows/minerva-lateral-eval.yml
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: minerva-lateral-eval-1
+  cancel-in-progress: false
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: split/minerva
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify prefrozen lateral scorer
+        run: |
+          python -m unittest tests/test_lateral_episode.py
+
+      - name: Score frozen predictions against revealed holdout
+        run: |
+          python scripts/score_lateral_episode.py \
+            --proposal autonomy/evidence/lateral/169/episode-1-proposal.json \
+            --reveal autonomy/evidence/lateral/169/episode-1-hidden-reveal.json \
+            --output kernel/development/LATERAL_EPISODE_1_RESULT.json
+
+      - name: Persist external evaluation result
+        run: |
+          git config user.name 'Minerva lateral external evaluator'
+          git config user.email 'actions@users.noreply.github.com'
+          git add kernel/development/LATERAL_EPISODE_1_RESULT.json
+          if git diff --cached --quiet; then
+            echo 'No lateral evaluation change.'
+            exit 0
+          fi
+          git commit -m 'evaluation: score bounded lateral episode 1'
+          git push origin HEAD:split/minerva
