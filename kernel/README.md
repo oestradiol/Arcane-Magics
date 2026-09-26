@@ -1,5 +1,7 @@
 # Minerva engineering kernel
 
+[WorldMirror VM architecture](../docs/WORLDMIRROR_VM.md) · [Runtime index](runtime/README.md) · [Development index](development/README.md) · [State index](state/README.md)
+
 `kernel/` is the live developmental/engineering center of Minerva. It contains objects that currently change execution, state reconstruction, governance, learning storage, custody, or developmental continuation.
 
 Historical implementations, failed branches, and superseded scaffolds remain under `provenance/`.
