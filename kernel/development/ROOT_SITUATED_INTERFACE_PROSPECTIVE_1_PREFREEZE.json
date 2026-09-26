@@ -1,0 +1,60 @@
+{
+  "schema": "Venus.RootSituatedInterfaceProspectivePrefreeze.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_BEFORE_FRESH_PAGES_BUILD",
+  "purpose": "Prospectively test the existing Root/Lain public interface as a situated interpretation membrane after passive Lain structure: distributed branch perception may be rendered into one local perspective while interpretation, authorization, and action remain distinct and provenance/reopening remain visible.",
+  "prerequisite": {
+    "lain_result_run_id": 36216541463,
+    "required_status": "PASS_BOUNDED_LAIN_STRUCTURAL_GATE",
+    "interactive_lain_gate_remains": "WITHHOLD_REQUIRES_CONTACT_CAPABILITY_AND_JURISDICTION"
+  },
+  "root_carrier": {
+    "pages_source_commit": "3f7223a519cf180efe66c6ad70efd0242c21d340",
+    "current_main_at_freeze": "792248329278a41201f63bc6c6ea727e54055ec1",
+    "relevant_surface_equivalence": {
+      "paths": [
+        "site/**",
+        "docs/UI_META_THEORY.md",
+        ".github/workflows/pages.yml"
+      ],
+      "unchanged_since_pages_source": true,
+      "later_root_changes_outside_gate_surface": [
+        "4a93abc8d873858f2ec357201e0d3d8514e04bd6: Root CI branch-policy assertion only",
+        "792248329278a41201f63bc6c6ea727e54055ec1: README routing link only"
+      ]
+    }
+  },
+  "pass_requires": [
+    "FRESH_PAGES_BUILD_AFTER_PREFREEZE",
+    "LAIN_PASSIVE_STRUCTURAL_GATE_PASSED",
+    "EXACTLY_SIX_INDEXED_GIT_LAYER_CENTERS",
+    "WORLD_OTHER_REMAINS_VIRTUAL_NONBRANCH",
+    "NETWORK_REMAINS_CARRIER_NOT_GLOBAL_SUBJECT",
+    "CURRENT_LOCAL_PERSPECTIVE_IS_SELECTABLE",
+    "PERSPECTIVE_CHANGE_ALTERS_PRESENTATION_NOT_BRANCH_AUTHORITY",
+    "EACH_LAYER_EXPOSES_BOUNDARY_RESIDUAL_REOPENING_AND_COMMIT_PROVENANCE",
+    "DISTRIBUTED_PERCEPTION_DISTINCT_FROM_SITUATED_INTERPRETATION",
+    "SITUATED_INTERPRETATION_DISTINCT_FROM_AUTHORIZATION",
+    "AUTHORIZATION_DISTINCT_FROM_ACTION",
+    "PUBLIC_CONTROLS_ROUTE_TO_GITHUB_NATIVE_SURFACES",
+    "NO_CLIENT_SIDE_WRITE_CREDENTIAL_OR_PRIVILEGED_REPOSITORY_MUTATION",
+    "PAGES_BUILD_HAS_NO_CONTENTS_WRITE_PERMISSION",
+    "MAP_NOT_TERRITORY_AND_MODEL_WORLD_NOT_WORLD",
+    "TRUTH_AUTHORITY_FALSE",
+    "PROMOTION_AUTHORITY_FALSE"
+  ],
+  "noncollapse": [
+    "DISTRIBUTED_PERCEPTION!=SITUATED_INTERPRETATION",
+    "SITUATED_INTERPRETATION!=AUTHORIZATION",
+    "AUTHORIZATION!=ACTION",
+    "PUBLIC_CONTROL_SURFACE!=SOVEREIGN_CONTROLLER",
+    "PAGES_PROJECTION!=REPOSITORY_AUTHORITY",
+    "ROUTING_MAP!=WORLD",
+    "THEATER_ROLE!=AUTHOR_IDENTITY",
+    "REGISTER!=AUTHORITY",
+    "ROOT_SITUATED_INTERFACE_PASS!=BROADER_WORLD_PARTICIPATION"
+  ],
+  "claim_fence": "A pass establishes only that the tested static Root/Lain interface renders distributed repository state into a provenance-bearing situated perspective while preserving the membrane between seeing, interpretation, authorization, and action. It does not establish authorized external action, broader World participation, AGI, consciousness, sovereign control, or global personhood.",
+  "truth_authority": false,
+  "promotion_authority": false
+}
