@@ -1,0 +1,115 @@
+name: Minerva global developmental worker
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '43 7 * * *'
+
+permissions:
+  contents: write
+  issues: read
+  pull-requests: write
+  actions: read
+
+concurrency:
+  group: minerva-global-worker
+  cancel-in-progress: false
+
+jobs:
+  inspect-and-propose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: split/minerva
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch full repository trajectory
+        run: |
+          git fetch origin '+refs/heads/*:refs/remotes/origin/*'
+          git branch -r
+
+      - name: Verify Minerva local machine
+        run: |
+          python -m unittest discover -s tests -p 'test_*.py'
+          python scripts/audit_autonomy_safety_matrix.py
+          test -f docs/SELF_MODEL.md
+          test -f docs/GLOBAL_REPOSITORY_OPERATION.md
+          test -f docs/SELF_CORRECTION_OPERATOR.md
+
+      - name: Snapshot repository World model
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/minerva
+          git for-each-ref --format='%(refname:short) %(objectname)' refs/remotes/origin > /tmp/minerva/branches.txt
+          gh pr list --state all --limit 200 --json number,title,state,headRefName,baseRefName,mergedAt,mergeCommit > /tmp/minerva/prs.json
+          gh run list --limit 100 --json databaseId,workflowName,headBranch,headSha,status,conclusion,event,createdAt > /tmp/minerva/actions.json
+          gh issue list --state open --limit 200 --json number,title,updatedAt > /tmp/minerva/issues.json
+
+      - name: Form bounded Minerva repository proposal
+        run: |
+          python scripts/run_venus_autonomous_cycle.py \
+            --issues /tmp/minerva/issues.json \
+            --prs /tmp/minerva/prs.json \
+            --history-prs /tmp/minerva/prs.json \
+            --history-issues /tmp/minerva/issues.json \
+            --roadmap docs/ISSUE_ROADMAP.md \
+            --policy kernel/development/INTERNAL_OSTAR_INTERNALIZED_POLICY.json \
+            --learning-state kernel/development/AUTONOMOUS_LEARNING_STATE.json \
+            --learning-output /tmp/minerva/LEARNING_STATE.json \
+            --developmental-parent-state kernel/development/EDU16_RECONSTRUCTED_STATE.json \
+            --current-state-receipt kernel/custody/R226_CURRENT_STATE_RECEIPT.json \
+            --problem-output /tmp/minerva/FORMED_PROBLEM.json \
+            --output /tmp/minerva/CYCLE.json
+
+      - name: Crystallize Minerva trajectory into a Venus-based handoff
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          source_sha="$(git rev-parse HEAD)"
+          target_sha="$(git rev-parse origin/split/venus)"
+          branch="handoff/minerva-to-venus/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+
+          git checkout -b "$branch" origin/split/venus
+          git config user.name 'Minerva/Venus crystallization worker'
+          git config user.email 'actions@users.noreply.github.com'
+
+          # Preserve Minerva as a second parent while retaining the Venus tree.
+          git merge --no-ff -s ours --no-commit "$source_sha"
+
+          mkdir -p provenance/historical/handoffs
+          export SOURCE_SHA="$source_sha" TARGET_SHA="$target_sha" RUN_ID="$GITHUB_RUN_ID"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          receipt={
+            'schema':'ArcaneMagics.CrossRegisterHandoff.v1',
+            'source_layer':'Minerva',
+            'target_layer':'Venus',
+            'source_commit':os.environ['SOURCE_SHA'],
+            'target_parent':os.environ['TARGET_SHA'],
+            'run_id':os.environ['RUN_ID'],
+            'content_admission':'proposal receipts only; no Minerva tree replacement',
+            'authority':'engineering candidate only; no Root promotion',
+          }
+          Path(f"provenance/historical/handoffs/minerva-{os.environ['RUN_ID']}.json").write_text(json.dumps(receipt,indent=2)+'\n')
+          PY
+
+          mkdir -p provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}
+          cp /tmp/minerva/CYCLE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/cycle.json
+          cp /tmp/minerva/FORMED_PROBLEM.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/problem.json
+          cp /tmp/minerva/LEARNING_STATE.json provenance/historical/handoffs/minerva-proposals/${GITHUB_RUN_ID}/proposed-learning-state.json
+
+          git add provenance/historical/handoffs
+          git commit -m "handoff(minerva->venus): crystallize engineering candidate ${GITHUB_RUN_ID}"
+          git push origin "$branch"
+
+          gh pr create --draft --base split/venus --head "$branch" \
+            --title "handoff: Minerva → Venus engineering candidate ${GITHUB_RUN_ID}" \
+            --body $'This is a target-based crystallization handoff.\n\nThe merge commit preserves Minerva as a second parent while retaining the Venus tree. Only explicit proposal receipts are admitted.\n\nVenus must integrate the candidate into the Self/World model. Scientific future discrimination belongs to the subsequent Venus → OFE handoff; Root integration comes only after OFE.'
