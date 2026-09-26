@@ -58,6 +58,10 @@ jobs:
           test -f kernel/development/MINERVA_CONSTRUCT_AUDIT_SCOPE.json
           test -f kernel/development/MINERVA_CAUSAL_AUDIT_SCOPE.json
           test -f kernel/development/MINERVA_TEST_SCOPE.json
+          test -f kernel/development/WORLDMIRROR_CONSOLE_POLICY.json
+          test -f kernel/development/INTERACTION_DEVELOPMENT_CONTRACT.json
+          test -f kernel/development/WORLDMIRROR_AGENT_PROTOCOL.json
+          test -f docs/WORLDMIRROR_CONSOLE.md
 
       - name: Snapshot repository World model
         env:
