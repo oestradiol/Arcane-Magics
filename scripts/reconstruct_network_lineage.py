@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import sys
 import tempfile
+import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -50,6 +51,7 @@ def main() -> int:
     p.add_argument("--query2", required=True)
     p.add_argument("--encounter2", required=True)
     p.add_argument("--output", required=True)
+    p.add_argument("--checkpoint-output")
     args=p.parse_args()
 
     q1=NetworkQuery(**load(args.query1))
@@ -88,8 +90,26 @@ def main() -> int:
         }
         r2=reconstruct_from_network(mem, problem=p2, query=q2, memory_object_ids=ids2)
 
-        checkpoint=mem.checkpoint(Path(td)/"network-lineage.zlib")
+        checkpoint_path=Path(td)/"network-lineage.zlib"
+        checkpoint=mem.checkpoint(checkpoint_path)
+        if args.checkpoint_output:
+            target=Path(args.checkpoint_output)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(checkpoint_path, target)
         source_ids=tuple(sorted(set(r1.indexed_source_ids + r2.indexed_source_ids)))
+        center_ids=tuple(sorted({
+            str(row.get("center_id") or "")
+            for encounter in (e1,e2)
+            for row in encounter.get("sources",())
+            if str(row.get("center_id") or "")
+        }))
+        external_center_ids=tuple(sorted({
+            str(row.get("center_id") or "")
+            for encounter in (e1,e2)
+            for row in encounter.get("sources",())
+            if str(row.get("center_id") or "")
+            and str(row.get("center_id")) != "github-repo:oestradiol/Arcane-Magics"
+        }))
         result={
             "schema":"Venus.NetworkMemoryLineage.v0.1",
             "episode_count":2,
@@ -100,7 +120,10 @@ def main() -> int:
             "episode1_memory_ids":list(ids1),
             "episode2_memory_ids":list(ids2),
             "indexed_source_ids":list(source_ids),
-            "multiple_indexed_centers":len(source_ids) >= 2,
+            "indexed_center_ids":list(center_ids),
+            "external_center_ids":list(external_center_ids),
+            "multiple_indexed_centers":len(center_ids) >= 2,
+            "multiple_external_centers":len(external_center_ids) >= 2,
             "episode1_reconstruction":asdict(r1),
             "episode2_reconstruction":asdict(r2),
             "memory_checkpoint_sha256":checkpoint["sha256"],
