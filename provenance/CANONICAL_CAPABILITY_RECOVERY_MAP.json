@@ -300,7 +300,7 @@
     "COMPLETED: recompile U2 unlabeled problem formation before Git issue/PR target selection",
     "COMPLETED: recompile bounded U1 state-owned TransformProgram recurrence around a formed problem",
     "COMPLETED: require fresh internal O-star rederivation after the machinery change",
-    "REMAINING: founder/source-ablation equivalence for the recompiled U1 recurrence carrier",
+    "COMPLETED: founder/source-ablation equivalence for the recompiled U1 recurrence carrier (kernel/development/U1_FOUNDER_SOURCE_ABLATION_RESULT.json)",
     "REMAINING: lawful live recurrence trigger from problem-specific independent return rather than historical SSR donor return",
     "REMAINING: repeated prospective recurrence on fresh current-world problems before any stronger Strong-RSI claim"
   ],
@@ -310,5 +310,10 @@
     "open_ended_rsi": false,
     "agi": false,
     "consciousness": false
+  },
+  "reconciliation_note_2026_09_26": {
+    "status": "CURRENT_GIT_EVIDENCE_RECONCILED",
+    "note": "Founder/source ablation debt was stale in this map. Current Git contains PASS_BOUNDED_RECOMPILED_U1_FOUNDER_SOURCE_ABLATION. Live-world automatic recurrence and stronger open-distribution recurrence remain separately unclosed.",
+    "evidence": "kernel/development/U1_FOUNDER_SOURCE_ABLATION_RESULT.json"
   }
 }
