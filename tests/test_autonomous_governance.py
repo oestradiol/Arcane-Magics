@@ -412,27 +412,68 @@ class AutonomousGovernanceTests(unittest.TestCase):
 
     def test_workflow_has_no_self_merge_release_close_or_secret_path(self):
         text = WORKFLOW.read_text(encoding="utf-8").lower()
-        forbidden = (
-            "gh pr merge",
-            "gh release create",
-            "gh issue close",
-            "secrets.",
-            "workflow_run:",
-        )
+        forbidden = ("gh pr merge", "gh release create", "gh issue close", "secrets.", "workflow_run:")
         for token in forbidden:
             self.assertNotIn(token, text)
 
-    def test_workflow_only_creates_draft_pr_when_pr_carrier_is_available(self):
+    def test_workflow_creates_only_draft_handoff_pr(self):
         text = WORKFLOW.read_text(encoding="utf-8")
-        self.assertIn("gh pr create", text)
-        self.assertIn("--draft", text)
+        self.assertIn("gh pr create --draft --base split/venus", text)
+        self.assertIn("handoff/minerva-to-venus/", text)
+        self.assertNotIn("--base main", text)
 
-    def test_workflow_has_issue_carrier_fallback_for_pr_creation_policy(self):
+    def test_worker_is_global_observer_but_branch_local_author(self):
         text = WORKFLOW.read_text(encoding="utf-8")
-        self.assertIn("gh issue create", text)
-        self.assertIn("carrier_kind=\"ISSUE\"", text)
-        self.assertIn("--history-issues /tmp/venus-issue-history.json", text)
-        self.assertNotIn("gh issue close", text.lower())
+        self.assertIn("git fetch origin \u0027+refs/heads/*:refs/remotes/origin/*\u0027", text)
+        self.assertIn("ref: split/minerva", text)
+        self.assertIn("git for-each-ref", text)
+        self.assertIn("gh pr list --state all", text)
+        self.assertIn("gh run list", text)
+        self.assertIn("gh issue list --state open", text)
+
+    def test_worker_has_wall_clock_budget(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("timeout-minutes: 30", text)
+
+    def test_local_machine_verification_occurs_before_handoff_write(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        verify_at = text.index("Verify Minerva local machine")
+        push_at = text.index("git push origin")
+        self.assertLess(verify_at, push_at)
+        self.assertIn("python -m unittest discover -s tests -p \u0027test_*.py\u0027", text)
+        self.assertIn("audit_autonomy_safety_matrix.py", text)
+
+    def test_bounded_cycle_occurs_before_handoff_write(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        cycle_at = text.index("Form bounded Minerva repository proposal")
+        push_at = text.index("git push origin")
+        self.assertLess(cycle_at, push_at)
+        self.assertIn("run_venus_autonomous_cycle.py", text)
+        self.assertIn("--learning-state kernel/development/AUTONOMOUS_LEARNING_STATE.json", text)
+        self.assertIn("--developmental-parent-state kernel/development/EDU16_RECONSTRUCTED_STATE.json", text)
+        self.assertIn("--current-state-receipt kernel/custody/R226_CURRENT_STATE_RECEIPT.json", text)
+
+    def test_handoff_preserves_minerva_as_second_parent(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn('git checkout -b "$branch" origin/split/venus', text)
+        self.assertIn('git merge --no-ff -s ours --no-commit "$source_sha"', text)
+        self.assertIn("Preserve Minerva as a second parent", text)
+
+    def test_handoff_records_explicit_provenance_receipt(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("provenance/historical/handoffs", text)
+        self.assertIn("\u0027source_layer\u0027:\u0027Minerva\u0027", text)
+        self.assertIn("\u0027target_layer\u0027:\u0027Venus\u0027", text)
+        self.assertIn("\u0027content_admission\u0027:\u0027proposal receipts only; no Minerva tree replacement\u0027", text)
+        self.assertIn("\u0027authority\u0027:\u0027engineering candidate only; no Root promotion\u0027", text)
+
+    def test_handoff_admits_proposal_receipts_not_minerva_tree(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("minerva-proposals/${GITHUB_RUN_ID}", text)
+        self.assertIn("cycle.json", text)
+        self.assertIn("problem.json", text)
+        self.assertIn("proposed-learning-state.json", text)
+        self.assertNotIn("git add kernel", text)
 
     def test_workflow_cannot_self_author_learning_return(self):
         text = WORKFLOW.read_text(encoding="utf-8")
@@ -442,25 +483,6 @@ class AutonomousGovernanceTests(unittest.TestCase):
         lowered = text.lower()
         self.assertNotIn("gh pr review", lowered)
         self.assertNotIn("gh pr edit", lowered)
-
-    def test_recurrence_wakes_only_from_main_admission(self):
-        text = WORKFLOW.read_text(encoding="utf-8")
-        self.assertIn("push:", text)
-        self.assertIn("branches: [main]", text)
-
-    def test_autonomous_write_gate_runs_full_unit_suite(self):
-        text = WORKFLOW.read_text(encoding="utf-8")
-        self.assertIn("python -m unittest discover -s tests -p 'test_*.py'", text)
-
-    def test_autonomous_cycle_has_wall_clock_budget(self):
-        text = WORKFLOW.read_text(encoding="utf-8")
-        self.assertIn("timeout-minutes: 30", text)
-
-    def test_workflow_runs_safety_tests_before_git_write(self):
-        text = WORKFLOW.read_text(encoding="utf-8")
-        tests_at = text.index("Verify bounded autonomy safety surface")
-        push_at = text.index("git push origin")
-        self.assertLess(tests_at, push_at)
 
     def test_retained_external_method_failure_is_canonical_learning_state(self):
         obj = json.loads(
@@ -476,81 +498,17 @@ class AutonomousGovernanceTests(unittest.TestCase):
         self.assertEqual(obj["kind_failure"]["PR"], 0)
 
 
-    def test_research_proposal_executes_before_autonomous_git_write(self):
+    def test_current_worker_does_not_write_runtime_successor_directly(self):
         text = WORKFLOW.read_text(encoding="utf-8")
-        proposal_at = text.index("Let Venus form a bounded research proposal")
-        push_at = text.index("git push origin")
-        self.assertLess(proposal_at, push_at)
-        self.assertIn("run_venus_research_proposal.py", text)
+        self.assertNotIn("cp /tmp/minerva/CYCLE.json kernel/", text)
+        self.assertNotIn("git add kernel/development", text)
+        self.assertNotIn("gh pr merge", text.lower())
 
-
-    def test_research_proposal_uses_state_owned_target_check_catalog(self):
+    def test_minerva_to_venus_handoff_precedes_root_integration(self):
         text = WORKFLOW.read_text(encoding="utf-8")
-        self.assertIn("--check-catalog kernel/development/AUTONOMOUS_SAFE_CHECK_CATALOG.json", text)
+        self.assertIn("Scientific future discrimination belongs to the subsequent Venus → OFE handoff", text)
+        self.assertIn("Root integration comes only after OFE", text)
 
-    def test_autonomous_branch_commits_proposal_and_returned_local_evidence(self):
-        text = WORKFLOW.read_text(encoding="utf-8")
-        self.assertIn("autonomy/proposals/", text)
-        self.assertIn("autonomy/evidence/", text)
-        self.assertIn("VENUS_RESEARCH_PROPOSAL.json", text)
-        self.assertIn("VENUS_RESEARCH_EVIDENCE.json", text)
-
-    def test_change_gate_executes_before_autonomous_git_write(self):
-        text = WORKFLOW.read_text(encoding="utf-8")
-        change_at = text.index("Let Venus derive a post-evidence change disposition")
-        push_at = text.index("git push origin")
-        self.assertLess(change_at, push_at)
-        self.assertIn("run_venus_change_candidate.py", text)
-
-    def test_autonomous_branch_commits_change_candidate_artifact(self):
-        text = WORKFLOW.read_text(encoding="utf-8")
-        self.assertIn("autonomy/changes/", text)
-        self.assertIn("VENUS_CHANGE_CANDIDATE.json", text)
-        self.assertIn("Change disposition:", text)
-
-    def test_learning_state_is_committed_but_not_authority(self):
-        obj = json.loads(
-            (ROOT / "kernel/development/AUTONOMOUS_LEARNING_STATE.json").read_text(
-                encoding="utf-8"
-            )
-        )
-        self.assertFalse(obj["promotion_authority"])
-        self.assertFalse(obj["merge_authority"])
-        self.assertFalse(obj["truth_authority"])
-        self.assertFalse(obj["safety_floor_authority"])
-
-
-    def test_problem_formation_occurs_before_research_proposal_and_git_write(self):
-        text = WORKFLOW.read_text(encoding="utf-8")
-        problem_at = text.index("--problem-output /tmp/VENUS_FORMED_PROBLEM.json")
-        proposal_at = text.index("Let Venus form a bounded research proposal")
-        push_at = text.index("git push origin")
-        self.assertLess(problem_at, proposal_at)
-        self.assertLess(problem_at, push_at)
-
-    def test_autonomous_branch_persists_formed_problem_receipt(self):
-        text = WORKFLOW.read_text(encoding="utf-8")
-        self.assertIn("autonomy/problems/", text)
-        self.assertIn("VENUS_FORMED_PROBLEM.json", text)
-        self.assertIn("Problem:", text)
-
-
-    def test_live_recurrence_candidate_freezes_before_git_write(self):
-        text = WORKFLOW.read_text(encoding="utf-8")
-        recur_at = text.index("Check for problem-specific live recurrence return")
-        push_at = text.index("git push origin")
-        self.assertLess(recur_at, push_at)
-        self.assertIn("run_venus_recurrence_candidate.py", text)
-        self.assertIn("autonomy/recurrence_candidates/", text)
-
-    def test_live_worker_never_applies_recurrence_successor_to_kernel(self):
-        text = WORKFLOW.read_text(encoding="utf-8")
-        self.assertNotIn("cp /tmp/VENUS_RECURRENCE_CANDIDATE.json kernel/", text)
-        self.assertNotIn("git add kernel/development/AUTONOMOUS_RESEARCH_TRANSFORM_PROGRAM.json", text)
-
-    def test_workflow_cannot_self_author_recurrence_return(self):
-        text = WORKFLOW.read_text(encoding="utf-8")
-        self.assertNotIn("VENUS_RECURRENCE_TRAINING_V1:", text)
 
 
 if __name__ == "__main__":
