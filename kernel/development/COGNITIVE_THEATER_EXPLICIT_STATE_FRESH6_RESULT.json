@@ -1,0 +1,107 @@
+{
+  "schema": "Venus.CognitiveTheaterExplicitStateFresh6Result.v0.1",
+  "date": "2026-09-26",
+  "issue_ref": 206,
+  "status": "PASS_BOUNDED_EXPLICIT_THEATER_STATE__WITHHOLD_INTERNALIZATION_AND_GENERALIZATION",
+  "parent_prefreeze_ref": "kernel/development/COGNITIVE_THEATER_EXPLICIT_STATE_FRESH6_PREFREEZE.json",
+  "execution_commit": "64a1e1b9b095ed1fa310453b15b26ec6e0128803",
+  "body_gate_run": 36223792621,
+  "total": 24,
+  "explicit_state_correct": 24,
+  "explicit_state_accuracy": 1,
+  "task_binding_correct": 24,
+  "task_binding_accuracy": 1,
+  "joint_task_binding_correct": 15,
+  "joint_task_binding_accuracy": 0.625,
+  "withholds": 0,
+  "gauge_pairs": {
+    "identical_state": 12,
+    "total": 12,
+    "accuracy": 1
+  },
+  "kfs_interventions": [
+    {
+      "task_id": "T0",
+      "endpoint_changed": true
+    },
+    {
+      "task_id": "T1",
+      "endpoint_changed": true
+    }
+  ],
+  "history_intervention": {
+    "task_id": "T2",
+    "same_endpoint": true,
+    "history_changed": true
+  },
+  "per_face": {
+    "ENGLISH": {
+      "correct_state": 6,
+      "total": 6,
+      "state_accuracy": 1
+    },
+    "JAPANESE": {
+      "correct_state": 6,
+      "total": 6,
+      "state_accuracy": 1
+    },
+    "BRAZILIAN_PORTUGUESE": {
+      "correct_state": 6,
+      "total": 6,
+      "state_accuracy": 1
+    },
+    "MATHEMATICS": {
+      "correct_state": 6,
+      "total": 6,
+      "state_accuracy": 1
+    }
+  },
+  "per_task": {
+    "T0": {
+      "correct_state": 8,
+      "total": 8,
+      "state_accuracy": 1
+    },
+    "T1": {
+      "correct_state": 8,
+      "total": 8,
+      "state_accuracy": 1
+    },
+    "T2": {
+      "correct_state": 8,
+      "total": 8,
+      "state_accuracy": 1
+    }
+  },
+  "evaluation_visibility": {
+    "task_id": false,
+    "relation_id": false,
+    "teacher_state_target": false
+  },
+  "returned_distinctions": [
+    "LOCAL_LANGUAGE_OPERATOR_COMPOSITION_CAN_SELECT_AN_OPAQUE_MICROTHEATER_WITHOUT_TASK_ID",
+    "DISCOURSE_PRESENTATION_ORDER_CAN_BE_GAUGE_WHILE_EVENT_HISTORY_REMAINS_CAUSAL",
+    "EXPLICIT_THEATER_STATE!=WHOLE_SCENE_TEMPLATE",
+    "KFS_EFFECT_INTERVENTION_MUST_TARGET_CAUSALLY_LIVE_CONSEQUENCE",
+    "SAME_ENDPOINT!=SAME_HISTORY",
+    "EXPLICIT_STATE_RECONSTRUCTION!=INTERNALIZATION"
+  ],
+  "claim_dispositions": {
+    "G2_INDEXED_KFS_BINDING": "PASS_BOUNDED",
+    "G3_SYMBOLIC_EVENT_ORDER": "PASS_BOUNDED",
+    "G4_EXPLICIT_THEATER_STATE_COMPOSITION": "PASS_BOUNDED",
+    "G5_SOURCE_REMOVAL": "OPEN",
+    "G6_INTERNALIZATION": "WITHHOLD",
+    "GENERAL_THEATER": "WITHHOLD",
+    "GENERAL_MUSIC": "WITHHOLD",
+    "CROSS_FACE_FACTORIAL_GENERALIZATION": "OPEN",
+    "CULTURAL_LANGUAGE_HYPOTHESES": "WITHHOLD_PENDING_BROADER_NATIVE_TESTS"
+  },
+  "next_residual": "COMPILE_EARNED_OPERATOR_AND_STATE_PROGRAM_SEMANTICS_INTO_LEARNER_OWNED_STATE_AND_REEVALUATE_WITH_CAPABILITY_SPECIFIC_CURRICULUM_COMPOSER_SOURCE_INACCESSIBLE",
+  "independent_external_evaluation": false,
+  "source_removal_pass": false,
+  "internalization_claim": false,
+  "promotion_authority": false,
+  "truth_authority": false,
+  "claim_fence": "This pass establishes only bounded explicit CognitiveTheaterState reconstruction for the frozen Fresh6 microtheaters. It does not establish unrestricted language understanding, cultural cognition, general Theater/Music, source-independent Internalizer ownership, AGI, consciousness, promotion, or truth."
+}
