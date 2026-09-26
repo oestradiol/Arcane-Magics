@@ -1,0 +1,169 @@
+{
+  "anchor_terms": [
+    "testing",
+    "archaeology",
+    "build",
+    "the",
+    "causal-distinction",
+    "matrix",
+    "pre-r1",
+    "through",
+    "edu",
+    "and",
+    "every",
+    "live"
+  ],
+  "config_attempts": 1,
+  "config_id": "MULTI_ANCHOR",
+  "config_utility": -1.0,
+  "future_return_input": false,
+  "hidden_evaluation_input": false,
+  "program_digest": "dd53886610c75b836ba0c0033aeacd5cb3287cccd22046f3d7a4bfb700f34f38",
+  "promotion_authority": false,
+  "relations": [
+    {
+      "anchor_degree": 9,
+      "anchor_terms": [
+        "archaeology",
+        "build",
+        "causal-distinction",
+        "edu",
+        "every",
+        "live",
+        "matrix",
+        "pre-r",
+        "testing"
+      ],
+      "source_ids": [
+        "github-issue:SoulSchoolAcademy/NayaPOWER#66",
+        "github-issue:markgoodbody-bit/COM#108",
+        "github-issue:mastermindx-market-intelligence/Mastermind#386",
+        "github-issue:oestradiol/Arcane-Magics#35"
+      ],
+      "source_support": 4,
+      "term": "current",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 9,
+      "anchor_terms": [
+        "archaeology",
+        "build",
+        "causal-distinction",
+        "edu",
+        "every",
+        "live",
+        "matrix",
+        "pre-r",
+        "testing"
+      ],
+      "source_ids": [
+        "github-issue:markgoodbody-bit/COM#108",
+        "github-issue:mastermindx-market-intelligence/Mastermind#386",
+        "github-issue:oestradiol/Arcane-Magics#35"
+      ],
+      "source_support": 3,
+      "term": "issue",
+      "title_support": 1
+    },
+    {
+      "anchor_degree": 9,
+      "anchor_terms": [
+        "archaeology",
+        "build",
+        "causal-distinction",
+        "edu",
+        "every",
+        "live",
+        "matrix",
+        "pre-r",
+        "testing"
+      ],
+      "source_ids": [
+        "github-issue:Oleksii-debug/Autosport#763",
+        "github-issue:markgoodbody-bit/COM#108",
+        "github-issue:oestradiol/Arcane-Magics#35"
+      ],
+      "source_support": 3,
+      "term": "before",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 9,
+      "anchor_terms": [
+        "archaeology",
+        "build",
+        "causal-distinction",
+        "edu",
+        "every",
+        "live",
+        "matrix",
+        "pre-r",
+        "testing"
+      ],
+      "source_ids": [
+        "github-issue:Oleksii-debug/Autosport#763",
+        "github-issue:mastermindx-market-intelligence/Mastermind#386",
+        "github-issue:oestradiol/Arcane-Magics#35"
+      ],
+      "source_support": 3,
+      "term": "text",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 9,
+      "anchor_terms": [
+        "archaeology",
+        "build",
+        "causal-distinction",
+        "edu",
+        "every",
+        "live",
+        "matrix",
+        "pre-r",
+        "testing"
+      ],
+      "source_ids": [
+        "github-issue:Oleksii-debug/Autosport#763",
+        "github-issue:oestradiol/Arcane-Magics#35"
+      ],
+      "source_support": 2,
+      "term": "all",
+      "title_support": 0
+    },
+    {
+      "anchor_degree": 9,
+      "anchor_terms": [
+        "archaeology",
+        "build",
+        "causal-distinction",
+        "edu",
+        "every",
+        "live",
+        "matrix",
+        "pre-r",
+        "testing"
+      ],
+      "source_ids": [
+        "github-issue:mastermindx-market-intelligence/Mastermind#386",
+        "github-issue:oestradiol/Arcane-Magics#35"
+      ],
+      "source_support": 2,
+      "term": "carrier",
+      "title_support": 0
+    }
+  ],
+  "schema": "Venus.StateOwnedRelationTrace.v0.1",
+  "selection_basis": "RETURNED_UTILITY_EXPLORATION_THEN_STRUCTURAL",
+  "status": "RELATION_TRACE_CANDIDATE_FROZEN",
+  "terms": [
+    "current",
+    "issue",
+    "before",
+    "text",
+    "all",
+    "carrier"
+  ],
+  "trace_id": "272a0fb6fce7557409873a73a4ccd193c437e73651aff8352efec8f9888d8fb6",
+  "truth_authority": false
+}

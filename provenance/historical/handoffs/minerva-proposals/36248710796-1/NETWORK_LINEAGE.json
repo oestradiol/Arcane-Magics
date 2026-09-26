@@ -1,0 +1,127 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "52ebb7146fdd70c7feb4473158a9a1fbbeaec5eda48e149d9a254f3868cddabf",
+    "ddc7700226fc093ddcaed05622e30e9fe8ea2bb619d8bc14ac2595ab564f0907",
+    "34399826d67efaf2d50d89da9110844f1c9ac711b48c3b86e3523039952a4b3a",
+    "e21845d770f0165afe419714866fac19996a984fa6aefa0e24af73f640745f88",
+    "a73750d2d9d4305690acf44ee5bf8ea90d4ea2adddd69b8b057a461ab41058eb"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:Oleksii-debug/Autosport#763",
+      "github-issue:SoulSchoolAcademy/NayaPOWER#66",
+      "github-issue:markgoodbody-bit/COM#108",
+      "github-issue:mastermindx-market-intelligence/Mastermind#386",
+      "github-issue:oestradiol/Arcane-Magics#35"
+    ],
+    "memory_object_ids": [
+      "52ebb7146fdd70c7feb4473158a9a1fbbeaec5eda48e149d9a254f3868cddabf",
+      "ddc7700226fc093ddcaed05622e30e9fe8ea2bb619d8bc14ac2595ab564f0907",
+      "34399826d67efaf2d50d89da9110844f1c9ac711b48c3b86e3523039952a4b3a",
+      "e21845d770f0165afe419714866fac19996a984fa6aefa0e24af73f640745f88",
+      "a73750d2d9d4305690acf44ee5bf8ea90d4ea2adddd69b8b057a461ab41058eb"
+    ],
+    "next_query_terms": [
+      "above",
+      "acceptance",
+      "acting",
+      "action",
+      "active_thread_pointer",
+      "activity",
+      "actually",
+      "added",
+      "address",
+      "against",
+      "agent",
+      "ais"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "45d3a8a070ddfa3771fb6bcd8fd86ad64e6445fa498161bcf1d41893d8f0026d",
+    "reconstruction_id": "09521e2e8ff0197d589fdd44ea1c552650980f42b7addca0e405cc0779552f89",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "05f31c8799b5239b614f9ca4b76550822ca6ec95f4d8212f83fea8b3e9aa8c18",
+    "fbb7f3923b0e05904f631894ee085a8a3ac9602e7354c3c9688fecae77321904",
+    "21443c775a67fd20bb3160e241f58b015501b8ab985e2f757a0d59a6c0ec02a9"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:markgoodbody-bit/COM#108",
+      "github-issue:mastermindx-market-intelligence/Mastermind#600",
+      "github-issue:mastermindx-market-intelligence/macro#6819"
+    ],
+    "memory_object_ids": [
+      "05f31c8799b5239b614f9ca4b76550822ca6ec95f4d8212f83fea8b3e9aa8c18",
+      "fbb7f3923b0e05904f631894ee085a8a3ac9602e7354c3c9688fecae77321904",
+      "21443c775a67fd20bb3160e241f58b015501b8ab985e2f757a0d59a6c0ec02a9"
+    ],
+    "next_query_terms": [
+      "active",
+      "active-child",
+      "actual",
+      "address",
+      "admitted",
+      "agent-fabric-end-to-end-fable-integration-",
+      "agentos",
+      "aggregation",
+      "ais",
+      "allocation",
+      "alpha-intelligence-integration",
+      "and"
+    ],
+    "problem_id": "32eb9e0b337a2a94fc5147bcd0161530619b81b95a996f78b885cb510b93b116",
+    "promotion_authority": false,
+    "query_id": "73f7d0002fff76b56beecc026fe4ac1d2090de5d304b5ded802dfc1c48d7d417",
+    "reconstruction_id": "f178f0096f404ae789604f7239259410cf51b016fa6e22d0048d5a28e8839d91",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:Oleksii-debug/Autosport",
+    "github-repo:SoulSchoolAcademy/NayaPOWER",
+    "github-repo:markgoodbody-bit/COM",
+    "github-repo:mastermindx-market-intelligence/Mastermind",
+    "github-repo:mastermindx-market-intelligence/macro"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:Oleksii-debug/Autosport",
+    "github-repo:SoulSchoolAcademy/NayaPOWER",
+    "github-repo:markgoodbody-bit/COM",
+    "github-repo:mastermindx-market-intelligence/Mastermind",
+    "github-repo:mastermindx-market-intelligence/macro",
+    "github-repo:oestradiol/Arcane-Magics"
+  ],
+  "indexed_source_ids": [
+    "github-issue:Oleksii-debug/Autosport#763",
+    "github-issue:SoulSchoolAcademy/NayaPOWER#66",
+    "github-issue:markgoodbody-bit/COM#108",
+    "github-issue:mastermindx-market-intelligence/Mastermind#386",
+    "github-issue:mastermindx-market-intelligence/Mastermind#600",
+    "github-issue:mastermindx-market-intelligence/macro#6819",
+    "github-issue:oestradiol/Arcane-Magics#35"
+  ],
+  "memory_checkpoint_sha256": "edb8adc8beb4f0a10ce56f99f4cb68493a65ddac168fbea09a2e28addaf5a123",
+  "memory_record_count": 8,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "45d3a8a070ddfa3771fb6bcd8fd86ad64e6445fa498161bcf1d41893d8f0026d",
+  "query2_changed_from_query1": true,
+  "query2_id": "73f7d0002fff76b56beecc026fe4ac1d2090de5d304b5ded802dfc1c48d7d417",
+  "query2_memory_provenance": [
+    "network-memory:34399826d67efaf2d50d89da9110844f1c9ac711b48c3b86e3523039952a4b3a",
+    "network-memory:52ebb7146fdd70c7feb4473158a9a1fbbeaec5eda48e149d9a254f3868cddabf",
+    "network-memory:a73750d2d9d4305690acf44ee5bf8ea90d4ea2adddd69b8b057a461ab41058eb",
+    "network-memory:ddc7700226fc093ddcaed05622e30e9fe8ea2bb619d8bc14ac2595ab564f0907",
+    "network-memory:e21845d770f0165afe419714866fac19996a984fa6aefa0e24af73f640745f88"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}

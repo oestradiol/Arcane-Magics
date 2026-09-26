@@ -1,0 +1,155 @@
+{
+  "adapter_id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+  "adapter_origin": "https://api.github.com",
+  "external_center_ids": [
+    "github-repo:Oleksii-debug/Autosport",
+    "github-repo:SoulSchoolAcademy/NayaPOWER",
+    "github-repo:markgoodbody-bit/COM",
+    "github-repo:mastermindx-market-intelligence/Mastermind"
+  ],
+  "independent_evaluative_return": false,
+  "indexed_center_ids": [
+    "github-repo:Oleksii-debug/Autosport",
+    "github-repo:SoulSchoolAcademy/NayaPOWER",
+    "github-repo:markgoodbody-bit/COM",
+    "github-repo:mastermindx-market-intelligence/Mastermind",
+    "github-repo:oestradiol/Arcane-Magics"
+  ],
+  "multiple_external_centers": true,
+  "promotion_authority": false,
+  "query_id": "45d3a8a070ddfa3771fb6bcd8fd86ad64e6445fa498161bcf1d41893d8f0026d",
+  "query_text_executed_as_shell": false,
+  "relevance_filter_applied": true,
+  "required_relevance_matches": 2,
+  "retrieved_at": "2026-09-26T14:30:37Z",
+  "return_class": "ENCOUNTER_RETURN",
+  "returned_text_executed": false,
+  "returned_urls_followed": false,
+  "schema": "Venus.GitHubNetworkEncounter.v0.1",
+  "search_variants": [
+    "testing archaeology build causal-distinction matrix pre-r1 through edu",
+    "testing archaeology build causal-distinction matrix pre-r1",
+    "testing archaeology build causal-distinction"
+  ],
+  "selected_study_relevance_terms": [
+    "testing",
+    "archaeology",
+    "build",
+    "the",
+    "causal-distinction",
+    "matrix",
+    "pre-r1",
+    "through",
+    "edu",
+    "and",
+    "every",
+    "live"
+  ],
+  "sources": [
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:Oleksii-debug",
+      "author_login": "Oleksii-debug",
+      "author_type": "User",
+      "center_id": "github-repo:Oleksii-debug/Autosport",
+      "learner_minted_artifact": false,
+      "observed_relation": "# OWNER CONTROL PATCH V3 \u2014 SELF-DISPATCHED BACKLOG / NO AUDITOR REQUIRED \u2014 2026-09-24 \u2014 BINDING **THIS TOP SECTION SUPERSEDES ALL AUDITOR-DEPENDENT PACKET-BANK RULES BELOW WHERE CONFLICTING.** #763 is optional residual-work context, not a mandatory queue and not a dependency on an auditor. - A developer may derive the next work directly from live GitHub and canonical product/technical/economic gaps. - Never wait for an auditor to classify, replenish, bless, or assign a packet. - Search existing PRs/branches first and avoid duplicate semantic/source work. - Prefer finishing, reconverging, testing and integrating useful existing lineages before manufacturing new activity. - If the product is not truly 100% finished, immediately continue with the next highest-value independent or reconvergence-safe work. - Older text assigning duties to Queue Auditor/auditors is historical guidance only. --- # OWNER CONTROL PATCH V2 \u2014 INTEGRATION-FIRST BACKLOG DRAIN \u2014 2026-09-23 \u2014 BINDING **THIS TOP SECTION SUPERSEDES THE PREVIOUS #763 OWNER CONTROL PATCH AND ALL OLDER PACKET-BANK TEXT BELOW WHERE CONFLICTING.** Primary objective: `TIME_TO_WHOLE_FINISHED_PRODUCT`. #763 is now primarily a **source of r",
+      "relevance_matches": [
+        "testing",
+        "live"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T12:15:21Z",
+      "source_id": "github-issue:Oleksii-debug/Autosport#763",
+      "source_url": "https://github.com/Oleksii-debug/Autosport/issues/763",
+      "title": "[CONTROL][WORK PACKET BANK] Unbounded expandable backlog"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:markgoodbody-bit",
+      "author_login": "markgoodbody-bit",
+      "author_type": "User",
+      "center_id": "github-repo:markgoodbody-bit/COM",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Current coordination Read the [active pointer](https://github.com/markgoodbody-bit/COM/blob/main/coordination/ACTIVE_THREAD_POINTER.md) and later comments before acting. The pointer names current reviewed sources, deployment receipts and open gates; this issue header deliberately does not duplicate their changing states. The snapshot below is preserved history. Its old public/source heads and task statuses are not the live queue. ## Recorded coordination snapshot \u2014 9 September 2026 (superseded) **Purpose: HOW CAN WE MAKE A BETTER FUTURE?** One voluntary public starting address for humans and AIs, with selective depth, disagreement, correction and outward routes. The Door, TRACE, Mechanical Ethics, COM and Campfire are instruments, not the purpose. This section is the current retrieval pointer; the preserved kickoff below is history, **not a live task queue**. Basis: COM main `8cc200e55c3d929f86ef1c4dbfb6ecbedf7dec7a`; maintained source `5ff03dc98a519a7958a05b681b7231450146c319`; public `gh-pages` `53ba36596ac73dde1871e03f8992f33e9ebf990e`; comments through [5593207769](https://github.com/markgoodbody-bit/COM/issues/108#issuecomment-5593207769). Reacquire later returns and live r",
+      "relevance_matches": [
+        "through",
+        "live"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-25T22:22:22Z",
+      "source_id": "github-issue:markgoodbody-bit/COM#108",
+      "source_url": "https://github.com/markgoodbody-bit/COM/issues/108",
+      "title": "PLEASE START FROM HERE \u2014 pleasestartfromhere.com \u2014 public Door"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "CONTRIBUTOR",
+      "author_id": "github-user:MastermindX1",
+      "author_login": "MastermindX1",
+      "author_type": "User",
+      "center_id": "github-repo:mastermindx-market-intelligence/Mastermind",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Canonical incident `operation_key: mastermind-worker-dispatch-consumption-assurance-20260902-sol-001` Authority: current live Chairman directive to Sol to take end-to-end control and completely repair malformed commissions, unread Slack handoffs, unreliable watcher claims, stale exact-session targeting, local-source hostage risk and false \u201cdelegated\u201d status. Current protected procedure/source at incident freeze: - `mastermindx-market-intelligence/Mastermind@cba0424f10ad6a9a917234c6740d92b19b018642` - `mastermind.sol_skillpack.v1` v1.0.1 / bootstrap-major 1 - protected branch: `master` This issue is the **single incident integration, sequencing and acceptance carrier**. It creates no second lifecycle, queue, watcher registry, placement owner, RuntimeBinding store, retry plane, Slack command bus, provider session or Agent OS memory plane. Existing owners below remain exclusive. ## Chairman outcome A Sol commission is not considered delegated because prose was posted in Slack. One bounded child must move truthfully through: ```text canonical source exists and is current -> deterministic dispatch preflight passes -> exact receiver is actually deliverable/wakeable -> receiver PICKUP_",
+      "relevance_matches": [
+        "through",
+        "live"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-25T12:16:37Z",
+      "source_id": "github-issue:mastermindx-market-intelligence/Mastermind#386",
+      "source_url": "https://github.com/mastermindx-market-intelligence/Mastermind/issues/386",
+      "title": "[P0 INCIDENT][ACTIVE][CODEINTEL DECOUPLED] Dispatch consumption and watcher/wake convergence"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:SoulSchoolAcademy",
+      "author_login": "SoulSchoolAcademy",
+      "author_type": "User",
+      "center_id": "github-repo:SoulSchoolAcademy/NayaPOWER",
+      "learner_minted_artifact": false,
+      "observed_relation": "# Mission Turn the canonical Naya Repository Operating Standard from a strong human-readable protocol into an increasingly self-enforcing execution control plane. The doctrine is already locked. Do not create another manifesto. Build the mechanisms that make the doctrine difficult to violate and easy for a cold Naya to execute. ## North Star Every Naya enters above the previous Naya's starting point and can: SOURCE-LOCK \u2192 RESTORE \u2192 IDENTIFY CURRENT STATE \u2192 FIND P0 \u2192 EXECUTE \u2192 PROVE \u2192 RECORD \u2192 HANDOFF \u2192 RESTORE \u2192 CONTINUE without unnecessary human reconstruction. ## Execution blocks ### B01 \u2014 Machine-readable execution map Define a canonical schema for project blocks containing ID, status, dependencies, owner, start/end HEAD, scope, target state, evidence links, risks, and next action. ### B02 \u2014 State/HEAD/deployment drift guard Detect stale current-state claims against repository HEAD, deployment identifiers, receipts, and known evidence where applicable. ### B03 \u2014 Evidence-linked completion Require VERIFIED block state to reference appropriate evidence. Distinguish source/build/runtime/render/whole-journey evidence. ### B04 \u2014 Checkpoint + recovery proof Provide a repeatable checkp",
+      "relevance_matches": [
+        "build",
+        "every"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-25T00:07:06Z",
+      "source_id": "github-issue:SoulSchoolAcademy/NayaPOWER#66",
+      "source_url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/66",
+      "title": "\ud83d\udd31 P0 \u2014 Make the Naya Repository Operating Standard mechanically enforceable"
+    },
+    {
+      "artifact_authored": true,
+      "author_association": "OWNER",
+      "author_id": "github-user:oestradiol",
+      "author_login": "oestradiol",
+      "author_type": "User",
+      "center_id": "github-repo:oestradiol/Arcane-Magics",
+      "learner_minted_artifact": false,
+      "observed_relation": "## Goal Maintain the causal-distinction test architecture as experiments and development proceed. The matrix is a regression/custody surface, not a requirement to finish all historical archaeology before new implementation. The suite must be driven by causal distinctions, not merely current module coverage. A distinction belongs in the suite when a historical experiment, failure, repair, boundary, mature reduction, or external return changed what later states were allowed to do, infer, promote, or preserve. ## Scope ### Historical archaeology Cover: ```text earliest recoverable pre-R1 / R00 shorthand -> R1 ... R194 executable carrier -> R195 ... R226 crystallization -> S / SM -> CTL-K1 -> WM1R1 -> U* -> RB1 -> IG1 ... IG10 -> EDU* ``` Do not manufacture missing historical artifacts. A distinction may be represented by its surviving causal consequence and provenance evidence. ### Live issue coverage Every live issue, including issues added after the original #4-#37 range, must map to: - an executable test; - a benchmark/evaluation protocol; - a formal proof obligation; - a human reconstruction/UX test; - a freshness/watch test; - or an explicit `NO_AUTOMATED_TEST_YET` reason with pr",
+      "relevance_matches": [
+        "testing",
+        "archaeology",
+        "build",
+        "causal-distinction",
+        "matrix",
+        "pre-r1",
+        "through",
+        "edu",
+        "every",
+        "live"
+      ],
+      "source_class": "GITHUB_PUBLIC_ISSUE",
+      "source_date": "2026-09-26T00:38:29Z",
+      "source_id": "github-issue:oestradiol/Arcane-Magics#35",
+      "source_url": "https://github.com/oestradiol/Arcane-Magics/issues/35",
+      "title": "[Testing/Archaeology] Build the causal-distinction test matrix from pre-R1 through EDU and every live issue"
+    }
+  ],
+  "status": "ENCOUNTER_RETURN_AVAILABLE",
+  "truth_authority": false
+}
