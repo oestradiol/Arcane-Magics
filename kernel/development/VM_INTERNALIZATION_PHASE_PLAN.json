@@ -303,9 +303,9 @@
       "G6_internalization_status": "WITHHOLD_INDEPENDENT_EXTERNAL_RETURN_REQUIRED"
     },
     "network_semantic_trace_phase": {
-      "prefreeze_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE.json",
+      "prefreeze_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE_V2.json",
       "search_state_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_SEARCH_STATE.json",
-      "status": "B1_BOUNDED_PASS__B2_REPLICATED_POSITIVE_FOR_TITLE_ANCHORED_WITH_METRIC_TRADEOFF__B3_CLOSED",
+      "status": "B1_LOCAL_STRUCTURAL_PASS__B2_MIXED_WITH_TITLE_ANCHORED_REPLICATION__RETURN_DEDUPED__B3_CLOSED",
       "lexical_baseline_preserved": true,
       "internalization_claim": false,
       "independent_evaluation": false,
@@ -322,11 +322,12 @@
           "B2_TIE_UNHELPFUL_ON_CYCLE_230"
         ],
         "TITLE_ANCHORED": [
-          "UNTRIED_AT_LAST_AUDIT"
+          "USEFUL_ON_ISSUE_169",
+          "USEFUL_ON_ISSUE_43_WITH_V1_DIVERSITY_REGRESSION_CAVEAT"
         ]
       },
       "relation_trace_runtime_internalization_claim": false,
-      "next_lawful_step": "continue fresh-target returned-utility recurrence without hand-picking target/config; prefreeze a diversity/polysemy-sensitive discriminator before using it; keep relation_trace.py as scaffold and B3 closed until shortcut-resistant B1 + reproducible B2 + source removal + restart/delayed reuse + independent evaluation are all earned",
+      "next_lawful_step": "run fresh self-selected targets under deduped returned-utility state and V2 Pareto/non-regression comparator; preserve polysemy as an explicit unresolved B1 limitation; do not start B3 until shortcut-resistant B1 and reproducible V2 B2 evidence are both earned.",
       "title_anchored_replication": {
         "positive_targets": [
           {
@@ -347,7 +348,15 @@
           "independent evaluation remains false",
           "capability-specific relation_trace.py scaffold remains present"
         ]
-      }
+      },
+      "predecessor_prefreeze_ref": "kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE.json",
+      "return_aggregation_rule": "ONE_NET_TRACE_CONFIG_DISPOSITION_PER_AUTONOMOUS_CYCLE_CONFIG; DUPLICATES_COLLAPSE; CONFLICTS_WITHHOLD",
+      "v2_evaluator_change": {
+        "trigger": "issue #43 / run 36248398140 exposed a V1 pass with external-center diversity regression 6→3",
+        "rule": "candidate must be non-regressive on anchor coverage, mean relevance, external-center count, and token budget, with at least one strict gain",
+        "retroactive_reclassification": false
+      },
+      "generic_executor_note": "kernel/runtime/relation_trace.py is classified as a generic interpreter; its continued existence is not itself a B3 failure. B3 remains closed because the capability policy/state family has not survived the full source-removal/restart/delayed-reuse/fresh independent-evaluation burden."
     }
   },
   "promotion_authority": false,
