@@ -9,6 +9,14 @@
       "module": "kernel.development.return_credit_curriculum",
       "candidate_filename": "RETURN_CREDIT_CANDIDATE.json",
       "result_filename": "RETURN_CREDIT_RESULT.json"
+    },
+    {
+      "curriculum_id": "DEPENDENCY_PLANNING_V1",
+      "prefreeze_path": "kernel/development/DEPENDENCY_PLANNING_CURRICULUM_PREFREEZE.json",
+      "cases_path": "kernel/development/DEPENDENCY_PLANNING_DIDACTIC_CASES.json",
+      "module": "kernel.development.dependency_planning_curriculum",
+      "candidate_filename": "DEPENDENCY_PLANNING_CANDIDATE.json",
+      "result_filename": "DEPENDENCY_PLANNING_RESULT.json"
     }
   ],
   "selection_rule": "A curriculum is executable only when the learner-selected study already references its prefrozen contract. Catalog membership cannot make a target admissible or select it.",
