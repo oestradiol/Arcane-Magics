@@ -131,7 +131,7 @@
     {
       "id": "D-MEMORY-STORAGE-LEARNING",
       "source_revision_or_branch": "Canonical memory law / 2026-09-24 Git memory",
-      "source_artifact": "kernel/runtime/memory.py; docs/FRONTIER_RESEARCH.md",
+      "source_artifact": "kernel/runtime/memory.py; split/ofe:docs/FRONTIER_RESEARCH.md",
       "distinction": "stored state != demonstrated learning",
       "triggering_experiment_or_failure": "need to avoid rediscovery without calling storage learning",
       "causal_consequence": "memory persists immutable objects/dispositions but learning claim requires later behavior dependence",
@@ -271,7 +271,7 @@
     {
       "id": "D-MAP-TRAVERSAL",
       "source_revision_or_branch": "Canonical LT-24",
-      "source_artifact": "docs/META_DYNAMICS.md",
+      "source_artifact": "split/eclipsis:docs/META_DYNAMICS.md",
       "distinction": "global represented map != temporally inhabited traversal",
       "triggering_experiment_or_failure": "temporal inhabitation research",
       "causal_consequence": "history/order/carrier retained when future consequences distinguish them",
@@ -279,7 +279,7 @@
         "Meta-Dynamics",
         "temporal models"
       ],
-      "current_owner": "docs/META_DYNAMICS.md",
+      "current_owner": "split/eclipsis:docs/META_DYNAMICS.md",
       "test_layer": "T2/T5",
       "test_id_path": null,
       "status": "NO_AUTOMATED_TEST_YET",
@@ -289,14 +289,14 @@
     {
       "id": "D-UNKNOWN-PERMISSION",
       "source_revision_or_branch": "WorldMind",
-      "source_artifact": "kernel/WORLDMIND.md",
+      "source_artifact": "split/venus:kernel/WORLDMIND.md",
       "distinction": "UNKNOWN boundary != permission or refusal",
       "triggering_experiment_or_failure": "distributed jurisdiction model",
       "causal_consequence": "UNKNOWN routes probe/reconstruct locally",
       "later_dependents": [
         "ethics/governance issue #26"
       ],
-      "current_owner": "kernel/WORLDMIND.md",
+      "current_owner": "split/venus:kernel/WORLDMIND.md",
       "test_layer": "T2/T6",
       "test_id_path": "tests/test_historical_regressions.py::test_unknown_is_not_permission",
       "status": "COVERED_PARTIAL",
@@ -306,14 +306,14 @@
     {
       "id": "D-GLOBAL-AGENT",
       "source_revision_or_branch": "WorldMind",
-      "source_artifact": "kernel/WORLDMIND.md",
+      "source_artifact": "split/venus:kernel/WORLDMIND.md",
       "distinction": "shared reachability/consequence field != global Agent/authority",
       "triggering_experiment_or_failure": "WorldMind subject-lift risk",
       "causal_consequence": "authorship/judgment/jurisdiction stay indexed",
       "later_dependents": [
         "issue #25"
       ],
-      "current_owner": "kernel/WORLDMIND.md",
+      "current_owner": "split/venus:kernel/WORLDMIND.md",
       "test_layer": "T2/T5",
       "test_id_path": "tests/test_historical_regressions.py::test_shared_reachability_does_not_mint_global_agent",
       "status": "COVERED_PARTIAL",
@@ -671,7 +671,7 @@
       "later_dependents": [
         "current external replication claim fence"
       ],
-      "current_owner": "docs/EARNED_MILESTONES.md; docs/FRONTIER_RESEARCH.md",
+      "current_owner": "docs/EARNED_MILESTONES.md; split/ofe:docs/FRONTIER_RESEARCH.md",
       "test_layer": "T6",
       "test_id_path": "tests/test_historical_regressions.py::test_r194_local_replay_is_not_external_replication",
       "status": "READY_ONLY_EXTERNAL_RETURN_OPEN",
@@ -709,7 +709,7 @@
         "public vocabulary",
         "Meta-Dynamics"
       ],
-      "current_owner": "NxRxI_VOCABULARY_CENTER.md; docs/META_DYNAMICS.md",
+      "current_owner": "NxRxI_VOCABULARY_CENTER.md; split/eclipsis:docs/META_DYNAMICS.md",
       "test_layer": "T2/T9",
       "test_id_path": "tests/test_canonical_extraction_receipts.py::test_r213_label_admission_does_not_become_sovereignty",
       "status": "COVERED_PROVENANCE_ONLY",
@@ -757,7 +757,7 @@
     {
       "id": "D-RETURNABLE-CLOSURE",
       "source_revision_or_branch": "2026-09-25 Canonical reconciliation",
-      "source_artifact": "docs/META_DYNAMICS.md; kernel/VENUS_INCIDENCE_LAW.tex",
+      "source_artifact": "split/eclipsis:docs/META_DYNAMICS.md; split/venus:kernel/VENUS_INCIDENCE_LAW.tex",
       "distinction": "locally sufficient closure != globally exhaustive closure",
       "triggering_experiment_or_failure": "reconciliation of return/reopening thread",
       "causal_consequence": "correction boundary must preserve local identity while keeping non-preauthored return reachable",
@@ -766,7 +766,7 @@
         "Venus engineering",
         "issue #9"
       ],
-      "current_owner": "docs/META_DYNAMICS.md; kernel/VENUS_INCIDENCE_LAW.tex",
+      "current_owner": "split/eclipsis:docs/META_DYNAMICS.md; split/venus:kernel/VENUS_INCIDENCE_LAW.tex",
       "test_layer": "T2/T5",
       "test_id_path": null,
       "status": "PLANNED",
@@ -776,7 +776,7 @@
     {
       "id": "D-WITHHOLD-RESIDUAL-PHYS",
       "source_revision_or_branch": "2026-09-25 QG bridge",
-      "source_artifact": "docs/FRONTIER_RESEARCH.md; monographs/02_ECLIPSIS/main.tex",
+      "source_artifact": "split/ofe:docs/FRONTIER_RESEARCH.md; split/eclipsis:monographs/02_ECLIPSIS/main.tex",
       "distinction": "future-equivalent candidate states != still-future-separating states",
       "triggering_experiment_or_failure": "physical interpretation of WITHHOLD and Residual",
       "causal_consequence": "do not quotient a candidate physical distinction while an admitted future channel/observable still separates it",
@@ -784,7 +784,7 @@
         "issue #22",
         "PPD-Crystal horizon-rebarb branch"
       ],
-      "current_owner": "docs/FRONTIER_RESEARCH.md",
+      "current_owner": "split/ofe:docs/FRONTIER_RESEARCH.md",
       "test_layer": "T5/T6",
       "test_id_path": null,
       "status": "PLANNED",
@@ -794,7 +794,7 @@
     {
       "id": "D-QG-META-PROJECTION",
       "source_revision_or_branch": "2026-09-25 QG bridge",
-      "source_artifact": "docs/META_DYNAMICS.md; docs/FRONTIER_RESEARCH.md",
+      "source_artifact": "split/eclipsis:docs/META_DYNAMICS.md; split/ofe:docs/FRONTIER_RESEARCH.md",
       "distinction": "common meta-object hypothesis != established unification or downstream projection identity",
       "triggering_experiment_or_failure": "LQG/general-quantum/crystalline-vacuum/PPD synthesis",
       "causal_consequence": "candidate descendants remain open bridges until explicit maps and discriminators are earned",
@@ -802,7 +802,7 @@
         "issue #22",
         "Eclipsis"
       ],
-      "current_owner": "docs/FRONTIER_RESEARCH.md",
+      "current_owner": "split/ofe:docs/FRONTIER_RESEARCH.md",
       "test_layer": "T2/T6",
       "test_id_path": null,
       "status": "PLANNED",
@@ -812,7 +812,7 @@
     {
       "id": "D-ARCANE-SYNC-LAYERS",
       "source_revision_or_branch": "2026-09-25 Arcane operationalization",
-      "source_artifact": "monographs/03_ARCANE_MAGICS/main.tex; Canonical/Future/MetaTheory/ARCANE_MAGICS_OPERATIONALIZATION_2026-09-25.md",
+      "source_artifact": "split/arcane-magics:monographs/03_ARCANE_MAGICS/main.tex; Canonical/Future/MetaTheory/ARCANE_MAGICS_OPERATIONALIZATION_2026-09-25.md",
       "distinction": "meaningful coincidence != statistical anomaly != acausal mechanism",
       "triggering_experiment_or_failure": "Jung/Pauli synchronicity re-entry through thread lens",
       "causal_consequence": "phenomenological meaning may survive while scientific/physical mechanism WITHHOLDs",
@@ -820,7 +820,7 @@
         "issue #27",
         "OFE coincidence discriminator"
       ],
-      "current_owner": "monographs/03_ARCANE_MAGICS/main.tex",
+      "current_owner": "split/arcane-magics:monographs/03_ARCANE_MAGICS/main.tex",
       "test_layer": "T2/T6",
       "test_id_path": null,
       "status": "PLANNED",
@@ -830,7 +830,7 @@
     {
       "id": "D-ARCANE-RECURRENCE-RETURN",
       "source_revision_or_branch": "2026-09-25 Arcane operationalization",
-      "source_artifact": "kernel/WORLDMIND.md; kernel/VENUS_INCIDENCE_LAW.tex",
+      "source_artifact": "split/venus:kernel/WORLDMIND.md; split/venus:kernel/VENUS_INCIDENCE_LAW.tex",
       "distinction": "symbolic recurrence != source independence != World return",
       "triggering_experiment_or_failure": "online echo-chamber comparator",
       "causal_consequence": "source ancestry must be preserved before repeated confirmations count as independent evidence",
@@ -838,7 +838,7 @@
         "issue #25",
         "WorldMind"
       ],
-      "current_owner": "kernel/WORLDMIND.md",
+      "current_owner": "split/venus:kernel/WORLDMIND.md",
       "test_layer": "T3/T5",
       "test_id_path": null,
       "status": "PLANNED",
@@ -848,7 +848,7 @@
     {
       "id": "D-SELF-IMPLICATION-NOT-CERTIFICATION",
       "source_revision_or_branch": "2026-09-25 participant-origin calculator synthesis",
-      "source_artifact": "monographs/04_VENUS/main.tex; kernel/VENUS_INCIDENCE_LAW.tex",
+      "source_artifact": "split/venus:monographs/05_VENUS/main.tex; split/venus:kernel/VENUS_INCIDENCE_LAW.tex",
       "distinction": "self-implication in causal ancestry != self-generated validation",
       "triggering_experiment_or_failure": "we misfired on ourselves / God's calculator interpretation",
       "causal_consequence": "learner can retain returned blame/correction for its own action without treating self-evaluation as independent evidence",
@@ -856,7 +856,7 @@
         "issue #24",
         "Venus"
       ],
-      "current_owner": "kernel/VENUS_INCIDENCE_LAW.tex",
+      "current_owner": "split/venus:kernel/VENUS_INCIDENCE_LAW.tex",
       "test_layer": "T3/T5",
       "test_id_path": null,
       "status": "PLANNED",
