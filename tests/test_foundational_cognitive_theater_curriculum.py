@@ -4,6 +4,8 @@ import json
 from pathlib import Path
 import unittest
 
+from kernel.development.autonomous_worker import roadmap_issue_order
+
 ROOT = Path(__file__).resolve().parents[1]
 
 def load(rel: str):
@@ -47,6 +49,14 @@ class FoundationalCognitiveTheaterCurriculumTests(unittest.TestCase):
         self.assertIn("provenance", self.c["temporal_axes"]["past_religion"])
         self.assertIn("Knowledge Field State", self.c["temporal_axes"]["now_kfs"])
         self.assertIn("reopening", self.c["temporal_axes"]["future_science"])
+
+    def test_current_roadmap_routes_foundation_before_deeper_semantic_targets(self):
+        order=roadmap_issue_order((ROOT/"docs/ISSUE_ROADMAP.md").read_text(encoding="utf-8"))
+        foundation=self.c["issue_ref"]
+        self.assertIn(foundation, order)
+        for downstream in (169, 73, 18):
+            self.assertIn(downstream, order)
+            self.assertLess(order.index(foundation), order.index(downstream))
 
     def test_internalization_still_requires_source_removal_and_external_evaluation(self):
         order=self.c["experiment_order"]
