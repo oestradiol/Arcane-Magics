@@ -16,7 +16,7 @@ branch-policy-check:
 	test -f provenance/historical/BRANCH_NAMESPACE_POLICY.json
 	grep -q 'split/venus-minerva' provenance/historical/BRANCH_NAMESPACE_POLICY.json
 	grep -q 'HISTORICAL_NONROUTING' provenance/historical/BRANCH_NAMESPACE_POLICY.json
-	! grep -q 'split/venus-minerva' docs/NOW_MAP.md
+	grep -q 'split/venus-minerva -> historical transitional carrier' docs/NOW_MAP.md
 
 handoff-check:
 	test -f docs/CROSS_REGISTER_HANDOFF.md
