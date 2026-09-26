@@ -1,0 +1,48 @@
+name: Minerva lateral internalization transfer prediction
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - split/minerva
+    paths:
+      - autonomy/evidence/lateral/169/transfer-1-visible.json
+      - scripts/freeze_lateral_transfer_predictions.py
+      - kernel/development/LATERAL_EPISODE_1_INTERNALIZED_STATE.json
+      - .github/workflows/minerva-lateral-transfer-predict.yml
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: minerva-lateral-transfer-predict
+  cancel-in-progress: false
+
+jobs:
+  predict:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: split/minerva
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Freeze source-vs-state predictions without labels
+        run: |
+          python scripts/freeze_lateral_transfer_predictions.py \
+            --train autonomy/evidence/lateral/169/episode-1-visible.json \
+            --transfer autonomy/evidence/lateral/169/transfer-1-visible.json \
+            --state kernel/development/LATERAL_EPISODE_1_INTERNALIZED_STATE.json \
+            --output autonomy/evidence/lateral/169/transfer-1-predictions.json
+      - name: Persist predictions
+        run: |
+          git config user.name 'Minerva Internalizer transfer evaluator'
+          git config user.email 'actions@users.noreply.github.com'
+          git add autonomy/evidence/lateral/169/transfer-1-predictions.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'internalizer: freeze fresh transfer predictions before reveal'
+          git push origin HEAD:split/minerva
