@@ -65,6 +65,18 @@ class NetworkSemanticTracePrefreezeTests(unittest.TestCase):
         self.assertIn("relevant_anchor_perturbation_changes_trace",text)
         self.assertIn("general_semantics_claim",text)
         self.assertIn("internalization_claim",text)
+    def test_worker_uses_v2_prefreeze_for_future_b2(self):
+        text=(ROOT/".github/workflows/minerva-autonomous-worker.yml").read_text(encoding="utf-8")
+        compare=text.split("Compare semantic trace against frozen lexical baseline",1)[1]
+        self.assertIn(
+            "--prefreeze kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE_V2.json",
+            compare,
+        )
+        self.assertNotIn(
+            "--prefreeze kernel/development/NETWORK_SEMANTIC_TRACE_PREFREEZE.json",
+            compare,
+        )
+
     def test_v2_rejects_diversity_regression(self):
         import importlib.util
         spec=importlib.util.spec_from_file_location(
