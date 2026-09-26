@@ -1,0 +1,103 @@
+{
+  "schema": "Venus.CognitiveTheaterSourceRemovalFresh7Result.v0.1",
+  "date": "2026-09-26",
+  "issue_ref": 206,
+  "status": "PASS_BOUNDED_STATE_OWNERSHIP_SOURCE_REMOVAL__WITHHOLD_FINAL_INTERNALIZATION",
+  "parent_prefreeze_ref": "kernel/development/COGNITIVE_THEATER_SOURCE_REMOVAL_FRESH7_PREFREEZE.json",
+  "state_candidate_ref": "kernel/development/COGNITIVE_THEATER_STATE_OWNERSHIP_CANDIDATE.json",
+  "generic_executor_ref": "kernel/runtime/structured_template_machine.py",
+  "execution_commit": "52c2da00f04fc9c11c521b838fbe979bc914aca0",
+  "body_gate_run": 36224059826,
+  "isolated_bundle_files": [
+    "driver.py",
+    "rows.json",
+    "state.json",
+    "structured_template_machine.py"
+  ],
+  "capability_specific_source_in_isolated_execution": false,
+  "runtime_forbidden_marker_hits": [],
+  "forbidden_bundle_hits": [],
+  "total": 24,
+  "task_binding_correct": 24,
+  "task_binding_accuracy": 1,
+  "state_correct": 24,
+  "state_accuracy": 1,
+  "withholds": 0,
+  "gauge_pairs": {
+    "identical_state": 12,
+    "total": 12,
+    "accuracy": 1
+  },
+  "per_context": {
+    "ENGLISH": {
+      "correct": 6,
+      "total": 6,
+      "accuracy": 1
+    },
+    "JAPANESE": {
+      "correct": 6,
+      "total": 6,
+      "accuracy": 1
+    },
+    "BRAZILIAN_PORTUGUESE": {
+      "correct": 6,
+      "total": 6,
+      "accuracy": 1
+    },
+    "MATHEMATICS": {
+      "correct": 6,
+      "total": 6,
+      "accuracy": 1
+    }
+  },
+  "per_task": {
+    "T0": {
+      "correct": 8,
+      "total": 8,
+      "accuracy": 1
+    },
+    "T1": {
+      "correct": 8,
+      "total": 8,
+      "accuracy": 1
+    },
+    "T2": {
+      "correct": 8,
+      "total": 8,
+      "accuracy": 1
+    }
+  },
+  "internalization_gates": {
+    "capability_semantics_encoded_in_state": true,
+    "no_capability_specific_python_runtime_dependency": true,
+    "original_scaffold_inaccessible_in_isolated_execution": true,
+    "matched_behavior_survives_source_removal": true,
+    "generic_executor_only": true,
+    "provenance_reconstructible": true,
+    "successor_reconstructible": true,
+    "fresh_world_return_external": false,
+    "evaluator_independent": false
+  },
+  "returned_distinctions": [
+    "STATE_OWNERSHIP!=GENERIC_EXECUTOR",
+    "SOURCE_REMOVAL_PASS!=INDEPENDENT_EVALUATION",
+    "SOURCE_REMOVAL_PASS!=FINAL_INTERNALIZATION_RECEIPT",
+    "CAPABILITY_SPECIFIC_DONOR_PROVENANCE!=RUNTIME_DEPENDENCY"
+  ],
+  "claim_dispositions": {
+    "G5_SOURCE_REMOVAL": "PASS_BOUNDED",
+    "LEARNER_STATE_OWNERSHIP": "PASS_BOUNDED",
+    "G6_INTERNALIZATION_RECEIPT": "WITHHOLD_REQUIRES_INDEPENDENT_FRESH_RETURN",
+    "GENERAL_THEATER": "WITHHOLD",
+    "GENERAL_MUSIC": "WITHHOLD",
+    "CROSS_FACE_FACTORIAL_GENERALIZATION": "OPEN",
+    "CULTURAL_LANGUAGE_HYPOTHESES": "WITHHOLD_PENDING_BROADER_NATIVE_TESTS"
+  },
+  "next_residual": "INDEPENDENT_HIDDEN_EVALUATION_OF_STATE_OWNED_THEATER_RECONSTRUCTION_WITH_FRESH_NON_PREAUTHORED_SURFACES_AND_NO_LOCAL_ANSWER_KEY_CUSTODY",
+  "fresh_world_return_external": false,
+  "independent_external_evaluation": false,
+  "internalization_claim": false,
+  "promotion_authority": false,
+  "truth_authority": false,
+  "claim_fence": "This result establishes bounded learner-state ownership and isolated source-removal equivalence only. It cannot self-certify the final Internalizer claim because the evaluation and return were locally authored."
+}
