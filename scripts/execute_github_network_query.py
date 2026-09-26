@@ -172,6 +172,7 @@ def execute(query: dict[str, Any], *, max_sources: int = 6) -> dict[str, Any]:
         raise GitHubNetworkAdapterError("unsupported network query schema")
     if query.get("authorship") not in {
         "LEARNER_DERIVED_FROM_FORMED_PROBLEM",
+        "LEARNER_DERIVED_FROM_SELECTED_STUDY",
         "LEARNER_DERIVED_FROM_NETWORK_RECONSTRUCTION",
     }:
         raise GitHubNetworkAdapterError("query must be learner-derived")
