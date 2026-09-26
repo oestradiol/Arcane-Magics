@@ -112,3 +112,32 @@ Two current T3/T5-adjacent checks are easy to misread as developmental promotion
 - `benchmarks/edu17r1_mention_incidence/CONDITION_IMPLEMENTATIONS.json`, `scripts/audit_edu17r1_condition_freeze.py`, and `scripts/audit_hidden_run_readiness.py` bind the complete prefrozen A/B/C/D executor set while requiring the actual hidden split/return to remain external.
 
 Passing the first two establishes infrastructure/governance consequences at their tested scope. The semantic-ingress freeze audit additionally establishes bounded learner-side repair authorship before hidden exposure. The harness may therefore be **ready** while efficacy remains entirely unknown. None of these establishes hidden #31 efficacy, developmental promotion, or Safe Strong RSI.
+
+
+## Minerva branch-local exhaustive gate
+
+`split/minerva` now runs every local `tests/test_*.py` file through
+`scripts/run_minerva_tests.py`. New Minerva tests are included automatically.
+
+Two suites are explicitly jurisdiction-excluded in
+`kernel/development/MINERVA_TEST_SCOPE.json` because their asserted live inputs
+belong to other authority branches:
+
+- `tests/test_historical_regressions.py` requires Root/Venus surfaces such as
+  `kernel/WORLDMIND.md` and `docs/META_DYNAMICS.md`;
+- `tests/test_edu17r1_incidence_substrate.py` requires the Venus incidence-law
+  carrier `kernel/VENUS_INCIDENCE_LAW.tex`.
+
+The exclusion means **not locally decidable on Minerva**, not PASS. Minerva does
+not copy those foreign authority files merely to satisfy tests.
+
+```text
+full Minerva audit
+= every branch-local test
++ explicit cross-register jurisdiction exclusions
++ custody/audit scripts
+
+missing foreign authority
+!= Minerva failure
+!= permission to duplicate foreign authority
+```
