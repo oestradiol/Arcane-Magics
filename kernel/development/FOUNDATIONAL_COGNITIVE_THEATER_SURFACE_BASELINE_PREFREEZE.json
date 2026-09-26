@@ -1,0 +1,27 @@
+{
+  "schema": "Venus.FoundationalCognitiveTheaterSurfaceBaselinePrefreeze.v0.1",
+  "date": "2026-09-26",
+  "issue_ref": 206,
+  "seed_ref": "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_SEED.json",
+  "method": {
+    "executor": "kernel/runtime/calibrated_retrieval.py",
+    "family": "CHAR_NGRAM_JACCARD",
+    "n": 3,
+    "k": 1
+  },
+  "tests": {
+    "native_face": "For each face, train on its two teaching surfaces per relation and classify the held-out surface.",
+    "leave_one_face_out": "For each face, train on all teaching surfaces from the other three faces and classify the held-out surface of the omitted face."
+  },
+  "interpretation": {
+    "native_face": "Measures how much a simple surface learner can retain within a representational theater.",
+    "leave_one_face_out": "Measures whether surface similarity alone reconstructs relation identity across unseen theaters.",
+    "pass_not_internalization": "Even strong performance is only a comparator. It cannot establish semantic ownership because the relation labels are teacher supplied."
+  },
+  "discriminator": {
+    "surface_baseline_insufficient_if_cross_face_accuracy_below": 0.75,
+    "general_curriculum_gate_requires_more_than_surface_retrieval": true
+  },
+  "promotion_authority": false,
+  "truth_authority": false
+}
