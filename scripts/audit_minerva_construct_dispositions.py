@@ -15,6 +15,18 @@ SPEC.loader.exec_module(shared)
 PATH=ROOT/"docs/CONSTRUCT_DISPOSITIONS.json"
 SCOPE=ROOT/"kernel/development/MINERVA_CONSTRUCT_AUDIT_SCOPE.json"
 
+def classify_source_ref(rel: str, foreign: dict[str, str]) -> tuple[str, str]:
+    # Branch-qualified provenance references are already explicit custody:
+    # split/venus:path, split/eclipsis:path, etc.
+    if rel.startswith("split/") and ":" in rel:
+        branch, inner = rel.split(":", 1)
+        if branch == "split/minerva":
+            return ("local", inner)
+        return ("foreign", rel)
+    if rel in foreign:
+        return ("foreign", rel)
+    return ("local", rel)
+
 def main()->int:
     data=json.loads(PATH.read_text(encoding="utf-8"))
     scope=json.loads(SCOPE.read_text(encoding="utf-8"))
@@ -36,10 +48,11 @@ def main()->int:
         for rel in row.get("evidence",[]):
             if rel.startswith("issues/"):
                 continue
-            if (ROOT/rel).exists():
-                local_count+=1
-            elif rel in foreign:
-                foreign_count+=1
+            custody, resolved = classify_source_ref(rel, foreign)
+            if custody == "foreign":
+                foreign_count += 1
+            elif (ROOT/resolved).exists():
+                local_count += 1
             else:
                 errors.append(f"{cid}: unscoped missing evidence path: {rel}")
         if row.get("status") in {"MATURELY_SUBSUMED_AT_T","NO_LONGER_REQUIRED_LIVE"}:
