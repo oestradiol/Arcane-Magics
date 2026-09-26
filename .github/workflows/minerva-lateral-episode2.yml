@@ -1,0 +1,51 @@
+name: Minerva lateral episode 2 self-revision
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - split/minerva
+    paths:
+      - kernel/development/LATERAL_EPISODE_2_PREFREEZE.json
+      - autonomy/evidence/lateral/169/episode-2-visible.json
+      - scripts/run_lateral_episode2_revision.py
+      - .github/workflows/minerva-lateral-episode2.yml
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: minerva-lateral-episode2
+  cancel-in-progress: false
+
+jobs:
+  revise:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: split/minerva
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Self-select revised lateral policy and freeze holdout predictions
+        run: |
+          python scripts/run_lateral_episode2_revision.py \
+            --prefreeze kernel/development/LATERAL_EPISODE_2_PREFREEZE.json \
+            --episode1-visible autonomy/evidence/lateral/169/episode-1-visible.json \
+            --episode1-reveal autonomy/evidence/lateral/169/episode-1-hidden-reveal.json \
+            --transfer-visible autonomy/evidence/lateral/169/transfer-1-visible.json \
+            --transfer-reveal autonomy/evidence/lateral/169/transfer-1-hidden-reveal.json \
+            --holdout-visible autonomy/evidence/lateral/169/episode-2-visible.json \
+            --output autonomy/evidence/lateral/169/episode-2-proposal.json
+      - name: Persist episode 2 prediction freeze
+        run: |
+          git config user.name 'Minerva lateral self-revision worker'
+          git config user.email 'actions@users.noreply.github.com'
+          git add autonomy/evidence/lateral/169/episode-2-proposal.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'lateral: freeze self-revised episode 2 predictions'
+          git push origin HEAD:split/minerva
