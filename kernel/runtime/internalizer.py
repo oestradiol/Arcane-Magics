@@ -1,5 +1,20 @@
 from __future__ import annotations
 
+"""Internalization and O*/Anti-Minerva boundary checks for WorldMirror.
+
+Internalization here means that consequence-bearing capability semantics have
+moved into learner-owned state and still work after capability-specific
+teacher/donor/scaffold removal. Merely moving logic into another Python module
+does not count.
+
+Generic Python execution substrate may remain replaceable. World/Other, fresh
+return, evaluator custody, authorization/jurisdiction, STOP/WITHHOLD, and
+rollback/parent custody must remain external to unilateral self-revision.
+
+See ``kernel/development/INTERNALIZATION_BOUNDARY.json`` and
+``docs/WORLDMIRROR_VM.md``.
+"""
+
 from dataclasses import asdict, dataclass
 import hashlib
 import json
