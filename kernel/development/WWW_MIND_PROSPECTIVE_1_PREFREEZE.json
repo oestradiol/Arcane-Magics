@@ -1,0 +1,50 @@
+{
+  "schema": "Venus.WWWMindProspectiveEpisodePrefreeze.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_BEFORE_EXTERNAL_NETWORK_RETURN",
+  "parent_commit": "07529aa2267eb45e75e476d82e652250eb121d37",
+  "purpose": "Prospectively test whether a learner-formed consequential residual can cause learner-authored network inquiry, provenance-bearing external encounters, persistent indexed network memory, and a memory-caused successor query without collapsing encounter material into truth/evaluation or network relation into global identity.",
+  "adapter": {
+    "id": "GITHUB_PUBLIC_NETWORK_ADAPTER_V1",
+    "fixed_origin": "https://api.github.com",
+    "source_surface": [
+      "PUBLIC_GITHUB_ISSUES",
+      "PUBLIC_GITHUB_REPOSITORIES"
+    ],
+    "query_execution_owner": "EXTERNAL_ADAPTER",
+    "learner_query_as_shell": false,
+    "returned_text_executed": false,
+    "returned_urls_followed": false
+  },
+  "pass_requires": [
+    "FORMED_NONSTOP_PROBLEM",
+    "QUERY1_LEARNER_DERIVED_FROM_FORMED_PROBLEM",
+    "QUERY1_EXTERNAL_ADAPTER_EXECUTION",
+    "EPISODE1_ENCOUNTER_RETURN_NOT_EVALUATIVE_RETURN",
+    "NETWORK_ENCOUNTERS_PERSIST_IN_CONTENT_ADDRESSED_MEMORY",
+    "FOLLOWUP_QUERY_LEARNER_DERIVED_FROM_NETWORK_RECONSTRUCTION",
+    "FOLLOWUP_QUERY_CAUSALLY_DIFFERS_FROM_QUERY1",
+    "FOLLOWUP_QUERY_PROVENANCE_REFERENCES_EPISODE1_MEMORY_OBJECTS",
+    "SECOND_EXTERNAL_NETWORK_ENCOUNTER",
+    "AT_LEAST_TWO_DISTINCT_EXTERNAL_INDEXED_REPOSITORY_CENTERS_ACROSS_LINEAGE",
+    "PERSISTED_MEMORY_CHECKPOINT_MATCHES_REPORTED_CANONICAL_SHA256",
+    "NETWORK_MEMORY_REMAINS_DISTINCT_FROM_WORLD",
+    "GLOBAL_SUBJECT_CLAIM_FALSE",
+    "TRUTH_AUTHORITY_FALSE",
+    "PROMOTION_AUTHORITY_FALSE"
+  ],
+  "withhold_if": [
+    "LEARNER_RETURNS_STOP",
+    "NO_INDEXED_NETWORK_SOURCE",
+    "FOLLOWUP_QUERY_UNCHANGED",
+    "ONLY_ONE_EXTERNAL_CENTER",
+    "MEMORY_CHECKPOINT_MISSING_OR_MISMATCHED",
+    "ENCOUNTER_RETYPE_AS_EVALUATIVE_RETURN",
+    "SEARCH_RANK_OR_PAGE_CONTENT_TREATED_AS_TRUTH",
+    "QUERY_OR_RETURN_ACQUIRES_PROMOTION_AUTHORITY"
+  ],
+  "claim_fence": "A pass establishes only a bounded prospective WWW-Mind structural episode: learner-initiated network study plus persistent indexed memory causing a later query. It does not establish AGI, consciousness, one global subject, unrestricted Web autonomy, or independent claim validation.",
+  "independent_evaluative_return": false,
+  "truth_authority": false,
+  "promotion_authority": false
+}
