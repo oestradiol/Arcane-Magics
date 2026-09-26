@@ -1,0 +1,321 @@
+{
+  "schema": "Venus.FoundationalCognitiveTheaterSeed.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_TEACHING_AND_HELDOUT_SURFACE",
+  "issue_ref": 206,
+  "purpose": "First bounded cognitive-theater discriminator. Compare native-face surface learning with leave-one-face-out cross-face reconstruction before adding richer semantic machinery.",
+  "faces": [
+    "ENGLISH",
+    "JAPANESE",
+    "BRAZILIAN_PORTUGUESE",
+    "MATHEMATICS"
+  ],
+  "split_rule": "Each relation/face has two teaching surfaces and one held-out surface. Held-out surfaces use changed names/wording where applicable.",
+  "relations": [
+    {
+      "relation_id": "REPORT_NOT_FACT",
+      "participants": [
+        "reporter",
+        "receiver",
+        "world"
+      ],
+      "local_knowledge_fields": {
+        "reporter": "may possess a report about proposition P",
+        "receiver": "receives that report but does not thereby possess independent truth of P",
+        "world": "independently determines whether P is true"
+      },
+      "temporal_sequence": [
+        "report authored",
+        "report received",
+        "world may be checked",
+        "belief/claim may update"
+      ],
+      "expected_consequence": "Do not promote P solely because a source reports P.",
+      "preserved_invariants": [
+        "SOURCE_IDENTITY_PRESERVED",
+        "REPORT_DOES_NOT_ENTAIL_WORLD_STATE",
+        "VERIFICATION_CAN_REOPEN"
+      ],
+      "face_specific_residuals": {
+        "ENGLISH": [
+          "explicit warrant/source distinction"
+        ],
+        "JAPANESE": [
+          "context may omit already active participants without licensing invented truth"
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          "surface/register variation must not convert report into fact"
+        ],
+        "MATHEMATICS": [
+          "report predicate does not entail proposition"
+        ]
+      },
+      "surfaces": {
+        "ENGLISH": {
+          "train": [
+            "Mika reported that the door is open. Her report alone does not make the door open.",
+            "A report can be wrong. Check the world before treating the report as a fact."
+          ],
+          "heldout": [
+            "Ken said the light is on, but his statement alone does not prove that the light is actually on."
+          ]
+        },
+        "JAPANESE": {
+          "train": [
+            "ミカは「ドアが開いている」と報告した。報告したこと自体は、ドアが実際に開いていることを保証しない。",
+            "報告は間違うことがある。事実として扱う前に、外の状態を確かめる。"
+          ],
+          "heldout": [
+            "ケンは「明かりがついている」と言ったが、その発言だけでは実際についているとは限らない。"
+          ]
+        },
+        "BRAZILIAN_PORTUGUESE": {
+          "train": [
+            "Mika relatou que a porta está aberta. O relato, por si só, não garante que a porta esteja realmente aberta.",
+            "Um relato pode estar errado. Verifique o mundo antes de tratar o relato como fato."
+          ],
+          "heldout": [
+            "Ken disse que a luz está acesa, mas a fala dele, sozinha, não prova que a luz esteja realmente acesa."
+          ]
+        },
+        "MATHEMATICS": {
+          "train": [
+            "Report_s(P) does not imply P: Report_s(P) ↛ P.",
+            "Let R_s(P)=1 mean source s reports P. R_s(P)=1 is insufficient to derive P."
+          ],
+          "heldout": [
+            "Says_k(Q)=1 does not entail Q; the report predicate is not a truth predicate."
+          ]
+        }
+      }
+    },
+    {
+      "relation_id": "SAME_ENDPOINT_DIFFERENT_HISTORY",
+      "participants": [
+        "trajectory_1",
+        "trajectory_2",
+        "observer"
+      ],
+      "local_knowledge_fields": {
+        "trajectory_1": "retains its own ordered path",
+        "trajectory_2": "retains its own ordered path",
+        "observer": "may observe a shared terminal state without full histories"
+      },
+      "temporal_sequence": [
+        "distinct histories unfold",
+        "terminal states become equal",
+        "later task may query history"
+      ],
+      "expected_consequence": "Do not identify histories merely because their endpoints coincide.",
+      "preserved_invariants": [
+        "ENDPOINT_EQUALITY_NOT_HISTORY_IDENTITY",
+        "ORDERED_PROVENANCE_REOPENABLE"
+      ],
+      "face_specific_residuals": {
+        "ENGLISH": [
+          "explicit trajectory/history distinction"
+        ],
+        "JAPANESE": [
+          "temporal ordering must remain reconstructible despite shared endpoint"
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          "generative retelling must preserve path difference"
+        ],
+        "MATHEMATICS": [
+          "noninjective endpoint map does not imply equal preimages"
+        ]
+      },
+      "surfaces": {
+        "ENGLISH": {
+          "train": [
+            "Two routes can finish at the same place after different histories.",
+            "Path one goes through A then B and path two goes through C; the endpoint matches but the histories do not."
+          ],
+          "heldout": [
+            "Two processes end in the same state, yet one passed through X and the other through Y, so their trajectories remain different."
+          ]
+        },
+        "JAPANESE": {
+          "train": [
+            "二つの経路は、異なる履歴を通って同じ場所に到着することがある。",
+            "一つの経路はAからBを通り、もう一つはCを通る。終点が同じでも履歴は同じではない。"
+          ],
+          "heldout": [
+            "二つの過程が同じ状態で終わっても、一方はXを、他方はYを通ったなら、軌跡は異なる。"
+          ]
+        },
+        "BRAZILIAN_PORTUGUESE": {
+          "train": [
+            "Duas rotas podem chegar ao mesmo lugar depois de histórias diferentes.",
+            "Um caminho passa por A e depois B; outro passa por C. O ponto final é igual, mas as histórias não são."
+          ],
+          "heldout": [
+            "Dois processos terminam no mesmo estado, mas um passou por X e o outro por Y; as trajetórias continuam diferentes."
+          ]
+        },
+        "MATHEMATICS": {
+          "train": [
+            "h1=(A,B,x), h2=(C,x), terminal(h1)=terminal(h2)=x, but h1≠h2.",
+            "f(h1)=f(h2)=x does not imply h1=h2 when f keeps only the endpoint."
+          ],
+          "heldout": [
+            "End(π1)=End(π2) while π1≠π2; equality of terminal state does not imply equality of path."
+          ]
+        }
+      }
+    },
+    {
+      "relation_id": "WITHHOLD_NOT_GUESS",
+      "participants": [
+        "learner",
+        "evidence_field"
+      ],
+      "local_knowledge_fields": {
+        "learner": "has evidence E that does not discriminate all live hypotheses",
+        "evidence_field": "leaves at least two incompatible candidates open"
+      },
+      "temporal_sequence": [
+        "evidence observed",
+        "rivals remain open",
+        "learner chooses disposition"
+      ],
+      "expected_consequence": "WITHHOLD rather than invent a resolved answer.",
+      "preserved_invariants": [
+        "UNRESOLVED_NOT_FALSE",
+        "WITHHOLD_NOT_RANDOM_GUESS",
+        "LATER_RETURN_CAN_REOPEN"
+      ],
+      "face_specific_residuals": {
+        "ENGLISH": [
+          "explicit confidence/warrant separation"
+        ],
+        "JAPANESE": [
+          "implicit context must not be filled with unsupported commitment"
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          "generative continuation may remain open rather than force closure"
+        ],
+        "MATHEMATICS": [
+          "non-derivability of H and not-H blocks truth-valued commitment"
+        ]
+      },
+      "surfaces": {
+        "ENGLISH": {
+          "train": [
+            "If the evidence cannot distinguish the two hypotheses, withhold instead of guessing.",
+            "Not enough evidence for either answer means keep both possibilities open."
+          ],
+          "heldout": [
+            "When the observations support neither option strongly enough, do not pick one at random; withhold the conclusion."
+          ]
+        },
+        "JAPANESE": {
+          "train": [
+            "証拠だけでは二つの仮説を区別できないなら、推測せずに判断を保留する。",
+            "どちらの答えにも十分な証拠がないなら、両方の可能性を開いたままにする。"
+          ],
+          "heldout": [
+            "観測からどちらも十分に支持できないときは、適当に一つを選ばず、結論を保留する。"
+          ]
+        },
+        "BRAZILIAN_PORTUGUESE": {
+          "train": [
+            "Se as evidências não distinguem as duas hipóteses, suspenda a conclusão em vez de adivinhar.",
+            "Sem evidência suficiente para nenhuma resposta, mantenha as duas possibilidades em aberto."
+          ],
+          "heldout": [
+            "Quando as observações não sustentam nenhuma opção o bastante, não escolha ao acaso; deixe a conclusão em aberto."
+          ]
+        },
+        "MATHEMATICS": {
+          "train": [
+            "E ⊬ H and E ⊬ ¬H implies WITHHOLD.",
+            "If both H and ¬H remain compatible with E, decision(E)=WITHHOLD."
+          ],
+          "heldout": [
+            "Models(E) contains cases satisfying H and cases satisfying ¬H; therefore no truth-valued commitment is licensed."
+          ]
+        }
+      }
+    },
+    {
+      "relation_id": "NESTED_KNOWLEDGE",
+      "participants": [
+        "agent_A",
+        "agent_B",
+        "proposition_P"
+      ],
+      "local_knowledge_fields": {
+        "agent_A": "knows proposition P",
+        "agent_B": "does not know that agent_A knows P"
+      },
+      "temporal_sequence": [
+        "P becomes available to A",
+        "A knows P",
+        "B lacks the higher-order fact about A's knowledge"
+      ],
+      "expected_consequence": "Preserve nested perspective rather than flattening all agents into one knowledge field.",
+      "preserved_invariants": [
+        "AGENT_INDEXING",
+        "EPISTEMIC_SCOPE",
+        "NEGATION_SCOPE",
+        "KFS_A_NOT_KFS_B"
+      ],
+      "face_specific_residuals": {
+        "ENGLISH": [
+          "explicit nested complement/scope"
+        ],
+        "JAPANESE": [
+          "context and omitted arguments must preserve whose knowledge is indexed"
+        ],
+        "BRAZILIAN_PORTUGUESE": [
+          "pronoun/subject variation must preserve nested knower identity"
+        ],
+        "MATHEMATICS": [
+          "modal operator nesting and negation scope"
+        ]
+      },
+      "surfaces": {
+        "ENGLISH": {
+          "train": [
+            "Aiko knows that the key is in the box. Bruno does not know that Aiko knows this.",
+            "Lina knows P, while Omar lacks the information that Lina knows P."
+          ],
+          "heldout": [
+            "Sara knows the code is correct, but Theo does not know that Sara knows it."
+          ]
+        },
+        "JAPANESE": {
+          "train": [
+            "アイコは鍵が箱の中にあることを知っている。ブルーノは、アイコがそれを知っていることを知らない。",
+            "リナはPを知っているが、オマールはリナがPを知っていることを知らない。"
+          ],
+          "heldout": [
+            "サラはコードが正しいことを知っているが、テオはサラがそれを知っていることを知らない。"
+          ]
+        },
+        "BRAZILIAN_PORTUGUESE": {
+          "train": [
+            "Aiko sabe que a chave está na caixa. Bruno não sabe que Aiko sabe disso.",
+            "Lina sabe P, mas Omar não sabe que Lina sabe P."
+          ],
+          "heldout": [
+            "Sara sabe que o código está correto, mas Theo não sabe que Sara sabe disso."
+          ]
+        },
+        "MATHEMATICS": {
+          "train": [
+            "K_A(P) ∧ ¬K_B(K_A(P)).",
+            "K_L(P)=1 and K_O(K_L(P))=0."
+          ],
+          "heldout": [
+            "K_S(Q) ∧ ¬K_T(K_S(Q))."
+          ]
+        }
+      }
+    }
+  ],
+  "claim_fence": "Teaching/held-out seed only. The relation labels and theater metadata are teacher scaffolding, not learner-owned semantics. No language competence, cultural cognition, mathematical understanding, or internalization claim follows from storing this file.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
