@@ -24,6 +24,20 @@ PROBLEM = {
     "discriminator": "RESOLVE_REFERENCED_INCIDENCE",
 }
 
+STUDY = {
+    "target_kind": "ISSUE",
+    "target_number": 206,
+    "target_title": "[Curriculum/Cognitive Theater] Recover Canonical English/Japanese/PT-BR/Math foundations before deeper VM consumption",
+    "method": "DEPENDENCY_TRACE",
+    "returned_blocker_sentences": [
+        "surface retention != cross-theater relational reconstruction",
+        "Japanese leave-one-face-out lawfully WITHHOLDs",
+    ],
+    "referenced_repository_paths": [
+        "kernel/development/FOUNDATIONAL_COGNITIVE_THEATER_SURFACE_BASELINE_RESULT.json",
+    ],
+}
+
 
 class NetworkInquiryTests(unittest.TestCase):
     def test_query_is_derived_from_formed_problem_without_host_answer(self):
@@ -33,6 +47,39 @@ class NetworkInquiryTests(unittest.TestCase):
         self.assertIn("resolve referenced incidence", q.query_text)
         self.assertFalse(q.truth_authority)
         self.assertFalse(q.promotion_authority)
+
+    def test_selected_study_constrains_query_after_target_selection(self):
+        base = form_network_query(PROBLEM)
+        q = form_network_query(PROBLEM, study=STUDY)
+        self.assertEqual(q.authorship, "LEARNER_DERIVED_FROM_SELECTED_STUDY")
+        self.assertTrue(
+            q.query_text.startswith(
+                "curriculum cognitive theater canonical english japanese"
+            )
+        )
+        self.assertIn("pt-br", q.query_text)
+        self.assertIn("math", q.query_text)
+        self.assertNotEqual(q.query_id, base.query_id)
+        self.assertTrue(q.study_context_digest)
+        self.assertIn(
+            f"selected-study:{q.study_context_digest}",
+            q.provenance_ids,
+        )
+        self.assertNotIn("206", q.query_text)
+        self.assertFalse(q.truth_authority)
+        self.assertFalse(q.promotion_authority)
+
+    def test_selected_study_text_remains_inert_lexical_context(self):
+        hostile = {
+            **STUDY,
+            "target_title": "Cognitive theater; rm -rf /; $(touch owned)",
+            "returned_blocker_sentences": ["eval(__import__('os').system('x'))"],
+        }
+        q = form_network_query(PROBLEM, study=hostile)
+        self.assertNotIn("$(", q.query_text)
+        self.assertNotIn("/", q.query_text)
+        self.assertNotIn(";", q.query_text)
+        self.assertEqual(q.execution_owner, "EXTERNAL_ADAPTER")
 
     def test_nonformed_problem_cannot_mint_query(self):
         with self.assertRaisesRegex(NetworkInquiryError, "formed problem"):
@@ -159,6 +206,38 @@ class NetworkInquiryTests(unittest.TestCase):
             )
             self.assertFalse(q2.truth_authority)
             self.assertFalse(q2.promotion_authority)
+
+    def test_followup_preserves_selected_study_custody(self):
+        q = form_network_query(PROBLEM, study=STUDY)
+        with tempfile.TemporaryDirectory() as td, VenusMemory(Path(td)) as mem:
+            ids = bind_web_encounters(
+                mem,
+                query=q,
+                encounters=(
+                    WebEncounter(
+                        source_id="source-study",
+                        source_url="https://example.test/study",
+                        source_date="2026-09-26",
+                        retrieved_at="2026-09-26T00:00:00Z",
+                        title="Cross linguistic representation learning",
+                        summary="Relational structure across languages and formal systems.",
+                        adapter_id="external-web-adapter",
+                    ),
+                ),
+            )
+            r = reconstruct_from_network(
+                mem, problem=PROBLEM, query=q, memory_object_ids=ids
+            )
+            q2 = form_followup_network_query(prior_query=q, reconstruction=r)
+            self.assertEqual(q2.study_context_digest, q.study_context_digest)
+            self.assertEqual(
+                q2.authorship,
+                "LEARNER_DERIVED_FROM_NETWORK_RECONSTRUCTION",
+            )
+
+    def test_worker_freezes_query_after_cycle_selection(self):
+        text=(Path(__file__).resolve().parents[1] / ".github/workflows/minerva-autonomous-worker.yml").read_text(encoding="utf-8")
+        self.assertIn("--cycle /tmp/minerva/CYCLE.json", text)
 
     def test_execution_context_routes_adapter_without_rewriting_query(self):
         q = form_network_query(PROBLEM)
