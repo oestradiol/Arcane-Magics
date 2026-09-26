@@ -1,0 +1,131 @@
+{
+  "encounters_remain_non_evaluative": true,
+  "episode1_memory_ids": [
+    "0e2dd4ff9bce57a7fa4482dc404ddf0804acd697fecd046bb6d66c53c7975bd9",
+    "d1607f5ffdfe7fe9694e4fb1a69790d18208964bbf071c9a8104f85c45c41cdd",
+    "766bcb8e7e0c5f713fd0d528ec0b95ad0d7e751d28263843d4f29eabb6ea40d0",
+    "dba575f5f9991580f00bdcae7a46e0b73c2fdd451b08f0d26c9be8b4ebc1bc57",
+    "4c799215fcb1e100cdbe686820897ea194d1abdc329f2aa764cf8e4c651f75cc",
+    "a133bfb006504889c32e695c158b2f7343e2888c6bed257c544a18192ac4b800"
+  ],
+  "episode1_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:0xHoneyJar/loa-finn#31",
+      "github-issue:EpiLogos/Factory#195",
+      "github-issue:EpiLogos/O-I#205",
+      "github-issue:Razzleberrytt/hippie-scientist-site#4441",
+      "github-issue:grwtsk/huey#1",
+      "github-issue:jamesallenevans/AreWeDoomed#15"
+    ],
+    "memory_object_ids": [
+      "0e2dd4ff9bce57a7fa4482dc404ddf0804acd697fecd046bb6d66c53c7975bd9",
+      "d1607f5ffdfe7fe9694e4fb1a69790d18208964bbf071c9a8104f85c45c41cdd",
+      "766bcb8e7e0c5f713fd0d528ec0b95ad0d7e751d28263843d4f29eabb6ea40d0",
+      "dba575f5f9991580f00bdcae7a46e0b73c2fdd451b08f0d26c9be8b4ebc1bc57",
+      "4c799215fcb1e100cdbe686820897ea194d1abdc329f2aa764cf8e4c651f75cc",
+      "a133bfb006504889c32e695c158b2f7343e2888c6bed257c544a18192ac4b800"
+    ],
+    "next_query_terms": [
+      "000",
+      "0xhoneyjar",
+      "150",
+      "153",
+      "199",
+      "201",
+      "2026",
+      "20260914",
+      "20260916",
+      "220",
+      "289",
+      "292"
+    ],
+    "problem_id": "69075a7ed1f8ee925951a80244092e6ac446aa8cd6524e1a612ae61f1771e851",
+    "promotion_authority": false,
+    "query_id": "26b9648179a97530bd722c9d8f535c23552b3bb1b283d7efb7959e1d88f9fa19",
+    "reconstruction_id": "3d648761226a3fd605eb4d6b1e3dc96279d11ae7ce5c6352c0e4284bca094940",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode2_memory_ids": [
+    "827a1837c79658e647fdd2560e6955b45774e8613e6577c834ed83a5cad9f098",
+    "4f86599b63126563aa11f5d2826ea766dbf606dc1ddd77ffd01c20e2916b7ef3"
+  ],
+  "episode2_reconstruction": {
+    "changed_by_network_memory": true,
+    "indexed_source_ids": [
+      "github-issue:0xHoneyJar/loa-finn#31",
+      "github-issue:0xHoneyJar/loa-freeside#63"
+    ],
+    "memory_object_ids": [
+      "827a1837c79658e647fdd2560e6955b45774e8613e6577c834ed83a5cad9f098",
+      "4f86599b63126563aa11f5d2826ea766dbf606dc1ddd77ffd01c20e2916b7ef3"
+    ],
+    "next_query_terms": [
+      "025",
+      "027",
+      "028",
+      "245",
+      "251",
+      "252",
+      "253",
+      "254",
+      "255",
+      "256",
+      "2800",
+      "3am"
+    ],
+    "problem_id": "69075a7ed1f8ee925951a80244092e6ac446aa8cd6524e1a612ae61f1771e851",
+    "promotion_authority": false,
+    "query_id": "84e08196fb2e44ebedafc2038e976a4347537e6c9b85680232915a563d58043f",
+    "reconstruction_id": "4e66cfcade68a85298b297ebdf75a4e74d5a7b2d37ae98f538890aaecaf503f7",
+    "schema": "Venus.NetworkReconstruction.v0.1"
+  },
+  "episode_count": 2,
+  "external_center_ids": [
+    "github-repo:0xHoneyJar/loa-finn",
+    "github-repo:0xHoneyJar/loa-freeside",
+    "github-repo:EpiLogos/Factory",
+    "github-repo:EpiLogos/O-I",
+    "github-repo:Razzleberrytt/hippie-scientist-site",
+    "github-repo:grwtsk/huey",
+    "github-repo:jamesallenevans/AreWeDoomed"
+  ],
+  "global_subject_claim": false,
+  "indexed_center_ids": [
+    "github-repo:0xHoneyJar/loa-finn",
+    "github-repo:0xHoneyJar/loa-freeside",
+    "github-repo:EpiLogos/Factory",
+    "github-repo:EpiLogos/O-I",
+    "github-repo:Razzleberrytt/hippie-scientist-site",
+    "github-repo:grwtsk/huey",
+    "github-repo:jamesallenevans/AreWeDoomed"
+  ],
+  "indexed_source_ids": [
+    "github-issue:0xHoneyJar/loa-finn#31",
+    "github-issue:0xHoneyJar/loa-freeside#63",
+    "github-issue:EpiLogos/Factory#195",
+    "github-issue:EpiLogos/O-I#205",
+    "github-issue:Razzleberrytt/hippie-scientist-site#4441",
+    "github-issue:grwtsk/huey#1",
+    "github-issue:jamesallenevans/AreWeDoomed#15"
+  ],
+  "memory_checkpoint_sha256": "6abb31521ef4c76e33260f94f8403e1ddebb34e5491226a013c08af8d783efb2",
+  "memory_record_count": 8,
+  "multiple_external_centers": true,
+  "multiple_indexed_centers": true,
+  "network_memory_is_world": false,
+  "promotion_authority": false,
+  "query1_id": "26b9648179a97530bd722c9d8f535c23552b3bb1b283d7efb7959e1d88f9fa19",
+  "query2_changed_from_query1": true,
+  "query2_id": "84e08196fb2e44ebedafc2038e976a4347537e6c9b85680232915a563d58043f",
+  "query2_memory_provenance": [
+    "network-memory:0e2dd4ff9bce57a7fa4482dc404ddf0804acd697fecd046bb6d66c53c7975bd9",
+    "network-memory:4c799215fcb1e100cdbe686820897ea194d1abdc329f2aa764cf8e4c651f75cc",
+    "network-memory:766bcb8e7e0c5f713fd0d528ec0b95ad0d7e751d28263843d4f29eabb6ea40d0",
+    "network-memory:a133bfb006504889c32e695c158b2f7343e2888c6bed257c544a18192ac4b800",
+    "network-memory:d1607f5ffdfe7fe9694e4fb1a69790d18208964bbf071c9a8104f85c45c41cdd",
+    "network-memory:dba575f5f9991580f00bdcae7a46e0b73c2fdd451b08f0d26c9be8b4ebc1bc57"
+  ],
+  "schema": "Venus.NetworkMemoryLineage.v0.1",
+  "truth_authority": false
+}
