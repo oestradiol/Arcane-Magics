@@ -54,6 +54,7 @@ jobs:
           python -m unittest tests/test_www_mind_gate.py
           python -m unittest tests/test_developmental_gate_chain.py
           python -m unittest tests/test_network_inquiry.py
+          python -m unittest tests/test_network_center_policy.py
           python scripts/audit_autonomy_safety_matrix.py
           python scripts/audit_custody.py
           python scripts/audit_edu16_custody.py
