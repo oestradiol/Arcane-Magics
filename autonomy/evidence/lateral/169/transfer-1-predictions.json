@@ -1,70 +1,34 @@
 {
+  "evaluation_owner": "PREFROZEN_EXTERNAL_EQUIVALENCE_EVALUATOR",
   "exact_prediction_equivalence": true,
-  "generic_executor": "kernel/runtime/token_knn.py",
-  "generic_executor_sha256": "7ef1765c0d70fefc683c875bc0ea1b402576be145aa0b438eac5f76c8fd09fba",
-  "internalization_claim": false,
   "labels_accessed": false,
-  "merged_state_accessed": false,
-  "prediction_count": 8,
-  "predictions": [
-    {
-      "equivalent": true,
-      "pr_number": 136,
-      "source_prediction": "0",
-      "state_prediction": "0"
-    },
-    {
-      "equivalent": true,
-      "pr_number": 137,
-      "source_prediction": "1",
-      "state_prediction": "1"
-    },
-    {
-      "equivalent": true,
-      "pr_number": 128,
-      "source_prediction": "0",
-      "state_prediction": "0"
-    },
-    {
-      "equivalent": true,
-      "pr_number": 144,
-      "source_prediction": "0",
-      "state_prediction": "0"
-    },
-    {
-      "equivalent": true,
-      "pr_number": 139,
-      "source_prediction": "1",
-      "state_prediction": "1"
-    },
-    {
-      "equivalent": true,
-      "pr_number": 148,
-      "source_prediction": "0",
-      "state_prediction": "0"
-    },
-    {
-      "equivalent": true,
-      "pr_number": 130,
-      "source_prediction": "0",
-      "state_prediction": "0"
-    },
-    {
-      "equivalent": true,
-      "pr_number": 146,
-      "source_prediction": "0",
-      "state_prediction": "0"
-    }
-  ],
   "prefreeze_ref": "kernel/development/LATERAL_INTERNALIZATION_TRANSFER_1_PREFREEZE.json",
   "promotion_authority": false,
   "schema": "Venus.LateralInternalizationTransferPredictions.v0.1",
-  "source_scaffold": "kernel/development/lateral_episode.py",
+  "source_predictions": {
+    "128": false,
+    "130": false,
+    "136": false,
+    "137": true,
+    "139": true,
+    "144": false,
+    "146": false,
+    "148": false
+  },
   "source_scaffold_sha256": "84e367019e8fd1ed024dd6f1df851f6473cadb903ad58e41248445d930f4ee54",
-  "state_ref": "kernel/development/LATERAL_EPISODE_1_INTERNALIZED_STATE.json",
+  "state_predictions": {
+    "128": false,
+    "130": false,
+    "136": false,
+    "137": true,
+    "139": true,
+    "144": false,
+    "146": false,
+    "148": false
+  },
+  "state_runtime_scaffold_present": false,
   "state_sha256": "0d5bc9eb46ffa85d7fff9a85be50d5ac175d5383d4eba9ea13d22da66b683ebc",
-  "training_ref": "autonomy/evidence/lateral/169/episode-1-visible.json",
+  "status": "PASS_TRANSFER_EQUIVALENCE_BEFORE_LABEL_REVEAL",
   "transfer_episode": 1,
-  "truth_authority": false,
-  "visible_ref": "autonomy/evidence/lateral/169/transfer-1-visible.json"
+  "truth_authority": false
 }
