@@ -11,43 +11,172 @@
       "from": "IDLE",
       "action": "FORM_PROBLEM",
       "to": "PROBLEM_FORMED",
-      "require": ["problem_id", "residual", "discriminator", "provenance_ids"]
+      "require": [
+        "problem_id",
+        "residual",
+        "discriminator",
+        "provenance_ids"
+      ]
     },
     {
       "from": "PROBLEM_FORMED",
       "action": "BIND_CARRIER",
       "to": "TARGET_BOUND",
-      "require": ["problem_id", "carrier_kind", "carrier_number"]
+      "require": [
+        "problem_id",
+        "carrier_kind",
+        "carrier_number"
+      ]
     },
     {
       "from": "TARGET_BOUND",
       "action": "FREEZE_PLAN",
       "to": "PLAN_FROZEN",
-      "require": ["proposal_id", "stop_conditions"]
+      "require": [
+        "proposal_id",
+        "stop_conditions"
+      ]
     },
     {
       "from": "PLAN_FROZEN",
       "action": "REQUEST_RETURN",
       "to": "AWAITING_RETURN",
-      "require": ["discriminator", "return_class"]
+      "require": [
+        "discriminator",
+        "return_class"
+      ]
     },
     {
       "from": "AWAITING_RETURN",
       "action": "BIND_RETURN",
       "to": "RETURN_AVAILABLE",
-      "require": ["return_id", "source_id", "external"]
+      "require": [
+        "return_id",
+        "source_id",
+        "external"
+      ]
     },
     {
       "from": "RETURN_AVAILABLE",
       "action": "WITHHOLD",
       "to": "IDLE",
-      "require": ["reason"]
+      "require": [
+        "reason"
+      ]
     },
     {
       "from": "RETURN_AVAILABLE",
       "action": "REOPEN",
       "to": "PROBLEM_FORMED",
-      "require": ["reason", "cited_return_ids"]
+      "require": [
+        "reason",
+        "cited_return_ids"
+      ]
+    },
+    {
+      "from": "PROBLEM_FORMED",
+      "action": "DIMENSIONALIZE",
+      "to": "COORDINATES_PROPOSED",
+      "require": [
+        "problem_id",
+        "residual",
+        "candidate_coordinate_ids",
+        "provenance_ids"
+      ]
+    },
+    {
+      "from": "COORDINATES_PROPOSED",
+      "action": "LATERALIZE",
+      "to": "FACES_OPEN",
+      "require": [
+        "face_ids",
+        "independence_claims",
+        "projection_discriminator",
+        "provenance_ids"
+      ]
+    },
+    {
+      "from": "FACES_OPEN",
+      "action": "FREEZE_PROJECTION",
+      "to": "PROJECTION_FROZEN",
+      "require": [
+        "projection_id",
+        "separator_claims",
+        "stop_conditions"
+      ]
+    },
+    {
+      "from": "PROJECTION_FROZEN",
+      "action": "REQUEST_RETURN",
+      "to": "AWAITING_RETURN",
+      "require": [
+        "discriminator",
+        "return_class"
+      ]
+    },
+    {
+      "from": "RETURN_AVAILABLE",
+      "action": "CLASSIFY_RESIDUAL",
+      "to": "RESIDUAL_CLASSIFIED",
+      "require": [
+        "return_id",
+        "residual_class",
+        "separator_ids"
+      ]
+    },
+    {
+      "from": "RESIDUAL_CLASSIFIED",
+      "action": "CRYSTALLIZE_F",
+      "to": "CRYSTAL_CANDIDATE",
+      "require": [
+        "future_family_id",
+        "preserved_separator_ids",
+        "crystal_id"
+      ]
+    },
+    {
+      "from": "CRYSTAL_CANDIDATE",
+      "action": "GENERATE",
+      "to": "GENERATED_CONTINUATION",
+      "require": [
+        "generated_object_id",
+        "generated_kind",
+        "source_crystal_id",
+        "discriminator"
+      ]
+    },
+    {
+      "from": "GENERATED_CONTINUATION",
+      "action": "REQUEST_INTERNALIZATION_EVIDENCE",
+      "to": "AWAITING_INTERNALIZATION_RETURN",
+      "require": [
+        "capability_id",
+        "source_content_sha256",
+        "internal_content_sha256",
+        "provenance_sources"
+      ]
+    },
+    {
+      "from": "AWAITING_INTERNALIZATION_RETURN",
+      "action": "BIND_INTERNALIZATION_RETURN",
+      "to": "INTERNALIZATION_EVIDENCE_AVAILABLE",
+      "require": [
+        "return_id",
+        "evaluator_id",
+        "external",
+        "source_removed",
+        "behavior_equivalent",
+        "successor_reconstructible"
+      ]
+    },
+    {
+      "from": "INTERNALIZATION_EVIDENCE_AVAILABLE",
+      "action": "INTERNALIZE",
+      "to": "IDLE",
+      "require": [
+        "internalization_receipt_id",
+        "preserved_external_roles"
+      ]
     }
   ],
   "non_internalizable_runtime_invariants": [
@@ -59,5 +188,18 @@
     "Anti_Minerva_carrier_permeability",
     "evaluator_separation",
     "promotion_authority_external"
-  ]
+  ],
+  "epistemic_operator_contract": {
+    "status": "ADMITTED_OPTIONAL_PATH",
+    "rule": "Use DIMENSIONALIZE/LATERALIZE/CRYSTALLIZE_F only when the formed problem indicates representational insufficiency or cross-face disagreement; do not force the path when the current representation is already discriminative.",
+    "noncollapse": [
+      "GENERATE!=DIMENSIONALIZE",
+      "DIMENSIONALIZE!=LATERALIZE",
+      "LATERALIZE!=CRYSTALLIZE_F",
+      "CRYSTALLIZE_F!=INTERNALIZE",
+      "INTERNALIZE_COMPETENCE!=INTERNALIZE_CORRECTION_SOVEREIGNTY"
+    ],
+    "lateral_independence": "Faces must remain independently answerable long enough for mismatch/noncommutation to survive; multiple self-generated phrasings are not sufficient.",
+    "internalization_boundary": "Internalization requires source removal/ablation plus independently returned evidence of retained consequence-bearing function. World/return/evaluator/authority/jurisdiction/STOP-WITHHOLD/rollback remain external."
+  }
 }
