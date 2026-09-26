@@ -35,8 +35,10 @@ jobs:
           python3 -m unittest tests/test_developmental_gate_chain.py
           python3 -m unittest tests/test_selected_curriculum_router.py
           python3 -m unittest tests/test_vm_internalization_phase_plan.py
-      - name: Minerva tests A-F
-        run: python3 -m unittest tests/test_[a-f]*.py
+      - name: Minerva tests A-C
+        run: python3 -m unittest tests/test_[a-c]*.py
+      - name: Minerva tests D-F
+        run: python3 -m unittest tests/test_[d-f]*.py
       - name: Minerva tests G-L
         run: python3 -m unittest tests/test_[g-l]*.py
       - name: Minerva tests M-R
