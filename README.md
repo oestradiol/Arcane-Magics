@@ -20,6 +20,34 @@
 
 This is the branch where the repository becomes an engineering body rather than a symbolic, structural, or purely formal description. Runtime, custody, evaluation, learner-state, developmental provenance, and repository-global observation live here. None of that makes Minerva the World, the Venus boundary law, or the OFE scientific future.
 
+## WorldMirror VM
+
+Minerva's live engineering body is implemented as **WorldMirror VM**: not one class, but a composition of the governed VMK2 runtime, persisted state, learner-owned developmental semantics, semantic memory, and returned episode evidence.
+
+```text
+World / Other
+→ returned consequence
+→ WorldMirror developmental modules
+→ learner state / memory
+→ VMK2 governed transition
+→ successor
+```
+
+Start here:
+
+- [WorldMirror VM architecture](docs/WORLDMIRROR_VM.md)
+- [runtime index](kernel/runtime/README.md)
+- [developmental state/operator index](kernel/development/README.md)
+- [runtime state index](kernel/state/README.md)
+- [autonomous evidence index](autonomy/evidence/README.md)
+
+```text
+Python != machine identity
+stored record != learning
+internalized competence != copied scaffold
+WorldMirror != World
+```
+
 ## First map
 
 ```text
