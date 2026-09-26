@@ -6,6 +6,6 @@
   "future_check_conclusion_included": false,
   "semantic_repair_included": false,
   "promotion_authority": false,
-  "episode": 2,
-  "note": "Head advanced only to create a fresh unresolved GitHub check state; no future conclusion encoded."
+  "episode": 3,
+  "note": "Fresh head for pre-run freeze. Request intentionally freezes check_run_id/status/conclusion as null before observing any allocated run."
 }
