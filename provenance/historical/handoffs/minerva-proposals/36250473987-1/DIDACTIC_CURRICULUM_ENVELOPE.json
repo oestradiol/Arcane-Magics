@@ -1,0 +1,13 @@
+{
+  "executed": false,
+  "promotion_authority": false,
+  "schema": "Venus.DidacticCurriculumExecutionEnvelope.v0.1",
+  "selected_referenced_paths": [
+    "kernel/development/DEPENDENCY_PLANNING_CURRICULUM_PREFREEZE.json"
+  ],
+  "status": "WITHHOLD_SELECTED_PREFREEZE_HAS_NO_EXECUTOR",
+  "truth_authority": false,
+  "unresolved_prefreezes": [
+    "kernel/development/DEPENDENCY_PLANNING_CURRICULUM_PREFREEZE.json"
+  ]
+}
