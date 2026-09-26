@@ -246,3 +246,27 @@ self-revision != self-authorization
 WWW Mind != one global subject
 Lain connection != fusion
 ```
+
+
+## Local interaction surface
+
+The first local inhabited interface now lives at
+[`apps/worldmirror_console/`](../apps/worldmirror_console/) with the operational
+boundary documented in [WorldMirror Console](WORLDMIRROR_CONSOLE.md).
+
+```text
+raw interaction bytes
+→ chronological custody
+→ derivative decoded/semantic view
+→ later Theater/KFS reconstruction
+→ residual candidate
+→ prefrozen developmental test
+```
+
+The console deliberately does not collapse UI into learner identity. A cognitive
+backend is an external adapter and no reply is fabricated when one is absent.
+
+The optional [process bridge](../kernel/runtime/process_bridge.py) is disabled by
+default. It is an argv/cwd/timeout transport and **not** a hard sandbox. Untrusted
+autonomous execution must place the bridge inside an actual container/VM/OS
+capability boundary.
