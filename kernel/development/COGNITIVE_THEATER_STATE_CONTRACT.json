@@ -1,0 +1,58 @@
+{
+  "schema": "Venus.CognitiveTheaterStateContract.v0.1",
+  "date": "2026-09-26",
+  "status": "DEVELOPMENTAL_TARGET_CONTRACT_NOT_CAPABILITY_RESULT",
+  "issue_ref": 206,
+  "state_shape": {
+    "participants": "ordered list of opaque center IDs",
+    "local_kfs": "map participant -> proposition -> epistemic status",
+    "events": "ordered list of event objects",
+    "event_fields": [
+      "event_id",
+      "actor",
+      "relation",
+      "objects",
+      "visible_to",
+      "effects"
+    ],
+    "effects": "ordered state changes to participant-local KFS",
+    "residuals": "unresolved distinctions retained without forced closure"
+  },
+  "epistemic_statuses": [
+    "KNOWN_TRUE",
+    "KNOWN_FALSE",
+    "UNKNOWN",
+    "WITHHELD",
+    "REPORTED_TRUE",
+    "REPORTED_FALSE"
+  ],
+  "invariants": [
+    "GLOBAL_STATE!=LOCAL_KFS",
+    "KFS_ABSENCE!=KNOWN_FALSE",
+    "REPORTED_TRUE!=KNOWN_TRUE",
+    "PARTICIPANT_ID!=ROLE",
+    "ALPHA_RENAME_PRESERVES_THEATER_STRUCTURE",
+    "EVENT_SET!=EVENT_ORDER",
+    "MAP!=TRAVERSAL",
+    "SAME_ENDPOINT!=SAME_HISTORY",
+    "LOCAL_VIEW!=GLOBAL_VIEW",
+    "THEATER_STATE!=WORLD",
+    "THEATER_STATE!=AUTHORIZATION"
+  ],
+  "transformations": [
+    "ALPHA_NORMAL_FORM",
+    "LOCAL_VIEW_AT_PREFIX",
+    "ORDERED_TRAVERSAL",
+    "ENDPOINT_COMPARISON",
+    "HISTORY_COMPARISON"
+  ],
+  "relation_to_factors": {
+    "LANGUAGE": "surface -> candidate distinctions/relations -> Theater state",
+    "MUSIC": "ordered temporal presentation/traversal of Theater state",
+    "THEATER": "indexed centers + local KFS + roles/actions/consequence",
+    "DEVELOPMENTAL_TIME": "past provenance -> now local state -> future return/reopening"
+  },
+  "claim_fence": "A valid TheaterState is a representational target and executable noncollapse scaffold. It is not evidence that raw language has been understood, that the represented World is true, that any participant authorized action, or that general Theater/Music cognition has been learned.",
+  "promotion_authority": false,
+  "truth_authority": false
+}
