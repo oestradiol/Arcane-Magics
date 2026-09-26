@@ -1,0 +1,75 @@
+{
+  "claim_fence": "Result is bounded to episode 1 routing reconstruction. A pass does not establish general Lateralizer competence or Internalizer credit.",
+  "cross_face_residual_ids": [
+    153,
+    162,
+    170,
+    172
+  ],
+  "evaluation_owner": "PREFROZEN_EXTERNAL_EVALUATOR",
+  "hidden_reveal_ref": "autonomy/evidence/lateral/169/episode-1-hidden-reveal.json",
+  "holdout_accuracy": {
+    "lateral": 0.5714285714285714,
+    "relation_basic": 0.42857142857142855,
+    "relation_expanded": 0.42857142857142855
+  },
+  "holdout_rows": [
+    {
+      "label": true,
+      "lateral": false,
+      "pr_number": 157,
+      "relation_basic": true,
+      "relation_expanded": true
+    },
+    {
+      "label": true,
+      "lateral": true,
+      "pr_number": 158,
+      "relation_basic": true,
+      "relation_expanded": true
+    },
+    {
+      "label": true,
+      "lateral": true,
+      "pr_number": 187,
+      "relation_basic": true,
+      "relation_expanded": true
+    },
+    {
+      "label": false,
+      "lateral": true,
+      "pr_number": 166,
+      "relation_basic": true,
+      "relation_expanded": true
+    },
+    {
+      "label": false,
+      "lateral": false,
+      "pr_number": 155,
+      "relation_basic": true,
+      "relation_expanded": true
+    },
+    {
+      "label": false,
+      "lateral": true,
+      "pr_number": 167,
+      "relation_basic": true,
+      "relation_expanded": true
+    },
+    {
+      "label": false,
+      "lateral": false,
+      "pr_number": 152,
+      "relation_basic": true,
+      "relation_expanded": true
+    }
+  ],
+  "internalization_claim": false,
+  "promotion_authority": false,
+  "proposal_blob_sha": "f78209434a6820ca369751ec2eeba5baf98460ac",
+  "schema": "Venus.LateralEpisodeResult.v0.1",
+  "selected_face": "path_topology",
+  "selected_train_gain": 0.25,
+  "status": "PASS_BOUNDED_LATERAL_MISSING_COORDINATE",
+  "truth_authority": false
+}
