@@ -1,0 +1,72 @@
+{
+  "schema": "Venus.DependencyPlanningDidacticCases.v0.1",
+  "date": "2026-09-26",
+  "status": "TEACHER_OBSERVATIONS_AND_FROZEN_EVALUATOR_NOT_CANDIDATE_POLICY",
+  "parent_prefreeze_ref": "kernel/development/DEPENDENCY_PLANNING_CURRICULUM_PREFREEZE.json",
+  "classification_training": [
+    {"id":"r0","features":{"prerequisite_assertion":true,"temporal_order_only":false,"resource_exclusion":false},"decision":"DEPENDENCY"},
+    {"id":"r1","features":{"prerequisite_assertion":false,"temporal_order_only":true,"resource_exclusion":false},"decision":"OBSERVATION_ONLY"},
+    {"id":"r2","features":{"prerequisite_assertion":false,"temporal_order_only":false,"resource_exclusion":true},"decision":"RESOURCE_CONFLICT"},
+    {"id":"r3","features":{"prerequisite_assertion":false,"temporal_order_only":false,"resource_exclusion":false},"decision":"OBSERVATION_ONLY"},
+    {"id":"r4","features":{"prerequisite_assertion":true,"temporal_order_only":false,"resource_exclusion":true},"decision":"DEPENDENCY"}
+  ],
+  "base_graph": {
+    "tasks": [
+      {"id":"A","duration":2,"admissible":true,"cost":2},
+      {"id":"B","pert":{"optimistic":1,"most_likely":2,"pessimistic":3},"admissible":true,"cost":2},
+      {"id":"C","duration":5,"admissible":true,"cost":5},
+      {"id":"D","duration":3,"admissible":true,"cost":3},
+      {"id":"H1","duration":3,"admissible":true,"cost":3},
+      {"id":"H2","duration":3,"admissible":true,"cost":3},
+      {"id":"G","duration":1,"admissible":true,"cost":1},
+      {"id":"E","duration":2,"admissible":true,"cost":2}
+    ],
+    "facts": [
+      {"id":"f0","source":"A","target":"C","features":{"prerequisite_assertion":true,"temporal_order_only":false,"resource_exclusion":false}},
+      {"id":"f1","source":"B","target":"D","features":{"prerequisite_assertion":true,"temporal_order_only":false,"resource_exclusion":false}},
+      {"id":"f2","source":"B","target":"H1","features":{"prerequisite_assertion":true,"temporal_order_only":false,"resource_exclusion":false}},
+      {"id":"f3","source":"B","target":"H2","features":{"prerequisite_assertion":true,"temporal_order_only":false,"resource_exclusion":false}},
+      {"id":"f4","source":"D","target":"G","features":{"prerequisite_assertion":true,"temporal_order_only":false,"resource_exclusion":false}},
+      {"id":"f5","source":"H1","target":"G","features":{"prerequisite_assertion":true,"temporal_order_only":false,"resource_exclusion":false}},
+      {"id":"f6","source":"H2","target":"G","features":{"prerequisite_assertion":true,"temporal_order_only":false,"resource_exclusion":false}},
+      {"id":"f7","source":"C","target":"E","features":{"prerequisite_assertion":true,"temporal_order_only":false,"resource_exclusion":false}},
+      {"id":"f8","source":"G","target":"E","features":{"prerequisite_assertion":true,"temporal_order_only":false,"resource_exclusion":false}},
+      {"id":"f9","source":"A","target":"B","features":{"prerequisite_assertion":false,"temporal_order_only":true,"resource_exclusion":false}},
+      {"id":"f10","source":"H1","target":"H2","features":{"prerequisite_assertion":false,"temporal_order_only":false,"resource_exclusion":true}}
+    ],
+    "route_query":{"source":"S","target":"T"},
+    "routes":[
+      {"source":"S","target":"T","cost":10,"admissible":true},
+      {"source":"S","target":"X","cost":1,"admissible":false},
+      {"source":"X","target":"T","cost":1,"admissible":true}
+    ]
+  },
+  "heldout_recombination": {
+    "add_dependency":["C","D"]
+  },
+  "expected": {
+    "base_edges":[["A","C"],["B","D"],["B","H1"],["B","H2"],["C","E"],["D","G"],["G","E"],["H1","G"],["H2","G"]],
+    "base_ready_frontier":["A","B"],
+    "base_critical_path":["A","C","E"],
+    "base_span":9,
+    "base_work":21,
+    "base_schedule_makespan":11,
+    "base_parallelizable_sets":[["A","B"]],
+    "base_lawful_route":{"path":["S","T"],"cost":10},
+    "critical_intervention_span":11,
+    "critical_intervention_path":["B","D","G","E"],
+    "noncritical_intervention_span":9,
+    "dependency_intervention_ready":["A"],
+    "dependency_intervention_span":10,
+    "recombined_span":13
+  },
+  "authority": {
+    "teacher_observations_are_not_candidate_policy": true,
+    "expected_outputs_are_evaluator_only": true,
+    "hidden_evaluation_input": false,
+    "promotion_authority": false,
+    "truth_authority": false,
+    "independent_evaluation": false,
+    "internalization_claim": false
+  }
+}
