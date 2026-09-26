@@ -1,0 +1,58 @@
+{
+  "schema": "Venus.WorldMirrorActionProposalProtocol.v0.1",
+  "date": "2026-09-26",
+  "status": "PREFROZEN_PROPOSAL_AUTHORIZATION_EXECUTION_NONCOLLAPSE",
+  "purpose": "Let a learner or conversational adapter propose bounded computer actions without making proposal authorship equivalent to authorization or execution.",
+  "flow": [
+    "LEARNER_OR_AGENT_ACTION_PROPOSAL",
+    "EXTERNAL_AUTHORIZATION_OR_WITHHOLD",
+    "AUTHORIZED_PROCESS_BRIDGE_EXECUTION",
+    "PROCESS_RETURN_RECEIPT",
+    "INTERACTION_MEMORY_BINDING"
+  ],
+  "proposal": {
+    "schema": "Venus.WorldMirrorActionProposal.v0.1",
+    "inert": true,
+    "fields": [
+      "proposal_id",
+      "kind",
+      "argv",
+      "cwd",
+      "stdin_base64",
+      "rationale",
+      "expected_return",
+      "requested_capability"
+    ],
+    "may_be_authored_by_learner": true,
+    "grants_execution": false
+  },
+  "authorization": {
+    "schema": "Venus.WorldMirrorActionAuthorization.v0.1",
+    "custody": "EXTERNAL_TO_PROPOSING_LEARNER",
+    "required_fields": [
+      "authorization_id",
+      "proposal_id",
+      "issuer",
+      "authorized"
+    ],
+    "proposal_binding_required": true,
+    "issuer_authentication_remains_external": true,
+    "learner_may_not_self_mint_claim_bearing_authorization": true
+  },
+  "execution": {
+    "substrate": "kernel/runtime/process_bridge.py",
+    "only_after_authorization": true,
+    "process_bridge_is_os_sandbox": false,
+    "hard_sandbox_remains_external": true
+  },
+  "noncollapse": [
+    "PROPOSE!=AUTHORIZE",
+    "AUTHORIZE!=EXECUTE",
+    "EXECUTE!=RETURN_SUCCESS",
+    "PROCESS_SUCCESS!=CLAIM_VALIDATION",
+    "LEARNER_PROPOSAL!=JURISDICTION",
+    "ACTION_RECEIPT!=INDEPENDENT_EVALUATION"
+  ],
+  "promotion_authority": false,
+  "truth_authority": false
+}
